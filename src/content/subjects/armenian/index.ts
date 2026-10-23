@@ -2,52 +2,12 @@ import { t, unit, type CourseSeed } from "../../types";
 import { course, ruNote } from "./shared";
 import { armenianGrade1 } from "./grade-1";
 import { armenianGrade2 } from "./grade-2";
+import { armenianGrade3 } from "./grade-3";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
   armenianGrade2,
-  course(
-    3,
-    ["Parts of speech in detail, word structure, sentence members, text types, extended reading.", "Խոսքի մասերը մանրամասն, բառակազմություն, նախադասության անդամներ, տեքստի տեսակներ, ընթերցանություն։", "Части речи подробно, состав слова, члены предложения, типы текста, расширенное чтение."],
-    ["Armenia grade 3, «Մայրենի» (6 h/week): word structure (root, suffix, prefix), noun (number, cases introduced), adjective (degrees), numeral, pronoun, verb (tenses introduced), sentence members, text: narrative and description, essays, reading of Armenian and world children's classics.", "Հայաստան, 3-րդ դասարան, «Մայրենի» (6 ժ/շաբ.)՝ բառակազմություն (արմատ, ածանց, նախածանց), գոյական (թիվ, հոլովների ներմուծում), ածական (աստիճաններ), թվական, դերանուն, բայ (ժամանակների ներմուծում), նախադասության անդամներ, տեքստ՝ պատմություն և նկարագրություն, շարադրություններ, հայ և համաշխարհային մանկական գրականություն։", "Армения, 3 класс, «Մայրենի» (6 ч/нед.): состав слова (корень, суффикс, приставка), существительное (число, введение падежей), прилагательное (степени), числительное, местоимение, глагол (введение времён), члены предложения, текст: повествование и описание, сочинения, армянская и мировая детская классика."],
-    ruNote,
-    { armenia: 6, russia: null },
-    [
-      unit(t("Word structure", "Բառակազմություն", "Состав слова"), t("Root, suffixes, prefixes, compound words, spelling of the connecting vowel.", "Արմատ, վերջածանց, նախածանց, բարդ բառեր, հոդակապի ուղղագրություն։", "Корень, суффиксы, приставки, сложные слова, правописание соединительной гласной."), [
-        ["root-suffix", "Root and suffix", "Արմատ և վերջածանց", "Корень и суффикс"],
-        ["prefixes", "Prefixes: ան-, դժ-, տ-, ապ-", "Նախածանցներ․ ան-, դժ-, տ-, ապ-", "Приставки: ան-, դժ-, տ-, ապ-"],
-        ["compound-connecting-a", "Compound words and the connecting ա", "Բարդ բառեր և հոդակապ ա", "Сложные слова и соединительная ա"],
-        ["word-families", "Word families", "Բառընտանիքներ", "Семьи слов"],
-      ]),
-      unit(t("Noun and adjective", "Գոյական և ածական", "Существительное и прилагательное"), t("Proper and common nouns, number, the definite article -ը/-ն, cases introduced, adjective degrees.", "Հատուկ և հասարակ գոյականներ, թիվ, որոշյալ հոդ -ը/-ն, հոլովների ներմուծում, ածականի աստիճաններ։", "Собственные и нарицательные, число, определённый артикль -ը/-ն, введение падежей, степени прилагательных."), [
-        ["proper-common", "Proper and common nouns", "Հատուկ և հասարակ գոյականներ", "Собственные и нарицательные существительные"],
-        ["definite-article", "The definite article -ը / -ն", "Որոշյալ հոդ -ը / -ն", "Определённый артикль -ը / -ն"],
-        ["cases-intro", "Cases: nominative, genitive, dative", "Հոլովներ․ ուղղական, սեռական, տրական", "Падежи: именительный, родительный, дательный"],
-        ["cases-intro-2", "Cases: accusative, ablative, instrumental, locative", "Հոլովներ․ հայցական, բացառական, գործիական, ներգոյական", "Падежи: винительный, исходный, инструментальный, местный"],
-        ["adjective-degrees", "Degrees of comparison: ավելի, ամենա-", "Համեմատության աստիճաններ․ ավելի, ամենա-", "Степени сравнения: ավելի, ամենա-"],
-      ]),
-      unit(t("Numeral, pronoun, verb", "Թվական, դերանուն, բայ", "Числительное, местоимение, глагол"), t("Cardinal and ordinal numerals, personal pronouns, verb tenses: present, past, future.", "Քանակական և դասական թվականներ, անձնական դերանուններ, բայի ժամանակներ՝ ներկա, անցյալ, ապառնի։", "Количественные и порядковые числительные, личные местоимения, времена глагола: настоящее, прошедшее, будущее."), [
-        ["numerals", "Numerals: cardinal and ordinal", "Թվականներ․ քանակական և դասական", "Числительные: количественные и порядковые"],
-        ["pronouns", "Personal pronouns", "Անձնական դերանուններ", "Личные местоимения"],
-        ["verb-present", "Verb: present tense (-ում եմ)", "Բայ․ ներկա ժամանակ (-ում եմ)", "Глагол: настоящее время (-ում եմ)"],
-        ["verb-past-future", "Verb: past and future", "Բայ․ անցյալ և ապառնի", "Глагол: прошедшее и будущее"],
-        ["verb-negation", "Negation: չ-", "Ժխտում․ չ-", "Отрицание: չ-"],
-      ]),
-      unit(t("Sentence and text", "Նախադասություն և տեքստ", "Предложение и текст"), t("Subject and predicate, secondary members, text structure, narrative and description.", "Ենթակա և ստորոգյալ, երկրորդական անդամներ, տեքստի կառուցվածք, պատմություն և նկարագրություն։", "Подлежащее и сказуемое, второстепенные члены, структура текста, повествование и описание."), [
-        ["subject-predicate", "Subject and predicate", "Ենթակա և ստորոգյալ", "Подлежащее и сказуемое"],
-        ["secondary-members", "Secondary members of the sentence", "Նախադասության երկրորդական անդամներ", "Второстепенные члены предложения"],
-        ["text-structure", "Text: beginning, main part, ending", "Տեքստ․ սկիզբ, հիմնական մաս, վերջ", "Текст: начало, основная часть, концовка"],
-        ["narrative-description", "Narrative and description", "Պատմություն և նկարագրություն", "Повествование и описание"],
-        ["essay-my-day", "Essay: «Իմ օրը»", "Շարադրություն․ «Իմ օրը»", "Сочинение: «Мой день»"],
-      ]),
-      unit(t("Reading", "Ընթերցանություն", "Чтение"), t("Tumanyan's «Գիքոր» excerpts, Raffi for children, Armenian legends, world classics in translation.", "Թումանյանի «Գիքոր» (հատվածներ), Րաֆֆի, հայկական ավանդազրույցներ, համաշխարհային գրականություն թարգմանությամբ։", "Отрывки из «Гикора» Туманяна, Раффи для детей, армянские легенды, мировая классика в переводе."), [
-        ["tumanyan-gikor", "Tumanyan: «Գիքոր» (excerpts)", "Թումանյան․ «Գիքոր» (հատվածներ)", "Туманян: «Гикор» (отрывки)"],
-        ["armenian-legends", "Legends: Hayk and Bel, Ara the Beautiful", "Ավանդազրույցներ․ Հայկ և Բել, Արա Գեղեցիկ", "Легенды: Айк и Бэл, Ара Прекрасный"],
-        ["fables", "Fables: Mkhitar Gosh, Vardan Aygektsi", "Առակներ․ Մխիթար Գոշ, Վարդան Այգեկցի", "Басни: Мхитар Гош, Вардан Айгекци"],
-        ["world-classics-3", "World classics: Andersen, Perrault in Armenian", "Համաշխարհային գրականություն․ Անդերսեն, Պերրո հայերեն", "Мировая классика: Андерсен, Перро на армянском"],
-      ]),
-    ],
-  ),
+  armenianGrade3,
   course(
     4,
     ["Completing the primary grammar course: declension and conjugation systems, complex sentences introduced, essays, and the grade 4 state assessment.", "Տարրական քերականության ամփոփում՝ հոլովում և խոնարհում, բարդ նախադասության ներմուծում, շարադրություններ, 4-րդ դասարանի պետական ստուգում։", "Завершение начального курса грамматики: склонение и спряжение, введение сложного предложения, сочинения и государственная проверка за 4 класс."],
