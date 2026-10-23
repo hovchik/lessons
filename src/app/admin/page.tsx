@@ -5,9 +5,7 @@ import { getAdminCourses, getStats, getSubjects } from "@/server/queries";
 
 export default async function AdminDashboard() {
   if (!(await isAdmin())) redirect("/admin/login");
-  const stats = getStats();
-  const subjects = getSubjects();
-  const courses = getAdminCourses();
+  const [stats, subjects, courses] = await Promise.all([getStats(), getSubjects(), getAdminCourses()]);
   const pct = stats.lessons ? Math.round((stats.published / stats.lessons) * 100) : 0;
   const claudeReady = !!process.env.ANTHROPIC_API_KEY;
 

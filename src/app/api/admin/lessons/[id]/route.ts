@@ -2,7 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isAdmin } from "@/server/auth";
-import { db, schema } from "@/server/db/client";
+import { getDb, schema } from "@/server/db/client";
 
 const i18n = z.object({ en: z.string(), hy: z.string(), ru: z.string() });
 const Body = z.object({
@@ -21,12 +21,14 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
   const { id } = await ctx.params;
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "Invalid body", issues: parsed.error.issues }, { status: 400 });
-  const existing = db.select({ id: schema.lessons.id }).from(schema.lessons).where(eq(schema.lessons.id, id)).get();
+  const db = await getDb();
+  const existing = await db.select({ id: schema.lessons.id }).from(schema.lessons).where(eq(schema.lessons.id, id)).get();
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  db.update(schema.lessons)
+  await db
+    .update(schema.lessons)
     .set({ ...parsed.data, source: "admin", updatedAt: new Date().toISOString() })
     .where(eq(schema.lessons.id, id))
     .run();
-  const lesson = db.select().from(schema.lessons).where(eq(schema.lessons.id, id)).get();
+  const lesson = await db.select().from(schema.lessons).where(eq(schema.lessons.id, id)).get();
   return NextResponse.json({ lesson });
 }

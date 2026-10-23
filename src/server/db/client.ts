@@ -1,26 +1,40 @@
-import Database from "better-sqlite3";
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import { migrate } from "drizzle-orm/better-sqlite3/migrator";
+import { createClient } from "@libsql/client";
+import { drizzle } from "drizzle-orm/libsql";
+import { migrate } from "drizzle-orm/libsql/migrator";
 import path from "node:path";
 import fs from "node:fs";
 import * as schema from "./schema";
 
-const DB_PATH =
-  process.env.DATABASE_PATH || path.join(process.cwd(), "data", "lessons.db");
+/**
+ * SQLite via libsql. The driver ships prebuilt binaries for Windows, macOS and
+ * Linux that do not depend on the Node.js version, so `npm install` never has
+ * to compile anything.
+ */
+const DB_PATH = process.env.DATABASE_PATH || path.join(process.cwd(), "data", "lessons.db");
 
 type Db = ReturnType<typeof drizzle<typeof schema>>;
 
-const globalForDb = globalThis as unknown as { __lessonsDb?: Db };
+const globalForDb = globalThis as unknown as { __lessonsDb?: Db; __lessonsDbReady?: Promise<Db> };
 
 function open(): Db {
   fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-  const sqlite = new Database(DB_PATH);
-  sqlite.pragma("journal_mode = WAL");
-  sqlite.pragma("foreign_keys = ON");
-  const db = drizzle(sqlite, { schema });
-  migrate(db, { migrationsFolder: path.join(process.cwd(), "drizzle") });
-  return db;
+  const client = createClient({ url: `file:${DB_PATH}` });
+  return drizzle(client, { schema });
 }
 
 export const db: Db = globalForDb.__lessonsDb ?? (globalForDb.__lessonsDb = open());
+
+/** Resolves once migrations have been applied. Await it before the first query. */
+export function getDb(): Promise<Db> {
+  if (!globalForDb.__lessonsDbReady) {
+    globalForDb.__lessonsDbReady = (async () => {
+      await db.run("PRAGMA journal_mode = WAL");
+      await db.run("PRAGMA foreign_keys = ON");
+      await migrate(db, { migrationsFolder: path.join(process.cwd(), "drizzle") });
+      return db;
+    })();
+  }
+  return globalForDb.__lessonsDbReady;
+}
+
 export { schema };

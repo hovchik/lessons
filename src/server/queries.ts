@@ -1,27 +1,32 @@
 import { and, asc, count, eq, sql } from "drizzle-orm";
-import { db, schema } from "./db/client";
+import { getDb, schema } from "./db/client";
 
 export type Locale = "en" | "hy" | "ru";
 
 export const GRADES = Array.from({ length: 12 }, (_, i) => i + 1);
 
-export function getSubjects() {
+export async function getSubjects() {
+  const db = await getDb();
   return db.select().from(schema.subjects).orderBy(asc(schema.subjects.sortOrder)).all();
 }
 
-export function getSubject(id: string) {
+export async function getSubject(id: string) {
+  const db = await getDb();
   return db.select().from(schema.subjects).where(eq(schema.subjects.id, id)).get();
 }
 
-export function getStats() {
-  const courses = db.select({ n: count() }).from(schema.courses).get()?.n ?? 0;
-  const lessons = db.select({ n: count() }).from(schema.lessons).get()?.n ?? 0;
-  const published = db.select({ n: count() }).from(schema.lessons).where(eq(schema.lessons.status, "published")).get()?.n ?? 0;
+export async function getStats() {
+  const db = await getDb();
+  const courses = (await db.select({ n: count() }).from(schema.courses).get())?.n ?? 0;
+  const lessons = (await db.select({ n: count() }).from(schema.lessons).get())?.n ?? 0;
+  const published =
+    (await db.select({ n: count() }).from(schema.lessons).where(eq(schema.lessons.status, "published")).get())?.n ?? 0;
   return { courses, lessons, published };
 }
 
 /** Courses with subject info and lesson counts, optionally filtered by grade or subject. */
-export function getCourses(filter: { grade?: number; subjectId?: string } = {}) {
+export async function getCourses(filter: { grade?: number; subjectId?: string } = {}) {
+  const db = await getDb();
   const where = [eq(schema.courses.published, true)];
   if (filter.grade) where.push(eq(schema.courses.grade, filter.grade));
   if (filter.subjectId) where.push(eq(schema.courses.subjectId, filter.subjectId));
@@ -39,7 +44,8 @@ export function getCourses(filter: { grade?: number; subjectId?: string } = {}) 
     .all();
 }
 
-export function getSubjectGradeRanges() {
+export async function getSubjectGradeRanges() {
+  const db = await getDb();
   return db
     .select({ subjectId: schema.courses.subjectId, min: sql<number>`min(${schema.courses.grade})`, max: sql<number>`max(${schema.courses.grade})`, n: count() })
     .from(schema.courses)
@@ -47,16 +53,17 @@ export function getSubjectGradeRanges() {
     .all();
 }
 
-export function getCourse(subjectId: string, grade: number) {
-  const course = db
+export async function getCourse(subjectId: string, grade: number) {
+  const db = await getDb();
+  const course = await db
     .select()
     .from(schema.courses)
     .where(and(eq(schema.courses.subjectId, subjectId), eq(schema.courses.grade, grade)))
     .get();
   if (!course) return null;
-  const subject = getSubject(subjectId)!;
-  const units = db.select().from(schema.units).where(eq(schema.units.courseId, course.id)).orderBy(asc(schema.units.position)).all();
-  const lessons = db
+  const subject = (await getSubject(subjectId))!;
+  const units = await db.select().from(schema.units).where(eq(schema.units.courseId, course.id)).orderBy(asc(schema.units.position)).all();
+  const lessons = await db
     .select({
       id: schema.lessons.id,
       unitId: schema.lessons.unitId,
@@ -79,10 +86,11 @@ export function getCourse(subjectId: string, grade: number) {
   };
 }
 
-export function getLesson(subjectId: string, grade: number, slug: string) {
-  const data = getCourse(subjectId, grade);
+export async function getLesson(subjectId: string, grade: number, slug: string) {
+  const data = await getCourse(subjectId, grade);
   if (!data) return null;
-  const lesson = db
+  const db = await getDb();
+  const lesson = await db
     .select()
     .from(schema.lessons)
     .where(and(eq(schema.lessons.courseId, data.course.id), eq(schema.lessons.slug, slug)))
@@ -100,12 +108,18 @@ export function getLesson(subjectId: string, grade: number, slug: string) {
   };
 }
 
-/** Admin: every lesson in a course with full fields. */
-export function getLessonById(id: string) {
+export async function getLessonById(id: string) {
+  const db = await getDb();
   return db.select().from(schema.lessons).where(eq(schema.lessons.id, id)).get();
 }
 
-export function getAdminCourses() {
+export async function getCourseById(id: string) {
+  const db = await getDb();
+  return db.select().from(schema.courses).where(eq(schema.courses.id, id)).get();
+}
+
+export async function getAdminCourses() {
+  const db = await getDb();
   return db
     .select({
       course: schema.courses,

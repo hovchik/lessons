@@ -13,7 +13,7 @@ type Params = Promise<{ locale: string; subject: string; grade: string; slug: st
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale, subject, grade, slug } = await params;
-  const data = getLesson(subject, Number(grade), slug);
+  const data = await getLesson(subject, Number(grade), slug);
   if (!data) return {};
   return { title: `${pick(data.lesson.title, locale)} · ${pick(data.course.title, locale)}` };
 }
@@ -22,7 +22,7 @@ export default async function LessonPage({ params }: { params: Params }) {
   const { locale, subject, grade: g, slug } = await params;
   setRequestLocale(locale);
   const grade = Number(g);
-  const data = getLesson(subject, grade, slug);
+  const data = await getLesson(subject, grade, slug);
   if (!data) notFound();
   const t = await getTranslations();
   const l = await getLocale();
