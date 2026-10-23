@@ -61,6 +61,11 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
+  /* Keep the chosen font size when a phone rotates to landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Anchor targets land below the sticky header. */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -71,7 +76,40 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100dvh;
+  /* No grey flash on tap (iOS / Android) and no horizontal wobble. */
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
 }
+
+/* ---- Touch ergonomics ---- */
+a, button, [role="button"], input, select, textarea, label {
+  /* Removes the historical 300 ms tap delay and disables double-tap zoom on controls. */
+  touch-action: manipulation;
+}
+button, [role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* iOS Safari zooms into any field whose font is under 16px; keep fields at 16px on phones. */
+@media (max-width: 767px) {
+  input, select, textarea { font-size: 16px !important; }
+}
+/* Long Armenian / Russian words should wrap inside narrow cards instead of overflowing. */
+h1, h2, h3, h4, p, li, dt, dd, td, th {
+  overflow-wrap: anywhere;
+}
+/* Safe-area insets for notched phones (used with viewport-fit=cover). */
+.pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.px-safe { padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+/* Horizontal strips (breadcrumbs, grade chips) that scroll on phones without a visible bar. */
+.scroll-x {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar { display: none; }
 
 ::selection {
   background: var(--secondary);
@@ -110,8 +148,10 @@ body {
 .clay-press {
   transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms ease;
 }
-.clay-press:hover {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .clay-press:hover {
+    transform: translateY(-2px);
+  }
 }
 .clay-press:active {
   transform: translateY(1px) scale(0.99);
@@ -151,6 +191,15 @@ body {
   line-height: 1.75;
   color: var(--foreground);
   overflow-wrap: anywhere;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+@media (max-width: 639px) {
+  .prose-lesson { font-size: 1rem; line-height: 1.7; }
+  .prose-lesson h2 { font-size: 1.3rem; }
+  .prose-lesson h3 { font-size: 1.1rem; }
+  .prose-lesson pre { padding: 0.75rem; font-size: 0.85rem; }
+  .prose-lesson blockquote { padding: 0.6rem 0.8rem; }
 }
 .prose-lesson > * + * { margin-top: 1em; }
 .prose-lesson h2 {
@@ -206,7 +255,10 @@ body {
   font-size: 0.95em;
   display: block;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
+.prose-lesson td, .prose-lesson th { white-space: normal; min-width: 6ch; }
 .prose-lesson thead th {
   background: var(--muted);
   font-weight: 800;
@@ -218,5 +270,6 @@ body {
 .prose-lesson table tr:first-child th:last-child { border-top-right-radius: 12px; }
 .prose-lesson hr { border: 0; border-top: 2px dashed var(--border); margin: 2em 0; }
 .prose-lesson img { max-width: 100%; border-radius: var(--radius); }
-.prose-lesson .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; }
+.prose-lesson .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; -webkit-overflow-scrolling: touch; }
+.prose-lesson .katex-display > .katex { white-space: nowrap; }
 .prose-lesson .katex { font-size: 1.08em; }

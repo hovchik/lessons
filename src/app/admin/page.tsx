@@ -11,17 +11,17 @@ export default async function AdminDashboard() {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-black">Dashboard</h1>
-      <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <h1 className="text-2xl font-black sm:text-3xl">Dashboard</h1>
+      <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {[
           ["Subjects", subjects.length],
           ["Courses", stats.courses],
           ["Lessons", stats.lessons],
           ["Published", `${stats.published} (${pct}%)`],
         ].map(([k, v]) => (
-          <div key={String(k)} className="clay-sm p-5">
+          <div key={String(k)} className="clay-sm p-4 sm:p-5">
             <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k}</dt>
-            <dd className="mt-1 text-3xl font-black text-primary">{v}</dd>
+            <dd className="mt-1 text-2xl font-black text-primary sm:text-3xl">{v}</dd>
           </div>
         ))}
       </dl>

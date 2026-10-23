@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { BookOpen, GraduationCap, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import { isAdmin } from "@/server/auth";
@@ -8,6 +8,14 @@ import "../globals.css";
 export const metadata: Metadata = {
   title: { default: "Admin · Lessons", template: "%s · Admin" },
   robots: { index: false, follow: false },
+  icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#eef2ff",
 };
 
 export const dynamic = "force-dynamic";
@@ -17,7 +25,6 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font -- App Router root layout; next/font cannot download fonts in offline builds */}
@@ -29,14 +36,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <body className="min-h-dvh">
         {authed ? (
           <div className="flex min-h-dvh flex-col md:flex-row">
-            <aside className="flex items-center gap-2 border-b border-border/60 bg-card px-4 py-3 md:w-60 md:flex-col md:items-stretch md:gap-1 md:border-b-0 md:border-r md:px-4 md:py-6">
+            <aside className="pt-safe sticky top-0 z-30 flex items-center gap-1 border-b border-border/60 bg-card px-3 py-2 sm:gap-2 sm:px-4 sm:py-3 md:static md:w-60 md:flex-col md:items-stretch md:gap-1 md:border-b-0 md:border-r md:px-4 md:py-6">
               <Link href="/admin" className="mb-0 flex items-center gap-2 text-lg font-extrabold md:mb-6">
                 <span className="grid size-9 place-items-center rounded-[12px] bg-primary text-primary-foreground">
                   <GraduationCap className="size-5" aria-hidden="true" />
                 </span>
                 <span className="hidden sm:inline">Admin</span>
               </Link>
-              <nav className="flex flex-1 gap-1 md:flex-col" aria-label="Admin">
+              <nav className="scroll-x flex flex-1 gap-1 whitespace-nowrap md:flex-col md:whitespace-normal" aria-label="Admin">
                 <Link href="/admin" className="flex h-11 items-center gap-2 rounded-xl px-3 text-sm font-bold hover:bg-muted">
                   <LayoutDashboard className="size-4" aria-hidden="true" /> Dashboard
                 </Link>
@@ -49,7 +56,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               </nav>
               <LogoutButton />
             </aside>
-            <main className="flex-1 px-4 py-6 sm:px-8 sm:py-8">{children}</main>
+            <main className="px-safe min-w-0 flex-1 px-4 py-5 sm:px-8 sm:py-8">{children}</main>
           </div>
         ) : (
           <main className="grid min-h-dvh place-items-center px-4">{children}</main>
