@@ -3,50 +3,13 @@ import { course } from "./shared";
 import { russianGrade1 } from "./grade-1";
 import { russianGrade2 } from "./grade-2";
 import { russianGrade3 } from "./grade-3";
+import { russianGrade4 } from "./grade-4";
 
 export const russian: CourseSeed[] = [
   russianGrade1,
   russianGrade2,
   russianGrade3,
-  course(
-    4,
-    ["Declension of nouns, adjectives and pronouns, conjugation of verbs, homogeneous members, text work; end of primary.", "Գոյականի, ածականի և դերանվան հոլովում, բայի խոնարհում, համադաս անդամներ, տեքստ, տարրական դպրոցի ավարտ։", "Склонение существительных, прилагательных и местоимений, спряжение глаголов, однородные члены, работа с текстом; конец начальной школы."],
-    ["Armenia grade 4 (3 h/week): systematic cases of nouns and adjectives, verb conjugation (I and II), aspect introduced, dialogue and monologue on topics (Armenia and Russia, holidays, travel), reading adapted texts, grade 4 assessment in Russian.", "Հայաստան, 4-րդ դասարան (3 ժ/շաբ.)՝ գոյականի և ածականի հոլովման համակարգ, բայի խոնարհում (I և II), կերպի ներմուծում, երկխոսություն և մենախոսություն (Հայաստան և Ռուսաստան, տոներ, ճանապարհորդություն), հարմարեցված տեքստերի ընթերցանություն, 4-րդ դասարանի ստուգում։", "Армения, 4 класс (3 ч/нед.): система падежей существительных и прилагательных, спряжение глаголов (I и II), введение вида, диалог и монолог по темам (Армения и Россия, праздники, путешествия), чтение адаптированных текстов, проверка за 4 класс."],
-    ["Russia grade 4 (ФГОС НОО, 5 h/week): sentence with homogeneous members, complex sentences, three declensions of nouns, declension of adjectives and personal pronouns, I and II conjugation, spelling of unstressed personal endings, -тся/-ться, ВПР preparation.", "Ռուսաստան, 4-րդ դասարան (ФГОС НОО, 5 ժ/շաբ.)՝ համադաս անդամներով նախադասություն, բարդ նախադասություններ, գոյականի երեք հոլովում, ածականի և անձնական դերանունների հոլովում, I և II խոնարհում, անշեշտ դիմային վերջավորություններ, -тся/-ться, ВПР նախապատրաստություն։", "Россия, 4 класс (ФГОС НОО, 5 ч/нед.): предложение с однородными членами, сложные предложения, три склонения существительных, склонение прилагательных и личных местоимений, I и II спряжение, правописание безударных личных окончаний, -тся/-ться, подготовка к ВПР."],
-    { armenia: 3, russia: 5 },
-    [
-      unit(t("Sentence", "Նախադասություն", "Предложение"), t("Homogeneous members, commas, complex sentences, address.", "Համադաս անդամներ, ստորակետ, բարդ նախադասություններ, կոչական։", "Однородные члены, запятые, сложные предложения, обращение."), [
-        ["ru4-homogeneous", "Homogeneous members and punctuation", "Համադաս անդամներ և կետադրություն", "Однородные члены и знаки препинания"],
-        ["ru4-complex-sentences", "Simple and complex sentences with и, а, но", "Պարզ և բարդ նախադասություններ и, а, но-ով", "Простые и сложные предложения с и, а, но"],
-        ["ru4-address", "Address", "Կոչական", "Обращение"],
-      ]),
-      unit(t("Noun declension", "Գոյականի հոլովում", "Склонение существительных"), t("Three declensions, case endings, spelling of unstressed endings, plural forms.", "Երեք հոլովում, հոլովային վերջավորություններ, անշեշտ վերջավորությունների ուղղագրություն, հոգնակի։", "Три склонения, падежные окончания, правописание безударных окончаний, множественное число."), [
-        ["ru4-three-declensions", "First, second and third declension", "Առաջին, երկրորդ և երրորդ հոլովում", "Первое, второе и третье склонение"],
-        ["ru4-endings-singular", "Case endings in the singular", "Հոլովային վերջավորությունները եզակիում", "Падежные окончания в единственном числе"],
-        ["ru4-endings-plural", "Case endings in the plural", "Հոլովային վերջավորությունները հոգնակիում", "Падежные окончания во множественном числе"],
-        ["ru4-check-ending", "Checking an unstressed ending", "Անշեշտ վերջավորության ստուգում", "Проверка безударного окончания"],
-      ]),
-      unit(t("Adjective and pronoun", "Ածական և դերանուն", "Прилагательное и местоимение"), t("Declension of adjectives in all genders and plural; declension of personal pronouns.", "Ածականի հոլովումը բոլոր սեռերում և հոգնակիում, անձնական դերանունների հոլովում։", "Склонение прилагательных во всех родах и множественном числе; склонение личных местоимений."), [
-        ["ru4-adjective-masc-neut", "Declension of masculine and neuter adjectives", "Արական և չեզոք սեռի ածականների հոլովում", "Склонение прилагательных мужского и среднего рода"],
-        ["ru4-adjective-fem", "Declension of feminine adjectives", "Իգական սեռի ածականների հոլովում", "Склонение прилагательных женского рода"],
-        ["ru4-adjective-plural", "Adjectives in the plural", "Ածականները հոգնակիում", "Прилагательные во множественном числе"],
-        ["ru4-pronoun-declension", "Declension of personal pronouns", "Անձնական դերանունների հոլովում", "Склонение личных местоимений"],
-      ]),
-      unit(t("Verb", "Բայ", "Глагол"), t("Conjugation I and II, personal endings, -тся/-ться, past tense, aspect introduced.", "I և II խոնարհում, դիմային վերջավորություններ, -тся/-ться, անցյալ ժամանակ, կերպ։", "I и II спряжение, личные окончания, -тся/-ться, прошедшее время, введение вида."), [
-        ["ru4-conjugation", "First and second conjugation", "Առաջին և երկրորդ խոնարհում", "Первое и второе спряжение"],
-        ["ru4-personal-endings", "Unstressed personal endings", "Անշեշտ դիմային վերջավորություններ", "Безударные личные окончания"],
-        ["ru4-tsya", "-тся and -ться", "-тся և -ться", "-тся и -ться"],
-        ["ru4-aspect-intro", "Aspect: делать / сделать", "Կերպ․ делать / сделать", "Вид глагола: делать / сделать"],
-        ["ru4-exceptions", "Exception verbs: гнать, держать, смотреть…", "Բացառություն-բայեր․ гнать, держать, смотреть…", "Глаголы-исключения: гнать, держать, смотреть…"],
-      ]),
-      unit(t("Text and review", "Տեքստ և ամփոփում", "Текст и повторение"), t("Summary, essay, text plan; reading Krylov, Pushkin, Tolstoy; final review.", "Համառոտագրություն, շարադրություն, պլան, Կռիլով, Պուշկին, Տոլստոյ, ամփոփում։", "Изложение, сочинение, план текста; чтение Крылова, Пушкина, Толстого; итоговое повторение."), [
-        ["ru4-summary", "Writing a summary (изложение)", "Համառոտագրություն (изложение)", "Изложение"],
-        ["ru4-essay", "Essay about a picture", "Շարադրություն նկարի մասին", "Сочинение по картине"],
-        ["ru4-krylov-fables", "Krylov's fables", "Կռիլովի առակները", "Басни Крылова"],
-        ["ru4-review", "Review of primary Russian", "Տարրական ռուսերենի ամփոփում", "Повторение курса начальной школы"],
-      ]),
-    ],
-  ),
+  russianGrade4,
   course(
     5,
     ["Phonetics, lexicology, word formation, morphology begins (noun, adjective, verb); syntax and punctuation basics; literature course.", "Հնչյունաբանություն, բառագիտություն, բառակազմություն, ձևաբանության սկիզբ (գոյական, ածական, բայ), շարահյուսության և կետադրության հիմունքներ, գրականություն։", "Фонетика, лексика, словообразование, начало морфологии (существительное, прилагательное, глагол); основы синтаксиса и пунктуации; курс литературы."],
