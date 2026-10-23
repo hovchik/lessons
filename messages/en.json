@@ -1,0 +1,29 @@
+{
+  "app": { "name": "Lessons", "tagline": "Grades 1–12. Three languages. Every subject.", "skipToContent": "Skip to content" },
+  "nav": { "home": "Home", "grades": "Grades", "subjects": "Subjects", "admin": "Admin", "language": "Language", "menu": "Menu" },
+  "home": {
+    "heroTitle": "Learn every subject, from grade 1 to 12",
+    "heroText": "Complete courses in Math, Algebra, Geometry, Physics, Drawing and Languages, built on the Armenian and Russian school curricula and available in English, Armenian and Russian.",
+    "pickGrade": "Pick your grade",
+    "browseSubjects": "Browse by subject",
+    "stats": { "courses": "courses", "lessons": "lessons", "languages": "languages" },
+    "curriculumTitle": "Two curricula, one program",
+    "curriculumText": "Every course explains how the topic is taught in Armenia and in Russia, so pupils, parents and teachers in either system can follow along.",
+    "ctaGrade": "Start with grade {grade}"
+  },
+  "grade": { "label": "Grade", "short": "G{grade}", "title": "Grade {grade}", "subtitle": "{count} courses for grade {grade}", "noCourses": "No courses for this grade yet.", "allGrades": "All grades", "prev": "Grade {grade}", "next": "Grade {grade}" },
+  "subject": { "title": "Subjects", "coursesCount": "{count} courses", "grades": "Grades {from}–{to}", "viewCourses": "View courses" },
+  "course": {
+    "units": "Units", "lessons": "lessons", "lesson": "lesson", "lessonsCount": "{count} lessons",
+    "unit": "Unit {n}", "lessonN": "Lesson {n}", "start": "Start learning", "continue": "Continue",
+    "curriculum": "Curriculum map", "armenia": "Armenia", "russia": "Russia", "hoursPerWeek": "{hours} h/week", "hoursNA": "not taught", "comingSoon": "Coming soon", "published": "Ready", "progress": "{done} of {total} lessons ready",
+    "otherGrades": "Other grades in {subject}"
+  },
+  "lesson": {
+    "objectives": "What you will learn", "duration": "{min} min", "quiz": "Check yourself", "check": "Check answer", "next": "Next lesson", "prev": "Previous lesson", "backToCourse": "Back to course",
+    "comingSoonTitle": "This lesson is being written", "comingSoonText": "The full lesson text is not ready yet. Browse the course outline or come back soon.",
+    "correct": "Correct!", "incorrect": "Not quite. Try again.", "score": "You got {score} of {total}", "retry": "Try again", "showExplanation": "Why?", "question": "Question {n} of {total}", "inUnit": "Unit {n}: {title}"
+  },
+  "footer": { "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.", "admin": "Admin panel", "language": "Language" },
+  "notFound": { "title": "Page not found", "text": "The page you are looking for does not exist.", "home": "Go to the home page" }
+}
