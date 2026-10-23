@@ -1,43 +1,10 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { course } from "./shared";
 import { englishGrade3 } from "./grade-3";
+import { englishGrade2 } from "./grade-2";
 
 export const english: CourseSeed[] = [
-  course(
-    2,
-    ["First English: greetings, the alphabet, colours, numbers 1–10, family and toys, through songs, games and pictures.", "Առաջին անգլերեն՝ ողջույններ, այբուբեն, գույներ, 1–10 թվեր, ընտանիք և խաղալիքներ՝ երգերի, խաղերի և նկարների միջոցով։", "Первый английский: приветствия, алфавит, цвета, числа 1–10, семья и игрушки — через песни, игры и картинки."],
-    ["Armenia: a foreign language officially starts in grade 3, but many schools offer an optional oral English club in grade 2. This course is purely oral and playful: no reading or writing is required.", "Հայաստան․ օտար լեզուն պաշտոնապես սկսվում է 3-րդ դասարանից, սակայն շատ դպրոցներ 2-րդում առաջարկում են բանավոր անգլերենի խմբակ։ Դասընթացը բանավոր է և խաղային՝ կարդալ-գրել չի պահանջվում։", "Армения: иностранный язык официально начинается с 3 класса, но многие школы предлагают во 2 классе устный кружок английского. Курс устный и игровой, чтение и письмо не требуются."],
-    ["Russia grade 2 (ФГОС НОО, 2 h/week): first year of the foreign language — alphabet and sounds, greetings, name and age, family, colours, numbers 1–10, toys and pets, simple «I have / I like / It is» structures.", "Ռուսաստան, 2-րդ դասարան (ФГОС НОО, 2 ժ/շաբ.)՝ օտար լեզվի առաջին տարի․ այբուբեն և հնչյուններ, ողջույններ, անուն և տարիք, ընտանիք, գույներ, 1–10 թվեր, խաղալիքներ և կենդանիներ, «I have / I like / It is» կառույցներ։", "Россия, 2 класс (ФГОС НОО, 2 ч/нед.): первый год иностранного языка — алфавит и звуки, приветствия, имя и возраст, семья, цвета, числа 1–10, игрушки и питомцы, простые структуры «I have / I like / It is»."],
-    { armenia: null, russia: 2 },
-    [
-      unit(t("Hello, English!", "Բարև, անգլերեն", "Привет, английский!"), t("Greetings, names, the alphabet song.", "Ողջույններ, անուններ, այբուբենի երգը։", "Приветствия, имена, песенка про алфавит."), [
-        ["hello-goodbye", "Hello and goodbye", "Բարև և ցտեսություն", "Hello и goodbye"],
-        ["whats-your-name", "What's your name?", "Ի՞նչ է քո անունը", "Как тебя зовут?"],
-        ["abc-song", "The ABC song", "ABC երգը", "Песенка ABC"],
-        ["letters-a-m", "Letters A–M and their sounds", "A–M տառերը և հնչյունները", "Буквы A–M и их звуки"],
-        ["letters-n-z", "Letters N–Z and their sounds", "N–Z տառերը և հնչյունները", "Буквы N–Z и их звуки"],
-      ]),
-      unit(t("Colours and numbers", "Գույներ և թվեր", "Цвета и числа"), t("Ten colours, counting to ten, «How many?».", "Տասը գույն, հաշվել մինչև տասը, «How many?»։", "Десять цветов, счёт до десяти, «How many?»."), [
-        ["colours", "Red, blue, yellow: colours", "Red, blue, yellow․ գույները", "Red, blue, yellow: цвета"],
-        ["numbers-1-10", "Numbers 1–10", "1–10 թվերը", "Числа 1–10"],
-        ["how-many", "How many? Counting things", "How many? Հաշվում ենք", "How many? Считаем предметы"],
-        ["how-old-are-you", "How old are you?", "Քանի՞ տարեկան ես", "Сколько тебе лет?"],
-      ]),
-      unit(t("My family and my toys", "Իմ ընտանիքը և խաղալիքները", "Моя семья и мои игрушки"), t("Family words, «This is my…», «I have got…».", "Ընտանիքի անդամներ, «This is my…», «I have got…»։", "Слова о семье, «This is my…», «I have got…»."), [
-        ["my-family", "This is my family", "Սա իմ ընտանիքն է", "Это моя семья"],
-        ["i-have-got", "I have got a ball", "I have got a ball", "У меня есть мяч: I have got"],
-        ["toys", "Toys: a doll, a car, a teddy bear", "Խաղալիքներ․ doll, car, teddy bear", "Игрушки: doll, car, teddy bear"],
-        ["pets", "Pets: a cat, a dog, a fish", "Կենդանիներ․ cat, dog, fish", "Питомцы: cat, dog, fish"],
-      ]),
-      unit(t("I can and I like", "Կարողանում եմ, սիրում եմ", "Я умею и я люблю"), t("Verbs of action, «I can jump», food and «I like».", "Գործողության բայեր, «I can jump», սնունդ և «I like»։", "Глаголы действия, «I can jump», еда и «I like»."), [
-        ["i-can", "I can run, I can jump", "I can run, I can jump", "I can run, I can jump"],
-        ["food-i-like", "Food: I like apples", "Սնունդ․ I like apples", "Еда: I like apples"],
-        ["body-parts", "Head, shoulders, knees and toes", "Head, shoulders, knees and toes", "Head, shoulders, knees and toes"],
-        ["year-2-review", "Review: my English picture dictionary", "Ամփոփում․ իմ նկարազարդ բառարանը", "Повторение: мой словарь в картинках"],
-      ]),
-    ],
-  ),
-
+  englishGrade2,
   englishGrade3,
 
   course(
