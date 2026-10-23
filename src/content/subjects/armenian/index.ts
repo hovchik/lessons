@@ -1,51 +1,11 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { course, ruNote } from "./shared";
 import { armenianGrade1 } from "./grade-1";
+import { armenianGrade2 } from "./grade-2";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
-  course(
-    2,
-    ["Fluent reading, spelling rules, sentence and word, nouns and verbs introduced, children's literature.", "Սահուն ընթերցանություն, ուղղագրության կանոններ, նախադասություն և բառ, գոյական և բայ, մանկական գրականություն։", "Беглое чтение, правила правописания, предложение и слово, знакомство с существительным и глаголом, детская литература."],
-    ["Armenia grade 2, «Մայրենի» (7 h/week): sounds and letters, syllable division and hyphenation, Ե/Է, Ո/Օ, Ը spelling, sentence types, word meaning, parts of speech first look (noun, adjective, verb), reading comprehension of folk tales and classic children's authors.", "Հայաստան, 2-րդ դասարան, «Մայրենի» (7 ժ/շաբ.)՝ հնչյուն և տառ, վանկատում և տողադարձ, Ե/Է, Ո/Օ, Ը-ի ուղղագրություն, նախադասության տեսակները, բառի իմաստ, խոսքի մասերի առաջին ծանոթություն (գոյական, ածական, բայ), ժողովրդական հեքիաթների և մանկագիրների ընթերցանություն։", "Армения, 2 класс, «Մայրենի» (7 ч/нед.): звуки и буквы, слогоделение и перенос, правописание Ե/Է, Ո/Օ, Ը, типы предложений, значение слова, первое знакомство с частями речи (существительное, прилагательное, глагол), чтение народных сказок и классиков детской литературы."],
-    ruNote,
-    { armenia: 7, russia: null },
-    [
-      unit(t("Sounds and letters", "Հնչյուն և տառ", "Звуки и буквы"), t("Alphabet order, vowels and consonants, Ե/Է and Ո/Օ, the hidden Ը, hyphenation.", "Այբբենական կարգ, ձայնավոր և բաղաձայն, Ե/Է և Ո/Օ, գաղտնավանկ Ը, տողադարձ։", "Алфавитный порядок, гласные и согласные, Ե/Է и Ո/Օ, скрытый Ը, перенос."), [
-        ["alphabet-order", "Alphabetical order; using a dictionary", "Այբբենական կարգ, բառարանի օգտագործում", "Алфавитный порядок; работа со словарём"],
-        ["e-and-eh", "Spelling Ե and Է", "Ե և Է ուղղագրությունը", "Правописание Ե и Է"],
-        ["o-and-vo", "Spelling Ո and Օ", "Ո և Օ ուղղագրությունը", "Правописание Ո и Օ"],
-        ["hidden-schwa", "The hidden Ը and syllables", "Գաղտնավանկ Ը-ն և վանկերը", "Скрытый Ը и слоги"],
-        ["hyphenation", "Hyphenation rules", "Տողադարձի կանոններ", "Правила переноса"],
-        ["voiced-voiceless", "Voiced and voiceless consonants: բ/պ/փ, գ/կ/ք, դ/տ/թ", "Ձայնեղ և խուլ բաղաձայններ․ բ/պ/փ, գ/կ/ք, դ/տ/թ", "Звонкие и глухие: բ/պ/փ, գ/կ/ք, դ/տ/թ"],
-      ]),
-      unit(t("Sentence", "Նախադասություն", "Предложение"), t("Kinds of sentences, main words, punctuation marks of Armenian.", "Նախադասության տեսակները, գլխավոր անդամներ, հայերենի կետադրական նշաններ։", "Виды предложений, главные слова, знаки препинания армянского языка."), [
-        ["sentence-types", "Statements, questions, exclamations", "Պատմողական, հարցական, բացականչական նախադասություններ", "Повествовательные, вопросительные, восклицательные предложения"],
-        ["question-mark-placement", "Where the question mark ՞ goes", "Որտե՞ղ է դրվում հարցական նշանը", "Где ставится вопросительный знак ՞"],
-        ["main-words", "Who? What does? — main words of the sentence", "Ո՞վ, ի՞նչ է անում․ նախադասության գլխավոր անդամները", "Кто? Что делает? — главные слова предложения"],
-        ["word-order", "Word order and intonation", "Բառերի կարգը և հնչերանգը", "Порядок слов и интонация"],
-      ]),
-      unit(t("Word and its meaning", "Բառը և նրա իմաստը", "Слово и его значение"), t("Synonyms, antonyms, polysemy, compound words, the root.", "Հոմանիշներ, հականիշներ, բազմիմաստություն, բարդ բառեր, արմատ։", "Синонимы, антонимы, многозначность, сложные слова, корень."), [
-        ["synonyms-antonyms", "Synonyms and antonyms", "Հոմանիշներ և հականիշներ", "Синонимы и антонимы"],
-        ["polysemy", "Words with several meanings", "Բազմիմաստ բառեր", "Многозначные слова"],
-        ["compound-words", "Compound words: ծաղկ-ա-փունջ", "Բարդ բառեր․ ծաղկ-ա-փունջ", "Сложные слова: ծաղկ-ա-փունջ"],
-        ["root-and-family", "Root and related words", "Արմատ և ազգակից բառեր", "Корень и родственные слова"],
-      ]),
-      unit(t("Parts of speech: first look", "Խոսքի մասեր․ առաջին ծանոթություն", "Части речи: первое знакомство"), t("Nouns, adjectives, verbs; singular and plural.", "Գոյական, ածական, բայ, եզակի և հոգնակի։", "Существительное, прилагательное, глагол; единственное и множественное число."), [
-        ["nouns-intro", "Nouns: who and what", "Գոյական․ ով և ինչ", "Существительное: кто и что"],
-        ["plural-formation", "Plural: -եր and -ներ", "Հոգնակի․ -եր և -ներ", "Множественное число: -եր и -ներ"],
-        ["adjectives-intro", "Adjectives: what kind", "Ածական․ ինչպիսի", "Прилагательное: какой"],
-        ["verbs-intro", "Verbs: what does it do", "Բայ․ ինչ է անում", "Глагол: что делает"],
-      ]),
-      unit(t("Reading", "Ընթերցանություն", "Чтение"), t("Folk tales, Tumanyan, Aghayan, Isahakyan, Shiraz; retelling and reading plan.", "Ժողովրդական հեքիաթներ, Թումանյան, Աղայան, Իսահակյան, Շիրազ, վերապատմում և պլան։", "Народные сказки, Туманян, Агаян, Исаакян, Шираз; пересказ и план текста."), [
-        ["folk-tales", "Armenian folk tales", "Հայ ժողովրդական հեքիաթներ", "Армянские народные сказки"],
-        ["tumanyan-tales-2", "Tumanyan: «Անբան Հուռին», «Սուտլիկ որսկանը»", "Թումանյան․ «Անբան Հուռին», «Սուտլիկ որսկանը»", "Туманян: «Ленивая Ури», «Лживый охотник»"],
-        ["aghayan-anahit", "Aghayan: «Անահիտ» (excerpts)", "Աղայան․ «Անահիտ» (հատվածներ)", "Агаян: «Анаит» (отрывки)"],
-        ["text-plan-retelling", "Making a plan and retelling", "Պլան կազմել և վերապատմել", "Составление плана и пересказ"],
-        ["poetry-nature", "Poems about nature and seasons", "Բանաստեղծություններ բնության և եղանակների մասին", "Стихи о природе и временах года"],
-      ]),
-    ],
-  ),
+  armenianGrade2,
   course(
     3,
     ["Parts of speech in detail, word structure, sentence members, text types, extended reading.", "Խոսքի մասերը մանրամասն, բառակազմություն, նախադասության անդամներ, տեքստի տեսակներ, ընթերցանություն։", "Части речи подробно, состав слова, члены предложения, типы текста, расширенное чтение."],
