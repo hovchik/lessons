@@ -1,52 +1,11 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { notes, g } from "./shared";
 import { drawingGrade1 } from "./grade-1";
+import { drawingGrade2 } from "./grade-2";
 
 export const drawing: CourseSeed[] = [
   drawingGrade1,
-  {
-    subject: "drawing",
-    grade: 2,
-    ...g(2),
-    description: t("Art materials and techniques, colour moods, drawing from nature, folk art of Armenia and Russia.", "Նյութեր և տեխնիկաներ, գույնի տրամադրություն, նկարել բնությունից, Հայաստանի և Ռուսաստանի ժողովրդական արվեստ։", "Художественные материалы и техники, настроение цвета, рисование с натуры, народное искусство Армении и России."),
-    curriculumNotes: notes(
-      ["Armenia grade 2 (1 h/week): gouache, watercolour, pastel; colour moods; drawing from nature (fruit, leaves, toys); illustration of Armenian fairy tales (H. Tumanyan); carpet ornaments; clay modelling.", "Հայաստան, 2-րդ դասարան (1 ժ/շաբ.)՝ գուաշ, ջրաներկ, պաստել, գույնի տրամադրություն, նկարել բնությունից (միրգ, տերև, խաղալիք), Թումանյանի հեքիաթների նկարազարդում, գորգի զարդանախշեր, կավե ծեփ։", "Армения, 2 класс (1 ч/нед.): гуашь, акварель, пастель; настроение цвета; рисование с натуры (фрукты, листья, игрушки); иллюстрации к сказкам О. Туманяна; ковровые орнаменты; лепка из глины."],
-      ["Russia grade 2, ИЗО («Искусство и ты», 34 h): how and with what artists work; reality and fantasy; what art says; how art speaks (colour, line, rhythm, proportion).", "Ռուսաստան, 2-րդ դասարան, ИЗО («Արվեստը և դու», 34 ժ)՝ ինչպես և ինչով են աշխատում նկարիչները, իրականություն և երևակայություն, ինչ է ասում արվեստը, ինչպես է խոսում արվեստը (գույն, գիծ, ռիթմ, համամասնություն)։", "Россия, 2 класс, ИЗО («Искусство и ты», 34 ч): как и чем работают художники; реальность и фантазия; о чём говорит искусство; как говорит искусство (цвет, линия, ритм, пропорции)."],
-    ),
-    hoursPerWeek: { armenia: 1, russia: 1 },
-    units: [
-      unit(t("Materials and techniques", "Նյութեր և տեխնիկաներ", "Материалы и техники"), t("Gouache, watercolour, pastel, wax crayons, mixed media.", "Գուաշ, ջրաներկ, պաստել, մոմամատիտ, խառը տեխնիկա։", "Гуашь, акварель, пастель, восковые мелки, смешанная техника."), [
-        ["gouache-three-colours", "Gouache: three colours and white", "Գուաշ․ երեք գույն և սպիտակ", "Гуашь: три цвета и белила"],
-        ["watercolour-wet", "Watercolour: wet on wet", "Ջրաներկ․ թաց թղթի վրա", "Акварель: по сырому"],
-        ["pastel-crayons", "Pastel and wax crayons", "Պաստել և մոմամատիտներ", "Пастель и восковые мелки"],
-        ["monotype-printing", "Printing and monotype", "Տպագրություն և մոնոտիպ", "Печать и монотипия"],
-      ]),
-      unit(t("Colour and mood", "Գույն և տրամադրություն", "Цвет и настроение"), t("Quiet and loud colours, light and dark, colour tells a story.", "Հանգիստ և աղմկոտ գույներ, լույս և մութ, գույնը պատմություն է պատմում։", "Тихие и звонкие цвета, светлое и тёмное, цвет рассказывает историю."), [
-        ["quiet-loud-colours", "Quiet and loud colours", "Հանգիստ և աղմկոտ գույներ", "Тихие и звонкие цвета"],
-        ["light-dark", "Light and dark: adding white and black", "Լույս և մութ․ սպիտակի և սևի ավելացում", "Светлое и тёмное: добавляем белый и чёрный"],
-        ["colour-of-feelings", "The colour of feelings: joy and sadness", "Զգացմունքների գույնը․ ուրախություն և տխրություն", "Цвет чувств: радость и грусть"],
-        ["sea-moods", "The sea in different moods", "Ծովը տարբեր տրամադրություններով", "Море в разном настроении"],
-      ]),
-      unit(t("Drawing from nature", "Նկարել բնությունից", "Рисование с натуры"), t("Fruit, leaves, a toy; proportions and placement on the page.", "Միրգ, տերև, խաղալիք, համամասնություններ և տեղադրում թղթի վրա։", "Фрукты, листья, игрушка; пропорции и размещение на листе."), [
-        ["fruit-still-life", "Fruit on a plate", "Միրգ ափսեի մեջ", "Фрукты на тарелке"],
-        ["leaf-study", "Study of a leaf", "Տերևի ուսումնասիրություն", "Этюд листа"],
-        ["favourite-toy", "My favourite toy", "Իմ սիրելի խաղալիքը", "Моя любимая игрушка"],
-        ["placing-on-page", "Big and small: placing objects on the page", "Մեծ և փոքր․ առարկաների տեղադրումը թղթի վրա", "Большое и маленькое: размещение на листе"],
-      ]),
-      unit(t("Reality and fantasy", "Իրականություն և երևակայություն", "Реальность и фантазия"), t("Illustrating fairy tales, inventing creatures, dream houses.", "Հեքիաթների նկարազարդում, արարածների հորինում, երազանքի տներ։", "Иллюстрируем сказки, придумываем существ, дома мечты."), [
-        ["tumanyan-tale", "Illustrating a Tumanyan tale", "Թումանյանի հեքիաթի նկարազարդում", "Иллюстрация к сказке Туманяна"],
-        ["russian-tale", "Illustrating a Russian folk tale", "Ռուսական ժողովրդական հեքիաթի նկարազարդում", "Иллюстрация к русской народной сказке"],
-        ["invented-creature", "An invented creature", "Հորինված արարած", "Придуманное существо"],
-        ["dream-house", "The house of my dreams", "Երազանքիս տունը", "Дом моей мечты"],
-      ]),
-      unit(t("Folk art and modelling", "Ժողովրդական արվեստ և ծեփ", "Народное искусство и лепка"), t("Carpet patterns, khachkar motifs, Russian lacquer, clay animals.", "Գորգի նախշեր, խաչքարի մոտիվներ, ռուսական լաքապատ նկար, կավե կենդանիներ։", "Ковровые узоры, мотивы хачкаров, русская лаковая роспись, животные из глины."), [
-        ["carpet-pattern", "Armenian carpet pattern", "Հայկական գորգի նախշ", "Узор армянского ковра"],
-        ["khachkar-motifs", "Khachkar: the stone lace", "Խաչքար․ քարե ժանյակ", "Хачкар: каменное кружево"],
-        ["khokhloma-gorodets", "Khokhloma and Gorodets painting", "Խոխլոմա և Գորոդեց նկարազարդում", "Хохлома и городецкая роспись"],
-        ["clay-animals", "Clay modelling: animals", "Կավե ծեփ․ կենդանիներ", "Лепка из глины: животные"],
-      ]),
-    ],
-  },
+  drawingGrade2,
   {
     subject: "drawing",
     grade: 3,
