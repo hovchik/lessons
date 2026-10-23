@@ -25,23 +25,23 @@ export default async function GradePage({ params }: { params: Params }) {
   const courses = await getCourses({ grade });
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8 sm:space-y-10">
       <GradePicker current={grade} compact />
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-sm font-bold uppercase tracking-wide text-muted-foreground">{t("grade.label")}</p>
-          <h1 className="text-4xl font-black sm:text-5xl">{t("grade.title", { grade })}</h1>
+          <h1 className="text-3xl font-black sm:text-5xl">{t("grade.title", { grade })}</h1>
           <p className="mt-1 text-muted-foreground">{t("grade.subtitle", { count: courses.length, grade })}</p>
         </div>
-        <nav className="flex gap-2" aria-label={t("grade.allGrades")}>
+        <nav className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto" aria-label={t("grade.allGrades")}>
           {grade > 1 && (
-            <Link href={`/grade/${grade - 1}`} className={buttonClasses({ variant: "secondary", size: "sm" })}>
+            <Link href={`/grade/${grade - 1}`} className={buttonClasses({ variant: "secondary", size: "sm", className: "col-start-1" })}>
               <ChevronLeft className="size-4" aria-hidden="true" />
               {t("grade.prev", { grade: grade - 1 })}
             </Link>
           )}
           {grade < 12 && (
-            <Link href={`/grade/${grade + 1}`} className={buttonClasses({ variant: "secondary", size: "sm" })}>
+            <Link href={`/grade/${grade + 1}`} className={buttonClasses({ variant: "secondary", size: "sm", className: "col-start-2" })}>
               {t("grade.next", { grade: grade + 1 })}
               <ChevronRight className="size-4" aria-hidden="true" />
             </Link>
@@ -51,7 +51,7 @@ export default async function GradePage({ params }: { params: Params }) {
       {courses.length === 0 ? (
         <p className="clay p-8 text-center text-muted-foreground">{t("grade.noCourses")}</p>
       ) : (
-        <ul className="grid gap-5 stagger sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-4 stagger sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {courses.map((c) => (
             <li key={c.course.id}>
               <CourseCard course={c.course} subject={c.subject} lessonCount={c.lessonCount} readyCount={c.readyCount} />

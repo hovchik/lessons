@@ -82,13 +82,13 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
     <div className="space-y-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-black">{lesson.title.en}</h1>
+          <h1 className="text-xl font-black sm:text-2xl">{lesson.title.en}</h1>
           <p className="text-sm text-muted-foreground">
             <span className={cn("rounded-full px-2 py-0.5 text-xs font-bold", lesson.status === "published" ? "bg-emerald-100 text-emerald-900" : "bg-muted")}>{lesson.status}</span>{" "}
             · source: {lesson.source} · updated {new Date(lesson.updatedAt).toLocaleString()}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex w-full flex-wrap gap-2 sm:w-auto">
           <Button variant="accent" size="sm" onClick={generate} disabled={!claudeReady || generating || saving} title={claudeReady ? "" : "Set ANTHROPIC_API_KEY to enable"}>
             {generating ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : <Sparkles className="size-4" aria-hidden="true" />}
             {generating ? "Generating… (1–3 min)" : "Generate with Claude"}
@@ -101,7 +101,7 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
           ) : (
             <Button size="sm" onClick={() => save("published")} disabled={saving || generating}>Publish</Button>
           )}
-          <a href={siteUrl} target="_blank" rel="noreferrer" className="inline-flex h-10 items-center gap-1 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted">
+          <a href={siteUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted">
             <Eye className="size-4" aria-hidden="true" /> View
           </a>
         </div>
@@ -113,21 +113,21 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
         </p>
       )}
 
-      <div role="tablist" aria-label="Language" className="flex gap-2">
+      <div role="tablist" aria-label="Language" className="flex flex-wrap items-center gap-2">
         {LANGS.map(([code, label]) => (
           <button
             key={code}
             role="tab"
             aria-selected={lang === code}
             onClick={() => setLang(code)}
-            className={cn("clay-sm clay-press h-10 px-4 text-sm font-bold", lang === code && "text-primary ring-2 ring-primary")}
+            className={cn("clay-sm clay-press h-11 px-3 text-sm font-bold sm:px-4", lang === code && "text-primary ring-2 ring-primary")}
           >
             {label}
             {!lesson.content[code]?.trim() && <span className="ml-2 text-xs font-semibold text-muted-foreground">empty</span>}
           </button>
         ))}
-        <label className="ml-auto inline-flex h-10 items-center gap-2 text-sm font-bold">
-          <input type="checkbox" checked={preview} onChange={(e) => setPreview(e.target.checked)} className="size-4" /> Preview
+        <label className="inline-flex h-11 items-center gap-2 text-sm font-bold sm:ml-auto">
+          <input type="checkbox" checked={preview} onChange={(e) => setPreview(e.target.checked)} className="size-5" /> Preview
         </label>
       </div>
 
@@ -144,10 +144,10 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
           <div className={cn("grid gap-4", preview && "xl:grid-cols-2")}>
             <div>
               <label htmlFor="content" className="block text-sm font-bold">Content ({lang}), Markdown + KaTeX</label>
-              <textarea id="content" lang={lang} rows={28} value={lesson.content[lang]} onChange={(e) => setI18n("content", e.target.value)} className="mt-1 w-full rounded-[12px] border border-border bg-card p-3 font-mono text-sm leading-relaxed" />
+              <textarea id="content" lang={lang} rows={preview ? 16 : 24} value={lesson.content[lang]} onChange={(e) => setI18n("content", e.target.value)} className="mt-1 w-full rounded-[12px] border border-border bg-card p-3 font-mono text-sm leading-relaxed" />
             </div>
             {preview && (
-              <div className="clay-sm max-h-[70vh] overflow-auto p-5">
+              <div className="clay-sm max-h-[60vh] overflow-auto p-4 sm:p-5">
                 <Markdown>{lesson.content[lang] || "*Nothing to preview yet.*"}</Markdown>
               </div>
             )}

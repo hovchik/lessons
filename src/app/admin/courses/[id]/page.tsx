@@ -18,10 +18,10 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
         <Link href="/admin/courses" className="hover:text-primary">Courses</Link> / {subject.name.en} · Grade {course.grade}
       </nav>
       <div className="flex flex-wrap items-end justify-between gap-3">
-        <h1 className="text-3xl font-black">{course.title.en}</h1>
-        <div className="flex items-center gap-3 text-sm font-bold">
+        <h1 className="text-2xl font-black sm:text-3xl">{course.title.en}</h1>
+        <div className="flex flex-wrap items-center gap-3 text-sm font-bold">
           <span className="rounded-full bg-muted px-3 py-1">{readyCount} / {totalCount} ready</span>
-          <a href={`/en/${subject.id}/${course.grade}`} className="text-primary hover:underline" target="_blank" rel="noreferrer">View on site</a>
+          <a href={`/en/${subject.id}/${course.grade}`} className="inline-flex min-h-11 items-center text-primary hover:underline" target="_blank" rel="noreferrer">View on site</a>
         </div>
       </div>
       <p className="max-w-3xl text-sm text-muted-foreground">{course.description.en}</p>
@@ -45,8 +45,8 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
                     ) : (
                       <Circle className="size-4 shrink-0 text-muted-foreground" aria-label="Draft" />
                     )}
-                    <span className="flex-1 text-sm font-semibold">{l.title.en}</span>
-                    <span className="text-xs text-muted-foreground">{l.slug}</span>
+                    <span className="min-w-0 flex-1 text-sm font-semibold">{l.title.en}</span>
+                    <span className="hidden text-xs text-muted-foreground md:inline">{l.slug}</span>
                   </Link>
                 </li>
               ))}

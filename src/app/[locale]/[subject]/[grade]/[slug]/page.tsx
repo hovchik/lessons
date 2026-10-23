@@ -32,12 +32,12 @@ export default async function LessonPage({ params }: { params: Params }) {
   const objectives = lesson.objectives?.[l as "en" | "hy" | "ru"] ?? lesson.objectives?.en ?? [];
 
   return (
-    <article className={cn("mx-auto max-w-3xl space-y-8", `subject-${subj.color}`)}>
+    <article className={cn("mx-auto max-w-3xl space-y-6 sm:space-y-8", `subject-${subj.color}`)}>
       <nav aria-label="Breadcrumb" className="text-sm font-semibold text-muted-foreground">
-        <ol className="flex flex-wrap items-center gap-2">
-          <li><Link href={`/grade/${grade}`} className="hover:text-primary">{t("grade.title", { grade })}</Link></li>
+        <ol className="scroll-x -mx-4 flex items-center gap-2 whitespace-nowrap px-4 sm:mx-0 sm:flex-wrap sm:whitespace-normal sm:px-0">
+          <li><Link href={`/grade/${grade}`} className="inline-flex min-h-11 items-center hover:text-primary">{t("grade.title", { grade })}</Link></li>
           <li aria-hidden="true">/</li>
-          <li><Link href={`/${subject}/${grade}`} className="hover:text-primary">{pick(subj.name, l)}</Link></li>
+          <li><Link href={`/${subject}/${grade}`} className="inline-flex min-h-11 items-center hover:text-primary">{pick(subj.name, l)}</Link></li>
           {unit && (
             <>
               <li aria-hidden="true">/</li>
@@ -49,7 +49,7 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       <header>
         <p className="text-sm font-bold uppercase tracking-wide" style={{ color: "var(--s-text)" }}>{pick(course.title, l)}</p>
-        <h1 className="mt-2 text-3xl font-black leading-tight text-balance sm:text-4xl">{pick(lesson.title, l)}</h1>
+        <h1 className="mt-2 text-[1.65rem] font-black leading-tight text-balance sm:text-4xl">{pick(lesson.title, l)}</h1>
         <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-bold text-muted-foreground">
           <Clock className="size-4" aria-hidden="true" />
           {t("lesson.duration", { min: lesson.durationMin })}
@@ -57,23 +57,23 @@ export default async function LessonPage({ params }: { params: Params }) {
       </header>
 
       {ready && objectives.length > 0 && (
-        <section aria-labelledby="objectives-title" className="clay-sm p-5" style={{ background: "var(--s-soft)" }}>
+        <section aria-labelledby="objectives-title" className="clay-sm p-4 sm:p-5" style={{ background: "var(--s-soft)" }}>
           <h2 id="objectives-title" className="flex items-center gap-2 font-extrabold" style={{ color: "var(--s-text)" }}>
             <ListChecks className="size-5" aria-hidden="true" />
             {t("lesson.objectives")}
           </h2>
-          <ul className="mt-3 list-disc space-y-1 pl-6 text-sm">
+          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm sm:pl-6">
             {objectives.map((o, i) => <li key={i}>{o}</li>)}
           </ul>
         </section>
       )}
 
       {ready ? (
-        <div className="clay p-6 sm:p-10">
+        <div className="clay p-4 sm:p-10">
           <Markdown>{body}</Markdown>
         </div>
       ) : (
-        <div className="clay p-10 text-center">
+        <div className="clay p-6 text-center sm:p-10">
           <span className="mx-auto grid size-16 place-items-center rounded-[20px] bg-muted text-primary">
             <Hammer className="size-8" aria-hidden="true" />
           </span>
@@ -89,19 +89,19 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       <nav aria-label="Lesson navigation" className="grid gap-3 sm:grid-cols-2">
         {prev ? (
-          <Link href={`/${subject}/${grade}/${prev.slug}`} className="clay-sm clay-press flex items-center gap-3 p-4">
+          <Link href={`/${subject}/${grade}/${prev.slug}`} className="clay-sm clay-press flex min-h-16 items-center gap-3 p-4">
             <ArrowLeft className="size-5 shrink-0 text-primary" aria-hidden="true" />
             <span className="min-w-0">
               <span className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">{t("lesson.prev")}</span>
-              <span className="block truncate font-bold">{pick(prev.title, l)}</span>
+              <span className="line-clamp-2 font-bold leading-snug">{pick(prev.title, l)}</span>
             </span>
           </Link>
-        ) : <span />}
+        ) : <span className="hidden sm:block" />}
         {next && (
-          <Link href={`/${subject}/${grade}/${next.slug}`} className="clay-sm clay-press flex items-center justify-end gap-3 p-4 text-right">
+          <Link href={`/${subject}/${grade}/${next.slug}`} className="clay-sm clay-press flex min-h-16 items-center justify-end gap-3 p-4 text-right">
             <span className="min-w-0">
               <span className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">{t("lesson.next")}</span>
-              <span className="block truncate font-bold">{pick(next.title, l)}</span>
+              <span className="line-clamp-2 font-bold leading-snug">{pick(next.title, l)}</span>
             </span>
             <ArrowRight className="size-5 shrink-0 text-primary" aria-hidden="true" />
           </Link>
