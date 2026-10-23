@@ -7,6 +7,7 @@
  * objectives and quiz in all three languages, and every quiz answer points
  * at an existing option. Prints a per-course summary of written vs outline lessons.
  */
+import katex from "katex";
 import { courses, courseId } from "../src/content";
 
 const LANGS = ["en", "hy", "ru"] as const;
@@ -32,6 +33,17 @@ for (const c of courses) {
       for (const lang of LANGS) {
         if (!l.content[lang]?.trim()) errors.push(`${where}: missing ${lang} body`);
         if (!l.objectives?.[lang]?.length) errors.push(`${where}: missing ${lang} objectives`);
+      }
+      for (const lang of LANGS) {
+        const re = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
+        for (const m of (l.content[lang] ?? "").matchAll(re)) {
+          const tex = m[1] ?? m[2];
+          try {
+            katex.renderToString(tex, { throwOnError: true, strict: (code: string) => { throw new Error(code); } });
+          } catch (e) {
+            errors.push(`${where} [${lang}]: formula "${tex.slice(0, 40)}" fails: ${(e as Error).message.slice(0, 60)}`);
+          }
+        }
       }
       if (!l.quiz?.length) errors.push(`${where}: no quiz`);
       for (const [i, qq] of (l.quiz ?? []).entries()) {
