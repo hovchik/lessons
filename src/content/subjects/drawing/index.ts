@@ -4,47 +4,14 @@ import { drawingGrade1 } from "./grade-1";
 import { drawingGrade2 } from "./grade-2";
 import { drawingGrade3 } from "./grade-3";
 import { drawingGrade4 } from "./grade-4";
+import { drawingGrade5 } from "./grade-5";
 
 export const drawing: CourseSeed[] = [
   drawingGrade1,
   drawingGrade2,
   drawingGrade3,
   drawingGrade4,
-  {
-    subject: "drawing",
-    grade: 5,
-    ...g(5),
-    description: t("Decorative and applied art: ornament, symbols, folk costume, art in the life of society, modern design.", "Դեկորատիվ-կիրառական արվեստ՝ զարդանախշ, նշաններ, ժողովրդական տարազ, արվեստը հասարակության կյանքում, ժամանակակից դիզայն։", "Декоративно-прикладное искусство: орнамент, символы, народный костюм, искусство в жизни общества, современный дизайн."),
-    curriculumNotes: notes(
-      ["Armenia grade 5 (1 h/week): ornament and its language (geometric, plant, zoomorphic), Armenian decorative arts (carpets, ceramics, metalwork, khachkars), costume, heraldry and symbols, modern applied design.", "Հայաստան, 5-րդ դասարան (1 ժ/շաբ.)՝ զարդանախշ և նրա լեզուն (երկրաչափական, բուսական, կենդանական), հայկական դեկորատիվ արվեստ (գորգ, խեցեգործություն, մետաղագործություն, խաչքար), տարազ, զինանշաններ և նշաններ, ժամանակակից կիրառական դիզայն։", "Армения, 5 класс (1 ч/нед.): орнамент и его язык (геометрический, растительный, зооморфный), армянское декоративное искусство (ковры, керамика, металл, хачкары), костюм, геральдика и символы, современный прикладной дизайн."],
-      ["Russia grade 5, ИЗО («Декоративно-прикладное искусство в жизни человека», 34 h): ancient roots of folk art, links with modern life, decorative art of different epochs, decorative art in modern world.", "Ռուսաստան, 5-րդ դասարան, ИЗО («Դեկորատիվ-կիրառական արվեստը մարդու կյանքում», 34 ժ)՝ ժողովրդական արվեստի հին արմատներ, կապը ժամանակակից կյանքի հետ, տարբեր դարաշրջանների դեկորատիվ արվեստ, դեկորատիվ արվեստը ժամանակակից աշխարհում։", "Россия, 5 класс, ИЗО («Декоративно-прикладное искусство в жизни человека», 34 ч): древние корни народного искусства, связь времён в народном искусстве, декор — человек, общество, время; декоративное искусство в современном мире."],
-    ),
-    hoursPerWeek: { armenia: 1, russia: 1 },
-    units: [
-      unit(t("Ancient roots of folk art", "Ժողովրդական արվեստի հին արմատները", "Древние корни народного искусства"), t("Ancient symbols, ornament structure, the peasant house and its decoration.", "Հին նշաններ, զարդանախշի կառուցվածք, գյուղացիական տուն և նրա զարդարանք։", "Древние образы, структура орнамента, крестьянский дом и его убранство."), [
-        ["ancient-symbols", "Ancient symbols: sun, earth, water, tree of life", "Հին նշաններ․ արև, երկիր, ջուր, կենաց ծառ", "Древние образы: солнце, земля, вода, древо жизни"],
-        ["ornament-types", "Geometric, plant and zoomorphic ornament", "Երկրաչափական, բուսական և կենդանական զարդանախշ", "Геометрический, растительный и зооморфный орнамент"],
-        ["ornament-rhythm", "Rhythm and symmetry in ornament", "Ռիթմ և համաչափություն զարդանախշում", "Ритм и симметрия в орнаменте"],
-        ["house-decoration", "Decoration of the traditional house", "Ավանդական տան զարդարանքը", "Убранство традиционного жилища"],
-      ]),
-      unit(t("Armenian decorative arts", "Հայկական դեկորատիվ արվեստ", "Армянское декоративное искусство"), t("Carpets, ceramics, metalwork, khachkar, manuscript ornament.", "Գորգեր, խեցեգործություն, մետաղագործություն, խաչքար, ձեռագրի զարդանախշ։", "Ковры, керамика, металл, хачкар, орнамент рукописей."), [
-        ["armenian-carpets", "Armenian carpets: dragon carpets", "Հայկական գորգեր․ վիշապագորգեր", "Армянские ковры: вишапагорги"],
-        ["ceramics-kutahya", "Ceramics: from Urartu to Kütahya", "Խեցեգործություն․ Ուրարտուից Կուտինա", "Керамика: от Урарту до Кютахьи"],
-        ["khachkar-design", "Designing a khachkar composition", "Խաչքարի կոմպոզիցիայի ձևավորում", "Композиция хачкара"],
-        ["manuscript-ornament", "Manuscript ornament and bird letters", "Ձեռագրի զարդանախշ և թռչնատառեր", "Орнамент рукописей и буквы-птицы"],
-      ]),
-      unit(t("Decoration, person, society, time", "Զարդ, մարդ, հասարակություն, ժամանակ", "Декор — человек, общество, время"), t("Costume of different epochs, heraldry, emblems.", "Տարբեր դարաշրջանների տարազ, զինանշանագիտություն, խորհրդանիշներ։", "Костюм разных эпох, геральдика, эмблемы."), [
-        ["costume-epochs", "Costume tells about the epoch", "Տարազը պատմում է դարաշրջանի մասին", "Одежда говорит о человеке"],
-        ["heraldry", "Heraldry: coats of arms of Armenia and Russia", "Զինանշանագիտություն․ Հայաստանի և Ռուսաստանի զինանշանները", "Геральдика: гербы Армении и России"],
-        ["class-emblem", "Designing our class emblem", "Մեր դասարանի խորհրդանիշի ձևավորում", "Эмблема нашего класса"],
-      ]),
-      unit(t("Decorative art today", "Դեկորատիվ արվեստն այսօր", "Декоративное искусство в современном мире"), t("Modern ceramics, glass, textile, jewellery; a collective project.", "Ժամանակակից խեցեգործություն, ապակի, գործվածք, ոսկերչություն, կոլեկտիվ նախագիծ։", "Современная керамика, стекло, текстиль, ювелирное искусство; коллективный проект."), [
-        ["modern-crafts", "Modern ceramics, glass and textile", "Ժամանակակից խեցեգործություն, ապակի և գործվածք", "Современное выставочное искусство"],
-        ["jewellery-design", "Jewellery design", "Զարդերի դիզայն", "Ювелирное искусство"],
-        ["collective-panel", "Collective decorative panel", "Կոլեկտիվ դեկորատիվ պանո", "Коллективное декоративное панно"],
-      ]),
-    ],
-  },
+  drawingGrade5,
   {
     subject: "drawing",
     grade: 6,
