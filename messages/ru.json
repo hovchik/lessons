@@ -1,0 +1,29 @@
+{
+  "app": { "name": "Уроки", "tagline": "1–12 классы. Три языка. Все предметы.", "skipToContent": "Перейти к содержимому" },
+  "nav": { "home": "Главная", "grades": "Классы", "subjects": "Предметы", "admin": "Админ", "language": "Язык", "menu": "Меню" },
+  "home": {
+    "heroTitle": "Учи все предметы с 1 по 12 класс",
+    "heroText": "Полные курсы по математике, алгебре, геометрии, физике, рисованию и языкам, построенные на армянской и российской школьных программах и доступные на английском, армянском и русском.",
+    "pickGrade": "Выбери класс",
+    "browseSubjects": "По предметам",
+    "stats": { "courses": "курсов", "lessons": "уроков", "languages": "языка" },
+    "curriculumTitle": "Две программы, одна платформа",
+    "curriculumText": "Каждый курс объясняет, как тема преподаётся в Армении и в России, чтобы ученики, родители и учителя в обеих системах могли учиться вместе.",
+    "ctaGrade": "Начать с {grade} класса"
+  },
+  "grade": { "label": "Класс", "short": "{grade} кл.", "title": "{grade} класс", "subtitle": "{count} курсов для {grade} класса", "noCourses": "Для этого класса курсов пока нет.", "allGrades": "Все классы", "prev": "{grade} класс", "next": "{grade} класс" },
+  "subject": { "title": "Предметы", "coursesCount": "{count} курсов", "grades": "{from}–{to} классы", "viewCourses": "Смотреть курсы" },
+  "course": {
+    "units": "Разделы", "lessons": "уроков", "lesson": "урок", "lessonsCount": "{count} уроков",
+    "unit": "Раздел {n}", "lessonN": "Урок {n}", "start": "Начать", "continue": "Продолжить",
+    "curriculum": "Карта программы", "armenia": "Армения", "russia": "Россия", "hoursPerWeek": "{hours} ч/нед.", "hoursNA": "не преподаётся", "comingSoon": "Скоро", "published": "Готово", "progress": "Готово {done} из {total} уроков",
+    "otherGrades": "{subject}: другие классы"
+  },
+  "lesson": {
+    "objectives": "Что ты узнаешь", "duration": "{min} мин", "quiz": "Проверь себя", "check": "Проверить", "next": "Следующий урок", "prev": "Предыдущий урок", "backToCourse": "К курсу",
+    "comingSoonTitle": "Этот урок ещё пишется", "comingSoonText": "Полный текст урока пока не готов. Посмотри план курса или вернись позже.",
+    "correct": "Верно!", "incorrect": "Не совсем. Попробуй ещё.", "score": "{score} из {total}", "retry": "Ещё раз", "showExplanation": "Почему?", "question": "Вопрос {n} из {total}", "inUnit": "Раздел {n}: {title}"
+  },
+  "footer": { "madeFor": "Создано для учеников, родителей и учителей Армении и России.", "admin": "Админ-панель", "language": "Язык" },
+  "notFound": { "title": "Страница не найдена", "text": "Такой страницы не существует.", "home": "На главную" }
+}
