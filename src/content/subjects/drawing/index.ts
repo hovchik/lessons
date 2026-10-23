@@ -2,48 +2,12 @@ import { t, unit, type CourseSeed } from "../../types";
 import { notes, g } from "./shared";
 import { drawingGrade1 } from "./grade-1";
 import { drawingGrade2 } from "./grade-2";
+import { drawingGrade3 } from "./grade-3";
 
 export const drawing: CourseSeed[] = [
   drawingGrade1,
   drawingGrade2,
-  {
-    subject: "drawing",
-    grade: 3,
-    ...g(3),
-    description: t("Art around us: in the home, on the street, in the theatre and museum; composition, still life, landscape, portrait beginnings.", "Արվեստը մեր շուրջ՝ տանը, փողոցում, թատրոնում և թանգարանում, կոմպոզիցիա, նատյուրմորտ, բնանկար, դիմանկարի սկիզբ։", "Искусство вокруг нас: дома, на улице, в театре и музее; композиция, натюрморт, пейзаж, начала портрета."),
-    curriculumNotes: notes(
-      ["Armenia grade 3 (1 h/week): composition basics (centre, balance), still life, landscape of Armenia (Ararat, Sevan), architecture (churches, old Yerevan), book illustration, theatre masks, museum visit (National Gallery).", "Հայաստան, 3-րդ դասարան (1 ժ/շաբ.)՝ կոմպոզիցիայի հիմունքներ (կենտրոն, հավասարակշռություն), նատյուրմորտ, Հայաստանի բնանկար (Արարատ, Սևան), ճարտարապետություն (եկեղեցիներ, հին Երևան), գրքի նկարազարդում, թատերական դիմակներ, թանգարանի այց (Ազգային պատկերասրահ)։", "Армения, 3 класс (1 ч/нед.): основы композиции (центр, равновесие), натюрморт, пейзаж Армении (Арарат, Севан), архитектура (церкви, старый Ереван), книжная иллюстрация, театральные маски, посещение музея (Национальная галерея)."],
-      ["Russia grade 3, ИЗО («Искусство вокруг нас», 34 h): art in your home, on the streets of your city, the artist and the spectacle (theatre, circus, posters), the artist and the museum (painting genres).", "Ռուսաստան, 3-րդ դասարան, ИЗО («Արվեստը մեր շուրջ», 34 ժ)՝ արվեստը տանը, քաղաքի փողոցներում, նկարիչը և տեսարանը (թատրոն, կրկես, ազդագրեր), նկարիչը և թանգարանը (նկարչության ժանրերը)։", "Россия, 3 класс, ИЗО («Искусство вокруг нас», 34 ч): искусство в твоём доме, на улицах твоего города, художник и зрелище (театр, цирк, афиша), художник и музей (жанры живописи)."],
-    ),
-    hoursPerWeek: { armenia: 1, russia: 1 },
-    units: [
-      unit(t("Art in the home", "Արվեստը տանը", "Искусство в твоём доме"), t("Toys, dishes, textiles, wallpaper, books, cards — designed by artists.", "Խաղալիքներ, սպասք, գործվածք, պաստառ, գրքեր, բացիկներ՝ նկարիչների ստեղծած։", "Игрушки, посуда, ткани, обои, книги, открытки — их создают художники."), [
-        ["designing-dishes", "Designing dishes", "Սպասքի ձևավորում", "Посуда у тебя дома"],
-        ["fabric-pattern", "Pattern for a fabric", "Գործվածքի նախշ", "Узор для ткани"],
-        ["book-illustration", "Illustrating a book page", "Գրքի էջի նկարազարդում", "Иллюстрация книжной страницы"],
-        ["greeting-card-design", "Designing a greeting card", "Շնորհավորական բացիկի ձևավորում", "Открытка"],
-      ]),
-      unit(t("Art on the street", "Արվեստը փողոցում", "Искусство на улицах твоего города"), t("Architecture, monuments, parks, fences, lamps, transport.", "Ճարտարապետություն, հուշարձաններ, պուրակներ, ցանկապատեր, լապտերներ, տրանսպորտ։", "Архитектура, памятники, парки, ограды, фонари, транспорт."), [
-        ["architecture-armenia", "Armenian architecture: Garni, Zvartnots, Yerevan", "Հայկական ճարտարապետություն․ Գառնի, Զվարթնոց, Երևան", "Армянская архитектура: Гарни, Звартноц, Ереван"],
-        ["monuments-parks", "Monuments and parks", "Հուշարձաններ և պուրակներ", "Памятники и парки"],
-        ["lanterns-fences", "Lanterns and openwork fences", "Լապտերներ և ցանցկեն ցանկապատեր", "Фонари и ажурные ограды"],
-        ["transport-design", "Designing transport", "Տրանսպորտի ձևավորում", "Транспорт в городе"],
-      ]),
-      unit(t("Artist and spectacle", "Նկարիչը և տեսարանը", "Художник и зрелище"), t("Theatre, puppets, masks, circus, posters.", "Թատրոն, տիկնիկներ, դիմակներ, կրկես, ազդագրեր։", "Театр, куклы, маски, цирк, афиша."), [
-        ["theatre-masks", "Theatre masks", "Թատերական դիմակներ", "Театральные маски"],
-        ["puppet-design", "Designing a puppet", "Տիկնիկի ձևավորում", "Театр кукол"],
-        ["circus-poster", "Circus poster", "Կրկեսի ազդագիր", "Афиша и плакат"],
-        ["stage-set", "Stage set for a fairy tale", "Հեքիաթի բեմադրության դեկոր", "Декорации к сказке"],
-      ]),
-      unit(t("Artist and museum", "Նկարիչը և թանգարանը", "Художник и музей"), t("Genres: landscape, portrait, still life, historical painting; sculpture.", "Ժանրեր․ բնանկար, դիմանկար, նատյուրմորտ, պատմական նկար, քանդակ։", "Жанры: пейзаж, портрет, натюрморт, историческая картина; скульптура."), [
-        ["landscape-genre", "Landscape: Ararat and Sevan", "Բնանկար․ Արարատ և Սևան", "Пейзаж: Арарат и Севан"],
-        ["still-life-genre", "Still life in the museum", "Նատյուրմորտը թանգարանում", "Натюрморт в музее"],
-        ["portrait-genre", "Portrait: first attempt", "Դիմանկար․ առաջին փորձ", "Портрет: первая попытка"],
-        ["sculpture", "Sculpture in parks and museums", "Քանդակը պուրակներում և թանգարաններում", "Скульптура в парках и музеях"],
-        ["museum-visit", "Our museum visit: National Gallery of Armenia / Tretyakov", "Մեր թանգարանային այցը․ Ազգային պատկերասրահ / Տրետյակով", "Наш музей: Национальная галерея Армении / Третьяковка"],
-      ]),
-    ],
-  },
+  drawingGrade3,
   {
     subject: "drawing",
     grade: 4,
