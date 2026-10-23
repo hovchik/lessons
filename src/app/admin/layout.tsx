@@ -36,7 +36,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <body className="min-h-dvh">
         {authed ? (
           <div className="flex min-h-dvh flex-col md:flex-row">
-            <aside className="pt-safe sticky top-0 z-30 flex items-center gap-1 border-b border-border/60 bg-card px-3 py-2 sm:gap-2 sm:px-4 sm:py-3 md:static md:w-60 md:flex-col md:items-stretch md:gap-1 md:border-b-0 md:border-r md:px-4 md:py-6">
+            <aside className="pt-safe-2 sticky top-0 z-30 flex items-center gap-1 border-b border-border/60 bg-card px-3 pb-3 sm:gap-2 sm:px-4 md:static md:w-60 md:flex-col md:items-stretch md:gap-1 md:border-b-0 md:border-r md:px-4 md:py-6">
               <Link href="/admin" className="mb-0 flex items-center gap-2 text-lg font-extrabold md:mb-6">
                 <span className="grid size-9 place-items-center rounded-[12px] bg-primary text-primary-foreground">
                   <GraduationCap className="size-5" aria-hidden="true" />
@@ -56,7 +56,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               </nav>
               <LogoutButton />
             </aside>
-            <main className="px-safe min-w-0 flex-1 px-4 py-5 sm:px-8 sm:py-8">{children}</main>
+            <main className="min-w-0 flex-1 px-4 py-5 sm:px-8 sm:py-8">{children}</main>
           </div>
         ) : (
           <main className="grid min-h-dvh place-items-center px-4">{children}</main>

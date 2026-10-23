@@ -79,6 +79,10 @@ body {
   /* No grey flash on tap (iOS / Android) and no horizontal wobble. */
   -webkit-tap-highlight-color: transparent;
   overflow-x: clip;
+  /* Safe-area insets for notched phones in landscape (viewport-fit=cover). Added on the body so
+     page-level px-* utilities keep their own gutters. */
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
 }
 
 /* ---- Touch ergonomics ---- */
@@ -98,10 +102,14 @@ button, [role="button"] {
 h1, h2, h3, h4, p, li, dt, dd, td, th {
   overflow-wrap: anywhere;
 }
-/* Safe-area insets for notched phones (used with viewport-fit=cover). */
+/* Safe-area insets for notched phones (used with viewport-fit=cover). These are plain, unlayered
+   rules, so they must only go on elements that carry no Tailwind padding utility for the same side;
+   .pt-safe-2 bakes in the 0.75rem the admin bar needs on phones. */
 .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+@media (max-width: 767px) {
+  .pt-safe-2 { padding-top: calc(0.75rem + env(safe-area-inset-top, 0px)); }
+}
 .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
-.px-safe { padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
 /* Horizontal strips (breadcrumbs, grade chips) that scroll on phones without a visible bar. */
 .scroll-x {
   overflow-x: auto;
