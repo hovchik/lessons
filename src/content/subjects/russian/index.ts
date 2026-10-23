@@ -1,52 +1,11 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { course } from "./shared";
 import { russianGrade1 } from "./grade-1";
+import { russianGrade2 } from "./grade-2";
 
 export const russian: CourseSeed[] = [
   russianGrade1,
-  course(
-    2,
-    ["For Armenian schools: Russian begins — alphabet, sounds, basic vocabulary and speech. For Russian schools: sounds and letters, word, sentence, text, first spelling rules.", "Հայկական դպրոց․ ռուսերենը սկսվում է՝ այբուբեն, հնչյուններ, հիմնական բառապաշար և խոսք։ Ռուսական դպրոց․ հնչյուն և տառ, բառ, նախադասություն, տեքստ, առաջին ուղղագրական կանոններ։", "Для армянской школы: русский начинается — алфавит, звуки, базовая лексика и речь. Для российской школы: звуки и буквы, слово, предложение, текст, первые правила."],
-    ["Armenia grade 2 (Russian as a second language starts, 2–3 h/week): oral course (greetings, family, school, colours, numbers), Cyrillic alphabet, reading syllables and words, listening to songs and rhymes, dialogue. Textbook series: «Русский язык» for Armenian schools (МОН РА).", "Հայաստան, 2-րդ դասարան (ռուսերենը սկսվում է որպես երկրորդ լեզու, 2–3 ժ/շաբ.)՝ բանավոր դասընթաց (ողջույն, ընտանիք, դպրոց, գույներ, թվեր), կիրիլյան այբուբեն, վանկերի և բառերի ընթերցանություն, երգեր և ոտանավորներ, երկխոսություն։", "Армения, 2 класс (русский как второй язык начинается, 2–3 ч/нед.): устный курс (приветствия, семья, школа, цвета, числа), кириллица, чтение слогов и слов, песни и стихи, диалог. Учебники «Русский язык» для армянских школ (МОН РА)."],
-    ["Russia grade 2 (ФГОС НОО, 5 h/week, 170 h): our speech, text, sentence, words and their meaning, sounds and letters (vowels, consonants, soft sign, divisive ь), spelling of unstressed vowels and paired consonants, parts of speech (noun, verb, adjective, pronoun, preposition).", "Ռուսաստան, 2-րդ դասարան (ФГОС НОО, 5 ժ/շաբ., 170 ժ)՝ խոսք, տեքստ, նախադասություն, բառ և իմաստ, հնչյուն և տառ, անշեշտ ձայնավորների և զույգ բաղաձայնների ուղղագրություն, խոսքի մասեր (գոյական, բայ, ածական, դերանուն, նախդիր)։", "Россия, 2 класс (ФГОС НОО, 5 ч/нед., 170 ч): наша речь, текст, предложение, слова и их значение, звуки и буквы (гласные, согласные, мягкий знак, разделительный ь), правописание безударных гласных и парных согласных, части речи (существительное, глагол, прилагательное, местоимение, предлог)."],
-    { armenia: 2, russia: 5 },
-    [
-      unit(t("Hello, Russian! (oral course)", "Բարև, ռուսերեն (բանավոր դասընթաց)", "Здравствуй, русский язык! (устный курс)"), t("Greetings, names, family, school objects, colours, numbers 1–10, simple questions.", "Ողջույն, անուններ, ընտանիք, դպրոցական առարկաներ, գույներ, 1–10 թվեր, պարզ հարցեր։", "Приветствия, имена, семья, школьные предметы, цвета, числа 1–10, простые вопросы."), [
-        ["ru2-greetings", "Greetings and introductions", "Ողջույն և ծանոթություն", "Приветствие и знакомство"],
-        ["ru2-family", "My family", "Իմ ընտանիքը", "Моя семья"],
-        ["ru2-school-things", "School things: что это?", "Դպրոցական իրեր․ что это?", "Школьные вещи: что это?"],
-        ["ru2-colours-numbers", "Colours and numbers 1–10", "Գույներ և 1–10 թվեր", "Цвета и числа 1–10"],
-        ["ru2-songs-rhymes", "Songs and rhymes", "Երգեր և ոտանավորներ", "Песенки и стишки"],
-      ]),
-      unit(t("Sounds and letters", "Հնչյուն և տառ", "Звуки и буквы"), t("Cyrillic alphabet, vowels, hard and soft consonants, ь and ъ, stress.", "Կիրիլյան այբուբեն, ձայնավորներ, կարծր և փափուկ բաղաձայններ, ь և ъ, շեշտ։", "Алфавит, гласные, твёрдые и мягкие согласные, ь и ъ, ударение."), [
-        ["ru2-alphabet", "The Russian alphabet", "Ռուսերեն այբուբենը", "Русский алфавит"],
-        ["ru2-vowels-10", "Ten vowel letters, six vowel sounds", "Տասը ձայնավոր տառ, վեց ձայնավոր հնչյուն", "Десять гласных букв, шесть гласных звуков"],
-        ["ru2-hard-soft", "Hard and soft consonants", "Կարծր և փափուկ բաղաձայններ", "Твёрдые и мягкие согласные"],
-        ["ru2-soft-hard-signs", "Ь and Ъ", "Ь և Ъ", "Мягкий и твёрдый знаки"],
-        ["ru2-stress-reduction", "Stress and unstressed vowels", "Շեշտ և անշեշտ ձայնավորներ", "Ударение и безударные гласные"],
-        ["ru2-paired-consonants", "Paired consonants at the end of a word", "Զույգ բաղաձայնները բառի վերջում", "Парные согласные на конце слова"],
-      ]),
-      unit(t("Word and sentence", "Բառ և նախադասություն", "Слово и предложение"), t("Word meaning, synonyms, antonyms, root; sentence, main members, text.", "Բառի իմաստ, հոմանիշ, հականիշ, արմատ, նախադասություն, գլխավոր անդամներ, տեքստ։", "Значение слова, синонимы, антонимы, корень; предложение, главные члены, текст."), [
-        ["ru2-word-meaning", "Word and its meaning; synonyms and antonyms", "Բառն ու իմաստը, հոմանիշ և հականիշ", "Слово и его значение; синонимы и антонимы"],
-        ["ru2-root-related", "Root and related words", "Արմատ և ազգակից բառեր", "Корень и однокоренные слова"],
-        ["ru2-sentence-main", "Sentence; subject and predicate", "Նախադասություն, ենթակա և ստորոգյալ", "Предложение; подлежащее и сказуемое"],
-        ["ru2-text", "Text: theme and main idea", "Տեքստ․ թեմա և հիմնական գաղափար", "Текст: тема и главная мысль"],
-      ]),
-      unit(t("Parts of speech", "Խոսքի մասեր", "Части речи"), t("Noun (gender!), verb, adjective, pronoun, preposition.", "Գոյական (սեռ), բայ, ածական, դերանուն, նախդիր։", "Существительное (род!), глагол, прилагательное, местоимение, предлог."), [
-        ["ru2-noun-gender", "Nouns and grammatical gender: он, она, оно", "Գոյական և քերականական սեռ․ он, она, оно", "Существительное и род: он, она, оно"],
-        ["ru2-noun-number", "Singular and plural", "Եզակի և հոգնակի", "Единственное и множественное число"],
-        ["ru2-verb", "Verb: что делает?", "Բայ․ что делает?", "Глагол: что делает?"],
-        ["ru2-adjective", "Adjective: какой? какая? какое?", "Ածական․ какой? какая? какое?", "Прилагательное: какой? какая? какое?"],
-        ["ru2-pronoun-preposition", "Pronouns and prepositions", "Դերանուններ և նախդիրներ", "Местоимения и предлоги"],
-      ]),
-      unit(t("Reading and speaking", "Ընթերցանություն և խոսք", "Чтение и речь"), t("Short texts, dialogues, retelling, Russian children's poets.", "Կարճ տեքստեր, երկխոսություններ, վերապատմում, ռուս մանկական բանաստեղծներ։", "Короткие тексты, диалоги, пересказ, русские детские поэты."), [
-        ["ru2-dialogues", "Everyday dialogues: shop, school, home", "Ամենօրյա երկխոսություններ․ խանութ, դպրոց, տուն", "Бытовые диалоги: магазин, школа, дом"],
-        ["ru2-reading-poets", "Reading Chukovsky, Barto, Marshak", "Կարդում ենք Չուկովսկի, Բարտո, Մարշակ", "Читаем Чуковского, Барто, Маршака"],
-        ["ru2-retelling", "Retelling a short text", "Կարճ տեքստի վերապատմում", "Пересказ короткого текста"],
-        ["ru2-seasons", "Seasons and weather", "Եղանակներ և օդի վիճակ", "Времена года и погода"],
-      ]),
-    ],
-  ),
+  russianGrade2,
   course(
     3,
     ["Word structure and spelling, parts of speech in detail (noun cases introduced), sentence and text; extended vocabulary and reading.", "Բառի կազմ և ուղղագրություն, խոսքի մասեր մանրամասն (գոյականի հոլովների ներմուծում), նախադասություն և տեքստ, բառապաշարի ընդլայնում և ընթերցանություն։", "Состав слова и правописание, части речи подробно (введение падежей), предложение и текст; расширение словаря и чтение."],
