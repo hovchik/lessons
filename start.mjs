@@ -41,10 +41,13 @@ function run(cmd, cmdArgs, opts = {}) {
 const major = Number(process.versions.node.split(".")[0]);
 if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versions.node}). Download it from https://nodejs.org`);
 
-// 2. Dependencies
-if (!fs.existsSync("node_modules/next")) {
-  log("Installing dependencies (first run only, this takes a minute)…");
-  run(npm, ["install", "--no-audit", "--no-fund"]);
+// 2. Dependencies (dev dependencies included: the build and the seed script need them,
+//    even when NODE_ENV=production or npm's "omit=dev" is set on this machine)
+const needed = ["next", "tsx", "typescript", "tailwindcss", "better-sqlite3", "drizzle-orm"];
+const missing = needed.filter((m) => !fs.existsSync(path.join("node_modules", m)));
+if (missing.length) {
+  log(`Installing dependencies${fs.existsSync("node_modules") ? ` (missing: ${missing.join(", ")})` : " (first run only, this takes a minute)"}…`);
+  run(npm, ["install", "--include=dev", "--no-audit", "--no-fund"], { env: { ...process.env, NODE_ENV: "development" } });
 }
 
 // 3. Environment file
@@ -92,7 +95,11 @@ const url = `http://localhost:${PORT}`;
 log(`${DEV ? "Starting the development server" : "Starting"} at ${url}  (admin panel: ${url}/admin)`);
 console.log("  Press Ctrl+C in this window to stop.\n");
 
-const server = spawn(npm, ["run", DEV ? "dev" : "start", "--", "-p", PORT], { stdio: "inherit", shell: isWin });
+const server = spawn(npm, ["run", DEV ? "dev" : "start", "--", "-p", PORT], {
+  stdio: "inherit",
+  shell: isWin,
+  env: { ...process.env, NODE_ENV: DEV ? "development" : "production" },
+});
 
 const openBrowser = () => {
   const target = `${url}/en`;
