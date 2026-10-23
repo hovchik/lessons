@@ -30,9 +30,9 @@ export const unit2: UnitSeed = {
 
 ## What's this?
 
-> **A:** What's this?
-> **B:** It's a ruler.
-> **A:** What colour is it?
+> **A:** What's this?\\
+> **B:** It's a ruler.\\
+> **A:** What colour is it?\\
 > **B:** It's green.
 
 ## My things
@@ -71,9 +71,9 @@ export const unit2: UnitSeed = {
 
 ## What's this?
 
-> **A:** What's this? (Սա ի՞նչ է)
-> **B:** It's a ruler. (Քանոն է)
-> **A:** What colour is it? (Ի՞նչ գույնի է)
+> **A:** What's this? (Սա ի՞նչ է)\\
+> **B:** It's a ruler. (Քանոն է)\\
+> **A:** What colour is it? (Ի՞նչ գույնի է)\\
 > **B:** It's green. (Կանաչ է)
 
 ## Իմ իրերը
@@ -112,9 +112,9 @@ export const unit2: UnitSeed = {
 
 ## What's this?
 
-> **A:** What's this? (Что это?)
-> **B:** It's a ruler. (Это линейка.)
-> **A:** What colour is it? (Какого она цвета?)
+> **A:** What's this? (Что это?)\\
+> **B:** It's a ruler. (Это линейка.)\\
+> **A:** What colour is it? (Какого она цвета?)\\
 > **B:** It's green. (Зелёная.)
 
 ## Мои вещи
@@ -425,9 +425,9 @@ Write the plural.
 
 ## Questions and answers
 
-> **What's this?** — It's a pencil.
-> **What's that?** — It's a clock.
-> **What are these?** — They're books.
+> **What's this?** — It's a pencil.\\
+> **What's that?** — It's a clock.\\
+> **What are these?** — They're books.\\
 > **What are those?** — They're birds.
 
 For one thing we answer **It's…**, for many **They're…**.
@@ -459,9 +459,9 @@ For one thing we answer **It's…**, for many **They're…**.
 
 ## Հարցեր և պատասխաններ
 
-> **What's this?** — It's a pencil.
-> **What's that?** — It's a clock.
-> **What are these?** — They're books.
+> **What's this?** — It's a pencil.\\
+> **What's that?** — It's a clock.\\
+> **What are these?** — They're books.\\
 > **What are those?** — They're birds.
 
 Մեկ առարկայի դեպքում պատասխանում ենք **It's…**, շատերի դեպքում՝ **They're…**։
@@ -493,9 +493,9 @@ For one thing we answer **It's…**, for many **They're…**.
 
 ## Вопросы и ответы
 
-> **What's this?** — It's a pencil.
-> **What's that?** — It's a clock.
-> **What are these?** — They're books.
+> **What's this?** — It's a pencil.\\
+> **What's that?** — It's a clock.\\
+> **What are these?** — They're books.\\
 > **What are those?** — They're birds.
 
 Про один предмет отвечаем **It's…**, про много — **They're…**.

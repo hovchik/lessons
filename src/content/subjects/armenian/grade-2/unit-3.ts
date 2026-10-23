@@ -668,7 +668,7 @@ Sometimes the root changes a little: տուն → **տն**ակ.
 
 Diminutives make speech **warm**. They are loved in lullabies and fairy tales:
 
-> Փոքրիկ գառնուկը վազեց գետակի մոտ, իսկ տատիկը նրան կանչեց տնակից։
+> Փոքրիկ գառնուկը վազեց գետակի մոտ, իսկ տատիկը նրան կանչեց տնակից։\\
 > *The little lamb ran to the stream, and granny called it from the little house.*
 
 ### Exercises
@@ -737,7 +737,7 @@ Diminutives make speech **warm**. They are loved in lullabies and fairy tales:
 
 Уменьшительные слова делают речь **тёплой**. Их любят в колыбельных и сказках:
 
-> Փոքրիկ գառնուկը վազեց գետակի մոտ, իսկ տատիկը նրան կանչեց տնակից։
+> Փոքրիկ գառնուկը վազեց գետակի մոտ, իսկ տատիկը նրան կանչեց տնակից։\\
 > *Маленький ягнёнок побежал к речке, а бабушка позвала его из домика.*
 
 ### Упражнения

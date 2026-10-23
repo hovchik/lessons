@@ -295,7 +295,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Where is…?
 
-> **Where is mum?** — She's **in the kitchen**.
+> **Where is mum?** — She's **in the kitchen**.\\
 > **Where are the children?** — They're **in the garden**.
 
 ## A text
@@ -329,7 +329,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Where is…?
 
-> **Where is mum?** — She's **in the kitchen**. (Մայրիկը խոհանոցում է։)
+> **Where is mum?** — She's **in the kitchen**. (Մայրիկը խոհանոցում է։)\\
 > **Where are the children?** — They're **in the garden**.
 
 ## Տեքստ
@@ -363,7 +363,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Where is…?
 
-> **Where is mum?** — She's **in the kitchen**. (Мама на кухне.)
+> **Where is mum?** — She's **in the kitchen**. (Мама на кухне.)\\
 > **Where are the children?** — They're **in the garden**.
 
 ## Текст
@@ -415,7 +415,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Questions
 
-> **Where is** the ball? — It's **under** the bed.
+> **Where is** the ball? — It's **under** the bed.\\
 > **Where are** my books? — They're **on** the desk.
 
 ## A picture to imagine
@@ -450,7 +450,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Հարցեր
 
-> **Where is** the ball? — It's **under** the bed.
+> **Where is** the ball? — It's **under** the bed.\\
 > **Where are** my books? — They're **on** the desk.
 
 ## Պատկերացրո՛ւ նկարը
@@ -483,7 +483,7 @@ Some houses have a **garden** and a **garage** too.
 
 ## Вопросы
 
-> **Where is** the ball? — It's **under** the bed.
+> **Where is** the ball? — It's **under** the bed.\\
 > **Where are** my books? — They're **on** the desk.
 
 ## Представь картинку

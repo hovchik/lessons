@@ -52,7 +52,7 @@ How many did you find? (Answer: 8!)
 
 ### A little rhyme
 
-> Ա-ն արև է, Ա-ն աստղ,
+> Ա-ն արև է, Ա-ն աստղ,\\
 > Ա-ով սկսվում է **Արարատ**։
 
 (*A is the sun, A is a star, Ararat begins with A.*)
@@ -111,7 +111,7 @@ Draw three things whose names begin with [a] in Armenian: for example արև (su
 
 ### Փոքրիկ ոտանավոր
 
-> Ա-ն արև է, Ա-ն աստղ,
+> Ա-ն արև է, Ա-ն աստղ,\\
 > Ա-ով սկսվում է **Արարատ**։
 
 ### Տնային աշխատանք
@@ -168,7 +168,7 @@ Draw three things whose names begin with [a] in Armenian: for example արև (su
 
 ### Стишок
 
-> Ա-ն արև է, Ա-ն աստղ,
+> Ա-ն արև է, Ա-ն աստղ,\\
 > Ա-ով սկսվում է **Արարատ**։
 
 (*А — это солнце, А — звезда, с А начинается Арарат.*)
@@ -666,7 +666,7 @@ Armenian has two letters for t-sounds. **Տ** is a plain [t] with no puff of air
 
 ## Our first sentences
 
-> Ես Անին եմ։ — *I am Ani.*
+> Ես Անին եմ։ — *I am Ani.*\\
 > Մեր տունը։ — *Our house.*
 
 ### Exercises
@@ -707,7 +707,7 @@ Armenian has two letters for t-sounds. **Տ** is a plain [t] with no puff of air
 
 ## Մեր առաջին նախադասությունները
 
-> Ես Անին եմ։
+> Ես Անին եմ։\\
 > Մեր տունը։
 
 ### Վարժություններ
@@ -748,7 +748,7 @@ Armenian has two letters for t-sounds. **Տ** is a plain [t] with no puff of air
 
 ## Первые предложения
 
-> Ես Անին եմ։ — *Я Ани.*
+> Ես Անին եմ։ — *Я Ани.*\\
 > Մեր տունը։ — *Наш дом.*
 
 ### Упражнения

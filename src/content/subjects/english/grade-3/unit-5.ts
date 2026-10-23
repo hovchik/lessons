@@ -44,7 +44,7 @@ water, milk, juice, tea.
 
 ## Would you like…?
 
-> **Would you like** an apple? — **Yes, please.** / **No, thank you.**
+> **Would you like** an apple? — **Yes, please.** / **No, thank you.**\\
 > **Can I have** some water, **please**? — Here you are.
 
 ### Exercises
@@ -87,7 +87,7 @@ water (ջուր), milk (կաթ), juice (հյութ), tea (թեյ)։
 
 ## Would you like…?
 
-> **Would you like** an apple? (Խնձոր կուզե՞ս) — **Yes, please.** / **No, thank you.**
+> **Would you like** an apple? (Խնձոր կուզե՞ս) — **Yes, please.** / **No, thank you.**\\
 > **Can I have** some water, **please**? — Here you are. (Խնդրեմ։)
 
 ### Վարժություններ
@@ -130,7 +130,7 @@ water (вода), milk (молоко), juice (сок), tea (чай).
 
 ## Would you like…?
 
-> **Would you like** an apple? (Хочешь яблоко?) — **Yes, please.** / **No, thank you.**
+> **Would you like** an apple? (Хочешь яблоко?) — **Yes, please.** / **No, thank you.**\\
 > **Can I have** some water, **please**? — Here you are. (Пожалуйста, держи.)
 
 ### Упражнения
@@ -180,7 +180,7 @@ water (вода), milk (молоко), juice (сок), tea (чай).
 
 ## Questions
 
-> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**
+> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they **like** cats? — Yes, they do.
 
 ## How much?
@@ -215,7 +215,7 @@ water (вода), milk (молоко), juice (сок), tea (чай).
 
 ## Հարցեր
 
-> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**
+> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they **like** cats? — Yes, they do.
 
 ## Որքա՞ն
@@ -250,7 +250,7 @@ water (вода), milk (молоко), juice (сок), tea (чай).
 
 ## Вопросы
 
-> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**
+> **Do** you **like** chocolate? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they **like** cats? — Yes, they do.
 
 ## Насколько?
@@ -305,7 +305,7 @@ swim, run, jump, climb, ride a bike, skate, ski, sing, dance, draw, play the pia
 
 ## Questions
 
-> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**
+> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**\\
 > **Can** your dog jump? — Yes, it can.
 
 ### Exercises
@@ -339,7 +339,7 @@ swim (լողալ), run (վազել), jump (ցատկել), climb (մագլցել)
 
 ## Հարցեր
 
-> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**
+> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**\\
 > **Can** your dog jump? — Yes, it can.
 
 ### Վարժություններ
@@ -373,7 +373,7 @@ swim (плавать), run (бегать), jump (прыгать), climb (лаз�
 
 ## Вопросы
 
-> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**
+> **Can** you ride a bike? — **Yes, I can.** / **No, I can't.**\\
 > **Can** your dog jump? — Yes, it can.
 
 ### Упражнения
@@ -426,7 +426,7 @@ The **present simple** tells us what we do **regularly**: every day, every week,
 
 ## Questions: Do…?
 
-> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**
+> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they live in Yerevan? — Yes, they do.
 
 ## Time words
@@ -464,7 +464,7 @@ every day, every morning, in the morning, in the afternoon, in the evening, on M
 
 ## Հարց՝ Do…?
 
-> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**
+> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they live in Yerevan? — Yes, they do.
 
 ## Ժամանակի բառեր
@@ -502,7 +502,7 @@ every day (ամեն օր), every morning, in the morning (առավոտյան), i
 
 ## Вопрос: Do…?
 
-> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**
+> **Do** you walk to school? — **Yes, I do.** / **No, I don't.**\\
 > **Do** they live in Yerevan? — Yes, they do.
 
 ## Слова времени

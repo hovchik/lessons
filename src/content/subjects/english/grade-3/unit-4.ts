@@ -684,7 +684,7 @@ Also: **hot, warm, cool, cold**.
 
 ## Talking about the weather
 
-> **What's the weather like today?** — It's cold and windy.
+> **What's the weather like today?** — It's cold and windy.\\
 > **What do you wear?** — I wear a coat and a hat.
 
 Clothes for the weather: *a coat, a hat, a scarf, boots* (cold); *a T-shirt, shorts, sunglasses* (hot); *an umbrella* (rainy).
@@ -725,7 +725,7 @@ Clothes for the weather: *a coat, a hat, a scarf, boots* (cold); *a T-shirt, sho
 
 ## Խոսում ենք եղանակի մասին
 
-> **What's the weather like today?** — It's cold and windy.
+> **What's the weather like today?** — It's cold and windy.\\
 > **What do you wear?** — I wear a coat and a hat.
 
 Հագուստ՝ *a coat, a hat, a scarf, boots* (ցուրտ), *a T-shirt, shorts, sunglasses* (շոգ), *an umbrella* (անձրև)։
@@ -766,7 +766,7 @@ Clothes for the weather: *a coat, a hat, a scarf, boots* (cold); *a T-shirt, sho
 
 ## Говорим о погоде
 
-> **What's the weather like today?** — It's cold and windy.
+> **What's the weather like today?** — It's cold and windy.\\
 > **What do you wear?** — I wear a coat and a hat.
 
 Одежда: *a coat, a hat, a scarf, boots* (холодно); *a T-shirt, shorts, sunglasses* (жарко); *an umbrella* (дождь).

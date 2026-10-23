@@ -44,7 +44,7 @@ Some Russian letters look like Latin letters but sound different:
 
 Dictionaries, class lists and phone books are in **alphabetical order**. Compare the first letters; if they are the same, compare the second ones:
 
-> арбуз, банан, вишня, груша — а, б, в, г
+> арбуз, банан, вишня, груша — а, б, в, г\\
 > слон, сова, сыр — с**л**, с**о**, с**ы**: л, о, ы
 
 ### Exercises
@@ -89,7 +89,7 @@ Dictionaries, class lists and phone books are in **alphabetical order**. Compare
 
 Բառարանները, դասարանի ցուցակները դասավորված են **այբբենական կարգով**։ Համեմատի՛ր առաջին տառերը, իսկ եթե նույնն են՝ երկրորդները.
 
-> арбуз, банан, вишня, груша — а, б, в, г
+> арбуз, банан, вишня, груша — а, б, в, г\\
 > слон, сова, сыр — с**л**, с**о**, с**ы**՝ л, о, ы
 
 ### Վարժություններ
@@ -119,7 +119,7 @@ Dictionaries, class lists and phone books are in **alphabetical order**. Compare
 
 По алфавиту расположены слова в словарях, фамилии в классном журнале, книги в библиотеке. Сравниваем первые буквы, а если они одинаковые — вторые:
 
-> арбуз, банан, вишня, груша — а, б, в, г
+> арбуз, банан, вишня, груша — а, б, в, г\\
 > слон, сова, сыр — с**л**, с**о**, с**ы**: л, о, ы
 
 ### Упражнения

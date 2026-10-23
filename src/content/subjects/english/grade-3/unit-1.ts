@@ -28,12 +28,12 @@ export const unit1: UnitSeed = {
 
 ## A dialogue
 
-> **Anna:** Hello! My name is Anna. What's your name?
-> **Tom:** Hi, Anna! My name is Tom.
-> **Anna:** How are you, Tom?
-> **Tom:** I'm fine, thank you. And you?
-> **Anna:** I'm fine too! How old are you?
-> **Tom:** I'm nine. And you?
+> **Anna:** Hello! My name is Anna. What's your name?\\
+> **Tom:** Hi, Anna! My name is Tom.\\
+> **Anna:** How are you, Tom?\\
+> **Tom:** I'm fine, thank you. And you?\\
+> **Anna:** I'm fine too! How old are you?\\
+> **Tom:** I'm nine. And you?\\
 > **Anna:** I'm eight.
 
 ## Short forms
@@ -69,12 +69,12 @@ We always write **I** with a capital letter.
 
 ## Երկխոսություն
 
-> **Anna:** Hello! My name is Anna. What's your name?
-> **Tom:** Hi, Anna! My name is Tom.
-> **Anna:** How are you, Tom?
-> **Tom:** I'm fine, thank you. And you?
-> **Anna:** I'm fine too! How old are you?
-> **Tom:** I'm nine. And you?
+> **Anna:** Hello! My name is Anna. What's your name?\\
+> **Tom:** Hi, Anna! My name is Tom.\\
+> **Anna:** How are you, Tom?\\
+> **Tom:** I'm fine, thank you. And you?\\
+> **Anna:** I'm fine too! How old are you?\\
+> **Tom:** I'm nine. And you?\\
 > **Anna:** I'm eight.
 
 **My name is…**՝ իմ անունը … է։ **How are you?**՝ ինչպե՞ս ես։ **How old are you?**՝ քանի՞ տարեկան ես։
@@ -112,12 +112,12 @@ We always write **I** with a capital letter.
 
 ## Диалог
 
-> **Anna:** Hello! My name is Anna. What's your name?
-> **Tom:** Hi, Anna! My name is Tom.
-> **Anna:** How are you, Tom?
-> **Tom:** I'm fine, thank you. And you?
-> **Anna:** I'm fine too! How old are you?
-> **Tom:** I'm nine. And you?
+> **Anna:** Hello! My name is Anna. What's your name?\\
+> **Tom:** Hi, Anna! My name is Tom.\\
+> **Anna:** How are you, Tom?\\
+> **Tom:** I'm fine, thank you. And you?\\
+> **Anna:** I'm fine too! How old are you?\\
+> **Tom:** I'm nine. And you?\\
 > **Anna:** I'm eight.
 
 **My name is…** — меня зовут… **How are you?** — как дела? **How old are you?** — сколько тебе лет?
@@ -187,9 +187,9 @@ The **vowel letters** are **A, E, I, O, U**. The other 21 are consonant letters.
 
 ## Spelling a name
 
-> **Teacher:** What's your name?
-> **Boy:** Davit.
-> **Teacher:** How do you spell it?
+> **Teacher:** What's your name?\\
+> **Boy:** Davit.\\
+> **Teacher:** How do you spell it?\\
 > **Boy:** D – A – V – I – T.
 
 ### Exercises
@@ -229,9 +229,9 @@ The **vowel letters** are **A, E, I, O, U**. The other 21 are consonant letters.
 
 ## Անունը տառ առ տառ
 
-> **Teacher:** What's your name?
-> **Boy:** Davit.
-> **Teacher:** How do you spell it?
+> **Teacher:** What's your name?\\
+> **Boy:** Davit.\\
+> **Teacher:** How do you spell it?\\
 > **Boy:** D – A – V – I – T.
 
 **How do you spell it?**՝ ինչպե՞ս է գրվում (տառ առ տառ)։
@@ -273,9 +273,9 @@ The **vowel letters** are **A, E, I, O, U**. The other 21 are consonant letters.
 
 ## Называем имя по буквам
 
-> **Teacher:** What's your name?
-> **Boy:** Davit.
-> **Teacher:** How do you spell it?
+> **Teacher:** What's your name?\\
+> **Boy:** Davit.\\
+> **Teacher:** How do you spell it?\\
 > **Boy:** D – A – V – I – T.
 
 **How do you spell it?** — как это пишется (по буквам)?

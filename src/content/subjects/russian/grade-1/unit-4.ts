@@ -573,7 +573,7 @@ The same word can be common or a name:
 
 [ч'] and [щ'] are always soft. You might want to write Я and Ю after them, but the rule says:
 
-> **ЧА, ЩА — write with А!**
+> **ЧА, ЩА — write with А!**\\
 > **ЧУ, ЩУ — write with У!**
 
 | Correct | Wrong | Meaning |
@@ -620,7 +620,7 @@ The same word can be common or a name:
 
 [ч']-ն և [щ']-ն միշտ փափուկ են։ Կարող է ցանկանաս նրանցից հետո գրել Я և Ю, բայց կանոնն ասում է՝
 
-> **ЧА, ЩА՝ գրի՛ր А-ով։**
+> **ЧА, ЩА՝ գրի՛ր А-ով։**\\
 > **ЧУ, ЩУ՝ գրի՛ր У-ով։**
 
 | Ճիշտ | Սխալ | Իմաստ |
@@ -667,7 +667,7 @@ The same word can be common or a name:
 
 [ч'] и [щ'] всегда мягкие. Хочется написать после них Я и Ю, но правило говорит:
 
-> **ЧА, ЩА — пиши с буквой А!**
+> **ЧА, ЩА — пиши с буквой А!**\\
 > **ЧУ, ЩУ — пиши с буквой У!**
 
 | Правильно | Неправильно |
