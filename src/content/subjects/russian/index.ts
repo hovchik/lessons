@@ -2,52 +2,12 @@ import { t, unit, type CourseSeed } from "../../types";
 import { course } from "./shared";
 import { russianGrade1 } from "./grade-1";
 import { russianGrade2 } from "./grade-2";
+import { russianGrade3 } from "./grade-3";
 
 export const russian: CourseSeed[] = [
   russianGrade1,
   russianGrade2,
-  course(
-    3,
-    ["Word structure and spelling, parts of speech in detail (noun cases introduced), sentence and text; extended vocabulary and reading.", "Բառի կազմ և ուղղագրություն, խոսքի մասեր մանրամասն (գոյականի հոլովների ներմուծում), նախադասություն և տեքստ, բառապաշարի ընդլայնում և ընթերցանություն։", "Состав слова и правописание, части речи подробно (введение падежей), предложение и текст; расширение словаря и чтение."],
-    ["Armenia grade 3 (Russian as second language, 3 h/week): reading fluency, basic grammar (gender, number, present-tense conjugation, adjective agreement), vocabulary topics (home, city, nature, food), dialogues and short monologues, poems by heart.", "Հայաստան, 3-րդ դասարան (ռուսերեն որպես երկրորդ լեզու, 3 ժ/շաբ.)՝ սահուն ընթերցանություն, հիմնական քերականություն (սեռ, թիվ, բայի խոնարհում ներկա ժամանակում, ածականի համաձայնություն), բառապաշարի թեմաներ (տուն, քաղաք, բնություն, սնունդ), երկխոսություններ, ոտանավորներ անգիր։", "Армения, 3 класс (русский как второй язык, 3 ч/нед.): беглое чтение, базовая грамматика (род, число, спряжение глагола в настоящем времени, согласование прилагательного), лексические темы (дом, город, природа, еда), диалоги и монологи, стихи наизусть."],
-    ["Russia grade 3 (ФГОС НОО, 5 h/week): text and sentence (phrase, simple and complex), word in language and speech, word structure (root, ending, prefix, suffix), spelling of word parts, parts of speech (noun: cases; adjective: gender/number/case; pronoun; verb: tense, не with verbs).", "Ռուսաստան, 3-րդ դասարան (ФГОС НОО, 5 ժ/շաբ.)՝ տեքստ և նախադասություն, բառակապակցություն, պարզ և բարդ նախադասություն, բառի կազմ (արմատ, վերջավորություն, նախածանց, վերջածանց), բառի մասերի ուղղագրություն, խոսքի մասեր (գոյականի հոլովներ, ածականի սեռ/թիվ/հոլով, դերանուն, բայի ժամանակ, не բայերի հետ)։", "Россия, 3 класс (ФГОС НОО, 5 ч/нед.): текст и предложение (словосочетание, простое и сложное), слово в языке и речи, состав слова (корень, окончание, приставка, суффикс), правописание частей слова, части речи (существительное: падежи; прилагательное: род/число/падеж; местоимение; глагол: время, не с глаголами)."],
-    { armenia: 3, russia: 5 },
-    [
-      unit(t("Text, sentence, phrase", "Տեքստ, նախադասություն, բառակապակցություն", "Текст, предложение, словосочетание"), t("Types of text, kinds of sentences, phrase, simple and complex sentence.", "Տեքստի տեսակներ, նախադասության տեսակներ, բառակապակցություն, պարզ և բարդ նախադասություն։", "Типы текста, виды предложений, словосочетание, простое и сложное предложение."), [
-        ["ru3-text-types", "Narrative, description, reasoning", "Պատմություն, նկարագրություն, դատողություն", "Повествование, описание, рассуждение"],
-        ["ru3-sentence-kinds", "Sentences by purpose and intonation", "Նախադասությունները ըստ նպատակի և հնչերանգի", "Предложения по цели высказывания и интонации"],
-        ["ru3-phrase", "Phrase; main and secondary members", "Բառակապակցություն, գլխավոր և երկրորդական անդամներ", "Словосочетание; главные и второстепенные члены"],
-        ["ru3-simple-complex", "Simple and complex sentences", "Պարզ և բարդ նախադասություններ", "Простое и сложное предложение"],
-      ]),
-      unit(t("Word structure and spelling", "Բառի կազմ և ուղղագրություն", "Состав слова и правописание"), t("Root, ending, prefix, suffix; unstressed vowels in the root; paired and unpronounced consonants; divisive ъ and ь.", "Արմատ, վերջավորություն, նախածանց, վերջածանց, անշեշտ ձայնավորներ, զույգ և չարտասանվող բաղաձայններ, բաժանիչ ъ և ь։", "Корень, окончание, приставка, суффикс; безударные гласные в корне; парные и непроизносимые согласные; разделительные ъ и ь."), [
-        ["ru3-word-parts", "Parts of a word", "Բառի մասերը", "Части слова"],
-        ["ru3-unstressed-root", "Unstressed vowels in the root: check with stress", "Անշեշտ ձայնավորը արմատում․ ստուգում շեշտով", "Безударные гласные в корне: проверочное слово"],
-        ["ru3-paired-consonants-root", "Paired consonants in the root", "Զույգ բաղաձայնները արմատում", "Парные согласные в корне"],
-        ["ru3-unpronounced", "Unpronounced consonants: солнце, сердце", "Չարտասանվող բաղաձայններ․ солнце, сердце", "Непроизносимые согласные: солнце, сердце"],
-        ["ru3-prefix-spelling", "Spelling of prefixes and suffixes", "Նախածանցների և վերջածանցների ուղղագրություն", "Правописание приставок и суффиксов"],
-        ["ru3-divisive-signs", "Divisive ъ and ь", "Բաժանիչ ъ և ь", "Разделительные ъ и ь"],
-      ]),
-      unit(t("Noun and adjective", "Գոյական և ածական", "Существительное и прилагательное"), t("Gender, number, six cases of the noun; agreement of adjectives.", "Սեռ, թիվ, գոյականի վեց հոլով, ածականի համաձայնություն։", "Род, число, шесть падежей существительного; согласование прилагательных."), [
-        ["ru3-noun-gender-number", "Gender and number; ь after sibilants", "Սեռ և թիվ, ь սուլական բաղաձայններից հետո", "Род и число; ь после шипящих"],
-        ["ru3-cases-intro", "The six cases: questions and prepositions", "Վեց հոլովը․ հարցեր և նախդիրներ", "Шесть падежей: вопросы и предлоги"],
-        ["ru3-cases-practice", "Determining the case of a noun", "Գոյականի հոլովի որոշում", "Определение падежа существительного"],
-        ["ru3-adjective-agreement", "Adjective: gender, number and case", "Ածական․ սեռ, թիվ և հոլով", "Прилагательное: род, число и падеж"],
-      ]),
-      unit(t("Pronoun and verb", "Դերանուն և բայ", "Местоимение и глагол"), t("Personal pronouns; verb tenses, не with verbs, infinitive, gender in the past tense.", "Անձնական դերանուններ, բայի ժամանակներ, не բայերի հետ, անորոշ ձև, սեռն անցյալում։", "Личные местоимения; времена глагола, не с глаголами, неопределённая форма, род в прошедшем времени."), [
-        ["ru3-personal-pronouns", "Personal pronouns and their forms", "Անձնական դերանունները և դրանց ձևերը", "Личные местоимения и их формы"],
-        ["ru3-verb-tenses", "Verb: present, past, future", "Բայ․ ներկա, անցյալ, ապառնի", "Глагол: настоящее, прошедшее, будущее"],
-        ["ru3-infinitive", "Infinitive: что делать? что сделать?", "Անորոշ ձև․ что делать? что сделать?", "Неопределённая форма: что делать? что сделать?"],
-        ["ru3-past-gender", "Past tense: gender endings", "Անցյալ ժամանակ․ սեռի վերջավորություններ", "Прошедшее время: родовые окончания"],
-        ["ru3-ne-with-verbs", "Не with verbs", "Не բայերի հետ", "Не с глаголами"],
-      ]),
-      unit(t("Speech development", "Խոսքի զարգացում", "Развитие речи"), t("Dialogues, descriptions, letters; reading Tolstoy's and Ushinsky's short texts, Pushkin's tales.", "Երկխոսություններ, նկարագրություններ, նամակներ, Տոլստոյի և Ուշինսկու կարճ տեքստեր, Պուշկինի հեքիաթներ։", "Диалоги, описания, письма; чтение рассказов Толстого и Ушинского, сказок Пушкина."), [
-        ["ru3-describe-animal", "Describing an animal", "Կենդանու նկարագրություն", "Описание животного"],
-        ["ru3-letter", "Writing a letter and a postcard", "Նամակ և բացիկ գրել", "Пишем письмо и открытку"],
-        ["ru3-tolstoy-ushinsky", "Reading Tolstoy and Ushinsky", "Կարդում ենք Տոլստոյ և Ուշինսկի", "Читаем Толстого и Ушинского"],
-        ["ru3-pushkin-tales", "Pushkin: «Сказка о рыбаке и рыбке»", "Պուշկին․ «Сказка о рыбаке и рыбке»", "Пушкин: «Сказка о рыбаке и рыбке»"],
-      ]),
-    ],
-  ),
+  russianGrade3,
   course(
     4,
     ["Declension of nouns, adjectives and pronouns, conjugation of verbs, homogeneous members, text work; end of primary.", "Գոյականի, ածականի և դերանվան հոլովում, բայի խոնարհում, համադաս անդամներ, տեքստ, տարրական դպրոցի ավարտ։", "Склонение существительных, прилагательных и местоимений, спряжение глаголов, однородные члены, работа с текстом; конец начальной школы."],
