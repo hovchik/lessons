@@ -18,8 +18,7 @@ export default async function SubjectsPage({ params }: { params: Promise<{ local
   setRequestLocale(locale);
   const t = await getTranslations();
   const l = await getLocale();
-  const subjects = getSubjects();
-  const courses = getCourses();
+  const [subjects, courses] = await Promise.all([getSubjects(), getCourses()]);
 
   return (
     <div className="space-y-8">

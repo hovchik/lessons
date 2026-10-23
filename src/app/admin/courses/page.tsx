@@ -6,8 +6,8 @@ import { getAdminCourses, getSubjects } from "@/server/queries";
 export default async function AdminCourses({ searchParams }: { searchParams: Promise<{ subject?: string }> }) {
   if (!(await isAdmin())) redirect("/admin/login");
   const { subject } = await searchParams;
-  const subjects = getSubjects();
-  const courses = getAdminCourses().filter((c) => !subject || c.course.subjectId === subject);
+  const subjects = await getSubjects();
+  const courses = (await getAdminCourses()).filter((c) => !subject || c.course.subjectId === subject);
 
   return (
     <div className="space-y-6">

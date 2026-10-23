@@ -8,7 +8,7 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
   if (!(await isAdmin())) redirect("/admin/login");
   const { id } = await params;
   const dash = id.lastIndexOf("-");
-  const data = getCourse(id.slice(0, dash), Number(id.slice(dash + 1)));
+  const data = await getCourse(id.slice(0, dash), Number(id.slice(dash + 1)));
   if (!data) notFound();
   const { course, subject, units, readyCount, totalCount } = data;
 

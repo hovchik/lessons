@@ -12,7 +12,7 @@ type Params = Promise<{ locale: string; subject: string; grade: string }>;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale, subject, grade } = await params;
-  const data = getCourse(subject, Number(grade));
+  const data = await getCourse(subject, Number(grade));
   if (!data) return {};
   return { title: pick(data.course.title, locale), description: pick(data.course.description, locale) };
 }
@@ -21,12 +21,12 @@ export default async function CoursePage({ params }: { params: Params }) {
   const { locale, subject, grade: g } = await params;
   setRequestLocale(locale);
   const grade = Number(g);
-  const data = getCourse(subject, grade);
+  const data = await getCourse(subject, grade);
   if (!data) notFound();
   const t = await getTranslations();
   const l = await getLocale();
   const { course, subject: subj, units, readyCount, totalCount } = data;
-  const siblings = getCourses({ subjectId: subject });
+  const siblings = await getCourses({ subjectId: subject });
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 

@@ -14,9 +14,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations();
   const l = await getLocale();
-  const subjects = getSubjects();
-  const ranges = new Map(getSubjectGradeRanges().map((r) => [r.subjectId, r]));
-  const stats = getStats();
+  const [subjects, rangeRows, stats] = await Promise.all([getSubjects(), getSubjectGradeRanges(), getStats()]);
+  const ranges = new Map(rangeRows.map((r) => [r.subjectId, r]));
 
   return (
     <div className="space-y-14">

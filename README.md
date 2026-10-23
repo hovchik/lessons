@@ -8,7 +8,7 @@ admin panel for editing, publishing and generating lessons with Claude.
 ## Stack
 
 - **Next.js 15** (App Router, React 19, TypeScript) · **Tailwind CSS 4** · lucide-react icons
-- **SQLite** via better-sqlite3 + **Drizzle ORM** (schema in `src/server/db/schema.ts`, migrations in `drizzle/`)
+- **SQLite** via libsql (prebuilt for Windows, macOS and Linux, no compiler needed) + **Drizzle ORM** (schema in `src/server/db/schema.ts`, migrations in `drizzle/`)
 - **next-intl** for the three UI languages (`messages/{en,hy,ru}.json`, routes prefixed `/en`, `/hy`, `/ru`)
 - Lesson bodies are Markdown with GFM tables and KaTeX math
 - **@anthropic-ai/sdk** for lesson generation (admin button and bulk script)

@@ -1,17 +1,15 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { isAdmin } from "@/server/auth";
-import { getLessonById } from "@/server/queries";
-import { db, schema } from "@/server/db/client";
-import { eq } from "drizzle-orm";
+import { getCourseById, getLessonById } from "@/server/queries";
 import { LessonEditor } from "@/components/admin/lesson-editor";
 
 export default async function AdminLesson({ params }: { params: Promise<{ id: string }> }) {
   if (!(await isAdmin())) redirect("/admin/login");
   const { id } = await params;
-  const lesson = getLessonById(id);
+  const lesson = await getLessonById(id);
   if (!lesson) notFound();
-  const course = db.select().from(schema.courses).where(eq(schema.courses.id, lesson.courseId)).get()!;
+  const course = (await getCourseById(lesson.courseId))!;
 
   return (
     <div className="space-y-5">

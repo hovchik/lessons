@@ -22,7 +22,7 @@ export default async function GradePage({ params }: { params: Params }) {
   const grade = Number(g);
   if (!Number.isInteger(grade) || grade < 1 || grade > 12) notFound();
   const t = await getTranslations();
-  const courses = getCourses({ grade });
+  const courses = await getCourses({ grade });
 
   return (
     <div className="space-y-10">

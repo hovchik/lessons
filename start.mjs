@@ -43,7 +43,7 @@ if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versio
 
 // 2. Dependencies (dev dependencies included: the build and the seed script need them,
 //    even when NODE_ENV=production or npm's "omit=dev" is set on this machine)
-const needed = ["next", "tsx", "typescript", "tailwindcss", "better-sqlite3", "drizzle-orm"];
+const needed = ["next", "tsx", "typescript", "tailwindcss", "@libsql/client", "drizzle-orm"];
 const missing = needed.filter((m) => !fs.existsSync(path.join("node_modules", m)));
 if (missing.length) {
   log(`Installing dependencies${fs.existsSync("node_modules") ? ` (missing: ${missing.join(", ")})` : " (first run only, this takes a minute)"}…`);
