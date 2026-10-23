@@ -2,8 +2,11 @@
  * Seeds the SQLite database from the TypeScript content in src/content.
  * Safe to re-run: subjects, courses, units and lessons are upserted by id.
  * Lessons edited in the admin panel (source = "admin") are never overwritten.
+ * Seed lessons and empty units that are no longer in the content (for example after
+ * an outline was rewritten into a full course) are removed, so they do not show up
+ * as stale, empty units.
  */
-import { eq } from "drizzle-orm";
+import { and, eq, notInArray } from "drizzle-orm";
 import { getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
 
@@ -55,6 +58,8 @@ async function run() {
       })
       .run();
 
+    const seededUnitIds: string[] = [];
+    const seededLessonIds: string[] = [];
     for (const [ui, u] of c.units.entries()) {
       const unitId = `${id}-u${ui + 1}-${slugify(u.title.en).slice(0, 40)}`;
       await db
@@ -63,9 +68,11 @@ async function run() {
         .onConflictDoUpdate({ target: schema.units.id, set: { position: ui + 1, title: u.title, summary: u.summary } })
         .run();
       unitsCount++;
+      seededUnitIds.push(unitId);
 
       for (const [li, l] of u.lessons.entries()) {
         const lessonId = `${id}-${l.slug}`;
+        seededLessonIds.push(lessonId);
         const hasContent = !!l.content && Object.values(l.content).some((v) => v && v.trim().length > 0);
         if (hasContent) withContent++;
         lessonsCount++;
@@ -104,6 +111,36 @@ async function run() {
           .values({ id: lessonId, ...row })
           .onConflictDoUpdate({ target: schema.lessons.id, set: row })
           .run();
+      }
+    }
+
+    // Remove leftovers from earlier versions of this course.
+    if (seededLessonIds.length > 0) {
+      await db
+        .delete(schema.lessons)
+        .where(
+          and(
+            eq(schema.lessons.courseId, id),
+            eq(schema.lessons.source, "seed"),
+            notInArray(schema.lessons.id, seededLessonIds),
+          ),
+        )
+        .run();
+    }
+    if (seededUnitIds.length > 0) {
+      const staleUnits = await db
+        .select({ id: schema.units.id })
+        .from(schema.units)
+        .where(and(eq(schema.units.courseId, id), notInArray(schema.units.id, seededUnitIds)))
+        .all();
+      for (const su of staleUnits) {
+        const kept = await db
+          .select({ id: schema.lessons.id })
+          .from(schema.lessons)
+          .where(eq(schema.lessons.unitId, su.id))
+          .get();
+        // A stale unit that still holds an admin-edited lesson is kept.
+        if (!kept) await db.delete(schema.units).where(eq(schema.units.id, su.id)).run();
       }
     }
   }
