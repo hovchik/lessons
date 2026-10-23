@@ -58,3 +58,13 @@ export const q = (
   answer: number,
   explanation?: I18nText,
 ): QuizQuestion => ({ prompt, options, answer, explanation });
+
+/** Full lesson shorthand: trilingual title, objectives, markdown body and quiz. */
+export const lesson = (
+  slug: string,
+  title: [en: string, hy: string, ru: string],
+  objectives: { en: string[]; hy: string[]; ru: string[] },
+  content: { en: string; hy: string; ru: string },
+  quiz: QuizQuestion[],
+  durationMin = 40,
+): LessonSeed => ({ slug, title: t(...title), objectives, content, quiz, durationMin });

@@ -9,7 +9,8 @@
     "lint": "eslint",
     "db:generate": "drizzle-kit generate",
     "db:seed": "tsx scripts/seed.ts",
-    "generate": "tsx scripts/generate.ts"
+    "generate": "tsx scripts/generate.ts",
+    "content:check": "tsx scripts/check-content.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
