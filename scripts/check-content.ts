@@ -3,7 +3,7 @@
  *
  *   npm run content:check
  *
- * Checks: unique lesson slugs per course, every written lesson has a body,
+ * Checks: unique, URL-safe lesson slugs per course, every written lesson has a body,
  * objectives and quiz in all three languages, and every quiz answer points
  * at an existing option. Prints a per-course summary of written vs outline lessons.
  */
@@ -27,6 +27,7 @@ for (const c of courses) {
       const where = `${id}/${l.slug}`;
       if (slugs.has(l.slug)) errors.push(`${where}: duplicate slug`);
       slugs.add(l.slug);
+      if (!/^[a-z0-9-]+$/.test(l.slug)) errors.push(`${where}: slug must be lowercase ASCII letters, digits and dashes`);
       for (const lang of LANGS) if (!l.title[lang]?.trim()) errors.push(`${where}: missing ${lang} title`);
       if (!l.content) continue;
       cWritten++;
