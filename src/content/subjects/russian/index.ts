@@ -1,64 +1,9 @@
-import { t, unit, type CourseSeed, type UnitSeed } from "../types";
-
-const notes = (am: [string, string, string], ru: [string, string, string]) => ({
-  armenia: t(...am),
-  russia: t(...ru),
-});
-
-const course = (
-  grade: number,
-  description: [string, string, string],
-  am: [string, string, string],
-  ru: [string, string, string],
-  hours: { armenia: number | null; russia: number | null },
-  units: UnitSeed[],
-): CourseSeed => ({
-  subject: "russian",
-  grade,
-  title: t(`Russian Language · Grade ${grade}`, `Ռուսաց լեզու · ${grade}-րդ դասարան`, `Русский язык · ${grade} класс`),
-  description: t(...description),
-  curriculumNotes: notes(am, ru),
-  hoursPerWeek: hours,
-  units,
-});
+import { t, unit, type CourseSeed } from "../../types";
+import { course } from "./shared";
+import { russianGrade1 } from "./grade-1";
 
 export const russian: CourseSeed[] = [
-  course(
-    1,
-    ["Russian primer: the Cyrillic alphabet, reading syllables and words, first sentences (Russian schools); oral preparation for Armenian schools.", "Ռուսերեն այբբենարան՝ կիրիլյան այբուբեն, վանկերի և բառերի ընթերցանություն, առաջին նախադասություններ (ռուսական դպրոց), բանավոր նախապատրաստություն հայկական դպրոցի համար։", "Русский букварь: кириллица, чтение слогов и слов, первые предложения (российская школа); устная подготовка для армянской школы."],
-    ["Armenia: Russian is not taught in grade 1 of Armenian-medium schools (it starts in grade 2). This grade-1 course serves Russian-medium classes in Armenia and as an optional oral introduction (songs, rhymes, basic words) for younger children.", "Հայաստան․ հայալեզու դպրոցների 1-ին դասարանում ռուսերեն չի դասավանդվում (սկսվում է 2-րդ դասարանից)։ Այս դասընթացը նախատեսված է Հայաստանի ռուսալեզու դասարանների և փոքրիկների բանավոր ներածության (երգեր, ոտանավորներ, հիմնական բառեր) համար։", "Армения: в 1 классе армяноязычных школ русский не преподаётся (начинается со 2 класса). Этот курс предназначен для русскоязычных классов Армении и как устное введение (песни, стишки, базовые слова) для младших."],
-    ["Russia grade 1 (ФГОС НОО, «Обучение грамоте» 9 h/week incl. reading, then «Русский язык» 5 h): pre-primer period, 33 letters, syllable reading, writing in cursive, first spelling rules (жи-ши, ча-ща, чу-щу, capital letters), sentence.", "Ռուսաստան, 1-ին դասարան (ФГОС НОО, «Գրագիտության ուսուցում» 9 ժ/շաբ. ներառյալ ընթերցանություն, ապա «Ռուսաց լեզու» 5 ժ)՝ նախաայբբենական շրջան, 33 տառ, վանկային ընթերցանություն, ձեռագիր, առաջին ուղղագրական կանոններ (жи-ши, ча-ща, чу-щу, մեծատառ), նախադասություն։", "Россия, 1 класс (ФГОС НОО, «Обучение грамоте» 9 ч/нед. включая чтение, затем «Русский язык» 5 ч): добукварный период, 33 буквы, слоговое чтение, письмо, первые правила (жи-ши, ча-ща, чу-щу, заглавная буква), предложение."],
-    { armenia: null, russia: 5 },
-    [
-      unit(t("Before the letters", "Տառերից առաջ", "Добукварный период"), t("Speech, sentence, word, syllable, stress; vowels and consonants.", "Խոսք, նախադասություն, բառ, վանկ, շեշտ, ձայնավորներ և բաղաձայններ։", "Речь, предложение, слово, слог, ударение; гласные и согласные."), [
-        ["ru-speech-sentence", "Speech and sentence", "Խոսք և նախադասություն", "Речь и предложение"],
-        ["ru-syllable-stress", "Syllable and stress", "Վանկ և շեշտ", "Слог и ударение"],
-        ["ru-vowels-consonants", "Vowel and consonant sounds", "Ձայնավոր և բաղաձայն հնչյուններ", "Гласные и согласные звуки"],
-      ]),
-      unit(t("Vowels and first consonants", "Ձայնավորներ և առաջին բաղաձայններ", "Гласные и первые согласные"), t("А, О, И, Ы, У; Н, С, К, Т, Л, Р, В, Е, П, М — reading syllables.", "А, О, И, Ы, У; Н, С, К, Т, Л, Р, В, Е, П, М՝ վանկերի ընթերցանություն։", "А, О, И, Ы, У; Н, С, К, Т, Л, Р, В, Е, П, М — читаем слоги."), [
-        ["ru-letters-a-o-i", "Letters А, О, И", "А, О, И տառերը", "Буквы А, О, И"],
-        ["ru-letters-y-u", "Letters Ы, У", "Ы, У տառերը", "Буквы Ы, У"],
-        ["ru-letters-n-s-k", "Letters Н, С, К: first syllables", "Н, С, К տառերը․ առաջին վանկերը", "Буквы Н, С, К: первые слоги"],
-        ["ru-letters-t-l-r", "Letters Т, Л, Р", "Т, Л, Р տառերը", "Буквы Т, Л, Р"],
-        ["ru-letters-v-e-p-m", "Letters В, Е, П, М", "В, Е, П, М տառերը", "Буквы В, Е, П, М"],
-      ]),
-      unit(t("More consonants and special letters", "Նոր բաղաձայններ և հատուկ տառեր", "Новые согласные и особые буквы"), t("З, Б, Д, Я, Г, Ч, Ь, Ш, Ж, Ё, Й, Х, Ю, Ц, Э, Щ, Ф, Ъ.", "З, Б, Д, Я, Г, Ч, Ь, Ш, Ж, Ё, Й, Х, Ю, Ц, Э, Щ, Ф, Ъ։", "З, Б, Д, Я, Г, Ч, Ь, Ш, Ж, Ё, Й, Х, Ю, Ц, Э, Щ, Ф, Ъ."), [
-        ["ru-letters-z-b-d", "Letters З, Б, Д; voiced and voiceless pairs", "З, Б, Д տառերը, ձայնեղ–խուլ զույգեր", "Буквы З, Б, Д; парные согласные"],
-        ["ru-letters-ya-g-ch", "Letters Я, Г, Ч", "Я, Г, Ч տառերը", "Буквы Я, Г, Ч"],
-        ["ru-soft-sign", "The soft sign Ь", "Փափկացման նշան Ь", "Буква Ь — показатель мягкости"],
-        ["ru-letters-sh-zh", "Letters Ш, Ж; жи–ши", "Ш, Ж տառերը, жи–ши", "Буквы Ш, Ж; сочетания жи–ши"],
-        ["ru-letters-yo-y-kh", "Letters Ё, Й, Х", "Ё, Й, Х տառերը", "Буквы Ё, Й, Х"],
-        ["ru-letters-yu-ts-e", "Letters Ю, Ц, Э", "Ю, Ц, Э տառերը", "Буквы Ю, Ц, Э"],
-        ["ru-letters-shch-f-hard", "Letters Щ, Ф and the hard sign Ъ", "Щ, Ф տառերը և Ъ", "Буквы Щ, Ф и твёрдый знак Ъ"],
-      ]),
-      unit(t("After the primer", "Այբբենարանից հետո", "Послебукварный период"), t("The alphabet, capital letters, first spelling rules, reading short texts.", "Այբուբենը, մեծատառեր, առաջին ուղղագրական կանոններ, կարճ տեքստերի ընթերցանություն։", "Алфавит, заглавные буквы, первые орфограммы, чтение коротких текстов."), [
-        ["ru-alphabet", "The Russian alphabet: 33 letters", "Ռուսերեն այբուբենը․ 33 տառ", "Русский алфавит: 33 буквы"],
-        ["ru-capital-letters", "Capital letters in names and sentences", "Մեծատառը անուններում և նախադասություններում", "Заглавная буква в именах и предложениях"],
-        ["ru-cha-scha-chu-schu", "Combinations ча–ща, чу–щу, чк–чн", "ча–ща, чу–щу, чк–чн կապակցությունները", "Сочетания ча–ща, чу–щу, чк–чн"],
-        ["ru-reading-first-texts", "Reading: Marshak, Barto, Chukovsky", "Ընթերցանություն․ Մարշակ, Բարտո, Չուկովսկի", "Чтение: Маршак, Барто, Чуковский"],
-      ]),
-    ],
-  ),
+  russianGrade1,
   course(
     2,
     ["For Armenian schools: Russian begins — alphabet, sounds, basic vocabulary and speech. For Russian schools: sounds and letters, word, sentence, text, first spelling rules.", "Հայկական դպրոց․ ռուսերենը սկսվում է՝ այբուբեն, հնչյուններ, հիմնական բառապաշար և խոսք։ Ռուսական դպրոց․ հնչյուն և տառ, բառ, նախադասություն, տեքստ, առաջին ուղղագրական կանոններ։", "Для армянской школы: русский начинается — алфавит, звуки, базовая лексика и речь. Для российской школы: звуки и буквы, слово, предложение, текст, первые правила."],
