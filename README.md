@@ -13,7 +13,22 @@ admin panel for editing, publishing and generating lessons with Claude.
 - Lesson bodies are Markdown with GFM tables and KaTeX math
 - **@anthropic-ai/sdk** for lesson generation (admin button and bulk script)
 
-## Quick start
+## One-click start
+
+Double-click the runner for your system (Node.js 20+ must be installed, from <https://nodejs.org>):
+
+| System | File |
+|---|---|
+| macOS | `Start.command` (first time: right-click → Open if Gatekeeper asks) |
+| Windows | `Start.bat` |
+| Linux | `start.sh` (or `./start.sh` in a terminal) |
+
+It installs dependencies, creates `.env.local` (asks for an admin password, or generates one and prints
+it), seeds the database, builds the app and starts it at <http://localhost:3000>, then opens your browser.
+Later starts skip the steps that are already done. Options: `node start.mjs --dev` for the development
+server, `node start.mjs --rebuild` to force a fresh build, `PORT=4000` to change the port.
+
+## Manual start
 
 ```bash
 npm install
