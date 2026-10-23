@@ -3,49 +3,13 @@ import { notes, g } from "./shared";
 import { drawingGrade1 } from "./grade-1";
 import { drawingGrade2 } from "./grade-2";
 import { drawingGrade3 } from "./grade-3";
+import { drawingGrade4 } from "./grade-4";
 
 export const drawing: CourseSeed[] = [
   drawingGrade1,
   drawingGrade2,
   drawingGrade3,
-  {
-    subject: "drawing",
-    grade: 4,
-    ...g(4),
-    description: t("Every nation is an artist: landscape and people of Armenia and Russia, ancient cities, art of other peoples, heroes and holidays.", "Յուրաքանչյուր ժողովուրդ նկարիչ է՝ Հայաստանի և Ռուսաստանի բնապատկերն ու մարդիկ, հին քաղաքներ, այլ ժողովուրդների արվեստ, հերոսներ և տոներ։", "Каждый народ — художник: природа и люди Армении и России, древние города, искусство других народов, герои и праздники."),
-    curriculumNotes: notes(
-      ["Armenia grade 4 (1 h/week): landscape of the native land, national costume (taraz), village and city, medieval Armenian miniature (Toros Roslin), art of neighbouring peoples, heroes of Armenian epic (David of Sassoun), holidays (Vardavar, Trndez).", "Հայաստան, 4-րդ դասարան (1 ժ/շաբ.)՝ հայրենի երկրի բնապատկեր, տարազ, գյուղ և քաղաք, միջնադարյան հայկական մանրանկարչություն (Թորոս Ռոսլին), հարևան ժողովուրդների արվեստ, հայկական էպոսի հերոսներ (Սասունցի Դավիթ), տոներ (Վարդավառ, Տրնդեզ)։", "Армения, 4 класс (1 ч/нед.): пейзаж родной земли, национальный костюм (тараз), село и город, средневековая армянская миниатюра (Торос Рослин), искусство соседних народов, герои армянского эпоса (Давид Сасунский), праздники (Вардавар, Трндез)."],
-      ["Russia grade 4, ИЗО («Каждый народ — художник», 34 h): origins of native art (landscape, village, beauty of a person), ancient cities of the land, every nation is an artist (Japan, mountain and steppe peoples, Central Asia, Ancient Greece, medieval Europe), art unites nations.", "Ռուսաստան, 4-րդ դասարան, ИЗО («Յուրաքանչյուր ժողովուրդ նկարիչ է», 34 ժ)՝ հայրենի արվեստի ակունքներ, հին քաղաքներ, այլ ժողովուրդների արվեստ (Ճապոնիա, լեռնային և տափաստանային ժողովուրդներ, Միջին Ասիա, Հին Հունաստան, միջնադարյան Եվրոպա), արվեստը միավորում է ժողովուրդներին։", "Россия, 4 класс, ИЗО («Каждый народ — художник», 34 ч): истоки родного искусства (пейзаж, деревня, красота человека), древние города нашей земли, каждый народ — художник (Япония, народы гор и степей, Средняя Азия, Древняя Греция, средневековая Европа), искусство объединяет народы."],
-    ),
-    hoursPerWeek: { armenia: 1, russia: 1 },
-    units: [
-      unit(t("Origins of native art", "Հայրենի արվեստի ակունքները", "Истоки родного искусства"), t("Native landscape, village, the beauty of a person, national costume.", "Հայրենի բնապատկեր, գյուղ, մարդու գեղեցկություն, ազգային տարազ։", "Родной пейзаж, деревня, красота человека, национальный костюм."), [
-        ["native-landscape", "Landscape of the native land", "Հայրենի երկրի բնապատկերը", "Пейзаж родной земли"],
-        ["village-architecture", "Village: wooden and stone houses", "Գյուղ․ փայտե և քարե տներ", "Деревня: деревянный и каменный дом"],
-        ["national-costume", "National costume: taraz and sarafan", "Ազգային տարազ․ տարազ և սարաֆան", "Национальный костюм: тараз и сарафан"],
-        ["folk-holidays", "Folk holidays: Vardavar, Maslenitsa", "Ժողովրդական տոներ․ Վարդավառ, Մասլենիցա", "Народные праздники: Вардавар, Масленица"],
-      ]),
-      unit(t("Ancient cities", "Հին քաղաքներ", "Древние города нашей земли"), t("Fortress towns, temples, monasteries, the medieval miniature.", "Ամրոց-քաղաքներ, տաճարներ, վանքեր, միջնադարյան մանրանկար։", "Города-крепости, храмы, монастыри, средневековая миниатюра."), [
-        ["fortress-town", "A fortress town: Amberd, Novgorod kremlin", "Ամրոց-քաղաք․ Ամբերդ, Նովգորոդի կրեմլ", "Город-крепость: Амберд, Новгородский кремль"],
-        ["temples-monasteries", "Temples and monasteries: Geghard, Haghpat", "Տաճարներ և վանքեր․ Գեղարդ, Հաղպատ", "Храмы и монастыри: Гегард, Ахпат"],
-        ["armenian-miniature", "Armenian miniature: Toros Roslin", "Հայկական մանրանկարչություն․ Թորոս Ռոսլին", "Армянская миниатюра: Торос Рослин"],
-        ["icon-fresco", "Icons and frescoes", "Սրբապատկերներ և որմնանկարներ", "Иконы и фрески"],
-      ]),
-      unit(t("Every nation is an artist", "Յուրաքանչյուր ժողովուրդ նկարիչ է", "Каждый народ — художник"), t("Japan, mountain and steppe peoples, Central Asia, Ancient Greece, medieval Europe.", "Ճապոնիա, լեռնային և տափաստանային ժողովուրդներ, Միջին Ասիա, Հին Հունաստան, միջնադարյան Եվրոպա։", "Япония, народы гор и степей, Средняя Азия, Древняя Греция, средневековая Европа."), [
-        ["japan-art", "Art of Japan", "Ճապոնիայի արվեստ", "Страна восходящего солнца"],
-        ["mountain-steppe", "Peoples of mountains and steppes", "Լեռների և տափաստանների ժողովուրդներ", "Народы гор и степей"],
-        ["central-asia", "Cities of Central Asia", "Միջին Ասիայի քաղաքներ", "Города в пустыне"],
-        ["ancient-greece", "Ancient Greece: temple and vase", "Հին Հունաստան․ տաճար և սափոր", "Древняя Эллада: храм и вазопись"],
-        ["medieval-europe", "Medieval Europe: Gothic", "Միջնադարյան Եվրոպա․ գոթիկա", "Европейские города Средневековья"],
-      ]),
-      unit(t("Art unites nations", "Արվեստը միավորում է ժողովուրդներին", "Искусство объединяет народы"), t("Motherhood, old age, heroes, compassion, youth — eternal themes in art.", "Մայրություն, ծերություն, հերոսներ, գթասրտություն, երիտասարդություն՝ արվեստի հավերժական թեմաներ։", "Материнство, старость, герои, сострадание, юность — вечные темы искусства."), [
-        ["motherhood", "Motherhood in art", "Մայրությունը արվեստում", "Материнство"],
-        ["wisdom-of-age", "Wisdom of old age", "Ծերության իմաստնությունը", "Мудрость старости"],
-        ["epic-heroes", "Heroes: David of Sassoun, Ilya Muromets", "Հերոսներ․ Սասունցի Դավիթ, Իլյա Մուրոմեց", "Герои: Давид Сасунский, Илья Муромец"],
-        ["youth-dreams", "Youth and dreams; final exhibition", "Երիտասարդություն և երազանքներ, ամփոփիչ ցուցահանդես", "Юность и надежды; итоговая выставка"],
-      ]),
-    ],
-  },
+  drawingGrade4,
   {
     subject: "drawing",
     grade: 5,
