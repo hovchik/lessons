@@ -2,51 +2,12 @@ import { t, unit, type CourseSeed } from "../../types";
 import { course } from "./shared";
 import { englishGrade3 } from "./grade-3";
 import { englishGrade2 } from "./grade-2";
+import { englishGrade4 } from "./grade-4";
 
 export const english: CourseSeed[] = [
   englishGrade2,
   englishGrade3,
-
-  course(
-    4,
-    ["Describing people and daily routines, present simple with he/she, present continuous, past simple of «to be», food, animals and places in town.", "Մարդկանց և ամենօրյա գործողությունների նկարագրություն, present simple he/she-ով, present continuous, «to be»-ի past simple, սնունդ, կենդանիներ, քաղաքի վայրեր։", "Описание людей и распорядка дня, present simple с he/she, present continuous, past simple глагола «to be», еда, животные, места в городе."],
-    ["Armenia grade 4 (2 h/week): end of primary stage; standard expects A1-level listening/speaking on familiar topics, reading short texts, writing 4–5 sentences about oneself. Grade 4 has a knowledge check in the mother tongue and maths, not in English.", "Հայաստան, 4-րդ դասարան (2 ժ/շաբ.)՝ տարրական աստիճանի ավարտ․ պահանջվում է A1 մակարդակի լսել-խոսել ծանոթ թեմաներով, կարդալ կարճ տեքստեր, գրել 4–5 նախադասություն իր մասին։", "Армения, 4 класс (2 ч/нед.): завершение начальной ступени; стандарт ожидает A1 в аудировании и говорении на знакомые темы, чтение коротких текстов, письмо 4–5 предложений о себе."],
-    ["Russia grade 4 (2 h/week): end of НОО — present simple all persons, present continuous, past simple (to be, regular verbs), future with «will» (intro), comparative adjectives, telling the time, daily routine, food, animals, holidays; ВПР-style tasks on listening, reading, writing.", "Ռուսաստան, 4-րդ դասարան (2 ժ/շաբ.)՝ НОО-ի ավարտ․ present simple բոլոր դեմքերով, present continuous, past simple (to be, կանոնավոր բայեր), «will» (ներածություն), համեմատական աստիճան, ժամ, օրակարգ, սնունդ, կենդանիներ, տոներ։", "Россия, 4 класс (2 ч/нед.): завершение НОО — present simple во всех лицах, present continuous, past simple (to be, правильные глаголы), будущее с «will» (введение), сравнительная степень, время, режим дня, еда, животные, праздники."],
-    { armenia: 2, russia: 2 },
-    [
-      unit(t("People around me", "Իմ շրջապատի մարդիկ", "Люди вокруг меня"), t("Appearance, character, possessive adjectives and 's.", "Արտաքին, բնավորություն, ստացական ածականներ և 's։", "Внешность, характер, притяжательные прилагательные и 's."), [
-        ["describing-people", "She has got long hair: describing people", "She has got long hair․ նկարագրում ենք մարդկանց", "She has got long hair: описываем людей"],
-        ["possessives", "My, your, his, her and Tom's", "My, your, his, her և Tom's", "My, your, his, her и Tom's"],
-        ["jobs", "Jobs: a doctor, a teacher, a driver", "Մասնագիտություններ․ doctor, teacher, driver", "Профессии: doctor, teacher, driver"],
-        ["adjectives-opposites", "Big and small, old and new: opposites", "Big–small, old–new․ հականիշներ", "Big–small, old–new: антонимы"],
-      ]),
-      unit(t("My day", "Իմ օրը", "Мой день"), t("Daily routine, present simple with he/she (-s), adverbs of frequency.", "Օրակարգ, present simple he/she-ով (-s), հաճախականության մակբայներ։", "Распорядок дня, present simple с he/she (-s), наречия частотности."), [
-        ["daily-routine", "I get up at seven: my daily routine", "I get up at seven․ իմ օրակարգը", "I get up at seven: мой режим дня"],
-        ["he-she-s", "He plays, she reads: the -s ending", "He plays, she reads․ -s վերջավորությունը", "He plays, she reads: окончание -s"],
-        ["does-he", "Does he…? Questions and negatives", "Does he…? Հարց և ժխտում", "Does he…? Вопросы и отрицания"],
-        ["always-sometimes-never", "Always, usually, sometimes, never", "Always, usually, sometimes, never", "Always, usually, sometimes, never"],
-      ]),
-      unit(t("What are you doing?", "Ի՞նչ ես անում", "Что ты делаешь?"), t("Present continuous, clothes, hobbies.", "Present continuous, հագուստ, հոբբիներ։", "Present continuous, одежда, хобби."), [
-        ["present-continuous", "I am reading now: present continuous", "I am reading now․ present continuous", "I am reading now: present continuous"],
-        ["clothes", "Clothes: What are you wearing?", "Հագուստ․ What are you wearing?", "Одежда: What are you wearing?"],
-        ["hobbies-free-time", "Hobbies and free time", "Հոբբիներ և ազատ ժամանակ", "Хобби и свободное время"],
-        ["simple-vs-continuous", "Every day or now? Simple vs continuous", "Every day կամ now? Simple և continuous", "Every day или now? Simple и continuous"],
-      ]),
-      unit(t("Food and shopping", "Սնունդ և գնումներ", "Еда и покупки"), t("Countable and uncountable nouns, some/any, «How much is it?».", "Հաշվելի և անհաշվելի գոյականներ, some/any, «How much is it?»։", "Исчисляемые и неисчисляемые, some/any, «How much is it?»."), [
-        ["food-vocabulary", "Breakfast, lunch and dinner", "Breakfast, lunch, dinner", "Breakfast, lunch, dinner"],
-        ["some-any", "Some and any", "Some և any", "Some и any"],
-        ["at-the-shop", "At the shop: Can I have…?", "Խանութում․ Can I have…?", "В магазине: Can I have…?"],
-        ["numbers-to-100", "Numbers to 100 and prices", "Թվերը մինչև 100 և գները", "Числа до 100 и цены"],
-      ]),
-      unit(t("Yesterday and tomorrow", "Երեկ և վաղը", "Вчера и завтра"), t("Past simple of «to be» and regular verbs, «will» for the future.", "«to be»-ի և կանոնավոր բայերի past simple, «will» ապառնի։", "Past simple глагола «to be» и правильных глаголов, «will» для будущего."), [
-        ["was-were", "Was and were", "Was և were", "Was и were"],
-        ["past-simple-regular", "I played, I watched: regular past", "I played, I watched․ կանոնավոր անցյալ", "I played, I watched: правильные глаголы в прошедшем"],
-        ["will-future", "Tomorrow I will…", "Tomorrow I will…", "Tomorrow I will…"],
-        ["holidays-celebrations", "Holidays: birthday, New Year, Easter", "Տոներ․ birthday, New Year, Easter", "Праздники: birthday, New Year, Easter"],
-        ["year-4-review", "Review: my year in English", "Ամփոփում․ իմ տարին անգլերենով", "Повторение: мой год на английском"],
-      ]),
-    ],
-  ),
+  englishGrade4,
 
   course(
     5,
