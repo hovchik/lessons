@@ -3,53 +3,13 @@ import { course, ruNote } from "./shared";
 import { armenianGrade1 } from "./grade-1";
 import { armenianGrade2 } from "./grade-2";
 import { armenianGrade3 } from "./grade-3";
+import { armenianGrade4 } from "./grade-4";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
   armenianGrade2,
   armenianGrade3,
-  course(
-    4,
-    ["Completing the primary grammar course: declension and conjugation systems, complex sentences introduced, essays, and the grade 4 state assessment.", "Տարրական քերականության ամփոփում՝ հոլովում և խոնարհում, բարդ նախադասության ներմուծում, շարադրություններ, 4-րդ դասարանի պետական ստուգում։", "Завершение начального курса грамматики: склонение и спряжение, введение сложного предложения, сочинения и государственная проверка за 4 класс."],
-    ["Armenia grade 4, «Մայրենի» (6 h/week): noun declension types, verb conjugations and moods introduced, adverb, conjunction, preposition and postposition, simple and complex sentences, direct speech, text types (reasoning), reading Armenian classics; ends with the state check (20-point).", "Հայաստան, 4-րդ դասարան, «Մայրենի» (6 ժ/շաբ.)՝ գոյականի հոլովման տիպեր, բայի խոնարհում և եղանակների ներմուծում, մակբայ, շաղկապ, նախդիր և կապ, պարզ և բարդ նախադասություն, ուղղակի խոսք, տեքստի տեսակներ (դատողություն), հայ դասականների ընթերցանություն, պետական ստուգում (20-բալանոց)։", "Армения, 4 класс, «Մայրենի» (6 ч/нед.): типы склонения существительных, спряжение глагола и введение наклонений, наречие, союз, предлог и послелог, простое и сложное предложение, прямая речь, типы текста (рассуждение), чтение армянской классики; государственная проверка (20 баллов)."],
-    ruNote,
-    { armenia: 6, russia: null },
-    [
-      unit(t("Declension", "Հոլովում", "Склонение"), t("Seven cases in use, declension types (ի, ու, ան, ոջ, վա, ց), irregular nouns.", "Յոթ հոլովը գործածության մեջ, հոլովման տիպեր (ի, ու, ան, ոջ, վա, ց), անկանոն գոյականներ։", "Семь падежей в употреблении, типы склонения (ի, ու, ան, ոջ, վա, ց), неправильные существительные."), [
-        ["seven-cases", "The seven cases in sentences", "Յոթ հոլովը նախադասություններում", "Семь падежей в предложениях"],
-        ["declension-types", "Declension types: -ի, -ու, -ան, -ոջ, -վա, -ց", "Հոլովման տիպեր․ -ի, -ու, -ան, -ոջ, -վա, -ց", "Типы склонения: -ի, -ու, -ան, -ոջ, -վա, -ց"],
-        ["irregular-nouns", "Irregular nouns: հայր, մայր, քույր, տուն", "Անկանոն գոյականներ․ հայր, մայր, քույր, տուն", "Неправильные существительные: հայր, մայր, քույր, տուն"],
-        ["plural-declension", "Declension in the plural", "Հոգնակիի հոլովում", "Склонение во множественном числе"],
-      ]),
-      unit(t("Conjugation", "Խոնարհում", "Спряжение"), t("Verb types -ել/-ալ, infinitive, present, imperfect, aorist, future, imperative.", "Բայի տեսակները -ել/-ալ, անորոշ դերբայ, ներկա, անցյալ անկատար, անցյալ կատարյալ, ապառնի, հրամայական։", "Типы глагола -ել/-ալ, инфинитив, настоящее, прошедшее несовершенное, аорист, будущее, императив."), [
-        ["verb-types", "Verb types: -ել and -ալ", "Բայի տեսակները․ -ել և -ալ", "Типы глагола: -ել и -ալ"],
-        ["present-imperfect", "Present and imperfect", "Ներկա և անցյալ անկատար", "Настоящее и прошедшее несовершенное"],
-        ["aorist", "The aorist (simple past)", "Անցյալ կատարյալ", "Прошедшее совершенное (аорист)"],
-        ["future-tense", "Future: կ- and -ու եմ", "Ապառնի․ կ- և -ու եմ", "Будущее: կ- и -ու եմ"],
-        ["imperative", "Imperative and prohibitive", "Հրամայական և արգելական", "Повелительное наклонение и запрет"],
-      ]),
-      unit(t("Other parts of speech", "Այլ խոսքի մասեր", "Другие части речи"), t("Adverb, conjunction, preposition and postposition, particles, interjection.", "Մակբայ, շաղկապ, նախդիր և կապ, վերաբերական, ձայնարկություն։", "Наречие, союз, предлог и послелог, частицы, междометие."), [
-        ["adverbs", "Adverbs", "Մակբայ", "Наречие"],
-        ["conjunctions", "Conjunctions: և, բայց, որ, որովհետև", "Շաղկապներ․ և, բայց, որ, որովհետև", "Союзы: և, բայց, որ, որովհետև"],
-        ["postpositions", "Postpositions: վրա, մեջ, մոտ, համար", "Կապեր․ վրա, մեջ, մոտ, համար", "Послелоги: վրա, մեջ, մոտ, համար"],
-        ["particles-interjections", "Particles and interjections", "Վերաբերականներ և ձայնարկություններ", "Частицы и междометия"],
-      ]),
-      unit(t("Simple and complex sentence", "Պարզ և բարդ նախադասություն", "Простое и сложное предложение"), t("Homogeneous members, complex sentences with conjunctions, direct speech and punctuation.", "Համադաս անդամներ, բարդ նախադասություն շաղկապներով, ուղղակի խոսք և կետադրություն։", "Однородные члены, сложное предложение с союзами, прямая речь и пунктуация."), [
-        ["homogeneous-members", "Homogeneous members and commas", "Համադաս անդամներ և ստորակետ", "Однородные члены и запятые"],
-        ["complex-sentence-intro", "Complex sentence", "Բարդ նախադասություն", "Сложное предложение"],
-        ["direct-speech", "Direct speech and the Armenian quotation marks «»", "Ուղղակի խոսք և չակերտներ «»", "Прямая речь и кавычки «»"],
-        ["address", "Address and the comma", "Կոչական և ստորակետ", "Обращение и запятая"],
-      ]),
-      unit(t("Text and reading", "Տեքստ և ընթերցանություն", "Текст и чтение"), t("Reasoning text, letter writing, summary, Armenian classics: Tumanyan, Raffi, Isahakyan, Charents for children; exam preparation.", "Դատողություն, նամակ, համառոտագրություն, հայ դասականներ՝ Թումանյան, Րաֆֆի, Իսահակյան, Չարենց, ստուգման նախապատրաստություն։", "Текст-рассуждение, письмо, краткое изложение, армянская классика: Туманян, Раффи, Исаакян, Чаренц для детей; подготовка к проверке."), [
-        ["reasoning-text", "Text-reasoning: why?", "Դատողություն․ ինչու՞", "Текст-рассуждение: почему?"],
-        ["letter-writing", "Writing a letter", "Նամակ գրել", "Пишем письмо"],
-        ["summary-writing", "Summary of a text", "Տեքստի համառոտագրություն", "Краткое изложение"],
-        ["tumanyan-poems-4", "Tumanyan: «Շունն ու կատուն», «Քաջ Նազար»", "Թումանյան․ «Շունն ու կատուն», «Քաջ Նազար»", "Туманян: «Пёс и кот», «Храбрый Назар»"],
-        ["sasuntsi-davit-children", "«Sasna Tsrer» retold for children", "«Սասնա ծռեր»՝ պատմված երեխաների համար", "«Сасунские храбрецы» в пересказе для детей"],
-        ["state-check-prep", "Preparation for the grade 4 state check", "4-րդ դասարանի պետական ստուգման նախապատրաստություն", "Подготовка к государственной проверке за 4 класс"],
-      ]),
-    ],
-  ),
+  armenianGrade4,
   course(
     5,
     ["Middle school begins: phonetics, lexicology, word formation in depth, and a literature course from folklore to Tumanyan.", "Սկսվում է միջին դպրոցը՝ հնչյունաբանություն, բառագիտություն, բառակազմություն խորությամբ, գրականություն՝ բանահյուսությունից մինչև Թումանյան։", "Начало средней школы: фонетика, лексикология, углублённое словообразование и курс литературы от фольклора до Туманяна."],
