@@ -4,54 +4,14 @@ import { armenianGrade1 } from "./grade-1";
 import { armenianGrade2 } from "./grade-2";
 import { armenianGrade3 } from "./grade-3";
 import { armenianGrade4 } from "./grade-4";
+import { armenianGrade5 } from "./grade-5";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
   armenianGrade2,
   armenianGrade3,
   armenianGrade4,
-  course(
-    5,
-    ["Middle school begins: phonetics, lexicology, word formation in depth, and a literature course from folklore to Tumanyan.", "Սկսվում է միջին դպրոցը՝ հնչյունաբանություն, բառագիտություն, բառակազմություն խորությամբ, գրականություն՝ բանահյուսությունից մինչև Թումանյան։", "Начало средней школы: фонетика, лексикология, углублённое словообразование и курс литературы от фольклора до Туманяна."],
-    ["Armenia grade 5: «Հայոց լեզու» (3 h) + «Գրականություն» (2 h). Language: phonetics and orthography, lexicology (meaning, synonyms, homonyms, phraseology), word formation. Literature: folklore genres, fairy tales, fables, Tumanyan, Aghayan, Isahakyan, Shiraz, foreign literature.", "Հայաստան, 5-րդ դասարան՝ «Հայոց լեզու» (3 ժ) + «Գրականություն» (2 ժ)։ Լեզու՝ հնչյունաբանություն և ուղղագրություն, բառագիտություն (իմաստ, հոմանիշ, համանուն, դարձվածք), բառակազմություն։ Գրականություն՝ բանահյուսության ժանրեր, հեքիաթներ, առակներ, Թումանյան, Աղայան, Իսահակյան, Շիրազ, արտասահմանյան գրականություն։", "Армения, 5 класс: «Армянский язык» (3 ч) + «Литература» (2 ч). Язык: фонетика и орфография, лексикология (значение, синонимы, омонимы, фразеологизмы), словообразование. Литература: жанры фольклора, сказки, басни, Туманян, Агаян, Исаакян, Шираз, зарубежная литература."],
-    ruNote,
-    { armenia: 5, russia: null },
-    [
-      unit(t("Phonetics and orthography", "Հնչյունաբանություն և ուղղագրություն", "Фонетика и орфография"), t("Sound system of Armenian, letter–sound mismatches, stress, orthographic dictionary.", "Հայերենի հնչյունային համակարգը, տառ–հնչյուն անհամապատասխանություններ, շեշտ, ուղղագրական բառարան։", "Звуковая система армянского, расхождения буквы и звука, ударение, орфографический словарь."), [
-        ["sound-system", "The sound system: 6 vowels, 30 consonants", "Հնչյունային համակարգ․ 6 ձայնավոր, 30 բաղաձայն", "Звуковая система: 6 гласных, 30 согласных"],
-        ["letter-sound-mismatch", "When letters and sounds differ: ո/օ, ե/է, և, ույ", "Երբ տառն ու հնչյունը տարբեր են․ ո/օ, ե/է, և, ույ", "Когда буква и звук различаются: ո/օ, ե/է, և, ույ"],
-        ["stress", "Stress in Armenian", "Շեշտը հայերենում", "Ударение в армянском языке"],
-        ["consonant-assimilation", "Consonant changes in speech: բ/պ, դ/տ, գ/կ", "Բաղաձայնների փոփոխություն խոսքում", "Изменения согласных в речи"],
-        ["orthography-dictionary", "Using the orthographic dictionary", "Ուղղագրական բառարանի օգտագործում", "Работа с орфографическим словарём"],
-      ]),
-      unit(t("Lexicology", "Բառագիտություն", "Лексикология"), t("Lexical meaning, direct and figurative, synonyms, antonyms, homonyms, phraseology, borrowings.", "Բառային իմաստ, ուղիղ և փոխաբերական, հոմանիշ, հականիշ, համանուն, դարձվածք, փոխառություններ։", "Лексическое значение, прямое и переносное, синонимы, антонимы, омонимы, фразеологизмы, заимствования."), [
-        ["lexical-meaning", "Lexical meaning; direct and figurative", "Բառային իմաստ, ուղիղ և փոխաբերական", "Лексическое значение; прямое и переносное"],
-        ["synonyms-5", "Synonyms and their shades", "Հոմանիշներ և դրանց նրբերանգները", "Синонимы и их оттенки"],
-        ["homonyms", "Homonyms and paronyms", "Համանուններ և հարանուններ", "Омонимы и паронимы"],
-        ["phraseology", "Phraseological units", "Դարձվածքներ", "Фразеологизмы"],
-        ["borrowings-purism", "Native and borrowed words", "Բնիկ և փոխառյալ բառեր", "Исконные и заимствованные слова"],
-      ]),
-      unit(t("Word formation", "Բառակազմություն", "Словообразование"), t("Simple, derived and compound words; suffixes and prefixes catalogue; abbreviations.", "Պարզ, ածանցավոր և բարդ բառեր, ածանցների ցանկ, հապավումներ։", "Простые, производные и сложные слова; каталог аффиксов; аббревиатуры."), [
-        ["simple-derived-compound", "Simple, derived and compound words", "Պարզ, ածանցավոր և բարդ բառեր", "Простые, производные и сложные слова"],
-        ["suffix-catalogue", "Productive suffixes: -ություն, -ական, -իչ, -ող", "Գործուն վերջածանցներ․ -ություն, -ական, -իչ, -ող", "Продуктивные суффиксы: -ություն, -ական, -իչ, -ող"],
-        ["compound-types", "Types of compounds", "Բարդ բառերի տեսակները", "Типы сложных слов"],
-        ["abbreviations", "Abbreviations: ՀՀ, ԵՊՀ", "Հապավումներ․ ՀՀ, ԵՊՀ", "Аббревиатуры: ՀՀ, ԵՊՀ"],
-      ]),
-      unit(t("Literature: folklore", "Գրականություն․ բանահյուսություն", "Литература: фольклор"), t("Genres of folklore, fairy tales, legends, proverbs, riddles, «Sasna Tsrer».", "Բանահյուսության ժանրեր, հեքիաթներ, ավանդազրույցներ, առածներ, հանելուկներ, «Սասնա ծռեր»։", "Жанры фольклора, сказки, легенды, пословицы, загадки, «Сасна црер»."), [
-        ["folklore-genres", "Genres of folklore", "Բանահյուսության ժանրերը", "Жанры фольклора"],
-        ["fairy-tale-structure", "The fairy tale and its structure", "Հեքիաթը և նրա կառուցվածքը", "Сказка и её строение"],
-        ["proverbs-riddles", "Proverbs, sayings, riddles", "Առածներ, ասացվածքներ, հանելուկներ", "Пословицы, поговорки, загадки"],
-        ["sasna-tsrer-5", "«Sasna Tsrer»: the epic", "«Սասնա ծռեր»․ էպոսը", "«Сасна црер»: эпос"],
-      ]),
-      unit(t("Literature: authors", "Գրականություն․ հեղինակներ", "Литература: авторы"), t("Tumanyan, Aghayan, Isahakyan, Shiraz, Kapoutikian, Krylov and Pushkin in translation.", "Թումանյան, Աղայան, Իսահակյան, Շիրազ, Կապուտիկյան, Կռիլով և Պուշկին թարգմանությամբ։", "Туманян, Агаян, Исаакян, Шираз, Капутикян, Крылов и Пушкин в переводе."), [
-        ["tumanyan-5", "Tumanyan: «Անուշ» (excerpts), ballads", "Թումանյան․ «Անուշ» (հատվածներ), բալլադներ", "Туманян: «Ануш» (отрывки), баллады"],
-        ["aghayan-5", "Aghayan: tales and «Արեգնազան»", "Աղայան․ հեքիաթներ և «Արեգնազան»", "Агаян: сказки и «Арегназан»"],
-        ["isahakyan-shiraz", "Isahakyan and Shiraz: poems of homeland", "Իսահակյան և Շիրազ․ հայրենիքի բանաստեղծություններ", "Исаакян и Шираз: стихи о родине"],
-        ["kapoutikian", "Silva Kaputikyan for children", "Սիլվա Կապուտիկյան երեխաների համար", "Сильва Капутикян для детей"],
-        ["translated-literature-5", "Pushkin and Krylov in Armenian", "Պուշկին և Կռիլով հայերեն", "Пушкин и Крылов на армянском"],
-      ]),
-    ],
-  ),
+  armenianGrade5,
   course(
     6,
     ["Morphology part one: noun, adjective, numeral, pronoun; literature of the 19th century — Abovyan, Proshyan, Raffi, Tumanyan.", "Ձևաբանություն, մաս առաջին՝ գոյական, ածական, թվական, դերանուն, 19-րդ դարի գրականություն՝ Աբովյան, Պռոշյան, Րաֆֆի, Թումանյան։", "Морфология, часть первая: существительное, прилагательное, числительное, местоимение; литература XIX века — Абовян, Прошян, Раффи, Туманян."],
