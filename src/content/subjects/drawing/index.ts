@@ -5,6 +5,7 @@ import { drawingGrade2 } from "./grade-2";
 import { drawingGrade3 } from "./grade-3";
 import { drawingGrade4 } from "./grade-4";
 import { drawingGrade5 } from "./grade-5";
+import { drawingGrade6 } from "./grade-6";
 
 export const drawing: CourseSeed[] = [
   drawingGrade1,
@@ -12,44 +13,7 @@ export const drawing: CourseSeed[] = [
   drawingGrade3,
   drawingGrade4,
   drawingGrade5,
-  {
-    subject: "drawing",
-    grade: 6,
-    ...g(6),
-    description: t("Fine art in human life: the language of drawing and painting, still life, portrait, landscape, perspective.", "Կերպարվեստը մարդու կյանքում՝ գծանկարի և նկարչության լեզուն, նատյուրմորտ, դիմանկար, բնանկար, հեռանկար։", "Изобразительное искусство в жизни человека: язык рисунка и живописи, натюрморт, портрет, пейзаж, перспектива."),
-    curriculumNotes: notes(
-      ["Armenia grade 6 (1 h/week): kinds of fine art, graphic means (line, tone, texture), colour science, still life with light and shade, proportions of the face and figure, portrait, linear and aerial perspective, landscape, Armenian painters (Saryan, Aivazovsky, Bashinjaghian).", "Հայաստան, 6-րդ դասարան (1 ժ/շաբ.)՝ կերպարվեստի տեսակները, գրաֆիկական միջոցներ (գիծ, տոն, ֆակտուրա), գունագիտություն, նատյուրմորտ լույս-ստվերով, դեմքի և կազմվածքի համամասնություններ, դիմանկար, գծային և օդային հեռանկար, բնանկար, հայ նկարիչներ (Սարյան, Այվազովսկի, Բաշինջաղյան)։", "Армения, 6 класс (1 ч/нед.): виды изобразительного искусства, графические средства (линия, тон, фактура), цветоведение, натюрморт со светотенью, пропорции лица и фигуры, портрет, линейная и воздушная перспектива, пейзаж, армянские живописцы (Сарьян, Айвазовский, Башинджагян)."],
-      ["Russia grade 6, ИЗО («Изобразительное искусство в жизни человека», 34 h): kinds of art and the basics of imagery, the world of our things (still life), the image of a person (portrait), man and space (landscape).", "Ռուսաստան, 6-րդ դասարան, ИЗО («Կերպարվեստը մարդու կյանքում», 34 ժ)՝ արվեստի տեսակները և պատկերային լեզվի հիմունքներ, մեր իրերի աշխարհը (նատյուրմորտ), մարդու կերպարը (դիմանկար), մարդը և տարածությունը (բնանկար)։", "Россия, 6 класс, ИЗО («Изобразительное искусство в жизни человека», 34 ч): виды изобразительного искусства и основы образного языка, мир наших вещей (натюрморт), вглядываясь в человека (портрет), человек и пространство (пейзаж)."],
-    ),
-    hoursPerWeek: { armenia: 1, russia: 1 },
-    units: [
-      unit(t("The language of fine art", "Կերպարվեստի լեզուն", "Виды изобразительного искусства и основы образного языка"), t("Drawing, painting, graphics, sculpture; line, tone, texture, colour.", "Գծանկար, նկարչություն, գրաֆիկա, քանդակ, գիծ, տոն, ֆակտուրա, գույն։", "Рисунок, живопись, графика, скульптура; линия, тон, фактура, цвет."), [
-        ["kinds-of-art", "Kinds and genres of fine art", "Կերպարվեստի տեսակներն ու ժանրերը", "Виды и жанры изобразительного искусства"],
-        ["line-tone-hatching", "Line, tone and hatching", "Գիծ, տոն և շտրիխ", "Линия, тон и штриховка"],
-        ["colour-wheel", "Colour wheel, complementary colours, saturation", "Գունային շրջան, փոխլրացնող գույներ, հագեցվածություն", "Цветовой круг, дополнительные цвета, насыщенность"],
-        ["texture-materials", "Texture and materials in sculpture", "Ֆակտուրա և նյութեր քանդակում", "Фактура и материалы в скульптуре"],
-      ]),
-      unit(t("The world of things: still life", "Իրերի աշխարհը․ նատյուրմորտ", "Мир наших вещей. Натюрморт"), t("Construction of objects, light and shade, still life in graphics and colour.", "Առարկաների կառուցում, լույս և ստվեր, նատյուրմորտ գրաֆիկայում և գույնով։", "Конструкция предметов, светотень, натюрморт в графике и в цвете."), [
-        ["object-construction", "Geometric construction of objects", "Առարկաների երկրաչափական կառուցումը", "Понятие формы; геометрические тела"],
-        ["light-and-shade", "Light and shade on a simple form", "Լույս և ստվեր պարզ ձևի վրա", "Освещение; свет и тень"],
-        ["graphic-still-life", "Still life in pencil", "Նատյուրմորտ մատիտով", "Натюрморт в графике"],
-        ["colour-still-life", "Still life in colour", "Նատյուրմորտ գույնով", "Цвет в натюрморте"],
-      ]),
-      unit(t("Looking at a person: portrait", "Նայելով մարդուն․ դիմանկար", "Вглядываясь в человека. Портрет"), t("Proportions of the head, construction, portrait in graphics and colour, self-portrait.", "Գլխի համամասնություններ, կառուցում, դիմանկար գրաֆիկայում և գույնով, ինքնանկար։", "Пропорции головы, конструкция, портрет в графике и цвете, автопортрет."), [
-        ["head-proportions", "Proportions and construction of the head", "Գլխի համամասնությունները և կառուցումը", "Конструкция головы человека и её пропорции"],
-        ["portrait-graphics", "Graphic portrait", "Գրաֆիկական դիմանկար", "Графический портретный рисунок"],
-        ["portrait-colour", "Portrait in colour; mood", "Դիմանկար գույնով, տրամադրություն", "Портрет в живописи; роль цвета"],
-        ["self-portrait", "Self-portrait", "Ինքնանկար", "Автопортрет"],
-        ["great-portraits", "Great portraits: Hakob Hovnatanyan, Repin, Serov", "Մեծ դիմանկարներ․ Հակոբ Հովնաթանյան, Ռեպին, Սերով", "Великие портретисты: Овнатанян, Репин, Серов"],
-      ]),
-      unit(t("Man and space: landscape", "Մարդը և տարածությունը․ բնանկար", "Человек и пространство. Пейзаж"), t("Linear and aerial perspective, landscape composition, city landscape.", "Գծային և օդային հեռանկար, բնանկարի կոմպոզիցիա, քաղաքային բնանկար։", "Линейная и воздушная перспектива, композиция пейзажа, городской пейзаж."), [
-        ["linear-perspective", "Linear perspective: horizon and vanishing point", "Գծային հեռանկար․ հորիզոն և անհետացման կետ", "Правила построения перспективы"],
-        ["aerial-perspective", "Aerial perspective", "Օդային հեռանկար", "Воздушная перспектива"],
-        ["landscape-mood", "Landscape and mood: Saryan's Armenia", "Բնանկար և տրամադրություն․ Սարյանի Հայաստանը", "Пейзаж — настроение: Армения Сарьяна"],
-        ["city-landscape", "City landscape", "Քաղաքային բնանկար", "Городской пейзаж"],
-      ]),
-    ],
-  },
+  drawingGrade6,
   {
     subject: "drawing",
     grade: 7,
