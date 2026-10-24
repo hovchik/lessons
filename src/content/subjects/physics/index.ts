@@ -1,5 +1,6 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { physicsGrade7 } from "./grade-7";
+import { physicsGrade8 } from "./grade-8";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -8,55 +9,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 
 export const physics: CourseSeed[] = [
   physicsGrade7,
-  {
-    subject: "physics",
-    grade: 8,
-    title: t("Physics · Grade 8", "Ֆիզիկա · 8-րդ դասարան", "Физика · 8 класс"),
-    description: t("Thermal phenomena, electricity, magnetism and light.", "Ջերմային երևույթներ, էլեկտրականություն, մագնիսականություն և լույս։", "Тепловые явления, электричество, магнетизм и свет."),
-    curriculumNotes: notes(
-      ["Armenia grade 8 (2 h/week): thermal phenomena (internal energy, heat transfer, specific heat, phase changes, heat engines), electric phenomena (charge, current, Ohm's law, series and parallel circuits, work and power of current), electromagnetic phenomena, light phenomena (reflection, refraction, lenses).", "Հայաստան, 8-րդ դասարան (2 ժ/շաբ.)՝ ջերմային երևույթներ (ներքին էներգիա, ջերմափոխանակում, տեսակարար ջերմունակություն, ֆազային անցումներ, ջերմային շարժիչներ), էլեկտրական երևույթներ (լիցք, հոսանք, Օհմի օրենք, հաջորդական և զուգահեռ միացում, հոսանքի աշխատանք և հզորություն), էլեկտրամագնիսական երևույթներ, լուսային երևույթներ (անդրադարձում, բեկում, ոսպնյակներ)։", "Армения, 8 класс (2 ч/нед.): тепловые явления (внутренняя энергия, теплопередача, удельная теплоёмкость, фазовые переходы, тепловые двигатели), электрические явления (заряд, ток, закон Ома, последовательное и параллельное соединение, работа и мощность тока), электромагнитные явления, световые явления (отражение, преломление, линзы)."],
-      ["Russia grade 8 (ФГОС ООО, 70 h): thermal phenomena, electric phenomena, electromagnetic phenomena, light phenomena — the same four blocks.", "Ռուսաստան, 8-րդ դասարան (ФГОС ООО, 70 ժ)՝ ջերմային, էլեկտրական, էլեկտրամագնիսական, լուսային երևույթներ՝ նույն չորս բաժինը։", "Россия, 8 класс (ФГОС ООО, 70 ч): тепловые, электрические, электромагнитные и световые явления — те же четыре блока."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 2 },
-    units: [
-      unit(t("Thermal phenomena", "Ջերմային երևույթներ", "Тепловые явления"), t("Internal energy, heat transfer, specific heat, melting, vaporisation, heat engines.", "Ներքին էներգիա, ջերմափոխանակում, տեսակարար ջերմունակություն, հալում, գոլորշիացում, ջերմային շարժիչներ։", "Внутренняя энергия, теплопередача, удельная теплоёмкость, плавление, парообразование, тепловые двигатели."), [
-        ["thermal-motion-temperature", "Thermal motion; temperature", "Ջերմային շարժում, ջերմաստիճան", "Тепловое движение; температура"],
-        ["internal-energy", "Internal energy and ways to change it", "Ներքին էներգիա և նրա փոփոխման եղանակները", "Внутренняя энергия и способы её изменения"],
-        ["heat-transfer", "Conduction, convection, radiation", "Ջերմահաղորդականություն, կոնվեկցիա, ճառագայթում", "Теплопроводность, конвекция, излучение"],
-        ["specific-heat", "Quantity of heat; specific heat capacity", "Ջերմաքանակ, տեսակարար ջերմունակություն", "Количество теплоты; удельная теплоёмкость"],
-        ["fuel-energy", "Energy of fuel; conservation of energy in thermal processes", "Վառելիքի էներգիա, էներգիայի պահպանում", "Энергия топлива; закон сохранения энергии в тепловых процессах"],
-        ["melting-solidification", "Melting and solidification", "Հալում և պնդացում", "Плавление и отвердевание"],
-        ["vaporisation-condensation", "Evaporation, boiling, condensation; humidity", "Գոլորշիացում, եռում, խտացում, խոնավություն", "Испарение, кипение, конденсация; влажность"],
-        ["heat-engines", "Heat engines and efficiency", "Ջերմային շարժիչներ և ՕԳԳ", "Тепловые двигатели и КПД"],
-      ]),
-      unit(t("Electric phenomena", "Էլեկտրական երևույթներ", "Электрические явления"), t("Charge, electric field, current, voltage, resistance, Ohm's law, circuits, work and power.", "Լիցք, էլեկտրական դաշտ, հոսանք, լարում, դիմադրություն, Օհմի օրենք, շղթաներ, աշխատանք և հզորություն։", "Заряд, электрическое поле, ток, напряжение, сопротивление, закон Ома, цепи, работа и мощность."), [
-        ["electrisation", "Electrisation; two kinds of charge", "Էլեկտրականացում, լիցքի երկու տեսակ", "Электризация тел; два рода зарядов"],
-        ["electric-field-atom", "Electric field; structure of the atom", "Էլեկտրական դաշտ, ատոմի կառուցվածք", "Электрическое поле; строение атома"],
-        ["electric-current", "Electric current; sources; circuit", "Էլեկտրական հոսանք, աղբյուրներ, շղթա", "Электрический ток; источники; электрическая цепь"],
-        ["current-strength", "Current strength; ammeter", "Հոսանքի ուժ, ամպերաչափ", "Сила тока; амперметр"],
-        ["voltage", "Voltage; voltmeter", "Լարում, վոլտաչափ", "Напряжение; вольтметр"],
-        ["resistance-ohms-law", "Resistance; Ohm's law", "Դիմադրություն, Օհմի օրենք", "Сопротивление; закон Ома"],
-        ["resistivity-rheostat", "Resistivity; rheostats", "Տեսակարար դիմադրություն, ռեոստատ", "Удельное сопротивление; реостаты"],
-        ["series-parallel", "Series and parallel connection", "Հաջորդական և զուգահեռ միացում", "Последовательное и параллельное соединение"],
-        ["electric-work-power", "Work and power of current; Joule–Lenz law", "Հոսանքի աշխատանք և հզորություն, Ջոուլ–Լենցի օրենք", "Работа и мощность тока; закон Джоуля–Ленца"],
-        ["safety-short-circuit", "Fuses, short circuits and electrical safety", "Ապահովիչներ, կարճ միացում, անվտանգություն", "Предохранители, короткое замыкание и безопасность"],
-      ]),
-      unit(t("Electromagnetic phenomena", "Էլեկտրամագնիսական երևույթներ", "Электромагнитные явления"), t("Magnetic field of a current, electromagnets, permanent magnets, Earth's field, electric motor.", "Հոսանքի մագնիսական դաշտ, էլեկտրամագնիսներ, հաստատուն մագնիսներ, Երկրի դաշտ, էլեկտրաշարժիչ։", "Магнитное поле тока, электромагниты, постоянные магниты, поле Земли, электродвигатель."), [
-        ["magnetic-field-current", "Magnetic field of a current; field lines", "Հոսանքի մագնիսական դաշտ, դաշտի գծեր", "Магнитное поле тока; магнитные линии"],
-        ["electromagnets", "Electromagnets and their uses", "Էլեկտրամագնիսներ և դրանց կիրառումը", "Электромагниты и их применение"],
-        ["permanent-magnets", "Permanent magnets; Earth's magnetic field", "Հաստատուն մագնիսներ, Երկրի մագնիսական դաշտ", "Постоянные магниты; магнитное поле Земли"],
-        ["electric-motor", "Force on a current; electric motor", "Հոսանքի վրա ազդող ուժ, էլեկտրաշարժիչ", "Действие поля на проводник с током; электродвигатель"],
-      ]),
-      unit(t("Light phenomena", "Լուսային երևույթներ", "Световые явления"), t("Sources of light, rectilinear propagation, reflection, mirrors, refraction, lenses, the eye.", "Լույսի աղբյուրներ, ուղղագիծ տարածում, անդրադարձում, հայելիներ, բեկում, ոսպնյակներ, աչք։", "Источники света, прямолинейное распространение, отражение, зеркала, преломление, линзы, глаз."), [
-        ["light-sources-propagation", "Light sources; rectilinear propagation; eclipses", "Լույսի աղբյուրներ, ուղղագիծ տարածում, խավարումներ", "Источники света; прямолинейное распространение; затмения"],
-        ["reflection-mirrors", "Reflection of light; plane mirror", "Լույսի անդրադարձում, հարթ հայելի", "Отражение света; плоское зеркало"],
-        ["refraction", "Refraction of light", "Լույսի բեկում", "Преломление света"],
-        ["lenses", "Lenses; focal length; optical power", "Ոսպնյակներ, կիզակետային հեռավորություն, օպտիկական ուժ", "Линзы; фокусное расстояние; оптическая сила"],
-        ["lens-images", "Images formed by lenses", "Ոսպնյակով ստացվող պատկերներ", "Изображения, даваемые линзой"],
-        ["eye-vision", "The eye and vision; glasses", "Աչք և տեսողություն, ակնոց", "Глаз и зрение; очки"],
-      ]),
-    ],
-  },
+  physicsGrade8,
   {
     subject: "physics",
     grade: 9,
