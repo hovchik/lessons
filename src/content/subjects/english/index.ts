@@ -6,6 +6,7 @@ import { englishGrade4 } from "./grade-4";
 import { englishGrade5 } from "./grade-5";
 import { englishGrade6 } from "./grade-6";
 import { englishGrade7 } from "./grade-7";
+import { englishGrade8 } from "./grade-8";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -18,46 +19,7 @@ export const english: CourseSeed[] = [
 
   englishGrade7,
 
-  course(
-    8,
-    ["Past perfect, second conditional, reported speech, modals of deduction, gerunds and infinitives; topics: communication, nature, science, jobs.", "Past perfect, երկրորդ պայմանական, անուղղակի խոսք, մոդալ բայեր ենթադրության համար, գերունդ և ինֆինիտիվ․ թեմաներ՝ հաղորդակցություն, բնություն, գիտություն, մասնագիտություններ։", "Past perfect, второй тип условных, косвенная речь, модальные глаголы предположения, герундий и инфинитив; темы: общение, природа, наука, профессии."],
-    ["Armenia grade 8 (3 h/week): A2+; topics: communication and social media, Armenian nature and ecology, science and inventions, choosing a profession; grammar: past perfect, reported speech, second conditional, gerund/infinitive.", "Հայաստան, 8-րդ դասարան (3 ժ/շաբ.)՝ A2+․ թեմաներ՝ հաղորդակցություն և սոցիալական մեդիա, Հայաստանի բնություն և էկոլոգիա, գիտություն և գյուտեր, մասնագիտության ընտրություն․ քերականություն՝ past perfect, անուղղակի խոսք, 2-րդ պայմանական, գերունդ/ինֆինիտիվ։", "Армения, 8 класс (3 ч/нед.): A2+; темы — общение и соцсети, природа и экология Армении, наука и изобретения, выбор профессии; грамматика — past perfect, косвенная речь, второй тип условных, герундий/инфинитив."],
-    ["Russia grade 8 (3 h/week): past perfect, past perfect continuous (intro), second conditional, reported statements and questions, modals of deduction (must/may/can't), gerund vs infinitive, -ing forms after prepositions, question tags, socialising, food and shopping, great minds, nature.", "Ռուսաստան, 8-րդ դասարան (3 ժ/շաբ.)՝ past perfect, past perfect continuous (ներածություն), 2-րդ պայմանական, անուղղակի խոսք, must/may/can't ենթադրություն, գերունդ vs ինֆինիտիվ, question tags, շփում, սնունդ և գնումներ, մեծ մտքեր, բնություն։", "Россия, 8 класс (3 ч/нед.): past perfect, past perfect continuous (введение), второй тип условных, косвенная речь (утверждения и вопросы), модальные предположения must/may/can't, герундий и инфинитив, разделительные вопросы, общение, еда и покупки, великие умы, природа."],
-    { armenia: 3, russia: 3 },
-    [
-      unit(t("Socialising", "Շփում", "Общение"), t("Character and relationships, question tags, present tenses review, body language.", "Բնավորություն և հարաբերություններ, question tags, ներկա ժամանակների կրկնություն, մարմնի լեզու։", "Характер и отношения, разделительные вопросы, повторение настоящих времён, язык тела."), [
-        ["character-relationships", "Character and relationships", "Բնավորություն և հարաբերություններ", "Характер и отношения"],
-        ["question-tags", "It's cold, isn't it? Question tags", "It's cold, isn't it? Question tags", "It's cold, isn't it? Разделительные вопросы"],
-        ["present-tenses-review", "Present simple, continuous, perfect: review", "Present simple, continuous, perfect․ կրկնություն", "Present simple, continuous, perfect: повторение"],
-        ["social-media", "Social media: for and against", "Սոցիալական մեդիա․ կողմ և դեմ", "Соцсети: за и против"],
-      ]),
-      unit(t("Before that happened", "Մինչ այդ", "До того как это случилось"), t("Past perfect, narrative tenses, a story from history.", "Past perfect, պատմողական ժամանակներ, պատմություն պատմությունից։", "Past perfect, повествовательные времена, рассказ из истории."), [
-        ["past-perfect", "Past perfect: she had already left", "Past perfect․ she had already left", "Past perfect: she had already left"],
-        ["narrative-tenses", "Narrative tenses together", "Պատմողական ժամանակները միասին", "Повествовательные времена вместе"],
-        ["history-story", "A moment in history", "Պահ պատմության մեջ", "Момент в истории"],
-      ]),
-      unit(t("Great minds", "Մեծ մտքեր", "Великие умы"), t("Science and inventions, reported speech, modals of deduction.", "Գիտություն և գյուտեր, անուղղակի խոսք, մոդալ բայեր ենթադրության համար։", "Наука и изобретения, косвенная речь, модальные глаголы предположения."), [
-        ["inventions", "Inventions that changed the world", "Աշխարհը փոխած գյուտեր", "Изобретения, изменившие мир"],
-        ["reported-statements", "He said that…: reported statements", "He said that…․ անուղղակի խոսք", "He said that…: косвенные утверждения"],
-        ["reported-questions", "She asked if…: reported questions", "She asked if…․ անուղղակի հարցեր", "She asked if…: косвенные вопросы"],
-        ["modals-deduction", "It must be… / It can't be…: deduction", "It must be… / It can't be…․ ենթադրություն", "It must be… / It can't be…: предположение"],
-        ["armenian-russian-scientists", "Scientists of Armenia and Russia", "Հայաստանի և Ռուսաստանի գիտնականներ", "Учёные Армении и России"],
-      ]),
-      unit(t("If I were you", "Եթե ես քո տեղը լինեի", "Если бы я был на твоём месте"), t("Second conditional, wishes, gerund and infinitive, giving advice.", "Երկրորդ պայմանական, ցանկություններ, գերունդ և ինֆինիտիվ, խորհուրդ։", "Второй тип условных, желания, герундий и инфинитив, советы."), [
-        ["second-conditional", "If I had a million…: second conditional", "If I had a million…․ 2-րդ պայմանական", "If I had a million…: второй тип условных"],
-        ["i-wish", "I wish I could…", "I wish I could…", "I wish I could…"],
-        ["gerund-infinitive", "Enjoy doing, want to do: gerund or infinitive", "Enjoy doing, want to do․ գերունդ կամ ինֆինիտիվ", "Enjoy doing, want to do: герундий или инфинитив"],
-        ["problem-solving-dialogues", "Dialogues: problems and advice", "Երկխոսություններ․ խնդիրներ և խորհուրդ", "Диалоги: проблемы и советы"],
-      ]),
-      unit(t("Nature and the future of work", "Բնություն և աշխատանքի ապագա", "Природа и будущее работы"), t("Natural disasters, ecology of Armenia and Russia, jobs of the future, a CV.", "Բնական աղետներ, Հայաստանի և Ռուսաստանի էկոլոգիա, ապագայի մասնագիտություններ, CV։", "Природные катастрофы, экология Армении и России, профессии будущего, резюме."), [
-        ["natural-disasters", "Natural disasters", "Բնական աղետներ", "Природные катастрофы"],
-        ["lake-sevan-baikal", "Lake Sevan and Lake Baikal: protecting nature", "Սևանա լիճ և Բայկալ․ բնության պահպանություն", "Озеро Севан и Байкал: охрана природы"],
-        ["jobs-of-future", "Jobs of the future", "Ապագայի մասնագիտություններ", "Профессии будущего"],
-        ["writing-cv", "Writing a simple CV", "Պարզ CV գրել", "Пишем простое резюме"],
-        ["year-8-review", "Review and reading exam practice", "Ամփոփում և ընթերցանության քննության պատրաստություն", "Повторение и подготовка к экзамену по чтению"],
-      ]),
-    ],
-  ),
+  englishGrade8,
 
   course(
     9,
