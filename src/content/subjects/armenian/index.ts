@@ -7,6 +7,7 @@ import { armenianGrade4 } from "./grade-4";
 import { armenianGrade5 } from "./grade-5";
 import { armenianGrade6 } from "./grade-6";
 import { armenianGrade7 } from "./grade-7";
+import { armenianGrade8 } from "./grade-8";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -16,46 +17,8 @@ export const armenian: CourseSeed[] = [
   armenianGrade5,
   armenianGrade6,
   armenianGrade7,
-  course(
-    8,
-    ["Syntax of the simple sentence; literature — Armenian prose and poetry of the 19th–20th centuries and Shakespeare.", "Պարզ նախադասության շարահյուսություն, գրականություն՝ 19–20-րդ դարերի հայ արձակ և պոեզիա, Շեքսպիր։", "Синтаксис простого предложения; литература — армянская проза и поэзия XIX–XX веков и Шекспир."],
-    ["Armenia grade 8: «Հայոց լեզու» (2–3 h) + «Գրականություն» (2 h). Language: phrase and sentence, sentence members, agreement, one-member sentences, homogeneous members, detached members, address, parenthetical words, punctuation. Literature: Raffi, Muratsan, Shirvanzade, Tumanyan's «Գիքոր» and «Թմկաբերդի առումը», Teryan, Charents, Bakunts, Shakespeare's «Romeo and Juliet».", "Հայաստան, 8-րդ դասարան՝ «Հայոց լեզու» (2–3 ժ) + «Գրականություն» (2 ժ)։ Լեզու՝ բառակապակցություն և նախադասություն, անդամներ, համաձայնություն, միակազմ նախադասություններ, համադաս անդամներ, տրոհված անդամներ, կոչական, միջանկյալ բառեր, կետադրություն։ Գրականություն՝ Րաֆֆի, Մուրացան, Շիրվանզադե, Թումանյանի «Գիքոր» և «Թմկաբերդի առումը», Տերյան, Չարենց, Բակունց, Շեքսպիրի «Ռոմեո և Ջուլիետ»։", "Армения, 8 класс: «Армянский язык» (2–3 ч) + «Литература» (2 ч). Язык: словосочетание и предложение, члены предложения, согласование, односоставные предложения, однородные и обособленные члены, обращение, вводные слова, пунктуация. Литература: Раффи, Мурацан, Ширванзаде, «Гикор» и «Взятие Тмкаберда» Туманяна, Терьян, Чаренц, Бакунц, «Ромео и Джульетта» Шекспира."],
-    ruNote,
-    { armenia: 4, russia: null },
-    [
-      unit(t("Phrase and sentence", "Բառակապակցություն և նախադասություն", "Словосочетание и предложение"), t("Types of phrases, agreement and government, main members, predicate types.", "Բառակապակցության տեսակներ, համաձայնություն և խնդրառություն, գլխավոր անդամներ, ստորոգյալի տեսակներ։", "Типы словосочетаний, согласование и управление, главные члены, типы сказуемого."), [
-        ["phrase-types", "Phrases: types and connections", "Բառակապակցություն․ տեսակներ և կապեր", "Словосочетание: типы и связи"],
-        ["subject-types", "The subject and its expression", "Ենթական և նրա արտահայտությունը", "Подлежащее и способы его выражения"],
-        ["predicate-types", "Simple and compound predicate", "Պարզ և բաղադրյալ ստորոգյալ", "Простое и составное сказуемое"],
-        ["agreement", "Agreement of subject and predicate", "Ենթակայի և ստորոգյալի համաձայնությունը", "Согласование подлежащего и сказуемого"],
-      ]),
-      unit(t("Secondary members", "Երկրորդական անդամներ", "Второстепенные члены"), t("Object, attribute, adverbial modifier; one-member and incomplete sentences.", "Խնդիր, որոշիչ, պարագա, միակազմ և թերի նախադասություններ։", "Дополнение, определение, обстоятельство; односоставные и неполные предложения."), [
-        ["object", "Direct and indirect object", "Ուղիղ և անուղղակի խնդիր", "Прямое и косвенное дополнение"],
-        ["attribute-apposition", "Attribute and apposition", "Որոշիչ և բացահայտիչ", "Определение и приложение"],
-        ["adverbial-modifiers", "Adverbial modifiers", "Պարագաներ", "Обстоятельства"],
-        ["one-member-sentences", "One-member and incomplete sentences", "Միակազմ և թերի նախադասություններ", "Односоставные и неполные предложения"],
-      ]),
-      unit(t("Complicated simple sentence", "Բարդացված պարզ նախադասություն", "Осложнённое простое предложение"), t("Homogeneous members, detached members, address, parenthetical words, punctuation rules.", "Համադաս անդամներ, տրոհված անդամներ, կոչական, միջանկյալ բառեր, կետադրական կանոններ։", "Однородные члены, обособленные члены, обращение, вводные слова, правила пунктуации."), [
-        ["homogeneous-8", "Homogeneous members and generalising words", "Համադաս անդամներ և ընդհանրացնող բառեր", "Однородные члены и обобщающие слова"],
-        ["detached-members", "Detached members", "Տրոհված անդամներ", "Обособленные члены"],
-        ["address-parenthetical", "Address and parenthetical words", "Կոչական և միջանկյալ բառեր", "Обращение и вводные слова"],
-        ["punctuation-simple", "Punctuation of the simple sentence: review", "Պարզ նախադասության կետադրություն․ ամփոփում", "Пунктуация простого предложения: обзор"],
-      ]),
-      unit(t("Literature: prose", "Գրականություն․ արձակ", "Литература: проза"), t("Raffi, Muratsan, Shirvanzade, Tumanyan's «Գիքոր», Bakunts.", "Րաֆֆի, Մուրացան, Շիրվանզադե, Թումանյանի «Գիքոր», Բակունց։", "Раффи, Мурацан, Ширванзаде, «Гикор» Туманяна, Бакунц."), [
-        ["raffi-khent", "Raffi: «Խենթը» (excerpts)", "Րաֆֆի․ «Խենթը» (հատվածներ)", "Раффи: «Хент» (отрывки)"],
-        ["muratsan", "Muratsan: «Գևորգ Մարզպետունի» (excerpts)", "Մուրացան․ «Գևորգ Մարզպետունի» (հատվածներ)", "Мурацан: «Геворг Марзпетуни» (отрывки)"],
-        ["gikor-8", "Tumanyan: «Գիքոր» in full", "Թումանյան․ «Գիքոր» ամբողջությամբ", "Туманян: «Гикор» полностью"],
-        ["shirvanzade", "Shirvanzade: «Պատվի համար»", "Շիրվանզադե․ «Պատվի համար»", "Ширванзаде: «Ради чести»"],
-        ["bakunts", "Aksel Bakunts: «Ալպիական մանուշակ»", "Ակսել Բակունց․ «Ալպիական մանուշակ»", "Аксель Бакунц: «Альпийская фиалка»"],
-      ]),
-      unit(t("Literature: poetry and drama", "Գրականություն․ պոեզիա և դրամա", "Литература: поэзия и драма"), t("Tumanyan's «Թմկաբերդի առումը», Teryan, Charents, Shakespeare's «Romeo and Juliet».", "Թումանյանի «Թմկաբերդի առումը», Տերյան, Չարենց, Շեքսպիրի «Ռոմեո և Ջուլիետ»։", "«Взятие Тмкаберда» Туманяна, Терьян, Чаренц, «Ромео и Джульетта» Шекспира."), [
-        ["tmkaberd", "Tumanyan: «Թմկաբերդի առումը»", "Թումանյան․ «Թմկաբերդի առումը»", "Туманян: «Взятие Тмкаберда»"],
-        ["teryan", "Vahan Teryan: «Մթնշաղի անուրջներ»", "Վահան Տերյան․ «Մթնշաղի անուրջներ»", "Ваан Терьян: «Грёзы сумерек»"],
-        ["charents-8", "Charents: poems and «Դանթեական առասպել»", "Չարենց․ բանաստեղծություններ և «Դանթեական առասպել»", "Чаренц: стихи и «Дантова легенда»"],
-        ["romeo-juliet", "Shakespeare: «Romeo and Juliet» (Masehyan translation)", "Շեքսպիր․ «Ռոմեո և Ջուլիետ» (Մասեհյանի թարգմանություն)", "Шекспир: «Ромео и Джульетта» (перевод Масеяна)"],
-      ]),
-    ],
-  ),
+  armenianGrade8,
+
   course(
     9,
     ["Syntax of the complex sentence, text and style; literature overview from folklore to the present; grade 9 state exam preparation.", "Բարդ նախադասության շարահյուսություն, տեքստ և ոճ, գրականության ընդհանուր ակնարկ բանահյուսությունից մինչև մեր օրերը, 9-րդ դասարանի պետական քննության նախապատրաստություն։", "Синтаксис сложного предложения, текст и стиль; обзор литературы от фольклора до наших дней; подготовка к государственному экзамену за 9 класс."],
