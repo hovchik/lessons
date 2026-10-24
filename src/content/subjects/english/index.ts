@@ -8,6 +8,7 @@ import { englishGrade6 } from "./grade-6";
 import { englishGrade7 } from "./grade-7";
 import { englishGrade8 } from "./grade-8";
 import { englishGrade9 } from "./grade-9";
+import { englishGrade10 } from "./grade-10";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -23,41 +24,7 @@ export const english: CourseSeed[] = [
   englishGrade8,
 
   englishGrade9,
-  course(
-    10,
-    ["Upper-secondary B1+: future perfect and continuous, inversion (intro), advanced passive and reporting, collocations and idioms; topics: identity, media literacy, science and technology, travel.", "Ավագ դպրոց B1+․ future perfect և continuous, շրջադասություն (ներածություն), բարդ կրավորական և անուղղակի խոսք, բառակապակցություններ և դարձվածքներ․ թեմաներ՝ ինքնություն, մեդիագրագիտություն, գիտություն և տեխնոլոգիաներ, ճանապարհորդություն։", "Старшая школа B1+: future perfect и continuous, инверсия (введение), сложный пассив и косвенная речь, коллокации и идиомы; темы: идентичность, медиаграмотность, наука и технологии, путешествия."],
-    ["Armenia grade 10 (3–4 h/week; up to 6 in humanities streams): start of high school, target B1+→B2 by grade 12. Topics: identity and values, Armenian diaspora, media, science; essay types and formal register are introduced.", "Հայաստան, 10-րդ դասարան (3–4 ժ/շաբ., հումանիտար հոսքում մինչև 6)՝ ավագ դպրոցի սկիզբ, նպատակ B1+→B2 մինչև 12-րդ դասարան։ Թեմաներ՝ ինքնություն և արժեքներ, հայկական սփյուռք, մեդիա, գիտություն․ ներմուծվում են էսսեի տեսակները և պաշտոնական ոճը։", "Армения, 10 класс (3–4 ч/нед., до 6 в гуманитарном потоке): начало старшей школы, цель B1+→B2 к 12 классу. Темы — идентичность и ценности, армянская диаспора, медиа, наука; вводятся типы эссе и официальный регистр."],
-    ["Russia grade 10 (3 h/week base, 5 h profile; ФГОС СОО): future forms incl. future perfect, perfect infinitives, advanced passive, inversion, linking devices, word formation, essay «for and against»; topics: relationships, lifestyle, schools and jobs, environment, holidays, technology.", "Ռուսաստան, 10-րդ դասարան (3 ժ/շաբ. բազային, 5 պրոֆիլ; ФГОС СОО)՝ ապառնի ձևեր ներառյալ future perfect, perfect ինֆինիտիվ, բարդ կրավորական, շրջադասություն, կապող բառեր, բառակազմություն, «կողմ և դեմ» էսսե․ թեմաներ՝ հարաբերություններ, ապրելակերպ, դպրոց և աշխատանք, միջավայր, տեխնոլոգիաներ։", "Россия, 10 класс (3 ч/нед. база, 5 ч профиль; ФГОС СОО): формы будущего, включая future perfect, перфектный инфинитив, сложный пассив, инверсия, средства связи, словообразование, эссе «за и против»; темы: отношения, образ жизни, школа и работа, экология, отпуск, технологии."],
-    { armenia: 4, russia: 3 },
-    [
-      unit(t("Who am I?", "Ո՞վ եմ ես", "Кто я?"), t("Identity, values, personality idioms, present and past tenses in depth.", "Ինքնություն, արժեքներ, բնավորության դարձվածքներ, ներկա և անցյալ ժամանակները խորությամբ։", "Идентичность, ценности, идиомы о характере, настоящие и прошедшие времена углублённо."), [
-        ["identity-values", "Identity and values", "Ինքնություն և արժեքներ", "Идентичность и ценности"],
-        ["personality-idioms", "Personality idioms and collocations", "Բնավորության դարձվածքներ և բառակապակցություններ", "Идиомы и коллокации о характере"],
-        ["tenses-in-depth", "Present and past tenses: fine distinctions", "Ներկա և անցյալ ժամանակներ․ նուրբ տարբերություններ", "Настоящие и прошедшие времена: тонкости"],
-        ["diaspora-multicultural", "Diaspora and multicultural societies", "Սփյուռք և բազմամշակութային հասարակություններ", "Диаспора и многокультурные общества"],
-      ]),
-      unit(t("Media literacy", "Մեդիագրագիտություն", "Медиаграмотность"), t("News and fake news, reporting verbs, advanced reported speech, linking devices.", "Նորություններ և կեղծ լուրեր, հաղորդող բայեր, բարդ անուղղակի խոսք, կապող բառեր։", "Новости и фейки, глаголы сообщения, сложная косвенная речь, средства связи."), [
-        ["news-fake-news", "News and fake news", "Նորություններ և կեղծ լուրեր", "Новости и фейки"],
-        ["reporting-verbs", "Reporting verbs: suggest, deny, admit", "Հաղորդող բայեր․ suggest, deny, admit", "Глаголы сообщения: suggest, deny, admit"],
-        ["linking-devices", "Linking devices: however, moreover, whereas", "Կապող բառեր․ however, moreover, whereas", "Средства связи: however, moreover, whereas"],
-        ["for-against-essay", "Essay: for and against", "Էսսե․ կողմ և դեմ", "Эссе: за и против"],
-      ]),
-      unit(t("Science and the future", "Գիտություն և ապագա", "Наука и будущее"), t("Future perfect and future continuous, predictions, AI and ethics.", "Future perfect և future continuous, կանխատեսումներ, ԱԲ և էթիկա։", "Future perfect и future continuous, прогнозы, ИИ и этика."), [
-        ["future-perfect-continuous", "By 2050 we will have…: future perfect and continuous", "By 2050 we will have…․ future perfect և continuous", "By 2050 we will have…: future perfect и continuous"],
-        ["predictions-probability", "Predictions and probability", "Կանխատեսումներ և հավանականություն", "Прогнозы и вероятность"],
-        ["ai-ethics", "Artificial intelligence: a debate", "Արհեստական բանականություն․ բանավեճ", "Искусственный интеллект: дебаты"],
-        ["word-formation-advanced", "Word formation: prefixes un-, dis-, mis-, over-", "Բառակազմություն․ un-, dis-, mis-, over- նախածանցներ", "Словообразование: приставки un-, dis-, mis-, over-"],
-      ]),
-      unit(t("Travel and the world", "Ճանապարհորդություն և աշխարհ", "Путешествия и мир"), t("Tourism, inversion for emphasis, articles with geographical names, a travel blog.", "Տուրիզմ, շրջադասություն շեշտադրման համար, հոդեր աշխարհագրական անունների հետ, ուղեգրություն։", "Туризм, инверсия для эмфазы, артикли с географическими названиями, тревел-блог."), [
-        ["tourism-pros-cons", "Tourism: benefits and problems", "Տուրիզմ․ օգուտներ և խնդիրներ", "Туризм: польза и проблемы"],
-        ["inversion", "Never have I seen…: inversion", "Never have I seen…․ շրջադասություն", "Never have I seen…: инверсия"],
-        ["articles-geography", "Articles with geographical names", "Հոդերը աշխարհագրական անունների հետ", "Артикли с географическими названиями"],
-        ["travel-blog", "Writing a travel blog post", "Ուղեգրություն բլոգի համար", "Пишем пост в тревел-блог"],
-        ["year-10-review", "Review and listening exam practice", "Ամփոփում և լսողական քննության պրակտիկա", "Повторение и практика аудирования"],
-      ]),
-    ],
-  ),
-
+  englishGrade10,
   course(
     11,
     ["B2-level work: participle clauses, cleft sentences, subjunctive and modal perfects, academic vocabulary, exam formats (ЕГЭ, Armenian unified exam); topics: society, law, work, environment, arts.", "B2 մակարդակ․ դերբայական դարձվածներ, cleft նախադասություններ, ենթադրական եղանակ և modal perfect, ակադեմիական բառապաշար, քննական ձևաչափեր (ЕГЭ, միասնական քննություն)․ թեմաներ՝ հասարակություն, իրավունք, աշխատանք, միջավայր, արվեստ։", "Уровень B2: причастные обороты, расщеплённые предложения, сослагательное наклонение и modal perfect, академическая лексика, форматы экзаменов (ЕГЭ, армянский единый экзамен); темы: общество, право, работа, экология, искусство."],
