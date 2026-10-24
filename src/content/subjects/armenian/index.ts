@@ -6,6 +6,7 @@ import { armenianGrade3 } from "./grade-3";
 import { armenianGrade4 } from "./grade-4";
 import { armenianGrade5 } from "./grade-5";
 import { armenianGrade6 } from "./grade-6";
+import { armenianGrade7 } from "./grade-7";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -14,48 +15,7 @@ export const armenian: CourseSeed[] = [
   armenianGrade4,
   armenianGrade5,
   armenianGrade6,
-  course(
-    7,
-    ["Morphology part two: the verb system in full, adverb, function words; literature — Armenian medieval poetry and the 20th century.", "Ձևաբանություն, մաս երկրորդ՝ բայի համակարգն ամբողջությամբ, մակբայ, սպասարկու բառեր, գրականություն՝ հայ միջնադարյան պոեզիա և 20-րդ դար։", "Морфология, часть вторая: полная система глагола, наречие, служебные слова; литература — армянская средневековая поэзия и XX век."],
-    ["Armenia grade 7: «Հայոց լեզու» (3 h) + «Գրականություն» (2 h). Language: the verb (voice, aspect, tense, mood, participles), adverb, prepositions/postpositions, conjunctions, particles, interjections. Literature: Narekatsi, Kuchak, Sayat-Nova, Tumanyan's «Անուշ», Isahakyan, Charents, Shiraz, Sevak, world literature.", "Հայաստան, 7-րդ դասարան՝ «Հայոց լեզու» (3 ժ) + «Գրականություն» (2 ժ)։ Լեզու՝ բայ (սեռ, կերպ, ժամանակ, եղանակ, դերբայներ), մակբայ, կապ, շաղկապ, վերաբերական, ձայնարկություն։ Գրականություն՝ Նարեկացի, Քուչակ, Սայաթ-Նովա, Թումանյանի «Անուշ», Իսահակյան, Չարենց, Շիրազ, Սևակ, համաշխարհային գրականություն։", "Армения, 7 класс: «Армянский язык» (3 ч) + «Литература» (2 ч). Язык: глагол (залог, вид, время, наклонение, причастия), наречие, послелоги, союзы, частицы, междометия. Литература: Нарекаци, Кучак, Саят-Нова, «Ануш» Туманяна, Исаакян, Чаренц, Шираз, Севак, мировая литература."],
-    ruNote,
-    { armenia: 5, russia: null },
-    [
-      unit(t("Verb: forms and categories", "Բայ․ ձևեր և կարգեր", "Глагол: формы и категории"), t("Finite and non-finite forms, participles, voice, causative, aspect.", "Դիմավոր և անդեմ ձևեր, դերբայներ, սեռ, պատճառական, կերպ։", "Личные и неличные формы, причастия (дербаи), залог, каузатив, вид."), [
-        ["verb-overview", "The verb: finite and non-finite forms", "Բայ․ դիմավոր և անդեմ ձևեր", "Глагол: личные и неличные формы"],
-        ["participles", "The eight participles (դերբայներ)", "Ութ դերբայները", "Восемь причастных форм (дербаи)"],
-        ["voice", "Voice: active, passive, neuter; -վ-", "Սեռ․ ներգործական, կրավորական, չեզոք, -վ-", "Залог: действительный, страдательный, средний; -վ-"],
-        ["causative", "Causative verbs: -ցն-", "Պատճառական բայեր․ -ցն-", "Каузативные глаголы: -ցն-"],
-        ["aspect-tense-system", "The tense system: an overview", "Ժամանակների համակարգ․ ընդհանուր տեսք", "Система времён: обзор"],
-      ]),
-      unit(t("Verb: moods", "Բայ․ եղանակներ", "Глагол: наклонения"), t("Indicative, subjunctive, conditional, obligative, imperative; irregular verbs.", "Սահմանական, ըղձական, պայմանական, հարկադրական, հրամայական, անկանոն բայեր։", "Изъявительное, желательное, условное, долженствовательное, повелительное; неправильные глаголы."), [
-        ["indicative", "Indicative mood: all tenses", "Սահմանական եղանակ․ բոլոր ժամանակները", "Изъявительное наклонение: все времена"],
-        ["subjunctive", "Subjunctive (ըղձական)", "Ըղձական եղանակ", "Желательное наклонение"],
-        ["conditional", "Conditional (պայմանական): կ-", "Պայմանական եղանակ․ կ-", "Условное наклонение: կ-"],
-        ["obligative", "Obligative (հարկադրական): պիտի", "Հարկադրական եղանակ․ պիտի", "Долженствовательное наклонение: պիտի"],
-        ["irregular-verbs", "Irregular verbs: տալ, գալ, լինել, ուտել", "Անկանոն բայեր․ տալ, գալ, լինել, ուտել", "Неправильные глаголы: տալ, գալ, լինել, ուտել"],
-      ]),
-      unit(t("Adverb and function words", "Մակբայ և սպասարկու բառեր", "Наречие и служебные слова"), t("Adverb classes, postpositions, conjunctions, particles, interjections, spelling.", "Մակբայի տեսակներ, կապեր, շաղկապներ, վերաբերականներ, ձայնարկություններ, ուղղագրություն։", "Разряды наречий, послелоги, союзы, частицы, междометия, правописание."), [
-        ["adverb-classes", "Adverbs: classes and formation", "Մակբայ․ տեսակներ և կազմություն", "Наречие: разряды и образование"],
-        ["postpositions-7", "Postpositions and prepositions", "Կապեր․ նախադաս և հետադաս", "Послелоги и предлоги"],
-        ["conjunction-types", "Coordinating and subordinating conjunctions", "Համադասական և ստորադասական շաղկապներ", "Сочинительные и подчинительные союзы"],
-        ["particles-7", "Modal particles and interjections", "Վերաբերականներ և ձայնարկություններ", "Модальные частицы и междометия"],
-      ]),
-      unit(t("Literature: medieval poetry", "Գրականություն․ միջնադարյան պոեզիա", "Литература: средневековая поэзия"), t("Mesrop Mashtots and the Golden Age, Narekatsi, Frik, Kuchak, Sayat-Nova.", "Մեսրոպ Մաշտոց և Ոսկեդար, Նարեկացի, րիկ, Քուչակ, Սայաթ-Նովա։", "Месроп Маштоц и Золотой век, Нарекаци, Фрик, Кучак, Саят-Нова."), [
-        ["golden-age", "The Golden Age: Mashtots, Khorenatsi, Yeghishe", "Ոսկեդար․ Մաշտոց, Խորենացի, Եղիշե", "Золотой век: Маштоц, Хоренаци, Егише"],
-        ["narekatsi", "Grigor Narekatsi: «Մատյան ողբերգության» (excerpts)", "Գրիգոր Նարեկացի․ «Մատյան ողբերգության» (հատվածներ)", "Григор Нарекаци: «Книга скорбных песнопений» (отрывки)"],
-        ["kuchak-hayrens", "Nahapet Kuchak: hayrens", "Նահապետ Քուչակ․ հայրեններ", "Наапет Кучак: айрены"],
-        ["sayat-nova", "Sayat-Nova: songs", "Սայաթ-Նովա․ խաղեր", "Саят-Нова: песни"],
-      ]),
-      unit(t("Literature: the 20th century", "Գրականություն․ 20-րդ դար", "Литература: XX век"), t("Tumanyan's «Անուշ», Isahakyan, Charents, Shiraz, Sevak; world literature.", "Թումանյանի «Անուշ», Իսահակյան, Չարենց, Շիրազ, Սևակ, համաշխարհային գրականություն։", "«Ануш» Туманяна, Исаакян, Чаренц, Шираз, Севак; мировая литература."), [
-        ["anush", "Tumanyan: «Անուշ»", "Թումանյան․ «Անուշ»", "Туманян: «Ануш»"],
-        ["isahakyan-7", "Avetik Isahakyan: lyrics", "Ավետիք Իսահակյան․ քնարերգություն", "Аветик Исаакян: лирика"],
-        ["charents-7", "Yeghishe Charents: «Ես իմ անուշ Հայաստանի»", "Եղիշե Չարենց․ «Ես իմ անուշ Հայաստանի»", "Егише Чаренц: «Ես իմ անուշ Հայաստանի»"],
-        ["sevak-shiraz-7", "Sevak and Shiraz", "Սևակ և Շիրազ", "Севак и Шираз"],
-        ["world-lit-7", "World literature: Jack London, Chekhov", "Համաշխարհային գրականություն․ Ջեք Լոնդոն, Չեխով", "Мировая литература: Джек Лондон, Чехов"],
-      ]),
-    ],
-  ),
+  armenianGrade7,
   course(
     8,
     ["Syntax of the simple sentence; literature — Armenian prose and poetry of the 19th–20th centuries and Shakespeare.", "Պարզ նախադասության շարահյուսություն, գրականություն՝ 19–20-րդ դարերի հայ արձակ և պոեզիա, Շեքսպիր։", "Синтаксис простого предложения; литература — армянская проза и поэзия XIX–XX веков и Шекспир."],
