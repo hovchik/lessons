@@ -8,6 +8,7 @@ import { armenianGrade5 } from "./grade-5";
 import { armenianGrade6 } from "./grade-6";
 import { armenianGrade7 } from "./grade-7";
 import { armenianGrade8 } from "./grade-8";
+import { armenianGrade9 } from "./grade-9";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -19,48 +20,8 @@ export const armenian: CourseSeed[] = [
   armenianGrade7,
   armenianGrade8,
 
-  course(
-    9,
-    ["Syntax of the complex sentence, text and style; literature overview from folklore to the present; grade 9 state exam preparation.", "Բարդ նախադասության շարահյուսություն, տեքստ և ոճ, գրականության ընդհանուր ակնարկ բանահյուսությունից մինչև մեր օրերը, 9-րդ դասարանի պետական քննության նախապատրաստություն։", "Синтаксис сложного предложения, текст и стиль; обзор литературы от фольклора до наших дней; подготовка к государственному экзамену за 9 класс."],
-    ["Armenia grade 9: «Հայոց լեզու» (2 h) + «Գրականություն» (2 h). Language: compound and complex sentences, types of subordinate clauses, direct and indirect speech, text linguistics, functional styles, punctuation in full. Literature: Khorenatsi, Narekatsi, Sayat-Nova, Abovyan, Raffi, Tumanyan, Isahakyan, Teryan, Charents, Bakunts, Sevak, Shiraz, Mahari, Matevosyan. State exam in Armenian (20-point).", "Հայաստան, 9-րդ դասարան՝ «Հայոց լեզու» (2 ժ) + «Գրականություն» (2 ժ)։ Լեզու՝ բարդ համադասական և ստորադասական նախադասություններ, երկրորդական նախադասությունների տեսակները, ուղղակի և անուղղակի խոսք, տեքստի լեզվաբանություն, գործառական ոճեր, կետադրությունն ամբողջությամբ։ Գրականություն՝ Խորենացի, Նարեկացի, Սայաթ-Նովա, Աբովյան, Րաֆֆի, Թումանյան, Իսահակյան, Տերյան, Չարենց, Բակունց, Սևակ, Շիրազ, Մահարի, Մաթևոսյան։ Պետական քննություն (20-բալանոց)։", "Армения, 9 класс: «Армянский язык» (2 ч) + «Литература» (2 ч). Язык: сложносочинённые и сложноподчинённые предложения, типы придаточных, прямая и косвенная речь, лингвистика текста, функциональные стили, полная пунктуация. Литература: Хоренаци, Нарекаци, Саят-Нова, Абовян, Раффи, Туманян, Исаакян, Терьян, Чаренц, Бакунц, Севак, Шираз, Маари, Матевосян. Государственный экзамен (20 баллов)."],
-    ruNote,
-    { armenia: 4, russia: null },
-    [
-      unit(t("Compound sentence", "Բարդ համադասական նախադասություն", "Сложносочинённое предложение"), t("Coordination types, conjunctions, punctuation.", "Համադասության տեսակները, շաղկապներ, կետադրություն։", "Типы сочинения, союзы, пунктуация."), [
-        ["compound-sentence-types", "Compound sentences: copulative, adversative, disjunctive", "Համադասական նախադասություններ․ միավորիչ, ներհակական, տրոհական", "Сложносочинённые: соединительные, противительные, разделительные"],
-        ["compound-punctuation", "Punctuation in compound sentences", "Կետադրությունը բարդ համադասականում", "Пунктуация в сложносочинённом предложении"],
-      ]),
-      unit(t("Complex sentence", "Բարդ ստորադասական նախադասություն", "Сложноподчинённое предложение"), t("Main and subordinate clause, kinds of subordinate clauses, multi-clause sentences, direct and indirect speech.", "Գլխավոր և երկրորդական նախադասություն, երկրորդականի տեսակները, բազմաբաղադրիչ նախադասություններ, ուղղակի և անուղղակի խոսք։", "Главное и придаточное, виды придаточных, многочленные предложения, прямая и косвенная речь."), [
-        ["subordinate-clause-intro", "Main and subordinate clause; conjunctions and relative words", "Գլխավոր և երկրորդական նախադասություն, շաղկապներ և հարաբերական բառեր", "Главное и придаточное; союзы и относительные слова"],
-        ["subordinate-subject-predicate", "Subordinate subject and predicate clauses", "Ենթակա և ստորոգելիական երկրորդական նախադասություններ", "Придаточные подлежащные и сказуемные"],
-        ["subordinate-attributive-object", "Attributive and object clauses", "Որոշիչ և խնդիր երկրորդականներ", "Придаточные определительные и дополнительные"],
-        ["subordinate-adverbial", "Adverbial clauses: time, place, cause, purpose, condition, concession", "Պարագայական երկրորդականներ․ ժամանակի, տեղի, պատճառի, նպատակի, պայմանի, զիջման", "Придаточные обстоятельственные: времени, места, причины, цели, условия, уступки"],
-        ["multi-clause", "Sentences with several subordinate clauses", "Մի քանի երկրորդականով նախադասություններ", "Предложения с несколькими придаточными"],
-        ["direct-indirect-speech", "Direct and indirect speech; citation", "Ուղղակի և անուղղակի խոսք, մեջբերում", "Прямая и косвенная речь; цитирование"],
-      ]),
-      unit(t("Text and style", "Տեքստ և ոճ", "Текст и стиль"), t("Text cohesion, functional styles, genres of writing, essay and argument.", "Տեքստի կապակցվածություն, գործառական ոճեր, գրավոր ժանրեր, շարադրություն և փաստարկում։", "Связность текста, функциональные стили, жанры письма, сочинение и аргументация."), [
-        ["text-cohesion", "Text: theme, idea, cohesion", "Տեքստ․ թեմա, գաղափար, կապակցվածություն", "Текст: тема, идея, связность"],
-        ["functional-styles", "Functional styles of Armenian", "Հայերենի գործառական ոճերը", "Функциональные стили армянского языка"],
-        ["official-style", "Official documents: application, CV, letter", "Գործնական գրություններ․ դիմում, ինքնակենսագրություն, նամակ", "Деловые бумаги: заявление, автобиография, письмо"],
-        ["argumentative-essay", "Argumentative essay", "Փաստարկված շարադրություն", "Сочинение-рассуждение"],
-        ["punctuation-full-review", "Punctuation: full review", "Կետադրություն․ ամբողջական ամփոփում", "Пунктуация: полный обзор"],
-      ]),
-      unit(t("Literature: from the origins to the 19th century", "Գրականություն․ սկզբնաղբյուրներից մինչև 19-րդ դար", "Литература: от истоков до XIX века"), t("Khorenatsi, Narekatsi, Kuchak, Sayat-Nova, Abovyan, Raffi, Nalbandian.", "Խորենացի, Նարեկացի, Քուչակ, Սայաթ-Նովա, Աբովյան, Րաֆֆի, Նալբանդյան։", "Хоренаци, Нарекаци, Кучак, Саят-Нова, Абовян, Раффи, Налбандян."), [
-        ["khorenatsi", "Movses Khorenatsi: «History of Armenia» (excerpts)", "Մովսես Խորենացի․ «Հայոց պատմություն» (հատվածներ)", "Мовсес Хоренаци: «История Армении» (отрывки)"],
-        ["narekatsi-9", "Narekatsi: the lyric self", "Նարեկացի․ քնարական ես-ը", "Нарекаци: лирическое «я»"],
-        ["abovyan-9", "Abovyan and the birth of modern Armenian literature", "Աբովյանը և նոր հայ գրականության ծնունդը", "Абовян и рождение новой армянской литературы"],
-        ["nalbandian", "Mikael Nalbandian: «Ազատություն»", "Միքայել Նալբանդյան․ «Ազատություն»", "Микаэл Налбандян: «Свобода»"],
-        ["raffi-9", "Raffi: the historical novel", "Րաֆֆի․ պատմական վեպ", "Раффи: исторический роман"],
-      ]),
-      unit(t("Literature: the 20th century and exam review", "Գրականություն․ 20-րդ դար և քննական ամփոփում", "Литература: XX век и подготовка к экзамену"), t("Tumanyan, Isahakyan, Teryan, Charents, Bakunts, Sevak, Shiraz, Mahari, Matevosyan; exam preparation.", "Թումանյան, Իսահակյան, Տերյան, Չարենց, Բակունց, Սևակ, Շիրազ, Մահարի, Մաթևոսյան, քննության նախապատրաստություն։", "Туманян, Исаакян, Терьян, Чаренц, Бакунц, Севак, Шираз, Маари, Матевосян; подготовка к экзамену."), [
-        ["tumanyan-9", "Tumanyan: poems, legends, «Սասունցի Դավիթ»", "Թումանյան․ պոեմներ, լեգենդներ, «Սասունցի Դավիթ»", "Туманян: поэмы, легенды, «Давид Сасунский»"],
-        ["charents-9", "Charents: «Գիրք ճանապարհի»", "Չարենց․ «Գիրք ճանապարհի»", "Чаренц: «Книга пути»"],
-        ["sevak-9", "Paruyr Sevak: «Անլռելի զանգակատուն»", "Պարույր Սևակ․ «Անլռելի զանգակատուն»", "Паруйр Севак: «Несмолкающая колокольня»"],
-        ["mahari-matevosyan", "Gurgen Mahari and Hrant Matevosyan", "Գուրգեն Մահարի և Հրանտ Մաթևոսյան", "Гурген Маари и Грант Матевосян"],
-        ["exam-9-armenian", "Grade 9 exam: structure and practice", "9-րդ դասարանի քննություն․ կառուցվածք և վարժանք", "Экзамен за 9 класс: структура и практика"],
-      ]),
-    ],
-  ),
+  armenianGrade9,
+
   course(
     10,
     ["High school: history of the Armenian language, phonetics and lexicology at an advanced level, stylistics; literature of the 5th–18th centuries.", "Ավագ դպրոց՝ հայոց լեզվի պատմություն, հնչյունաբանություն և բառագիտություն խորացված, ոճաբանություն, 5–18-րդ դարերի գրականություն։", "Старшая школа: история армянского языка, фонетика и лексикология на углублённом уровне, стилистика; литература V–XVIII веков."],
