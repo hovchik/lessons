@@ -3,53 +3,14 @@ import { course } from "./shared";
 import { englishGrade3 } from "./grade-3";
 import { englishGrade2 } from "./grade-2";
 import { englishGrade4 } from "./grade-4";
+import { englishGrade5 } from "./grade-5";
 
 export const english: CourseSeed[] = [
   englishGrade2,
   englishGrade3,
   englishGrade4,
 
-  course(
-    5,
-    ["Moving to secondary school: consolidating present and past tenses, irregular verbs, comparatives and superlatives, countries, travel and the English-speaking world.", "Անցում միջին դպրոց․ ներկա և անցյալ ժամանակների ամրապնդում, անկանոն բայեր, համեմատական և գերադրական աստիճան, երկրներ, ճանապարհորդություն, անգլախոս աշխարհ։", "Переход в основную школу: закрепление настоящих и прошедших времён, неправильные глаголы, степени сравнения, страны, путешествия, англоязычный мир."],
-    ["Armenia grade 5 (3 h/week in middle school): start of the basic stage; 10-point marking begins. Standard aims towards A1+/A2 by grade 9: communicative topics (family, school, hobbies, Armenia and the UK), systematic grammar and a first project.", "Հայաստան, 5-րդ դասարան (3 ժ/շաբ. միջին դպրոցում)՝ հիմնական աստիճանի սկիզբ, սկսվում է 10 բալանոց գնահատումը։ Նպատակ՝ A1+/A2 մինչև 9-րդ դասարան․ հաղորդակցական թեմաներ (ընտանիք, դպրոց, հոբբի, Հայաստան և Մեծ Բրիտանիա), համակարգված քերականություն։", "Армения, 5 класс (3 ч/нед. в средней школе): начало основной ступени; вводится 10-балльная шкала. Цель — A1+/A2 к 9 классу: коммуникативные темы (семья, школа, хобби, Армения и Великобритания), систематическая грамматика, первый проект."],
-    ["Russia grade 5 (3 h/week, ФГОС ООО): present simple/continuous, past simple with irregular verbs, future simple, degrees of comparison, modal verbs can/must/should, articles, countries and nationalities, English-speaking countries, school life, famous people.", "Ռուսաստան, 5-րդ դասարան (3 ժ/շաբ., ФГОС ООО)՝ present simple/continuous, past simple անկանոն բայերով, future simple, համեմատության աստիճաններ, can/must/should, հոդեր, երկրներ և ազգություններ, անգլախոս երկրներ, դպրոցական կյանք։", "Россия, 5 класс (3 ч/нед., ФГОС ООО): present simple/continuous, past simple с неправильными глаголами, future simple, степени сравнения, модальные can/must/should, артикли, страны и национальности, англоязычные страны, школьная жизнь."],
-    { armenia: 3, russia: 3 },
-    [
-      unit(t("Welcome to secondary school", "Բարի գալուստ միջին դպրոց", "Добро пожаловать в среднюю школу"), t("School subjects and timetable, present simple review, question words.", "Առարկաներ և դասացուցակ, present simple-ի կրկնություն, հարցական բառեր։", "Школьные предметы и расписание, повторение present simple, вопросительные слова."), [
-        ["school-subjects", "School subjects and timetable", "Դպրոցական առարկաներ և դասացուցակ", "Школьные предметы и расписание"],
-        ["question-words", "Who, what, where, when, why, how", "Who, what, where, when, why, how", "Who, what, where, when, why, how"],
-        ["present-simple-review", "Present simple: all forms", "Present simple․ բոլոր ձևերը", "Present simple: все формы"],
-        ["articles-a-an-the", "Articles a, an, the", "a, an, the հոդերը", "Артикли a, an, the"],
-      ]),
-      unit(t("Countries and people", "Երկրներ և մարդիկ", "Страны и люди"), t("Countries, nationalities, languages; the UK and the USA; Armenia and Russia in English.", "Երկրներ, ազգություններ, լեզուներ, Մեծ Բրիտանիա և ԱՄՆ, Հայաստան և Ռուսաստան անգլերենով։", "Страны, национальности, языки; Великобритания и США; Армения и Россия по-английски."), [
-        ["countries-nationalities", "Countries and nationalities", "Երկրներ և ազգություններ", "Страны и национальности"],
-        ["english-speaking-world", "The English-speaking world", "Անգլախոս աշխարհը", "Англоязычный мир"],
-        ["my-country", "Project: my country in English", "Նախագիծ․ իմ երկիրը անգլերենով", "Проект: моя страна по-английски"],
-        ["comparatives", "Bigger, smaller, more beautiful: comparatives", "Bigger, smaller, more beautiful․ համեմատական", "Bigger, smaller, more beautiful: сравнительная степень"],
-        ["superlatives", "The biggest in the world: superlatives", "The biggest in the world․ գերադրական", "The biggest in the world: превосходная степень"],
-      ]),
-      unit(t("Stories from the past", "Պատմություններ անցյալից", "Истории из прошлого"), t("Past simple with irregular verbs, time expressions, telling a story.", "Past simple անկանոն բայերով, ժամանակի արտահայտություններ, պատմություն պատմել։", "Past simple с неправильными глаголами, обстоятельства времени, рассказ."), [
-        ["irregular-verbs-1", "Irregular verbs: go–went, see–saw, have–had", "Անկանոն բայեր․ go–went, see–saw, have–had", "Неправильные глаголы: go–went, see–saw, have–had"],
-        ["past-questions", "Did you…? Past simple questions", "Did you…? Past simple հարցեր", "Did you…? Вопросы в past simple"],
-        ["last-weekend", "Last weekend: telling what happened", "Անցյալ հանգստյան օրերը․ պատմում ենք", "В прошлые выходные: рассказываем"],
-        ["famous-people", "Famous people of the past", "Անցյալի հայտնի մարդիկ", "Знаменитые люди прошлого"],
-      ]),
-      unit(t("Rules and plans", "Կանոններ և ծրագրեր", "Правила и планы"), t("Must/mustn't, should, future with «will» and «going to».", "Must/mustn't, should, ապառնի «will» և «going to»։", "Must/mustn't, should, будущее с «will» и «going to»."), [
-        ["must-mustnt", "Must and mustn't: school rules", "Must և mustn't․ դպրոցի կանոնները", "Must и mustn't: школьные правила"],
-        ["should", "Should for advice", "Should՝ խորհուրդ տալու համար", "Should для совета"],
-        ["going-to", "I'm going to…: plans", "I'm going to…․ ծրագրեր", "I'm going to…: планы"],
-        ["will-vs-going-to", "Will or going to?", "Will կամ going to?", "Will или going to?"],
-      ]),
-      unit(t("Travel and the world around us", "Ճանապարհորդություն և շրջակա աշխարհ", "Путешествия и мир вокруг"), t("Transport, directions, animals and nature, a holiday postcard.", "Տրանսպորտ, ուղղություններ, կենդանիներ և բնություն, բացիկ արձակուրդից։", "Транспорт, направления, животные и природа, открытка с отдыха."), [
-        ["transport-travel", "Transport: by bus, by train, on foot", "Տրանսպորտ․ by bus, by train, on foot", "Транспорт: by bus, by train, on foot"],
-        ["giving-directions", "Turn left, go straight: directions", "Turn left, go straight․ ուղղություններ", "Turn left, go straight: как пройти"],
-        ["wild-animals", "Wild animals and where they live", "Վայրի կենդանիներ և նրանց բնակավայրերը", "Дикие животные и где они живут"],
-        ["postcard-writing", "Writing a postcard", "Բացիկ գրել", "Пишем открытку"],
-        ["year-5-review", "Review and project presentation", "Ամփոփում և նախագծի ներկայացում", "Повторение и презентация проекта"],
-      ]),
-    ],
-  ),
+  englishGrade5,
 
   course(
     6,
