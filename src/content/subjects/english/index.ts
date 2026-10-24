@@ -9,6 +9,7 @@ import { englishGrade7 } from "./grade-7";
 import { englishGrade8 } from "./grade-8";
 import { englishGrade9 } from "./grade-9";
 import { englishGrade10 } from "./grade-10";
+import { englishGrade11 } from "./grade-11";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -25,40 +26,7 @@ export const english: CourseSeed[] = [
 
   englishGrade9,
   englishGrade10,
-  course(
-    11,
-    ["B2-level work: participle clauses, cleft sentences, subjunctive and modal perfects, academic vocabulary, exam formats (ЕГЭ, Armenian unified exam); topics: society, law, work, environment, arts.", "B2 մակարդակ․ դերբայական դարձվածներ, cleft նախադասություններ, ենթադրական եղանակ և modal perfect, ակադեմիական բառապաշար, քննական ձևաչափեր (ЕГЭ, միասնական քննություն)․ թեմաներ՝ հասարակություն, իրավունք, աշխատանք, միջավայր, արվեստ։", "Уровень B2: причастные обороты, расщеплённые предложения, сослагательное наклонение и modal perfect, академическая лексика, форматы экзаменов (ЕГЭ, армянский единый экзамен); темы: общество, право, работа, экология, искусство."],
-    ["Armenia grade 11 (3–4 h/week): preparation for the unified entrance exam in English (grade 12). Reading comprehension, grammar transformation, vocabulary, and essay. Topics: human rights, work and money, environment, arts and leisure.", "Հայաստան, 11-րդ դասարան (3–4 ժ/շաբ.)՝ նախապատրաստություն անգլերենի միասնական քննությանը (12-րդ դասարան)․ ընթերցանություն, քերականական փոխակերպումներ, բառապաշար, էսսե։ Թեմաներ՝ մարդու իրավունքներ, աշխատանք և փող, միջավայր, արվեստ և հանգիստ։", "Армения, 11 класс (3–4 ч/нед.): подготовка к единому экзамену по английскому (12 класс). Понимание текста, грамматические трансформации, лексика, эссе. Темы: права человека, работа и деньги, экология, искусство и досуг."],
-    ["Russia grade 11 (3 h base / 5 h profile): final year; ЕГЭ по английскому — listening, reading, grammar and vocabulary, email (100–140 words), essay-project on a table/diagram (200–250 words), speaking (reading aloud, questions, interview, comparison of pictures). Grammar: all structures to B2.", "Ռուսաստան, 11-րդ դասարան (3 ժ բազային / 5 պրոֆիլ)՝ ավարտական տարի․ ЕГЭ անգլերեն՝ լսել, կարդալ, քերականություն և բառապաշար, էլ. նամակ (100–140 բառ), էսսե-նախագիծ աղյուսակի հիման վրա (200–250 բառ), բանավոր։ Քերականություն՝ բոլոր կառույցները մինչև B2։", "Россия, 11 класс (3 ч база / 5 ч профиль): выпускной год; ЕГЭ по английскому — аудирование, чтение, грамматика и лексика, электронное письмо (100–140 слов), эссе-проект по таблице/диаграмме (200–250 слов), говорение (чтение вслух, вопросы, интервью, сравнение картинок). Грамматика: все структуры до B2."],
-    { armenia: 4, russia: 3 },
-    [
-      unit(t("Society and the law", "Հասարակություն և իրավունք", "Общество и право"), t("Rights and responsibilities, modal perfects, participle clauses, formal register.", "Իրավունքներ և պարտականություններ, modal perfect, դերբայական դարձվածներ, պաշտոնական ոճ։", "Права и обязанности, modal perfect, причастные обороты, официальный регистр."), [
-        ["rights-responsibilities", "Rights and responsibilities", "Իրավունքներ և պարտականություններ", "Права и обязанности"],
-        ["modal-perfects", "You should have told me: modal perfects", "You should have told me․ modal perfect", "You should have told me: modal perfect"],
-        ["participle-clauses", "Having finished…: participle clauses", "Having finished…․ դերբայական դարձվածներ", "Having finished…: причастные обороты"],
-        ["formal-register", "Formal and informal register", "Պաշտոնական և ոչ պաշտոնական ոճ", "Официальный и неофициальный регистр"],
-      ]),
-      unit(t("Work and money", "Աշխատանք և փող", "Работа и деньги"), t("Job interviews, cleft sentences, emphasis, business email.", "Հարցազրույց աշխատանքի, cleft նախադասություններ, շեշտադրում, գործարար նամակ։", "Собеседование, расщеплённые предложения, эмфаза, деловое письмо."), [
-        ["job-interview", "The job interview", "Հարցազրույց աշխատանքի համար", "Собеседование"],
-        ["cleft-sentences", "What I need is…: cleft sentences", "What I need is…․ cleft նախադասություններ", "What I need is…: расщеплённые предложения"],
-        ["money-idioms", "Money idioms and collocations", "Փողի դարձվածքներ և բառակապակցություններ", "Идиомы и коллокации о деньгах"],
-        ["business-email", "Writing a business email", "Գործարար էլ. նամակ", "Деловое электронное письмо"],
-      ]),
-      unit(t("Our planet", "Մեր մոլորակը", "Наша планета"), t("Climate change, the subjunctive, «It is essential that…», describing graphs and tables.", "Կլիմայի փոփոխություն, ենթադրական եղանակ, «It is essential that…», գրաֆիկների և աղյուսակների նկարագրություն։", "Изменение климата, сослагательное наклонение, «It is essential that…», описание графиков и таблиц."), [
-        ["climate-change", "Climate change: causes and solutions", "Կլիմայի փոփոխություն․ պատճառներ և լուծումներ", "Изменение климата: причины и решения"],
-        ["subjunctive", "It is essential that he be…: the subjunctive", "It is essential that he be…․ ենթադրական եղանակ", "It is essential that he be…: сослагательное наклонение"],
-        ["describing-data", "Describing graphs, tables and trends", "Գրաֆիկներ, աղյուսակներ և միտումներ", "Описание графиков, таблиц и тенденций"],
-        ["essay-project", "Essay-project on a table or diagram", "Էսսե-նախագիծ աղյուսակի հիման վրա", "Эссе-проект по таблице или диаграмме"],
-      ]),
-      unit(t("Arts and leisure", "Արվեստ և հանգիստ", "Искусство и досуг"), t("Cinema, theatre and music, comparison of pictures (speaking), academic vocabulary.", "Կինո, թատրոն, երաժշտություն, նկարների համեմատություն (բանավոր), ակադեմիական բառապաշար։", "Кино, театр и музыка, сравнение картинок (говорение), академическая лексика."), [
-        ["cinema-theatre", "Cinema and theatre", "Կինո և թատրոն", "Кино и театр"],
-        ["comparing-pictures", "Speaking: comparing two pictures", "Բանավոր․ երկու նկարի համեմատություն", "Говорение: сравнение двух картинок"],
-        ["academic-vocabulary", "Academic word list in use", "Ակադեմիական բառապաշար գործնականում", "Академическая лексика в действии"],
-        ["grammar-transformations", "Grammar transformations (exam format)", "Քերականական փոխակերպումներ (քննական ձևաչափ)", "Грамматические трансформации (экзаменационный формат)"],
-        ["year-11-exam-review", "Full mock exam and review", "Ամբողջական փորձնական քննություն և ամփոփում", "Полный пробный экзамен и разбор"],
-      ]),
-    ],
-  ),
+  englishGrade11,
 
   course(
     12,
