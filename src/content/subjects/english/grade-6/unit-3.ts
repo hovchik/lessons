@@ -32,18 +32,31 @@ For regular verbs the second and the third form are the same: **-ed**. Only irre
 
 ## Twenty irregular verbs
 
-| Infinitive | Past | Participle | Infinitive | Past | Participle |
-|---|---|---|---|---|---|
-| be | was/were | been | make | made | made |
-| have | had | had | meet | met | met |
-| do | did | done | read | read | read |
-| go | went | gone | say | said | said |
-| see | saw | seen | take | took | taken |
-| eat | ate | eaten | write | wrote | written |
-| drink | drank | drunk | give | gave | given |
-| come | came | come | break | broke | broken |
-| buy | bought | bought | forget | forgot | forgotten |
-| find | found | found | speak | spoke | spoken |
+| Infinitive | Past | Participle |
+|---|---|---|
+| be | was/were | been |
+| have | had | had |
+| do | did | done |
+| go | went | gone |
+| see | saw | seen |
+| eat | ate | eaten |
+| drink | drank | drunk |
+| come | came | come |
+| buy | bought | bought |
+| find | found | found |
+
+| Infinitive | Past | Participle |
+|---|---|---|
+| make | made | made |
+| meet | met | met |
+| read | read | read |
+| say | said | said |
+| take | took | taken |
+| write | wrote | written |
+| give | gave | given |
+| break | broke | broken |
+| forget | forgot | forgotten |
+| speak | spoke | spoken |
 
 ## Three useful groups
 
@@ -84,18 +97,31 @@ For regular verbs the second and the third form are the same: **-ed**. Only irre
 
 ## Քսան անկանոն բայ
 
-| Անորոշ | Անցյալ | Դերբայ | Անորոշ | Անցյալ | Դերբայ |
-|---|---|---|---|---|---|
-| be | was/were | been | make | made | made |
-| have | had | had | meet | met | met |
-| do | did | done | read | read | read |
-| go | went | gone | say | said | said |
-| see | saw | seen | take | took | taken |
-| eat | ate | eaten | write | wrote | written |
-| drink | drank | drunk | give | gave | given |
-| come | came | come | break | broke | broken |
-| buy | bought | bought | forget | forgot | forgotten |
-| find | found | found | speak | spoke | spoken |
+| Անորոշ | Անցյալ | Դերբայ |
+|---|---|---|
+| be | was/were | been |
+| have | had | had |
+| do | did | done |
+| go | went | gone |
+| see | saw | seen |
+| eat | ate | eaten |
+| drink | drank | drunk |
+| come | came | come |
+| buy | bought | bought |
+| find | found | found |
+
+| Անորոշ | Անցյալ | Դերբայ |
+|---|---|---|
+| make | made | made |
+| meet | met | met |
+| read | read | read |
+| say | said | said |
+| take | took | taken |
+| write | wrote | written |
+| give | gave | given |
+| break | broke | broken |
+| forget | forgot | forgotten |
+| speak | spoke | spoken |
 
 ## Երեք օգտակար խումբ
 
@@ -136,18 +162,31 @@ For regular verbs the second and the third form are the same: **-ed**. Only irre
 
 ## Двадцать неправильных глаголов
 
-| Инфинитив | Прошедшее | Причастие | Инфинитив | Прошедшее | Причастие |
-|---|---|---|---|---|---|
-| be | was/were | been | make | made | made |
-| have | had | had | meet | met | met |
-| do | did | done | read | read | read |
-| go | went | gone | say | said | said |
-| see | saw | seen | take | took | taken |
-| eat | ate | eaten | write | wrote | written |
-| drink | drank | drunk | give | gave | given |
-| come | came | come | break | broke | broken |
-| buy | bought | bought | forget | forgot | forgotten |
-| find | found | found | speak | spoke | spoken |
+| Инфинитив | Прошедшее | Причастие |
+|---|---|---|
+| be | was/were | been |
+| have | had | had |
+| do | did | done |
+| go | went | gone |
+| see | saw | seen |
+| eat | ate | eaten |
+| drink | drank | drunk |
+| come | came | come |
+| buy | bought | bought |
+| find | found | found |
+
+| Инфинитив | Прошедшее | Причастие |
+|---|---|---|
+| make | made | made |
+| meet | met | met |
+| read | read | read |
+| say | said | said |
+| take | took | taken |
+| write | wrote | written |
+| give | gave | given |
+| break | broke | broken |
+| forget | forgot | forgotten |
+| speak | spoke | spoken |
 
 ## Три полезные группы
 

@@ -5,6 +5,7 @@ import { englishGrade2 } from "./grade-2";
 import { englishGrade4 } from "./grade-4";
 import { englishGrade5 } from "./grade-5";
 import { englishGrade6 } from "./grade-6";
+import { englishGrade7 } from "./grade-7";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -15,46 +16,7 @@ export const english: CourseSeed[] = [
 
   englishGrade6,
 
-  course(
-    7,
-    ["Conditionals (zero and first), relative clauses, passive voice (intro), reported requests, technology, media, sport and ambitions.", "Պայմանական նախադասություններ (0 և 1), հարաբերական նախադասություններ, կրավորական սեռ (ներածություն), տեխնոլոգիաներ, մեդիա, սպորտ, նպատակներ։", "Условные предложения (0 и 1 типа), относительные придаточные, пассивный залог (введение), технологии, медиа, спорт, цели."],
-    ["Armenia grade 7 (3 h/week): A2 development; topics: technology and the internet, sports and the Olympic movement, Armenian culture and famous Armenians; grammar: first conditional, relative clauses, passive (present/past), used to.", "Հայաստան, 7-րդ դասարան (3 ժ/շաբ.)՝ A2-ի զարգացում․ թեմաներ՝ տեխնոլոգիաներ և համացանց, սպորտ և օլիմպիական շարժում, հայ մշակույթ և հայտնի հայեր․ քերականություն՝ 1-ին պայմանական, հարաբերական նախադասություններ, կրավորական, used to։", "Армения, 7 класс (3 ч/нед.): развитие A2; темы — технологии и интернет, спорт и олимпийское движение, армянская культура и знаменитые армяне; грамматика — первый тип условных, относительные придаточные, пассив (present/past), used to."],
-    ["Russia grade 7 (3 h/week): present perfect continuous (intro), conditionals 0/1, relative pronouns who/which/that, passive voice present/past, used to, -ing/-ed adjectives, phrasal verbs, mass media, sport, friendship, ecology.", "Ռուսաստան, 7-րդ դասարան (3 ժ/շաբ.)՝ present perfect continuous (ներածություն), պայմանական 0/1, who/which/that, կրավորական present/past, used to, -ing/-ed ածականներ, դարձվածային բայեր, մեդիա, սպորտ, բարեկամություն, էկոլոգիա։", "Россия, 7 класс (3 ч/нед.): present perfect continuous (введение), условные 0/1, относительные местоимения who/which/that, пассив present/past, used to, прилагательные на -ing/-ed, фразовые глаголы, СМИ, спорт, дружба, экология."],
-    { armenia: 3, russia: 3 },
-    [
-      unit(t("Lifestyles", "Ապրելակերպ", "Образ жизни"), t("City and country life, used to, relative clauses with who/which/where.", "Քաղաքային և գյուղական կյանք, used to, հարաբերական նախադասություններ who/which/where։", "Жизнь в городе и деревне, used to, относительные придаточные с who/which/where."), [
-        ["city-vs-country", "City life or country life?", "Քաղաքա՞ն կամ գյուղ", "Жизнь в городе или в деревне?"],
-        ["used-to", "I used to…: habits in the past", "I used to…․ անցյալի սովորություններ", "I used to…: привычки в прошлом"],
-        ["relative-clauses", "A person who…, a place where…: relative clauses", "A person who…, a place where…", "A person who…, a place where…: относительные придаточные"],
-        ["teen-life-around-world", "Teenage life around the world", "Պատանիների կյանքը աշխարհում", "Жизнь подростков в мире"],
-      ]),
-      unit(t("Technology and media", "Տեխնոլոգիաներ և մեդիա", "Технологии и медиа"), t("Gadgets, the internet, first conditional, present perfect continuous.", "Գաջեթներ, համացանց, առաջին պայմանական, present perfect continuous։", "Гаджеты, интернет, первый тип условных, present perfect continuous."), [
-        ["gadgets-internet", "Gadgets and the internet", "Գաջեթներ և համացանց", "Гаджеты и интернет"],
-        ["first-conditional", "If it rains, we will stay at home: first conditional", "If it rains, we will stay at home․ 1-ին պայմանական", "If it rains, we will stay at home: первый тип условных"],
-        ["zero-conditional", "Zero conditional: facts and rules", "Զրոյական պայմանական․ փաստեր և կանոններ", "Нулевой тип условных: факты и правила"],
-        ["present-perfect-continuous", "I have been waiting: present perfect continuous", "I have been waiting․ present perfect continuous", "I have been waiting: present perfect continuous"],
-        ["online-safety", "Staying safe online", "Անվտանգ համացանց", "Безопасность в интернете"],
-      ]),
-      unit(t("Sport and health", "Սպորտ և առողջություն", "Спорт и здоровье"), t("Sports vocabulary, the Olympics, -ing/-ed adjectives, giving advice.", "Սպորտային բառապաշար, Օլիմպիական խաղեր, -ing/-ed ածականներ, խորհուրդ։", "Спортивная лексика, Олимпиада, прилагательные -ing/-ed, советы."), [
-        ["sports-vocabulary", "Sports: play, do or go?", "Սպորտ․ play, do կամ go?", "Спорт: play, do или go?"],
-        ["olympic-games", "The Olympic Games", "Օլիմպիական խաղերը", "Олимпийские игры"],
-        ["ing-ed-adjectives", "Boring or bored? -ing and -ed adjectives", "Boring կամ bored? -ing և -ed ածականներ", "Boring или bored? Прилагательные -ing и -ed"],
-        ["phrasal-verbs-1", "Phrasal verbs: give up, take up, work out", "Դարձվածային բայեր․ give up, take up, work out", "Фразовые глаголы: give up, take up, work out"],
-      ]),
-      unit(t("Culture and famous people", "Մշակույթ և հայտնի մարդիկ", "Культура и знаменитости"), t("Passive voice present and past, biographies, Armenian and Russian culture in English.", "Կրավորական սեռ ներկա և անցյալ, կենսագրություններ, հայ և ռուս մշակույթ անգլերենով։", "Пассивный залог в настоящем и прошедшем, биографии, армянская и русская культура по-английски."), [
-        ["passive-present", "The book is written: present passive", "The book is written․ ներկա կրավորական", "The book is written: пассив в настоящем"],
-        ["passive-past", "It was built in…: past passive", "It was built in…․ անցյալ կրավորական", "It was built in…: пассив в прошедшем"],
-        ["biography-writing", "Writing a biography", "Կենսագրություն գրել", "Пишем биографию"],
-        ["cultural-heritage", "Cultural heritage: Garni, the Kremlin, Stonehenge", "Մշակութային ժառանգություն․ Գառնի, Կրեմլ, Սթոունհենջ", "Культурное наследие: Гарни, Кремль, Стоунхендж"],
-      ]),
-      unit(t("Looking ahead", "Նայելով առաջ", "Взгляд в будущее"), t("Ambitions and future plans, future forms review, a formal letter.", "Նպատակներ և ապագայի ծրագրեր, ապառնի ձևերի կրկնություն, պաշտոնական նամակ։", "Цели и планы на будущее, повторение будущих форм, официальное письмо."), [
-        ["ambitions", "My ambitions: I'd like to be…", "Իմ նպատակները․ I'd like to be…", "Мои цели: I'd like to be…"],
-        ["future-forms-review", "Will, going to, present continuous for the future", "Will, going to, present continuous ապառնիի համար", "Will, going to, present continuous для будущего"],
-        ["formal-letter", "Writing a formal letter", "Պաշտոնական նամակ գրել", "Пишем официальное письмо"],
-        ["year-7-review", "Review and speaking exam practice", "Ամփոփում և բանավոր քննության պատրաստություն", "Повторение и подготовка к устному экзамену"],
-      ]),
-    ],
-  ),
+  englishGrade7,
 
   course(
     8,
