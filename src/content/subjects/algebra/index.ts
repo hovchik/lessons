@@ -1,6 +1,7 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { algebraGrade7 } from "./grade-7";
 import { algebraGrade8 } from "./grade-8";
+import { algebraGrade9 } from "./grade-9";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -10,57 +11,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 export const algebra: CourseSeed[] = [
   algebraGrade7,
   algebraGrade8,
-  {
-    subject: "algebra",
-    grade: 9,
-    title: t("Algebra · Grade 9", "Հանրահաշիվ · 9-րդ դասարան", "Алгебра · 9 класс"),
-    description: t("Quadratic function and inequalities, equations and systems of higher degree, sequences and progressions, elements of combinatorics and probability.", "Քառակուսային ֆունկցիա և անհավասարություններ, բարձր կարգի հավասարումներ և համակարգեր, հաջորդականություններ և պրոգրեսիաներ, կոմբինատորիկայի և հավանականության տարրեր։", "Квадратичная функция и неравенства, уравнения и системы высших степеней, последовательности и прогрессии, элементы комбинаторики и вероятности."),
-    curriculumNotes: notes(
-      ["Armenia grade 9 (3 h/week): end of basic school, state exam in mathematics (20-point). Topics: properties of functions, quadratic function and its graph, quadratic inequalities, equations reducible to quadratics, systems of nonlinear equations, arithmetic and geometric progressions, elements of combinatorics and probability.", "Հայաստան, 9-րդ դասարան (3 ժ/շաբ.)՝ հիմնական դպրոցի ավարտ, մաթեմատիկայի պետական քննություն (20-բալանոց)։ Թեմաներ՝ ֆունկցիաների հատկություններ, քառակուսային ֆունկցիա և նրա գրաֆիկը, քառակուսային անհավասարություններ, քառակուսայինի բերվող հավասարումներ, ոչ գծային համակարգեր, թվաբանական և երկրաչափական պրոգրեսիաներ, կոմբինատորիկա և հավանականություն։", "Армения, 9 класс (3 ч/нед.): окончание основной школы, государственный экзамен по математике (20 баллов). Темы: свойства функций, квадратичная функция и её график, квадратные неравенства, уравнения, сводящиеся к квадратным, нелинейные системы, арифметическая и геометрическая прогрессии, комбинаторика и вероятность."],
-      ["Russia grade 9 (ФГОС ООО, 102 h): ends with ОГЭ. Quadratic function, power function, equations and inequalities with one and two variables, arithmetic and geometric progressions, elements of combinatorics and probability theory.", "Ռուսաստան, 9-րդ դասարան (ФГОС ООО, 102 ժ)՝ ավարտվում է ОГЭ քննությամբ։ Քառակուսային ֆունկցիա, աստիճանային ֆունկցիա, մեկ և երկու փոփոխականով հավասարումներ և անհավասարություններ, պրոգրեսիաներ, կոմբինատորիկա և հավանականություն։", "Россия, 9 класс (ФГОС ООО, 102 ч): завершается ОГЭ. Квадратичная функция, степенная функция, уравнения и неравенства с одной и двумя переменными, арифметическая и геометрическая прогрессии, элементы комбинаторики и теории вероятностей."],
-    ),
-    hoursPerWeek: { armenia: 3, russia: 3 },
-    units: [
-      unit(t("Functions and their properties", "Ֆունկցիաներ և դրանց հատկությունները", "Функции и их свойства"), t("Domain, range, zeros, intervals of sign, increasing and decreasing.", "Որոշման տիրույթ, արժեքների բազմություն, զրոներ, նշանապահպանման միջակայքեր, աճում և նվազում։", "Область определения, область значений, нули, промежутки знакопостоянства, возрастание и убывание."), [
-        ["function-domain-range", "Domain and range", "Որոշման տիրույթ և արժեքների բազմություն", "Область определения и область значений"],
-        ["function-properties", "Zeros, sign intervals, monotonicity", "Զրոներ, նշանի միջակայքեր, մոնոտոնություն", "Нули функции, промежутки знакопостоянства, монотонность"],
-        ["even-odd", "Even and odd functions", "Զույգ և կենտ ֆունկցիաներ", "Чётные и нечётные функции"],
-      ]),
-      unit(t("Quadratic function", "Քառակուսային ֆունկցիա", "Квадратичная функция"), t("y = ax², shifts of the parabola, the general quadratic, vertex and axis.", "y = ax², պարաբոլի տեղաշարժեր, ընդհանուր քառակուսային ֆունկցիա, գագաթ և առանցք։", "y = ax², сдвиги параболы, общий вид, вершина и ось симметрии."), [
-        ["parabola-ax2", "The function y = ax²", "y = ax² ֆունկցիան", "Функция y = ax²"],
-        ["parabola-shifts", "Graphs of y = ax² + n and y = a(x − m)²", "y = ax² + n և y = a(x − m)² գրաֆիկները", "Графики y = ax² + n и y = a(x − m)²"],
-        ["general-quadratic", "Graph of y = ax² + bx + c", "y = ax² + bx + c-ի գրաֆիկը", "График функции y = ax² + bx + c"],
-        ["power-function", "The power function y = xⁿ", "Աստիճանային ֆունկցիա y = xⁿ", "Степенная функция y = xⁿ"],
-        ["nth-root", "The n-th root", "n-րդ աստիճանի արմատ", "Корень n-й степени"],
-      ]),
-      unit(t("Equations and inequalities in one variable", "Մեկ փոփոխականով հավասարումներ և անհավասարություններ", "Уравнения и неравенства с одной переменной"), t("Whole equations, biquadratic equations, quadratic inequalities, interval method.", "Ամբողջ հավասարումներ, երկքառակուսային հավասարումներ, քառակուսային անհավասարություններ, միջակայքերի եղանակ։", "Целые уравнения, биквадратные уравнения, квадратные неравенства, метод интервалов."), [
-        ["whole-equations", "Whole equations and their degree", "Ամբողջ հավասարումներ և դրանց աստիճանը", "Целое уравнение и его степень"],
-        ["biquadratic", "Biquadratic equations and substitution", "Երկքառակուսային հավասարումներ և փոփոխականի փոխարինում", "Биквадратные уравнения и замена переменной"],
-        ["quadratic-inequalities", "Quadratic inequalities", "Քառակուսային անհավասարություններ", "Квадратные неравенства"],
-        ["interval-method", "The interval method", "Միջակայքերի եղանակ", "Метод интервалов"],
-      ]),
-      unit(t("Equations and inequalities in two variables", "Երկու փոփոխականով հավասարումներ և անհավասարություններ", "Уравнения и неравенства с двумя переменными"), t("Graphs of equations, nonlinear systems, problems, inequalities on the plane.", "Հավասարումների գրաֆիկներ, ոչ գծային համակարգեր, խնդիրներ, անհավասարություններ հարթության վրա։", "Графики уравнений, нелинейные системы, задачи, неравенства на плоскости."), [
-        ["equation-graph-two-vars", "Equation in two variables and its graph", "Երկու փոփոխականով հավասարում և նրա գրաֆիկը", "Уравнение с двумя переменными и его график"],
-        ["nonlinear-systems", "Solving systems of second degree", "Երկրորդ աստիճանի համակարգերի լուծում", "Решение систем уравнений второй степени"],
-        ["nonlinear-system-problems", "Problems solved with nonlinear systems", "Խնդիրներ ոչ գծային համակարգերով", "Задачи с помощью систем второй степени"],
-        ["inequalities-two-vars", "Inequalities in two variables", "Երկու փոփոխականով անհավասարություններ", "Неравенства с двумя переменными"],
-      ]),
-      unit(t("Progressions", "Պրոգրեսիաներ", "Прогрессии"), t("Sequences, arithmetic and geometric progressions, sum formulas.", "Հաջորդականություններ, թվաբանական և երկրաչափական պրոգրեսիաներ, գումարի բանաձևեր։", "Последовательности, арифметическая и геометрическая прогрессии, формулы сумм."), [
-        ["sequences", "Number sequences", "Թվային հաջորդականություններ", "Числовые последовательности"],
-        ["arithmetic-progression", "Arithmetic progression and its n-th term", "Թվաբանական պրոգրեսիա և n-րդ անդամը", "Арифметическая прогрессия и её n-й член"],
-        ["arithmetic-sum", "Sum of an arithmetic progression", "Թվաբանական պրոգրեսիայի գումարը", "Сумма арифметической прогрессии"],
-        ["geometric-progression", "Geometric progression", "Երկրաչափական պրոգրեսիա", "Геометрическая прогрессия"],
-        ["geometric-sum", "Sum of a geometric progression; infinite sums", "Երկրաչափական պրոգրեսիայի գումար, անվերջ գումար", "Сумма геометрической прогрессии; бесконечно убывающая прогрессия"],
-      ]),
-      unit(t("Combinatorics and probability", "Կոմբինատորիկա և հավանականություն", "Комбинаторика и вероятность"), t("Counting rule, permutations, arrangements, combinations, classical probability.", "Հաշվելու կանոն, տեղափոխություններ, տեղադրություններ, զուգորդություններ, դասական հավանականություն։", "Правило умножения, перестановки, размещения, сочетания, классическое определение вероятности."), [
-        ["counting-rule", "The multiplication rule", "Բազմապատկման կանոն", "Комбинаторное правило умножения"],
-        ["permutations", "Permutations", "Տեղափոխություններ", "Перестановки"],
-        ["arrangements-combinations", "Arrangements and combinations", "Տեղադրություններ և զուգորդություններ", "Размещения и сочетания"],
-        ["classical-probability", "Classical probability", "Դասական հավանականություն", "Классическое определение вероятности"],
-        ["exam-review-9", "Review for the grade 9 exam", "Ամփոփում 9-րդ դասարանի քննության համար", "Повторение к экзамену за 9 класс"],
-      ]),
-    ],
-  },
+  algebraGrade9,
   {
     subject: "algebra",
     grade: 10,
