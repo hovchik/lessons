@@ -1,6 +1,7 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { geometryGrade7 } from "./grade-7";
 import { geometryGrade8 } from "./grade-8";
+import { geometryGrade9 } from "./grade-9";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -10,51 +11,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 export const geometry: CourseSeed[] = [
   geometryGrade7,
   geometryGrade8,
-  {
-    subject: "geometry",
-    grade: 9,
-    title: t("Geometry · Grade 9", "Երկրաչափություն · 9-րդ դասարան", "Геометрия · 9 класс"),
-    description: t("Vectors, coordinate method, solving triangles with sine and cosine laws, regular polygons, circle length and area, motions, and the first look at solids.", "Վեկտորներ, կոորդինատային եղանակ, եռանկյունների լուծում սինուսների և կոսինուսների թեորեմներով, կանոնավոր բազմանկյուններ, շրջանագծի երկարություն և մակերես, շարժումներ, մարմինների առաջին ծանոթություն։", "Векторы, метод координат, решение треугольников по теоремам синусов и косинусов, правильные многоугольники, длина окружности и площадь круга, движения, первое знакомство с телами."),
-    curriculumNotes: notes(
-      ["Armenia grade 9 (2 h/week): vectors, coordinates, sine and cosine laws, scalar product, regular polygons, circle length and area, motions (symmetry, rotation, translation), initial information about stereometry. Grade 9 state exam includes geometry.", "Հայաստան, 9-րդ դասարան (2 ժ/շաբ.)՝ վեկտորներ, կոորդինատներ, սինուսների և կոսինուսների թեորեմներ, սկալյար արտադրյալ, կանոնավոր բազմանկյուններ, շրջանագծի երկարություն և շրջանի մակերես, շարժումներ, տարածաչափության սկզբնական տեղեկություններ։ 9-րդ դասարանի պետական քննությունը ներառում է երկրաչափություն։", "Армения, 9 класс (2 ч/нед.): векторы, координаты, теоремы синусов и косинусов, скалярное произведение, правильные многоугольники, длина окружности и площадь круга, движения, начальные сведения стереометрии. Экзамен за 9 класс включает геометрию."],
-      ["Russia grade 9 (ФГОС ООО, 68 h): vectors, coordinate method, relations between sides and angles, scalar product, circle length and area, motions, initial stereometry. Ends with ОГЭ geometry module.", "Ռուսաստան, 9-րդ դասարան (ФГОС ООО, 68 ժ)՝ վեկտորներ, կոորդինատային եղանակ, կողմերի և անկյունների հարաբերություններ, սկալյար արտադրյալ, շրջանագծի երկարություն և մակերես, շարժումներ, տարածաչափության սկիզբ։ Ավարտվում է ОГЭ երկրաչափության մոդուլով։", "Россия, 9 класс (ФГОС ООО, 68 ч): векторы, метод координат, соотношения между сторонами и углами, скалярное произведение, длина окружности и площадь круга, движения, начальные сведения стереометрии. Завершается геометрическим модулем ОГЭ."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 2 },
-    units: [
-      unit(t("Vectors", "Վեկտորներ", "Векторы"), t("Vector concept, addition, subtraction, multiplication by a number, applications.", "Վեկտորի գաղափար, գումարում, հանում, թվով բազմապատկում, կիրառություններ։", "Понятие вектора, сложение, вычитание, умножение на число, применения."), [
-        ["vector-concept", "Vectors: equality and collinearity", "Վեկտորներ․ հավասարություն և կոլինեարություն", "Понятие вектора, равенство и коллинеарность"],
-        ["vector-addition", "Adding and subtracting vectors", "Վեկտորների գումարում և հանում", "Сложение и вычитание векторов"],
-        ["vector-scalar", "Multiplying a vector by a number", "Վեկտորի բազմապատկում թվով", "Умножение вектора на число"],
-        ["vectors-applications", "Midline of a trapezium and other applications", "Սեղանի միջին գիծ և այլ կիրառություններ", "Средняя линия трапеции и другие применения"],
-      ]),
-      unit(t("Coordinate method", "Կոորդինատային եղանակ", "Метод координат"), t("Coordinates of a vector, midpoint, distance, equations of circle and line.", "Վեկտորի կոորդինատները, միջնակետ, հեռավորություն, շրջանագծի և ուղղի հավասարումներ։", "Координаты вектора, середина отрезка, расстояние, уравнения окружности и прямой."), [
-        ["vector-coordinates", "Coordinates of a vector", "Վեկտորի կոորդինատները", "Координаты вектора"],
-        ["midpoint-distance", "Midpoint and distance formulas", "Միջնակետի և հեռավորության բանաձևեր", "Координаты середины отрезка и расстояние между точками"],
-        ["circle-equation", "Equation of a circle", "Շրջանագծի հավասարում", "Уравнение окружности"],
-        ["line-equation", "Equation of a line", "Ուղղի հավասարում", "Уравнение прямой"],
-      ]),
-      unit(t("Solving triangles", "Եռանկյունների լուծում", "Соотношения между сторонами и углами треугольника"), t("Sine and cosine of angles 0°–180°, area via sine, sine law, cosine law, scalar product.", "0°–180° անկյունների սինուս և կոսինուս, մակերես սինուսով, սինուսների և կոսինուսների թեորեմներ, սկալյար արտադրյալ։", "Синус и косинус углов 0°–180°, площадь через синус, теоремы синусов и косинусов, скалярное произведение."), [
-        ["sin-cos-0-180", "Sine and cosine of angles from 0° to 180°", "Սինուս և կոսինուս 0°-ից 180°", "Синус и косинус углов от 0° до 180°"],
-        ["area-sine", "Area of a triangle via sine", "Եռանկյան մակերեսը սինուսով", "Площадь треугольника через синус"],
-        ["sine-law", "The law of sines", "Սինուսների թեորեմ", "Теорема синусов"],
-        ["cosine-law", "The law of cosines", "Կոսինուսների թեորեմ", "Теорема косинусов"],
-        ["solving-triangles-cases", "Solving triangles: the three cases", "Եռանկյունների լուծում․ երեք դեպք", "Решение треугольников: три случая"],
-        ["scalar-product", "Scalar product of vectors", "Վեկտորների սկալյար արտադրյալ", "Скалярное произведение векторов"],
-      ]),
-      unit(t("Circle length and area", "Շրջանագծի երկարություն և շրջանի մակերես", "Длина окружности и площадь круга"), t("Regular polygons, inscribed and circumscribed circles, arc length, sector area.", "Կանոնավոր բազմանկյուններ, ներգծյալ և արտագծյալ շրջանագծեր, աղեղի երկարություն, սեկտորի մակերես։", "Правильные многоугольники, вписанная и описанная окружности, длина дуги, площадь сектора."), [
-        ["regular-polygons", "Regular polygons", "Կանոնավոր բազմանկյուններ", "Правильные многоугольники"],
-        ["regular-polygon-circles", "Circles inscribed in and circumscribed about regular polygons", "Կանոնավոր բազմանկյան ներգծյալ և արտագծյալ շրջանագծեր", "Окружности, вписанные в правильный многоугольник и описанные около него"],
-        ["circumference-arc", "Circumference and arc length", "Շրջանագծի և աղեղի երկարություն", "Длина окружности и дуги"],
-        ["circle-sector-area", "Area of a circle and a sector", "Շրջանի և սեկտորի մակերես", "Площадь круга и кругового сектора"],
-      ]),
-      unit(t("Motions and solids", "Շարժումներ և մարմիններ", "Движения и тела"), t("Symmetries, translation, rotation; polyhedra and round bodies — a preview.", "Համաչափություններ, զուգահեռ տեղափոխություն, պտույտ, բազմանիստներ և պտտման մարմիններ՝ նախադիտում։", "Симметрии, параллельный перенос, поворот; многогранники и тела вращения — предварительный обзор."), [
-        ["motions", "Motions: symmetry, translation, rotation", "Շարժումներ․ համաչափություն, տեղափոխություն, պտույտ", "Движения: симметрия, параллельный перенос, поворот"],
-        ["polyhedra-preview", "Prism, pyramid, their surface and volume", "Պրիզմա, բուրգ, մակերևույթ և ծավալ", "Призма, пирамида, их поверхность и объём"],
-        ["round-bodies-preview", "Cylinder, cone, sphere", "Գլան, կոն, գունդ", "Цилиндр, конус, шар"],
-        ["geometry-9-review", "Review for the grade 9 exam", "Ամփոփում 9-րդ դասարանի քննության համար", "Повторение к экзамену за 9 класс"],
-      ]),
-    ],
-  },
+  geometryGrade9,
   {
     subject: "geometry",
     grade: 10,
