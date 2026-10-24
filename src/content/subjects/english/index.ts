@@ -7,6 +7,7 @@ import { englishGrade5 } from "./grade-5";
 import { englishGrade6 } from "./grade-6";
 import { englishGrade7 } from "./grade-7";
 import { englishGrade8 } from "./grade-8";
+import { englishGrade9 } from "./grade-9";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -21,47 +22,7 @@ export const english: CourseSeed[] = [
 
   englishGrade8,
 
-  course(
-    9,
-    ["Exam-level B1 preparation: all tenses, third conditional, mixed conditionals, passive in all tenses, reported speech review, essay writing; topics: celebrations, art, careers, global issues.", "B1 քննական պատրաստություն․ բոլոր ժամանակները, 3-րդ պայմանական, խառը պայմանականներ, կրավորական բոլոր ժամանակներում, անուղղակի խոսքի կրկնություն, էսսե․ թեմաներ՝ տոներ, արվեստ, կարիերա, գլոբալ խնդիրներ։", "Подготовка к уровню B1 и экзамену: все времена, третий тип условных, смешанные условные, пассив во всех временах, повторение косвенной речи, эссе; темы: праздники, искусство, карьера, глобальные проблемы."],
-    ["Armenia grade 9 (3 h/week): end of basic school; the grade-9 state exam (20-point) can include a foreign language. Expected level A2+/B1: reading authentic texts, writing an essay/letter of 100–120 words, 2-minute monologue.", "Հայաստան, 9-րդ դասարան (3 ժ/շաբ.)՝ հիմնական դպրոցի ավարտ․ 9-րդ դասարանի ավարտական քննությունը (20 բալ) կարող է ներառել օտար լեզու։ Սպասվող մակարդակ A2+/B1․ բնագիր տեքստեր, 100–120 բառանոց էսսե/նամակ, 2-րոպեանոց մենախոսություն։", "Армения, 9 класс (3 ч/нед.): завершение основной школы; выпускной экзамен 9 класса (20 баллов) может включать иностранный язык. Ожидаемый уровень A2+/B1: чтение аутентичных текстов, эссе/письмо 100–120 слов, монолог 2 минуты."],
-    ["Russia grade 9 (3 h/week): ОГЭ по английскому (optional, A2+/B1) — listening, reading, grammar/vocabulary (word formation), personal letter 100–120 words, speaking (reading aloud, questions, monologue). Grammar: third conditional, passive all tenses, reported speech, causative (intro).", "Ռուսաստան, 9-րդ դասարան (3 ժ/շաբ.)՝ ОГЭ անգլերեն (ընտրովի, A2+/B1)․ լսել, կարդալ, քերականություն/բառակազմություն, անձնական նամակ 100–120 բառ, բանավոր։ Քերականություն՝ 3-րդ պայմանական, կրավորական բոլոր ժամանակներում, անուղղակի խոսք։", "Россия, 9 класс (3 ч/нед.): ОГЭ по английскому (по выбору, A2+/B1) — аудирование, чтение, грамматика и лексика (словообразование), личное письмо 100–120 слов, говорение. Грамматика: третий тип условных, пассив во всех временах, косвенная речь, causative (введение)."],
-    { armenia: 3, russia: 3 },
-    [
-      unit(t("Celebrations and culture", "Տոներ և մշակույթ", "Праздники и культура"), t("Festivals around the world, present tenses with stative verbs, word formation: nouns from verbs.", "Տոներ աշխարհում, ներկա ժամանակներ վիճակի բայերով, բառակազմություն՝ գոյական բայից։", "Праздники мира, настоящие времена с глаголами состояния, словообразование: существительные от глаголов."), [
-        ["festivals-world", "Festivals around the world: Vardavar, Maslenitsa, Halloween", "Տոներ աշխարհում․ Վարդավառ, Մասլենիցա, Հելոուին", "Праздники мира: Вардавар, Масленица, Хеллоуин"],
-        ["stative-verbs", "Stative verbs: I know, I believe", "Վիճակի բայեր․ I know, I believe", "Глаголы состояния: I know, I believe"],
-        ["word-formation-nouns", "Word formation: -tion, -ment, -ness, -er", "Բառակազմություն․ -tion, -ment, -ness, -er", "Словообразование: -tion, -ment, -ness, -er"],
-        ["describing-event", "Describing an event", "Իրադարձության նկարագրություն", "Описание события"],
-      ]),
-      unit(t("Art and literature", "Արվեստ և գրականություն", "Искусство и литература"), t("Books, films and music, passive in all tenses, Shakespeare, Pushkin and Tumanyan.", "Գրքեր, ֆիլմեր և երաժշտություն, կրավորական բոլոր ժամանակներում, Շեքսպիր, Պուշկին և Թումանյան։", "Книги, фильмы и музыка, пассив во всех временах, Шекспир, Пушкин и Туманян."), [
-        ["books-films-music", "Books, films and music: reviews", "Գրքեր, ֆիլմեր, երաժշտություն․ գրախոսություն", "Книги, фильмы, музыка: рецензии"],
-        ["passive-all-tenses", "Passive voice in all tenses", "Կրավորական սեռ բոլոր ժամանակներում", "Пассивный залог во всех временах"],
-        ["great-writers", "Shakespeare, Pushkin, Tumanyan", "Շեքսպիր, Պուշկին, Թումանյան", "Шекспир, Пушкин, Туманян"],
-        ["writing-review", "Writing a review", "Գրախոսություն գրել", "Пишем рецензию"],
-      ]),
-      unit(t("If only…", "Եթե միայն…", "Если бы только…"), t("Third conditional, mixed conditionals, wishes and regrets.", "Երրորդ պայմանական, խառը պայմանականներ, ցանկություններ և զղջում։", "Третий тип условных, смешанные условные, желания и сожаления."), [
-        ["third-conditional", "If I had known…: third conditional", "If I had known…․ 3-րդ պայմանական", "If I had known…: третий тип условных"],
-        ["mixed-conditionals", "Mixed conditionals", "Խառը պայմանականներ", "Смешанные условные"],
-        ["wishes-regrets", "I wish I had…: regrets", "I wish I had…․ զղջում", "I wish I had…: сожаления"],
-        ["conditionals-review", "All conditionals: review", "Բոլոր պայմանականները․ կրկնություն", "Все условные: повторение"],
-      ]),
-      unit(t("Careers and education", "Կարիերա և կրթություն", "Карьера и образование"), t("Education systems, reported speech review, causative «have something done», a letter of application.", "Կրթական համակարգեր, անուղղակի խոսքի կրկնություն, «have something done», դիմում-նամակ։", "Системы образования, повторение косвенной речи, «have something done», письмо-заявление."), [
-        ["education-systems", "Schools in Armenia, Russia and the UK", "Դպրոցները Հայաստանում, Ռուսաստանում և Մեծ Բրիտանիայում", "Школы в Армении, России и Великобритании"],
-        ["reported-speech-review", "Reported speech: full review", "Անուղղակի խոսք․ ամբողջական կրկնություն", "Косвенная речь: полное повторение"],
-        ["causative", "Have something done", "Have something done", "Have something done"],
-        ["letter-application", "Letter of application", "Դիմում-նամակ", "Письмо-заявление"],
-      ]),
-      unit(t("Global issues and exam skills", "Գլոբալ խնդիրներ և քննական հմտություններ", "Глобальные проблемы и экзаменационные навыки"), t("Environment and society, opinion essay, exam strategies for listening, reading and speaking.", "Միջավայր և հասարակություն, կարծիքի էսսե, քննական ռազմավարություններ։", "Экология и общество, эссе-мнение, стратегии экзамена: аудирование, чтение, говорение."), [
-        ["global-issues", "Global issues: poverty, climate, migration", "Գլոբալ խնդիրներ․ աղքատություն, կլիմա, միգրացիա", "Глобальные проблемы: бедность, климат, миграция"],
-        ["opinion-essay", "Writing an opinion essay", "Կարծիքի էսսե գրել", "Пишем эссе-мнение"],
-        ["personal-letter-exam", "Exam personal letter (100–120 words)", "Քննական անձնական նամակ (100–120 բառ)", "Экзаменационное личное письмо (100–120 слов)"],
-        ["speaking-monologue", "Speaking: 2-minute monologue", "Բանավոր․ 2-րոպեանոց մենախոսություն", "Говорение: монолог на 2 минуты"],
-        ["grade-9-exam-review", "Grade 9 exam review", "9-րդ դասարանի քննության կրկնություն", "Повторение к экзамену 9 класса"],
-      ]),
-    ],
-  ),
-
+  englishGrade9,
   course(
     10,
     ["Upper-secondary B1+: future perfect and continuous, inversion (intro), advanced passive and reporting, collocations and idioms; topics: identity, media literacy, science and technology, travel.", "Ավագ դպրոց B1+․ future perfect և continuous, շրջադասություն (ներածություն), բարդ կրավորական և անուղղակի խոսք, բառակապակցություններ և դարձվածքներ․ թեմաներ՝ ինքնություն, մեդիագրագիտություն, գիտություն և տեխնոլոգիաներ, ճանապարհորդություն։", "Старшая школа B1+: future perfect и continuous, инверсия (введение), сложный пассив и косвенная речь, коллокации и идиомы; темы: идентичность, медиаграмотность, наука и технологии, путешествия."],
