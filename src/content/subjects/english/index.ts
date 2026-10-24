@@ -4,6 +4,7 @@ import { englishGrade3 } from "./grade-3";
 import { englishGrade2 } from "./grade-2";
 import { englishGrade4 } from "./grade-4";
 import { englishGrade5 } from "./grade-5";
+import { englishGrade6 } from "./grade-6";
 
 export const english: CourseSeed[] = [
   englishGrade2,
@@ -12,45 +13,7 @@ export const english: CourseSeed[] = [
 
   englishGrade5,
 
-  course(
-    6,
-    ["Present perfect, past continuous, quantifiers, the environment, health and food, famous cities, reading longer texts and writing emails.", "Present perfect, past continuous, քանակական բառեր, շրջակա միջավայր, առողջություն և սնունդ, հայտնի քաղաքներ, ավելի երկար տեքստերի ընթերցանություն, էլ. նամակ։", "Present perfect, past continuous, квантификаторы, окружающая среда, здоровье и еда, известные города, чтение длинных текстов и написание писем."],
-    ["Armenia grade 6 (3 h/week): topics include Yerevan and London, Armenian traditions, healthy lifestyle, nature of Armenia; grammar: past continuous, present perfect (intro), quantifiers, modal verbs. Pupils write short letters and descriptions.", "Հայաստան, 6-րդ դասարան (3 ժ/շաբ.)՝ թեմաներ՝ Երևան և Լոնդոն, հայկական ավանդույթներ, առողջ ապրելակերպ, Հայաստանի բնություն․ քերականություն՝ past continuous, present perfect (ներածություն), քանակական բառեր, մոդալ բայեր։", "Армения, 6 класс (3 ч/нед.): темы — Ереван и Лондон, армянские традиции, здоровый образ жизни, природа Армении; грамматика — past continuous, present perfect (введение), квантификаторы, модальные глаголы."],
-    ["Russia grade 6 (3 h/week): present perfect with ever/never/just/already/yet, past continuous, much/many/a lot of/few/little, have to, possessive pronouns, ordinal numbers and dates, Moscow and London, the environment, free time, celebrations.", "Ռուսաստան, 6-րդ դասարան (3 ժ/շաբ.)՝ present perfect ever/never/just/already/yet-ով, past continuous, much/many/a lot of/few/little, have to, ստացական դերանուններ, դասական թվականներ և ամսաթվեր, Մոսկվա և Լոնդոն, միջավայր։", "Россия, 6 класс (3 ч/нед.): present perfect с ever/never/just/already/yet, past continuous, much/many/a lot of/few/little, have to, притяжательные местоимения, порядковые числительные и даты, Москва и Лондон, экология, досуг."],
-    { armenia: 3, russia: 3 },
-    [
-      unit(t("Home and family life", "Տուն և ընտանեկան կյանք", "Дом и семейная жизнь"), t("Housework, have to, possessive pronouns, ordinal numbers and dates.", "Տնային գործեր, have to, ստացական դերանուններ, դասական թվականներ և ամսաթվեր։", "Домашние дела, have to, притяжательные местоимения, порядковые числительные и даты."), [
-        ["housework-have-to", "I have to tidy my room", "I have to tidy my room", "I have to tidy my room"],
-        ["possessive-pronouns", "Mine, yours, his, hers: possessive pronouns", "Mine, yours, his, hers․ ստացական դերանուններ", "Mine, yours, his, hers: притяжательные местоимения"],
-        ["ordinal-numbers-dates", "First, second, third: dates and birthdays", "First, second, third․ ամսաթվեր", "First, second, third: даты и дни рождения"],
-        ["family-traditions", "Family traditions in Armenia, Russia and Britain", "Ընտանեկան ավանդույթներ Հայաստանում, Ռուսաստանում և Բրիտանիայում", "Семейные традиции в Армении, России и Британии"],
-      ]),
-      unit(t("What were you doing?", "Ի՞նչ էիր անում", "Что ты делал(а)?"), t("Past continuous, past simple vs continuous, «when» and «while».", "Past continuous, past simple vs continuous, «when» և «while»։", "Past continuous, past simple и continuous, «when» и «while»."), [
-        ["past-continuous", "Past continuous: I was reading", "Past continuous․ I was reading", "Past continuous: I was reading"],
-        ["when-while", "When and while", "When և while", "When и while"],
-        ["story-writing", "Writing a story with a twist", "Պատմություն գրել անսպասելի ավարտով", "Пишем рассказ с неожиданной концовкой"],
-      ]),
-      unit(t("Have you ever…?", "Երբևէ…", "Ты когда-нибудь…?"), t("Present perfect, ever/never, just/already/yet, past participles.", "Present perfect, ever/never, just/already/yet, անցյալ դերբայներ։", "Present perfect, ever/never, just/already/yet, причастия прошедшего времени."), [
-        ["present-perfect-intro", "Present perfect: I have seen", "Present perfect․ I have seen", "Present perfect: I have seen"],
-        ["ever-never", "Have you ever…? Ever and never", "Have you ever…? Ever և never", "Have you ever…? Ever и never"],
-        ["just-already-yet", "Just, already, yet", "Just, already, yet", "Just, already, yet"],
-        ["perfect-vs-past", "Present perfect or past simple?", "Present perfect կամ past simple?", "Present perfect или past simple?"],
-      ]),
-      unit(t("Food, health and quantity", "Սնունդ, առողջություն և քանակ", "Еда, здоровье и количество"), t("Much/many/a lot of/few/little, healthy habits, at the doctor's.", "Much/many/a lot of/few/little, առողջ սովորություններ, բժշկի մոտ։", "Much/many/a lot of/few/little, здоровые привычки, у врача."), [
-        ["much-many", "How much? How many?", "How much? How many?", "How much? How many?"],
-        ["few-little", "A few, a little, a lot of", "A few, a little, a lot of", "A few, a little, a lot of"],
-        ["healthy-lifestyle", "A healthy lifestyle", "Առողջ ապրելակերպ", "Здоровый образ жизни"],
-        ["at-the-doctors", "At the doctor's: What's the matter?", "Բժշկի մոտ․ What's the matter?", "У врача: What's the matter?"],
-      ]),
-      unit(t("Cities and the environment", "Քաղաքներ և շրջակա միջավայր", "Города и окружающая среда"), t("Yerevan, Moscow, London; places in town; environmental problems; writing an email.", "Երևան, Մոսկվա, Լոնդոն, քաղաքի վայրեր, բնապահպանական խնդիրներ, էլ. նամակ։", "Ереван, Москва, Лондон; места в городе; экологические проблемы; электронное письмо."), [
-        ["three-capitals", "Yerevan, Moscow and London", "Երևան, Մոսկվա և Լոնդոն", "Ереван, Москва и Лондон"],
-        ["places-in-town", "Places in town and how to get there", "Քաղաքի վայրերը և ինչպես հասնել", "Места в городе и как до них добраться"],
-        ["environment-problems", "Save the planet: environmental problems", "Save the planet․ բնապահպանական խնդիրներ", "Save the planet: экологические проблемы"],
-        ["writing-email", "Writing an informal email", "Ոչ պաշտոնական էլ. նամակ գրել", "Пишем неформальное электронное письмо"],
-        ["year-6-review", "Review and quiz show", "Ամփոփում և վիկտորինա", "Повторение и викторина"],
-      ]),
-    ],
-  ),
+  englishGrade6,
 
   course(
     7,
