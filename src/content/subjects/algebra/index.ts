@@ -1,5 +1,6 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { algebraGrade7 } from "./grade-7";
+import { algebraGrade8 } from "./grade-8";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -8,56 +9,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 
 export const algebra: CourseSeed[] = [
   algebraGrade7,
-  {
-    subject: "algebra",
-    grade: 8,
-    title: t("Algebra · Grade 8", "Հանրահաշիվ · 8-րդ դասարան", "Алгебра · 8 класс"),
-    description: t("Rational expressions, square roots, quadratic equations, inequalities, and powers with integer exponents.", "Ռացիոնալ արտահայտություններ, քառակուսի արմատներ, քառակուսային հավասարումներ, անհավասարություններ, ամբողջ ցուցիչով աստիճան։", "Рациональные выражения, квадратные корни, квадратные уравнения, неравенства и степень с целым показателем."),
-    curriculumNotes: notes(
-      ["Armenia grade 8 (3 h/week): algebraic fractions, square roots and real numbers, quadratic equations and Vieta's formulas, rational equations, numerical inequalities and linear inequalities, integer exponents and standard form.", "Հայաստան, 8-րդ դասարան (3 ժ/շաբ.)՝ հանրահաշվական կոտորակներ, քառակուսի արմատ և իրական թվեր, քառակուսային հավասարումներ և Վիետի բանաձևեր, ռացիոնալ հավասարումներ, թվային և գծային անհավասարություններ, ամբողջ ցուցիչով աստիճան։", "Армения, 8 класс (3 ч/нед.): алгебраические дроби, квадратные корни и действительные числа, квадратные уравнения и теорема Виета, рациональные уравнения, числовые и линейные неравенства, степень с целым показателем."],
-      ["Russia grade 8 (ФГОС ООО, 105 h): rational fractions, function y = k/x, square roots and y = √x, quadratic equations, fractional rational equations, inequalities and their systems, integer powers, standard form of a number, statistics (frequency, histograms).", "Ռուսաստան, 8-րդ դասարան (ФГОС ООО, 105 ժ)՝ ռացիոնալ կոտորակներ, y = k/x, քառակուսի արմատ և y = √x, քառակուսային հավասարումներ, կոտորակային ռացիոնալ հավասարումներ, անհավասարություններ և դրանց համակարգեր, ամբողջ ցուցիչով աստիճան, թվի ստանդարտ տեսք, վիճակագրություն։", "Россия, 8 класс (ФГОС ООО, 105 ч): рациональные дроби, функция y = k/x, квадратные корни и y = √x, квадратные уравнения, дробно-рациональные уравнения, неравенства и их системы, степень с целым показателем, стандартный вид числа, статистика."],
-    ),
-    hoursPerWeek: { armenia: 3, russia: 3 },
-    units: [
-      unit(t("Rational fractions", "Ռացիոնալ կոտորակներ", "Рациональные дроби"), t("Admissible values, basic property, four operations, the function y = k/x.", "Թույլատրելի արժեքներ, հիմնական հատկություն, չորս գործողություն, y = k/x ֆունկցիա։", "Допустимые значения, основное свойство, четыре действия, функция y = k/x."), [
-        ["rational-expressions", "Rational expressions and admissible values", "Ռացիոնալ արտահայտություններ և թույլատրելի արժեքներ", "Рациональные выражения и допустимые значения"],
-        ["reduce-fractions", "Basic property and reduction", "Հիմնական հատկություն և կրճատում", "Основное свойство дроби и сокращение"],
-        ["add-subtract-rational", "Adding and subtracting rational fractions", "Ռացիոնալ կոտորակների գումարում և հանում", "Сложение и вычитание рациональных дробей"],
-        ["multiply-divide-rational", "Multiplying, dividing and raising to a power", "Բազմապատկում, բաժանում, աստիճան", "Умножение, деление и возведение в степень"],
-        ["inverse-proportionality", "The function y = k/x", "y = k/x ֆունկցիան", "Функция y = k/x и её график"],
-      ]),
-      unit(t("Square roots", "Քառակուսի արմատներ", "Квадратные корни"), t("Rational and irrational numbers, arithmetic square root, properties, y = √x.", "Ռացիոնալ և իռացիոնալ թվեր, թվաբանական քառակուսի արմատ, հատկություններ, y = √x։", "Рациональные и иррациональные числа, арифметический квадратный корень, свойства, y = √x."), [
-        ["rational-irrational", "Rational and irrational numbers", "Ռացիոնալ և իռացիոնալ թվեր", "Рациональные и иррациональные числа"],
-        ["arithmetic-root", "The arithmetic square root", "Թվաբանական քառակուսի արմատ", "Арифметический квадратный корень"],
-        ["root-of-product-quotient", "Root of a product and a quotient", "Արտադրյալի և քանորդի արմատ", "Корень из произведения и дроби"],
-        ["root-of-power", "Root of a power; √(a²) = |a|", "Աստիճանի արմատ, √(a²) = |a|", "Корень из степени; √(a²) = |a|"],
-        ["simplify-radicals", "Taking a factor out of the root", "Արտադրիչի դուրս բերում արմատի նշանի տակից", "Вынесение множителя из-под знака корня"],
-        ["sqrt-function", "The function y = √x", "y = √x ֆունկցիան", "Функция y = √x"],
-      ]),
-      unit(t("Quadratic equations", "Քառակուսային հավասարումներ", "Квадратные уравнения"), t("Incomplete equations, discriminant formula, Vieta's theorem, factoring a quadratic trinomial.", "Ոչ լրիվ հավասարումներ, դիսկրիմինանտ, Վիետի թեորեմ, քառակուսային եռանդամի վերլուծում։", "Неполные уравнения, формула корней, теорема Виета, разложение квадратного трёхчлена."), [
-        ["incomplete-quadratics", "Incomplete quadratic equations", "Ոչ լրիվ քառակուսային հավասարումներ", "Неполные квадратные уравнения"],
-        ["quadratic-formula", "The discriminant and the root formula", "Դիսկրիմինանտ և արմատների բանաձև", "Дискриминант и формула корней"],
-        ["vieta", "Vieta's theorem", "Վիետի թեորեմ", "Теорема Виета"],
-        ["factor-quadratic-trinomial", "Factoring a quadratic trinomial", "Քառակուսային եռանդամի վերլուծում", "Разложение квадратного трёхчлена"],
-        ["fractional-rational-equations", "Fractional rational equations", "Կոտորակային ռացիոնալ հավասարումներ", "Дробно-рациональные уравнения"],
-        ["quadratic-word-problems", "Problems leading to quadratic equations", "Քառակուսային հավասարման բերվող խնդիրներ", "Задачи, сводящиеся к квадратным уравнениям"],
-      ]),
-      unit(t("Inequalities", "Անհավասարություններ", "Неравенства"), t("Properties of numerical inequalities, intervals, linear inequalities and systems.", "Թվային անհավասարությունների հատկություններ, միջակայքեր, գծային անհավասարություններ և համակարգեր։", "Свойства числовых неравенств, промежутки, линейные неравенства и системы."), [
-        ["numerical-inequalities", "Numerical inequalities and their properties", "Թվային անհավասարություններ և դրանց հատկությունները", "Числовые неравенства и их свойства"],
-        ["adding-multiplying-inequalities", "Adding and multiplying inequalities", "Անհավասարությունների գումարում և բազմապատկում", "Сложение и умножение неравенств"],
-        ["intervals", "Number intervals", "Թվային միջակայքեր", "Числовые промежутки"],
-        ["linear-inequalities", "Linear inequalities in one variable", "Մեկ փոփոխականով գծային անհավասարություններ", "Линейные неравенства с одной переменной"],
-        ["systems-of-inequalities", "Systems of linear inequalities", "Գծային անհավասարությունների համակարգեր", "Системы линейных неравенств"],
-      ]),
-      unit(t("Integer exponents and statistics", "Ամբողջ ցուցիչով աստիճան և վիճակագրություն", "Степень с целым показателем и статистика"), t("Negative exponents, standard form, data collection and histograms.", "Բացասական ցուցիչ, ստանդարտ տեսք, տվյալների հավաքում և հիստոգրամներ։", "Отрицательный показатель, стандартный вид числа, сбор данных и гистограммы."), [
-        ["negative-exponent", "Powers with a negative exponent", "Բացասական ցուցիչով աստիճան", "Степень с отрицательным показателем"],
-        ["integer-exponent-properties", "Properties of integer powers", "Ամբողջ ցուցիչով աստիճանի հատկություններ", "Свойства степени с целым показателем"],
-        ["standard-form", "Standard form of a number", "Թվի ստանդարտ տեսք", "Стандартный вид числа"],
-        ["statistics-intro", "Collecting and grouping data", "Տվյալների հավաքում և խմբավորում", "Сбор и группировка статистических данных"],
-        ["histograms", "Frequency tables and histograms", "Հաճախությունների աղյուսակ և հիստոգրամ", "Таблицы частот и гистограммы"],
-      ]),
-    ],
-  },
+  algebraGrade8,
   {
     subject: "algebra",
     grade: 9,
