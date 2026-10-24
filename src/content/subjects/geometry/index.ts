@@ -1,5 +1,6 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { geometryGrade7 } from "./grade-7";
+import { geometryGrade8 } from "./grade-8";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -8,49 +9,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 
 export const geometry: CourseSeed[] = [
   geometryGrade7,
-  {
-    subject: "geometry",
-    grade: 8,
-    title: t("Geometry · Grade 8", "Երկրաչափություն · 8-րդ դասարան", "Геометрия · 8 класс"),
-    description: t("Quadrilaterals, areas, the Pythagorean theorem, similar triangles, trigonometry of the right triangle, circles.", "Քառանկյուններ, մակերեսներ, Պյութագորասի թեորեմ, նման եռանկյուններ, ուղղանկյուն եռանկյան եռանկյունաչափություն, շրջանագիծ։", "Четырёхугольники, площади, теорема Пифагора, подобные треугольники, тригонометрия прямоугольного треугольника, окружность."),
-    curriculumNotes: notes(
-      ["Armenia grade 8 (2 h/week): polygons and quadrilaterals (parallelogram, rectangle, rhombus, square, trapezium), areas, Pythagorean theorem, similarity, sine/cosine/tangent of an acute angle, circle (tangent, inscribed angles, inscribed and circumscribed circles).", "Հայաստան, 8-րդ դասարան (2 ժ/շաբ.)՝ բազմանկյուններ և քառանկյուններ (զուգահեռագիծ, ուղղանկյուն, շեղանկյուն, քառակուսի, սեղան), մակերեսներ, Պյութագորասի թեորեմ, նմանություն, սուր անկյան սինուս/կոսինուս/տանգենս, շրջանագիծ (շոշափող, ներգծյալ անկյուններ, ներգծյալ և արտագծյալ շրջանագծեր)։", "Армения, 8 класс (2 ч/нед.): многоугольники и четырёхугольники (параллелограмм, прямоугольник, ромб, квадрат, трапеция), площади, теорема Пифагора, подобие, синус/косинус/тангенс острого угла, окружность (касательная, вписанные углы, вписанная и описанная окружности)."],
-      ["Russia grade 8 (ФГОС ООО, 70 h): quadrilaterals, area, Pythagorean theorem, similar triangles, trigonometric ratios, circle, four remarkable points of a triangle. Identical core to Armenia.", "Ռուսաստան, 8-րդ դասարան (ФГОС ООО, 70 ժ)՝ քառանկյուններ, մակերես, Պյութագորասի թեորեմ, նման եռանկյուններ, եռանկյունաչափական հարաբերություններ, շրջանագիծ, եռանկյան չորս նշանավոր կետերը։ Միջուկը նույնն է, ինչ Հայաստանում։", "Россия, 8 класс (ФГОС ООО, 70 ч): четырёхугольники, площадь, теорема Пифагора, подобные треугольники, тригонометрические соотношения, окружность, четыре замечательные точки треугольника. Ядро совпадает с армянским."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 2 },
-    units: [
-      unit(t("Quadrilaterals", "Քառանկյուններ", "Четырёхугольники"), t("Polygons, parallelogram and its tests, trapezium, rectangle, rhombus, square, symmetry.", "Բազմանկյուններ, զուգահեռագիծ և նրա հայտանիշները, սեղան, ուղղանկյուն, շեղանկյուն, քառակուսի, համաչափություն։", "Многоугольники, параллелограмм и его признаки, трапеция, прямоугольник, ромб, квадрат, симметрия."), [
-        ["polygons", "Polygons and the sum of their angles", "Բազմանկյուններ և դրանց անկյունների գումարը", "Многоугольники и сумма их углов"],
-        ["parallelogram", "Parallelogram: properties and tests", "Զուգահեռագիծ․ հատկություններ և հայտանիշներ", "Параллелограмм: свойства и признаки"],
-        ["trapezium", "Trapezium", "Սեղան", "Трапеция"],
-        ["rectangle-rhombus-square", "Rectangle, rhombus, square", "Ուղղանկյուն, շեղանկյուն, քառակուսի", "Прямоугольник, ромб, квадрат"],
-        ["axial-central-symmetry", "Axial and central symmetry", "Առանցքային և կենտրոնային համաչափություն", "Осевая и центральная симметрия"],
-      ]),
-      unit(t("Area", "Մակերես", "Площадь"), t("Area of rectangle, parallelogram, triangle, trapezium; Pythagorean theorem.", "Ուղղանկյան, զուգահեռագծի, եռանկյան, սեղանի մակերես, Պյութագորասի թեորեմ։", "Площадь прямоугольника, параллелограмма, треугольника, трапеции; теорема Пифагора."), [
-        ["area-concept", "Area of a polygon and of a rectangle", "Բազմանկյան և ուղղանկյան մակերես", "Площадь многоугольника и прямоугольника"],
-        ["area-parallelogram-triangle", "Area of a parallelogram and a triangle", "Զուգահեռագծի և եռանկյան մակերես", "Площадь параллелограмма и треугольника"],
-        ["area-trapezium", "Area of a trapezium", "Սեղանի մակերես", "Площадь трапеции"],
-        ["pythagoras", "The Pythagorean theorem", "Պյութագորասի թեորեմ", "Теорема Пифагора"],
-        ["pythagoras-converse", "Converse of the Pythagorean theorem; Pythagorean triples", "Պյութագորասի հակադարձ թեորեմ, պյութագորասյան եռյակներ", "Обратная теорема Пифагора; пифагоровы тройки"],
-        ["herons-formula", "Heron's formula", "Հերոնի բանաձև", "Формула Герона"],
-      ]),
-      unit(t("Similar triangles", "Նման եռանկյուններ", "Подобные треугольники"), t("Proportional segments, similarity tests, midline, applications, trigonometric ratios.", "Համեմատական հատվածներ, նմանության հայտանիշներ, միջին գիծ, կիրառություններ, եռանկյունաչափական հարաբերություններ։", "Пропорциональные отрезки, признаки подобия, средняя линия, применения, тригонометрические соотношения."), [
-        ["similarity-definition", "Proportional segments and similar triangles", "Համեմատական հատվածներ և նման եռանկյուններ", "Пропорциональные отрезки и подобные треугольники"],
-        ["similarity-tests", "Three similarity tests", "Նմանության երեք հայտանիշները", "Три признака подобия треугольников"],
-        ["midline", "Midline of a triangle; medians meet at one point", "Եռանկյան միջին գիծ, միջնագծերի հատման կետ", "Средняя линия треугольника; точка пересечения медиан"],
-        ["proportional-in-right-triangle", "Proportional segments in a right triangle", "Համեմատական հատվածներ ուղղանկյուն եռանկյան մեջ", "Пропорциональные отрезки в прямоугольном треугольнике"],
-        ["sin-cos-tan-acute", "Sine, cosine and tangent of an acute angle", "Սուր անկյան սինուս, կոսինուս և տանգենս", "Синус, косинус и тангенс острого угла"],
-        ["trig-values-30-45-60", "Values for 30°, 45°, 60°", "30°, 45°, 60° անկյունների արժեքները", "Значения для 30°, 45°, 60°"],
-      ]),
-      unit(t("Circle", "Շրջանագիծ", "Окружность"), t("Tangent, central and inscribed angles, four remarkable points, inscribed and circumscribed circles.", "Շոշափող, կենտրոնային և ներգծյալ անկյուններ, չորս նշանավոր կետեր, ներգծյալ և արտագծյալ շրջանագծեր։", "Касательная, центральные и вписанные углы, четыре замечательные точки, вписанная и описанная окружности."), [
-        ["tangent-line", "Tangent to a circle", "Շրջանագծի շոշափող", "Касательная к окружности"],
-        ["central-inscribed-angles", "Central and inscribed angles", "Կենտրոնային և ներգծյալ անկյուններ", "Центральные и вписанные углы"],
-        ["chords-theorem", "Intersecting chords theorem", "Հատվող լարերի թեորեմ", "Теорема об отрезках пересекающихся хорд"],
-        ["remarkable-points", "Four remarkable points of a triangle", "Եռանկյան չորս նշանավոր կետերը", "Четыре замечательные точки треугольника"],
-        ["inscribed-circumscribed", "Inscribed and circumscribed circles", "Ներգծյալ և արտագծյալ շրջանագծեր", "Вписанная и описанная окружности"],
-      ]),
-    ],
-  },
+  geometryGrade8,
   {
     subject: "geometry",
     grade: 9,
