@@ -1,6 +1,7 @@
 import { t, unit, type CourseSeed } from "../../types";
 import { physicsGrade7 } from "./grade-7";
 import { physicsGrade8 } from "./grade-8";
+import { physicsGrade9 } from "./grade-9";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -10,60 +11,7 @@ const notes = (am: [string, string, string], ru: [string, string, string]) => ({
 export const physics: CourseSeed[] = [
   physicsGrade7,
   physicsGrade8,
-  {
-    subject: "physics",
-    grade: 9,
-    title: t("Physics · Grade 9", "Ֆիզիկա · 9-րդ դասարան", "Физика · 9 класс"),
-    description: t("Laws of motion (kinematics and Newton's laws), mechanical oscillations and waves, electromagnetic field, atomic and nuclear physics basics.", "Շարժման օրենքներ (կինեմատիկա և Նյուտոնի օրենքներ), մեխանիկական տատանումներ և ալիքներ, էլեկտրամագնիսական դաշտ, ատոմի և միջուկի ֆիզիկայի հիմունքներ։", "Законы движения (кинематика и законы Ньютона), механические колебания и волны, электромагнитное поле, основы атомной и ядерной физики."),
-    curriculumNotes: notes(
-      ["Armenia grade 9 (2 h/week; end of basic school): kinematics (uniform and uniformly accelerated motion, free fall, circular motion), dynamics (Newton's laws, gravitation, momentum), oscillations and waves, sound, electromagnetic induction and waves, structure of the atom and nucleus, radioactivity, elements of astronomy.", "Հայաստան, 9-րդ դասարան (2 ժ/շաբ., հիմնական դպրոցի ավարտ)՝ կինեմատիկա (հավասարաչափ և հավասարաչափ արագացող շարժում, ազատ անկում, շրջանագծով շարժում), դինամիկա (Նյուտոնի օրենքներ, տիեզերական ձգողություն, իմպուլս), տատանումներ և ալիքներ, ձայն, էլեկտրամագնիսական ինդուկցիա և ալիքներ, ատոմի և միջուկի կառուցվածք, ռադիոակտիվություն, աստղագիտության տարրեր։", "Армения, 9 класс (2 ч/нед.; окончание основной школы): кинематика (равномерное и равноускоренное движение, свободное падение, движение по окружности), динамика (законы Ньютона, тяготение, импульс), колебания и волны, звук, электромагнитная индукция и волны, строение атома и ядра, радиоактивность, элементы астрономии."],
-      ["Russia grade 9 (ФГОС ООО, 68–102 h): laws of interaction and motion of bodies, mechanical oscillations and waves, sound, electromagnetic field, structure of atom and nucleus, use of nuclear energy, structure and evolution of the Universe.", "Ռուսաստան, 9-րդ դասարան (ФГОС ООО, 68–102 ժ)՝ մարմինների փոխազդեցության և շարժման օրենքներ, մեխանիկական տատանումներ և ալիքներ, ձայն, էլեկտրամագնիսական դաշտ, ատոմի և միջուկի կառուցվածք, միջուկային էներգիա, Տիեզերքի կառուցվածք և էվոլյուցիա։", "Россия, 9 класс (ФГОС ООО, 68–102 ч): законы взаимодействия и движения тел, механические колебания и волны, звук, электромагнитное поле, строение атома и атомного ядра, использование ядерной энергии, строение и эволюция Вселенной."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 3 },
-    units: [
-      unit(t("Kinematics", "Կինեմատիկա", "Кинематика"), t("Reference frame, displacement, uniform and uniformly accelerated motion, free fall, circular motion.", "Հաշվարկման համակարգ, տեղափոխություն, հավասարաչափ և հավասարաչափ արագացող շարժում, ազատ անկում, շրջանագծով շարժում։", "Система отсчёта, перемещение, равномерное и равноускоренное движение, свободное падение, движение по окружности."), [
-        ["reference-frame-displacement", "Material point, reference frame, displacement", "Նյութական կետ, հաշվարկման համակարգ, տեղափոխություն", "Материальная точка, система отсчёта, перемещение"],
-        ["uniform-motion-equations", "Uniform rectilinear motion; equations and graphs", "Հավասարաչափ ուղղագիծ շարժում, հավասարումներ և գրաֆիկներ", "Равномерное прямолинейное движение; уравнения и графики"],
-        ["acceleration", "Uniformly accelerated motion; acceleration", "Հավասարաչափ արագացող շարժում, արագացում", "Равноускоренное движение; ускорение"],
-        ["accelerated-displacement", "Displacement in uniformly accelerated motion", "Տեղափոխություն հավասարաչափ արագացող շարժման դեպքում", "Перемещение при равноускоренном движении"],
-        ["free-fall", "Free fall; g", "Ազատ անկում, g", "Свободное падение; g"],
-        ["circular-motion", "Uniform circular motion; centripetal acceleration", "Հավասարաչափ շարժում շրջանագծով, կենտրոնաձիգ արագացում", "Равномерное движение по окружности; центростремительное ускорение"],
-        ["relativity-of-motion", "Relativity of motion", "Շարժման հարաբերականություն", "Относительность движения"],
-      ]),
-      unit(t("Dynamics", "Դինամիկա", "Динамика"), t("Newton's three laws, law of universal gravitation, artificial satellites, momentum, jet propulsion.", "Նյուտոնի երեք օրենք, տիեզերական ձգողության օրենք, արհեստական արբանյակներ, իմպուլս, ռեակտիվ շարժում։", "Три закона Ньютона, закон всемирного тяготения, искусственные спутники, импульс, реактивное движение."), [
-        ["newton-first-law", "Inertial frames; Newton's first law", "Իներցիալ համակարգեր, Նյուտոնի առաջին օրենք", "Инерциальные системы отсчёта; первый закон Ньютона"],
-        ["newton-second-law", "Newton's second law", "Նյուտոնի երկրորդ օրենք", "Второй закон Ньютона"],
-        ["newton-third-law", "Newton's third law", "Նյուտոնի երրորդ օրենք", "Третий закон Ньютона"],
-        ["universal-gravitation", "Law of universal gravitation", "Տիեզերական ձգողության օրենք", "Закон всемирного тяготения"],
-        ["satellites", "Artificial satellites; orbital speed", "Արհեստական արբանյակներ, առաջին տիեզերական արագություն", "Искусственные спутники Земли; первая космическая скорость"],
-        ["momentum", "Momentum; conservation of momentum", "Իմպուլս, իմպուլսի պահպանման օրենք", "Импульс тела; закон сохранения импульса"],
-        ["jet-propulsion", "Jet propulsion; rockets", "Ռեակտիվ շարժում, հրթիռներ", "Реактивное движение; ракеты"],
-        ["mechanical-energy-conservation", "Conservation of mechanical energy", "Մեխանիկական էներգիայի պահպանման օրենք", "Закон сохранения механической энергии"],
-      ]),
-      unit(t("Oscillations and waves", "Տատանումներ և ալիքներ", "Механические колебания и волны. Звук"), t("Pendulums, period, frequency, resonance, waves, sound characteristics.", "Ճոճանակներ, պարբերություն, հաճախություն, ռեզոնանս, ալիքներ, ձայնի բնութագրեր։", "Маятники, период, частота, резонанс, волны, характеристики звука."), [
-        ["oscillations-basics", "Free oscillations; pendulums", "Ազատ տատանումներ, ճոճանակներ", "Свободные колебания; маятники"],
-        ["period-frequency", "Amplitude, period, frequency; harmonic oscillations", "Ամպլիտուդ, պարբերություն, հաճախություն, հարմոնիկ տատանումներ", "Амплитуда, период, частота; гармонические колебания"],
-        ["damped-forced-resonance", "Damped and forced oscillations; resonance", "Մարող և հարկադրական տատանումներ, ռեզոնանս", "Затухающие и вынужденные колебания; резонанс"],
-        ["waves", "Longitudinal and transverse waves; wavelength", "Երկայնական և լայնական ալիքներ, ալիքի երկարություն", "Продольные и поперечные волны; длина волны"],
-        ["sound", "Sound: pitch, loudness, speed, echo", "Ձայն․ բարձրություն, ուժգնություն, արագություն, արձագանք", "Звук: высота, громкость, скорость, эхо"],
-      ]),
-      unit(t("Electromagnetic field", "Էլեկտրամագնիսական դաշտ", "Электромагнитное поле"), t("Magnetic field, induction, Faraday's law, alternating current, transformer, electromagnetic waves, light as a wave.", "Մագնիսական դաշտ, ինդուկցիա, Ֆարադեյի օրենք, փոփոխական հոսանք, տրանսֆորմատոր, էլեկտրամագնիսական ալիքներ, լույսը որպես ալիք։", "Магнитное поле, индукция, закон Фарадея, переменный ток, трансформатор, электромагнитные волны, свет как волна."), [
-        ["magnetic-field-induction", "Magnetic field; magnetic induction; Ampère force", "Մագնիսական դաշտ, մագնիսական ինդուկցիա, Ամպերի ուժ", "Магнитное поле; магнитная индукция; сила Ампера"],
-        ["electromagnetic-induction", "Electromagnetic induction; Lenz's rule", "Էլեկտրամագնիսական ինդուկցիա, Լենցի կանոն", "Электромагнитная индукция; правило Ленца"],
-        ["alternating-current", "Alternating current; generator; transformer", "Փոփոխական հոսանք, գեներատոր, տրանսֆորմատոր", "Переменный ток; генератор; трансформатор"],
-        ["em-waves", "Electromagnetic waves; the spectrum", "Էլեկտրամագնիսական ալիքներ, սպեկտր", "Электромагнитные волны; шкала электромагнитных волн"],
-        ["light-wave-dispersion", "Light as a wave; dispersion; spectra", "Լույսը որպես ալիք, դիսպերսիա, սպեկտրներ", "Свет как волна; дисперсия; спектры"],
-      ]),
-      unit(t("Atom and nucleus", "Ատոմ և միջուկ", "Строение атома и атомного ядра"), t("Radioactivity, models of the atom, nucleus, nuclear reactions, nuclear energy, the Universe.", "Ռադիոակտիվություն, ատոմի մոդելներ, միջուկ, միջուկային ռեակցիաներ, միջուկային էներգիա, Տիեզերք։", "Радиоактивность, модели атома, ядро, ядерные реакции, ядерная энергия, Вселенная."), [
-        ["radioactivity", "Radioactivity; α, β, γ radiation", "Ռադիոակտիվություն, α, β, γ ճառագայթում", "Радиоактивность; α-, β-, γ-излучение"],
-        ["rutherford-model", "Rutherford's experiment; planetary model", "Ռեզերֆորդի փորձ, մոլորակային մոդել", "Опыт Резерфорда; планетарная модель атома"],
-        ["nucleus-structure", "Composition of the nucleus; isotopes; nuclear forces", "Միջուկի կազմություն, իզոտոպներ, միջուկային ուժեր", "Состав ядра; изотопы; ядерные силы"],
-        ["nuclear-reactions-energy", "Fission, chain reaction, nuclear power; fusion", "Տրոհում, շղթայական ռեակցիա, միջուկային էներգետիկա, սինթեզ", "Деление ядер, цепная реакция, ядерная энергетика; синтез"],
-        ["radiation-and-life", "Radiation and living organisms; dosimetry", "Ճառագայթում և կենդանի օրգանիզմներ, դոզիմետրիա", "Излучение и живые организмы; дозиметрия"],
-        ["universe", "Solar system, stars, galaxies, Big Bang", "Արեգակնային համակարգ, աստղեր, գալակտիկաներ, Մեծ պայթյուն", "Солнечная система, звёзды, галактики, Большой взрыв"],
-      ]),
-    ],
-  },
+  physicsGrade9,
   {
     subject: "physics",
     grade: 10,
