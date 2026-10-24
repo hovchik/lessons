@@ -5,6 +5,7 @@ import { armenianGrade2 } from "./grade-2";
 import { armenianGrade3 } from "./grade-3";
 import { armenianGrade4 } from "./grade-4";
 import { armenianGrade5 } from "./grade-5";
+import { armenianGrade6 } from "./grade-6";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -12,47 +13,7 @@ export const armenian: CourseSeed[] = [
   armenianGrade3,
   armenianGrade4,
   armenianGrade5,
-  course(
-    6,
-    ["Morphology part one: noun, adjective, numeral, pronoun; literature of the 19th century — Abovyan, Proshyan, Raffi, Tumanyan.", "Ձևաբանություն, մաս առաջին՝ գոյական, ածական, թվական, դերանուն, 19-րդ դարի գրականություն՝ Աբովյան, Պռոշյան, Րաֆֆի, Թումանյան։", "Морфология, часть первая: существительное, прилагательное, числительное, местоимение; литература XIX века — Абовян, Прошян, Раффи, Туманян."],
-    ["Armenia grade 6: «Հայոց լեզու» (3 h) + «Գրականություն» (2 h). Language: parts of speech system, noun (all categories), adjective, numeral, pronoun (all classes). Literature: Abovyan's «Վերք Հայաստանի» (excerpts), Proshyan, Raffi «Սամվել» excerpts, Tumanyan's quatrains, Shirvanzade, Sevak for youth.", "Հայաստան, 6-րդ դասարան՝ «Հայոց լեզու» (3 ժ) + «Գրականություն» (2 ժ)։ Լեզու՝ խոսքի մասերի համակարգ, գոյական (բոլոր կարգերը), ածական, թվական, դերանուն (բոլոր տեսակները)։ Գրականություն՝ Աբովյանի «Վերք Հայաստանի» (հատվածներ), Պռոշյան, Րաֆֆի «Սամվել» (հատվածներ), Թումանյանի քառյակներ, Շիրվանզադե, Սևակ։", "Армения, 6 класс: «Армянский язык» (3 ч) + «Литература» (2 ч). Язык: система частей речи, существительное (все категории), прилагательное, числительное, местоимение (все разряды). Литература: «Раны Армении» Абовяна (отрывки), Прошян, «Самвел» Раффи (отрывки), четверостишия Туманяна, Ширванзаде, Севак для юношества."],
-    ruNote,
-    { armenia: 5, russia: null },
-    [
-      unit(t("Noun", "Գոյական", "Существительное"), t("Categories of the noun: number, case, definiteness, possessive articles; declension in full.", "Գոյականի կարգերը՝ թիվ, հոլով, առկայացում, ստացական հոդեր, հոլովումն ամբողջությամբ։", "Категории существительного: число, падеж, определённость, притяжательные артикли; полное склонение."), [
-        ["noun-categories", "Noun: lexical groups and grammatical categories", "Գոյական․ իմաստային խմբեր և քերականական կարգեր", "Существительное: лексические группы и грамматические категории"],
-        ["number-special", "Number: special plurals, collective nouns", "Թիվ․ հատուկ հոգնակիներ, հավաքական գոյականներ", "Число: особые формы множественного, собирательные"],
-        ["possessive-articles", "Possessive articles -ս, -դ, -ը", "Ստացական հոդեր -ս, -դ, -ը", "Притяжательные артикли -ս, -դ, -ը"],
-        ["declension-full", "Full declension table and exceptions", "Հոլովման լրիվ աղյուսակ և բացառություններ", "Полная таблица склонения и исключения"],
-        ["noun-syntax", "The noun in the sentence", "Գոյականը նախադասության մեջ", "Существительное в предложении"],
-      ]),
-      unit(t("Adjective and numeral", "Ածական և թվական", "Прилагательное и числительное"), t("Qualitative and relative adjectives, degrees, substantivisation; numeral types and spelling.", "Որակական և հարաբերական ածականներ, աստիճաններ, գոյականացում, թվականի տեսակներ և ուղղագրություն։", "Качественные и относительные прилагательные, степени, субстантивация; разряды числительных и правописание."), [
-        ["adjective-types", "Qualitative and relative adjectives", "Որակական և հարաբերական ածականներ", "Качественные и относительные прилагательные"],
-        ["adjective-degrees-6", "Degrees of comparison in detail", "Համեմատության աստիճանները մանրամասն", "Степени сравнения подробно"],
-        ["numeral-types", "Cardinal, ordinal, distributive, fractional numerals", "Քանակական, դասական, բաշխական, կոտորակային թվականներ", "Количественные, порядковые, разделительные, дробные числительные"],
-        ["numeral-spelling", "Spelling of numerals; dates", "Թվականների ուղղագրություն, ամսաթվեր", "Правописание числительных; даты"],
-      ]),
-      unit(t("Pronoun", "Դերանուն", "Местоимение"), t("Personal, demonstrative, reciprocal, interrogative, relative, indefinite, negative, definite pronouns.", "Անձնական, ցուցական, փոխադարձ, հարցական, հարաբերական, անորոշ, ժխտական, որոշյալ դերանուններ։", "Личные, указательные, взаимные, вопросительные, относительные, неопределённые, отрицательные, определительные."), [
-        ["pronoun-classes", "Classes of pronouns", "Դերանունների տեսակները", "Разряды местоимений"],
-        ["demonstratives", "Demonstratives: սա, դա, նա; այս, այդ, այն", "Ցուցական․ սա, դա, նա, այս, այդ, այն", "Указательные: սա, դա, նա; այս, այդ, այն"],
-        ["interrogative-relative", "Interrogative and relative pronouns", "Հարցական և հարաբերական դերանուններ", "Вопросительные и относительные местоимения"],
-        ["pronoun-declension", "Declension of pronouns", "Դերանունների հոլովում", "Склонение местоимений"],
-      ]),
-      unit(t("Literature: the 19th century", "Գրականություն․ 19-րդ դար", "Литература: XIX век"), t("Abovyan, Proshyan, Raffi, Patkanian, Tumanyan's quatrains.", "Աբովյան, Պռոշյան, Րաֆֆի, Պատկանյան, Թումանյանի քառյակները։", "Абовян, Прошян, Раффи, Патканян, четверостишия Туманяна."), [
-        ["abovyan", "Khachatur Abovyan: «Վերք Հայաստանի» (excerpts)", "Խաչատուր Աբովյան․ «Վերք Հայաստանի» (հատվածներ)", "Хачатур Абовян: «Раны Армении» (отрывки)"],
-        ["proshyan", "Perch Proshyan: «Սոս և Վարդիթեր»", "Պերճ Պռոշյան․ «Սոս և Վարդիթեր»", "Перч Прошян: «Сос и Вардитер»"],
-        ["raffi-samvel", "Raffi: «Սամվել» (excerpts)", "Րաֆֆի․ «Սամվել» (հատվածներ)", "Раффи: «Самвел» (отрывки)"],
-        ["patkanian", "Rafael Patkanian: patriotic poems", "Ռաֆայել Պատկանյան․ հայրենասիրական բանաստեղծություններ", "Рафаэл Патканян: патриотические стихи"],
-        ["tumanyan-quatrains", "Tumanyan: quatrains and «Լոռեցի Սաքոն»", "Թումանյան․ քառյակներ և «Լոռեցի Սաքոն»", "Туманян: четверостишия и «Сако Лорийский»"],
-      ]),
-      unit(t("Literature: 20th century and world", "Գրականություն․ 20-րդ դար և աշխարհ", "Литература: XX век и мир"), t("Shirvanzade, Zoryan, Sevak, Kaputikyan; Tolstoy, Twain, Saint-Exupéry in Armenian.", "Շիրվանզադե, Զորյան, Սևակ, Կապուտիկյան, Տոլստոյ, Տվեն, Սենտ-Էքզյուպերի հայերեն։", "Ширванзаде, Зорян, Севак, Капутикян; Толстой, Твен, Сент-Экзюпери на армянском."), [
-        ["zoryan", "Stepan Zoryan: stories", "Ստեփան Զորյան․ պատմվածքներ", "Степан Зорян: рассказы"],
-        ["sevak-6", "Paruyr Sevak: selected poems", "Պարույր Սևակ․ ընտրված բանաստեղծություններ", "Паруйр Севак: избранные стихи"],
-        ["little-prince", "Saint-Exupéry: «Փոքրիկ իշխանը»", "Սենտ-Էքզյուպերի․ «Փոքրիկ իշխանը»", "Сент-Экзюпери: «Маленький принц»"],
-        ["twain-tolstoy", "Twain and Tolstoy in Armenian translation", "Տվեն և Տոլստոյ հայերեն թարգմանությամբ", "Твен и Толстой в армянском переводе"],
-      ]),
-    ],
-  ),
+  armenianGrade6,
   course(
     7,
     ["Morphology part two: the verb system in full, adverb, function words; literature — Armenian medieval poetry and the 20th century.", "Ձևաբանություն, մաս երկրորդ՝ բայի համակարգն ամբողջությամբ, մակբայ, սպասարկու բառեր, գրականություն՝ հայ միջնադարյան պոեզիա և 20-րդ դար։", "Морфология, часть вторая: полная система глагола, наречие, служебные слова; литература — армянская средневековая поэзия и XX век."],
