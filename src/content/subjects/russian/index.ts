@@ -7,6 +7,7 @@ import { russianGrade4 } from "./grade-4";
 import { russianGrade5 } from "./grade-5";
 import { russianGrade6 } from "./grade-6";
 import { russianGrade7 } from "./grade-7";
+import { russianGrade8 } from "./grade-8";
 
 export const russian: CourseSeed[] = [
   russianGrade1,
@@ -16,46 +17,7 @@ export const russian: CourseSeed[] = [
   russianGrade5,
   russianGrade6,
   russianGrade7,
-  course(
-    8,
-    ["Syntax of the simple sentence: phrase, two-member and one-member sentences, homogeneous and detached members, address, parenthetical constructions, direct speech; literature of the 19th–20th centuries.", "Պարզ նախադասության շարահյուսություն՝ բառակապակցություն, երկկազմ և միակազմ նախադասություններ, համադաս և տրոհված անդամներ, կոչական, միջանկյալ կառույցներ, ուղղակի խոսք, 19–20-րդ դարերի գրականություն։", "Синтаксис простого предложения: словосочетание, двусоставные и односоставные предложения, однородные и обособленные члены, обращение, вводные конструкции, прямая речь; литература XIX–XX веков."],
-    ["Armenia grade 8 (2 h/week): simple sentence syntax at a functional level, punctuation, text and style, reading Pushkin's «Капитанская дочка», Gogol's «Ревизор», Turgenev, Tolstoy, Chekhov, Bulgakov, Shukshin; essays and oral presentations.", "Հայաստան, 8-րդ դասարան (2 ժ/շաբ.)՝ պարզ նախադասության շարահյուսություն գործառական մակարդակով, կետադրություն, տեքստ և ոճ, Պուշկինի «Капитанская дочка», Գոգոլի «Ревизор», Տուրգենև, Տոլստոյ, Չեխով, Բուլգակով, Շուկշին, շարադրություններ և բանավոր ներկայացումներ։", "Армения, 8 класс (2 ч/нед.): синтаксис простого предложения на функциональном уровне, пунктуация, текст и стиль, чтение «Капитанской дочки» Пушкина, «Ревизора» Гоголя, Тургенева, Толстого, Чехова, Булгакова, Шукшина; сочинения и устные выступления."],
-    ["Russia grade 8 (ФГОС ООО, Russian 3 h + Literature 2 h): phrase, simple sentence, two-member (predicate types, dash), one-member, incomplete, homogeneous and detached members, address, parenthetical and inserted constructions, direct speech and citation. Literature: Fonvizin's «Недоросль», Pushkin's «Капитанская дочка», Lermontov's «Мцыри», Gogol's «Ревизор», «Шинель», Tolstoy's «После бала», Chekhov, Bunin, Kuprin, Blok, Yesenin, Zoshchenko, Teffi, Tvardovsky's «Василий Тёркин», Platonov, Astafiev.", "Ռուսաստան, 8-րդ դասարան (ФГОС ООО, ռուսերեն 3 ժ + գրականություն 2 ժ)՝ բառակապակցություն, պարզ նախադասություն, երկկազմ, միակազմ, թերի, համադաս և տրոհված անդամներ, կոչական, միջանկյալ և ներդիր կառույցներ, ուղղակի խոսք և մեջբերում։ Գրականություն՝ Ֆոնվիզին, Պուշկինի «Капитанская дочка», Լերմոնտովի «Мцыри», Գոգոլի «Ревизор», «Шинель», Տոլստոյի «После бала», Չեխով, Բունին, Կուպրին, Բլոկ, Եսենին, Զոշչենկո, Թեֆի, Տվարդովսկու «Василий Тёркин», Պլատոնով, Աստաֆև։", "Россия, 8 класс (ФГОС ООО, русский 3 ч + литература 2 ч): словосочетание, простое предложение, двусоставное (типы сказуемого, тире), односоставное, неполное, однородные и обособленные члены, обращение, вводные и вставные конструкции, прямая речь и цитирование. Литература: Фонвизин «Недоросль», Пушкин «Капитанская дочка», Лермонтов «Мцыри», Гоголь «Ревизор», «Шинель», Толстой «После бала», Чехов, Бунин, Куприн, Блок, Есенин, Зощенко, Тэффи, Твардовский «Василий Тёркин», Платонов, Астафьев."],
-    { armenia: 2, russia: 3 },
-    [
-      unit(t("Phrase and two-member sentence", "Բառակապակցություն և երկկազմ նախադասություն", "Словосочетание и двусоставное предложение"), t("Types of connection; subject, predicate types, dash; secondary members.", "Կապի տեսակներ, ենթակա, ստորոգյալի տեսակներ, գծիկ, երկրորդական անդամներ։", "Виды связи; подлежащее, типы сказуемого, тире; второстепенные члены."), [
-        ["ru8-phrase-connection", "Phrase: agreement, government, adjunction", "Բառակապակցություն․ համաձայնություն, խնդրառություն, առդրություն", "Словосочетание: согласование, управление, примыкание"],
-        ["ru8-predicate-types", "Simple verbal, compound verbal and compound nominal predicate", "Պարզ բայական, բաղադրյալ բայական և բաղադրյալ անվանական ստորոգյալ", "Простое глагольное, составное глагольное и составное именное сказуемое"],
-        ["ru8-dash", "Dash between subject and predicate", "Գծիկ ենթակայի և ստորոգյալի միջև", "Тире между подлежащим и сказуемым"],
-        ["ru8-secondary-members", "Secondary members: object, attribute, apposition, adverbial", "Երկրորդական անդամներ․ խնդիր, որոշիչ, բացահայտիչ, պարագա", "Второстепенные члены: дополнение, определение, приложение, обстоятельство"],
-      ]),
-      unit(t("One-member and incomplete sentences", "Միակազմ և թերի նախադասություններ", "Односоставные и неполные предложения"), t("Nominative, definite-personal, indefinite-personal, generalised-personal, impersonal; incomplete sentences.", "Անվանական, որոշյալ-դիմավոր, անորոշ-դիմավոր, ընդհանրացված-դիմավոր, անդեմ, թերի նախադասություններ։", "Назывные, определённо-личные, неопределённо-личные, обобщённо-личные, безличные; неполные предложения."), [
-        ["ru8-nominative-personal", "Nominative and definite/indefinite-personal sentences", "Անվանական և որոշյալ/անորոշ-դիմավոր նախադասություններ", "Назывные, определённо-личные и неопределённо-личные предложения"],
-        ["ru8-impersonal", "Impersonal sentences", "Անդեմ նախադասություններ", "Безличные предложения"],
-        ["ru8-incomplete", "Incomplete sentences; dash in incomplete sentences", "Թերի նախադասություններ, գծիկ", "Неполные предложения; тире в неполном предложении"],
-      ]),
-      unit(t("Complicated sentence", "Բարդացված նախադասություն", "Осложнённое предложение"), t("Homogeneous members; detached attributes, appositions, adverbials, clarifying members; address; parenthetical and inserted constructions.", "Համադաս անդամներ, տրոհված որոշիչներ, բացահայտիչներ, պարագաներ, պարզաբանող անդամներ, կոչական, միջանկյալ և ներդիր կառույցներ։", "Однородные члены; обособленные определения, приложения, обстоятельства, уточняющие члены; обращение; вводные и вставные конструкции."), [
-        ["ru8-homogeneous", "Homogeneous members; generalising words; colon and dash", "Համադաս անդամներ, ընդհանրացնող բառեր, երկու կետ և գծիկ", "Однородные члены; обобщающие слова; двоеточие и тире"],
-        ["ru8-detached-attributes", "Detached attributes and appositions", "Տրոհված որոշիչներ և բացահայտիչներ", "Обособленные определения и приложения"],
-        ["ru8-detached-adverbials", "Detached adverbials; clarifying members", "Տրոհված պարագաներ, պարզաբանող անդամներ", "Обособленные обстоятельства; уточняющие члены"],
-        ["ru8-address-parenthetical", "Address; parenthetical words and sentences", "Կոչական, միջանկյալ բառեր և նախադասություններ", "Обращение; вводные слова и предложения"],
-        ["ru8-inserted-direct-speech", "Inserted constructions; direct speech and citation", "Ներդիր կառույցներ, ուղղակի խոսք և մեջբերում", "Вставные конструкции; прямая речь и цитирование"],
-      ]),
-      unit(t("Literature: 18th–19th centuries", "Գրականություն․ 18–19-րդ դարեր", "Литература: XVIII–XIX века"), t("Fonvizin, Pushkin's «Капитанская дочка», Lermontov's «Мцыри», Gogol's «Ревизор» and «Шинель», Tolstoy, Chekhov.", "Ֆոնվիզին, Պուշկինի «Капитанская дочка», Լերմոնտովի «Мцыри», Գոգոլի «Ревизор» և «Шинель», Տոլստոյ, Չեխով։", "Фонвизин, «Капитанская дочка» Пушкина, «Мцыри» Лермонтова, «Ревизор» и «Шинель» Гоголя, Толстой, Чехов."), [
-        ["ru8-fonvizin", "Fonvizin: «Недоросль»", "Ֆոնվիզին․ «Недоросль»", "Фонвизин: «Недоросль»"],
-        ["ru8-pushkin-captain", "Pushkin: «Капитанская дочка»", "Պուշկին․ «Капитанская дочка»", "Пушкин: «Капитанская дочка»"],
-        ["ru8-lermontov-mtsyri", "Lermontov: «Мцыри»", "Լերմոնտով․ «Мцыри»", "Лермонтов: «Мцыри»"],
-        ["ru8-gogol-revizor", "Gogol: «Ревизор», «Шинель»", "Գոգոլ․ «Ревизор», «Шинель»", "Гоголь: «Ревизор», «Шинель»"],
-        ["ru8-tolstoy-chekhov-8", "Tolstoy's «После бала»; Chekhov's «О любви»", "Տոլստոյի «После бала», Չեխովի «О любви»", "Толстой «После бала»; Чехов «О любви»"],
-      ]),
-      unit(t("Literature: 20th century", "Գրականություն․ 20-րդ դար", "Литература: XX век"), t("Bunin, Kuprin, Blok, Yesenin, Zoshchenko, Teffi, Tvardovsky's «Василий Тёркин», Shukshin.", "Բունին, Կուպրին, Բլոկ, Եսենին, Զոշչենկո, Թեֆի, Տվարդովսկու «Василий Тёркин», Շուկշին։", "Бунин, Куприн, Блок, Есенин, Зощенко, Тэффи, «Василий Тёркин» Твардовского, Шукшин."), [
-        ["ru8-bunin-kuprin", "Bunin's «Кавказ»; Kuprin's «Куст сирени»", "Բունինի «Кавказ», Կուպրինի «Куст сирени»", "Бунин «Кавказ»; Куприн «Куст сирени»"],
-        ["ru8-blok-yesenin", "Blok's «Россия»; Yesenin's «Пугачёв»", "Բլոկի «Россия», Եսենինի «Пугачёв»", "Блок «Россия»; Есенин «Пугачёв»"],
-        ["ru8-tvardovsky-tyorkin", "Tvardovsky: «Василий Тёркин»", "Տվարդովսկի․ «Василий Тёркин»", "Твардовский: «Василий Тёркин»"],
-        ["ru8-zoshchenko-shukshin", "Zoshchenko, Teffi, Shukshin: humour and satire", "Զոշչենկո, Թեֆի, Շուկշին․ հումոր և երգիծանք", "Зощенко, Тэффи, Шукшин: юмор и сатира"],
-      ]),
-    ],
-  ),
+  russianGrade8,
   course(
     9,
     ["Syntax of the complex sentence, text and styles, review for the state exam; literature from Old Russian to the 20th century.", "Բարդ նախադասության շարահյուսություն, տեքստ և ոճեր, պետական քննության ամփոփում, գրականություն՝ հին ռուսականից մինչև 20-րդ դար։", "Синтаксис сложного предложения, текст и стили, повторение к экзамену; литература от древнерусской до XX века."],
