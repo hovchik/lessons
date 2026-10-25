@@ -3,6 +3,7 @@ import { geometryGrade7 } from "./grade-7";
 import { geometryGrade8 } from "./grade-8";
 import { geometryGrade9 } from "./grade-9";
 import { geometryGrade10 } from "./grade-10";
+import { geometryGrade11 } from "./grade-11";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -14,40 +15,7 @@ export const geometry: CourseSeed[] = [
   geometryGrade8,
   geometryGrade9,
   geometryGrade10,
-  {
-    subject: "geometry",
-    grade: 11,
-    title: t("Geometry · Grade 11", "Երկրաչափություն · 11-րդ դասարան", "Геометрия · 11 класс"),
-    description: t("Coordinate method in space, round bodies (cylinder, cone, sphere), volumes of solids.", "Կոորդինատային եղանակ տարածության մեջ, պտտման մարմիններ (գլան, կոն, գունդ), մարմինների ծավալներ։", "Метод координат в пространстве, тела вращения (цилиндр, конус, шар), объёмы тел."),
-    curriculumNotes: notes(
-      ["Armenia grade 11 (2 h/week): coordinates and vectors in space, scalar product, motions in space, cylinder, cone, sphere and ball, volumes of prism, pyramid, cylinder, cone, ball, surface areas.", "Հայաստան, 11-րդ դասարան (2 ժ/շաբ.)՝ կոորդինատներ և վեկտորներ տարածության մեջ, սկալյար արտադրյալ, շարժումներ, գլան, կոն, սֆերա և գունդ, պրիզմայի, բուրգի, գլանի, կոնի, գնդի ծավալներ, մակերևույթների մակերեսներ։", "Армения, 11 класс (2 ч/нед.): координаты и векторы в пространстве, скалярное произведение, движения в пространстве, цилиндр, конус, сфера и шар, объёмы призмы, пирамиды, цилиндра, конуса, шара, площади поверхностей."],
-      ["Russia grade 11 (ФГОС СОО, final year): coordinate method in space, cylinder, cone, ball, volumes of bodies. This is the end of the Russian geometry course.", "Ռուսաստան, 11-րդ դասարան (ФГОС СОО, ավարտական)՝ կոորդինատային եղանակ տարածության մեջ, գլան, կոն, գունդ, մարմինների ծավալներ։ Ռուսական երկրաչափության դասընթացն այստեղ ավարտվում է։", "Россия, 11 класс (ФГОС СОО, выпускной): метод координат в пространстве, цилиндр, конус, шар, объёмы тел. Этим завершается российский курс геометрии."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 2 },
-    units: [
-      unit(t("Coordinate method in space", "Կոորդինատային եղանակ տարածության մեջ", "Метод координат в пространстве"), t("Coordinates of points and vectors, scalar product, angle between lines and planes, motions.", "Կետերի և վեկտորների կոորդինատներ, սկալյար արտադրյալ, ուղիղների և հարթությունների միջև անկյուն, շարժումներ։", "Координаты точек и векторов, скалярное произведение, угол между прямыми и плоскостями, движения."), [
-        ["space-coordinates", "Rectangular coordinates in space", "Ուղղանկյուն կոորդինատներ տարածության մեջ", "Прямоугольная система координат в пространстве"],
-        ["space-vector-coordinates", "Coordinates of a vector; simple problems", "Վեկտորի կոորդինատները, պարզ խնդիրներ", "Координаты вектора; простейшие задачи"],
-        ["space-scalar-product", "Scalar product; angle between lines and planes", "Սկալյար արտադրյալ, անկյուն ուղիղների և հարթությունների միջև", "Скалярное произведение; угол между прямыми и плоскостями"],
-        ["plane-equation", "Equation of a plane", "Հարթության հավասարում", "Уравнение плоскости"],
-        ["space-motions", "Motions in space", "Շարժումներ տարածության մեջ", "Движения в пространстве"],
-      ]),
-      unit(t("Cylinder, cone and ball", "Գլան, կոն և գունդ", "Цилиндр, конус и шар"), t("Round bodies, their sections and surface areas.", "Պտտման մարմիններ, դրանց հատույթներ և մակերևույթների մակերեսներ։", "Тела вращения, их сечения и площади поверхностей."), [
-        ["cylinder", "Cylinder", "Գլան", "Цилиндр"],
-        ["cone", "Cone and truncated cone", "Կոն և հատած կոն", "Конус и усечённый конус"],
-        ["sphere-ball", "Sphere and ball; equation of a sphere", "Սֆերա և գունդ, սֆերայի հավասարում", "Сфера и шар; уравнение сферы"],
-        ["sphere-plane", "Sphere and plane; tangent plane", "Սֆերա և հարթություն, շոշափող հարթություն", "Взаимное расположение сферы и плоскости; касательная плоскость"],
-        ["sphere-area", "Area of a sphere", "Սֆերայի մակերեսը", "Площадь сферы"],
-      ]),
-      unit(t("Volumes", "Ծավալներ", "Объёмы тел"), t("Volume of parallelepiped, prism, cylinder, pyramid, cone, ball and its parts.", "Զուգահեռանիստի, պրիզմայի, գլանի, բուրգի, կոնի, գնդի և նրա մասերի ծավալ։", "Объём параллелепипеда, призмы, цилиндра, пирамиды, конуса, шара и его частей."), [
-        ["volume-concept", "Volume: concept and rectangular parallelepiped", "Ծավալ․ հասկացությունը և ուղղանկյուն զուգահեռանիստ", "Понятие объёма; объём прямоугольного параллелепипеда"],
-        ["volume-prism-cylinder", "Volume of a prism and a cylinder", "Պրիզմայի և գլանի ծավալ", "Объём призмы и цилиндра"],
-        ["volume-integral", "Volume via the integral; oblique prism", "Ծավալ ինտեգրալով, թեք պրիզմա", "Вычисление объёмов с помощью интеграла; наклонная призма"],
-        ["volume-pyramid-cone", "Volume of a pyramid and a cone", "Բուրգի և կոնի ծավալ", "Объём пирамиды и конуса"],
-        ["volume-ball", "Volume of a ball and its parts", "Գնդի և նրա մասերի ծավալ", "Объём шара и его частей"],
-      ]),
-    ],
-  },
+  geometryGrade11,
   {
     subject: "geometry",
     grade: 12,
