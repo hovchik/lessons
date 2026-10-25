@@ -2,6 +2,7 @@ import { t, unit, type CourseSeed } from "../../types";
 import { algebraGrade7 } from "./grade-7";
 import { algebraGrade8 } from "./grade-8";
 import { algebraGrade9 } from "./grade-9";
+import { algebraGrade10 } from "./grade-10";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -12,59 +13,7 @@ export const algebra: CourseSeed[] = [
   algebraGrade7,
   algebraGrade8,
   algebraGrade9,
-  {
-    subject: "algebra",
-    grade: 10,
-    title: t("Algebra · Grade 10", "Հանրահաշիվ · 10-րդ դասարան", "Алгебра · 10 класс"),
-    description: t("Real numbers, trigonometry, trigonometric equations, power and root functions, and the beginning of mathematical analysis.", "Իրական թվեր, եռանկյունաչափություն, եռանկյունաչափական հավասարումներ, աստիճանային և արմատային ֆունկցիաներ, մաթեմատիկական անալիզի սկիզբ։", "Действительные числа, тригонометрия, тригонометрические уравнения, степенные функции и начала математического анализа."),
-    curriculumNotes: notes(
-      ["Armenia grade 10 (high school; general or natural-science stream, 3–5 h/week): real numbers, trigonometric functions and identities, trigonometric equations, power functions and roots, sequences and limits, introduction to derivative (in some streams).", "Հայաստան, 10-րդ դասարան (ավագ դպրոց, ընդհանուր կամ բնագիտական հոսք, 3–5 ժ/շաբ.)՝ իրական թվեր, եռանկյունաչափական ֆունկցիաներ և նույնություններ, եռանկյունաչափական հավասարումներ, աստիճանային ֆունկցիաներ և արմատներ, հաջորդականություններ և սահմաններ, ածանցյալի ներմուծում (որոշ հոսքերում)։", "Армения, 10 класс (старшая школа, общий или естественно-научный поток, 3–5 ч/нед.): действительные числа, тригонометрические функции и тождества, тригонометрические уравнения, степенные функции и корни, последовательности и пределы, введение производной (в некоторых потоках)."],
-      ["Russia grade 10 (ФГОС СОО, «Алгебра и начала математического анализа», base 2–3 h / advanced 4 h): real numbers, power and root functions, trigonometric functions, trigonometric equations, derivative basics (advanced).", "Ռուսաստան, 10-րդ դասարան (ФГОС СОО, «Հանրահաշիվ և անալիզի սկիզբ», հիմնական 2–3 ժ / խորացված 4 ժ)՝ իրական թվեր, աստիճանային և արմատային ֆունկցիաներ, եռանկյունաչափական ֆունկցիաներ, եռանկյունաչափական հավասարումներ, ածանցյալի հիմունքներ (խորացված)։", "Россия, 10 класс (ФГОС СОО, «Алгебра и начала математического анализа», база 2–3 ч / углублённый 4 ч): действительные числа, степенные функции и корни, тригонометрические функции, тригонометрические уравнения, основы производной (углублённый уровень)."],
-    ),
-    hoursPerWeek: { armenia: 4, russia: 3 },
-    units: [
-      unit(t("Real numbers and powers", "Իրական թվեր և աստիճաններ", "Действительные числа и степени"), t("Real numbers, n-th roots, rational exponents, power functions.", "Իրական թվեր, n-րդ արմատ, ռացիոնալ ցուցիչ, աստիճանային ֆունկցիաներ։", "Действительные числа, корни n-й степени, рациональный показатель, степенные функции."), [
-        ["real-numbers", "The set of real numbers", "Իրական թվերի բազմությունը", "Множество действительных чисел"],
-        ["nth-roots-properties", "Roots of the n-th degree and their properties", "n-րդ աստիճանի արմատներ և հատկություններ", "Корни n-й степени и их свойства"],
-        ["rational-exponent", "Powers with rational exponents", "Ռացիոնալ ցուցիչով աստիճան", "Степень с рациональным показателем"],
-        ["power-functions-graphs", "Power functions and their graphs", "Աստիճանային ֆունկցիաներ և գրաֆիկներ", "Степенные функции и их графики"],
-        ["irrational-equations", "Irrational equations", "Իռացիոնալ հավասարումներ", "Иррациональные уравнения"],
-      ]),
-      unit(t("Trigonometric functions", "Եռանկյունաչափական ֆունկցիաներ", "Тригонометрические функции"), t("Radians, unit circle, sine, cosine, tangent, cotangent, basic identities.", "Ռադիան, միավոր շրջանագիծ, սինուս, կոսինուս, տանգենս, կոտանգենս, հիմնական նույնություններ։", "Радианы, единичная окружность, синус, косинус, тангенс, котангенс, основные тождества."), [
-        ["radians", "Angles in radians", "Անկյուններ ռադիաններով", "Радианная мера угла"],
-        ["unit-circle", "Rotating a point on the unit circle", "Կետի պտույտ միավոր շրջանագծի վրա", "Поворот точки вокруг начала координат"],
-        ["sin-cos-tan-definition", "Sine, cosine, tangent and cotangent of any angle", "Ցանկացած անկյան սինուս, կոսինուս, տանգենս, կոտանգենս", "Синус, косинус, тангенс и котангенс любого угла"],
-        ["trig-signs", "Signs of trigonometric functions", "Եռանկյունաչափական ֆունկցիաների նշանները", "Знаки тригонометрических функций"],
-        ["basic-identities", "The basic trigonometric identity", "Հիմնական եռանկյունաչափական նույնությունը", "Основное тригонометрическое тождество"],
-        ["reduction-formulas", "Reduction formulas", "Բերման բանաձևեր", "Формулы приведения"],
-      ]),
-      unit(t("Trigonometric formulas", "Եռանկյունաչափական բանաձևեր", "Тригонометрические формулы"), t("Sum and difference of angles, double angle, half angle, sum-to-product.", "Անկյունների գումար և տարբերություն, կրկնակի անկյուն, կես անկյուն, գումարի վերածում արտադրյալի։", "Сумма и разность углов, двойной угол, половинный угол, преобразование суммы в произведение."), [
-        ["addition-formulas", "Sine and cosine of a sum and a difference", "Գումարի և տարբերության սինուս և կոսինուս", "Синус и косинус суммы и разности"],
-        ["double-angle", "Double angle formulas", "Կրկնակի անկյան բանաձևեր", "Формулы двойного угла"],
-        ["half-angle", "Half angle formulas", "Կես անկյան բանաձևեր", "Формулы половинного угла"],
-        ["sum-to-product", "Sum to product and product to sum", "Գումարից արտադրյալ և արտադրյալից գումար", "Преобразование суммы в произведение и произведения в сумму"],
-      ]),
-      unit(t("Trigonometric equations", "Եռանկյունաչափական հավասարումներ", "Тригонометрические уравнения"), t("Inverse trigonometric functions, cos x = a, sin x = a, tan x = a, methods of solution.", "Հակադարձ եռանկյունաչափական ֆունկցիաներ, cos x = a, sin x = a, tan x = a, լուծման եղանակներ։", "Обратные тригонометрические функции, cos x = a, sin x = a, tg x = a, методы решения."), [
-        ["arccos", "Equation cos x = a and arccosine", "cos x = a հավասարումը և արկկոսինուս", "Уравнение cos x = a и арккосинус"],
-        ["arcsin", "Equation sin x = a and arcsine", "sin x = a հավասարումը և արկսինուս", "Уравнение sin x = a и арксинус"],
-        ["arctan", "Equation tan x = a and arctangent", "tan x = a հավասարումը և արկտանգենս", "Уравнение tg x = a и арктангенс"],
-        ["trig-equation-methods", "Methods: substitution, factoring, homogeneous equations", "Եղանակներ՝ փոխարինում, վերլուծում, համասեռ հավասարումներ", "Методы: замена, разложение, однородные уравнения"],
-        ["trig-inequalities", "Simple trigonometric inequalities", "Պարզ եռանկյունաչափական անհավասարություններ", "Простейшие тригонометрические неравенства"],
-      ]),
-      unit(t("Trigonometric functions and their graphs", "Եռանկյունաչափական ֆունկցիաներ և գրաֆիկներ", "Тригонометрические функции и их графики"), t("Periodicity, graphs of sine, cosine and tangent, transformations.", "Պարբերականություն, սինուսի, կոսինուսի և տանգենսի գրաֆիկներ, ձևափոխություններ։", "Периодичность, графики синуса, косинуса и тангенса, преобразования графиков."), [
-        ["periodicity", "Domain, range and periodicity", "Որոշման տիրույթ, արժեքներ և պարբերականություն", "Область определения, значений и периодичность"],
-        ["graph-sin-cos", "Graphs of y = sin x and y = cos x", "y = sin x և y = cos x գրաֆիկները", "Графики y = sin x и y = cos x"],
-        ["graph-tan", "Graph of y = tan x", "y = tan x-ի գրաֆիկը", "График y = tg x"],
-        ["graph-transformations", "Transformations: y = A sin(kx + b)", "Ձևափոխություններ՝ y = A sin(kx + b)", "Преобразования графиков: y = A sin(kx + b)"],
-      ]),
-      unit(t("Introduction to analysis", "Անալիզի ներածություն", "Начала анализа"), t("Limit of a sequence, limit of a function, continuity, the idea of the derivative.", "Հաջորդականության սահման, ֆունկցիայի սահման, անընդհատություն, ածանցյալի գաղափար։", "Предел последовательности, предел функции, непрерывность, идея производной."), [
-        ["sequence-limit", "Limit of a sequence", "Հաջորդականության սահման", "Предел последовательности"],
-        ["function-limit", "Limit of a function and continuity", "Ֆունկցիայի սահման և անընդհատություն", "Предел функции и непрерывность"],
-        ["derivative-idea", "Instantaneous speed and the derivative", "Պահի արագություն և ածանցյալ", "Мгновенная скорость и производная"],
-        ["derivative-rules-intro", "Derivatives of basic functions", "Հիմնական ֆունկցիաների ածանցյալներ", "Производные элементарных функций"],
-      ]),
-    ],
-  },
+  algebraGrade10,
   {
     subject: "algebra",
     grade: 11,
