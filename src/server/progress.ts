@@ -37,11 +37,12 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
   if (!lesson) return null;
   await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score: input.score, total: input.total, answers: input.answers });
   const now = new Date().toISOString();
-  const existing = await getLessonProgress(input.userId, lesson.id);
-  const bestPct = existing?.bestTotal ? existing.bestScore! / existing.bestTotal : -1;
-  const isBest = input.total > 0 && input.score / input.total >= bestPct;
+  const lp = schema.lessonProgress;
+  // Best-score comparison happens inside the upsert so two overlapping
+  // submissions cannot both read the same old best and overwrite each other.
+  const isBetter = sql`(${lp.bestTotal} is null or ${lp.bestTotal} = 0 or ${input.score} * ${lp.bestTotal} >= ${lp.bestScore} * ${input.total})`;
   await db
-    .insert(schema.lessonProgress)
+    .insert(lp)
     .values({
       userId: input.userId,
       lessonId: lesson.id,
@@ -55,13 +56,14 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
       updatedAt: now,
     })
     .onConflictDoUpdate({
-      target: [schema.lessonProgress.userId, schema.lessonProgress.lessonId],
+      target: [lp.userId, lp.lessonId],
       set: {
-        completedAt: sql`coalesce(${schema.lessonProgress.completedAt}, ${now})`,
+        completedAt: sql`coalesce(${lp.completedAt}, ${now})`,
         lastScore: input.score,
         lastTotal: input.total,
-        ...(isBest ? { bestScore: input.score, bestTotal: input.total } : {}),
-        attempts: sql`${schema.lessonProgress.attempts} + 1`,
+        bestScore: sql`case when ${isBetter} then ${input.score} else ${lp.bestScore} end`,
+        bestTotal: sql`case when ${isBetter} then ${input.total} else ${lp.bestTotal} end`,
+        attempts: sql`${lp.attempts} + 1`,
         updatedAt: now,
       },
     })
@@ -137,13 +139,14 @@ export async function getUserCourseSummaries(userId: string): Promise<CourseSumm
       subjectColor: schema.subjects.color,
       subjectIcon: schema.subjects.icon,
       totalLessons: sql<number>`(select count(*) from lessons l where l.course_id = ${schema.courses.id} and l.status = 'published')`,
-      completed: sql<number>`sum(case when ${lp.completedAt} is not null then 1 else 0 end)`,
+      completed: sql<number>`sum(case when ${lp.completedAt} is not null and ${schema.lessons.status} = 'published' then 1 else 0 end)`,
       bestScore: sql<number>`sum(coalesce(${lp.bestScore}, 0))`,
       bestTotal: sql<number>`sum(coalesce(${lp.bestTotal}, 0))`,
       quizzesTaken: sql<number>`sum(case when ${lp.bestTotal} is not null then 1 else 0 end)`,
       lastActivity: sql<string | null>`max(${lp.updatedAt})`,
     })
     .from(lp)
+    .innerJoin(schema.lessons, eq(lp.lessonId, schema.lessons.id))
     .innerJoin(schema.courses, eq(lp.courseId, schema.courses.id))
     .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(lp.userId, userId))
@@ -171,12 +174,13 @@ export async function getUserTotals(userId: string) {
   const lp = schema.lessonProgress;
   const row = await db
     .select({
-      completed: sql<number>`sum(case when ${lp.completedAt} is not null then 1 else 0 end)`,
+      completed: sql<number>`sum(case when ${lp.completedAt} is not null and ${schema.lessons.status} = 'published' then 1 else 0 end)`,
       bestScore: sql<number>`sum(coalesce(${lp.bestScore}, 0))`,
       bestTotal: sql<number>`sum(coalesce(${lp.bestTotal}, 0))`,
       courses: sql<number>`count(distinct ${lp.courseId})`,
     })
     .from(lp)
+    .innerJoin(schema.lessons, eq(lp.lessonId, schema.lessons.id))
     .where(eq(lp.userId, userId))
     .get();
   const attempts = (await db.select({ n: sql<number>`count(*)` }).from(schema.attempts).where(eq(schema.attempts.userId, userId)).get())?.n ?? 0;
@@ -225,7 +229,7 @@ export async function getAdminUsers(query = "") {
   const rows = await db
     .select({
       user: u,
-      completed: sql<number>`(select count(*) from lesson_progress p where p.user_id = ${u.id} and p.completed_at is not null)`,
+      completed: sql<number>`(select count(*) from lesson_progress p join lessons l on l.id = p.lesson_id where p.user_id = ${u.id} and p.completed_at is not null and l.status = 'published')`,
       attempts: sql<number>`(select count(*) from attempts a where a.user_id = ${u.id})`,
       bestScore: sql<number>`(select coalesce(sum(best_score), 0) from lesson_progress p where p.user_id = ${u.id})`,
       bestTotal: sql<number>`(select coalesce(sum(best_total), 0) from lesson_progress p where p.user_id = ${u.id})`,
