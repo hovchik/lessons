@@ -213,7 +213,7 @@ Sphere: $V = \\frac43 \\pi r^3$, surface $4\\pi r^2$, which is exactly four grea
 
 Шар: $V = \\frac43 \\pi r^3$, поверхность $4\\pi r^2$, ровно четыре больших круга. Представь кожуру апельсина, разрезанную на четыре круга.`,
   }),
-  tip("geometry", 11, "similar-solids-scale", "mentalMath", ["Scale $k$: lengths $k$, areas $k^2$, volumes $k^3$", "Մասշտաբ $k$․ երկարությունը $k$, մակերեսը $k^2$, ծավալը $k^3$", "Масштаб $k$: длины $k$, площади $k^2$, объёмы $k^3$"], {
+  tip("geometry", 11, "similar-solids-scale", "mentalMath", ["Scale k: lengths k, areas k², volumes k³", "Մասշտաբ k․ երկարությունը k, մակերեսը k², ծավալը k³", "Масштаб k: длины k, площади k², объёмы k³"], {
     en: `If a model is scaled by $k = 2$, its surface area grows $4$ times and its volume $8$ times. A cone cut by a plane halfway up: the small cone has $\\frac18$ of the volume, so the frustum has $\\frac78$.
 
 This one rule replaces a page of computation in "part of a pyramid" problems.`,
@@ -241,7 +241,7 @@ $$\\cos\\varphi = \\frac{\\lvert \\vec a \\cdot \\vec b \\rvert}{\\lvert \\vec a
 
 **Модуль** важен: угол между прямыми никогда не тупой, так что отрицательный косинус означает «отбрось знак». Положи тело на оси с началом в вершине, и большинство экзаменационных задач на угол занимают пять строк.`,
   }),
-  tip("geometry", 11, "answer-form-exam", "exam", ["Leave $\\pi$ and roots in the answer", "Թող $\\pi$-ն և արմատները պատասխանում", "Оставляй $\\pi$ и корни в ответе"], {
+  tip("geometry", 11, "answer-form-exam", "exam", ["Leave π and roots in the answer", "Թող π-ն և արմատները պատասխանում", "Оставляй π и корни в ответе"], {
     en: `Unless the question says "to two decimal places", the expected answer is **exact**: $12\\pi$, $\\frac{\\sqrt3}{4}a^2$, $\\frac{a^3\\sqrt2}{12}$. Writing $37{.}7$ for $12\\pi$ can lose the mark, and takes longer.
 
 Also, if the problem says "a cube with edge $a$", the answer must contain $a$. An answer of "48" means you invented a number.`,
@@ -283,7 +283,7 @@ Notice the pattern: $\\frac13$ for every pointed solid, $l$ for every slant surf
 
 Заметь закономерность: $\\frac13$ у каждого остроконечного тела, $l$ у каждой наклонной поверхности. Раз в неделю переписывай карточку по памяти.`,
   }),
-  tip("geometry", 12, "inscribed-sphere-radius", "problemSolving", ["Inscribed sphere: $r = \\frac{3V}{S_{\\text{total}}}$", "Ներգծյալ գունդ․ $r = \\frac{3V}{S_{\\text{լրիվ}}}$", "Вписанный шар: $r = \\frac{3V}{S_{\\text{полн}}}$"], {
+  tip("geometry", 12, "inscribed-sphere-radius", "problemSolving", ["Inscribed sphere: r = 3V / S", "Ներգծյալ գունդ․ r = 3V / S", "Вписанный шар: r = 3V / S"], {
     en: `For any polyhedron that has an inscribed sphere, join the centre to every face: you get pyramids of height $r$, so $V = \\frac13 r S_{\\text{total}}$ and
 
 $$r = \\frac{3V}{S_{\\text{total}}}$$

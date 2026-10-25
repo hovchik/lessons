@@ -31,7 +31,7 @@ $3x + 7 = 22$ → $3x = 22 - 7$. $+7$ перешло и стало $-7$.
 
 Умножение и деление тоже меняются: $3x = 15$ → $x = 15 : 3$.`,
   }),
-  tip("algebra", 7, "square-of-sum-picture", "memory", ["See $(a+b)^2$ as a square", "Տես $(a+b)^2$-ը որպես քառակուսի", "Представь $(a+b)^2$ как квадрат"], {
+  tip("algebra", 7, "square-of-sum-picture", "memory", ["See (a + b)² as a square", "Տես (a + b)²-ը որպես քառակուսի", "Представь (a + b)² как квадрат"], {
     en: `Draw a square with side $a + b$. Cut it into four pieces: a square $a^2$, a square $b^2$ and **two** rectangles $ab$.
 
 $$(a+b)^2 = a^2 + 2ab + b^2$$
@@ -106,7 +106,7 @@ $$x = \\frac{-k \\pm \\sqrt{D_1}}{a}$$
 
 Для $x^2 + 6x - 16 = 0$: $k = 3$, $D_1 = 9 + 16 = 25$, $x = -3 \\pm 5$, то есть $2$ и $-8$. Числа меньше, описок меньше.`,
   }),
-  tip("algebra", 8, "sum-of-coefficients", "mentalMath", ["Coefficients add to zero? Then $x=1$ is a root", "Գործակիցների գումարը զրո՞ է․ $x=1$-ը արմատ է", "Сумма коэффициентов ноль? Тогда $x=1$ корень"], {
+  tip("algebra", 8, "sum-of-coefficients", "mentalMath", ["Coefficients add to zero? Then x = 1 is a root", "Գործակիցների գումարը զրո՞ է․ x = 1-ը արմատ է", "Сумма коэффициентов ноль? Тогда x = 1 корень"], {
     en: `In $ax^2 + bx + c = 0$, if $a + b + c = 0$ then $x = 1$ is a root and the other is $\\frac{c}{a}$.
 
 $5x^2 - 8x + 3 = 0$: $5 - 8 + 3 = 0$, so $x_1 = 1$, $x_2 = \\frac{3}{5}$.
@@ -256,7 +256,7 @@ II քառորդում դրական է միայն սինուսը, III-ում՝ մ
 
 Значит $\\cos 200°$ отрицателен (III четверть), а $\\tan 200°$ положителен.`,
   }),
-  tip("algebra", 10, "reduction-formula-horse", "memory", ["The horse rule for $90° \\pm \\alpha$", "«Ձիու կանոնը» $90° \\pm \\alpha$-ի համար", "Правило лошади для $90° \\pm \\alpha$"], {
+  tip("algebra", 10, "reduction-formula-horse", "memory", ["The horse rule for 90° ± α", "«Ձիու կանոնը» 90° ± α-ի համար", "Правило лошади для 90° ± α"], {
     en: `Reducing $\\sin(90° + \\alpha)$ or $\\cos(270° - \\alpha)$: imagine a horse on the unit circle nodding. For $90°$ and $270°$ it nods **yes**, so the function **changes** (sin ↔ cos). For $180°$ and $360°$ it shakes **no**, so the function stays.
 
 Then take the sign from the quadrant of the original angle (treat $\\alpha$ as acute).

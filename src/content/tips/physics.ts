@@ -36,7 +36,7 @@ When a problem gives a density, compare it with water first. If your calculated 
 
 Когда задача даёт плотность, сначала сравни её с водой. Если у тебя плотность камня вышла $0{,}3$, ошибка в единицах.`,
   }),
-  tip("physics", 7, "g-equals-ten", "exam", ["Use $g = 10$ unless told otherwise", "Օգտագործիր $g = 10$, եթե այլ բան չի ասված", "Бери $g = 10$, если не сказано иное"], {
+  tip("physics", 7, "g-equals-ten", "exam", ["Use g = 10 unless told otherwise", "Օգտագործիր g = 10, եթե այլ բան չի ասված", "Бери g = 10, если не сказано иное"], {
     en: `School problems almost always allow $g \\approx 10\\ \\text{N/kg}$. Weight of $5\\ \\text{kg}$ is $50\\ \\text{N}$, done. Using $9{.}8$ slows you down and the extra precision is not rewarded.
 
 Read the problem header: if it says $g = 9{.}8$, use it. Otherwise 10.`,
@@ -241,7 +241,7 @@ Then the formula only has to confirm the number, and a wrong sign is immediately
 
 Потом формула лишь подтверждает число, а неверный знак сразу виден.`,
   }),
-  tip("physics", 11, "rms-vs-peak", "mentalMath", ["Peak is $\\sqrt2$ times the effective value", "Ամպլիտուդը $\\sqrt2$ անգամ գործող արժեքն է", "Амплитуда в $\\sqrt2$ раз больше действующего значения"], {
+  tip("physics", 11, "rms-vs-peak", "mentalMath", ["Peak is √2 times the effective value", "Ամպլիտուդը √2 անգամ գործող արժեքն է", "Амплитуда в √2 раз больше действующего значения"], {
     en: `Mains voltage "220 V" is the effective (RMS) value; the peak is $220\\sqrt2 \\approx 311\\ \\text{V}$. The same ratio links peak and effective current.
 
 Quick mental version: effective $\\approx 0{.}7 \\times$ peak, peak $\\approx 1{.}4 \\times$ effective. Capacitor ratings must survive the **peak**, which is why a 250 V capacitor is not enough for the mains.`,

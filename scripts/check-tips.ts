@@ -23,6 +23,7 @@ export function checkTips(): { errors: string[]; count: number; courses: number 
     if (!(TIP_CATEGORIES as readonly string[]).includes(tp.category)) errors.push(`${where}: unknown category ${tp.category}`);
     for (const lang of LANGS) {
       if (!tp.title[lang]?.trim()) errors.push(`${where}: missing ${lang} title`);
+      if (tp.title[lang]?.includes("$")) errors.push(`${where}: ${lang} title contains $ (titles render as plain text)`);
       if (!tp.body[lang]?.trim()) errors.push(`${where}: missing ${lang} body`);
       const re = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
       for (const m of (tp.body[lang] ?? "").matchAll(re)) {
