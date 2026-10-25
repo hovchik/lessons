@@ -1,4 +1,4 @@
-import { and, asc, count, eq, sql } from "drizzle-orm";
+import { and, asc, count, eq, ne, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 
 export type Locale = "en" | "hy" | "ru";
@@ -161,6 +161,7 @@ export async function getTipCounts() {
   const rows = await db
     .select({ courseId: schema.tips.courseId, n: count() })
     .from(schema.tips)
+    .where(ne(schema.tips.status, "deleted"))
     .groupBy(schema.tips.courseId)
     .all();
   return new Map(rows.map((r) => [r.courseId, r.n]));

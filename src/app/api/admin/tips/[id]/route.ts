@@ -11,7 +11,7 @@ const Body = z.object({
   body: i18n.optional(),
   category: z.enum(TIP_CATEGORIES).optional(),
   position: z.number().int().min(1).optional(),
-  status: z.enum(["draft", "published"]).optional(),
+  status: z.enum(["draft", "published", "deleted"]).optional(),
 });
 
 export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }) {
@@ -37,6 +37,12 @@ export async function DELETE(_req: Request, ctx: { params: Promise<{ id: string 
   const db = await getDb();
   const existing = await db.select({ id: schema.tips.id, courseId: schema.tips.courseId }).from(schema.tips).where(eq(schema.tips.id, id)).get();
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  await db.delete(schema.tips).where(eq(schema.tips.id, id)).run();
+  // Soft delete: the row stays with status "deleted" and source "admin", so a reseed cannot
+  // bring a deliberately removed bundled tip back, and the admin can restore it later.
+  await db
+    .update(schema.tips)
+    .set({ status: "deleted", source: "admin", updatedAt: new Date().toISOString() })
+    .where(eq(schema.tips.id, id))
+    .run();
   return NextResponse.json({ ok: true, courseId: existing.courseId });
 }

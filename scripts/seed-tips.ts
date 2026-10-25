@@ -1,7 +1,7 @@
 /**
  * Seeds the `tips` table from src/content/tips. Called from scripts/seed.ts.
- * Tips are upserted by id; tips edited in the admin panel (source = "admin") are kept,
- * and seed tips that are no longer in the content are removed.
+ * Tips are upserted by id; tips edited, reordered or deleted in the admin panel (source = "admin")
+ * are left as they are, and seed tips that are no longer in the content are removed.
  */
 import { and, eq, notInArray } from "drizzle-orm";
 import { getDb, schema } from "../src/server/db/client";
@@ -30,10 +30,8 @@ export async function seedTips() {
       ids.push(id);
       n++;
       const existing = await db.select({ source: schema.tips.source }).from(schema.tips).where(eq(schema.tips.id, id)).get();
-      if (existing && existing.source !== "seed") {
-        await db.update(schema.tips).set({ position: i + 1 }).where(eq(schema.tips.id, id)).run();
-        continue;
-      }
+      // Admin-owned rows (edited, reordered or deleted in the admin panel) are left untouched.
+      if (existing && existing.source !== "seed") continue;
       const row = {
         courseId: cid,
         position: i + 1,

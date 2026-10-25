@@ -67,7 +67,7 @@ mental-math shortcuts, memory aids, problem-solving habits, language hacks, exam
 They live in `src/content/tips/<subject>.ts` (one `tip(subject, grade, slug, category, [en, hy, ru], {en, hy, ru})`
 per tip), are seeded into the `tips` table, and appear as collapsible cards at the bottom of each course page.
 Admins can edit, reorder, unpublish, delete or add tips under **Admin → Tips** or on the course page in the admin
-panel; tips edited there are kept on the next seed. `npm run content:check` validates tips too (course exists,
+panel; tips edited, reordered or deleted there are kept as they are on the next seed (delete is a soft delete, restorable from the editor). `npm run content:check` validates tips too (course exists,
 unique slug, three languages, KaTeX formulas, plain-text titles).
 
 ## Generating lessons with Claude

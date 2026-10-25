@@ -399,13 +399,19 @@ Guess-and-check is faster than substitution for every $\\int f(ax + b)\\,dx$, an
 «Угадай и проверь» быстрее замены для любого $\\int f(ax + b)\\,dx$, а проверка производной означает, что ты никогда не сдашь неверный коэффициент.`,
   }),
   tip("algebra", 12, "area-sanity-check", "exam", ["An area is never negative", "Մակերեսը երբեք բացասական չէ", "Площадь никогда не отрицательна"], {
-    en: `If your definite integral for an area came out negative, the curve is below the axis on that interval: **take the absolute value**, or split the integral where the function changes sign.
+    en: `A definite integral is not an area: where the curve is **below** the axis it counts negative. First find where $f(x) = 0$ on the interval, **split** the integral at those points, and add the absolute values of the pieces.
+
+Only when the curve keeps one sign on the whole interval is the area simply $\\lvert \\int_a^b f(x)\\,dx \\rvert$. For $f(x) = x$ on $[-2; 1]$ the integral is $-1{.}5$, but the area is $2 + 0{.}5 = 2{.}5$.
 
 Also estimate: sketch the region and count squares roughly. If the sketch says "about 4" and the integral says 40, recheck the limits.`,
-    hy: `Եթե մակերեսի որոշյալ ինտեգրալը բացասական ստացվեց, կորն այդ միջակայքում առանցքից ներքև է․ **վերցրու բացարձակ արժեքը** կամ ինտեգրալը բաժանիր այնտեղ, որտեղ ֆունկցիան նշան է փոխում։
+    hy: `Որոշյալ ինտեգրալը մակերես չէ․ որտեղ կորն առանցքից **ներքև** է, այն բացասական է հաշվվում։ Սկզբում գտիր, որտեղ է $f(x) = 0$ միջակայքում, **բաժանիր** ինտեգրալն այդ կետերում և գումարիր մասերի բացարձակ արժեքները։
+
+Միայն երբ կորն ամբողջ միջակայքում նույն նշանն է պահում, մակերեսը պարզապես $\\lvert \\int_a^b f(x)\\,dx \\rvert$ է։ $f(x) = x$-ի համար $[-2; 1]$-ում ինտեգրալը $-1{,}5$ է, բայց մակերեսը՝ $2 + 0{,}5 = 2{,}5$։
 
 Գնահատիր նաև․ նկարիր տիրույթը և մոտավորապես հաշվիր վանդակները։ Եթե նկարն ասում է «մոտ 4», իսկ ինտեգրալը՝ 40, նորից ստուգիր սահմանները։`,
-    ru: `Если определённый интеграл для площади получился отрицательным, кривая на этом отрезке ниже оси: **возьми модуль** или разбей интеграл там, где функция меняет знак.
+    ru: `Определённый интеграл это не площадь: там, где кривая **ниже** оси, он считается со знаком минус. Сначала найди, где $f(x) = 0$ на отрезке, **разбей** интеграл в этих точках и сложи модули частей.
+
+Только когда кривая сохраняет один знак на всём отрезке, площадь это просто $\\lvert \\int_a^b f(x)\\,dx \\rvert$. Для $f(x) = x$ на $[-2; 1]$ интеграл равен $-1{,}5$, а площадь $2 + 0{,}5 = 2{,}5$.
 
 И оцени: нарисуй область и грубо посчитай клетки. Если рисунок говорит «около 4», а интеграл даёт 40, перепроверь пределы.`,
   }),

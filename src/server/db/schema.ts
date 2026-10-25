@@ -112,7 +112,7 @@ export const tips = sqliteTable(
     title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
     /** Markdown (GFM + KaTeX math) body per language. */
     body: text("body", { mode: "json" }).$type<I18nText>().notNull(),
-    /** draft | published */
+    /** draft | published | deleted (soft-deleted in the admin panel; kept so reseeding does not revive it) */
     status: text("status").notNull().default("published"),
     /** seed | admin — who last wrote the text */
     source: text("source").notNull().default("seed"),

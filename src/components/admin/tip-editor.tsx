@@ -44,7 +44,7 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
   }
 
   async function remove() {
-    if (!confirm("Delete this tip in all three languages? This cannot be undone.")) return;
+    if (!confirm("Remove this tip from the site in all three languages? You can restore it later from this page.")) return;
     setBusy(true);
     const res = await fetch(`/api/admin/tips/${tip.id}`, { method: "DELETE" });
     setBusy(false);
@@ -62,7 +62,7 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
         <div>
           <h1 className="text-xl font-black sm:text-2xl">{tip.title.en || tip.slug}</h1>
           <p className="text-sm text-muted-foreground">
-            <span className={cn("rounded-full px-2 py-0.5 text-xs font-bold", tip.status === "published" ? "bg-emerald-100 text-emerald-900" : "bg-muted")}>{tip.status}</span>{" "}
+            <span className={cn("rounded-full px-2 py-0.5 text-xs font-bold", tip.status === "published" ? "bg-emerald-100 text-emerald-900" : tip.status === "deleted" ? "bg-red-100 text-red-900" : "bg-muted")}>{tip.status}</span>{" "}
             · source: {tip.source} · updated {new Date(tip.updatedAt).toLocaleString()}
           </p>
         </div>
@@ -73,11 +73,13 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
           {tip.status === "published" ? (
             <Button variant="ghost" size="sm" onClick={() => save("draft")} disabled={busy}>Unpublish</Button>
           ) : (
-            <Button size="sm" onClick={() => save("published")} disabled={busy}>Publish</Button>
+            <Button size="sm" onClick={() => save("published")} disabled={busy}>{tip.status === "deleted" ? "Restore and publish" : "Publish"}</Button>
           )}
-          <Button variant="ghost" size="sm" onClick={remove} disabled={busy} className="text-destructive">
-            <Trash2 className="size-4" aria-hidden="true" /> Delete
-          </Button>
+          {tip.status !== "deleted" && (
+            <Button variant="ghost" size="sm" onClick={remove} disabled={busy} className="text-destructive">
+              <Trash2 className="size-4" aria-hidden="true" /> Delete
+            </Button>
+          )}
           <a href={siteUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted">
             <Eye className="size-4" aria-hidden="true" /> View
           </a>
@@ -142,7 +144,7 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
             <ul className="mt-2 list-disc space-y-1 pl-4">
               <li>One idea, one worked example, under 150 words.</li>
               <li>Math: <code>$x^2$</code> inline, <code>$$…$$</code> on its own line.</li>
-              <li>Draft tips are hidden from the site.</li>
+              <li>Draft and deleted tips are hidden from the site. A deleted tip can be restored here and is never brought back by reseeding.</li>
             </ul>
           </div>
         </aside>

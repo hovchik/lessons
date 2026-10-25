@@ -1,4 +1,4 @@
-import { CheckCircle2, Circle, Lightbulb } from "lucide-react";
+import { CheckCircle2, Circle, Lightbulb, XCircle } from "lucide-react";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { isAdmin } from "@/server/auth";
@@ -62,7 +62,7 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
         <div className="flex flex-wrap items-center justify-between gap-3 p-4">
           <h2 id="tips-heading" className="flex items-center gap-2 font-extrabold">
             <Lightbulb className="size-5 text-amber-500" aria-hidden="true" /> Tips & tricks
-            <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-bold text-muted-foreground">{tips.length}</span>
+            <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-bold text-muted-foreground">{tips.filter((tp) => tp.status !== "deleted").length}</span>
           </h2>
           <NewTipForm courseId={course.id} />
         </div>
@@ -74,10 +74,12 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
                   <span className="w-6 text-xs font-bold text-muted-foreground">{i + 1}</span>
                   {tp.status === "published" ? (
                     <CheckCircle2 className="size-4 shrink-0 text-success" aria-label="Published" />
+                  ) : tp.status === "deleted" ? (
+                    <XCircle className="size-4 shrink-0 text-destructive" aria-label="Deleted" />
                   ) : (
                     <Circle className="size-4 shrink-0 text-muted-foreground" aria-label="Draft" />
                   )}
-                  <span className="min-w-0 flex-1 text-sm font-semibold">{tp.title.en || tp.slug}</span>
+                  <span className={`min-w-0 flex-1 text-sm font-semibold ${tp.status === "deleted" ? "text-muted-foreground line-through" : ""}`}>{tp.title.en || tp.slug}</span>
                   <span className="hidden text-xs text-muted-foreground md:inline">{CATEGORY_LABELS[tp.category]}</span>
                 </Link>
               </li>
