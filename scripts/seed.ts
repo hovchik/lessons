@@ -9,6 +9,7 @@
 import { and, eq, notInArray } from "drizzle-orm";
 import { getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
+import { exams } from "../src/content/exams";
 
 const slugify = (s: string) =>
   s
@@ -145,6 +146,42 @@ async function run() {
     }
   }
 
+  // Exams: state exams and year-end trials. Admin-edited exams are kept.
+  const seededExamIds: string[] = [];
+  for (const [i, e] of exams.entries()) {
+    seededExamIds.push(e.id);
+    const existing = await db.select({ source: schema.exams.source }).from(schema.exams).where(eq(schema.exams.id, e.id)).get();
+    if (existing && existing.source !== "seed") {
+      await db.update(schema.exams).set({ position: e.position ?? i + 1 }).where(eq(schema.exams.id, e.id)).run();
+      continue;
+    }
+    const row = {
+      kind: e.kind,
+      system: e.system,
+      subjectId: e.subject,
+      grade: e.grade,
+      position: e.position ?? i + 1,
+      title: e.title,
+      description: e.description,
+      format: e.format,
+      questions: e.questions,
+      durationMin: e.durationMin,
+      scale: e.scale,
+      passPercent: e.passPercent,
+      status: "published" as const,
+      source: "seed" as const,
+      updatedAt: new Date().toISOString(),
+    };
+    await db.insert(schema.exams).values({ id: e.id, ...row }).onConflictDoUpdate({ target: schema.exams.id, set: row }).run();
+  }
+  if (seededExamIds.length > 0) {
+    await db.delete(schema.exams).where(and(eq(schema.exams.source, "seed"), notInArray(schema.exams.id, seededExamIds))).run();
+  }
+  const examQuestions = exams.reduce((a, e) => a + e.questions.length, 0);
+
+  console.log(
+    `Seeded ${exams.length} exams (${exams.filter((e) => e.kind === "state").length} state, ${exams.filter((e) => e.kind === "trial").length} trials, ${examQuestions} questions).`,
+  );
   console.log(
     `Seeded ${subjects.length} subjects, ${courses.length} courses, ${unitsCount} units, ${lessonsCount} lessons (${withContent} with full content, ${lessonsCount - withContent} outlines).`,
   );

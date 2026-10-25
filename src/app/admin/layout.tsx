@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { BookOpen, GraduationCap, LayoutDashboard } from "lucide-react";
+import { Award, BookOpen, GraduationCap, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import { isAdmin } from "@/server/auth";
 import { LogoutButton } from "@/components/admin/logout-button";
@@ -49,6 +49,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                 </Link>
                 <Link href="/admin/courses" className="flex h-11 items-center gap-2 rounded-xl px-3 text-sm font-bold hover:bg-muted">
                   <BookOpen className="size-4" aria-hidden="true" /> Courses
+                </Link>
+                <Link href="/admin/exams" className="flex h-11 items-center gap-2 rounded-xl px-3 text-sm font-bold hover:bg-muted">
+                  <Award className="size-4" aria-hidden="true" /> Exams
                 </Link>
                 <Link href="/en" className="flex h-11 items-center gap-2 rounded-xl px-3 text-sm font-bold text-muted-foreground hover:bg-muted">
                   View site

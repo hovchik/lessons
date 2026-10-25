@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Clock, Flag, Lock, PlayCircle } from "lucide-react";
+import { Award, CheckCircle2, Clock, Flag, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
-import { getCourse, getCourses } from "@/server/queries";
+import { ExamCard } from "@/components/site/exam-card";
+import { getCourse, getCourses, getExams } from "@/server/queries";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
 
@@ -27,6 +28,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const l = await getLocale();
   const { course, subject: subj, units, readyCount, totalCount } = data;
   const siblings = await getCourses({ subjectId: subject });
+  const exams = await getExams({ subjectId: subject, grade });
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -131,6 +133,26 @@ export default async function CoursePage({ params }: { params: Params }) {
           ))}
         </ol>
       </section>
+
+      {exams.length > 0 && (
+        <section aria-labelledby="exams-title" className="space-y-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="exams-title" className="flex items-center gap-2 text-xl font-extrabold sm:text-2xl">
+                <Award className="size-6 text-primary" aria-hidden="true" />
+                {t("exam.courseSection")}
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">{t("exam.courseSectionText")}</p>
+            </div>
+            <Link href="/exams" className="inline-flex min-h-11 items-center font-bold text-primary hover:underline">{t("exam.all")}</Link>
+          </div>
+          <ul className="grid gap-4 stagger sm:grid-cols-2 lg:grid-cols-3">
+            {exams.map((e) => (
+              <li key={e.exam.id}><ExamCard item={e} /></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {siblings.length > 1 && (
         <section aria-labelledby="other-grades">

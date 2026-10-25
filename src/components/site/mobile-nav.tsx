@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, GraduationCap, Home } from "lucide-react";
+import { Award, BookOpen, GraduationCap, Home } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -16,6 +16,7 @@ export function MobileNav() {
     { href: "/", label: t("home"), icon: Home, active: pathname === "/" },
     { href: "/grade/1", label: t("grades"), icon: GraduationCap, active: pathname.startsWith("/grade/") },
     { href: "/subjects", label: t("subjects"), icon: BookOpen, active: pathname.startsWith("/subjects") },
+    { href: "/exams", label: t("exams"), icon: Award, active: pathname.startsWith("/exams") },
   ] as const;
 
   return (
@@ -23,7 +24,7 @@ export function MobileNav() {
       aria-label={t("menu")}
       className="pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border/60 bg-card/95 backdrop-blur-md sm:hidden"
     >
-      <ul className="grid grid-cols-3">
+      <ul className="grid grid-cols-4">
         {items.map(({ href, label, icon: Icon, active }) => (
           <li key={href}>
             <Link

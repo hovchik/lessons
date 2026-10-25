@@ -132,3 +132,65 @@ export async function getAdminCourses() {
     .orderBy(asc(schema.subjects.sortOrder), asc(schema.courses.grade))
     .all();
 }
+
+/* ---------- Exams ---------- */
+
+export type ExamListItem = Awaited<ReturnType<typeof getExams>>[number];
+
+/** Published exams with their subject, ordered for display. */
+export async function getExams(filter: { kind?: "state" | "trial"; grade?: number; subjectId?: string; includeDrafts?: boolean } = {}) {
+  const db = await getDb();
+  const where = [];
+  if (!filter.includeDrafts) where.push(eq(schema.exams.status, "published"));
+  if (filter.kind) where.push(eq(schema.exams.kind, filter.kind));
+  if (filter.grade) where.push(eq(schema.exams.grade, filter.grade));
+  if (filter.subjectId) where.push(eq(schema.exams.subjectId, filter.subjectId));
+  return db
+    .select({
+      exam: {
+        id: schema.exams.id,
+        kind: schema.exams.kind,
+        system: schema.exams.system,
+        subjectId: schema.exams.subjectId,
+        grade: schema.exams.grade,
+        position: schema.exams.position,
+        title: schema.exams.title,
+        description: schema.exams.description,
+        durationMin: schema.exams.durationMin,
+        scale: schema.exams.scale,
+        status: schema.exams.status,
+        source: schema.exams.source,
+        questionCount: sql<number>`json_array_length(${schema.exams.questions})`,
+      },
+      subject: schema.subjects,
+    })
+    .from(schema.exams)
+    .leftJoin(schema.subjects, eq(schema.exams.subjectId, schema.subjects.id))
+    .where(where.length ? and(...where) : undefined)
+    .orderBy(asc(schema.exams.system), asc(schema.exams.grade), asc(schema.exams.position), asc(schema.subjects.sortOrder))
+    .all();
+}
+
+export async function getExam(id: string, opts: { includeDrafts?: boolean } = {}) {
+  const db = await getDb();
+  const exam = await db.select().from(schema.exams).where(eq(schema.exams.id, id)).get();
+  if (!exam) return null;
+  if (!opts.includeDrafts && exam.status !== "published") return null;
+  const subject = exam.subjectId ? await getSubject(exam.subjectId) : null;
+  return { exam, subject: subject ?? null };
+}
+
+export async function getExamStats() {
+  const db = await getDb();
+  const rows = await db
+    .select({ kind: schema.exams.kind, n: count(), questions: sql<number>`sum(json_array_length(${schema.exams.questions}))` })
+    .from(schema.exams)
+    .groupBy(schema.exams.kind)
+    .all();
+  const by = (k: string) => rows.find((r) => r.kind === k);
+  return {
+    state: by("state")?.n ?? 0,
+    trial: by("trial")?.n ?? 0,
+    questions: rows.reduce((a, r) => a + (r.questions ?? 0), 0),
+  };
+}
