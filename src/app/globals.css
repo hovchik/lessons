@@ -281,3 +281,12 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
 .prose-lesson .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; -webkit-overflow-scrolling: touch; }
 .prose-lesson .katex-display > .katex { white-space: nowrap; }
 .prose-lesson .katex { font-size: 1.08em; }
+
+/* ---- Tip cards: compact prose ---- */
+.prose-tip { font-size: 0.95rem; line-height: 1.6; }
+.prose-tip > * + * { margin-top: 0.6em; }
+.prose-tip p { margin-top: 0.6em; }
+.prose-tip p:first-child { margin-top: 0; }
+.prose-tip h3, .prose-tip h4 { font-size: 1rem; font-weight: 800; margin-top: 1em; }
+.prose-tip ul, .prose-tip ol { margin-top: 0.4em; }
+.prose-tip table { font-size: 0.9rem; }

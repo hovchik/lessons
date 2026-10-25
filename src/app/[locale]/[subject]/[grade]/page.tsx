@@ -6,7 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
-import { getCourse, getCourses } from "@/server/queries";
+import { TipsSection } from "@/components/site/tips-section";
+import { getCourse, getCourses, getCourseTips } from "@/server/queries";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
 
@@ -27,6 +28,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const l = await getLocale();
   const { course, subject: subj, units, readyCount, totalCount } = data;
   const siblings = await getCourses({ subjectId: subject });
+  const tips = await getCourseTips(course.id);
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -131,6 +133,8 @@ export default async function CoursePage({ params }: { params: Params }) {
           ))}
         </ol>
       </section>
+
+      <TipsSection tips={tips} />
 
       {siblings.length > 1 && (
         <section aria-labelledby="other-grades">

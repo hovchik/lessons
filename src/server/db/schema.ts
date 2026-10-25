@@ -94,3 +94,33 @@ export type Subject = typeof subjects.$inferSelect;
 export type Course = typeof courses.$inferSelect;
 export type Unit = typeof units.$inferSelect;
 export type Lesson = typeof lessons.$inferSelect;
+
+/** Tips, tricks and shortcuts that go beyond the standard course for one grade of a subject. */
+export const TIP_CATEGORIES = ["mentalMath", "memory", "problemSolving", "language", "exam", "study"] as const;
+export type TipCategory = (typeof TIP_CATEGORIES)[number];
+
+export const tips = sqliteTable(
+  "tips",
+  {
+    id: text("id").primaryKey(), // `${courseId}-${slug}`
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    position: integer("position").notNull(),
+    slug: text("slug").notNull(),
+    category: text("category").$type<TipCategory>().notNull().default("study"),
+    title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
+    /** Markdown (GFM + KaTeX math) body per language. */
+    body: text("body", { mode: "json" }).$type<I18nText>().notNull(),
+    /** draft | published */
+    status: text("status").notNull().default("published"),
+    /** seed | admin — who last wrote the text */
+    source: text("source").notNull().default("seed"),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("tips_course").on(t.courseId)],
+);
+
+export type Tip = typeof tips.$inferSelect;

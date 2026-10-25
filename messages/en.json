@@ -24,6 +24,7 @@
     "comingSoonTitle": "This lesson is being written", "comingSoonText": "The full lesson text is not ready yet. Browse the course outline or come back soon.",
     "correct": "Correct!", "incorrect": "Not quite. Try again.", "score": "You got {score} of {total}", "retry": "Try again", "showExplanation": "Why?", "question": "Question {n} of {total}", "inUnit": "Unit {n}: {title}"
   },
+  "tips": {"title": "Tips & tricks", "subtitle": "Shortcuts, memory aids and habits that are not in the standard course.", "count": "{count} tips", "category": {"mentalMath": "Mental math", "memory": "Memory aid", "problemSolving": "Problem solving", "language": "Language hack", "exam": "Exam strategy", "study": "Study habit"}},
   "footer": { "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.", "admin": "Admin panel", "language": "Language" },
   "notFound": { "title": "Page not found", "text": "The page you are looking for does not exist.", "home": "Go to the home page" }
 }
