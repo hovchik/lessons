@@ -578,7 +578,7 @@ The difference is written $F(x)\\Big|_a^b$. The constant $C$ cancels, so any ant
 
 ## Physical applications
 
-If $v(t)$ is velocity, the distance travelled from $t_1$ to $t_2$ is $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$. In general, the integral of a rate gives the total change.
+If $v(t) \\ge 0$ is velocity, the distance travelled from $t_1$ to $t_2$ is $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$. If the velocity changes sign, this integral gives the displacement, and the distance is $\\displaystyle\\int_{t_1}^{t_2} \\lvert v(t)\\rvert\\,dt$. In general, the integral of a rate gives the total change.
 
 **Example 8.** $v(t) = 3t^2 + 2$ m/s. Distance in the first $2$ s: $\\displaystyle\\int_0^2 (3t^2 + 2)dt = (t^3 + 2t)\\Big|_0^2 = 12$ m.
 
@@ -632,7 +632,7 @@ If $v(t)$ is velocity, the distance travelled from $t_1$ to $t_2$ is $\\displays
 
 ## Ֆիզիկական կիրառություններ
 
-Եթե $v(t)$-ն արագությունն է, $t_1$-ից $t_2$ անցած ճանապարհը $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$ է։ Ընդհանրապես, փոփոխության արագության ինտեգրալը տալիս է ընդհանուր փոփոխությունը։
+Եթե $v(t) \\ge 0$-ն արագությունն է, $t_1$-ից $t_2$ անցած ճանապարհը $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$ է։ Եթե արագությունը նշան է փոխում, այս ինտեգրալը տալիս է տեղափոխությունը, իսկ ճանապարհը $\\displaystyle\\int_{t_1}^{t_2} \\lvert v(t)\\rvert\\,dt$ է։ Ընդհանրապես, փոփոխության արագության ինտեգրալը տալիս է ընդհանուր փոփոխությունը։
 
 **Օրինակ 8։** $v(t) = 3t^2 + 2$ մ/վ։ Առաջին $2$ վրկ-ում անցած ճանապարհը՝ $\\displaystyle\\int_0^2 (3t^2 + 2)dt = (t^3 + 2t)\\Big|_0^2 = 12$ մ։
 
@@ -686,7 +686,7 @@ If $v(t)$ is velocity, the distance travelled from $t_1$ to $t_2$ is $\\displays
 
 ## Физические применения
 
-Если $v(t)$ — скорость, то путь за время от $t_1$ до $t_2$ равен $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$. Вообще, интеграл от скорости изменения даёт полное изменение величины.
+Если $v(t) \\ge 0$ — скорость, то путь за время от $t_1$ до $t_2$ равен $\\displaystyle\\int_{t_1}^{t_2} v(t)\\,dt$. Если скорость меняет знак, этот интеграл даёт перемещение, а путь равен $\\displaystyle\\int_{t_1}^{t_2} \\lvert v(t)\\rvert\\,dt$. Вообще, интеграл от скорости изменения даёт полное изменение величины.
 
 **Пример 8.** $v(t) = 3t^2 + 2$ м/с. Путь за первые $2$ с: $\\displaystyle\\int_0^2 (3t^2 + 2)dt = (t^3 + 2t)\\Big|_0^2 = 12$ м.
 
@@ -713,7 +713,7 @@ If $v(t)$ is velocity, the distance travelled from $t_1$ to $t_2$ is $\\displays
         q(t("∫₀^π sin x dx equals…", "∫₀^π sin x dx-ը հավասար է…", "∫₀^π sin x dx равен…"), [t("0", "0", "0"), t("2", "2", "2"), t("π", "π", "π")], 1),
         q(t("The area between f and g (f ≥ g) on [a; b] is…", "f-ի և g-ի (f ≥ g) միջև մակերեսը [a; b]-ում…", "Площадь между f и g (f ≥ g) на [a; b] —"), [t("∫ₐᵇ (f − g) dx", "∫ₐᵇ (f − g) dx", "∫ₐᵇ (f − g) dx"), t("∫ₐᵇ (f + g) dx", "∫ₐᵇ (f + g) dx", "∫ₐᵇ (f + g) dx"), t("∫ₐᵇ f·g dx", "∫ₐᵇ f·g dx", "∫ₐᵇ f·g dx")], 0),
         q(t("The area between y = x and y = x² is…", "y = x-ի և y = x²-ի միջև մակերեսը…", "Площадь между y = x и y = x² —"), [t("1/6", "1/6", "1/6"), t("1/3", "1/3", "1/3"), t("1/2", "1/2", "1/2")], 0),
-        q(t("The distance travelled with velocity v(t) from t₁ to t₂ is…", "v(t) արագությամբ t₁-ից t₂ անցած ճանապարհը…", "Путь при скорости v(t) от t₁ до t₂ —"), [t("v(t₂) − v(t₁)", "v(t₂) − v(t₁)", "v(t₂) − v(t₁)"), t("∫ v(t) dt from t₁ to t₂", "∫ v(t) dt t₁-ից t₂", "∫ v(t) dt от t₁ до t₂"), t("v′(t₂)", "v′(t₂)", "v′(t₂)")], 1),
+        q(t("The distance travelled with velocity v(t) ≥ 0 from t₁ to t₂ is…", "v(t) ≥ 0 արագությամբ t₁-ից t₂ անցած ճանապարհը…", "Путь при скорости v(t) ≥ 0 от t₁ до t₂ —"), [t("v(t₂) − v(t₁)", "v(t₂) − v(t₁)", "v(t₂) − v(t₁)"), t("∫ v(t) dt from t₁ to t₂", "∫ v(t) dt t₁-ից t₂", "∫ v(t) dt от t₁ до t₂"), t("v′(t₂)", "v′(t₂)", "v′(t₂)")], 1),
       ],
     ),
   ],
