@@ -5,5 +5,7 @@ import { geometryTips } from "./geometry";
 import { physicsTips } from "./physics";
 import { armenianTips } from "./armenian";
 import { russianTips } from "./russian";
+import { englishTips } from "./english";
+import { drawingTips } from "./drawing";
 
-export const tips: TipSeed[] = [...mathTips, ...algebraTips, ...geometryTips, ...physicsTips, ...armenianTips, ...russianTips];
+export const tips: TipSeed[] = [...mathTips, ...algebraTips, ...geometryTips, ...physicsTips, ...armenianTips, ...russianTips, ...englishTips, ...drawingTips];
