@@ -30,17 +30,28 @@ export async function recordAttempt(input: {
   return id;
 }
 
-/** Record a finished lesson quiz: logs the attempt and marks the lesson completed. */
-export async function recordQuizResult(input: { userId: string; lessonId: string; score: number; total: number; answers?: unknown }) {
+/**
+ * Record a finished lesson quiz: the score is computed on the server from the
+ * stored questions and the chosen option indexes, logged as an attempt, and the
+ * lesson is marked completed. Returns null when the lesson or its quiz does not
+ * exist, or the number of answers does not match the quiz.
+ */
+export async function recordQuizResult(input: { userId: string; lessonId: string; answers: number[] }) {
   const db = await getDb();
-  const lesson = await db.select({ id: schema.lessons.id, courseId: schema.lessons.courseId }).from(schema.lessons).where(eq(schema.lessons.id, input.lessonId)).get();
-  if (!lesson) return null;
-  await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score: input.score, total: input.total, answers: input.answers });
+  const lesson = await db
+    .select({ id: schema.lessons.id, courseId: schema.lessons.courseId, quiz: schema.lessons.quiz, status: schema.lessons.status })
+    .from(schema.lessons)
+    .where(eq(schema.lessons.id, input.lessonId))
+    .get();
+  if (!lesson || lesson.status !== "published" || lesson.quiz.length === 0 || input.answers.length !== lesson.quiz.length) return null;
+  const total = lesson.quiz.length;
+  const score = lesson.quiz.filter((q, i) => input.answers[i] === q.answer).length;
+  await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score, total, answers: input.answers });
   const now = new Date().toISOString();
   const lp = schema.lessonProgress;
   // Best-score comparison happens inside the upsert so two overlapping
   // submissions cannot both read the same old best and overwrite each other.
-  const isBetter = sql`(${lp.bestTotal} is null or ${lp.bestTotal} = 0 or ${input.score} * ${lp.bestTotal} >= ${lp.bestScore} * ${input.total})`;
+  const isBetter = sql`(${lp.bestTotal} is null or ${lp.bestTotal} = 0 or ${score} * ${lp.bestTotal} >= ${lp.bestScore} * ${total})`;
   await db
     .insert(lp)
     .values({
@@ -48,10 +59,10 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
       lessonId: lesson.id,
       courseId: lesson.courseId,
       completedAt: now,
-      bestScore: input.score,
-      bestTotal: input.total,
-      lastScore: input.score,
-      lastTotal: input.total,
+      bestScore: score,
+      bestTotal: total,
+      lastScore: score,
+      lastTotal: total,
       attempts: 1,
       updatedAt: now,
     })
@@ -59,10 +70,10 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
       target: [lp.userId, lp.lessonId],
       set: {
         completedAt: sql`coalesce(${lp.completedAt}, ${now})`,
-        lastScore: input.score,
-        lastTotal: input.total,
-        bestScore: sql`case when ${isBetter} then ${input.score} else ${lp.bestScore} end`,
-        bestTotal: sql`case when ${isBetter} then ${input.total} else ${lp.bestTotal} end`,
+        lastScore: score,
+        lastTotal: total,
+        bestScore: sql`case when ${isBetter} then ${score} else ${lp.bestScore} end`,
+        bestTotal: sql`case when ${isBetter} then ${total} else ${lp.bestTotal} end`,
         attempts: sql`${lp.attempts} + 1`,
         updatedAt: now,
       },

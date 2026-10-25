@@ -30,11 +30,11 @@ export function Quiz({ questions, save }: Props) {
   useEffect(() => {
     if (!save || !allChecked || total === 0 || savedRun.current !== 0) return;
     savedRun.current = 1;
-    const payload = { lessonId: save.lessonId, score, total, answers: questions.map((_, i) => answers[i] ?? 0) };
+    const payload = { lessonId: save.lessonId, answers: questions.map((_, i) => answers[i] ?? 0) };
     fetch("/api/progress/quiz", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
       .then((r) => r.ok && setSaved(true))
       .catch(() => {});
-  }, [save, allChecked, total, score, answers, questions]);
+  }, [save, allChecked, total, answers, questions]);
 
   const reset = () => {
     setAnswers({});
