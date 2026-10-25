@@ -3,6 +3,7 @@ import { algebraGrade7 } from "./grade-7";
 import { algebraGrade8 } from "./grade-8";
 import { algebraGrade9 } from "./grade-9";
 import { algebraGrade10 } from "./grade-10";
+import { algebraGrade11 } from "./grade-11";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -14,59 +15,7 @@ export const algebra: CourseSeed[] = [
   algebraGrade8,
   algebraGrade9,
   algebraGrade10,
-  {
-    subject: "algebra",
-    grade: 11,
-    title: t("Algebra · Grade 11", "Հանրահաշիվ · 11-րդ դասարան", "Алгебра · 11 класс"),
-    description: t("Derivative and its applications, exponential and logarithmic functions, integral, combinatorics and probability.", "Ածանցյալ և նրա կիրառություններ, ցուցչային և լոգարիթմական ֆունկցիաներ, ինտեգրալ, կոմբինատորիկա և հավանականություն։", "Производная и её применение, показательная и логарифмическая функции, интеграл, комбинаторика и вероятность."),
-    curriculumNotes: notes(
-      ["Armenia grade 11 (3–5 h/week): derivative, its geometric and physical meaning, investigating functions, exponential and logarithmic functions and equations, antiderivative and integral, areas, combinatorics and probability.", "Հայաստան, 11-րդ դասարան (3–5 ժ/շաբ.)՝ ածանցյալ, նրա երկրաչափական և ֆիզիկական իմաստը, ֆունկցիաների հետազոտում, ցուցչային և լոգարիթմական ֆունկցիաներ ու հավասարումներ, նախնական և ինտեգրալ, մակերեսներ, կոմբինատորիկա և հավանականություն։", "Армения, 11 класс (3–5 ч/нед.): производная, её геометрический и физический смысл, исследование функций, показательная и логарифмическая функции и уравнения, первообразная и интеграл, площади, комбинаторика и вероятность."],
-      ["Russia grade 11 (ФГОС СОО, final year, ends with ЕГЭ): derivative and its applications, integral, exponential and logarithmic functions and equations, elements of combinatorics, statistics and probability. Armenian grade 11 ≈ Russian grade 11 for analysis; Armenian grade 12 adds review and depth.", "Ռուսաստան, 11-րդ դասարան (ФГОС СОО, ավարտական, ЕГЭ)՝ ածանցյալ և կիրառություններ, ինտեգրալ, ցուցչային և լոգարիթմական ֆունկցիաներ ու հավասարումներ, կոմբինատորիկա, վիճակագրություն, հավանականություն։", "Россия, 11 класс (ФГОС СОО, выпускной, ЕГЭ): производная и её применения, интеграл, показательная и логарифмическая функции и уравнения, элементы комбинаторики, статистики и вероятности. Армянский 11 класс ≈ российскому 11-му по анализу; армянский 12-й добавляет повторение и углубление."],
-    ),
-    hoursPerWeek: { armenia: 4, russia: 3 },
-    units: [
-      unit(t("Derivative", "Ածանցյալ", "Производная"), t("Definition, rules of differentiation, derivatives of elementary functions, tangent line.", "Սահմանում, ածանցման կանոններ, տարրական ֆունկցիաների ածանցյալներ, շոշափող։", "Определение, правила дифференцирования, производные элементарных функций, касательная."), [
-        ["derivative-definition", "Definition of the derivative", "Ածանցյալի սահմանումը", "Определение производной"],
-        ["differentiation-rules", "Rules of differentiation", "Ածանցման կանոնները", "Правила дифференцирования"],
-        ["derivative-power-trig", "Derivatives of power and trigonometric functions", "Աստիճանային և եռանկյունաչափական ֆունկցիաների ածանցյալներ", "Производные степенной и тригонометрических функций"],
-        ["chain-rule", "Derivative of a composite function", "Բարդ ֆունկցիայի ածանցյալ", "Производная сложной функции"],
-        ["tangent-line", "Geometric meaning: the tangent line", "Երկրաչափական իմաստ․ շոշափող", "Геометрический смысл: уравнение касательной"],
-      ]),
-      unit(t("Applications of the derivative", "Ածանցյալի կիրառություններ", "Применение производной"), t("Monotonicity, extrema, investigating and sketching functions, optimisation.", "Մոնոտոնություն, էքստրեմումներ, ֆունկցիայի հետազոտում և գրաֆիկի կառուցում, օպտիմալացում։", "Монотонность, экстремумы, исследование функций и построение графиков, задачи на оптимум."), [
-        ["increasing-decreasing", "Increasing and decreasing functions", "Աճող և նվազող ֆունկցիաներ", "Возрастание и убывание функции"],
-        ["extrema", "Maxima and minima", "Մաքսիմում և մինիմում", "Экстремумы функции"],
-        ["sketching-functions", "Investigating a function with the derivative", "Ֆունկցիայի հետազոտում ածանցյալով", "Исследование функции с помощью производной"],
-        ["max-min-on-interval", "Largest and smallest value on an interval", "Ամենամեծ և ամենափոքր արժեքը հատվածում", "Наибольшее и наименьшее значение на отрезке"],
-        ["optimisation", "Optimisation problems", "Օպտիմալացման խնդիրներ", "Задачи на наибольшее и наименьшее значение"],
-      ]),
-      unit(t("Exponential function", "Ցուցչային ֆունկցիա", "Показательная функция"), t("Properties and graph, exponential equations and inequalities, systems.", "Հատկություններ և գրաֆիկ, ցուցչային հավասարումներ և անհավասարություններ, համակարգեր։", "Свойства и график, показательные уравнения и неравенства, системы."), [
-        ["exponential-function", "The exponential function and its graph", "Ցուցչային ֆունկցիան և նրա գրաֆիկը", "Показательная функция, её свойства и график"],
-        ["exponential-equations", "Exponential equations", "Ցուցչային հավասարումներ", "Показательные уравнения"],
-        ["exponential-inequalities", "Exponential inequalities", "Ցուցչային անհավասարություններ", "Показательные неравенства"],
-        ["exponential-growth", "Exponential growth and decay in real life", "Ցուցչային աճ և նվազում կյանքում", "Экспоненциальный рост и убывание в жизни"],
-      ]),
-      unit(t("Logarithms", "Լոգարիթմներ", "Логарифмы"), t("Definition, properties, change of base, logarithmic function, equations and inequalities.", "Սահմանում, հատկություններ, հիմքի փոխում, լոգարիթմական ֆունկցիա, հավասարումներ և անհավասարություններ։", "Определение, свойства, переход к новому основанию, логарифмическая функция, уравнения и неравенства."), [
-        ["logarithm-definition", "Definition of the logarithm", "Լոգարիթմի սահմանումը", "Определение логарифма"],
-        ["logarithm-properties", "Properties of logarithms", "Լոգարիթմների հատկությունները", "Свойства логарифмов"],
-        ["change-of-base", "Decimal and natural logarithms; change of base", "Տասնորդական և բնական լոգարիթմ, հիմքի փոխում", "Десятичные и натуральные логарифмы; переход к новому основанию"],
-        ["logarithmic-function", "The logarithmic function", "Լոգարիթմական ֆունկցիա", "Логарифмическая функция"],
-        ["logarithmic-equations", "Logarithmic equations", "Լոգարիթմական հավասարումներ", "Логарифмические уравнения"],
-        ["logarithmic-inequalities", "Logarithmic inequalities", "Լոգարիթմական անհավասարություններ", "Логарифмические неравенства"],
-      ]),
-      unit(t("Integral", "Ինտեգրալ", "Интеграл"), t("Antiderivative, rules, definite integral, area of a curvilinear trapezium.", "Նախնական, կանոններ, որոշյալ ինտեգրալ, կորագիծ սեղանի մակերես։", "Первообразная, правила, определённый интеграл, площадь криволинейной трапеции."), [
-        ["antiderivative", "The antiderivative", "Նախնական", "Первообразная"],
-        ["antiderivative-rules", "Rules for finding antiderivatives", "Նախնականի գտնելու կանոնները", "Правила нахождения первообразных"],
-        ["definite-integral", "Area and the definite integral", "Մակերես և որոշյալ ինտեգրալ", "Площадь криволинейной трапеции и интеграл"],
-        ["newton-leibniz", "Newton–Leibniz formula and applications", "Նյուտոն–Լայբնիցի բանաձև և կիրառություններ", "Формула Ньютона–Лейбница и применения"],
-      ]),
-      unit(t("Combinatorics, probability and statistics", "Կոմբինատորիկա, հավանականություն, վիճակագրություն", "Комбинаторика, вероятность и статистика"), t("Binomial theorem, probability of events, independent events, random variables.", "Նյուտոնի բինոմ, պատահույթների հավանականություն, անկախ պատահույթներ, պատահական մեծություններ։", "Бином Ньютона, вероятность событий, независимые события, случайные величины."), [
-        ["binomial-theorem", "Newton's binomial", "Նյուտոնի բինոմ", "Бином Ньютона"],
-        ["probability-rules", "Addition and multiplication of probabilities", "Հավանականությունների գումարում և բազմապատկում", "Сложение и умножение вероятностей"],
-        ["conditional-probability", "Conditional probability and independence", "Պայմանական հավանականություն և անկախություն", "Условная вероятность и независимость"],
-        ["random-variables", "Random variables and expected value", "Պատահական մեծություններ և մաթեմատիկական սպասում", "Случайные величины и математическое ожидание"],
-      ]),
-    ],
-  },
+  algebraGrade11,
   {
     subject: "algebra",
     grade: 12,
