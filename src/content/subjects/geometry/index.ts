@@ -2,6 +2,7 @@ import { t, unit, type CourseSeed } from "../../types";
 import { geometryGrade7 } from "./grade-7";
 import { geometryGrade8 } from "./grade-8";
 import { geometryGrade9 } from "./grade-9";
+import { geometryGrade10 } from "./grade-10";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -12,49 +13,7 @@ export const geometry: CourseSeed[] = [
   geometryGrade7,
   geometryGrade8,
   geometryGrade9,
-  {
-    subject: "geometry",
-    grade: 10,
-    title: t("Geometry · Grade 10", "Երկրաչափություն · 10-րդ դասարան", "Геометрия · 10 класс"),
-    description: t("Stereometry begins: axioms of space, parallelism and perpendicularity of lines and planes, polyhedra, vectors in space.", "Սկսվում է տարածաչափությունը՝ տարածության աքսիոմներ, ուղիղների և հարթությունների զուգահեռություն և ուղղահայացություն, բազմանիստներ, վեկտորներ տարածության մեջ։", "Начало стереометрии: аксиомы пространства, параллельность и перпендикулярность прямых и плоскостей, многогранники, векторы в пространстве."),
-    curriculumNotes: notes(
-      ["Armenia grade 10 (2 h/week, natural-science stream more): axioms of stereometry, parallel lines and planes, perpendicularity, dihedral angles, polyhedra (prism, pyramid, regular polyhedra), vectors in space.", "Հայաստան, 10-րդ դասարան (2 ժ/շաբ., բնագիտական հոսքում ավելի)՝ տարածաչափության աքսիոմներ, զուգահեռ ուղիղներ և հարթություններ, ուղղահայացություն, երկնիստ անկյուններ, բազմանիստներ (պրիզմա, բուրգ, կանոնավոր բազմանիստներ), վեկտորներ տարածության մեջ։", "Армения, 10 класс (2 ч/нед., в естественно-научном потоке больше): аксиомы стереометрии, параллельность прямых и плоскостей, перпендикулярность, двугранные углы, многогранники (призма, пирамида, правильные многогранники), векторы в пространстве."],
-      ["Russia grade 10 (ФГОС СОО, геометрия 2 h/week): identical sequence — axioms, parallelism, perpendicularity, polyhedra, vectors in space.", "Ռուսաստան, 10-րդ դասարան (ФГОС СОО, երկրաչափություն 2 ժ/շաբ.)՝ նույն հերթականությունը՝ աքսիոմներ, զուգահեռություն, ուղղահայացություն, բազմանիստներ, վեկտորներ տարածության մեջ։", "Россия, 10 класс (ФГОС СОО, геометрия 2 ч/нед.): та же последовательность — аксиомы, параллельность, перпендикулярность, многогранники, векторы в пространстве."],
-    ),
-    hoursPerWeek: { armenia: 2, russia: 2 },
-    units: [
-      unit(t("Axioms of stereometry", "Տարածաչափության աքսիոմներ", "Аксиомы стереометрии"), t("Planes in space, consequences of the axioms, first problems.", "Հարթություններ տարածության մեջ, աքսիոմների հետևանքներ, առաջին խնդիրներ։", "Плоскости в пространстве, следствия из аксиом, первые задачи."), [
-        ["stereometry-subject", "The subject of stereometry; axioms", "Տարածաչափության առարկան, աքսիոմներ", "Предмет стереометрии; аксиомы"],
-        ["axiom-consequences", "Consequences of the axioms", "Աքսիոմների հետևանքները", "Следствия из аксиом"],
-        ["drawing-solids", "Drawing spatial figures", "Տարածական պատկերների գծագրում", "Изображение пространственных фигур"],
-      ]),
-      unit(t("Parallelism in space", "Զուգահեռություն տարածության մեջ", "Параллельность прямых и плоскостей"), t("Parallel lines, line and plane, skew lines, parallel planes, tetrahedron and parallelepiped, sections.", "Զուգահեռ ուղիղներ, ուղիղ և հարթություն, խաչվող ուղիղներ, զուգահեռ հարթություններ, քառանիստ և զուգահեռանիստ, հատույթներ։", "Параллельные прямые, прямая и плоскость, скрещивающиеся прямые, параллельные плоскости, тетраэдр и параллелепипед, сечения."), [
-        ["parallel-lines-space", "Parallel lines and planes in space", "Զուգահեռ ուղիղներ և հարթություններ տարածության մեջ", "Параллельность прямых, прямой и плоскости"],
-        ["skew-lines", "Skew lines; angle between lines", "Խաչվող ուղիղներ, ուղիղների միջև անկյուն", "Скрещивающиеся прямые; угол между прямыми"],
-        ["parallel-planes", "Parallel planes", "Զուգահեռ հարթություններ", "Параллельность плоскостей"],
-        ["tetrahedron-parallelepiped", "Tetrahedron and parallelepiped", "Քառանիստ և զուգահեռանիստ", "Тетраэдр и параллелепипед"],
-        ["sections", "Constructing sections", "Հատույթների կառուցում", "Построение сечений"],
-      ]),
-      unit(t("Perpendicularity in space", "Ուղղահայացություն տարածության մեջ", "Перпендикулярность прямых и плоскостей"), t("Line perpendicular to a plane, perpendicular and oblique, three perpendiculars theorem, dihedral angle, perpendicular planes.", "Հարթությանը ուղղահայաց ուղիղ, ուղղահայաց և թեք, երեք ուղղահայացների թեորեմ, երկնիստ անկյուն, ուղղահայաց հարթություններ։", "Прямая, перпендикулярная плоскости, перпендикуляр и наклонная, теорема о трёх перпендикулярах, двугранный угол, перпендикулярные плоскости."), [
-        ["line-perpendicular-plane", "Line perpendicular to a plane", "Հարթությանը ուղղահայաց ուղիղ", "Перпендикулярность прямой и плоскости"],
-        ["perpendicular-oblique", "Perpendicular and oblique; distance", "Ուղղահայաց և թեք, հեռավորություն", "Перпендикуляр и наклонная; расстояние"],
-        ["three-perpendiculars", "Theorem of three perpendiculars", "Երեք ուղղահայացների թեորեմ", "Теорема о трёх перпендикулярах"],
-        ["dihedral-angle", "Dihedral angle; perpendicular planes", "Երկնիստ անկյուն, ուղղահայաց հարթություններ", "Двугранный угол; перпендикулярность плоскостей"],
-        ["rectangular-parallelepiped", "Rectangular parallelepiped", "Ուղղանկյուն զուգահեռանիստ", "Прямоугольный параллелепипед"],
-      ]),
-      unit(t("Polyhedra", "Բազմանիստներ", "Многогранники"), t("Prism, pyramid, truncated pyramid, regular polyhedra, surface area.", "Պրիզմա, բուրգ, հատած բուրգ, կանոնավոր բազմանիստներ, մակերևույթի մակերես։", "Призма, пирамида, усечённая пирамида, правильные многогранники, площадь поверхности."), [
-        ["prism", "Prism and its surface", "Պրիզմա և նրա մակերևույթը", "Призма и её поверхность"],
-        ["pyramid", "Pyramid; regular pyramid", "Բուրգ, կանոնավոր բուրգ", "Пирамида; правильная пирамида"],
-        ["truncated-pyramid", "Truncated pyramid", "Հատած բուրգ", "Усечённая пирамида"],
-        ["regular-polyhedra", "Regular polyhedra; Euler's formula", "Կանոնավոր բազմանիստներ, Էյլերի բանաձև", "Правильные многогранники; формула Эйлера"],
-      ]),
-      unit(t("Vectors in space", "Վեկտորներ տարածության մեջ", "Векторы в пространстве"), t("Operations with vectors, coplanar vectors, decomposition in three non-coplanar vectors.", "Վեկտորների գործողություններ, համահարթ վեկտորներ, վերլուծում երեք ոչ համահարթ վեկտորներով։", "Действия с векторами, компланарные векторы, разложение по трём некомпланарным векторам."), [
-        ["vectors-space-basics", "Vectors in space: operations", "Վեկտորներ տարածության մեջ․ գործողություններ", "Векторы в пространстве: действия"],
-        ["coplanar-vectors", "Coplanar vectors", "Համահարթ վեկտորներ", "Компланарные векторы"],
-        ["vector-decomposition", "Decomposition in three non-coplanar vectors", "Վերլուծում երեք ոչ համահարթ վեկտորով", "Разложение по трём некомпланарным векторам"],
-      ]),
-    ],
-  },
+  geometryGrade10,
   {
     subject: "geometry",
     grade: 11,
