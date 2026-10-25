@@ -6,6 +6,7 @@ import { russianGrade3 } from "./grade-3";
 import { russianGrade4 } from "./grade-4";
 import { russianGrade5 } from "./grade-5";
 import { russianGrade6 } from "./grade-6";
+import { russianGrade7 } from "./grade-7";
 
 export const russian: CourseSeed[] = [
   russianGrade1,
@@ -14,50 +15,7 @@ export const russian: CourseSeed[] = [
   russianGrade4,
   russianGrade5,
   russianGrade6,
-  course(
-    7,
-    ["Participles, gerunds, adverbs, function words, interjections; literature of the 18th–20th centuries.", "Դերբայներ (причастие, деепричастие), մակբայ, սպասարկու բառեր, ձայնարկություն, 18–20-րդ դարերի գրականություն։", "Причастие, деепричастие, наречие, служебные части речи, междометие; литература XVIII–XX веков."],
-    ["Armenia grade 7 (2–3 h/week): participles and gerunds (recognition and use), adverbs, prepositions and conjunctions, text types, business writing, reading Pushkin, Lermontov, Gogol, Turgenev, Chekhov, Gorky; Armenian-Russian literary links (Bryusov, Mandelstam, Grossman on Armenia).", "Հայաստան, 7-րդ դասարան (2–3 ժ/շաբ.)՝ причастие և деепричастие (ճանաչում և գործածություն), մակբայներ, նախդիրներ և շաղկապներ, տեքստի տեսակներ, գործնական գրություն, Պուշկին, Լերմոնտով, Գոգոլ, Տուրգենև, Չեխով, Գորկի, հայ-ռուսական գրական կապեր (Բրյուսով, Մանդելշտամ, Գրոսման Հայաստանի մասին)։", "Армения, 7 класс (2–3 ч/нед.): причастие и деепричастие (узнавание и употребление), наречия, предлоги и союзы, типы текста, деловое письмо, чтение Пушкина, Лермонтова, Гоголя, Тургенева, Чехова, Горького; армяно-русские литературные связи (Брюсов, Мандельштам, Гроссман об Армении)."],
-    ["Russia grade 7 (ФГОС ООО, Russian 4 h + Literature 2 h): participle (participial phrase, н/нн, не), gerund, adverb, category of state, preposition, conjunction, particle (не/ни), interjection. Literature: byliny, Lomonosov, Derzhavin, Pushkin, Lermontov, Gogol's «Тарас Бульба», Turgenev, Nekrasov, Saltykov-Shchedrin, Tolstoy's «Детство», Chekhov, Bunin, Gorky's «Детство», Mayakovsky, Platonov, Tvardovsky.", "Ռուսաստան, 7-րդ դասարան (ФГОС ООО, ռուսերեն 4 ժ + գրականություն 2 ժ)՝ причастие, деепричастие, մակբայ, վիճակի կատեգորիա, նախդիր, շաղկապ, մասնիկ (не/ни), ձայնարկություն։ Գրականություն՝ բիլինաներ, Լոմոնոսով, Դերժավին, Պուշկին, Լերմոնտով, Գոգոլի «Тарас Бульба», Տուրգենև, Նեկրասով, Սալտիկով-Շչեդրին, Տոլստոյի «Детство», Չեխով, Բունին, Գորկու «Детство», Մայակովսկի, Պլատոնով, Տվարդովսկի։", "Россия, 7 класс (ФГОС ООО, русский 4 ч + литература 2 ч): причастие (оборот, н/нн, не), деепричастие, наречие, категория состояния, предлог, союз, частица (не/ни), междометие. Литература: былины, Ломоносов, Державин, Пушкин, Лермонтов, «Тарас Бульба» Гоголя, Тургенев, Некрасов, Салтыков-Щедрин, «Детство» Толстого, Чехов, Бунин, «Детство» Горького, Маяковский, Платонов, Твардовский."],
-    { armenia: 2, russia: 4 },
-    [
-      unit(t("Participle", "Причастие (դերբայ)", "Причастие"), t("Active and passive participles, participial phrase and commas, н/нн, не with participles.", "Ներգործական և կրավորական, դերբայական դարձված և ստորակետ, н/нн, не։", "Действительные и страдательные, причастный оборот и запятые, н/нн, не с причастиями."), [
-        ["ru7-participle-intro", "Participle as a verb form; declension", "Причастие-ն որպես բայի ձև, հոլովում", "Причастие как форма глагола; склонение"],
-        ["ru7-participial-phrase", "Participial phrase and punctuation", "Դերբայական դարձված և կետադրություն", "Причастный оборот и знаки препинания"],
-        ["ru7-active-passive", "Active and passive participles; suffixes", "Ներգործական և կրավորական, վերջածանցներ", "Действительные и страдательные причастия; суффиксы"],
-        ["ru7-short-participles", "Short passive participles", "Կարճ կրավորական դերբայներ", "Краткие страдательные причастия"],
-        ["ru7-n-nn-participles", "Н and нн in participles and verbal adjectives", "Н և нн դերբայներում և բայական ածականներում", "Н и нн в причастиях и отглагольных прилагательных"],
-        ["ru7-ne-participles", "Не with participles; ё after sibilants", "Не դերբայների հետ, ё սուլականներից հետո", "Не с причастиями; ё после шипящих"],
-      ]),
-      unit(t("Gerund and adverb", "Деепричастие և մակբայ", "Деепричастие и наречие"), t("Gerund forms and phrase, не; adverb classes, degrees, spelling.", "Деепричастие-ի ձևեր և դարձված, не, մակբայի տեսակներ, աստիճաններ, ուղղագրություն։", "Формы деепричастия и оборот, не; разряды наречий, степени, правописание."), [
-        ["ru7-gerund", "Gerund and gerund phrase", "Деепричастие և դարձված", "Деепричастие и деепричастный оборот"],
-        ["ru7-gerund-forms", "Imperfective and perfective gerunds; не", "Անկատար և կատարյալ деепричастие, не", "Деепричастия несовершенного и совершенного вида; не"],
-        ["ru7-adverb-classes", "Adverb: classes and degrees", "Մակբայ․ տեսակներ և աստիճաններ", "Наречие: разряды и степени сравнения"],
-        ["ru7-adverb-spelling", "Spelling of adverbs: не/ни, н/нн, о/е, hyphen", "Մակբայի ուղղագրություն․ не/ни, н/нн, о/е, գծիկ", "Правописание наречий: не/ни, н/нн, о/е, дефис"],
-        ["ru7-category-of-state", "Category of state", "Վիճակի կատեգորիա", "Категория состояния"],
-      ]),
-      unit(t("Function words", "Սպասարկու բառեր", "Служебные части речи"), t("Prepositions, conjunctions (тоже/также/чтобы/зато), particles (не/ни), interjections.", "Նախդիրներ, շաղկապներ (тоже/также/чтобы/зато), մասնիկներ (не/ни), ձայնարկություններ։", "Предлоги, союзы (тоже/также/чтобы/зато), частицы (не/ни), междометия."), [
-        ["ru7-prepositions", "Prepositions: simple and derived; spelling", "Նախդիրներ․ պարզ և ածանցյալ, ուղղագրություն", "Предлоги: простые и производные; правописание"],
-        ["ru7-conjunctions", "Conjunctions; тоже/также/чтобы/зато", "Շաղկապներ, тоже/также/чтобы/зато", "Союзы; слитное и раздельное написание тоже/также/чтобы/зато"],
-        ["ru7-particles", "Particles; не and ни", "Մասնիկներ, не և ни", "Частицы; различение не и ни"],
-        ["ru7-interjections", "Interjections and onomatopoeia", "Ձայնարկություններ և նմանաձայնություն", "Междометия и звукоподражания"],
-      ]),
-      unit(t("Literature: 18th–19th centuries", "Գրականություն․ 18–19-րդ դարեր", "Литература: XVIII–XIX века"), t("Byliny, Lomonosov, Derzhavin, Pushkin, Lermontov, Gogol's «Тарас Бульба», Turgenev, Nekrasov, Tolstoy, Chekhov.", "Բիլինաներ, Լոմոնոսով, Դերժավին, Պուշկին, Լերմոնտով, Գոգոլի «Тарас Бульба», Տուրգենև, Նեկրասով, Տոլստոյ, Չեխով։", "Былины, Ломоносов, Державин, Пушкин, Лермонтов, «Тарас Бульба» Гоголя, Тургенев, Некрасов, Толстой, Чехов."), [
-        ["ru7-byliny-18c", "Byliny; Lomonosov and Derzhavin", "Բիլինաներ, Լոմոնոսով և Դերժավին", "Былины; Ломоносов и Державин"],
-        ["ru7-pushkin-7", "Pushkin: «Медный всадник», «Станционный смотритель»", "Պուշկին․ «Медный всадник», «Станционный смотритель»", "Пушкин: «Медный всадник», «Станционный смотритель»"],
-        ["ru7-lermontov-kalashnikov", "Lermontov: «Песня про купца Калашникова»", "Լերմոնտով․ «Песня про купца Калашникова»", "Лермонтов: «Песня про купца Калашникова»"],
-        ["ru7-gogol-taras", "Gogol: «Тарас Бульба»", "Գոգոլ․ «Тарас Бульба»", "Гоголь: «Тарас Бульба»"],
-        ["ru7-turgenev-nekrasov", "Turgenev's «Бирюк»; Nekrasov's «Русские женщины»", "Տուրգենևի «Бирюк», Նեկրասովի «Русские женщины»", "Тургенев «Бирюк»; Некрасов «Русские женщины»"],
-        ["ru7-tolstoy-chekhov-7", "Tolstoy's «Детство»; Chekhov's «Хамелеон»", "Տոլստոյի «Детство», Չեխովի «Хамелеон»", "Толстой «Детство»; Чехов «Хамелеон»"],
-      ]),
-      unit(t("Literature: 20th century", "Գրականություն․ 20-րդ դար", "Литература: XX век"), t("Gorky's «Детство», Mayakovsky, Andreyev, Platonov, Tvardovsky; Russian poets on Armenia.", "Գորկու «Детство», Մայակովսկի, Անդրեև, Պլատոնով, Տվարդովսկի, ռուս բանաստեղծները Հայաստանի մասին։", "«Детство» Горького, Маяковский, Андреев, Платонов, Твардовский; русские поэты об Армении."), [
-        ["ru7-gorky-childhood", "Gorky: «Детство»", "Գորկի․ «Детство»", "Горький: «Детство»"],
-        ["ru7-mayakovsky-andreyev", "Mayakovsky; Andreyev's «Кусака»", "Մայակովսկի, Անդրեևի «Кусака»", "Маяковский; Андреев «Кусака»"],
-        ["ru7-platonov-tvardovsky", "Platonov's «Юшка»; Tvardovsky", "Պլատոնովի «Юшка», Տվարդովսկի", "Платонов «Юшка»; Твардовский"],
-        ["ru7-russians-on-armenia", "Russian poets on Armenia: Bryusov, Mandelstam, Grossman", "Ռուս բանաստեղծները Հայաստանի մասին․ Բրյուսով, Մանդելշտամ, Գրոսման", "Русские поэты об Армении: Брюсов, Мандельштам, Гроссман"],
-      ]),
-    ],
-  ),
+  russianGrade7,
   course(
     8,
     ["Syntax of the simple sentence: phrase, two-member and one-member sentences, homogeneous and detached members, address, parenthetical constructions, direct speech; literature of the 19th–20th centuries.", "Պարզ նախադասության շարահյուսություն՝ բառակապակցություն, երկկազմ և միակազմ նախադասություններ, համադաս և տրոհված անդամներ, կոչական, միջանկյալ կառույցներ, ուղղակի խոսք, 19–20-րդ դարերի գրականություն։", "Синтаксис простого предложения: словосочетание, двусоставные и односоставные предложения, однородные и обособленные члены, обращение, вводные конструкции, прямая речь; литература XIX–XX веков."],
