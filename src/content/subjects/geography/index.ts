@@ -1,7 +1,8 @@
 import type { CourseSeed } from "../../types";
-import { withRu } from "../../ru-overlay";
+import { withEn, withRu } from "../../ru-overlay";
 import { geographyGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
+import { en as en6 } from "./grade-6.en";
 import { geographyGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
 import { geographyGrade8 } from "./grade-8";
@@ -15,4 +16,4 @@ import { ru as ru11 } from "./grade-11.ru";
 import { geographyGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 
-export const geography: CourseSeed[] = [withRu(geographyGrade6, ru6), withRu(geographyGrade7, ru7), withRu(geographyGrade8, ru8), withRu(geographyGrade9, ru9), withRu(geographyGrade10, ru10), withRu(geographyGrade11, ru11), withRu(geographyGrade12, ru12)];
+export const geography: CourseSeed[] = [withEn(withRu(geographyGrade6, ru6), en6), withRu(geographyGrade7, ru7), withRu(geographyGrade8, ru8), withRu(geographyGrade9, ru9), withRu(geographyGrade10, ru10), withRu(geographyGrade11, ru11), withRu(geographyGrade12, ru12)];
