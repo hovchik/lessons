@@ -610,3 +610,28 @@ button.art-card:active { transform: scale(0.97); }
 .sim-eqlist span { font-size: 0.75rem; font-weight: 800; color: var(--muted-foreground); }
 .sim-eqlist b { font-size: 1rem; font-weight: 800; }
 @media (max-width: 30rem) { .sim-eqlist > div { grid-template-columns: 1fr; gap: 0; } }
+
+/* ---- Primary-school math blocks (```sim count, numline, place, fraction, array, column, ...) ---- */
+.math-counter { display: inline-grid; justify-items: start; gap: 0.15rem; margin: 0.35rem 0.6rem 0 0; }
+.math-counter-label { font-size: 0.75rem; font-weight: 800; color: var(--muted-foreground); }
+.math-counter .sim-counter b { min-width: 2.4rem; }
+.math-counter .sim-counter button:disabled { opacity: 0.35; }
+.math-sum { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 0.15rem; margin: 0.7rem 0 0.2rem; font-size: 1.25rem; font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1.5; }
+.math-sum span { white-space: pre-wrap; }
+.math-pv { display: grid; gap: 3px; margin-top: 0.2rem; overflow-x: auto; }
+.math-pv-class, .math-pv-name { display: grid; place-items: center; min-height: 1.6rem; padding: 0.15rem 0.2rem; border-radius: 8px; font-size: 0.68rem; font-weight: 800; line-height: 1.15; text-align: center; color: #334155; overflow-wrap: anywhere; }
+.math-pv-class { font-size: 0.72rem; color: #1e1b4b; }
+.math-pv-cell { display: grid; justify-items: center; border-radius: 10px; padding: 0.15rem 0; }
+.math-pv-cell button { display: grid; place-items: center; width: 100%; min-height: 1.9rem; color: var(--art, #4f46e5); }
+.math-pv-digit { font-size: 1.6rem; font-weight: 900; line-height: 1.2; font-variant-numeric: tabular-nums; color: #1e1b4b; border-radius: 8px; }
+button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
+.math-book .math-digit { font: 800 17px "Nunito", "Noto Sans Armenian", sans-serif; }
+.math-book .math-small-digit { font: 800 9.5px "Nunito", sans-serif; }
+.math-clock-num { font: 900 12px "Nunito", sans-serif; fill: #1e1b4b; }
+.math-digital { margin: 0; padding: 0.3rem 0.8rem; border-radius: 14px; background: #1e1b4b; color: #a7f3d0; font: 900 2rem/1.2 ui-monospace, "SFMono-Regular", monospace; text-align: center; letter-spacing: 0.08em; }
+.math-chart-title { margin: 0 0 0.4rem; font-weight: 900; text-align: center; }
+.math-picto { display: grid; gap: 0.3rem; }
+.math-picto-row { display: grid; grid-template-columns: minmax(5rem, auto) 1fr; gap: 0.5rem; align-items: center; min-height: 2.4rem; padding: 0.2rem 0.6rem; border-radius: 12px; background: #fff; border: 2px solid var(--border); text-align: left; font-weight: 800; font-size: 0.85rem; }
+.math-picto-row > span:last-child { font-size: 1.15rem; letter-spacing: 0.05em; overflow-wrap: anywhere; }
+.math-picto-row.is-active { border-color: #e11d48; }
+.math-picto-half { display: inline-block; width: 0.6em; overflow: hidden; vertical-align: bottom; }

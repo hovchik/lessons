@@ -7,6 +7,8 @@ import { list, parseArtSpec } from "@/lib/art/spec";
 import { parseFormula } from "@/lib/sim/elements";
 import { DIAGRAM_GROUPS, MECH_GROUPS } from "./mech/ids";
 import { REACTIONS } from "./widgets/balance";
+import { CHART_SETS } from "./widgets/chart";
+import { planColumn } from "./widgets/column";
 import { parseCheck } from "./widgets/check";
 import { SALTS } from "./widgets/flame";
 import { GEO_PRESETS } from "./widgets/geo";
@@ -47,9 +49,19 @@ const MODES: Record<string, string[]> = {
   ions: ["exchange", "dissolve"],
   activity: ["acid", "water", "salt"],
   rate: ["rate", "equilibrium"],
+  count: ["frame", "split", "add", "compare"],
+  numline: ["jump", "skip", "round", "fraction", "decimal", "integers"],
+  place: ["blocks", "chart", "decimal"],
+  fraction: ["parts", "compare", "equiv", "of", "add"],
+  array: ["grid", "area", "share", "table"],
+  clock: ["read", "elapsed"],
+  chart: ["bar", "picto", "pie", "line"],
+  percent: ["grid", "of", "whole"],
+  shapes: ["flat", "rect", "complex", "box"],
+  trip: ["one", "towards", "apart", "chase"],
 };
 
-export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid"];
+export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale"];
 
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
@@ -90,6 +102,15 @@ export function checkSimSpec(source: string): string[] {
       break;
     case "ph": if (spec.opts.set) need([spec.opts.set], inTable(PH_SETS), "pH set"); break;
     case "mole": need(named(), (f) => !!parseFormula(f), "formula"); break;
+    case "column":
+      if (!planColumn(spec.args[0] ?? "", "en")) errors.push(`${where}: cannot lay out "${spec.args[0] ?? ""}"`);
+      break;
+    case "chart": if (spec.opts.set && !CHART_SETS.includes(spec.opts.set)) errors.push(`${where}: unknown chart set "${spec.opts.set}"`); break;
+    case "scale": {
+      const k = Number(spec.opts.k ?? 2), a = Number(spec.opts.a ?? 1), b = Number(spec.opts.b ?? 7);
+      if (!Number.isInteger((b - a) / k) || b < a) errors.push(`${where}: x is not a whole number`);
+      break;
+    }
     case "check": {
       const { question, options } = parseCheck(spec.body);
       const answer = Number(spec.opts.answer);

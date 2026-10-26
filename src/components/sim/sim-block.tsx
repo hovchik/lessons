@@ -46,6 +46,19 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   flame: lazy(() => import("./widgets/flame")),
   geo: lazy(() => import("./widgets/geo")),
   solid: lazy(() => import("./widgets/solid")),
+  // primary-school math
+  count: lazy(() => import("./widgets/count")),
+  numline: lazy(() => import("./widgets/numline")),
+  place: lazy(() => import("./widgets/place")),
+  fraction: lazy(() => import("./widgets/fraction")),
+  array: lazy(() => import("./widgets/array")),
+  column: lazy(() => import("./widgets/column")),
+  clock: lazy(() => import("./widgets/clock")),
+  chart: lazy(() => import("./widgets/chart")),
+  scale: lazy(() => import("./widgets/scale")),
+  percent: lazy(() => import("./widgets/percent")),
+  shapes: lazy(() => import("./widgets/shapes")),
+  trip: lazy(() => import("./widgets/trip")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
