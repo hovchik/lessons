@@ -29,12 +29,20 @@ Art begins with the place where a person lives. The shape of the land, its colou
 | **colours of summer** | yellow, ochre, orange, deep blue sky | many greens, soft blue sky |
 | **symbol** | Mount Ararat, Mount Aragats | a birch tree, a field of rye |
 
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
+
 ## Painters of the native land
 
 - **Gevorg Bashinjaghian** painted Lake Sevan, Ararat and mountain gorges with calm light and clear air.
 - **Martiros Saryan** showed Armenia with hot, bright colours.
 - **Alexei Savrasov** painted «The Rooks Have Come Back» (1871): early spring, melting snow, birches and rooks building nests. A very simple view became a symbol of Russian spring.
 - **Isaac Levitan** painted quiet rivers, fields and birches.
+
+~~~art
+palette saryan shishkin tuff
+~~~
 
 ## Horizon and mood
 
@@ -45,8 +53,13 @@ Art begins with the place where a person lives. The shape of the land, its colou
 
 The season changes the colours: spring is light and fresh, summer is rich, autumn is warm and golden, winter is cold and quiet.
 
-### Exercises
+~~~art
+sketch guide=horizon
+Move the horizon in your mind: low for a big sky, high for wide fields. Draw your native land with one of them.
+~~~
 
+~~~art
+tasks
 1. Why is the landscape the first «teacher» of a folk artist?
 2. Name three differences between the landscape of Armenia and Central Russia.
 3. What did Gevorg Bashinjaghian paint?
@@ -54,10 +67,12 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 5. When do we choose a high horizon?
 6. Which colours suit autumn and which suit winter?
 7. Paint a landscape of your native place in your favourite season.
+~~~
 
-### Answers
-
-1. The shape, colours and weather of the land shape the artist's taste. 2. Mountains vs plains; fast rivers vs slow rivers; orchards vs birch groves (any three). 3. Lake Sevan, Ararat and mountain gorges. 4. Early spring, melting snow, birches and rooks building nests. 5. For valleys and fields that go far away. 6. Autumn: warm and golden; winter: cold and quiet colours. 7. Your work.`,
+~~~art
+hints
+1. The shape, colours and weather of the land shape the artist's taste. 2. Mountains vs plains; fast rivers vs slow rivers; orchards vs birch groves (any three). 3. Lake Sevan, Ararat and mountain gorges. 4. Early spring, melting snow, birches and rooks building nests. 5. For valleys and fields that go far away. 6. Autumn: warm and golden; winter: cold and quiet colours. 7. Your work.
+~~~`,
         hy: `## Ամեն երկիր ունի իր դեմքը
 
 Արվեստը սկսվում է այն վայրից, որտեղ ապրում է մարդը։ Երկրի ձևը, գույներն ու եղանակը դառնում են ժողովրդական արվեստագետի առաջին «ուսուցիչը»։
@@ -70,12 +85,20 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 | **ամառվա գույներ** | դեղին, օխրա, նարնջագույն, խոր կապույտ երկինք | բազմաթիվ կանաչներ, մեղմ կապույտ երկինք |
 | **խորհրդանիշ** | Արարատ լեռը, Արագած լեռը | կեչին, աշորայի դաշտը |
 
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
+
 ## Հայրենի երկրի նկարիչները
 
 - **Գևորգ Բաշինջաղյանը** նկարել է Սևանա լիճը, Արարատը և լեռնային կիրճերը՝ հանդարտ լույսով և մաքուր օդով։
 - **Մարտիրոս Սարյանը** Հայաստանը ցույց է տվել տաք, վառ գույներով։
 - **Ալեքսեյ Սավրասովը** նկարել է «Սերմնագռավներն եկան» (1871)՝ վաղ գարուն, հալվող ձյուն, կեչիներ և բույն հյուսող սերմնագռավներ։ Շատ պարզ տեսարանը դարձավ ռուսական գարնան խորհրդանիշ։
 - **Իսահակ Լևիտանը** նկարել է հանդարտ գետեր, դաշտեր և կեչիներ։
+
+~~~art
+palette saryan shishkin tuff
+~~~
 
 ## Հորիզոն և տրամադրություն
 
@@ -86,8 +109,13 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 
 Եղանակը փոխում է գույները՝ գարունը թեթև է և թարմ, ամառը՝ հարուստ, աշունը՝ տաք և ոսկեգույն, ձմեռը՝ սառը և հանդարտ։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Մտքում տեղաշարժի՛ր հորիզոնը․ ցածր՝ մեծ երկնքի համար, բարձր՝ լայն դաշտերի համար։ Նկարի՛ր հայրենի բնությունը դրանցից մեկով։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ է բնապատկերը ժողովրդական արվեստագետի առաջին «ուսուցիչը»։
 2. Անվանի՛ր Հայաստանի և Կենտրոնական Ռուսաստանի բնապատկերի երեք տարբերություն։
 3. Ի՞նչ է նկարել Գևորգ Բաշինջաղյանը։
@@ -95,10 +123,12 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 5. Ե՞րբ ենք ընտրում բարձր հորիզոն։
 6. Ո՞ր գույներն են սազում աշնանը, և որո՞նք՝ ձմռանը։
 7. Նկարի՛ր քո հայրենի վայրի բնապատկերը սիրելի եղանակին։
+~~~
 
-### Պատասխաններ
-
-1. Երկրի ձևը, գույներն ու եղանակը ձևավորում են արվեստագետի ճաշակը։ 2. Լեռներ և հարթավայրեր, արագ և դանդաղ գետեր, այգիներ և կեչու պուրակներ (ցանկացած երեքը)։ 3. Սևանա լիճը, Արարատը և լեռնային կիրճերը։ 4. Վաղ գարուն, հալվող ձյուն, կեչիներ և բույն հյուսող սերմնագռավներ։ 5. Հեռու գնացող հովիտների և դաշտերի համար։ 6. Աշնանը՝ տաք և ոսկեգույն, ձմռանը՝ սառը և հանդարտ գույներ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Երկրի ձևը, գույներն ու եղանակը ձևավորում են արվեստագետի ճաշակը։ 2. Լեռներ և հարթավայրեր, արագ և դանդաղ գետեր, այգիներ և կեչու պուրակներ (ցանկացած երեքը)։ 3. Սևանա լիճը, Արարատը և լեռնային կիրճերը։ 4. Վաղ գարուն, հալվող ձյուն, կեչիներ և բույն հյուսող սերմնագռավներ։ 5. Հեռու գնացող հովիտների և դաշտերի համար։ 6. Աշնանը՝ տաք և ոսկեգույն, ձմռանը՝ սառը և հանդարտ գույներ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## У каждой земли своё лицо
 
 Искусство начинается с места, где живёт человек. Форма земли, её цвета и погода становятся первым «учителем» народного мастера.
@@ -111,12 +141,20 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 | **цвета лета** | жёлтый, охра, оранжевый, глубокое синее небо | много оттенков зелёного, мягкое голубое небо |
 | **символ** | гора Арарат, гора Арагац | берёза, ржаное поле |
 
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
+
 ## Художники родной земли
 
 - **Геворг Башинджагян** писал озеро Севан, Арарат и горные ущелья спокойным светом и чистым воздухом.
 - **Мартирос Сарьян** показал Армению горячими, яркими красками.
 - **Алексей Саврасов** написал «Грачи прилетели» (1871): ранняя весна, тающий снег, берёзы и грачи, вьющие гнёзда. Очень простой вид стал символом русской весны.
 - **Исаак Левитан** писал тихие реки, поля и берёзы.
+
+~~~art
+palette saryan shishkin tuff
+~~~
 
 ## Горизонт и настроение
 
@@ -127,8 +165,13 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 
 Время года меняет цвета: весна светлая и свежая, лето сочное, осень тёплая и золотая, зима холодная и тихая.
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Подвигай горизонт в уме: низкий для большого неба, высокий для широких полей. Нарисуй родной край одним из вариантов.
+~~~
 
+~~~art
+tasks
 1. Почему пейзаж — первый «учитель» народного мастера?
 2. Назови три отличия природы Армении от природы Средней России.
 3. Что писал Геворг Башинджагян?
@@ -136,10 +179,12 @@ The season changes the colours: spring is light and fresh, summer is rich, autum
 5. Когда выбирают высокий горизонт?
 6. Какие цвета подходят осени, а какие — зиме?
 7. Напиши пейзаж родного края в своё любимое время года.
+~~~
 
-### Ответы
-
-1. Форма, цвета и погода земли формируют вкус мастера. 2. Горы и равнины; быстрые и медленные реки; сады и берёзовые рощи (любые три). 3. Озеро Севан, Арарат и горные ущелья. 4. Ранняя весна, тающий снег, берёзы и грачи, вьющие гнёзда. 5. Для долин и полей, уходящих вдаль. 6. Осени — тёплые и золотые, зиме — холодные и тихие цвета. 7. Твоя работа.`,
+~~~art
+hints
+1. Форма, цвета и погода земли формируют вкус мастера. 2. Горы и равнины; быстрые и медленные реки; сады и берёзовые рощи (любые три). 3. Озеро Севан, Арарат и горные ущелья. 4. Ранняя весна, тающий снег, берёзы и грачи, вьющие гнёзда. 5. Для долин и полей, уходящих вдаль. 6. Осени — тёплые и золотые, зиме — холодные и тихие цвета. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A symbol of the Armenian landscape is…", "Հայկական բնապատկերի խորհրդանիշն է…", "Символ армянского пейзажа —"), [t("Mount Ararat", "Արարատ լեռը", "гора Арарат"), t("a palm tree", "արմավենին", "пальма"), t("a desert", "անապատը", "пустыня")], 0),
@@ -173,6 +218,10 @@ People build from what is around them. Where there are forests, houses are made 
 | **roof horse** | a carved horse head at the top of the roof: a sign of good luck |
 | **stove** | the warm heart of the house |
 
+~~~art
+pic izba
+~~~
+
 ## The old Armenian house
 
 | Part | What it is |
@@ -185,6 +234,10 @@ People build from what is around them. Where there are forests, houses are made 
 
 The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The light from the yerdik falls down like a sunbeam into the room.
 
+~~~art
+pic armenian-house
+~~~
+
 ## Draw a village house
 
 1. Choose the house: an izba or an Armenian stone house.
@@ -193,8 +246,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 4. Add decorations: carved frames, a roof horse, a carved pillar, a balcony.
 5. Paint the house in its landscape: forest and snow, or mountains and orchards.
 
-### Exercises
+~~~art
+steps izba
+~~~
 
+~~~art
+tasks
 1. Why are houses in forest areas made of wood?
 2. Why does an izba have a steep roof?
 3. What is a roof horse?
@@ -202,10 +259,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 5. What is a yerdik for?
 6. What is a tonir?
 7. Draw a village house with at least two decorations.
+~~~
 
-### Answers
-
-1. Because there is a lot of wood around. 2. So snow slides down. 3. A carved horse head at the top of the roof, a sign of good luck. 4. The main room of an old Armenian house with a stepped wooden ceiling. 5. For light and smoke. 6. A clay oven in the floor for baking lavash. 7. Your work.`,
+~~~art
+hints
+1. Because there is a lot of wood around. 2. So snow slides down. 3. A carved horse head at the top of the roof, a sign of good luck. 4. The main room of an old Armenian house with a stepped wooden ceiling. 5. For light and smoke. 6. A clay oven in the floor for baking lavash. 7. Your work.
+~~~`,
         hy: `## Տունն աճում է իր հողից
 
 Մարդիկ կառուցում են այն նյութից, որն իրենց շուրջն է։ Որտեղ անտառ կա, տները **փայտից** են, լեռներում՝ **քարից**։
@@ -220,6 +279,10 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 | **տանիքի ձի** | փորագրված ձիու գլուխ տանիքի կատարին՝ հաջողության նշան |
 | **վառարան** | տան տաք սիրտը |
 
+~~~art
+pic izba
+~~~
+
 ## Հին հայկական տունը
 
 | Մաս | Ինչ է |
@@ -232,6 +295,10 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 
 Գլխատան աստիճանաձև առաստաղը ներսից նման է բուրգի։ Երդիկից լույսն արևի շողի պես իջնում է սենյակ։
 
+~~~art
+pic armenian-house
+~~~
+
 ## Նկարի՛ր գյուղական տուն
 
 1. Ընտրի՛ր տունը՝ իզբա կամ հայկական քարե տուն։
@@ -240,8 +307,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 4. Ավելացրու՛ զարդեր՝ փորագրված շրջանակներ, տանիքի ձի, փորագրված սյուն, պատշգամբ։
 5. Նկարի՛ր տունն իր բնապատկերում՝ անտառ և ձյուն, կամ լեռներ և այգիներ։
 
-### Վարժություններ
+~~~art
+steps izba
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ են անտառային վայրերում տները փայտից։
 2. Ինչո՞ւ է իզբայի տանիքը թեք։
 3. Ի՞նչ է տանիքի ձին։
@@ -249,10 +320,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 5. Ինչի՞ համար է երդիկը։
 6. Ի՞նչ է թոնիրը։
 7. Նկարի՛ր գյուղական տուն առնվազն երկու զարդով։
+~~~
 
-### Պատասխաններ
-
-1. Որովհետև շուրջը շատ փայտ կա։ 2. Որպեսզի ձյունը սահի ներքև։ 3. Փորագրված ձիու գլուխ տանիքի կատարին՝ հաջողության նշան։ 4. Հին հայկական տան գլխավոր սենյակն աստիճանաձև փայտե առաստաղով։ 5. Լույսի և ծխի համար։ 6. Կավե վառարան հատակում՝ լավաշ թխելու համար։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Որովհետև շուրջը շատ փայտ կա։ 2. Որպեսզի ձյունը սահի ներքև։ 3. Փորագրված ձիու գլուխ տանիքի կատարին՝ հաջողության նշան։ 4. Հին հայկական տան գլխավոր սենյակն աստիճանաձև փայտե առաստաղով։ 5. Լույսի և ծխի համար։ 6. Կավե վառարան հատակում՝ լավաշ թխելու համար։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Дом вырастает из своей земли
 
 Люди строят из того, что их окружает. Где много леса, дома делают из **дерева**, в горах — из **камня**.
@@ -267,6 +340,10 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 | **конёк** | резная голова коня на верху крыши — знак удачи |
 | **печь** | тёплое сердце дома |
 
+~~~art
+pic izba
+~~~
+
 ## Старинный армянский дом
 
 | Часть | Что это |
@@ -279,6 +356,10 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 
 Ступенчатый потолок глхатуна изнутри похож на пирамиду. Свет из ердика падает в комнату, как солнечный луч.
 
+~~~art
+pic armenian-house
+~~~
+
 ## Нарисуй деревенский дом
 
 1. Выбери дом: избу или армянский каменный дом.
@@ -287,8 +368,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 4. Добавь украшения: наличники, конёк, резной столб, балкон.
 5. Напиши дом в его пейзаже: лес и снег или горы и сады.
 
-### Упражнения
+~~~art
+steps izba
+~~~
 
+~~~art
+tasks
 1. Почему в лесных краях дома строят из дерева?
 2. Почему у избы крутая крыша?
 3. Что такое конёк?
@@ -296,10 +381,12 @@ The stepped ceiling of the glkhatun looks like a pyramid seen from inside. The l
 5. Для чего нужен ердик?
 6. Что такое тонир?
 7. Нарисуй деревенский дом хотя бы с двумя украшениями.
+~~~
 
-### Ответы
-
-1. Потому что вокруг много дерева. 2. Чтобы скатывался снег. 3. Резная голова коня на верху крыши, знак удачи. 4. Главная комната старинного армянского дома со ступенчатым деревянным потолком. 5. Для света и дыма. 6. Глиняная печь в полу, в ней пекут лаваш. 7. Твоя работа.`,
+~~~art
+hints
+1. Потому что вокруг много дерева. 2. Чтобы скатывался снег. 3. Резная голова коня на верху крыши, знак удачи. 4. Главная комната старинного армянского дома со ступенчатым деревянным потолком. 5. Для света и дыма. 6. Глиняная печь в полу, в ней пекут лаваш. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("In forest areas houses are built of…", "Անտառային վայրերում տները կառուցում են…", "В лесных краях дома строят из…"), [t("wood", "փայտից", "дерева"), t("ice", "սառույցից", "льда"), t("glass", "ապակուց", "стекла")], 0),
@@ -332,11 +419,19 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 | **3. nature** | trees, gardens, fields, haystacks |
 | **4. people and animals** | farmers, shepherds, children, cows, sheep, hens |
 
+~~~art
+compose
+~~~
+
 ## Near and far
 
 - Houses near the bottom of the sheet are **close**: big and detailed.
 - Houses higher up are **far**: smaller, paler, with fewer details.
 - A road that gets narrower towards the horizon leads the eye deep into the picture.
+
+~~~art
+aerial
+~~~
 
 ## Step by step
 
@@ -346,8 +441,17 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 4. Add people last: they bring the village to life.
 5. Look from a distance and check: is there one centre? Is anything too big or too small?
 
-### Exercises
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+sketch guide=horizon
+Draw a village panorama in three planes: big houses in front, smaller ones in the middle, hills and church far away.
+~~~
+
+~~~art
+tasks
 1. What is a panorama?
 2. Name four things that make a village besides houses.
 3. Where on the sheet do we place near houses?
@@ -355,10 +459,12 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 5. Why should the road get narrower?
 6. What do we glue first: near or far objects?
 7. Make a part of the class panorama with your group.
+~~~
 
-### Answers
-
-1. A long picture that shows a wide view. 2. A road, a river, gardens, people (any four). 3. Near the bottom. 4. Smaller, paler, with fewer details. 5. To lead the eye deep into the picture. 6. Far objects. 7. Your work.`,
+~~~art
+hints
+1. A long picture that shows a wide view. 2. A road, a river, gardens, people (any four). 3. Near the bottom. 4. Smaller, paler, with fewer details. 5. To lead the eye deep into the picture. 6. Far objects. 7. Your work.
+~~~`,
         hy: `## Գյուղն ամբողջ աշխարհ է
 
 Գյուղը միայն տներ չէ։ Այնտեղ կան ճանապարհ և գետ, այգիներ և դաշտեր, աղբյուր, բլրի վրա եկեղեցի, աշխատող մարդիկ և խաղացող երեխաներ։ Դասարանը միասին կարող է այս աշխարհը ցույց տալ մեկ երկար թերթի վրա՝ **համայնապատկեր**։
@@ -372,11 +478,19 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 | **3. բնություն** | ծառեր, այգիներ, դաշտեր, խոտի դեզեր |
 | **4. մարդիկ և կենդանիներ** | գյուղացիներ, հովիվներ, երեխաներ, կովեր, ոչխարներ, հավեր |
 
+~~~art
+compose
+~~~
+
 ## Մոտ և հեռու
 
 - Թերթի ներքևի մասի տները **մոտ** են՝ մեծ և մանրամասն։
 - Ավելի վերևի տները **հեռու** են՝ փոքր, գունատ, քիչ մանրամասներով։
 - Դեպի հորիզոն նեղացող ճանապարհը հայացքը տանում է նկարի խորքը։
+
+~~~art
+aerial
+~~~
 
 ## Քայլ առ քայլ
 
@@ -386,8 +500,17 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 4. Մարդկանց ավելացրե՛ք վերջում՝ նրանք կենդանացնում են գյուղը։
 5. Նայե՛ք հեռվից և ստուգե՛ք՝ կա՞ մեկ կենտրոն, ինչ-որ բան չափազանց մեծ կամ փոքր չէ՞։
 
-### Վարժություններ
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+sketch guide=horizon
+Նկարի՛ր գյուղի համայնապատկերը երեք պլանով․ մեծ տներ առջևում, ավելի փոքրերը՝ մեջտեղում, բլուրներն ու եկեղեցին՝ հեռվում։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ է համայնապատկերը։
 2. Անվանի՛ր չորս բան, որոնք տներից բացի կազմում են գյուղը։
 3. Թերթի ո՞ր մասում ենք տեղադրում մոտ տները։
@@ -395,10 +518,12 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 5. Ինչո՞ւ պետք է ճանապարհը նեղանա։
 6. Ի՞նչն ենք սոսնձում նախ՝ մո՞տ, թե՞ հեռու առարկաները։
 7. Քո խմբի հետ պատրաստի՛ր դասարանական համայնապատկերի մի մասը։
+~~~
 
-### Պատասխաններ
-
-1. Երկար նկար, որը ցույց է տալիս լայն տեսարան։ 2. Ճանապարհ, գետ, այգիներ, մարդիկ (ցանկացած չորսը)։ 3. Ներքևում։ 4. Ավելի փոքր, գունատ, քիչ մանրամասներով։ 5. Որպեսզի հայացքը տանի նկարի խորքը։ 6. Հեռու առարկաները։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Երկար նկար, որը ցույց է տալիս լայն տեսարան։ 2. Ճանապարհ, գետ, այգիներ, մարդիկ (ցանկացած չորսը)։ 3. Ներքևում։ 4. Ավելի փոքր, գունատ, քիչ մանրամասներով։ 5. Որպեսզի հայացքը տանի նկարի խորքը։ 6. Հեռու առարկաները։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Село — целый мир
 
 Село — это не только дома. В нём есть дорога и река, сады и поля, колодец, церковь на холме, люди за работой и играющие дети. Весь класс вместе может показать этот мир на одном длинном листе — **панораме**.
@@ -412,11 +537,19 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 | **3. природа** | деревья, сады, поля, стога сена |
 | **4. люди и животные** | крестьяне, пастухи, дети, коровы, овцы, куры |
 
+~~~art
+compose
+~~~
+
 ## Ближнее и дальнее
 
 - Дома у нижнего края листа — **близко**: крупные и подробные.
 - Дома выше — **далеко**: меньше, бледнее, с меньшим числом деталей.
 - Дорога, которая сужается к горизонту, ведёт взгляд в глубину картины.
+
+~~~art
+aerial
+~~~
 
 ## Шаг за шагом
 
@@ -426,8 +559,17 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 4. Людей добавьте в конце — они оживляют село.
 5. Посмотрите издалека и проверьте: есть ли один центр? Не слишком ли что-то велико или мало?
 
-### Упражнения
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+sketch guide=horizon
+Нарисуй панораму деревни в три плана: большие дома впереди, поменьше в середине, холмы и церковь вдали.
+~~~
+
+~~~art
+tasks
 1. Что такое панорама?
 2. Назови четыре вещи, кроме домов, из которых состоит село.
 3. Где на листе располагают ближние дома?
@@ -435,10 +577,12 @@ A village is not only houses. It has a road and a river, gardens and fields, a w
 5. Зачем дорога должна сужаться?
 6. Что наклеивают сначала: ближние или дальние предметы?
 7. Сделай со своей группой часть панорамы класса.
+~~~
 
-### Ответы
-
-1. Длинная картина, показывающая широкий вид. 2. Дорога, река, сады, люди (любые четыре). 3. Внизу. 4. Меньше, бледнее, с меньшим числом деталей. 5. Чтобы вести взгляд в глубину. 6. Дальние. 7. Твоя работа.`,
+~~~art
+hints
+1. Длинная картина, показывающая широкий вид. 2. Дорога, река, сады, люди (любые четыре). 3. Внизу. 4. Меньше, бледнее, с меньшим числом деталей. 5. Чтобы вести взгляд в глубину. 6. Дальние. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A panorama is…", "Համայնապատկերը…", "Панорама — это…"), [t("a long picture of a wide view", "լայն տեսարանի երկար նկար է", "длинная картина широкого вида"), t("a tiny portrait", "փոքրիկ դիմանկար է", "крошечный портрет"), t("a vase", "սափոր է", "ваза")], 0),
@@ -471,6 +615,10 @@ A folk costume showed where a person came from, whether they were young or old, 
 | **head** | a small round cap decorated with silver coins, and a scarf | a tall fur hat, the **papakha** |
 | **decoration** | embroidery on the sleeves, collar and front | cartridge pockets on the chest of the chukha |
 
+~~~art
+pic taraz
+~~~
+
 ## The Russian costume
 
 | | Women | Men |
@@ -480,9 +628,18 @@ A folk costume showed where a person came from, whether they were young or old, 
 | **head** | on holidays a tall decorated headdress, the **kokoshnik** | a cap |
 | **decoration** | embroidery on the sleeves and hem | embroidery on the collar and cuffs |
 
+~~~art
+pic sarafan
+~~~
+
 ## Why embroidery is at the edges
 
 People believed that the edges of clothes, the collar, the cuffs and the hem, needed protection. So ornaments of suns, trees and birds were placed exactly there. Red was the favourite colour: the colour of life, joy and the sun.
+
+~~~art
+pattern layout=strip rhythm=alternate palettes=armenian,khokhloma motifs=rhombus,star,bird,leaf
+Embroidery runs along the edges of collar, sleeves and hem. Build a border for a costume.
+~~~
 
 ## Draw a figure in costume
 
@@ -491,8 +648,13 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 3. Add the belt and headdress.
 4. Paint the main colours, then the embroidery at the edges with a thin brush.
 
-### Exercises
+~~~art
+sketch guide=figure
+Dress the figure: first the silhouette of the costume, then the colours, then the borders.
+~~~
 
+~~~art
+tasks
 1. What could a folk costume tell about a person?
 2. What is a chukha?
 3. What is a papakha?
@@ -500,10 +662,12 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 5. How does a kosovorotka differ from an ordinary shirt?
 6. Why was embroidery placed at the edges of clothes?
 7. Draw a boy or a girl in a festive folk costume.
+~~~
 
-### Answers
-
-1. Where the person came from, their age, whether married, a working day or a holiday. 2. A long Armenian men's coat. 3. A tall fur hat. 4. A long shirt. 5. Its opening is on the side. 6. People believed the edges needed protection. 7. Your work.`,
+~~~art
+hints
+1. Where the person came from, their age, whether married, a working day or a holiday. 2. A long Armenian men's coat. 3. A tall fur hat. 4. A long shirt. 5. Its opening is on the side. 6. People believed the edges needed protection. 7. Your work.
+~~~`,
         hy: `## Հագուստ, որը պատմում է
 
 Ժողովրդական տարազը ցույց էր տալիս, թե որտեղից է մարդը, երիտասարդ է թե տարեց, ամուսնացած է թե ոչ, աշխատանքային օր է թե տոն։ Յուրաքանչյուր գավառ ուներ իր գույներն ու նախշերը։
@@ -517,6 +681,10 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 | **գլուխ** | արծաթե դրամներով զարդարված փոքր կլոր գլխարկ և գլխաշոր | բարձր մորթե գլխարկ՝ **փափախ** |
 | **զարդարանք** | ասեղնագործություն թևքերին, օձիքին և կրծքին | փամփշտակալներ չուխայի կրծքին |
 
+~~~art
+pic taraz
+~~~
+
 ## Ռուսական տարազ
 
 | | Կանայք | Տղամարդիկ |
@@ -526,9 +694,18 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 | **գլուխ** | տոներին բարձր զարդարված գլխազարդ՝ **կոկոշնիկ** | գլխարկ |
 | **զարդարանք** | ասեղնագործություն թևքերին և փեշին | ասեղնագործություն օձիքին և թևքերի ծայրերին |
 
+~~~art
+pic sarafan
+~~~
+
 ## Ինչու է ասեղնագործությունն եզրերին
 
 Մարդիկ հավատում էին, որ հագուստի եզրերը՝ օձիքը, թևքերի ծայրերը և փեշը, պաշտպանության կարիք ունեն։ Ուստի արևների, ծառերի և թռչունների զարդանախշերը դրվում էին հենց այնտեղ։ Սիրելի գույնը կարմիրն էր՝ կյանքի, ուրախության և արևի գույնը։
+
+~~~art
+pattern layout=strip rhythm=alternate palettes=armenian,khokhloma motifs=rhombus,star,bird,leaf
+Ասեղնագործությունը անցնում է օձիքի, թևքերի և փեշի եզրերով։ Կառուցի՛ր եզրազարդ տարազի համար։
+~~~
 
 ## Նկարի՛ր տարազով պատկեր
 
@@ -537,8 +714,13 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 3. Ավելացրու՛ գոտին և գլխազարդը։
 4. Ներկի՛ր հիմնական գույները, հետո բարակ վրձնով՝ եզրերի ասեղնագործությունը։
 
-### Վարժություններ
+~~~art
+sketch guide=figure
+Հագցրո՛ւ կերպարին․ նախ տարազի ուրվագիծը, հետո գույները, հետո եզրազարդերը։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ կարող էր պատմել ժողովրդական տարազը մարդու մասին։
 2. Ի՞նչ է չուխան։
 3. Ի՞նչ է փափախը։
@@ -546,10 +728,12 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 5. Ինչո՞վ է կոսովորոտկան տարբերվում սովորական շապիկից։
 6. Ինչո՞ւ էր ասեղնագործությունը դրվում հագուստի եզրերին։
 7. Նկարի՛ր տոնական ժողովրդական տարազով տղա կամ աղջիկ։
+~~~
 
-### Պատասխաններ
-
-1. Որտեղից է մարդը, նրա տարիքը, ամուսնացած է թե ոչ, աշխատանքային օր է թե տոն։ 2. Հայ տղամարդու երկար վերարկու։ 3. Բարձր մորթե գլխարկ։ 4. Երկար շապիկ։ 5. Այն բացվում է կողքից։ 6. Մարդիկ հավատում էին, որ եզրերը պաշտպանության կարիք ունեն։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Որտեղից է մարդը, նրա տարիքը, ամուսնացած է թե ոչ, աշխատանքային օր է թե տոն։ 2. Հայ տղամարդու երկար վերարկու։ 3. Բարձր մորթե գլխարկ։ 4. Երկար շապիկ։ 5. Այն բացվում է կողքից։ 6. Մարդիկ հավատում էին, որ եզրերը պաշտպանության կարիք ունեն։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Одежда, которая рассказывает
 
 Народный костюм показывал, откуда человек, молодой он или старый, женат или нет, будний день сейчас или праздник. У каждой области были свои цвета и узоры.
@@ -563,6 +747,10 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 | **голова** | маленькая круглая шапочка с серебряными монетами и платок | высокая меховая шапка — **папаха** |
 | **украшения** | вышивка на рукавах, вороте и груди | газыри на груди чухи |
 
+~~~art
+pic taraz
+~~~
+
 ## Русский костюм
 
 | | Женщины | Мужчины |
@@ -572,9 +760,18 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 | **голова** | по праздникам высокий нарядный головной убор — **кокошник** | картуз |
 | **украшения** | вышивка на рукавах и подоле | вышивка на вороте и манжетах |
 
+~~~art
+pic sarafan
+~~~
+
 ## Почему вышивка — по краям
 
 Люди верили, что края одежды — ворот, рукава и подол — нуждаются в защите. Поэтому узоры из солнц, деревьев и птиц помещали именно туда. Любимым цветом был красный — цвет жизни, радости и солнца.
+
+~~~art
+pattern layout=strip rhythm=alternate palettes=armenian,khokhloma motifs=rhombus,star,bird,leaf
+Вышивка идёт по краям ворота, рукавов и подола. Собери кайму для костюма.
+~~~
 
 ## Нарисуй фигуру в костюме
 
@@ -583,8 +780,13 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 3. Добавь пояс и головной убор.
 4. Напиши основные цвета, потом тонкой кистью вышивку по краям.
 
-### Упражнения
+~~~art
+sketch guide=figure
+Одень фигуру: сначала силуэт костюма, потом цвета, потом каймы.
+~~~
 
+~~~art
+tasks
 1. Что мог рассказать о человеке народный костюм?
 2. Что такое чуха?
 3. Что такое папаха?
@@ -592,10 +794,12 @@ People believed that the edges of clothes, the collar, the cuffs and the hem, ne
 5. Чем косоворотка отличается от обычной рубахи?
 6. Почему вышивку помещали по краям одежды?
 7. Нарисуй мальчика или девочку в праздничном народном костюме.
+~~~
 
-### Ответы
-
-1. Откуда человек, его возраст, женат ли он, будний день или праздник. 2. Длинный армянский мужской кафтан. 3. Высокая меховая шапка. 4. Длинную рубаху. 5. Разрез у неё сбоку. 6. Люди верили, что края нуждаются в защите. 7. Твоя работа.`,
+~~~art
+hints
+1. Откуда человек, его возраст, женат ли он, будний день или праздник. 2. Длинный армянский мужской кафтан. 3. Высокая меховая шапка. 4. Длинную рубаху. 5. Разрез у неё сбоку. 6. Люди верили, что края нуждаются в защите. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A papakha is…", "Փափախը…", "Папаха — это…"), [t("a tall fur hat", "բարձր մորթե գլխարկ է", "высокая меховая шапка"), t("a belt", "գոտի է", "пояс"), t("a shoe", "կոշիկ է", "обувь")], 0),
@@ -636,12 +840,24 @@ More rules:
 - The legs are about half of the whole height.
 - The shoulders of a man are about two heads wide.
 
+~~~art
+proportions
+~~~
+
+~~~art
+steps person
+~~~
+
 ## A figure in motion
 
 1. Draw a **wire figure**: an oval head, a line for the spine, lines for the arms and legs with dots at the joints.
 2. Bend the spine and limbs: a person carrying a jug leans to one side; a mower turns at the waist.
 3. «Dress» the figure, keeping the motion.
 4. Add the tool: a jug, a sickle, a hammer, a spindle.
+
+~~~art
+flipbook walk
+~~~
 
 ## Ideas for a picture
 
@@ -650,8 +866,8 @@ More rules:
 - Bread baking at the tonir.
 - Haymaking in a Russian meadow.
 
-### Exercises
-
+~~~art
+tasks
 1. What qualities made a person beautiful in folk tales?
 2. Who painted Russian peasants at work with respect?
 3. How many heads tall is an adult?
@@ -659,10 +875,12 @@ More rules:
 5. What is a wire figure?
 6. How does a person carrying a heavy jug stand?
 7. Draw a person at work with a tool in his or her hands.
+~~~
 
-### Answers
-
-1. Strength, health, kindness and skill. 2. Alexei Venetsianov. 3. About 7–8 heads. 4. To the middle of the thigh. 5. A quick sketch with lines for the spine, arms and legs and dots at the joints. 6. Leaning to one side. 7. Your work.`,
+~~~art
+hints
+1. Strength, health, kindness and skill. 2. Alexei Venetsianov. 3. About 7–8 heads. 4. To the middle of the thigh. 5. A quick sketch with lines for the spine, arms and legs and dots at the joints. 6. Leaning to one side. 7. Your work.
+~~~`,
         hy: `## Ինչն է գեղեցիկ մարդու մեջ
 
 Ժողովրդական երգերում և հեքիաթներում գեղեցիկ մարդը միայն սիրունը չէ։ Նա **ուժեղ է, առողջ, բարի և հմուտ**՝ գյուղացի, որն ուղիղ ակոս է վարում, կին, որը նուրբ գորգ է գործում, դարբին, որն ամուր պայտ է կռում։ Աշխատանքը մարդուն հարգված էր դարձնում։
@@ -684,12 +902,24 @@ More rules:
 - Ոտքերն ամբողջ հասակի մոտ կեսն են։
 - Տղամարդու ուսերը մոտ երկու գլխի լայնություն ունեն։
 
+~~~art
+proportions
+~~~
+
+~~~art
+steps person
+~~~
+
 ## Պատկերը շարժման մեջ
 
 1. Նկարի՛ր **լարե պատկեր**՝ օվալաձև գլուխ, գիծ ողնաշարի համար, գծեր ձեռքերի և ոտքերի համար՝ հոդերում կետերով։
 2. Ծռի՛ր ողնաշարը և վերջույթները՝ սափոր տանող մարդը թեքվում է մի կողմ, հնձվորը պտտվում է գոտկատեղից։
 3. «Հագցրո՛ւ» պատկերը՝ պահպանելով շարժումը։
 4. Ավելացրու՛ գործիքը՝ սափոր, մանգաղ, մուրճ, իլիկ։
+
+~~~art
+flipbook walk
+~~~
 
 ## Գաղափարներ նկարի համար
 
@@ -698,8 +928,8 @@ More rules:
 - Հաց թխելը թոնրի մոտ։
 - Խոտհունձ ռուսական մարգագետնում։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ի՞նչ հատկություններ էին մարդուն գեղեցիկ դարձնում հեքիաթներում։
 2. Ո՞վ է հարգանքով նկարել աշխատող ռուս գյուղացիներին։
 3. Քանի՞ գլուխ է մեծահասակի հասակը։
@@ -707,10 +937,12 @@ More rules:
 5. Ի՞նչ է լարե պատկերը։
 6. Ինչպե՞ս է կանգնում ծանր սափոր տանող մարդը։
 7. Նկարի՛ր աշխատող մարդ՝ ձեռքին գործիք։
+~~~
 
-### Պատասխաններ
-
-1. Ուժը, առողջությունը, բարությունը և հմտությունը։ 2. Ալեքսեյ Վենեցիանովը։ 3. Մոտ 7–8 գլուխ։ 4. Ազդրի մեջտեղին։ 5. Արագ էսքիզ՝ գծեր ողնաշարի, ձեռքերի և ոտքերի համար և կետեր հոդերում։ 6. Թեքված մի կողմ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ուժը, առողջությունը, բարությունը և հմտությունը։ 2. Ալեքսեյ Վենեցիանովը։ 3. Մոտ 7–8 գլուխ։ 4. Ազդրի մեջտեղին։ 5. Արագ էսքիզ՝ գծեր ողնաշարի, ձեռքերի և ոտքերի համար և կետեր հոդերում։ 6. Թեքված մի կողմ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Что красиво в человеке
 
 В народных песнях и сказках красивый человек — не только пригожий. Он **сильный, здоровый, добрый и умелый**: пахарь, который ведёт ровную борозду, женщина, которая ткёт тонкий ковёр, кузнец, который куёт крепкую подкову. Труд делал человека уважаемым.
@@ -732,12 +964,24 @@ More rules:
 - Ноги — примерно половина всего роста.
 - Плечи мужчины — примерно две головы в ширину.
 
+~~~art
+proportions
+~~~
+
+~~~art
+steps person
+~~~
+
 ## Фигура в движении
 
 1. Нарисуй **каркас**: овал головы, линию позвоночника, линии рук и ног с точками в суставах.
 2. Согни позвоночник и конечности: человек с кувшином наклоняется в сторону, косарь поворачивается в поясе.
 3. «Одень» фигуру, сохраняя движение.
 4. Добавь орудие: кувшин, серп, молот, веретено.
+
+~~~art
+flipbook walk
+~~~
 
 ## Идеи для картины
 
@@ -746,8 +990,8 @@ More rules:
 - Выпечка хлеба у тонира.
 - Сенокос на русском лугу.
 
-### Упражнения
-
+~~~art
+tasks
 1. Какие качества делали человека красивым в сказках?
 2. Кто с уважением писал русских крестьян за работой?
 3. Сколько голов в росте взрослого?
@@ -755,10 +999,12 @@ More rules:
 5. Что такое каркас фигуры?
 6. Как стоит человек с тяжёлым кувшином?
 7. Нарисуй человека за работой с орудием в руках.
+~~~
 
-### Ответы
-
-1. Сила, здоровье, доброта и умение. 2. Алексей Венецианов. 3. Около 7–8 голов. 4. До середины бедра. 5. Быстрый набросок: линии позвоночника, рук и ног, точки в суставах. 6. Наклонившись в сторону. 7. Твоя работа.`,
+~~~art
+hints
+1. Сила, здоровье, доброта и умение. 2. Алексей Венецианов. 3. Около 7–8 голов. 4. До середины бедра. 5. Быстрый набросок: линии позвоночника, рук и ног, точки в суставах. 6. Наклонившись в сторону. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("In folk tales a beautiful person is also…", "Ժողովրդական հեքիաթներում գեղեցիկ մարդը նաև…", "В сказках красивый человек ещё и…"), [t("skilful and kind", "հմուտ է և բարի", "умелый и добрый"), t("lazy", "ծույլ է", "ленивый"), t("always rich", "միշտ հարուստ է", "всегда богатый")], 0),
@@ -788,6 +1034,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **Maslenitsa** | at the end of winter | a week of pancakes, round and golden like the sun; sledging, snow fortresses; at the end a straw figure of winter is burnt |
 | **Vardavar** | in summer | everyone splashes water on each other in the streets; people release doves; it is one of the most cheerful days of the year |
 
+~~~art
+palette spring summer autumn winter
+~~~
+
 ## How to show a holiday
 
 | Means | How |
@@ -797,6 +1047,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **colour** | bright, warm colours; for Trndez a dark night sky makes the fire glow |
 | **centre** | the bonfire, the straw figure or a fountain of water |
 
+~~~art
+pic genre-everyday
+~~~
+
 ## Step by step
 
 1. Choose the holiday and its centre.
@@ -805,8 +1059,13 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 4. Near figures are bigger; far ones smaller and simpler.
 5. Paint the light: the glow of fire on faces, sparkling drops of water, the white snow.
 
-### Exercises
+~~~art
+sketch guide=thirds
+Draw a folk holiday: dancers in a circle, a bonfire or a table. Put the main action on a crossing of the lines.
+~~~
 
+~~~art
+tasks
 1. When is Trndez celebrated and what do people do?
 2. Why are Maslenitsa pancakes round and golden?
 3. What happens at the end of Maslenitsa?
@@ -814,10 +1073,12 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 5. How can you show motion in a holiday picture?
 6. Why does a dark sky help to paint Trndez?
 7. Paint a picture of one folk holiday.
+~~~
 
-### Answers
-
-1. In February; people jump over a bonfire. 2. They look like the sun. 3. A straw figure of winter is burnt. 4. Splash water on each other and release doves. 5. Bent figures, raised arms, flying scarves, splashes, sparks. 6. The fire glows brighter against it. 7. Your work.`,
+~~~art
+hints
+1. In February; people jump over a bonfire. 2. They look like the sun. 3. A straw figure of winter is burnt. 4. Splash water on each other and release doves. 5. Bent figures, raised arms, flying scarves, splashes, sparks. 6. The fire glows brighter against it. 7. Your work.
+~~~`,
         hy: `## Տարվա տոները
 
 Ժողովրդական տոները հետևում են տարվա եղանակներին։ Մարդիկ երգում, պարում, խաղում և հագնում էին իրենց լավագույն տարազները։
@@ -828,6 +1089,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **Մասլենիցա** | ձմռան վերջին | բլինների շաբաթ՝ կլոր և ոսկեգույն, ինչպես արևը, սահնակներ, ձյունե ամրոցներ, վերջում այրում են ձմռան ծղոտե խրտվիլակը |
 | **Վարդավառ** | ամռանը | բոլորը փողոցներում ջուր են լցնում իրար վրա, մարդիկ աղավնիներ են բաց թողնում, տարվա ամենաուրախ օրերից է |
 
+~~~art
+palette spring summer autumn winter
+~~~
+
 ## Ինչպես ցույց տալ տոնը
 
 | Միջոց | Ինչպես |
@@ -837,6 +1102,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **գույն** | վառ, տաք գույներ, Տրնդեզի համար մութ գիշերային երկինքը կրակը փայլեցնում է |
 | **կենտրոն** | խարույկը, ծղոտե խրտվիլակը կամ ջրի շատրվանը |
 
+~~~art
+pic genre-everyday
+~~~
+
 ## Քայլ առ քայլ
 
 1. Ընտրի՛ր տոնը և նրա կենտրոնը։
@@ -845,8 +1114,13 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 4. Մոտ պատկերներն ավելի մեծ են, հեռուները՝ փոքր և պարզ։
 5. Ներկի՛ր լույսը՝ կրակի շողը դեմքերին, ջրի փայլող կաթիլները, սպիտակ ձյունը։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+Նկարի՛ր ժողովրդական տոն․ շուրջպար, խարույկ կամ սեղան։ Գլխավոր գործողությունը դի՛ր գծերի խաչմերուկին։
+~~~
 
+~~~art
+tasks
 1. Ե՞րբ են նշում Տրնդեզը, և ի՞նչ են անում մարդիկ։
 2. Ինչո՞ւ են Մասլենիցայի բլինները կլոր և ոսկեգույն։
 3. Ի՞նչ է տեղի ունենում Մասլենիցայի վերջում։
@@ -854,10 +1128,12 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 5. Ինչպե՞ս կարող ես շարժում ցույց տալ տոնական նկարում։
 6. Ինչո՞ւ է մութ երկինքն օգնում նկարել Տրնդեզը։
 7. Նկարի՛ր որևէ ժողովրդական տոն։
+~~~
 
-### Պատասխաններ
-
-1. Փետրվարին, մարդիկ թռչում են խարույկի վրայով։ 2. Նրանք նման են արևին։ 3. Այրում են ձմռան ծղոտե խրտվիլակը։ 4. Ջուր են լցնում իրար վրա և աղավնիներ են բաց թողնում։ 5. Թեքված պատկերներ, բարձրացված ձեռքեր, թռչող գլխաշորեր, ցայտեր, կայծեր։ 6. Նրա ֆոնին կրակն ավելի պայծառ է փայլում։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Փետրվարին, մարդիկ թռչում են խարույկի վրայով։ 2. Նրանք նման են արևին։ 3. Այրում են ձմռան ծղոտե խրտվիլակը։ 4. Ջուր են լցնում իրար վրա և աղավնիներ են բաց թողնում։ 5. Թեքված պատկերներ, բարձրացված ձեռքեր, թռչող գլխաշորեր, ցայտեր, կայծեր։ 6. Նրա ֆոնին կրակն ավելի պայծառ է փայլում։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Праздники года
 
 Народные праздники следуют за временами года. Люди пели, плясали, играли и надевали лучшие наряды.
@@ -868,6 +1144,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **Масленица** | в конце зимы | неделя блинов — круглых и золотых, как солнце; катание на санях, снежные крепости; в конце сжигают соломенное чучело зимы |
 | **Вардавар** | летом | все обливают друг друга водой на улицах; выпускают голубей; это один из самых весёлых дней года |
 
+~~~art
+palette spring summer autumn winter
+~~~
+
 ## Как показать праздник
 
 | Средство | Как |
@@ -877,6 +1157,10 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 | **цвет** | яркие тёплые цвета; для Трндеза тёмное ночное небо заставляет огонь сиять |
 | **центр** | костёр, соломенное чучело или фонтан воды |
 
+~~~art
+pic genre-everyday
+~~~
+
 ## Шаг за шагом
 
 1. Выбери праздник и его центр.
@@ -885,8 +1169,13 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 4. Ближние фигуры крупнее, дальние — меньше и проще.
 5. Напиши свет: отблеск огня на лицах, сверкающие капли воды, белый снег.
 
-### Упражнения
+~~~art
+sketch guide=thirds
+Нарисуй народный праздник: хоровод, костёр или застолье. Главное действие поставь на пересечение линий.
+~~~
 
+~~~art
+tasks
 1. Когда празднуют Трндез и что делают люди?
 2. Почему масленичные блины круглые и золотые?
 3. Что происходит в конце Масленицы?
@@ -894,10 +1183,12 @@ Folk holidays follow the seasons. People sang, danced, played and wore their bes
 5. Как передать движение в праздничной картине?
 6. Почему тёмное небо помогает написать Трндез?
 7. Напиши картину об одном народном празднике.
+~~~
 
-### Ответы
-
-1. В феврале; прыгают через костёр. 2. Они похожи на солнце. 3. Сжигают соломенное чучело зимы. 4. Обливают друг друга водой и выпускают голубей. 5. Наклонённые фигуры, поднятые руки, развевающиеся платки, брызги, искры. 6. На его фоне огонь сияет ярче. 7. Твоя работа.`,
+~~~art
+hints
+1. В феврале; прыгают через костёр. 2. Они похожи на солнце. 3. Сжигают соломенное чучело зимы. 4. Обливают друг друга водой и выпускают голубей. 5. Наклонённые фигуры, поднятые руки, развевающиеся платки, брызги, искры. 6. На его фоне огонь сияет ярче. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("On Trndez people…", "Տրնդեզին մարդիկ…", "На Трндез люди…"), [t("jump over a bonfire", "թռչում են խարույկի վրայով", "прыгают через костёр"), t("splash water", "ջուր են լցնում", "обливаются водой"), t("eat ice cream on the beach", "լողափում պաղպաղակ են ուտում", "едят мороженое на пляже")], 0),

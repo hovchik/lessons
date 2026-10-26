@@ -31,6 +31,10 @@ A **museum** is a place where people keep valuable things and show them to every
 
 The **Hermitage** in St Petersburg is one of the largest art museums in the world. It was founded in 1764.
 
+~~~art
+pic genre-landscape genre-portrait genre-still-life khachkar
+~~~
+
 ## Who works in a museum
 
 - The **guide** tells visitors about the works.
@@ -44,8 +48,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 3. Do not take photos with a flash: bright light harms old paints.
 4. Stand at a distance so that you can see the whole picture.
 
-### Exercises
+~~~art
+pic easel
+~~~
 
+~~~art
+tasks
 1. What is a museum?
 2. Name four kinds of museums.
 3. In which city is the Matenadaran?
@@ -53,10 +61,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 5. Why is a camera flash harmful in a museum?
 6. Which museum would you visit to see old coins?
 7. Draw a poster «My favourite museum».
+~~~
 
-### Answers
-
-1. A place where valuable things are kept and shown to everyone. 2. Art, history, manuscripts, natural history, house-museum (any four). 3. In Yerevan. 4. Repairs old paintings and objects. 5. Bright light harms old paints. 6. A history museum. 7. Your work.`,
+~~~art
+hints
+1. A place where valuable things are kept and shown to everyone. 2. Art, history, manuscripts, natural history, house-museum (any four). 3. In Yerevan. 4. Repairs old paintings and objects. 5. Bright light harms old paints. 6. A history museum. 7. Your work.
+~~~`,
         hy: `## Գանձերի տուն
 
 **Թանգարանն** այն վայրն է, որտեղ արժեքավոր իրերը պահում են և ցույց տալիս բոլորին։ Այնտեղ երկար տարիներ պահվում են նկարներ, քանդակներ, հին գրքեր, հագուստ և գործիքներ։
@@ -71,6 +81,10 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 
 Սանկտ Պետերբուրգի **Էրմիտաժն** աշխարհի ամենամեծ արվեստի թանգարաններից է։ Այն հիմնադրվել է 1764 թվականին։
 
+~~~art
+pic genre-landscape genre-portrait genre-still-life khachkar
+~~~
+
 ## Ով է աշխատում թանգարանում
 
 - **Էքսկուրսավարը** այցելուներին պատմում է ստեղծագործությունների մասին։
@@ -84,8 +98,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 3. Մի՛ լուսանկարիր բռնկիչով՝ վառ լույսը վնասում է հին ներկերին։
 4. Կանգնի՛ր որոշ հեռավորության վրա, որպեսզի տեսնես ամբողջ նկարը։
 
-### Վարժություններ
+~~~art
+pic easel
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է թանգարանը։
 2. Անվանի՛ր թանգարանների չորս տեսակ։
 3. Ո՞ր քաղաքում է Մատենադարանը։
@@ -93,10 +111,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 5. Ինչո՞ւ է բռնկիչը վնասակար թանգարանում։
 6. Ո՞ր թանգարանը կայցելես հին դրամներ տեսնելու համար։
 7. Նկարի՛ր «Իմ սիրելի թանգարանը» պաստառը։
+~~~
 
-### Պատասխաններ
-
-1. Վայր, որտեղ արժեքավոր իրերը պահում են և ցույց տալիս բոլորին։ 2. Արվեստի, պատմության, ձեռագրերի, բնագիտական, տուն-թանգարան (ցանկացած չորսը)։ 3. Երևանում։ 4. Նորոգում է հին նկարներն ու իրերը։ 5. Վառ լույսը վնասում է հին ներկերին։ 6. Պատմության թանգարանը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Վայր, որտեղ արժեքավոր իրերը պահում են և ցույց տալիս բոլորին։ 2. Արվեստի, պատմության, ձեռագրերի, բնագիտական, տուն-թանգարան (ցանկացած չորսը)։ 3. Երևանում։ 4. Նորոգում է հին նկարներն ու իրերը։ 5. Վառ լույսը վնասում է հին ներկերին։ 6. Պատմության թանգարանը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Дом для сокровищ
 
 **Музей** — это место, где хранят ценные вещи и показывают их всем. Там много лет хранятся картины, скульптуры, старинные книги, одежда и орудия труда.
@@ -111,6 +131,10 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 
 **Эрмитаж** в Санкт-Петербурге — один из крупнейших художественных музеев мира. Он основан в 1764 году.
 
+~~~art
+pic genre-landscape genre-portrait genre-still-life khachkar
+~~~
+
 ## Кто работает в музее
 
 - **Экскурсовод** рассказывает посетителям о произведениях.
@@ -124,8 +148,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 3. Не фотографируй со вспышкой: яркий свет вредит старым краскам.
 4. Стой на расстоянии, чтобы видеть всю картину.
 
-### Упражнения
+~~~art
+pic easel
+~~~
 
+~~~art
+tasks
 1. Что такое музей?
 2. Назови четыре вида музеев.
 3. В каком городе находится Матенадаран?
@@ -133,10 +161,12 @@ The **Hermitage** in St Petersburg is one of the largest art museums in the worl
 5. Почему вспышка вредна в музее?
 6. В какой музей ты пойдёшь, чтобы увидеть старинные монеты?
 7. Нарисуй плакат «Мой любимый музей».
+~~~
 
-### Ответы
-
-1. Место, где хранят ценные вещи и показывают их всем. 2. Художественный, исторический, рукописей, естественнонаучный, дом-музей (любые четыре). 3. В Ереване. 4. Восстанавливает старые картины и предметы. 5. Яркий свет вредит старым краскам. 6. В исторический. 7. Твоя работа.`,
+~~~art
+hints
+1. Место, где хранят ценные вещи и показывают их всем. 2. Художественный, исторический, рукописей, естественнонаучный, дом-музей (любые четыре). 3. В Ереване. 4. Восстанавливает старые картины и предметы. 5. Яркий свет вредит старым краскам. 6. В исторический. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A museum is a place where…", "Թանգարանն այն վայրն է, որտեղ…", "Музей — это место, где…"), [t("valuable things are kept and shown", "արժեքավոր իրերը պահում և ցույց են տալիս", "хранят и показывают ценные вещи"), t("food is sold", "սնունդ են վաճառում", "продают еду"), t("cars are repaired", "մեքենաներ են նորոգում", "ремонтируют машины")], 0),
@@ -166,12 +196,20 @@ A **landscape** is a picture of nature or of a city. The artist who paints lands
 | **city landscape** | streets, houses, bridges |
 | **seascape** | the sea, waves, ships |
 
+~~~art
+pic genre-landscape
+~~~
+
 ## Landscapes by great artists
 
 - **Martiros Saryan** painted Armenia in bright, hot colours: orange mountains, blue sky, the white top of Ararat.
 - **Isaac Levitan** painted quiet Russian nature. In «Golden Autumn» birches shine yellow over a blue river.
 
 Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both show love for their land.
+
+~~~art
+palette saryan aivazovsky shishkin
+~~~
 
 ## How to build a landscape
 
@@ -180,8 +218,16 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 3. **Background**: mountains and forests far away. Far things look **smaller, paler and bluer**, with fewer details.
 4. Paint the sky first, then the far plan, then the near plan.
 
-### Exercises
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
+
+~~~art
+tasks
 1. What is a landscape?
 2. Name three kinds of landscape.
 3. What is the horizon line?
@@ -189,10 +235,12 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 5. Compare the colours of Saryan and Levitan.
 6. Which plan do we paint last?
 7. Paint a landscape of mountains with a tree in the foreground.
+~~~
 
-### Answers
-
-1. A picture of nature or of a city. 2. Rural, city, seascape. 3. The line where the sky meets the earth. 4. Smaller, paler, bluer, with fewer details. 5. Saryan's are bright and bold, Levitan's are soft and calm. 6. The foreground. 7. Your work.`,
+~~~art
+hints
+1. A picture of nature or of a city. 2. Rural, city, seascape. 3. The line where the sky meets the earth. 4. Smaller, paler, bluer, with fewer details. 5. Saryan's are bright and bold, Levitan's are soft and calm. 6. The foreground. 7. Your work.
+~~~`,
         hy: `## Բնության պատկեր
 
 **Բնանկարը** բնության կամ քաղաքի պատկեր է։ Բնանկարներ նկարող արվեստագետը **բնանկարիչ** է։
@@ -203,12 +251,20 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 | **քաղաքային բնանկար** | փողոցներ, տներ, կամուրջներ |
 | **ծովանկար** | ծով, ալիքներ, նավեր |
 
+~~~art
+pic genre-landscape
+~~~
+
 ## Մեծ նկարիչների բնանկարները
 
 - **Մարտիրոս Սարյանը** Հայաստանը նկարել է վառ, տաք գույներով՝ նարնջագույն լեռներ, կապույտ երկինք, Արարատի սպիտակ գագաթ։
 - **Իսահակ Լևիտանը** նկարել է ռուսական խաղաղ բնությունը։ «Ոսկե աշուն» նկարում կեչիները դեղին փայլում են կապույտ գետի վրա։
 
 Նայի՛ր․ Սարյանի գույներն ուժեղ են և համարձակ, Լևիտանինը՝ մեղմ և հանդարտ։ Երկուսն էլ ցույց են տալիս սերն իրենց հողի հանդեպ։
+
+~~~art
+palette saryan aivazovsky shishkin
+~~~
 
 ## Ինչպես կառուցել բնանկարը
 
@@ -217,8 +273,16 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 3. **Հետին պլան**՝ հեռավոր լեռներ և անտառներ։ Հեռու առարկաները թվում են **ավելի փոքր, գունատ և կապտավուն**, քիչ մանրամասներով։
 4. Սկզբում ներկի՛ր երկինքը, հետո հետին պլանը, հետո առաջինը։
 
-### Վարժություններ
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ է բնանկարը։
 2. Անվանի՛ր բնանկարի երեք տեսակ։
 3. Ի՞նչ է հորիզոնի գիծը։
@@ -226,10 +290,12 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 5. Համեմատի՛ր Սարյանի և Լևիտանի գույները։
 6. Ո՞ր պլանն ենք ներկում վերջում։
 7. Նկարի՛ր լեռնային բնանկար՝ առաջին պլանում ծառով։
+~~~
 
-### Պատասխաններ
-
-1. Բնության կամ քաղաքի պատկեր։ 2. Գյուղական, քաղաքային, ծովանկար։ 3. Գիծը, որտեղ երկինքը հանդիպում է երկրին։ 4. Ավելի փոքր, գունատ, կապտավուն, քիչ մանրամասներով։ 5. Սարյանինը վառ են և համարձակ, Լևիտանինը՝ մեղմ և հանդարտ։ 6. Առաջին պլանը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Բնության կամ քաղաքի պատկեր։ 2. Գյուղական, քաղաքային, ծովանկար։ 3. Գիծը, որտեղ երկինքը հանդիպում է երկրին։ 4. Ավելի փոքր, գունատ, կապտավուն, քիչ մանրամասներով։ 5. Սարյանինը վառ են և համարձակ, Լևիտանինը՝ մեղմ և հանդարտ։ 6. Առաջին պլանը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Изображение природы
 
 **Пейзаж** — это картина, на которой изображена природа или город. Художник, который пишет пейзажи, — **пейзажист**.
@@ -240,12 +306,20 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 | **городской пейзаж** | улицы, дома, мосты |
 | **морской пейзаж (марина)** | море, волны, корабли |
 
+~~~art
+pic genre-landscape
+~~~
+
 ## Пейзажи великих художников
 
 - **Мартирос Сарьян** писал Армению яркими, горячими красками: оранжевые горы, синее небо, белая вершина Арарата.
 - **Исаак Левитан** писал тихую русскую природу. В картине «Золотая осень» берёзы горят жёлтым над синей рекой.
 
 Посмотри: у Сарьяна цвета сильные и смелые, у Левитана — мягкие и спокойные. Оба показывают любовь к родной земле.
+
+~~~art
+palette saryan aivazovsky shishkin
+~~~
 
 ## Как построить пейзаж
 
@@ -254,8 +328,16 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 3. **Дальний план**: горы и леса вдали. Далёкие предметы кажутся **меньше, бледнее и голубее**, на них меньше деталей.
 4. Сначала пиши небо, потом дальний план, потом передний.
 
-### Упражнения
+~~~art
+steps landscape-planes
+~~~
 
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
+
+~~~art
+tasks
 1. Что такое пейзаж?
 2. Назови три вида пейзажа.
 3. Что такое линия горизонта?
@@ -263,10 +345,12 @@ Look: Saryan's colours are strong and bold, Levitan's are soft and calm. Both sh
 5. Сравни цвета Сарьяна и Левитана.
 6. Какой план мы пишем последним?
 7. Напиши горный пейзаж с деревом на переднем плане.
+~~~
 
-### Ответы
-
-1. Картина, на которой изображена природа или город. 2. Сельский, городской, морской. 3. Линия, где небо встречается с землёй. 4. Меньше, бледнее, голубее, с меньшим числом деталей. 5. У Сарьяна яркие и смелые, у Левитана мягкие и спокойные. 6. Передний. 7. Твоя работа.`,
+~~~art
+hints
+1. Картина, на которой изображена природа или город. 2. Сельский, городской, морской. 3. Линия, где небо встречается с землёй. 4. Меньше, бледнее, голубее, с меньшим числом деталей. 5. У Сарьяна яркие и смелые, у Левитана мягкие и спокойные. 6. Передний. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A landscape shows…", "Բնանկարը պատկերում է…", "Пейзаж изображает…"), [t("nature or a city", "բնություն կամ քաղաք", "природу или город"), t("only fruit", "միայն մրգեր", "только фрукты"), t("a person's face", "մարդու դեմք", "лицо человека")], 0),
@@ -292,6 +376,10 @@ A **still life** is a picture of objects: flowers, fruit, dishes, books, musical
 
 Through things the artist tells about people: a cup and a book speak of a quiet evening; bread and fruit speak of a rich harvest.
 
+~~~art
+pic genre-still-life
+~~~
+
 ## Famous still lifes
 
 - **Martiros Saryan** often painted flowers in bright vases and Armenian fruit: pomegranates, grapes, apricots.
@@ -307,6 +395,10 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 | **light** | light from one side: a light side, a dark side and a shadow on the table |
 | **background** | a cloth makes the objects stand out |
 
+~~~art
+compose
+~~~
+
 ## Step by step
 
 1. Look at the group and draw the table line.
@@ -314,8 +406,17 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 3. Paint the background and the cloth.
 4. Paint the objects: light side first, then shadows.
 
-### Exercises
+~~~art
+pic apple pomegranate grapes karas
+Objects for your still life: pick three of different height and shape, one big, one middle, one small.
+~~~
 
+~~~art
+mood scene=still moods=warm,cold
+~~~
+
+~~~art
+tasks
 1. What is a still life?
 2. What can a cup and a book tell about?
 3. What did Saryan often paint in his still lifes?
@@ -323,15 +424,21 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 5. Where do we put the biggest object?
 6. What three parts of light and shade do you see on an object?
 7. Arrange and paint a still life of a jug, an apple and a pear.
+~~~
 
-### Answers
-
-1. A picture of objects. 2. About a quiet evening of the person who owns them. 3. Flowers and Armenian fruit. 4. So that they form a group, not a line. 5. A little behind, in the centre. 6. A light side, a dark side and a shadow. 7. Your work.`,
+~~~art
+hints
+1. A picture of objects. 2. About a quiet evening of the person who owns them. 3. Flowers and Armenian fruit. 4. So that they form a group, not a line. 5. A little behind, in the centre. 6. A light side, a dark side and a shadow. 7. Your work.
+~~~`,
         hy: `## Իրեր, որոնք չեն շարժվում
 
 **Նատյուրմորտը** առարկաների պատկեր է՝ ծաղիկներ, մրգեր, ամաններ, գրքեր, երաժշտական գործիքներ։ Ֆրանսերեն «nature morte» անունը նշանակում է «անշարժ բնություն»։
 
 Իրերի միջոցով նկարիչը պատմում է մարդկանց մասին՝ բաժակն ու գիրքը խոսում են հանգիստ երեկոյի, իսկ հացն ու մրգերը՝ առատ բերքի մասին։
+
+~~~art
+pic genre-still-life
+~~~
 
 ## Հայտնի նատյուրմորտներ
 
@@ -348,6 +455,10 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 | **լույս** | լույսը մի կողմից՝ լուսավոր կողմ, մութ կողմ և ստվեր սեղանին |
 | **ֆոն** | կտորն առարկաներին ավելի ընդգծված է դարձնում |
 
+~~~art
+compose
+~~~
+
 ## Քայլ առ քայլ
 
 1. Նայի՛ր խմբին և գծի՛ր սեղանի գիծը։
@@ -355,8 +466,17 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 3. Ներկի՛ր ֆոնը և կտորը։
 4. Ներկի՛ր առարկաները՝ նախ լուսավոր կողմը, հետո ստվերները։
 
-### Վարժություններ
+~~~art
+pic apple pomegranate grapes karas
+Առարկաներ նատյուրմորտի համար․ ընտրի՛ր երեքը՝ տարբեր բարձրության և ձևի, մեկը մեծ, մեկը միջին, մեկը փոքր։
+~~~
 
+~~~art
+mood scene=still moods=warm,cold
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ է նատյուրմորտը։
 2. Ինչի՞ մասին կարող են պատմել բաժակն ու գիրքը։
 3. Ի՞նչ էր Սարյանը հաճախ նկարում իր նատյուրմորտներում։
@@ -364,15 +484,21 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 5. Որտե՞ղ ենք դնում ամենամեծ առարկան։
 6. Լույսի և ստվերի ո՞ր երեք մասն ես տեսնում առարկայի վրա։
 7. Դասավորի՛ր և նկարի՛ր սափորի, խնձորի և տանձի նատյուրմորտ։
+~~~
 
-### Պատասխաններ
-
-1. Առարկաների պատկեր։ 2. Դրանց տիրոջ հանգիստ երեկոյի մասին։ 3. Ծաղիկներ և հայկական մրգեր։ 4. Որպեսզի խումբ կազմեն, ոչ թե շարք։ 5. Մի փոքր հետևում՝ կենտրոնում։ 6. Լուսավոր կողմ, մութ կողմ և ստվեր։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Առարկաների պատկեր։ 2. Դրանց տիրոջ հանգիստ երեկոյի մասին։ 3. Ծաղիկներ և հայկական մրգեր։ 4. Որպեսզի խումբ կազմեն, ոչ թե շարք։ 5. Մի փոքր հետևում՝ կենտրոնում։ 6. Լուսավոր կողմ, մութ կողմ և ստվեր։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Вещи, которые не двигаются
 
 **Натюрморт** — это картина, на которой изображены предметы: цветы, фрукты, посуда, книги, музыкальные инструменты. Французское слово «nature morte» значит «неподвижная природа».
 
 Через вещи художник рассказывает о людях: чашка и книга говорят о тихом вечере, хлеб и фрукты — о богатом урожае.
+
+~~~art
+pic genre-still-life
+~~~
 
 ## Известные натюрморты
 
@@ -389,6 +515,10 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 | **свет** | свет с одной стороны: светлая сторона, тёмная сторона и тень на столе |
 | **фон** | ткань помогает предметам выделиться |
 
+~~~art
+compose
+~~~
+
 ## Шаг за шагом
 
 1. Посмотри на группу и проведи линию стола.
@@ -396,8 +526,17 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 3. Напиши фон и ткань.
 4. Напиши предметы: сначала светлую сторону, потом тени.
 
-### Упражнения
+~~~art
+pic apple pomegranate grapes karas
+Предметы для натюрморта: выбери три разной высоты и формы — большой, средний и маленький.
+~~~
 
+~~~art
+mood scene=still moods=warm,cold
+~~~
+
+~~~art
+tasks
 1. Что такое натюрморт?
 2. О чём могут рассказать чашка и книга?
 3. Что часто писал Сарьян в натюрмортах?
@@ -405,10 +544,12 @@ Through things the artist tells about people: a cup and a book speak of a quiet 
 5. Куда ставят самый большой предмет?
 6. Какие три части света и тени ты видишь на предмете?
 7. Составь и напиши натюрморт из кувшина, яблока и груши.
+~~~
 
-### Ответы
-
-1. Картина, на которой изображены предметы. 2. О тихом вечере их хозяина. 3. Цветы и армянские фрукты. 4. Чтобы получилась группа, а не ряд. 5. Чуть дальше, в центр. 6. Светлая сторона, тёмная сторона и тень. 7. Твоя работа.`,
+~~~art
+hints
+1. Картина, на которой изображены предметы. 2. О тихом вечере их хозяина. 3. Цветы и армянские фрукты. 4. Чтобы получилась группа, а не ряд. 5. Чуть дальше, в центр. 6. Светлая сторона, тёмная сторона и тень. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A still life shows…", "Նատյուրմորտը պատկերում է…", "Натюрморт изображает…"), [t("objects", "առարկաներ", "предметы"), t("a battle", "ճակատամարտ", "битву"), t("the sea", "ծով", "море")], 0),
@@ -439,6 +580,10 @@ A **portrait** is a picture of a real person. The artist shows not only the face
 | **group portrait** | several people together, a family |
 | **full-length portrait** | the person from head to feet |
 
+~~~art
+pic genre-portrait genre-self-portrait
+~~~
+
 ## A famous portrait
 
 **Valentin Serov** painted «Girl with Peaches» in 1887. A girl in a pink blouse sits at a table with peaches; light from the window falls on her face. It is kept in the **Tretyakov Gallery**. The girl looks straight at us, alive and cheerful.
@@ -454,14 +599,26 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. The **ears** are between the eyebrows and the bottom of the nose.
 6. Between the eyes there is room for one more eye.
 
+~~~art
+proportions mode=face
+~~~
+
+~~~art
+steps face
+~~~
+
 ## Character in a portrait
 
 - Raised eyebrows and a smile: a cheerful person.
 - Calm colours and a soft background: a thoughtful mood.
 - Things in the hands (a book, a brush, a ball) tell what the person loves.
 
-### Exercises
+~~~art
+palette skin
+~~~
 
+~~~art
+tasks
 1. What is a portrait?
 2. How does an artist paint a self-portrait?
 3. Who painted «Girl with Peaches» and where is it kept?
@@ -469,10 +626,12 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. Where are the ears?
 6. How can things in the hands help a portrait?
 7. Draw a portrait of a classmate holding a thing he or she loves.
+~~~
 
-### Answers
-
-1. A picture of a real person. 2. Looking in a mirror. 3. Valentin Serov; the Tretyakov Gallery. 4. On the line across the middle of the head. 5. Between the eyebrows and the bottom of the nose. 6. They tell what the person loves. 7. Your work.`,
+~~~art
+hints
+1. A picture of a real person. 2. Looking in a mirror. 3. Valentin Serov; the Tretyakov Gallery. 4. On the line across the middle of the head. 5. Between the eyebrows and the bottom of the nose. 6. They tell what the person loves. 7. Your work.
+~~~`,
         hy: `## Մարդու պատկեր
 
 **Դիմանկարն** իրական մարդու պատկեր է։ Նկարիչը ցույց է տալիս ոչ միայն դեմքը, այլև **բնավորությունը** և տրամադրությունը։
@@ -483,6 +642,10 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 | **ինքնադիմանկար** | նկարիչը նկարում է ինքն իրեն՝ հայելուն նայելով |
 | **խմբային դիմանկար** | մի քանի մարդ միասին, ընտանիք |
 | **հասակով դիմանկար** | մարդը գլխից մինչև ոտքերը |
+
+~~~art
+pic genre-portrait genre-self-portrait
+~~~
 
 ## Հայտնի դիմանկար
 
@@ -499,14 +662,26 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. **Ականջները** հոնքերի և քթի ներքևի միջև են։
 6. Աչքերի միջև տեղ կա ևս մեկ աչքի համար։
 
+~~~art
+proportions mode=face
+~~~
+
+~~~art
+steps face
+~~~
+
 ## Բնավորությունը դիմանկարում
 
 - Բարձրացած հոնքեր և ժպիտ՝ զվարթ մարդ։
 - Հանդարտ գույներ և մեղմ ֆոն՝ մտախոհ տրամադրություն։
 - Ձեռքի իրերը (գիրք, վրձին, գնդակ) պատմում են, թե ինչ է սիրում մարդը։
 
-### Վարժություններ
+~~~art
+palette skin
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է դիմանկարը։
 2. Ինչպե՞ս է նկարիչը նկարում ինքնադիմանկարը։
 3. Ո՞վ է նկարել «Աղջիկը դեղձերով» նկարը, և որտե՞ղ է այն պահվում։
@@ -514,10 +689,12 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. Որտե՞ղ են ականջները։
 6. Ինչպե՞ս կարող են ձեռքի իրերն օգնել դիմանկարին։
 7. Նկարի՛ր դասընկերոջդ դիմանկարը՝ ձեռքին իր սիրած իրը։
+~~~
 
-### Պատասխաններ
-
-1. Իրական մարդու պատկեր։ 2. Հայելուն նայելով։ 3. Վալենտին Սերովը, Տրետյակովյան պատկերասրահում։ 4. Գլխի մեջտեղով անցնող գծի վրա։ 5. Հոնքերի և քթի ներքևի միջև։ 6. Պատմում են, թե ինչ է սիրում մարդը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Իրական մարդու պատկեր։ 2. Հայելուն նայելով։ 3. Վալենտին Սերովը, Տրետյակովյան պատկերասրահում։ 4. Գլխի մեջտեղով անցնող գծի վրա։ 5. Հոնքերի և քթի ներքևի միջև։ 6. Պատմում են, թե ինչ է սիրում մարդը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Изображение человека
 
 **Портрет** — это изображение реального человека. Художник показывает не только лицо, но и **характер**, настроение.
@@ -528,6 +705,10 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 | **автопортрет** | художник пишет сам себя, глядя в зеркало |
 | **групповой портрет** | несколько людей вместе, семья |
 | **портрет в полный рост** | человек с головы до ног |
+
+~~~art
+pic genre-portrait genre-self-portrait
+~~~
 
 ## Знаменитый портрет
 
@@ -544,14 +725,26 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. **Уши** — между бровями и низом носа.
 6. Между глазами помещается ещё один глаз.
 
+~~~art
+proportions mode=face
+~~~
+
+~~~art
+steps face
+~~~
+
 ## Характер в портрете
 
 - Поднятые брови и улыбка — весёлый человек.
 - Спокойные цвета и мягкий фон — задумчивое настроение.
 - Вещи в руках (книга, кисть, мяч) рассказывают, что человек любит.
 
-### Упражнения
+~~~art
+palette skin
+~~~
 
+~~~art
+tasks
 1. Что такое портрет?
 2. Как художник пишет автопортрет?
 3. Кто написал «Девочку с персиками» и где она хранится?
@@ -559,10 +752,12 @@ In the 19th century **Hakob Hovnatanyan** painted many portraits of the townspeo
 5. Где находятся уши?
 6. Как вещи в руках помогают портрету?
 7. Нарисуй портрет одноклассника с любимой вещью в руках.
+~~~
 
-### Ответы
-
-1. Изображение реального человека. 2. Глядя в зеркало. 3. Валентин Серов; в Третьяковской галерее. 4. На линии посередине головы. 5. Между бровями и низом носа. 6. Они рассказывают, что человек любит. 7. Твоя работа.`,
+~~~art
+hints
+1. Изображение реального человека. 2. Глядя в зеркало. 3. Валентин Серов; в Третьяковской галерее. 4. На линии посередине головы. 5. Между бровями и низом носа. 6. Они рассказывают, что человек любит. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A self-portrait is…", "Ինքնադիմանկարը…", "Автопортрет — это…"), [t("the artist's picture of himself or herself", "նկարչի պատկերն է ինքն իրենից", "изображение художником самого себя"), t("a picture of a cat", "կատվի պատկեր է", "изображение кошки"), t("a picture of a forest", "անտառի պատկեր է", "изображение леса")], 0),
@@ -588,6 +783,10 @@ A **historical painting** shows important events of the past: battles, the found
 
 To paint the past, the artist studies old clothes, weapons and buildings in museums and books.
 
+~~~art
+pic genre-battle
+~~~
+
 ## «Bogatyrs» by Viktor Vasnetsov
 
 Vasnetsov finished the big painting «Bogatyrs» in 1898. It is in the **Tretyakov Gallery**. Three heroes of Russian epics guard their land:
@@ -604,6 +803,10 @@ The heroes are **big**, they fill almost the whole picture, and the horizon is *
 
 Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451), and the heroes of the epic **«David of Sasun»**. Remember the statue of David by Yervand Kochar in Yerevan.
 
+~~~art
+pic shield horse
+~~~
+
 ## How to make the hero look strong
 
 - Make the figure big, close to us, in the centre.
@@ -611,8 +814,13 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 - Use strong, rich colours: red, gold, dark blue.
 - Add details of the time: armour, shields, banners.
 
-### Exercises
+~~~art
+compose
+Make the hero strong: put him big and in the centre, low horizon, the viewer looks up at him.
+~~~
 
+~~~art
+tasks
 1. What does a historical painting show?
 2. Why does the artist go to museums before painting the past?
 3. Who painted «Bogatyrs» and when?
@@ -620,15 +828,21 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 5. Why do the heroes look like a strong wall?
 6. Which Armenian epic do artists often show?
 7. Draw a hero of an epic on a horse, using a low horizon.
+~~~
 
-### Answers
-
-1. Important events of the past. 2. To study old clothes, weapons and buildings. 3. Viktor Vasnetsov, 1898. 4. Ilya Muromets, on a black horse. 5. They are big and the horizon is low. 6. «David of Sasun». 7. Your work.`,
+~~~art
+hints
+1. Important events of the past. 2. To study old clothes, weapons and buildings. 3. Viktor Vasnetsov, 1898. 4. Ilya Muromets, on a black horse. 5. They are big and the horizon is low. 6. «David of Sasun». 7. Your work.
+~~~`,
         hy: `## Նկարներ անցյալի մասին
 
 **Պատմական նկարը** ցույց է տալիս անցյալի կարևոր իրադարձություններ՝ ճակատամարտեր, քաղաքների հիմնադրում, հայտնի մարդիկ։ **Էպիկական** նկարը ցույց է տալիս հին ավանդությունների և ժողովրդական էպոսի հերոսներին։
 
 Անցյալը նկարելու համար նկարիչը թանգարաններում և գրքերում ուսումնասիրում է հին հագուստը, զենքերն ու շենքերը։
+
+~~~art
+pic genre-battle
+~~~
 
 ## Վիկտոր Վասնեցովի «Դյուցազուններ»
 
@@ -646,6 +860,10 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 
 Հայ նկարիչները հաճախ են պատկերում **Վարդան Մամիկոնյանին** և Ավարայրի ճակատամարտը (451), ինչպես նաև **«Սասունցի Դավիթ»** էպոսի հերոսներին։ Հիշի՛ր Երվանդ Քոչարի Դավթի արձանն Երևանում։
 
+~~~art
+pic shield horse
+~~~
+
 ## Ինչպես հերոսին ուժեղ ցույց տալ
 
 - Պատկերը դարձրու՛ մեծ, մեզ մոտ, կենտրոնում։
@@ -653,8 +871,13 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 - Օգտագործի՛ր ուժեղ, հարուստ գույներ՝ կարմիր, ոսկեգույն, մուգ կապույտ։
 - Ավելացրու՛ ժամանակի մանրամասներ՝ զրահ, վահաններ, դրոշներ։
 
-### Վարժություններ
+~~~art
+compose
+Հերոսին ուժեղ դարձրու․ դի՛ր նրան մեծ և կենտրոնում, ցածր հորիզոնով, դիտողը նայում է նրան ներքևից վերև։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է ցույց տալիս պատմական նկարը։
 2. Ինչո՞ւ է նկարիչն անցյալը նկարելուց առաջ գնում թանգարան։
 3. Ո՞վ և ե՞րբ է նկարել «Դյուցազուններ»-ը։
@@ -662,15 +885,21 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 5. Ինչո՞ւ են հերոսները նման ամուր պատի։
 6. Ո՞ր հայկական էպոսն են նկարիչները հաճախ պատկերում։
 7. Նկարի՛ր էպոսի հերոսին ձիու վրա՝ ցածր հորիզոնով։
+~~~
 
-### Պատասխաններ
-
-1. Անցյալի կարևոր իրադարձություններ։ 2. Հին հագուստը, զենքերն ու շենքերն ուսումնասիրելու համար։ 3. Վիկտոր Վասնեցովը, 1898 թվականին։ 4. Իլյա Մուրոմեցը, սև ձիու վրա։ 5. Նրանք մեծ են, և հորիզոնը ցածր է։ 6. «Սասունցի Դավիթ»։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Անցյալի կարևոր իրադարձություններ։ 2. Հին հագուստը, զենքերն ու շենքերն ուսումնասիրելու համար։ 3. Վիկտոր Վասնեցովը, 1898 թվականին։ 4. Իլյա Մուրոմեցը, սև ձիու վրա։ 5. Նրանք մեծ են, և հորիզոնը ցածր է։ 6. «Սասունցի Դավիթ»։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Картины о прошлом
 
 **Историческая картина** показывает важные события прошлого: битвы, основание городов, известных людей. **Былинная** картина показывает героев старинных преданий и народного эпоса.
 
 Чтобы написать прошлое, художник изучает в музеях и книгах старинную одежду, оружие и постройки.
+
+~~~art
+pic genre-battle
+~~~
 
 ## «Богатыри» Виктора Васнецова
 
@@ -688,6 +917,10 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 
 Армянские художники часто изображают **Вардана Мамиконяна** и Аварайрскую битву (451 год), а также героев эпоса **«Давид Сасунский»**. Вспомни памятник Давиду работы Ерванда Кочара в Ереване.
 
+~~~art
+pic shield horse
+~~~
+
 ## Как показать силу героя
 
 - Сделай фигуру крупной, близкой к нам, в центре.
@@ -695,8 +928,13 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 - Используй сильные, насыщенные цвета: красный, золотой, тёмно-синий.
 - Добавь детали эпохи: доспехи, щиты, знамёна.
 
-### Упражнения
+~~~art
+compose
+Сделай героя сильным: крупно и в центре, низкий горизонт, зритель смотрит на него снизу вверх.
+~~~
 
+~~~art
+tasks
 1. Что показывает историческая картина?
 2. Зачем художник идёт в музей, прежде чем писать прошлое?
 3. Кто и когда написал «Богатырей»?
@@ -704,10 +942,12 @@ Armenian artists often show **Vardan Mamikonian** and the Battle of Avarayr (451
 5. Почему богатыри похожи на крепкую стену?
 6. Какой армянский эпос часто изображают художники?
 7. Нарисуй былинного героя на коне с низким горизонтом.
+~~~
 
-### Ответы
-
-1. Важные события прошлого. 2. Чтобы изучить старинную одежду, оружие и постройки. 3. Виктор Васнецов, в 1898 году. 4. Илья Муромец, на чёрном коне. 5. Они крупные, а горизонт низкий. 6. «Давид Сасунский». 7. Твоя работа.`,
+~~~art
+hints
+1. Важные события прошлого. 2. Чтобы изучить старинную одежду, оружие и постройки. 3. Виктор Васнецов, в 1898 году. 4. Илья Муромец, на чёрном коне. 5. Они крупные, а горизонт низкий. 6. «Давид Сасунский». 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A historical painting shows…", "Պատմական նկարը ցույց է տալիս…", "Историческая картина показывает…"), [t("events of the past", "անցյալի իրադարձություններ", "события прошлого"), t("fruit in a bowl", "մրգեր ամանի մեջ", "фрукты в вазе"), t("tomorrow's weather", "վաղվա եղանակը", "завтрашнюю погоду")], 0),
@@ -738,6 +978,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **monument** | a big sculpture in honour of a person or an event |
 | **small sculpture** | figurines for a room |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Materials
 
 | Material | How the sculptor works |
@@ -746,6 +990,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **stone** (marble, tuff, granite) | cuts with a chisel and hammer |
 | **wood** | carves with a knife |
 | **bronze** | pours hot metal into a form |
+
+~~~art
+pic plasticine
+~~~
 
 ## Famous sculptures
 
@@ -761,8 +1009,13 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 4. Turn your work: it must look good from all sides.
 5. Add details with a stack: hair, folds of clothes.
 
-### Exercises
+~~~art
+flipbook walk
+A figure in motion is a moment from a movement. Slow it down and choose the most expressive pose.
+~~~
 
+~~~art
+tasks
 1. How does a sculpture differ from a painting?
 2. What is a relief? Give an example.
 3. Which tool does a sculptor use for stone?
@@ -770,10 +1023,12 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 5. What does Mukhina's sculpture show?
 6. Why should you turn your clay figure while working?
 7. Model a person running or dancing.
+~~~
 
-### Answers
-
-1. It has volume: height, width and depth. 2. Figures that stand out from a flat background, as on a coin. 3. A chisel and a hammer. 4. Yervand Kochar, 1959. 5. Two figures stepping forward with a hammer and a sickle. 6. It must look good from all sides. 7. Your work.`,
+~~~art
+hints
+1. It has volume: height, width and depth. 2. Figures that stand out from a flat background, as on a coin. 3. A chisel and a hammer. 4. Yervand Kochar, 1959. 5. Two figures stepping forward with a hammer and a sickle. 6. It must look good from all sides. 7. Your work.
+~~~`,
         hy: `## Արվեստ, որի շուրջը կարող ես քայլել
 
 **Քանդակն** ունի ծավալ՝ բարձրություն, լայնություն և խորություն։ Գեղանկարիչն աշխատում է գույներով հարթ մակերևույթի վրա, իսկ **քանդակագործը**՝ նյութով տարածության մեջ։
@@ -785,6 +1040,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **հուշարձան** | մեծ քանդակ՝ ի պատիվ մարդու կամ իրադարձության |
 | **մանր քանդակ** | սենյակի արձանիկներ |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Նյութեր
 
 | Նյութ | Ինչպես է աշխատում քանդակագործը |
@@ -793,6 +1052,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **քար** (մարմար, տուֆ, գրանիտ) | տաշում է դուրով և մուրճով |
 | **փայտ** | փորագրում է դանակով |
 | **բրոնզ** | տաք մետաղը լցնում է կաղապարի մեջ |
+
+~~~art
+pic plasticine
+~~~
 
 ## Հայտնի քանդակներ
 
@@ -808,8 +1071,13 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 4. Պտտի՛ր աշխատանքդ՝ այն պետք է լավ երևա բոլոր կողմերից։
 5. Ծեփիչով ավելացրու՛ մանրամասներ՝ մազեր, հագուստի ծալքեր։
 
-### Վարժություններ
+~~~art
+flipbook walk
+Շարժման մեջ գտնվող կերպարը շարժման մի պահ է։ Դանդաղեցրու և ընտրիր ամենաարտահայտիչ դիրքը։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞վ է քանդակը տարբերվում նկարից։
 2. Ի՞նչ է ռելիեֆը։ Բե՛ր օրինակ։
 3. Ի՞նչ գործիք է օգտագործում քանդակագործը քարի համար։
@@ -817,10 +1085,12 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 5. Ի՞նչ է պատկերում Մուխինայի քանդակը։
 6. Ինչո՞ւ պետք է աշխատելիս պտտել կավե պատկերը։
 7. Ծեփի՛ր վազող կամ պարող մարդ։
+~~~
 
-### Պատասխաններ
-
-1. Այն ունի ծավալ՝ բարձրություն, լայնություն և խորություն։ 2. Հարթ ֆոնից դուրս ցցված պատկերներ, ինչպես դրամի վրա։ 3. Դուր և մուրճ։ 4. Երվանդ Քոչարը, 1959 թվականին։ 5. Երկու պատկեր, որոնք քայլում են առաջ մուրճով և մանգաղով։ 6. Այն պետք է լավ երևա բոլոր կողմերից։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Այն ունի ծավալ՝ բարձրություն, լայնություն և խորություն։ 2. Հարթ ֆոնից դուրս ցցված պատկերներ, ինչպես դրամի վրա։ 3. Դուր և մուրճ։ 4. Երվանդ Քոչարը, 1959 թվականին։ 5. Երկու պատկեր, որոնք քայլում են առաջ մուրճով և մանգաղով։ 6. Այն պետք է լավ երևա բոլոր կողմերից։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Искусство, вокруг которого можно обойти
 
 **Скульптура** объёмна: у неё есть высота, ширина и глубина. Живописец работает красками на плоскости, а **скульптор** — материалом в пространстве.
@@ -832,6 +1102,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **памятник** | большая скульптура в честь человека или события |
 | **мелкая пластика** | статуэтки для комнаты |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Материалы
 
 | Материал | Как работает скульптор |
@@ -840,6 +1114,10 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 | **камень** (мрамор, туф, гранит) | высекает резцом и молотком |
 | **дерево** | вырезает ножом |
 | **бронза** | заливает горячий металл в форму |
+
+~~~art
+pic plasticine
+~~~
 
 ## Известные скульптуры
 
@@ -855,8 +1133,13 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 4. Поворачивай работу: она должна хорошо смотреться со всех сторон.
 5. Стекой добавь детали: волосы, складки одежды.
 
-### Упражнения
+~~~art
+flipbook walk
+Фигура в движении — это момент движения. Замедли и выбери самую выразительную позу.
+~~~
 
+~~~art
+tasks
 1. Чем скульптура отличается от картины?
 2. Что такое рельеф? Приведи пример.
 3. Каким инструментом скульптор работает по камню?
@@ -864,10 +1147,12 @@ A **sculpture** has volume: it has height, width and depth. A painter works with
 5. Что изображает скульптура Мухиной?
 6. Зачем поворачивать глиняную фигуру во время работы?
 7. Вылепи бегущего или танцующего человека.
+~~~
 
-### Ответы
-
-1. Она объёмна: есть высота, ширина и глубина. 2. Фигуры, выступающие из плоского фона, как на монете. 3. Резцом и молотком. 4. Ерванд Кочар, в 1959 году. 5. Две фигуры шагают вперёд с молотом и серпом. 6. Она должна хорошо смотреться со всех сторон. 7. Твоя работа.`,
+~~~art
+hints
+1. Она объёмна: есть высота, ширина и глубина. 2. Фигуры, выступающие из плоского фона, как на монете. 3. Резцом и молотком. 4. Ерванд Кочар, в 1959 году. 5. Две фигуры шагают вперёд с молотом и серпом. 6. Она должна хорошо смотреться со всех сторон. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A sculpture has…", "Քանդակն ունի…", "Скульптура имеет…"), [t("volume", "ծավալ", "объём"), t("only length", "միայն երկարություն", "только длину"), t("no shape", "ձև չունի", "никакой формы")], 0),

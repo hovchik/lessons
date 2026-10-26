@@ -21,6 +21,10 @@ export const unit4: UnitSeed = {
 
 An **illustration** is a picture that goes with a text. It helps the reader **imagine** the story: what the heroes look like, where they live, what happens. An artist who makes illustrations is an **illustrator**.
 
+~~~art
+pic genre-fairy book-spread
+~~~
+
 ## Hovhannes Tumanyan
 
 **Hovhannes Tumanyan** (1869–1923) is the great Armenian writer, called «the poet of all Armenians». He wrote poems and tales for children: «The Dog and the Cat», «The Liar», «Brave Nazar» and many others.
@@ -38,14 +42,24 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 | people bowing | a crowd and a tiny scared «hero» |
 | Nazar the king | a crown that looks too big for him |
 
+~~~art
+shots
+An illustrator chooses the shot: the whole scene, or only the hero's funny face?
+~~~
+
 ## How to make it funny
 
 - Make Nazar's **proportions** funny: a big head, thin legs, a huge moustache.
 - Show the **contrast**: a big proud sign and a small scared man.
 - Use bright, cheerful colours.
 
-### Exercises
+~~~art
+sketch
+Draw the funniest moment of the tale. Make Nazar's pose and face very expressive.
+~~~
 
+~~~art
+tasks
 1. What is an illustration?
 2. Who was Hovhannes Tumanyan?
 3. How many flies did Nazar kill, and what did people think?
@@ -53,13 +67,19 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 5. Choose one moment of the tale and explain why you chose it.
 6. Draw Nazar in two ways: as he sees himself and as he really is.
 7. Make a full illustration of your chosen moment.
+~~~
 
-### Answers
-
-1. A picture that goes with a text and helps us imagine it. 2. The great Armenian writer, «the poet of all Armenians». 3. Many flies with one blow; people thought he had killed a thousand warriors. 4. Boasting, and people who believe boasters. 5. Your own choice. 6. For example, a huge hero with a sword and a small scared man. 7. Your illustration.`,
+~~~art
+hints
+1. A picture that goes with a text and helps us imagine it. 2. The great Armenian writer, «the poet of all Armenians». 3. Many flies with one blow; people thought he had killed a thousand warriors. 4. Boasting, and people who believe boasters. 5. Your own choice. 6. For example, a huge hero with a sword and a small scared man. 7. Your illustration.
+~~~`,
         hy: `## Ի՞նչ է նկարազարդումը
 
 **Նկարազարդումը** տեքստին կից նկար է։ Այն օգնում է ընթերցողին **պատկերացնել** պատմությունը՝ ինչ տեսք ունեն հերոսները, որտեղ են ապրում, ինչ է կատարվում։ Նկարազարդումներ անող նկարիչը **նկարազարդող** է (իլյուստրատոր)։
+
+~~~art
+pic genre-fairy book-spread
+~~~
 
 ## Հովհաննես Թումանյան
 
@@ -78,14 +98,24 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 | խոնարհվող մարդիկ | ամբոխ և փոքրիկ, վախեցած «հերոս» |
 | Նազար թագավորը | թագ, որ շատ մեծ է նրա համար |
 
+~~~art
+shots
+Նկարազարդողն ընտրում է կադրը․ ամբողջ տեսարա՞նը, թե՞ միայն հերոսի զվարճալի դեմքը։
+~~~
+
 ## Ինչպես զվարճալի դարձնել
 
 - Նազարի **համամասնությունները** ծիծաղելի արա՛՝ մեծ գլուխ, բարակ ոտքեր, հսկա բեղեր։
 - Ցույց տուր **հակադրությունը**՝ մեծ, հպարտ գրություն և փոքրիկ, վախեցած մարդ։
 - Օգտագործի՛ր վառ, ուրախ գույներ։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր հեքիաթի ամենազվարճալի պահը։ Նազարի դիրքն ու դեմքը շատ արտահայտիչ դարձրու։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է նկարազարդումը։
 2. Ո՞վ էր Հովհաննես Թումանյանը։
 3. Քանի՞ ճանճ սպանեց Նազարը, և ի՞նչ կարծեցին մարդիկ։
@@ -93,13 +123,19 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 5. Ընտրի՛ր հեքիաթի մի պահ և բացատրի՛ր՝ ինչու։
 6. Նազարին նկարի՛ր երկու ձևով՝ ինչպես նա է իրեն տեսնում և ինչպիսին է իրականում։
 7. Ընտրածդ պահի ամբողջական նկարազարդում արա՛։
+~~~
 
-### Պատասխաններ
-
-1. Տեքստին կից նկար, որն օգնում է այն պատկերացնել։ 2. Հայ մեծ գրող, «Ամենայն հայոց բանաստեղծ»։ 3. Մի զարկով շատ ճանճ, մարդիկ կարծեցին, թե հազար մարտիկ է սպանել։ 4. Պարծենկոտության և պարծենկոտներին հավատացողների վրա։ 5. Քո ընտրությունը։ 6. Օրինակ՝ սրով հսկա հերոս և փոքրիկ, վախեցած մարդ։ 7. Քո նկարազարդումը։`,
+~~~art
+hints
+1. Տեքստին կից նկար, որն օգնում է այն պատկերացնել։ 2. Հայ մեծ գրող, «Ամենայն հայոց բանաստեղծ»։ 3. Մի զարկով շատ ճանճ, մարդիկ կարծեցին, թե հազար մարտիկ է սպանել։ 4. Պարծենկոտության և պարծենկոտներին հավատացողների վրա։ 5. Քո ընտրությունը։ 6. Օրինակ՝ սրով հսկա հերոս և փոքրիկ, վախեցած մարդ։ 7. Քո նկարազարդումը։
+~~~`,
         ru: `## Что такое иллюстрация?
 
 **Иллюстрация** — рисунок к тексту. Она помогает читателю **представить** историю: как выглядят герои, где живут, что происходит. Художник, который делает иллюстрации, — **иллюстратор**.
+
+~~~art
+pic genre-fairy book-spread
+~~~
 
 ## Ованес Туманян
 
@@ -118,14 +154,24 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 | люди кланяются | толпа и крошечный испуганный «герой» |
 | Назар-царь | корона, которая ему велика |
 
+~~~art
+shots
+Иллюстратор выбирает план: всю сцену или только смешное лицо героя?
+~~~
+
 ## Как сделать смешно
 
 - Сделай **пропорции** Назара смешными: большая голова, тонкие ножки, огромные усы.
 - Покажи **контраст**: большая гордая надпись и маленький испуганный человек.
 - Используй яркие, весёлые цвета.
 
-### Упражнения
+~~~art
+sketch
+Нарисуй самый смешной момент сказки. Сделай позу и лицо Назара очень выразительными.
+~~~
 
+~~~art
+tasks
 1. Что такое иллюстрация?
 2. Кто такой Ованес Туманян?
 3. Сколько мух убил Назар, и что подумали люди?
@@ -133,10 +179,12 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 5. Выбери один момент сказки и объясни свой выбор.
 6. Нарисуй Назара двумя способами: каким он видит себя и какой он на самом деле.
 7. Сделай полную иллюстрацию к выбранному моменту.
+~~~
 
-### Ответы
-
-1. Рисунок к тексту, который помогает его представить. 2. Великий армянский писатель, «поэт всех армян». 3. Много мух одним ударом; люди подумали, что он убил тысячу воинов. 4. Над хвастовством и над теми, кто верит хвастунам. 5. Твой выбор. 6. Например, огромный герой с мечом и маленький испуганный человечек. 7. Твоя иллюстрация.`,
+~~~art
+hints
+1. Рисунок к тексту, который помогает его представить. 2. Великий армянский писатель, «поэт всех армян». 3. Много мух одним ударом; люди подумали, что он убил тысячу воинов. 4. Над хвастовством и над теми, кто верит хвастунам. 5. Твой выбор. 6. Например, огромный герой с мечом и маленький испуганный человечек. 7. Твоя иллюстрация.
+~~~`,
       },
       [
         q(t("An illustration is…", "Նկարազարդումը…", "Иллюстрация — это…"), [t("a picture that goes with a text", "տեքստին կից նկար է", "рисунок к тексту"), t("a sculpture", "քանդակ է", "скульптура"), t("a kind of frame", "շրջանակի տեսակ է", "вид рамы")], 0),
@@ -170,6 +218,15 @@ Nazar was a lazy, cowardly man. One day he slapped at a swarm of flies and kille
 3. Colours filled in **flat**, without many shadows.
 4. Lots of **patterns** on clothes, houses and even trees.
 
+~~~art
+pic letter-initial genre-fairy
+Bilibin framed his pictures with ornament borders, like the pages of an old book.
+~~~
+
+~~~art
+pattern layout=strip palettes=khokhloma,armenian,gzhel motifs=flower,leaf,wave,bird
+~~~
+
 ## «The Frog Princess» (briefly)
 
 A tsar tells his three sons to shoot arrows: where each arrow falls, there the son will find his bride. The youngest son, Ivan, finds his arrow with a frog in a swamp. The frog turns out to be the wise and beautiful Vasilisa, under a spell. Ivan must go on a long journey to find her again.
@@ -182,8 +239,13 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 | Vasilisa's feast | a beautiful princess, swans flying from her sleeve |
 | Ivan's journey | a dark forest, a hut on chicken legs |
 
-### Exercises
+~~~art
+sketch guide=frame
+Draw your scene from the tale inside a decorative frame, the way Bilibin did.
+~~~
 
+~~~art
+tasks
 1. Which artist made book illustrations with patterned frames?
 2. Name a famous painting by Vasnetsov.
 3. Name two features of Bilibin's style.
@@ -191,10 +253,12 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 5. Draw a frame with a simple folk ornament.
 6. Draw a hut on chicken legs with lots of patterns.
 7. Illustrate one scene from «The Frog Princess» or «Kolobok» in Bilibin's style.
+~~~
 
-### Answers
-
-1. Ivan Bilibin. 2. For example, «Alyonushka» or «Ivan Tsarevich on the Grey Wolf». 3. For example, an ornamental frame, black outlines, flat bright colours, many patterns. 4. Vasilisa, a princess under a spell. 5. Repeat flowers or leaves along the edge. 6. Patterns on the logs, windows and roof. 7. Your illustration with a frame and outlines.`,
+~~~art
+hints
+1. Ivan Bilibin. 2. For example, «Alyonushka» or «Ivan Tsarevich on the Grey Wolf». 3. For example, an ornamental frame, black outlines, flat bright colours, many patterns. 4. Vasilisa, a princess under a spell. 5. Repeat flowers or leaves along the edge. 6. Patterns on the logs, windows and roof. 7. Your illustration with a frame and outlines.
+~~~`,
         hy: `## Երկու մեծ հեքիաթային նկարիչ
 
 | Նկարիչ | Ինչ է արել | Հայտնի աշխատանքներ |
@@ -209,6 +273,15 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 3. Գույները լցված են **հարթ**՝ առանց շատ ստվերների։
 4. Շատ **նախշեր**՝ հագուստի, տների և նույնիսկ ծառերի վրա։
 
+~~~art
+pic letter-initial genre-fairy
+Բիլիբինը իր նկարները շրջանակում էր զարդանախշերով, ինչպես հին գրքի էջերը։
+~~~
+
+~~~art
+pattern layout=strip palettes=khokhloma,armenian,gzhel motifs=flower,leaf,wave,bird
+~~~
+
 ## «Գորտ արքայադուստրը» (համառոտ)
 
 Թագավորը հրամայում է երեք որդիներին նետ արձակել. որտեղ ընկնի նետը, այնտեղ որդին կգտնի իր հարսնացուին։ Կրտսեր որդին՝ Իվանը, իր նետը գտնում է ճահճում՝ գորտի մոտ։ Պարզվում է, որ գորտը կախարդված իմաստուն և գեղեցիկ Վասիլիսան է։ Իվանը պետք է երկար ճանապարհ անցնի, որ նրան նորից գտնի։
@@ -221,8 +294,13 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 | Վասիլիսայի խնջույքը | գեղեցիկ արքայադուստր, թևքից թռչող կարապներ |
 | Իվանի ճանապարհը | մութ անտառ, հավի ոտքերի վրա խրճիթ |
 
-### Վարժություններ
+~~~art
+sketch guide=frame
+Նկարի՛ր հեքիաթի տեսարանդ զարդարուն շրջանակի մեջ, ինչպես Բիլիբինն էր անում։
+~~~
 
+~~~art
+tasks
 1. Ո՞ր նկարիչն էր գրքային նկարազարդումներ անում նախշազարդ շրջանակներով։
 2. Անվանի՛ր Վասնեցովի մի հայտնի նկար։
 3. Անվանի՛ր Բիլիբինի ոճի երկու առանձնահատկություն։
@@ -230,10 +308,12 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 5. Նկարի՛ր պարզ ժողովրդական զարդանախշով շրջանակ։
 6. Շատ նախշերով նկարի՛ր հավի ոտքերի վրա կանգնած խրճիթ։
 7. Բիլիբինի ոճով նկարազարդի՛ր մի տեսարան «Գորտ արքայադուստրը» կամ «Կոլոբոկ» հեքիաթից։
+~~~
 
-### Պատասխաններ
-
-1. Իվան Բիլիբինը։ 2. Օրինակ՝ «Ալյոնուշկա» կամ «Իվան արքայազնը գորշ գայլի վրա»։ 3. Օրինակ՝ զարդանախշային շրջանակ, սև եզրագծեր, հարթ վառ գույներ, շատ նախշեր։ 4. Վասիլիսան՝ կախարդված արքայադուստրը։ 5. Եզրով կրկնի՛ր ծաղիկներ կամ տերևներ։ 6. Նախշեր գերանների, պատուհանների և տանիքի վրա։ 7. Քո նկարազարդումը՝ շրջանակով և եզրագծերով։`,
+~~~art
+hints
+1. Իվան Բիլիբինը։ 2. Օրինակ՝ «Ալյոնուշկա» կամ «Իվան արքայազնը գորշ գայլի վրա»։ 3. Օրինակ՝ զարդանախշային շրջանակ, սև եզրագծեր, հարթ վառ գույներ, շատ նախշեր։ 4. Վասիլիսան՝ կախարդված արքայադուստրը։ 5. Եզրով կրկնի՛ր ծաղիկներ կամ տերևներ։ 6. Նախշեր գերանների, պատուհանների և տանիքի վրա։ 7. Քո նկարազարդումը՝ շրջանակով և եզրագծերով։
+~~~`,
         ru: `## Два великих сказочных художника
 
 | Художник | Что делал | Известные работы |
@@ -248,6 +328,15 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 3. Цвета заливаются **плоско**, почти без теней.
 4. Много **узоров** — на одежде, избах и даже деревьях.
 
+~~~art
+pic letter-initial genre-fairy
+Билибин обрамлял рисунки орнаментом, как страницы старинной книги.
+~~~
+
+~~~art
+pattern layout=strip palettes=khokhloma,armenian,gzhel motifs=flower,leaf,wave,bird
+~~~
+
 ## «Царевна-лягушка» (кратко)
 
 Царь велит трём сыновьям пустить стрелы: где упадёт стрела, там сын найдёт невесту. Стрела младшего, Ивана, падает в болото к лягушке. Лягушка оказывается заколдованной Василисой Премудрой. Ивану приходится отправиться в долгий путь, чтобы снова её найти.
@@ -260,8 +349,13 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 | пир Василисы | красавица-царевна, лебеди, вылетающие из рукава |
 | путь Ивана | тёмный лес, избушка на курьих ножках |
 
-### Упражнения
+~~~art
+sketch guide=frame
+Нарисуй сцену из сказки в узорной рамке, как Билибин.
+~~~
 
+~~~art
+tasks
 1. Какой художник делал книжные иллюстрации с узорными рамками?
 2. Назови известную картину Васнецова.
 3. Назови две черты стиля Билибина.
@@ -269,10 +363,12 @@ A tsar tells his three sons to shoot arrows: where each arrow falls, there the s
 5. Нарисуй рамку с простым народным орнаментом.
 6. Нарисуй избушку на курьих ножках с множеством узоров.
 7. Проиллюстрируй сцену из «Царевны-лягушки» или «Колобка» в стиле Билибина.
+~~~
 
-### Ответы
-
-1. Иван Билибин. 2. Например, «Алёнушка» или «Иван-царевич на Сером Волке». 3. Например, орнаментальная рамка, чёрный контур, плоские яркие цвета, много узоров. 4. Василиса, заколдованная царевна. 5. Повторяй цветы или листья вдоль края. 6. Узоры на брёвнах, окнах и крыше. 7. Твоя иллюстрация с рамкой и контуром.`,
+~~~art
+hints
+1. Иван Билибин. 2. Например, «Алёнушка» или «Иван-царевич на Сером Волке». 3. Например, орнаментальная рамка, чёрный контур, плоские яркие цвета, много узоров. 4. Василиса, заколдованная царевна. 5. Повторяй цветы или листья вдоль края. 6. Узоры на брёвнах, окнах и крыше. 7. Твоя иллюстрация с рамкой и контуром.
+~~~`,
       },
       [
         q(t("Who illustrated Russian tales with patterned frames?", "Ո՞վ է նկարազարդել ռուսական հեքիաթները նախշազարդ շրջանակներով։", "Кто иллюстрировал русские сказки с узорными рамками?"), [t("Aivazovsky", "Այվազովսկին", "Айвазовский"), t("Ivan Bilibin", "Իվան Բիլիբինը", "Иван Билибин"), t("Claude Monet", "Կլոդ Մոնեն", "Клод Моне")], 1),
@@ -304,6 +400,11 @@ In tales, heroes are often clearly **good** or **evil**. An artist shows this no
 | pose | open arms, straight back | hunched, claws out, sneaking |
 | face | big kind eyes, a smile | narrow eyes, frown, long nose |
 
+~~~art
+lines only=wavy,loop,zigzag,broken
+Soft round lines feel kind, sharp zigzags feel wicked.
+~~~
+
 ## Examples from tales
 
 | Good | Evil |
@@ -318,12 +419,21 @@ Careful: not everyone is only good or only bad. A **sly** fox, a **grumpy** but 
 
 Try this: draw two castles. Make the good fairy's castle round, light, with flags and flowers. Make the evil sorcerer's castle sharp, dark, with spikes and bats. The castles «talk» about their owners!
 
+~~~art
+mood scene=landscape moods=joy,storm
+~~~
+
 ## Task: a pair of heroes
 
 Draw a good hero and an evil hero from any tale, side by side. Use everything from the table: shapes, lines, colours, poses and faces.
 
-### Exercises
+~~~art
+sketch guide=axis
+A pair of heroes: a kind one with round shapes and warm colours, a wicked one with sharp shapes and dark colours.
+~~~
 
+~~~art
+tasks
 1. What shapes are typical for a good hero?
 2. What colours would you choose for an evil sorcerer?
 3. How can a pose show character?
@@ -331,10 +441,12 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 5. Draw two castles: the fairy's and the sorcerer's.
 6. Draw a «sly» fox and a «grumpy but kind» bear.
 7. Draw the pair of heroes.
+~~~
 
-### Answers
-
-1. Round, soft, open shapes. 2. For example, dark violet, black, cold grey or harsh red. 3. For example, open arms look friendly; a hunched sneaking pose looks evil. 4. For example, Vasilisa and Koschei. 5. Round and light; sharp and dark. 6. The fox has narrow eyes and a smile; the bear frowns but has round soft shapes. 7. Your pair of heroes.`,
+~~~art
+hints
+1. Round, soft, open shapes. 2. For example, dark violet, black, cold grey or harsh red. 3. For example, open arms look friendly; a hunched sneaking pose looks evil. 4. For example, Vasilisa and Koschei. 5. Round and light; sharp and dark. 6. The fox has narrow eyes and a smile; the bear frowns but has round soft shapes. 7. Your pair of heroes.
+~~~`,
         hy: `## Ինչպե՞ս տեսնել բնավորությունը
 
 Հեքիաթներում հերոսները հաճախ հստակ **բարի** կամ **չար** են։ Նկարիչը դա ցույց է տալիս ոչ թե բառերով, այլ **ձևերով, գծերով և գույներով**։
@@ -346,6 +458,11 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 | գույներ | բաց, տաք, պարզ | մուգ, սառը, պղտոր կամ խիստ կարմիր և սև |
 | դիրք | բաց ձեռքեր, ուղիղ մեջք | կուչ եկած, ճանկեր, գաղտագողի |
 | դեմք | մեծ բարի աչքեր, ժպիտ | նեղ աչքեր, խոժոռ հոնքեր, երկար քիթ |
+
+~~~art
+lines only=wavy,loop,zigzag,broken
+Փափուկ, կլոր գծերը բարի են թվում, սուր զիգզագները՝ չար։
+~~~
 
 ## Օրինակներ հեքիաթներից
 
@@ -361,12 +478,21 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 
 Փորձի՛ր. նկարի՛ր երկու դղյակ։ Բարի փերիի դղյակը կլոր արա՛, բաց, դրոշներով և ծաղիկներով։ Չար կախարդի դղյակը՝ սուր, մուգ, փշերով և չղջիկներով։ Դղյակները «պատմում են» իրենց տերերի մասին։
 
+~~~art
+mood scene=landscape moods=joy,storm
+~~~
+
 ## Առաջադրանք. հերոսների զույգ
 
 Կողք կողքի նկարի՛ր որևէ հեքիաթի բարի և չար հերոսներին։ Օգտագործի՛ր աղյուսակի ամեն ինչ՝ ձևեր, գծեր, գույներ, դիրքեր և դեմքեր։
 
-### Վարժություններ
+~~~art
+sketch guide=axis
+Զույգ հերոսներ․ բարին՝ կլոր ձևերով և տաք գույներով, չարը՝ սուր ձևերով և մուգ գույներով։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ ձևեր են բնորոշ բարի հերոսին։
 2. Ո՞ր գույները կընտրես չար կախարդի համար։
 3. Ինչպե՞ս կարող է դիրքը բնավորություն ցույց տալ։
@@ -374,10 +500,12 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 5. Նկարի՛ր երկու դղյակ՝ փերիինը և կախարդինը։
 6. Նկարի՛ր «խորամանկ» աղվես և «փնթփնթան, բայց բարի» արջ։
 7. Նկարի՛ր հերոսների զույգը։
+~~~
 
-### Պատասխաններ
-
-1. Կլոր, փափուկ, բաց ձևեր։ 2. Օրինակ՝ մուգ մանուշակագույն, սև, սառը մոխրագույն կամ խիստ կարմիր։ 3. Օրինակ՝ բաց ձեռքերը ընկերական են թվում, կուչ եկած գաղտագողի դիրքը՝ չար։ 4. Օրինակ՝ Վասիլիսան և Կաշեյը։ 5. Կլոր և բաց, սուր և մուգ։ 6. Աղվեսն ունի նեղ աչքեր և ժպիտ, արջը խոժոռված է, բայց կլոր, փափուկ ձևերով։ 7. Քո հերոսների զույգը։`,
+~~~art
+hints
+1. Կլոր, փափուկ, բաց ձևեր։ 2. Օրինակ՝ մուգ մանուշակագույն, սև, սառը մոխրագույն կամ խիստ կարմիր։ 3. Օրինակ՝ բաց ձեռքերը ընկերական են թվում, կուչ եկած գաղտագողի դիրքը՝ չար։ 4. Օրինակ՝ Վասիլիսան և Կաշեյը։ 5. Կլոր և բաց, սուր և մուգ։ 6. Աղվեսն ունի նեղ աչքեր և ժպիտ, արջը խոժոռված է, բայց կլոր, փափուկ ձևերով։ 7. Քո հերոսների զույգը։
+~~~`,
         ru: `## Как увидеть характер?
 
 В сказках герои часто явно **добрые** или **злые**. Художник показывает это не словами, а **формой, линией и цветом**.
@@ -389,6 +517,11 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 | цвета | светлые, тёплые, чистые | тёмные, холодные, грязноватые или резкие красно-чёрные |
 | поза | открытые руки, прямая спина | сгорбленная, когти, крадётся |
 | лицо | большие добрые глаза, улыбка | узкие глаза, нахмуренные брови, длинный нос |
+
+~~~art
+lines only=wavy,loop,zigzag,broken
+Мягкие округлые линии кажутся добрыми, острые зигзаги — злыми.
+~~~
 
 ## Примеры из сказок
 
@@ -404,12 +537,21 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 
 Попробуй: нарисуй два замка. Замок доброй феи сделай круглым, светлым, с флажками и цветами. Замок злого колдуна — острым, тёмным, с шипами и летучими мышами. Замки «рассказывают» о своих хозяевах!
 
+~~~art
+mood scene=landscape moods=joy,storm
+~~~
+
 ## Задание: пара героев
 
 Нарисуй рядом доброго и злого героя из любой сказки. Используй всё из таблицы: формы, линии, цвета, позы и лица.
 
-### Упражнения
+~~~art
+sketch guide=axis
+Пара героев: добрый — из круглых форм и тёплых цветов, злой — из острых форм и тёмных цветов.
+~~~
 
+~~~art
+tasks
 1. Какие формы характерны для доброго героя?
 2. Какие цвета ты выберешь для злого колдуна?
 3. Как поза может показать характер?
@@ -417,10 +559,12 @@ Draw a good hero and an evil hero from any tale, side by side. Use everything fr
 5. Нарисуй два замка: феи и колдуна.
 6. Нарисуй «хитрую» лису и «ворчливого, но доброго» медведя.
 7. Нарисуй пару героев.
+~~~
 
-### Ответы
-
-1. Круглые, мягкие, открытые формы. 2. Например, тёмно-фиолетовый, чёрный, холодный серый или резкий красный. 3. Например, открытые руки выглядят дружелюбно, сгорбленная крадущаяся поза — зло. 4. Например, Василиса и Кощей. 5. Круглый и светлый; острый и тёмный. 6. У лисы узкие глаза и улыбка; медведь хмурится, но формы у него круглые и мягкие. 7. Твоя пара героев.`,
+~~~art
+hints
+1. Круглые, мягкие, открытые формы. 2. Например, тёмно-фиолетовый, чёрный, холодный серый или резкий красный. 3. Например, открытые руки выглядят дружелюбно, сгорбленная крадущаяся поза — зло. 4. Например, Василиса и Кощей. 5. Круглый и светлый; острый и тёмный. 6. У лисы узкие глаза и улыбка; медведь хмурится, но формы у него круглые и мягкие. 7. Твоя пара героев.
+~~~`,
       },
       [
         q(t("Good heroes are usually drawn with…", "Բարի հերոսներին սովորաբար նկարում են…", "Добрых героев обычно рисуют…"), [t("round, soft shapes", "կլոր, փափուկ ձևերով", "круглыми, мягкими формами"), t("sharp spikes", "սուր փշերով", "острыми шипами"), t("broken lines", "կոտրված գծերով", "ломаными линиями")], 0),
@@ -454,6 +598,10 @@ Artists and storytellers have always invented creatures. Most of them are built 
 
 So the recipe is simple: **take a body from one animal, add parts from others.**
 
+~~~art
+pic vishap genre-fairy
+~~~
+
 ## Invent your own
 
 Use a "creature game" table. Pick one thing from each column:
@@ -466,6 +614,11 @@ Use a "creature game" table. Pick one thing from each column:
 | snail | horse | deer antlers | fluffy fur |
 
 Example: **turtle body + rabbit head + butterfly wings + spots** = a "Flutter-shell" 🐢🦋
+
+~~~art
+sketch
+Mix parts of real animals: a cat's head, a bird's wings, a fish's tail. Who did you invent? Give it a name.
+~~~
 
 ## Bring it to life
 
@@ -480,8 +633,8 @@ A creature becomes real when we know about it:
 
 Draw your invented creature big, in the middle of the sheet. Then draw its home around it, so the picture tells a little story.
 
-### Exercises
-
+~~~art
+tasks
 1. Which real animals are mixed in a griffin?
 2. What is a mermaid made of?
 3. Make your creature from the table: write down body, head, extra parts and covering.
@@ -489,10 +642,12 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 5. Where does your creature live? What does it eat?
 6. Is your creature kind or sly? How will you show that?
 7. Draw your creature in its home.
+~~~
 
-### Answers
-
-1. A lion and an eagle. 2. A girl and a fish tail. 3. For example, cat body, owl head, peacock tail, stripes. 4. For example, "Owlcat". 5. For example, in a hollow tree; it eats moonbeams. 6. For example, kind: round shapes and warm colours. 7. Your drawing.`,
+~~~art
+hints
+1. A lion and an eagle. 2. A girl and a fish tail. 3. For example, cat body, owl head, peacock tail, stripes. 4. For example, "Owlcat". 5. For example, in a hollow tree; it eats moonbeams. 6. For example, kind: round shapes and warm colours. 7. Your drawing.
+~~~`,
         hy: `## Ինչպե՞ս են ծնվում ֆանտաստիկ արարածները
 
 Նկարիչներն ու հեքիաթասացները միշտ արարածներ են հորինել։ Նրանց մեծ մասը կազմված է **իրական կենդանիների մասերից**․
@@ -507,6 +662,10 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 
 Ուրեմն բաղադրատոմսը պարզ է․ **վերցրու մի կենդանու մարմինը, ավելացրու ուրիշների մասեր։**
 
+~~~art
+pic vishap genre-fairy
+~~~
+
 ## Հորինի՛ր քո արարածը
 
 Օգտվի՛ր «արարածների խաղի» աղյուսակից։ Յուրաքանչյուր սյունակից ընտրի՛ր մեկը․
@@ -519,6 +678,11 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 | խխունջ | ձի | եղջերուի եղջյուրներ | փափուկ մորթի |
 
 Օրինակ՝ **կրիայի մարմին + ճագարի գլուխ + թիթեռի թևեր + բծեր** = «Թևիկ-կրիա» 🐢🦋
+
+~~~art
+sketch
+Միացրու՛ իրական կենդանիների մասեր՝ կատվի գլուխ, թռչնի թևեր, ձկան պոչ։ Ո՞ւմ հորինեցիր։ Անուն տուր նրան։
+~~~
 
 ## Կենդանացրո՛ւ այն
 
@@ -533,8 +697,8 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 
 Նկարի՛ր քո հորինած արարածին մեծ՝ թերթի մեջտեղում։ Հետո նրա շուրջը նկարի՛ր նրա տունը, որպեսզի նկարը փոքրիկ պատմություն պատմի։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ո՞ր իրական կենդանիներն են միավորված գրիֆոնի մեջ։
 2. Ինչի՞ց է կազմված ջրահարսը։
 3. Աղյուսակից կազմի՛ր քո արարածը՝ գրի՛ր մարմինը, գլուխը, լրացուցիչ մասերը և ծածկույթը։
@@ -542,10 +706,12 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 5. Որտե՞ղ է ապրում քո արարածը։ Ի՞նչ է ուտում։
 6. Քո արարածը բարի՞ է, թե՞ խորամանկ։ Ինչպե՞ս ցույց կտաս դա։
 7. Նկարի՛ր քո արարածին իր տանը։
+~~~
 
-### Պատասխաններ
-
-1. Առյուծը և արծիվը։ 2. Աղջկանից և ձկան պոչից։ 3. Օրինակ՝ կատվի մարմին, բվի գլուխ, սիրամարգի պոչ, շերտեր։ 4. Օրինակ՝ «Բվակատու»։ 5. Օրինակ՝ ծառի փչակում, ուտում է լուսնի ճառագայթներ։ 6. Օրինակ՝ բարի․ կլոր ձևեր և տաք գույներ։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Առյուծը և արծիվը։ 2. Աղջկանից և ձկան պոչից։ 3. Օրինակ՝ կատվի մարմին, բվի գլուխ, սիրամարգի պոչ, շերտեր։ 4. Օրինակ՝ «Բվակատու»։ 5. Օրինակ՝ ծառի փչակում, ուտում է լուսնի ճառագայթներ։ 6. Օրինակ՝ բարի․ կլոր ձևեր և տաք գույներ։ 7. Քո նկարը։
+~~~`,
         ru: `## Как рождаются фантастические существа?
 
 Художники и сказочники всегда придумывали существ. Большинство из них собраны из **частей настоящих животных**:
@@ -560,6 +726,10 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 
 Значит, рецепт простой: **возьми тело одного животного и добавь части других.**
 
+~~~art
+pic vishap genre-fairy
+~~~
+
 ## Придумай своё
 
 Используй таблицу «игра в существ». Выбери по одному из каждого столбца:
@@ -572,6 +742,11 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 | улитка | лошадь | рога оленя | пушистый мех |
 
 Пример: **тело черепахи + голова кролика + крылья бабочки + пятнышки** = «Порхопанцирь» 🐢🦋
+
+~~~art
+sketch
+Соедини части настоящих зверей: кошачья голова, птичьи крылья, рыбий хвост. Кого ты придумал? Дай ему имя.
+~~~
 
 ## Оживи его
 
@@ -586,8 +761,8 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 
 Нарисуй своё существо крупно, в центре листа. Потом нарисуй вокруг его дом, чтобы картинка рассказывала маленькую историю.
 
-### Упражнения
-
+~~~art
+tasks
 1. Какие настоящие животные соединены в грифоне?
 2. Из чего состоит русалка?
 3. Собери существо по таблице: запиши тело, голову, добавки и покров.
@@ -595,10 +770,12 @@ Draw your invented creature big, in the middle of the sheet. Then draw its home 
 5. Где живёт твоё существо? Что оно ест?
 6. Твоё существо доброе или хитрое? Как ты это покажешь?
 7. Нарисуй существо у него дома.
+~~~
 
-### Ответы
-
-1. Лев и орёл. 2. Из девушки и рыбьего хвоста. 3. Например, тело кошки, голова совы, хвост павлина, полоски. 4. Например, «Совокот». 5. Например, в дупле дерева; ест лунные лучи. 6. Например, доброе: круглые формы и тёплые цвета. 7. Твой рисунок.`,
+~~~art
+hints
+1. Лев и орёл. 2. Из девушки и рыбьего хвоста. 3. Например, тело кошки, голова совы, хвост павлина, полоски. 4. Например, «Совокот». 5. Например, в дупле дерева; ест лунные лучи. 6. Например, доброе: круглые формы и тёплые цвета. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("A griffin combines a lion and…", "Գրիֆոնը միավորում է առյուծին և…", "Грифон соединяет льва и…"), [t("a fish", "ձկանը", "рыбу"), t("an eagle", "արծվին", "орла"), t("a horse", "ձիուն", "коня")], 1),
@@ -635,6 +812,10 @@ Every snowflake has **six** arms, and no two snowflakes are exactly alike.
 
 The secret is **symmetry**: whatever you add to one arm, add to all six.
 
+~~~art
+steps snowflake
+~~~
+
 ## The spider web
 
 | Step | What to draw |
@@ -646,6 +827,10 @@ The secret is **symmetry**: whatever you add to one arm, add to all six.
 
 A spider web drawn with a white pencil or white gouache on dark paper looks like it is covered with dew.
 
+~~~art
+pic web
+~~~
+
 ## From nature to decoration
 
 Folk artists turn natural forms into **ornaments**: they simplify and repeat them.
@@ -654,12 +839,21 @@ Folk artists turn natural forms into **ornaments**: they simplify and repeat the
 - One web in a corner decorates a Halloween or autumn picture.
 - Snowflakes cut from folded paper make a window decoration.
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+From nature to decoration: draw on one ray of a snowflake.
+~~~
+
 ## Task: a winter border
 
 Draw a long strip along the bottom of the page. Fill it with a row of snowflakes of the same size, all different inside. Use white and blue on dark blue paper.
 
-### Exercises
+~~~art
+pattern layout=strip palettes=gzhel,mono motifs=star,flower,drop
+~~~
 
+~~~art
+tasks
 1. How many arms does a snowflake have?
 2. What does symmetry mean in a snowflake?
 3. Draw a snowflake in four steps.
@@ -667,10 +861,12 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 5. Why is a web drawn white on dark paper?
 6. What is an ornament?
 7. Draw a border of snowflakes.
+~~~
 
-### Answers
-
-1. Six. 2. Every arm is decorated the same way. 3. Your drawing. 4. Eight. 5. It looks like it is covered with dew and stands out clearly. 6. A simplified natural form that is repeated as decoration. 7. Your border.`,
+~~~art
+hints
+1. Six. 2. Every arm is decorated the same way. 3. Your drawing. 4. Eight. 5. It looks like it is covered with dew and stands out clearly. 6. A simplified natural form that is repeated as decoration. 7. Your border.
+~~~`,
         hy: `## Բնությունը մեծ դիզայներ է
 
 Ուշադիր նայի՛ր և նախշեր կգտնես ամենուր՝ թիթեռի թևերին, արևածաղկի կենտրոնում, սոճու կոնի վրա։ Ամենագեղեցիկներից երկուսն են **ձյան փաթիլը** ❄️ և **սարդոստայնը** 🕸️։
@@ -688,6 +884,10 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 
 Գաղտնիքը **համաչափությունն** է․ ինչ ավելացնում ես մի թևին, ավելացրո՛ւ բոլոր վեցին։
 
+~~~art
+steps snowflake
+~~~
+
 ## Սարդոստայն
 
 | Քայլ | Ինչ նկարել |
@@ -699,6 +899,10 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 
 Մուգ թղթի վրա սպիտակ մատիտով կամ սպիտակ գուաշով նկարված սարդոստայնը կարծես ցողով է պատված։
 
+~~~art
+pic web
+~~~
+
 ## Բնությունից՝ զարդ
 
 Ժողովրդական վարպետները բնական ձևերը դարձնում են **զարդանախշեր**․ պարզեցնում և կրկնում են դրանք։
@@ -707,12 +911,21 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 - Անկյունում մեկ սարդոստայնը զարդարում է աշնանային նկարը։
 - Ծալված թղթից կտրած փաթիլները պատուհանի զարդ են։
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+Բնությունից՝ զարդի․ նկարի՛ր փաթիլի մեկ ճառագայթի վրա։
+~~~
+
 ## Առաջադրանք՝ ձմեռային եզրագիծ
 
 Թերթի ներքևում նկարի՛ր երկար շերտ։ Լցրո՛ւ այն նույն չափի փաթիլների շարքով, բայց ներսից բոլորը տարբեր լինեն։ Մուգ կապույտ թղթի վրա օգտագործի՛ր սպիտակ և կապույտ։
 
-### Վարժություններ
+~~~art
+pattern layout=strip palettes=gzhel,mono motifs=star,flower,drop
+~~~
 
+~~~art
+tasks
 1. Քանի՞ թև ունի ձյան փաթիլը։
 2. Ի՞նչ է նշանակում համաչափությունը փաթիլի մեջ։
 3. Նկարի՛ր փաթիլ չորս քայլով։
@@ -720,10 +933,12 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 5. Ինչո՞ւ են սարդոստայնը սպիտակով նկարում մուգ թղթի վրա։
 6. Ի՞նչ է զարդանախշը։
 7. Նկարի՛ր փաթիլներից եզրագիծ։
+~~~
 
-### Պատասխաններ
-
-1. Վեց։ 2. Բոլոր թևերը նույն ձևով են զարդարված։ 3. Քո նկարը։ 4. Ութ։ 5. Այն կարծես ցողով է պատված և պարզ երևում է։ 6. Պարզեցված բնական ձև, որը կրկնվում է որպես զարդ։ 7. Քո եզրագիծը։`,
+~~~art
+hints
+1. Վեց։ 2. Բոլոր թևերը նույն ձևով են զարդարված։ 3. Քո նկարը։ 4. Ութ։ 5. Այն կարծես ցողով է պատված և պարզ երևում է։ 6. Պարզեցված բնական ձև, որը կրկնվում է որպես զարդ։ 7. Քո եզրագիծը։
+~~~`,
         ru: `## Природа — великий художник-оформитель
 
 Присмотрись, и ты найдёшь узоры повсюду: на крыльях бабочки, в серединке подсолнуха, на сосновой шишке. Два самых красивых — **снежинка** ❄️ и **паутинка** 🕸️.
@@ -741,6 +956,10 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 
 Секрет — **симметрия**: всё, что добавляешь к одному лучу, добавляй ко всем шести.
 
+~~~art
+steps snowflake
+~~~
+
 ## Паутинка
 
 | Шаг | Что рисовать |
@@ -752,6 +971,10 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 
 Паутинка, нарисованная белым карандашом или белой гуашью на тёмной бумаге, кажется покрытой росой.
 
+~~~art
+pic web
+~~~
+
 ## От природы к украшению
 
 Народные мастера превращают природные формы в **орнамент**: упрощают и повторяют их.
@@ -760,12 +983,21 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 - Паутинка в уголке украшает осенний рисунок.
 - Снежинки, вырезанные из сложенной бумаги, украшают окно.
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+От природы к украшению: рисуй на одном луче снежинки.
+~~~
+
 ## Задание: зимняя кайма
 
 Нарисуй внизу листа длинную полосу. Заполни её рядом снежинок одного размера, но разных внутри. Используй белый и голубой на тёмно-синей бумаге.
 
-### Упражнения
+~~~art
+pattern layout=strip palettes=gzhel,mono motifs=star,flower,drop
+~~~
 
+~~~art
+tasks
 1. Сколько лучей у снежинки?
 2. Что значит симметрия у снежинки?
 3. Нарисуй снежинку за четыре шага.
@@ -773,10 +1005,12 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
 5. Почему паутинку рисуют белым на тёмной бумаге?
 6. Что такое орнамент?
 7. Нарисуй кайму из снежинок.
+~~~
 
-### Ответы
-
-1. Шесть. 2. Все лучи украшены одинаково. 3. Твой рисунок. 4. Восемь. 5. Она кажется покрытой росой и хорошо видна. 6. Упрощённая природная форма, которая повторяется как украшение. 7. Твоя кайма.`,
+~~~art
+hints
+1. Шесть. 2. Все лучи украшены одинаково. 3. Твой рисунок. 4. Восемь. 5. Она кажется покрытой росой и хорошо видна. 6. Упрощённая природная форма, которая повторяется как украшение. 7. Твоя кайма.
+~~~`,
       },
       [
         q(t("How many arms does a snowflake have?", "Քանի՞ թև ունի ձյան փաթիլը։", "Сколько лучей у снежинки?"), [t("four", "չորս", "четыре"), t("five", "հինգ", "пять"), t("six", "վեց", "шесть")], 2),
@@ -799,6 +1033,11 @@ Draw a long strip along the bottom of the page. Fill it with a row of snowflakes
         en: `## A house can be anything
 
 In fairy tales there are houses on chicken legs, gingerbread houses, castles in the clouds. Your dream house can be just as unusual!
+
+~~~art
+pic izba pagoda st-basil yurt
+A house can be anything: wooden, onion-domed, round like a yurt.
+~~~
 
 ## Ideas for a dream house
 
@@ -829,8 +1068,13 @@ Remember what you learned about character. The house should **match its owner**:
 
 Draw the house you would like to live in. Add at least three unusual details and draw where it stands: in a forest, on a cloud, at the bottom of the sea?
 
-### Exercises
+~~~art
+sketch guide=horizon
+Draw your dream house. What is it made of? Who lives there?
+~~~
 
+~~~art
+tasks
 1. Name two unusual houses from fairy tales.
 2. Invent a house from a fruit. Describe it.
 3. What house would a wizard have?
@@ -838,13 +1082,20 @@ Draw the house you would like to live in. Add at least three unusual details and
 5. Why do we draw the main shape first?
 6. Name three unusual details for your house.
 7. Draw your dream house with its surroundings.
+~~~
 
-### Answers
-
-1. For example, Baba Yaga's hut on chicken legs and a gingerbread house. 2. For example, an apple house with a leaf roof and a worm-hole door. 3. A tall pointed tower with stars, in dark blue and purple. 4. For example, a cheese house. 5. So that the house is big and well placed on the page. 6. For example, a slide, a round window, a chimney shaped like a flower. 7. Your drawing.`,
+~~~art
+hints
+1. For example, Baba Yaga's hut on chicken legs and a gingerbread house. 2. For example, an apple house with a leaf roof and a worm-hole door. 3. A tall pointed tower with stars, in dark blue and purple. 4. For example, a cheese house. 5. So that the house is big and well placed on the page. 6. For example, a slide, a round window, a chimney shaped like a flower. 7. Your drawing.
+~~~`,
         hy: `## Տունը կարող է ամեն ինչ լինել
 
 Հեքիաթներում կան հավի ոտքերի վրա խրճիթներ, մեղրաբլիթից տներ, ամպերի մեջ դղյակներ։ Քո երազանքների տունը կարող է նույնքան անսովոր լինել։
+
+~~~art
+pic izba pagoda st-basil yurt
+Տունը կարող է ամեն ինչ լինել՝ փայտե, սոխաձև գմբեթներով, յուրտայի պես կլոր։
+~~~
 
 ## Գաղափարներ երազանքների տան համար
 
@@ -875,8 +1126,13 @@ Draw the house you would like to live in. Add at least three unusual details and
 
 Նկարի՛ր այն տունը, որտեղ կուզեիր ապրել։ Ավելացրո՛ւ առնվազն երեք անսովոր մանրամասն և նկարի՛ր, թե որտեղ է այն կանգնած՝ անտառու՞մ, ամպի՞ վրա, թե՞ ծովի հատակին։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Նկարի՛ր քո երազանքների տունը։ Ինչի՞ց է այն պատրաստված։ Ո՞վ է ապրում այնտեղ։
+~~~
 
+~~~art
+tasks
 1. Նշի՛ր երկու անսովոր տուն հեքիաթներից։
 2. Հորինի՛ր մրգից տուն։ Նկարագրի՛ր այն։
 3. Ինչպիսի՞ տուն կունենար կախարդը։
@@ -884,13 +1140,20 @@ Draw the house you would like to live in. Add at least three unusual details and
 5. Ինչո՞ւ ենք սկզբում նկարում գլխավոր ձևը։
 6. Նշի՛ր երեք անսովոր մանրամասն քո տան համար։
 7. Նկարի՛ր քո երազանքների տունը շրջապատով։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ Բաբա Յագայի խրճիթը հավի ոտքերի վրա և մեղրաբլիթից տունը։ 2. Օրինակ՝ խնձորից տուն՝ տերևից տանիքով և որդի անցքից դռնով։ 3. Բարձր սրածայր աշտարակ աստղերով՝ մուգ կապույտ և մանուշակագույն։ 4. Օրինակ՝ պանրից տուն։ 5. Որպեսզի տունը մեծ լինի և լավ տեղավորվի թերթի վրա։ 6. Օրինակ՝ սահարան, կլոր պատուհան, ծաղկաձև ծխնելույզ։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Օրինակ՝ Բաբա Յագայի խրճիթը հավի ոտքերի վրա և մեղրաբլիթից տունը։ 2. Օրինակ՝ խնձորից տուն՝ տերևից տանիքով և որդի անցքից դռնով։ 3. Բարձր սրածայր աշտարակ աստղերով՝ մուգ կապույտ և մանուշակագույն։ 4. Օրինակ՝ պանրից տուն։ 5. Որպեսզի տունը մեծ լինի և լավ տեղավորվի թերթի վրա։ 6. Օրինակ՝ սահարան, կլոր պատուհան, ծաղկաձև ծխնելույզ։ 7. Քո նկարը։
+~~~`,
         ru: `## Дом может быть каким угодно
 
 В сказках есть избушки на курьих ножках, пряничные домики, замки в облаках. Дом твоей мечты может быть таким же необычным!
+
+~~~art
+pic izba pagoda st-basil yurt
+Дом может быть каким угодно: деревянным, с луковками, круглым, как юрта.
+~~~
 
 ## Идеи для дома мечты
 
@@ -921,8 +1184,13 @@ Draw the house you would like to live in. Add at least three unusual details and
 
 Нарисуй дом, в котором тебе хотелось бы жить. Добавь не меньше трёх необычных деталей и нарисуй, где он стоит: в лесу, на облаке, на дне моря?
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Нарисуй дом своей мечты. Из чего он сделан? Кто в нём живёт?
+~~~
 
+~~~art
+tasks
 1. Назови два необычных дома из сказок.
 2. Придумай дом из фрукта. Опиши его.
 3. Какой дом был бы у волшебника?
@@ -930,10 +1198,12 @@ Draw the house you would like to live in. Add at least three unusual details and
 5. Почему сначала рисуют главную форму?
 6. Назови три необычные детали для своего дома.
 7. Нарисуй дом мечты с окружением.
+~~~
 
-### Ответы
-
-1. Например, избушка Бабы-яги на курьих ножках и пряничный домик. 2. Например, дом-яблоко с крышей-листиком и дверью-червоточиной. 3. Высокая остроконечная башня со звёздами, тёмно-синяя и фиолетовая. 4. Например, домик из сыра. 5. Чтобы дом получился крупным и хорошо разместился на листе. 6. Например, горка, круглое окно, труба в форме цветка. 7. Твой рисунок.`,
+~~~art
+hints
+1. Например, избушка Бабы-яги на курьих ножках и пряничный домик. 2. Например, дом-яблоко с крышей-листиком и дверью-червоточиной. 3. Высокая остроконечная башня со звёздами, тёмно-синяя и фиолетовая. 4. Например, домик из сыра. 5. Чтобы дом получился крупным и хорошо разместился на листе. 6. Например, горка, круглое окно, труба в форме цветка. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Baba Yaga's hut stands on…", "Բաբա Յագայի խրճիթը կանգնած է…", "Избушка Бабы-яги стоит на…"), [t("chicken legs", "հավի ոտքերի վրա", "курьих ножках"), t("a cloud", "ամպի վրա", "облаке"), t("a ship", "նավի վրա", "корабле")], 0),

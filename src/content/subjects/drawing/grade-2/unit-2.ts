@@ -25,6 +25,10 @@ export const unit2: UnitSeed = {
 | red, orange, lemon yellow, bright green | pink-grey, pale blue, olive, beige |
 | a festival, a circus, a summer meadow | fog, a rainy day, early morning |
 
+~~~art
+palette loud pastel
+~~~
+
 ## How to make a colour quieter
 
 1. Add **white**: the colour becomes soft and gentle.
@@ -39,6 +43,11 @@ export const unit2: UnitSeed = {
 
 When opposite colours stand **next to each other**, both look louder! When they are **mixed**, they become quieter.
 
+~~~art
+mixer paints=red,blue,white
+Make a loud colour quieter: start with red and add white drop by drop.
+~~~
+
 ## Look at artists
 
 **Martiros Saryan** often painted Armenia with loud, sunny colours: orange mountains, deep blue shadows. Paintings of a foggy autumn day usually use quiet, greyish colours.
@@ -47,8 +56,13 @@ When opposite colours stand **next to each other**, both look louder! When they 
 
 Fold your paper in half. On the left, paint a bouquet in loud colours. On the right, paint the same bouquet in quiet colours. Which one is a party, and which is a dream?
 
-### Exercises
+~~~art
+mood scene=still moods=loud,quiet
+Two bouquets: the same vase in loud and in quiet colours.
+~~~
 
+~~~art
+tasks
 1. Name three loud colours.
 2. How do you make blue quieter?
 3. What is the opposite of red? Of yellow?
@@ -56,10 +70,12 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 5. Paint a «scale» of five squares: from pure red to very quiet pink-grey.
 6. Paint the two bouquets.
 7. Which bouquet do you like more and why? Write two sentences.
+~~~
 
-### Answers
-
-1. For example, red, orange, lemon yellow. 2. Add white, grey or a little orange. 3. Green; violet. 4. Both look brighter. 5. Each square has a little more white and grey than the one before. 6. The left one is bright, the right one is soft. 7. Your own opinion.`,
+~~~art
+hints
+1. For example, red, orange, lemon yellow. 2. Add white, grey or a little orange. 3. Green; violet. 4. Both look brighter. 5. Each square has a little more white and grey than the one before. 6. The left one is bright, the right one is soft. 7. Your own opinion.
+~~~`,
         hy: `## Գույները կարող են գոռալ կամ շշնջալ
 
 | Աղմկոտ գույներ 📢 | Հանգիստ գույներ 🤫 |
@@ -67,6 +83,10 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 | մաքուր, վառ, անմիջապես տուփից | խառնված սպիտակի, մոխրագույնի կամ այլ գույնի հետ |
 | կարմիր, նարնջագույն, կիտրոնի դեղին, վառ կանաչ | մոխրավարդագույն, գունատ երկնագույն, ձիթապտղագույն, բեժ |
 | տոն, կրկես, ամառային մարգագետին | մառախուղ, անձրևոտ օր, վաղ առավոտ |
+
+~~~art
+palette loud pastel
+~~~
 
 ## Ինչպես գույնը հանգստացնել
 
@@ -82,6 +102,11 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 
 Երբ հակադիր գույները **կողք կողքի** են, երկուսն էլ ավելի աղմկոտ են թվում։ Երբ **խառնվում** են՝ հանգստանում են։
 
+~~~art
+mixer paints=red,blue,white
+Բարձրաձայն գույնը մեղմացրու՛․ սկսի՛ր կարմիրից և կաթիլ առ կաթիլ ավելացրու սպիտակ։
+~~~
+
 ## Նայենք նկարիչներին
 
 **Մարտիրոս Սարյանը** հաճախ էր նկարում Հայաստանը աղմկոտ, արևոտ գույներով՝ նարնջագույն լեռներ, խոր կապույտ ստվերներ։ Մառախլապատ աշնանային օրվա նկարներում սովորաբար հանգիստ, մոխրավուն գույներ են։
@@ -90,8 +115,13 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 
 Թուղթը կիսով ծալի՛ր։ Ձախում աղմկոտ գույներով ծաղկեփունջ նկարի՛ր։ Աջում նույն ծաղկեփունջը՝ հանգիստ գույներով։ Ո՞րն է տոն, ո՞րը՝ երազ։
 
-### Վարժություններ
+~~~art
+mood scene=still moods=loud,quiet
+Երկու ծաղկեփունջ․ նույն ծաղկամանը բարձրաձայն և մեղմ գույներով։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր երեք աղմկոտ գույն։
 2. Ինչպե՞ս հանգստացնել կապույտը։
 3. Ո՞րն է կարմիրի հակադիրը։ Դեղինի՞։
@@ -99,10 +129,12 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 5. Նկարի՛ր հինգ քառակուսու «սանդղակ»՝ մաքուր կարմիրից մինչև շատ հանգիստ մոխրավարդագույն։
 6. Նկարի՛ր երկու ծաղկեփունջը։
 7. Ո՞ր ծաղկեփունջն է քեզ ավելի դուր գալիս և ինչու։ Գրի՛ր երկու նախադասություն։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ կարմիր, նարնջագույն, կիտրոնի դեղին։ 2. Ավելացնել սպիտակ, մոխրագույն կամ մի քիչ նարնջագույն։ 3. Կանաչը, մանուշակագույնը։ 4. Երկուսն էլ ավելի վառ են թվում։ 5. Ամեն քառակուսում մի քիչ ավելի շատ սպիտակ և մոխրագույն կա, քան նախորդում։ 6. Ձախը վառ է, աջը՝ մեղմ։ 7. Քո կարծիքը։`,
+~~~art
+hints
+1. Օրինակ՝ կարմիր, նարնջագույն, կիտրոնի դեղին։ 2. Ավելացնել սպիտակ, մոխրագույն կամ մի քիչ նարնջագույն։ 3. Կանաչը, մանուշակագույնը։ 4. Երկուսն էլ ավելի վառ են թվում։ 5. Ամեն քառակուսում մի քիչ ավելի շատ սպիտակ և մոխրագույն կա, քան նախորդում։ 6. Ձախը վառ է, աջը՝ մեղմ։ 7. Քո կարծիքը։
+~~~`,
         ru: `## Цвета могут кричать или шептать
 
 | Звонкие цвета 📢 | Тихие цвета 🤫 |
@@ -110,6 +142,10 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 | чистые, яркие, прямо из баночки | смешанные с белилами, серым или другим цветом |
 | красный, оранжевый, лимонный, ярко-зелёный | серо-розовый, бледно-голубой, оливковый, бежевый |
 | праздник, цирк, летний луг | туман, дождливый день, раннее утро |
+
+~~~art
+palette loud pastel
+~~~
 
 ## Как приглушить цвет
 
@@ -125,6 +161,11 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 
 Когда противоположные цвета стоят **рядом**, оба кажутся звонче! Когда их **смешивают**, они становятся тише.
 
+~~~art
+mixer paints=red,blue,white
+Сделай звонкий цвет тише: начни с красного и по капле добавляй белила.
+~~~
+
 ## Посмотрим на художников
 
 **Мартирос Сарьян** часто писал Армению звонкими, солнечными красками: оранжевые горы, глубокие синие тени. А картины туманного осеннего дня обычно написаны тихими, сероватыми цветами.
@@ -133,8 +174,13 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 
 Согни лист пополам. Слева напиши букет звонкими красками. Справа — тот же букет тихими. Какой из них праздник, а какой — сон?
 
-### Упражнения
+~~~art
+mood scene=still moods=loud,quiet
+Два букета: одна ваза в звонких и в тихих цветах.
+~~~
 
+~~~art
+tasks
 1. Назови три звонких цвета.
 2. Как приглушить синий?
 3. Какой цвет противоположен красному? Жёлтому?
@@ -142,10 +188,12 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 5. Сделай «лесенку» из пяти квадратов: от чистого красного до совсем тихого серо-розового.
 6. Напиши два букета.
 7. Какой букет тебе нравится больше и почему? Напиши два предложения.
+~~~
 
-### Ответы
-
-1. Например, красный, оранжевый, лимонный. 2. Добавить белила, серый или немного оранжевого. 3. Зелёный; фиолетовый. 4. Оба кажутся ярче. 5. В каждом следующем квадрате немного больше белил и серого. 6. Левый яркий, правый мягкий. 7. Твоё мнение.`,
+~~~art
+hints
+1. Например, красный, оранжевый, лимонный. 2. Добавить белила, серый или немного оранжевого. 3. Зелёный; фиолетовый. 4. Оба кажутся ярче. 5. В каждом следующем квадрате немного больше белил и серого. 6. Левый яркий, правый мягкий. 7. Твоё мнение.
+~~~`,
       },
       [
         q(t("Which colour is «loud»?", "Ո՞ր գույնն է «աղմկոտ»։", "Какой цвет «звонкий»?"), [t("pale grey-blue", "գունատ մոխրակապույտ", "бледный серо-голубой"), t("pure bright orange", "մաքուր վառ նարնջագույն", "чистый ярко-оранжевый"), t("beige", "բեժ", "бежевый")], 1),
@@ -175,6 +223,10 @@ Fold your paper in half. On the left, paint a bouquet in loud colours. On the ri
 
 Careful with black: add it **drop by drop**. A little black changes a colour very much. Yellow with black turns greenish!
 
+~~~art
+tints
+~~~
+
 ## What light and dark tell us
 
 | Light colours | Dark colours |
@@ -195,8 +247,13 @@ Choose one colour, for example blue. With white and black make five steps. Paint
 
 You will see that a picture can look deep and beautiful even in one colour!
 
-### Exercises
+~~~art
+mood scene=landscape moods=mono,noon
+A landscape in one colour: only light and dark blue. Is it still a picture? Yes!
+~~~
 
+~~~art
+tasks
 1. How do you make a colour lighter in gouache? Darker?
 2. Why do we add black drop by drop?
 3. What happens to yellow with black?
@@ -204,10 +261,12 @@ You will see that a picture can look deep and beautiful even in one colour!
 5. Make a five-step scale in red.
 6. Paint the one-colour landscape.
 7. Paint the same small house twice: once on a light day background and once on a dark night background.
+~~~
 
-### Answers
-
-1. Add white; add black. 2. Because a little black changes the colour a lot. 3. It turns greenish, olive. 4. Lighter. 5. From pale pink to dark red. 6. Far is light, near is dark. 7. On the night background, the windows can be light yellow.`,
+~~~art
+hints
+1. Add white; add black. 2. Because a little black changes the colour a lot. 3. It turns greenish, olive. 4. Lighter. 5. From pale pink to dark red. 6. Far is light, near is dark. 7. On the night background, the windows can be light yellow.
+~~~`,
         hy: `## Մեկ գույն, շատ աստիճաններ
 
 | + սպիտակ (ավելի բաց) | մաքուր գույն | + սև (ավելի մուգ) |
@@ -217,6 +276,10 @@ You will see that a picture can look deep and beautiful even in one colour!
 | վարդագույն · բաց կարմիր | կարմիր | մուգ կարմիր · շագանակակարմիր |
 
 Սևի հետ զգույշ եղի՛ր. ավելացրո՛ւ **կաթիլ առ կաթիլ**։ Մի քիչ սևը շատ է փոխում գույնը։ Դեղինը սևի հետ կանաչավուն է դառնում։
+
+~~~art
+tints
+~~~
 
 ## Ինչ են պատմում լույսը և մութը
 
@@ -238,8 +301,13 @@ You will see that a picture can look deep and beautiful even in one colour!
 
 Կտեսնես, որ նկարը կարող է խոր և գեղեցիկ լինել նույնիսկ մեկ գույնով։
 
-### Վարժություններ
+~~~art
+mood scene=landscape moods=mono,noon
+Բնանկար մեկ գույնով՝ միայն բաց և մուգ կապույտ։ Դա դեռ նկա՞ր է։ Այո՛։
+~~~
 
+~~~art
+tasks
 1. Գուաշում ինչպե՞ս բացացնել գույնը։ Մգացնե՞լ։
 2. Ինչո՞ւ ենք սևն ավելացնում կաթիլ առ կաթիլ։
 3. Ի՞նչ է լինում դեղինի հետ սև ավելացնելիս։
@@ -247,10 +315,12 @@ You will see that a picture can look deep and beautiful even in one colour!
 5. Կարմիրով հինգաստիճան սանդղակ արա՛։
 6. Նկարի՛ր միագույն բնանկարը։
 7. Նույն փոքրիկ տունը նկարի՛ր երկու անգամ՝ բաց ցերեկային ֆոնի և մուգ գիշերային ֆոնի վրա։
+~~~
 
-### Պատասխաններ
-
-1. Ավելացնել սպիտակ, ավելացնել սև։ 2. Որովհետև մի քիչ սևը շատ է փոխում գույնը։ 3. Դառնում է կանաչավուն, ձիթապտղագույն։ 4. Ավելի բաց։ 5. Գունատ վարդագույնից մինչև մուգ կարմիր։ 6. Հեռուն բաց է, մոտիկը՝ մուգ։ 7. Գիշերային ֆոնի վրա պատուհանները կարող են բաց դեղին լինել։`,
+~~~art
+hints
+1. Ավելացնել սպիտակ, ավելացնել սև։ 2. Որովհետև մի քիչ սևը շատ է փոխում գույնը։ 3. Դառնում է կանաչավուն, ձիթապտղագույն։ 4. Ավելի բաց։ 5. Գունատ վարդագույնից մինչև մուգ կարմիր։ 6. Հեռուն բաց է, մոտիկը՝ մուգ։ 7. Գիշերային ֆոնի վրա պատուհանները կարող են բաց դեղին լինել։
+~~~`,
         ru: `## Один цвет — много ступеней
 
 | + белила (светлее) | чистый цвет | + чёрный (темнее) |
@@ -260,6 +330,10 @@ You will see that a picture can look deep and beautiful even in one colour!
 | розовый · светло-красный | красный | тёмно-красный · коричнево-красный |
 
 Осторожно с чёрным: добавляй **по капельке**. Немного чёрного сильно меняет цвет. Жёлтый с чёрным становится зеленоватым!
+
+~~~art
+tints
+~~~
 
 ## О чём говорят светлое и тёмное
 
@@ -281,8 +355,13 @@ You will see that a picture can look deep and beautiful even in one colour!
 
 Увидишь: картина может быть глубокой и красивой даже в одном цвете!
 
-### Упражнения
+~~~art
+mood scene=landscape moods=mono,noon
+Пейзаж одним цветом: только светлый и тёмный синий. Это всё ещё картина? Да!
+~~~
 
+~~~art
+tasks
 1. Как в гуаши сделать цвет светлее? Темнее?
 2. Почему чёрный добавляют по капельке?
 3. Что происходит с жёлтым, если добавить чёрный?
@@ -290,10 +369,12 @@ You will see that a picture can look deep and beautiful even in one colour!
 5. Сделай растяжку красного из пяти ступеней.
 6. Напиши пейзаж в одном цвете.
 7. Нарисуй один и тот же домик дважды: на светлом дневном фоне и на тёмном ночном.
+~~~
 
-### Ответы
-
-1. Добавить белила; добавить чёрный. 2. Потому что немного чёрного сильно меняет цвет. 3. Он становится зеленоватым, оливковым. 4. Светлее. 5. От бледно-розового до тёмно-красного. 6. Далёкое светлое, близкое тёмное. 7. На ночном фоне окна могут быть светло-жёлтыми.`,
+~~~art
+hints
+1. Добавить белила; добавить чёрный. 2. Потому что немного чёрного сильно меняет цвет. 3. Он становится зеленоватым, оливковым. 4. Светлее. 5. От бледно-розового до тёмно-красного. 6. Далёкое светлое, близкое тёмное. 7. На ночном фоне окна могут быть светло-жёлтыми.
+~~~`,
       },
       [
         q(t("To make a colour darker, add…", "Գույնը մգացնելու համար ավելացնում ենք…", "Чтобы сделать цвет темнее, добавляют…"), [t("white", "սպիտակ", "белила"), t("black, drop by drop", "սև՝ կաթիլ առ կաթիլ", "чёрный по капельке"), t("water", "ջուր", "воду")], 1),
@@ -325,16 +406,30 @@ You will see that a picture can look deep and beautiful even in one colour!
 
 These are not strict rules: every person can feel colours a little differently. That's what makes art interesting!
 
+~~~art
+mood scene=abstract moods=joy,sad,loud,quiet
+No objects, only colours and shapes. Which one is joy? Which one is sadness?
+~~~
+
 ## Abstract art
 
 A picture doesn't always show a thing. **Abstract** art shows only colours, lines and shapes. The Russian artist **Wassily Kandinsky** was one of the first abstract painters. He believed colours sound like music: yellow like a trumpet, blue like a cello.
+
+~~~art
+pic genre-abstract
+~~~
 
 ## Task: two feelings
 
 Fold your paper in half. On one side, paint **joy**. On the other, paint **sadness**. Don't draw people or faces! Only colours, lines and spots. Then show your work to a friend: can they guess which side is which?
 
-### Exercises
+~~~art
+sketch guide=axis
+Paint two feelings without drawing any objects: joy on one half, sadness on the other.
+~~~
 
+~~~art
+tasks
 1. Which colours would you use for joy?
 2. What kind of lines show anger?
 3. What is abstract art?
@@ -342,10 +437,12 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 5. Draw three small squares: calm, anger, fear. Use only lines and colours.
 6. Paint «joy» and «sadness» on two halves of a sheet.
 7. Listen to a short piece of music and paint the feeling it gives you.
+~~~
 
-### Answers
-
-1. For example, yellow, orange, bright pink. 2. Sharp zigzags and spikes. 3. Art that shows only colours, lines and shapes, not things. 4. Wassily Kandinsky. 5. Calm: soft blue waves; anger: red and black zigzags; fear: crooked dark lines. 6. A friend should be able to guess each feeling. 7. Your own picture.`,
+~~~art
+hints
+1. For example, yellow, orange, bright pink. 2. Sharp zigzags and spikes. 3. Art that shows only colours, lines and shapes, not things. 4. Wassily Kandinsky. 5. Calm: soft blue waves; anger: red and black zigzags; fear: crooked dark lines. 6. A friend should be able to guess each feeling. 7. Your own picture.
+~~~`,
         hy: `## Զգացմունքները գույնով
 
 | Զգացմունք | Գույներ | Գծեր և ձևեր |
@@ -358,16 +455,30 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 
 Սրանք խիստ կանոններ չեն. ամեն մարդ գույները կարող է մի քիչ այլ կերպ զգալ։ Դա է արվեստը հետաքրքիր դարձնում։
 
+~~~art
+mood scene=abstract moods=joy,sad,loud,quiet
+Ոչ մի առարկա, միայն գույներ և ձևեր։ Ո՞րն է ուրախությունը, ո՞րը՝ տխրությունը։
+~~~
+
 ## Վերացական արվեստ
 
 Նկարը միշտ չէ, որ որևէ առարկա է պատկերում։ **Վերացական** (աբստրակտ) արվեստը ցույց է տալիս միայն գույներ, գծեր և ձևեր։ Ռուս նկարիչ **Վասիլի Կանդինսկին** առաջին աբստրակտ նկարիչներից էր։ Նա կարծում էր, որ գույները հնչում են երաժշտության պես՝ դեղինը՝ շեփորի, կապույտը՝ թավջութակի։
+
+~~~art
+pic genre-abstract
+~~~
 
 ## Առաջադրանք. երկու զգացմունք
 
 Թուղթը կիսով ծալի՛ր։ Մի կողմում նկարի՛ր **ուրախություն**, մյուսում՝ **տխրություն**։ Մարդիկ կամ դեմքեր մի՛ նկարիր, միայն գույներ, գծեր և բծեր։ Հետո ցույց տուր ընկերոջդ. կգուշակի՞, թե որ կողմը որն է։
 
-### Վարժություններ
+~~~art
+sketch guide=axis
+Նկարի՛ր երկու զգացմունք առանց առարկաների՝ ուրախությունը մի կեսում, տխրությունը՝ մյուսում։
+~~~
 
+~~~art
+tasks
 1. Ո՞ր գույներն ես կօգտագործես ուրախության համար։
 2. Ինչպիսի՞ գծեր են բարկություն արտահայտում։
 3. Ի՞նչ է վերացական արվեստը։
@@ -375,10 +486,12 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 5. Նկարի՛ր երեք փոքրիկ քառակուսի՝ հանգստություն, բարկություն, վախ։ Միայն գծեր և գույներ։
 6. Թերթի երկու կեսերին նկարի՛ր «ուրախություն» և «տխրություն»։
 7. Լսի՛ր մի կարճ երաժշտություն և նկարի՛ր այն զգացումը, որ նա տալիս է քեզ։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ դեղին, նարնջագույն, վառ վարդագույն։ 2. Սուր զիգզագներ և փշեր։ 3. Արվեստ, որը ցույց է տալիս միայն գույներ, գծեր և ձևեր, ոչ թե առարկաներ։ 4. Վասիլի Կանդինսկին։ 5. Հանգստություն՝ մեղմ կապույտ ալիքներ, բարկություն՝ կարմիր և սև զիգզագներ, վախ՝ ծուռ մուգ գծեր։ 6. Ընկերդ պետք է կարողանա գուշակել զգացմունքները։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Օրինակ՝ դեղին, նարնջագույն, վառ վարդագույն։ 2. Սուր զիգզագներ և փշեր։ 3. Արվեստ, որը ցույց է տալիս միայն գույներ, գծեր և ձևեր, ոչ թե առարկաներ։ 4. Վասիլի Կանդինսկին։ 5. Հանգստություն՝ մեղմ կապույտ ալիքներ, բարկություն՝ կարմիր և սև զիգզագներ, վախ՝ ծուռ մուգ գծեր։ 6. Ընկերդ պետք է կարողանա գուշակել զգացմունքները։ 7. Քո նկարը։
+~~~`,
         ru: `## Чувства в цвете
 
 | Чувство | Цвета | Линии и формы |
@@ -391,16 +504,30 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 
 Это не строгие правила: каждый человек может чувствовать цвета немного по-своему. Этим искусство и интересно!
 
+~~~art
+mood scene=abstract moods=joy,sad,loud,quiet
+Никаких предметов, только цвета и формы. Где радость? Где грусть?
+~~~
+
 ## Абстрактное искусство
 
 Картина не всегда изображает предмет. **Абстрактное** искусство показывает только цвета, линии и формы. Русский художник **Василий Кандинский** был одним из первых художников-абстракционистов. Он считал, что цвета звучат как музыка: жёлтый — как труба, синий — как виолончель.
+
+~~~art
+pic genre-abstract
+~~~
 
 ## Задание: два чувства
 
 Согни лист пополам. На одной половине напиши **радость**, на другой — **грусть**. Не рисуй людей и лица! Только цвета, линии и пятна. Потом покажи другу: угадает ли он, где что?
 
-### Упражнения
+~~~art
+sketch guide=axis
+Нарисуй два чувства без предметов: радость на одной половине, грусть на другой.
+~~~
 
+~~~art
+tasks
 1. Какие цвета ты выберешь для радости?
 2. Какие линии выражают гнев?
 3. Что такое абстрактное искусство?
@@ -408,10 +535,12 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 5. Нарисуй три маленьких квадрата: покой, гнев, страх. Только линиями и цветом.
 6. Напиши «радость» и «грусть» на двух половинах листа.
 7. Послушай короткую музыку и нарисуй чувство, которое она вызывает.
+~~~
 
-### Ответы
-
-1. Например, жёлтый, оранжевый, ярко-розовый. 2. Острые зигзаги и шипы. 3. Искусство, которое показывает только цвета, линии и формы, а не предметы. 4. Василий Кандинский. 5. Покой — мягкие голубые волны; гнев — красные и чёрные зигзаги; страх — кривые тёмные линии. 6. Друг должен угадать каждое чувство. 7. Твой рисунок.`,
+~~~art
+hints
+1. Например, жёлтый, оранжевый, ярко-розовый. 2. Острые зигзаги и шипы. 3. Искусство, которое показывает только цвета, линии и формы, а не предметы. 4. Василий Кандинский. 5. Покой — мягкие голубые волны; гнев — красные и чёрные зигзаги; страх — кривые тёмные линии. 6. Друг должен угадать каждое чувство. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Which colours suit joy best?", "Ո՞ր գույներն են ամենից շատ համապատասխանում ուրախությանը։", "Какие цвета лучше всего подходят радости?"), [t("grey and dark violet", "մոխրագույն և մուգ մանուշակագույն", "серый и тёмно-фиолетовый"), t("yellow and orange", "դեղին և նարնջագույն", "жёлтый и оранжевый"), t("black and brown", "սև և դարչնագույն", "чёрный и коричневый")], 1),
@@ -435,11 +564,19 @@ Fold your paper in half. On one side, paint **joy**. On the other, paint **sadne
 
 A painting of the sea is called a **marine painting** (seascape). An artist who paints the sea is a **marine painter**.
 
+~~~art
+pic genre-marine
+~~~
+
 ## Ivan Aivazovsky
 
 **Ivan (Hovhannes) Aivazovsky** (1817–1900) was born into an Armenian family in Feodosia, a town by the Black Sea in Crimea. He painted the sea all his life, about **6000** pictures! His most famous painting, **«The Ninth Wave»** (1850), shows people on a broken mast after a storm, with a huge wave and the rising sun shining through it. It is in the Russian Museum in St Petersburg. Paintings by Aivazovsky are also in the National Gallery of Armenia in Yerevan.
 
 He painted from memory: he watched the sea for a long time and then painted it in his studio.
+
+~~~art
+palette aivazovsky
+~~~
 
 ## Calm and storm
 
@@ -450,14 +587,22 @@ He painted from memory: he watched the sea for a long time and then painted it i
 | sky | clear, light | heavy dark clouds, sometimes lightning |
 | feeling | peace, quiet | power, danger, struggle |
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## How to paint a wave
 
 1. Draw the wave as a big curve leaning forward.
 2. Paint the water dark at the bottom and lighter and greener at the top where light shines through.
 3. Add white **foam** on the crest with a dry brush.
 
-### Exercises
+~~~art
+steps wave
+~~~
 
+~~~art
+tasks
 1. What is a marine painting?
 2. Where was Aivazovsky born?
 3. What is his most famous painting called?
@@ -465,19 +610,29 @@ He painted from memory: he watched the sea for a long time and then painted it i
 5. Which colours would you use for a storm?
 6. Paint two small seas on one sheet: calm and storm.
 7. Add a little boat to each sea. How does the boat «feel» in each picture?
+~~~
 
-### Answers
-
-1. A painting of the sea. 2. In Feodosia, on the Black Sea. 3. «The Ninth Wave». 4. Long, flat, horizontal lines. 5. Dark blue, grey-green, black and white foam. 6. The calm sea is light and flat; the storm is dark with high waves. 7. In the calm sea the boat is peaceful; in the storm it is in danger.`,
+~~~art
+hints
+1. A painting of the sea. 2. In Feodosia, on the Black Sea. 3. «The Ninth Wave». 4. Long, flat, horizontal lines. 5. Dark blue, grey-green, black and white foam. 6. The calm sea is light and flat; the storm is dark with high waves. 7. In the calm sea the boat is peaceful; in the storm it is in danger.
+~~~`,
         hy: `## Ծովանկար
 
 Ծովի նկարը կոչվում է **ծովանկար** (մարինա)։ Ծով նկարող նկարիչը **ծովանկարիչ** է։
+
+~~~art
+pic genre-marine
+~~~
 
 ## Հովհաննես Այվազովսկի
 
 **Հովհաննես (Իվան) Այվազովսկին** (1817–1900) ծնվել է հայկական ընտանիքում, Ղրիմի Ֆեոդոսիա քաղաքում՝ Սև ծովի ափին։ Նա ամբողջ կյանքում ծով է նկարել՝ մոտ **6000** կտավ։ Նրա ամենահայտնի նկարը՝ **«Իններորդ ալիքը»** (1850), պատկերում է մարդկանց փոթորկից հետո կոտրված կայմի վրա, հսկա ալիքը և ծագող արևը, որի լույսը թափանցում է ալիքի միջով։ Այն գտնվում է Սանկտ Պետերբուրգի Ռուսական թանգարանում։ Այվազովսկու նկարներ կան նաև Երևանում՝ Հայաստանի ազգային պատկերասրահում։
 
 Նա նկարում էր հիշողությամբ. երկար դիտում էր ծովը, հետո նկարում արվեստանոցում։
+
+~~~art
+palette aivazovsky
+~~~
 
 ## Խաղաղ և փոթորկոտ
 
@@ -488,14 +643,22 @@ He painted from memory: he watched the sea for a long time and then painted it i
 | երկինք | պարզ, բաց | ծանր մուգ ամպեր, երբեմն կայծակ |
 | զգացում | խաղաղություն, լռություն | ուժ, վտանգ, պայքար |
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## Ինչպես նկարել ալիք
 
 1. Ալիքը նկարի՛ր որպես առաջ թեքված մեծ կոր։
 2. Ջուրը ներքևում մուգ ներկի՛ր, իսկ վերևում՝ ավելի բաց և կանաչավուն, որտեղ լույսն է անցնում։
 3. Կատարին չոր վրձնով սպիտակ **փրփուր** ավելացրո՛ւ։
 
-### Վարժություններ
+~~~art
+steps wave
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է ծովանկարը։
 2. Որտե՞ղ է ծնվել Այվազովսկին։
 3. Ինչպե՞ս է կոչվում նրա ամենահայտնի նկարը։
@@ -503,19 +666,29 @@ He painted from memory: he watched the sea for a long time and then painted it i
 5. Ո՞ր գույները կօգտագործես փոթորկի համար։
 6. Մեկ թերթի վրա նկարի՛ր երկու փոքր ծով՝ խաղաղ և փոթորկոտ։
 7. Ամեն ծովում մի փոքրիկ նավակ ավելացրո՛ւ։ Ինչպե՞ս է նավակը «զգում» իրեն ամեն նկարում։
+~~~
 
-### Պատասխաններ
-
-1. Ծովի նկար։ 2. Ֆեոդոսիայում՝ Սև ծովի ափին։ 3. «Իններորդ ալիքը»։ 4. Երկար, հարթ, հորիզոնական գծեր։ 5. Մուգ կապույտ, մոխրականաչ, սև և սպիտակ փրփուր։ 6. Խաղաղ ծովը բաց է և հարթ, փոթորկոտը՝ մուգ, բարձր ալիքներով։ 7. Խաղաղ ծովում նավակը հանգիստ է, փոթորկում՝ վտանգի մեջ։`,
+~~~art
+hints
+1. Ծովի նկար։ 2. Ֆեոդոսիայում՝ Սև ծովի ափին։ 3. «Իններորդ ալիքը»։ 4. Երկար, հարթ, հորիզոնական գծեր։ 5. Մուգ կապույտ, մոխրականաչ, սև և սպիտակ փրփուր։ 6. Խաղաղ ծովը բաց է և հարթ, փոթորկոտը՝ մուգ, բարձր ալիքներով։ 7. Խաղաղ ծովում նավակը հանգիստ է, փոթորկում՝ վտանգի մեջ։
+~~~`,
         ru: `## Марина
 
 Картина с изображением моря называется **мариной**. Художник, который пишет море, — **маринист**.
+
+~~~art
+pic genre-marine
+~~~
 
 ## Иван Айвазовский
 
 **Иван (Ованес) Айвазовский** (1817–1900) родился в армянской семье в Феодосии, городе на берегу Чёрного моря в Крыму. Всю жизнь он писал море — около **6000** картин! Его самая знаменитая картина **«Девятый вал»** (1850) изображает людей на обломке мачты после бури, огромную волну и восходящее солнце, свет которого пробивается сквозь неё. Она хранится в Русском музее в Санкт-Петербурге. Картины Айвазовского есть и в Национальной галерее Армении в Ереване.
 
 Он писал по памяти: долго наблюдал море, а потом писал его в мастерской.
+
+~~~art
+palette aivazovsky
+~~~
 
 ## Штиль и шторм
 
@@ -526,14 +699,22 @@ He painted from memory: he watched the sea for a long time and then painted it i
 | небо | ясное, светлое | тяжёлые тёмные тучи, иногда молния |
 | чувство | покой, тишина | сила, опасность, борьба |
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## Как написать волну
 
 1. Нарисуй волну большой дугой, наклонённой вперёд.
 2. Внизу пиши воду тёмной, а вверху светлее и зеленее, где её просвечивает свет.
 3. На гребне добавь белую **пену** полусухой кистью.
 
-### Упражнения
+~~~art
+steps wave
+~~~
 
+~~~art
+tasks
 1. Что такое марина?
 2. Где родился Айвазовский?
 3. Как называется его самая известная картина?
@@ -541,10 +722,12 @@ He painted from memory: he watched the sea for a long time and then painted it i
 5. Какие цвета ты выберешь для шторма?
 6. Напиши на одном листе два маленьких моря: штиль и шторм.
 7. Добавь в каждое море лодочку. Как «чувствует себя» лодка на каждой картине?
+~~~
 
-### Ответы
-
-1. Картина с изображением моря. 2. В Феодосии, на Чёрном море. 3. «Девятый вал». 4. Длинные, ровные, горизонтальные линии. 5. Тёмно-синий, серо-зелёный, чёрный и белая пена. 6. Штиль светлый и ровный, шторм тёмный, с высокими волнами. 7. В штиль лодке спокойно, в шторм она в опасности.`,
+~~~art
+hints
+1. Картина с изображением моря. 2. В Феодосии, на Чёрном море. 3. «Девятый вал». 4. Длинные, ровные, горизонтальные линии. 5. Тёмно-синий, серо-зелёный, чёрный и белая пена. 6. Штиль светлый и ровный, шторм тёмный, с высокими волнами. 7. В штиль лодке спокойно, в шторм она в опасности.
+~~~`,
       },
       [
         q(t("A painting of the sea is called…", "Ծովի նկարը կոչվում է…", "Картина с морем называется…"), [t("a portrait", "դիմանկար", "портрет"), t("a marine painting", "ծովանկար", "марина"), t("a still life", "նատյուրմորտ", "натюрморт")], 1),
@@ -575,6 +758,10 @@ He painted from memory: he watched the sea for a long time and then painted it i
 
 The **horizon** is the line where the sky meets the earth or the sea. Near the horizon the sky is usually **lighter** than at the top.
 
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
+
 ## A smooth transition
 
 1. Wet the top part of the paper (watercolour) or prepare two gouache colours.
@@ -590,8 +777,13 @@ The French painter **Claude Monet** painted the same haystacks and the same cath
 
 Divide the paper into three «windows». Paint the same view in each: hills, a tree and a house. Window 1: morning. Window 2: noon. Window 3: sunset. Change only the colours of the sky, the light and the shadows.
 
-### Exercises
+~~~art
+sketch guide=thirds
+Three windows: paint the morning sky, the noon sky and the evening sky side by side.
+~~~
 
+~~~art
+tasks
 1. What is the horizon?
 2. Where is the sky usually lighter?
 3. What colours does the sky have at sunset?
@@ -599,10 +791,12 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 5. Which artist painted the same haystacks at different times of day?
 6. Paint a smooth transition from yellow to blue.
 7. Paint the three windows.
+~~~
 
-### Answers
-
-1. The line where the sky meets the earth or sea. 2. Near the horizon. 3. Orange, red, gold near the horizon and violet above. 4. At noon. 5. Claude Monet. 6. There should be no sharp line between the colours. 7. The view is the same; only the light and colours change.`,
+~~~art
+hints
+1. The line where the sky meets the earth or sea. 2. Near the horizon. 3. Orange, red, gold near the horizon and violet above. 4. At noon. 5. Claude Monet. 6. There should be no sharp line between the colours. 7. The view is the same; only the light and colours change.
+~~~`,
         hy: `## Երկինքը երբեք պարզապես կապույտ չէ
 
 | Ժամ | Երկինքը հորիզոնի մոտ | Երկինքը վերևում | Ստվերներ |
@@ -613,6 +807,10 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 | գիշեր 🌙 | մուգ կապույտ | գրեթե սև, աստղերով | — |
 
 **Հորիզոնը** այն գիծն է, որտեղ երկինքը հանդիպում է երկրին կամ ծովին։ Հորիզոնի մոտ երկինքը սովորաբար **ավելի բաց** է, քան վերևում։
+
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
 
 ## Սահուն անցում
 
@@ -629,8 +827,13 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 
 Թուղթը բաժանի՛ր երեք «պատուհանի»։ Ամեն մեկում նկարի՛ր նույն տեսարանը՝ բլուրներ, ծառ և տուն։ Պատուհան 1՝ առավոտ, պատուհան 2՝ կեսօր, պատուհան 3՝ մայրամուտ։ Փոխի՛ր միայն երկնքի, լույսի և ստվերների գույները։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+Երեք պատուհան․ կողք կողքի նկարի՛ր առավոտյան, կեսօրվա և երեկոյան երկինքը։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է հորիզոնը։
 2. Որտե՞ղ է երկինքը սովորաբար ավելի բաց։
 3. Ի՞նչ գույներ ունի երկինքը մայրամուտին։
@@ -638,10 +841,12 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 5. Ո՞ր նկարիչն է նույն խոտի դեզերը նկարել օրվա տարբեր ժամերին։
 6. Դեղինից կապույտ սահուն անցում նկարի՛ր։
 7. Նկարի՛ր երեք պատուհանը։
+~~~
 
-### Պատասխաններ
-
-1. Գիծը, որտեղ երկինքը հանդիպում է երկրին կամ ծովին։ 2. Հորիզոնի մոտ։ 3. Հորիզոնի մոտ նարնջագույն, կարմիր, ոսկեգույն, վերևում՝ մանուշակագույն։ 4. Կեսօրին։ 5. Կլոդ Մոնեն։ 6. Գույների միջև սուր գիծ չպետք է լինի։ 7. Տեսարանը նույնն է, փոխվում են միայն լույսն ու գույները։`,
+~~~art
+hints
+1. Գիծը, որտեղ երկինքը հանդիպում է երկրին կամ ծովին։ 2. Հորիզոնի մոտ։ 3. Հորիզոնի մոտ նարնջագույն, կարմիր, ոսկեգույն, վերևում՝ մանուշակագույն։ 4. Կեսօրին։ 5. Կլոդ Մոնեն։ 6. Գույների միջև սուր գիծ չպետք է լինի։ 7. Տեսարանը նույնն է, փոխվում են միայն լույսն ու գույները։
+~~~`,
         ru: `## Небо никогда не бывает просто синим
 
 | Время | Небо у горизонта | Небо вверху | Тени |
@@ -652,6 +857,10 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 | ночь 🌙 | тёмно-синее | почти чёрное, со звёздами | — |
 
 **Горизонт** — линия, где небо встречается с землёй или морем. У горизонта небо обычно **светлее**, чем вверху.
+
+~~~art
+mood scene=landscape moods=morning,noon,evening,night
+~~~
 
 ## Плавный переход
 
@@ -668,8 +877,13 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 
 Раздели лист на три «окна». В каждом нарисуй один и тот же вид: холмы, дерево и дом. Окно 1 — утро. Окно 2 — полдень. Окно 3 — закат. Меняй только цвета неба, света и теней.
 
-### Упражнения
+~~~art
+sketch guide=thirds
+Три окна: нарисуй рядом утреннее, полуденное и вечернее небо.
+~~~
 
+~~~art
+tasks
 1. Что такое горизонт?
 2. Где небо обычно светлее?
 3. Какого цвета небо на закате?
@@ -677,10 +891,12 @@ Divide the paper into three «windows». Paint the same view in each: hills, a t
 5. Какой художник писал одни и те же стога в разное время дня?
 6. Напиши плавный переход от жёлтого к синему.
 7. Напиши три окна.
+~~~
 
-### Ответы
-
-1. Линия, где небо встречается с землёй или морем. 2. У горизонта. 3. У горизонта оранжевое, красное, золотое, а выше фиолетовое. 4. В полдень. 5. Клод Моне. 6. Между цветами не должно быть резкой границы. 7. Вид одинаковый, меняются только свет и цвета.`,
+~~~art
+hints
+1. Линия, где небо встречается с землёй или морем. 2. У горизонта. 3. У горизонта оранжевое, красное, золотое, а выше фиолетовое. 4. В полдень. 5. Клод Моне. 6. Между цветами не должно быть резкой границы. 7. Вид одинаковый, меняются только свет и цвета.
+~~~`,
       },
       [
         q(t("The horizon is…", "Հորիզոնը…", "Горизонт — это…"), [t("the line where sky meets earth or sea", "գիծն է, որտեղ երկինքը հանդիպում է երկրին կամ ծովին", "линия, где небо встречается с землёй или морем"), t("the top of the paper", "թղթի վերին եզրն է", "верхний край листа"), t("a kind of brush", "վրձնի տեսակ է", "вид кисти")], 0),
@@ -711,6 +927,10 @@ In music, rhythm is how sounds repeat: ta-ta-TAA, ta-ta-TAA. In a picture, **rhy
 | jumping ● ●● ● ●●● | groups and gaps | joy, play, dance |
 | broken ⚡ | sudden changes | excitement, storm |
 
+~~~art
+pattern layout=strip rhythm=grow motifs=bird,leaf,circle,drop
+~~~
+
 ## Rhythm in nature and life
 
 - Waves on the sea, footprints in the snow, stripes on a zebra.
@@ -723,12 +943,21 @@ In music, rhythm is how sounds repeat: ta-ta-TAA, ta-ta-TAA. In a picture, **rhy
 - Make shapes **smaller** towards one side: they fly away.
 - Leave **space in front** of a moving thing so it has «somewhere to go».
 
+~~~art
+flipbook bird
+~~~
+
 ## Task: «Birds fly south»
 
 Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy line across a sunset sky. Make the near birds bigger and the far birds smaller. Your picture should «fly»!
 
-### Exercises
+~~~art
+sketch guide=horizon
+Birds fly south: draw a flock of little ticks that get smaller and smaller in the distance.
+~~~
 
+~~~art
+tasks
 1. What is rhythm in a picture?
 2. Which rhythm feels calm?
 3. Name two rhythms you can see in nature.
@@ -736,10 +965,12 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 5. Draw three rows: an even rhythm, a growing rhythm and a jumping rhythm.
 6. Make the «Birds fly south» picture.
 7. Find rhythm in your classroom or street and draw it.
+~~~
 
-### Answers
-
-1. The repeating of lines, spots and shapes. 2. An even rhythm. 3. For example, waves, stripes on a zebra, footprints. 4. Make them smaller and put them on a diagonal. 5. Equal circles; growing circles; groups of circles with gaps. 6. Near birds big, far birds small. 7. For example, windows, desks, radiator fins.`,
+~~~art
+hints
+1. The repeating of lines, spots and shapes. 2. An even rhythm. 3. For example, waves, stripes on a zebra, footprints. 4. Make them smaller and put them on a diagonal. 5. Equal circles; growing circles; groups of circles with gaps. 6. Near birds big, far birds small. 7. For example, windows, desks, radiator fins.
+~~~`,
         hy: `## Ի՞նչ է ռիթմը
 
 Երաժշտության մեջ ռիթմն այն է, թե ինչպես են կրկնվում հնչյունները՝ տա-տա-ՏԱ՜, տա-տա-ՏԱ՜։ Նկարում **ռիթմն** այն է, թե ինչպես են **կրկնվում գծերը, բծերը և ձևերը**։
@@ -750,6 +981,10 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 | աճող ● ● ⬤ ⬤ ⬤ | ձևերը մեծանում կամ փոքրանում են | շարժում, մոտենալ |
 | ցատկոտող ● ●● ● ●●● | խմբեր և դատարկություններ | ուրախություն, խաղ, պար |
 | կոտրված ⚡ | հանկարծակի փոփոխություններ | հուզմունք, փոթորիկ |
+
+~~~art
+pattern layout=strip rhythm=grow motifs=bird,leaf,circle,drop
+~~~
 
 ## Ռիթմը բնության և կյանքի մեջ
 
@@ -763,12 +998,21 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 - Ձևերը **փոքրացրո՛ւ** դեպի մի կողմ. նրանք հեռանում են։
 - Շարժվող առարկայի **առջևում տեղ թո՛ղ**, որ «գնալու տեղ» ունենա։
 
+~~~art
+flipbook bird
+~~~
+
 ## Առաջադրանք. «Թռչունները չվում են հարավ»
 
 Կտրի՛ր կամ նկարի՛ր տարբեր չափերի 7–10 թռչուն։ Դասավորի՛ր նրանց սեպաձև կամ ալիքաձև գծով մայրամուտի երկնքում։ Մոտիկ թռչունները մեծ արա՛, հեռավորները՝ փոքր։ Նկարդ պետք է «թռչի»։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Թռչունները չվում են հարավ․ նկարի՛ր երամ՝ փոքրիկ «թռչնիկներից», որոնք հեռվում ավելի ու ավելի փոքր են դառնում։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է ռիթմը նկարում։
 2. Ո՞ր ռիթմն է հանգիստ թվում։
 3. Անվանի՛ր բնության մեջ տեսանելի երկու ռիթմ։
@@ -776,10 +1020,12 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 5. Նկարի՛ր երեք շարք՝ հավասար ռիթմ, աճող ռիթմ և ցատկոտող ռիթմ։
 6. Պատրաստի՛ր «Թռչունները չվում են հարավ» նկարը։
 7. Գտի՛ր ռիթմ դասարանում կամ փողոցում և նկարի՛ր այն։
+~~~
 
-### Պատասխաններ
-
-1. Գծերի, բծերի և ձևերի կրկնությունը։ 2. Հավասար ռիթմը։ 3. Օրինակ՝ ալիքներ, զեբրի գծեր, ոտնահետքեր։ 4. Փոքրացնել դրանք և դասավորել անկյունագծով։ 5. Հավասար շրջաններ, մեծացող շրջաններ, շրջանների խմբեր՝ դատարկություններով։ 6. Մոտիկ թռչունները մեծ են, հեռավորները՝ փոքր։ 7. Օրինակ՝ պատուհաններ, նստարաններ, ջեռուցման մարտկոցի կողեր։`,
+~~~art
+hints
+1. Գծերի, բծերի և ձևերի կրկնությունը։ 2. Հավասար ռիթմը։ 3. Օրինակ՝ ալիքներ, զեբրի գծեր, ոտնահետքեր։ 4. Փոքրացնել դրանք և դասավորել անկյունագծով։ 5. Հավասար շրջաններ, մեծացող շրջաններ, շրջանների խմբեր՝ դատարկություններով։ 6. Մոտիկ թռչունները մեծ են, հեռավորները՝ փոքր։ 7. Օրինակ՝ պատուհաններ, նստարաններ, ջեռուցման մարտկոցի կողեր։
+~~~`,
         ru: `## Что такое ритм?
 
 В музыке ритм — это то, как повторяются звуки: та-та-ТА, та-та-ТА. В картине **ритм** — это то, как **повторяются линии, пятна и формы**.
@@ -790,6 +1036,10 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 | нарастающий ● ● ⬤ ⬤ ⬤ | формы увеличиваются или уменьшаются | движение, приближение |
 | прыгающий ● ●● ● ●●● | группы и паузы | радость, игра, танец |
 | ломаный ⚡ | резкие перемены | волнение, буря |
+
+~~~art
+pattern layout=strip rhythm=grow motifs=bird,leaf,circle,drop
+~~~
 
 ## Ритм в природе и в жизни
 
@@ -803,12 +1053,21 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 - **Уменьшай** формы к одной стороне: они улетают вдаль.
 - Оставляй **место впереди** движущегося предмета, чтобы ему было «куда двигаться».
 
+~~~art
+flipbook bird
+~~~
+
 ## Задание: «Птицы улетают на юг»
 
 Вырежи или нарисуй 7–10 птиц разного размера. Расположи их клином или волнистой линией на закатном небе. Ближних птиц сделай крупнее, дальних — мельче. Картина должна «лететь»!
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Птицы летят на юг: нарисуй стаю «галочек», которые вдали становятся всё меньше.
+~~~
 
+~~~art
+tasks
 1. Что такое ритм в картине?
 2. Какой ритм передаёт покой?
 3. Назови два ритма, которые можно увидеть в природе.
@@ -816,10 +1075,12 @@ Cut or paint 7–10 birds of different sizes. Place them in a wedge or a wavy li
 5. Нарисуй три ряда: ровный ритм, нарастающий и прыгающий.
 6. Сделай картину «Птицы улетают на юг».
 7. Найди ритм в классе или на улице и нарисуй его.
+~~~
 
-### Ответы
-
-1. Повтор линий, пятен и форм. 2. Ровный. 3. Например, волны, полоски зебры, следы. 4. Уменьшать их и располагать по диагонали. 5. Одинаковые круги; растущие круги; группы кругов с промежутками. 6. Ближние птицы крупные, дальние мелкие. 7. Например, окна, парты, рёбра батареи.`,
+~~~art
+hints
+1. Повтор линий, пятен и форм. 2. Ровный. 3. Например, волны, полоски зебры, следы. 4. Уменьшать их и располагать по диагонали. 5. Одинаковые круги; растущие круги; группы кругов с промежутками. 6. Ближние птицы крупные, дальние мелкие. 7. Например, окна, парты, рёбра батареи.
+~~~`,
       },
       [
         q(t("Rhythm in a picture is…", "Ռիթմը նկարում…", "Ритм в картине — это…"), [t("the repeating of lines and shapes", "գծերի և ձևերի կրկնությունն է", "повтор линий и форм"), t("the frame", "շրջանակն է", "рама"), t("the signature", "ստորագրությունն է", "подпись")], 0),

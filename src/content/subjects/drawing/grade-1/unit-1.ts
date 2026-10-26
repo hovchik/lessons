@@ -30,6 +30,11 @@ Art is not only in museums. Look around:
 
 Somebody **designed** every chair, cup and book cover you see.
 
+~~~art
+pic carpet gzhel-plate genre-landscape butterfly
+Art lives at home, in the street and in nature: a carpet, a painted plate, a picture, a butterfly's wings.
+~~~
+
 ## The three art helpers
 
 This year three helpers will guide us.
@@ -42,12 +47,22 @@ This year three helpers will guide us.
 
 They always work **together**. A teapot needs all three: someone builds its shape, someone decorates it, and an artist may paint it in a picture.
 
+~~~art
+pic genre-landscape carpet izba
+One picture for each helper: the Master of Pictures paints, the Master of Decoration decorates, the Master of Building builds.
+~~~
+
 ## Your first task
 
 On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flower bed. At home, draw it with a pencil or crayons.
 
-### Exercises
+~~~art
+sketch paper=cream
+Draw the most beautiful thing you saw on your way to school. Then save your picture!
+~~~
 
+~~~art
+tasks
 1. Name three things at home that an artist made beautiful.
 2. Which helper draws pictures of a forest?
 3. Which helper puts patterns on a scarf?
@@ -55,10 +70,12 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 5. Find one beautiful thing in nature and say what makes it beautiful (colour, shape, pattern).
 6. Look at a book cover: what is drawn on it?
 7. Draw the beautiful thing you saw on your way to school.
+~~~
 
-### Answers
-
-1. Example: a carpet, a cup, a lamp. 2. The Master of Pictures. 3. The Master of Decoration. 4. The Master of Building. 5. Example: a butterfly has bright colours and a pattern that is the same on both wings. 6. Answers vary. 7. Show your drawing and tell the class what it is.`,
+~~~art
+hints
+1. Example: a carpet, a cup, a lamp. 2. The Master of Pictures. 3. The Master of Decoration. 4. The Master of Building. 5. Example: a butterfly has bright colours and a pattern that is the same on both wings. 6. Answers vary. 7. Show your drawing and tell the class what it is.
+~~~`,
         hy: `## Որտե՞ղ ենք գտնում արվեստը
 
 Արվեստը միայն թանգարանում չէ։ Նայի՛ր շուրջդ՝
@@ -72,6 +89,11 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 
 Ամեն աթոռ, բաժակ և գրքի կազմ ինչ-որ մեկը **ձևավորել** է։
 
+~~~art
+pic carpet gzhel-plate genre-landscape butterfly
+Արվեստն ապրում է տանը, փողոցում և բնության մեջ՝ գորգ, նկարազարդ ափսե, նկար, թիթեռի թևեր։
+~~~
+
 ## Արվեստի երեք օգնականները
 
 Այս տարի մեզ կօգնեն երեք օգնական՝
@@ -84,12 +106,22 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 
 Նրանք միշտ աշխատում են **միասին**։ Թեյնիկին պետք են երեքն էլ՝ մեկը կառուցում է ձևը, մյուսը զարդարում է, իսկ նկարիչը կարող է այն նկարել։
 
+~~~art
+pic genre-landscape carpet izba
+Ամեն օգնականին՝ մեկ նկար․ Պատկերողը նկարում է, Զարդարողը զարդարում է, Կառուցողը կառուցում է։
+~~~
+
 ## Առաջին առաջադրանքը
 
 Դպրոց գալիս գտի՛ր **մեկ գեղեցիկ բան**՝ ծառ, դարպաս, կատու, ծաղկաթումբ։ Տանը նկարի՛ր այն մատիտով կամ մոմամատիտներով։
 
-### Վարժություններ
+~~~art
+sketch paper=cream
+Նկարի՛ր ամենագեղեցիկ բանը, որ տեսել ես դպրոց գալիս։ Հետո պահպանի՛ր նկարդ։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր տան երեք իր, որոնք նկարիչը գեղեցկացրել է։
 2. Ո՞ր օգնականն է նկարում անտառ։
 3. Ո՞ր օգնականն է նախշեր անում շարֆի վրա։
@@ -97,10 +129,12 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 5. Գտի՛ր բնության մեջ մի գեղեցիկ բան և ասա՛, թե ինչն է այն գեղեցիկ դարձնում (գույն, ձև, նախշ)։
 6. Նայի՛ր գրքի կազմին. ի՞նչ է նկարված։
 7. Նկարի՛ր այն գեղեցիկ բանը, որ տեսել ես դպրոց գալիս։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ գորգ, բաժակ, լամպ։ 2. Պատկերող վարպետը։ 3. Զարդարող վարպետը։ 4. Կառուցող վարպետը։ 5. Օրինակ՝ թիթեռն ունի վառ գույներ և նախշ, որը երկու թևերին նույնն է։ 6. Պատասխանները տարբեր են։ 7. Ցույց տո՛ւր նկարդ և պատմի՛ր դասարանին։`,
+~~~art
+hints
+1. Օրինակ՝ գորգ, բաժակ, լամպ։ 2. Պատկերող վարպետը։ 3. Զարդարող վարպետը։ 4. Կառուցող վարպետը։ 5. Օրինակ՝ թիթեռն ունի վառ գույներ և նախշ, որը երկու թևերին նույնն է։ 6. Պատասխանները տարբեր են։ 7. Ցույց տո՛ւր նկարդ և պատմի՛ր դասարանին։
+~~~`,
         ru: `## Где мы встречаем искусство?
 
 Искусство есть не только в музеях. Оглянись:
@@ -114,6 +148,11 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 
 Каждый стул, чашку и обложку книги кто-то **придумал и оформил**.
 
+~~~art
+pic carpet gzhel-plate genre-landscape butterfly
+Искусство живёт дома, на улице и в природе: ковёр, расписная тарелка, картина, крылья бабочки.
+~~~
+
 ## Три Брата-Мастера
 
 В этом году нам помогут три Мастера:
@@ -126,12 +165,22 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 
 Они всегда работают **вместе**. Чайнику нужны все трое: один строит его форму, другой украшает, а художник может нарисовать его на картине.
 
+~~~art
+pic genre-landscape carpet izba
+По картинке на каждого Мастера: Мастер Изображения рисует, Мастер Украшения украшает, Мастер Постройки строит.
+~~~
+
 ## Первое задание
 
 По дороге в школу найди **одну красивую вещь**: дерево, ворота, кошку, клумбу. Дома нарисуй её карандашом или мелками.
 
-### Упражнения
+~~~art
+sketch paper=cream
+Нарисуй самое красивое, что ты видел по дороге в школу. Потом сохрани рисунок!
+~~~
 
+~~~art
+tasks
 1. Назови три вещи дома, которые художник сделал красивыми.
 2. Какой Мастер рисует лес?
 3. Какой Мастер делает узоры на шарфе?
@@ -139,10 +188,12 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 5. Найди красивое в природе и скажи, что делает его красивым (цвет, форма, узор).
 6. Посмотри на обложку книги: что на ней нарисовано?
 7. Нарисуй красивую вещь, которую ты увидел по дороге в школу.
+~~~
 
-### Ответы
-
-1. Например: ковёр, чашка, лампа. 2. Мастер Изображения. 3. Мастер Украшения. 4. Мастер Постройки. 5. Например: у бабочки яркие цвета и одинаковый узор на обоих крыльях. 6. Ответы разные. 7. Покажи рисунок и расскажи классу, что это.`,
+~~~art
+hints
+1. Например: ковёр, чашка, лампа. 2. Мастер Изображения. 3. Мастер Украшения. 4. Мастер Постройки. 5. Например: у бабочки яркие цвета и одинаковый узор на обоих крыльях. 6. Ответы разные. 7. Покажи рисунок и расскажи классу, что это.
+~~~`,
       },
       [
         q(t("Where can we find art?", "Որտե՞ղ կարող ենք գտնել արվեստը։", "Где можно встретить искусство?"), [t("only in museums", "միայն թանգարանում", "только в музеях"), t("only in books", "միայն գրքերում", "только в книгах"), t("everywhere: at home, at school, in the street", "ամենուր՝ տանը, դպրոցում, փողոցում", "везде: дома, в школе, на улице")], 2),
@@ -175,11 +226,20 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 | brushes | painting | a thick brush for big areas, a thin one for details |
 | glue and scissors | appliqué, paper crafts | a little glue is enough |
 
+~~~art
+pic pencil crayons felt brush gouache watercolour palette scissors glue plasticine
+~~~
+
 ## Getting ready
 
 1. Cover the desk with an oilcloth or newspaper.
 2. Put a jar of water on the **right** (if you are right-handed) so you do not knock it over.
 3. Keep a cloth to wipe the brush.
+
+~~~art
+sketch
+Test your tools: draw a thin line, a middle line and a thick line. Then try the eraser.
+~~~
 
 ## Safety with scissors
 
@@ -191,8 +251,13 @@ On the way to school, find **one beautiful thing**: a tree, a gate, a cat, a flo
 
 Wash brushes until the water is clear and stand them **bristles up**. Close the paint jars. Put everything back in its place.
 
-### Exercises
+~~~art
+pic mode=silhouette scissors brush pencil palette
+Guess each tool by its shadow.
+~~~
 
+~~~art
+tasks
 1. Which material is best for a thin outline?
 2. Which paint is see-through: gouache or watercolour?
 3. Where do you put the water jar if you draw with your right hand?
@@ -200,10 +265,12 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 5. How do you store a clean brush?
 6. Draw the same small flower three times: with a pencil, with crayons and with a felt-tip pen. Which one is the brightest?
 7. Make a list of your own art materials.
+~~~
 
-### Answers
-
-1. A pencil or a thin felt-tip pen. 2. Watercolour. 3. On the right. 4. Handles first, blades closed. 5. Bristles up, in a jar. 6. Usually the felt-tip pen or the crayon is the brightest. 7. Lists will differ.`,
+~~~art
+hints
+1. A pencil or a thin felt-tip pen. 2. Watercolour. 3. On the right. 4. Handles first, blades closed. 5. Bristles up, in a jar. 6. Usually the felt-tip pen or the crayon is the brightest. 7. Lists will differ.
+~~~`,
         hy: `## Ինչով են աշխատում նկարիչները
 
 | Պարագա | Ինչի համար | Խորհուրդ |
@@ -217,11 +284,20 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 | վրձիններ | ներկելու համար | հաստը՝ մեծ մասերի, բարակը՝ մանրուքների |
 | սոսինձ և մկրատ | ապլիկացիա, թղթե իրեր | քիչ սոսինձը բավական է |
 
+~~~art
+pic pencil crayons felt brush gouache watercolour palette scissors glue plasticine
+~~~
+
 ## Նախապատրաստում
 
 1. Սեղանը ծածկի՛ր մոմլաթով կամ թերթով։
 2. Ջրի բաժակը դի՛ր **աջ** կողմում (եթե աջլիկ ես), որ չշրջես։
 3. Կողքիդ պահի՛ր լաթ՝ վրձինը սրբելու համար։
+
+~~~art
+sketch
+Փորձարկի՛ր գործիքներդ․ նկարի՛ր բարակ, միջին և հաստ գիծ։ Հետո փորձի՛ր ռետինը։
+~~~
 
 ## Մկրատի անվտանգությունը
 
@@ -233,8 +309,13 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 
 Վրձինները լվա՛ մինչև ջուրը մաքրվի և դի՛ր բաժակի մեջ **մազիկները վերև**։ Փակի՛ր ներկերը։ Ամեն ինչ դի՛ր իր տեղը։
 
-### Վարժություններ
+~~~art
+pic mode=silhouette scissors brush pencil palette
+Գուշակի՛ր ամեն գործիքն իր ստվերով։
+~~~
 
+~~~art
+tasks
 1. Ո՞ր պարագան է լավագույնը բարակ եզրագծի համար։
 2. Ո՞ր ներկն է թափանցիկ՝ գուաշը, թե՞ ջրաներկը։
 3. Որտե՞ղ ես դնում ջրի բաժակը, եթե նկարում ես աջ ձեռքով։
@@ -242,10 +323,12 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 5. Ինչպե՞ս ես պահում մաքուր վրձինը։
 6. Նույն փոքրիկ ծաղիկը նկարի՛ր երեք անգամ՝ մատիտով, մոմամատիտով և ֆլոմաստերով։ Ո՞րն է ամենավառը։
 7. Կազմի՛ր քո նկարչական պարագաների ցուցակը։
+~~~
 
-### Պատասխաններ
-
-1. Մատիտը կամ բարակ ֆլոմաստերը։ 2. Ջրաներկը։ 3. Աջ կողմում։ 4. Բռնակով առաջ, սայրերը փակ։ 5. Մազիկները վերև, բաժակի մեջ։ 6. Սովորաբար ամենավառը ֆլոմաստերն է կամ մոմամատիտը։ 7. Ցուցակները տարբեր կլինեն։`,
+~~~art
+hints
+1. Մատիտը կամ բարակ ֆլոմաստերը։ 2. Ջրաներկը։ 3. Աջ կողմում։ 4. Բռնակով առաջ, սայրերը փակ։ 5. Մազիկները վերև, բաժակի մեջ։ 6. Սովորաբար ամենավառը ֆլոմաստերն է կամ մոմամատիտը։ 7. Ցուցակները տարբեր կլինեն։
+~~~`,
         ru: `## Чем работают художники
 
 | Материал | Для чего | Совет |
@@ -259,11 +342,20 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 | кисти | для красок | толстая — для больших мест, тонкая — для деталей |
 | клей и ножницы | аппликация, поделки | клея нужно немного |
 
+~~~art
+pic pencil crayons felt brush gouache watercolour palette scissors glue plasticine
+~~~
+
 ## Подготовка
 
 1. Застели парту клеёнкой или газетой.
 2. Поставь баночку с водой **справа** (если ты правша), чтобы не опрокинуть.
 3. Положи рядом тряпочку, чтобы вытирать кисть.
+
+~~~art
+sketch
+Проверь инструменты: проведи тонкую, среднюю и толстую линию. Потом попробуй ластик.
+~~~
 
 ## Ножницы — осторожно!
 
@@ -275,8 +367,13 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 
 Мой кисти, пока вода не станет чистой, и ставь их **ворсом вверх**. Закрой краски. Положи всё на место.
 
-### Упражнения
+~~~art
+pic mode=silhouette scissors brush pencil palette
+Угадай каждый инструмент по тени.
+~~~
 
+~~~art
+tasks
 1. Какой материал лучше всего для тонкого контура?
 2. Какая краска прозрачная: гуашь или акварель?
 3. Куда ставить баночку с водой, если рисуешь правой рукой?
@@ -284,10 +381,12 @@ Wash brushes until the water is clear and stand them **bristles up**. Close the 
 5. Как хранить чистую кисть?
 6. Нарисуй один и тот же цветок три раза: карандашом, мелками и фломастером. Какой самый яркий?
 7. Составь список своих художественных материалов.
+~~~
 
-### Ответы
-
-1. Карандаш или тонкий фломастер. 2. Акварель. 3. Справа. 4. Кольцами вперёд, лезвия сомкнуты. 5. Ворсом вверх, в баночке. 6. Обычно самый яркий — фломастер или мелок. 7. Списки будут разными.`,
+~~~art
+hints
+1. Карандаш или тонкий фломастер. 2. Акварель. 3. Справа. 4. Кольцами вперёд, лезвия сомкнуты. 5. Ворсом вверх, в баночке. 6. Обычно самый яркий — фломастер или мелок. 7. Списки будут разными.
+~~~`,
       },
       [
         q(t("Which paint is see-through?", "Ո՞ր ներկն է թափանցիկ։", "Какая краска прозрачная?"), [t("gouache", "գուաշ", "гуашь"), t("watercolour", "ջրաներկ", "акварель"), t("wax crayon", "մոմամատիտ", "восковой мелок")], 1),
@@ -343,8 +442,17 @@ Find five lines in the classroom: the edge of a desk, a crack in the wall, the c
 
 Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. Many ancient Armenian manuscripts begin with letters drawn as birds made of flowing lines — look for a picture of one.
 
-### Exercises
+~~~art
+lines
+~~~
 
+~~~art
+sketch
+Make a whole picture only from lines: wavy water, zigzag mountains, a spiral sun.
+~~~
+
+~~~art
+tasks
 1. Name five kinds of lines.
 2. Which kind of line looks like lightning?
 3. How do you make a line thin and pale?
@@ -352,10 +460,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Find five lines in the classroom and say what kind each one is.
 6. Make the line picture: sea, mountains, sun, rain and a path to a house.
 7. Draw a cat using only lines: no colouring.
+~~~
 
-### Answers
-
-1. Straight, wavy, zigzag, spiral, dotted. 2. Zigzag. 3. Press lightly. 4. Start pressing lightly, then press harder and harder. 5. Example: the edge of the desk is straight, the lamp cord is wavy. 6. Check: wavy sea, zigzag mountains, spiral sun, short straight rain, dotted path. 7. Show your cat to a friend: can they see what it is?`,
+~~~art
+hints
+1. Straight, wavy, zigzag, spiral, dotted. 2. Zigzag. 3. Press lightly. 4. Start pressing lightly, then press harder and harder. 5. Example: the edge of the desk is straight, the lamp cord is wavy. 6. Check: wavy sea, zigzag mountains, spiral sun, short straight rain, dotted path. 7. Show your cat to a friend: can they see what it is?
+~~~`,
         hy: `## Ամեն նկար սկսվում է գծից
 
 Գիծը շարժվող կետի հետքն է։ Մատիտը դիր թղթի վրա և շարժիր․ դու գիծ ես գծել։ Գծերը լինում են․
@@ -392,8 +502,17 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 
 Հայ նկարիչ **Մարտիրոս Սարյանը** սարերը նկարում էր համարձակ, պարզ գծերով։ Հին հայկական ձեռագրերը հաճախ սկսվում են թռչնատառերով՝ հոսուն գծերից կազմված թռչուն-տառերով։ Փորձիր գտնել դրանցից մեկի պատկերը։
 
-### Վարժություններ
+~~~art
+lines
+~~~
 
+~~~art
+sketch
+Ամբողջ նկար ստեղծի՛ր միայն գծերով՝ ալիքաձև ջուր, զիգզագ լեռներ, պարուրաձև արև։
+~~~
+
+~~~art
+tasks
 1. Անվանի՛ր գծերի հինգ տեսակ։
 2. Ո՞ր գիծն է կայծակի նման։
 3. Ինչպե՞ս ստանալ բարակ և գունատ գիծ։
@@ -401,10 +520,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Դասարանում գտի՛ր հինգ գիծ և ասա՛, թե ինչ տեսակի են։
 6. Արա՛ գծերից նկարը՝ ծով, սարեր, արև, անձրև և ճանապարհ դեպի տուն։
 7. Նկարի՛ր կատու միայն գծերով, առանց գունավորելու։
+~~~
 
-### Պատասխաններ
-
-1. Ուղիղ, ալիքաձև, զիգզագ, պարուրաձև, կետագիծ։ 2. Զիգզագը։ 3. Թեթև սեղմել։ 4. Սկզբում թեթև սեղմի՛ր, հետո ավելի ու ավելի ուժեղ։ 5. Օրինակ՝ սեղանի եզրը ուղիղ է, լամպի լարը՝ ալիքաձև։ 6. Ստուգի՛ր՝ ալիքաձև ծով, զիգզագ սարեր, պարուրաձև արև, կարճ ուղիղ անձրև, կետագիծ ճանապարհ։ 7. Ցույց տուր կատուդ ընկերոջդ. կհասկանա՞, թե ինչ է։`,
+~~~art
+hints
+1. Ուղիղ, ալիքաձև, զիգզագ, պարուրաձև, կետագիծ։ 2. Զիգզագը։ 3. Թեթև սեղմել։ 4. Սկզբում թեթև սեղմի՛ր, հետո ավելի ու ավելի ուժեղ։ 5. Օրինակ՝ սեղանի եզրը ուղիղ է, լամպի լարը՝ ալիքաձև։ 6. Ստուգի՛ր՝ ալիքաձև ծով, զիգզագ սարեր, պարուրաձև արև, կարճ ուղիղ անձրև, կետագիծ ճանապարհ։ 7. Ցույց տուր կատուդ ընկերոջդ. կհասկանա՞, թե ինչ է։
+~~~`,
         ru: `## Каждый рисунок начинается с линии
 
 Линия — это след движущейся точки. Поставь карандаш на бумагу и проведи им: ты нарисовал линию! Линии бывают:
@@ -441,8 +562,17 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 
 Армянский художник **Мартирос Сарьян** рисовал горы смелыми простыми линиями. Многие древние армянские рукописи начинаются с букв-птиц, составленных из плавных линий — найди картинку одной из них.
 
-### Упражнения
+~~~art
+lines
+~~~
 
+~~~art
+sketch
+Сделай целую картину только из линий: волнистая вода, горы-зигзаги, солнце-спираль.
+~~~
+
+~~~art
+tasks
 1. Назови пять видов линий.
 2. Какая линия похожа на молнию?
 3. Как сделать линию тонкой и бледной?
@@ -450,10 +580,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Найди в классе пять линий и скажи, какие они.
 6. Сделай картинку из линий: море, горы, солнце, дождь и дорожка к дому.
 7. Нарисуй кошку только линиями, без раскрашивания.
+~~~
 
-### Ответы
-
-1. Прямая, волнистая, зигзаг, спираль, пунктир. 2. Зигзаг. 3. Нажимать слабо. 4. Сначала нажимай слабо, потом всё сильнее. 5. Например: край парты — прямая, провод лампы — волнистая. 6. Проверь: волнистое море, горы-зигзаги, солнце-спираль, дождь из коротких прямых, дорожка-пунктир. 7. Покажи кошку другу: поймёт ли он, что это?`,
+~~~art
+hints
+1. Прямая, волнистая, зигзаг, спираль, пунктир. 2. Зигзаг. 3. Нажимать слабо. 4. Сначала нажимай слабо, потом всё сильнее. 5. Например: край парты — прямая, провод лампы — волнистая. 6. Проверь: волнистое море, горы-зигзаги, солнце-спираль, дождь из коротких прямых, дорожка-пунктир. 7. Покажи кошку другу: поймёт ли он, что это?
+~~~`,
       },
       [
         q(t("Which line looks like a snail shell?", "Ո՞ր գիծն է խխունջի խեցու նման։", "Какая линия похожа на раковину улитки?"), [t("zigzag", "զիգզագ", "зигзаг"), t("spiral", "պարուրաձև", "спираль"), t("straight", "ուղիղ", "прямая")], 1),
@@ -483,11 +615,21 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 | rectangle | two long and two short sides | a door, a book, a desk |
 | triangle | three sides and three corners | a roof, a slice of pizza, a mountain |
 
+~~~art
+pic shapes apple karas
+Circle, square, triangle, oval: find them in an apple, a window, a roof and a jar.
+~~~
+
 ## Drawing shapes freehand
 
 - **Circle:** draw it in one smooth movement, turning your whole hand. Try several times lightly, then go over the best one.
 - **Square:** first mark four dots in the corners, then join them.
 - **Triangle:** put three dots and join them with straight lines.
+
+~~~art
+sketch guide=grid
+Draw a circle, a square and a triangle freehand. The grid helps to keep them even.
+~~~
 
 ## A picture from shapes
 
@@ -497,8 +639,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 4. A **circle** in the sky is the sun, **ovals** are clouds.
 5. A **triangle** on a **rectangle** stick is a fir tree.
 
-### Exercises
+~~~art
+steps house
+~~~
 
+~~~art
+tasks
 1. Which shape is an egg?
 2. Which shape is a roof?
 3. Name three round things in your kitchen.
@@ -506,10 +652,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Draw a house only from a rectangle, a triangle and squares.
 6. Draw a car from rectangles and circles.
 7. Find six shapes in your classroom and draw them.
+~~~
 
-### Answers
-
-1. An oval. 2. A triangle. 3. Example: a plate, a pan lid, a cup bottom. 4. Three; four. 5. Check: rectangle walls, triangle roof, square windows. 6. Rectangles for the body and windows, circles for the wheels. 7. Example: a square window, a rectangle board, a round clock.`,
+~~~art
+hints
+1. An oval. 2. A triangle. 3. Example: a plate, a pan lid, a cup bottom. 4. Three; four. 5. Check: rectangle walls, triangle roof, square windows. 6. Rectangles for the body and windows, circles for the wheels. 7. Example: a square window, a rectangle board, a round clock.
+~~~`,
         hy: `## Հինգ հիմնական ձև
 
 | Ձև | Ինչպիսին է | Որտեղ ենք տեսնում |
@@ -520,11 +668,21 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 | ուղղանկյուն | երկու երկար և երկու կարճ կողմ | դուռ, գիրք, սեղան |
 | եռանկյուն | երեք կողմ և երեք անկյուն | տանիք, պիցցայի կտոր, սար |
 
+~~~art
+pic shapes apple karas
+Շրջան, քառակուսի, եռանկյուն, օվալ․ գտի՛ր դրանք խնձորի, պատուհանի, տանիքի և կարասի մեջ։
+~~~
+
 ## Ձևերը գծում ենք ձեռքով
 
 - **Շրջան.** գծի՛ր մեկ սահուն շարժումով, պտտելով ամբողջ ձեռքը։ Մի քանի անգամ թեթև փորձի՛ր, հետո լավագույնի վրայով անցի՛ր։
 - **Քառակուսի.** նախ անկյուններում դի՛ր չորս կետ, հետո միացրո՛ւ։
 - **Եռանկյուն.** դի՛ր երեք կետ և միացրո՛ւ ուղիղ գծերով։
+
+~~~art
+sketch guide=grid
+Ձեռքով նկարի՛ր շրջան, քառակուսի և եռանկյուն։ Ցանցն օգնում է դրանք հավասար պահել։
+~~~
 
 ## Նկար ձևերից
 
@@ -534,8 +692,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 4. Երկնքի **շրջանը** արևն է, **օվալները**՝ ամպեր։
 5. **Եռանկյունը** **ուղղանկյուն** ձողի վրա եղևնի է։
 
-### Վարժություններ
+~~~art
+steps house
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ ձև ունի ձուն։
 2. Ի՞նչ ձև ունի տանիքը։
 3. Անվանի՛ր խոհանոցի երեք կլոր իր։
@@ -543,10 +705,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Նկարի՛ր տուն միայն ուղղանկյունից, եռանկյունից և քառակուսիներից։
 6. Նկարի՛ր մեքենա ուղղանկյուններից և շրջաններից։
 7. Դասարանում գտի՛ր վեց ձև և նկարի՛ր։
+~~~
 
-### Պատասխաններ
-
-1. Օվալ։ 2. Եռանկյուն։ 3. Օրինակ՝ ափսե, կաթսայի կափարիչ, բաժակի հատակ։ 4. Երեք, չորս։ 5. Ստուգի՛ր՝ ուղղանկյուն պատեր, եռանկյուն տանիք, քառակուսի պատուհաններ։ 6. Ուղղանկյուններ՝ թափքի և պատուհանների համար, շրջաններ՝ անիվների։ 7. Օրինակ՝ քառակուսի պատուհան, ուղղանկյուն գրատախտակ, կլոր ժամացույց։`,
+~~~art
+hints
+1. Օվալ։ 2. Եռանկյուն։ 3. Օրինակ՝ ափսե, կաթսայի կափարիչ, բաժակի հատակ։ 4. Երեք, չորս։ 5. Ստուգի՛ր՝ ուղղանկյուն պատեր, եռանկյուն տանիք, քառակուսի պատուհաններ։ 6. Ուղղանկյուններ՝ թափքի և պատուհանների համար, շրջաններ՝ անիվների։ 7. Օրինակ՝ քառակուսի պատուհան, ուղղանկյուն գրատախտակ, կլոր ժամացույց։
+~~~`,
         ru: `## Пять основных форм
 
 | Форма | Какая она | Где встречаем |
@@ -557,11 +721,21 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 | прямоугольник | две длинные и две короткие стороны | дверь, книга, парта |
 | треугольник | три стороны и три угла | крыша, кусок пиццы, гора |
 
+~~~art
+pic shapes apple karas
+Круг, квадрат, треугольник, овал: найди их в яблоке, окне, крыше и кувшине.
+~~~
+
 ## Рисуем формы от руки
 
 - **Круг:** рисуй одним плавным движением, поворачивая всю кисть. Попробуй несколько раз слегка, потом обведи лучший.
 - **Квадрат:** сначала поставь четыре точки в углах, потом соедини.
 - **Треугольник:** поставь три точки и соедини прямыми линиями.
+
+~~~art
+sketch guide=grid
+Нарисуй от руки круг, квадрат и треугольник. Сетка поможет сделать их ровными.
+~~~
 
 ## Картинка из форм
 
@@ -571,8 +745,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 4. **Круг** в небе — солнце, **овалы** — облака.
 5. **Треугольник** на **прямоугольной** палочке — ёлка.
 
-### Упражнения
+~~~art
+steps house
+~~~
 
+~~~art
+tasks
 1. Какой формы яйцо?
 2. Какой формы крыша?
 3. Назови три круглых предмета на кухне.
@@ -580,10 +758,12 @@ Armenian artist **Martiros Saryan** used bold, simple lines to draw mountains. M
 5. Нарисуй дом только из прямоугольника, треугольника и квадратов.
 6. Нарисуй машину из прямоугольников и кругов.
 7. Найди в классе шесть форм и нарисуй их.
+~~~
 
-### Ответы
-
-1. Овал. 2. Треугольник. 3. Например: тарелка, крышка кастрюли, дно чашки. 4. Три; четыре. 5. Проверь: стены — прямоугольник, крыша — треугольник, окна — квадраты. 6. Прямоугольники — кузов и окна, круги — колёса. 7. Например: квадратное окно, прямоугольная доска, круглые часы.`,
+~~~art
+hints
+1. Овал. 2. Треугольник. 3. Например: тарелка, крышка кастрюли, дно чашки. 4. Три; четыре. 5. Проверь: стены — прямоугольник, крыша — треугольник, окна — квадраты. 6. Прямоугольники — кузов и окна, круги — колёса. 7. Например: квадратное окно, прямоугольная доска, круглые часы.
+~~~`,
       },
       [
         q(t("Which shape is an egg?", "Ի՞նչ ձև ունի ձուն։", "Какой формы яйцо?"), [t("square", "քառակուսի", "квадрат"), t("oval", "օվալ", "овал"), t("triangle", "եռանկյուն", "треугольник")], 1),
@@ -618,6 +798,11 @@ A **silhouette** is a dark shape without details, like a shadow on the wall. We 
 | elephant | big ears, a trunk |
 | bird | beak and wings |
 
+~~~art
+pic mode=silhouette apple butterfly dove horse matryoshka
+A silhouette is a dark spot with a clear outline. Can you guess who is who?
+~~~
+
 ## The blot game
 
 1. Put a drop of gouache or ink in the middle of the paper.
@@ -625,12 +810,21 @@ A **silhouette** is a dark shape without details, like a shadow on the wall. We 
 3. Or blow on a wet drop through a straw: it runs into branches.
 4. Look at the blot. What does it look like? Add eyes, legs, a tail with a felt-tip pen.
 
+~~~art
+sketch mode=blot
+The blot game: drop some paint, fold the paper and look: who appeared?
+~~~
+
 ## Shadow theatre
 
 With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, a rabbit.
 
-### Exercises
+~~~art
+pic puppets
+~~~
 
+~~~art
+tasks
 1. What is a silhouette?
 2. How do we recognise a rabbit by its silhouette?
 3. Look at the clouds today. What did you see in them?
@@ -638,10 +832,12 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 5. Blow a drop through a straw and turn it into a tree.
 6. Cut a black paper silhouette of a cat and stick it on yellow paper.
 7. Make a hand shadow of a dog or a bird.
+~~~
 
-### Answers
-
-1. A dark shape without details, like a shadow. 2. By its long ears. 3. Answers differ. 4. Add antennae, eyes and dots on the wings. 5. The lines of paint are branches: add leaves. 6. Check the pointed ears and the long tail. 7. Practise in front of a lamp.`,
+~~~art
+hints
+1. A dark shape without details, like a shadow. 2. By its long ears. 3. Answers differ. 4. Add antennae, eyes and dots on the wings. 5. The lines of paint are branches: add leaves. 6. Check the pointed ears and the long tail. 7. Practise in front of a lamp.
+~~~`,
         hy: `## Ի՞նչ է բիծը
 
 **Բիծը** որոշակի ձև ունեցող գունային հատված է՝ ջրափոս, ամպ, ստվեր։ Նկարիչները բծերի մեջ պատկերներ են տեսնում։ Նայի՛ր ամպերին. մեկը շան է նման, մյուսը՝ նավի։
@@ -657,6 +853,11 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 | փիղ | մեծ ականջներ, կնճիթ |
 | թռչուն | կտուց և թևեր |
 
+~~~art
+pic mode=silhouette apple butterfly dove horse matryoshka
+Ուրվագիծը հստակ եզրով մուգ բիծ է։ Կգուշակե՞ս, թե ով ով է։
+~~~
+
 ## Բծի խաղը
 
 1. Թղթի մեջտեղում կաթեցրո՛ւ գուաշ կամ թանաք։
@@ -664,12 +865,21 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 3. Կամ ծղոտով փչի՛ր թաց կաթիլի վրա. այն ճյուղերով կտարածվի։
 4. Նայի՛ր բծին։ Ինչի՞ է նման։ Ֆլոմաստերով ավելացրո՛ւ աչքեր, ոտքեր, պոչ։
 
+~~~art
+sketch mode=blot
+Բծերի խաղ․ ներկ կաթեցրու՛, ծալի՛ր թուղթը և նայի՛ր՝ ո՞վ հայտնվեց։
+~~~
+
 ## Ստվերների թատրոն
 
 Լամպով և ձեռքերով կարող ես պատին ուրվագծեր ստանալ՝ շուն, թռչուն, ճագար։
 
-### Վարժություններ
+~~~art
+pic puppets
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է ուրվագիծը։
 2. Ինչո՞վ ենք ճանաչում ճագարի ուրվագիծը։
 3. Այսօր նայի՛ր ամպերին։ Ի՞նչ տեսար։
@@ -677,10 +887,12 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 5. Ծղոտով փչի՛ր կաթիլը և դարձրո՛ւ ծառ։
 6. Սև թղթից կտրի՛ր կատվի ուրվագիծ և սոսնձի՛ր դեղին թղթի վրա։
 7. Ձեռքերով արա՛ շան կամ թռչնի ստվեր։
+~~~
 
-### Պատասխաններ
-
-1. Մուգ ձև առանց մանրամասների, ինչպես ստվերը։ 2. Երկար ականջներով։ 3. Պատասխանները տարբեր են։ 4. Ավելացրո՛ւ բեղիկներ, աչքեր և կետեր թևերին։ 5. Ներկի գծերը ճյուղեր են. ավելացրո՛ւ տերևներ։ 6. Ստուգի՛ր սրածայր ականջները և երկար պոչը։ 7. Վարժվի՛ր լամպի առաջ։`,
+~~~art
+hints
+1. Մուգ ձև առանց մանրամասների, ինչպես ստվերը։ 2. Երկար ականջներով։ 3. Պատասխանները տարբեր են։ 4. Ավելացրո՛ւ բեղիկներ, աչքեր և կետեր թևերին։ 5. Ներկի գծերը ճյուղեր են. ավելացրո՛ւ տերևներ։ 6. Ստուգի՛ր սրածայր ականջները և երկար պոչը։ 7. Վարժվի՛ր լամպի առաջ։
+~~~`,
         ru: `## Что такое пятно?
 
 **Пятно** — это цветное место определённой формы: лужа, облако, тень. Художники видят в пятнах картинки. Посмотри на облака: одно похоже на собаку, другое — на корабль!
@@ -696,6 +908,11 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 | слон | большие уши, хобот |
 | птица | клюв и крылья |
 
+~~~art
+pic mode=silhouette apple butterfly dove horse matryoshka
+Силуэт — тёмное пятно с ясным контуром. Угадаешь, кто есть кто?
+~~~
+
 ## Игра с кляксой
 
 1. Капни гуашь или тушь в середину листа.
@@ -703,12 +920,21 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 3. Или подуй на мокрую каплю через трубочку — она растечётся веточками (кляксография).
 4. Посмотри на кляксу. На что похоже? Дорисуй фломастером глаза, лапки, хвост.
 
+~~~art
+sketch mode=blot
+Игра в кляксы: капни краску, сложи лист и посмотри — кто получился?
+~~~
+
 ## Театр теней
 
 С лампой и руками можно делать силуэты на стене: собаку, птицу, зайца.
 
-### Упражнения
+~~~art
+pic puppets
+~~~
 
+~~~art
+tasks
 1. Что такое силуэт?
 2. Как узнать зайца по силуэту?
 3. Посмотри сегодня на облака. Что ты в них увидел?
@@ -716,10 +942,12 @@ With a lamp and your hands you can make silhouettes on the wall: a dog, a bird, 
 5. Раздуй каплю через трубочку и преврати её в дерево.
 6. Вырежи из чёрной бумаги силуэт кошки и наклей на жёлтый лист.
 7. Покажи руками тень собаки или птицы.
+~~~
 
-### Ответы
-
-1. Тёмная форма без деталей, как тень. 2. По длинным ушам. 3. Ответы разные. 4. Дорисуй усики, глазки и точки на крыльях. 5. Полоски краски — это ветки: дорисуй листья. 6. Проверь острые ушки и длинный хвост. 7. Потренируйся перед лампой.`,
+~~~art
+hints
+1. Тёмная форма без деталей, как тень. 2. По длинным ушам. 3. Ответы разные. 4. Дорисуй усики, глазки и точки на крыльях. 5. Полоски краски — это ветки: дорисуй листья. 6. Проверь острые ушки и длинный хвост. 7. Потренируйся перед лампой.
+~~~`,
       },
       [
         q(t("A silhouette is…", "Ուրվագիծը…", "Силуэт — это…"), [t("a dark shape without details", "մուգ ձև է առանց մանրամասների", "тёмная форма без деталей"), t("a bright pattern", "վառ նախշ է", "яркий узор"), t("a kind of brush", "վրձնի տեսակ է", "вид кисти")], 0),
@@ -751,9 +979,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 4. A long curved line for the tail, small ovals for paws.
 5. Add eyes, a nose, whiskers. Rub out extra lines and colour it.
 
+~~~art
+steps cat
+~~~
+
 ## A bird
 
 **Oval** body, **circle** head, **triangle** beak, a **half-oval** wing, two thin lines for legs.
+
+~~~art
+steps bird
+~~~
 
 ## A fish
 
@@ -766,8 +1002,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 | fish | — | oval | triangle tail |
 | owl | circle | big oval | two big circle eyes |
 
-### Exercises
+~~~art
+steps fish
+~~~
 
+~~~art
+sketch
+Now invent your own animal from circles, ovals and triangles.
+~~~
+
+~~~art
+tasks
 1. Which shape is a cat's body?
 2. Which shape is a bird's beak?
 3. Why do we draw the first shapes lightly?
@@ -775,10 +1020,12 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 5. Draw a fish and decorate it with scales.
 6. Draw an owl from circles and ovals.
 7. Invent your own animal from shapes and give it a name.
+~~~
 
-### Answers
-
-1. An oval. 2. A triangle. 3. So that we can rub out the extra lines later. 4. Check: circle head, oval body, triangle ears, tail, face. 5. Oval body, triangle tail, arcs for scales. 6. Big oval body, circle head, two big circle eyes, triangle beak. 7. Answers differ.`,
+~~~art
+hints
+1. An oval. 2. A triangle. 3. So that we can rub out the extra lines later. 4. Check: circle head, oval body, triangle ears, tail, face. 5. Oval body, triangle tail, arcs for scales. 6. Big oval body, circle head, two big circle eyes, triangle beak. 7. Answers differ.
+~~~`,
         hy: `## Ամեն կենդանի կազմված է ձևերից
 
 Ուշադիր նայի՛ր. կատվի գլուխը **շրջան** է, մարմինը՝ **օվալ**, ականջները՝ **եռանկյուններ**։ Նկարիչները սկսում են թեթև, պարզ ձևերից, իսկ մանրամասները ավելացնում են հետո։
@@ -791,9 +1038,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 4. Երկար կոր գիծ՝ պոչի համար, փոքր օվալներ՝ թաթերի։
 5. Ավելացրո՛ւ աչքեր, քիթ, բեղեր։ Ջնջի՛ր ավելորդ գծերը և գունավորի՛ր։
 
+~~~art
+steps cat
+~~~
+
 ## Թռչուն
 
 **Օվալ** մարմին, **շրջան** գլուխ, **եռանկյուն** կտուց, **կիսաօվալ** թև, երկու բարակ գիծ՝ ոտքեր։
+
+~~~art
+steps bird
+~~~
 
 ## Ձուկ
 
@@ -806,8 +1061,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 | ձուկ | — | օվալ | եռանկյուն պոչ |
 | բու | շրջան | մեծ օվալ | երկու մեծ կլոր աչք |
 
-### Վարժություններ
+~~~art
+steps fish
+~~~
 
+~~~art
+sketch
+Հիմա հորինի՛ր քո կենդանին շրջաններից, օվալներից և եռանկյուններից։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ ձև ունի կատվի մարմինը։
 2. Ի՞նչ ձև ունի թռչնի կտուցը։
 3. Ինչո՞ւ ենք առաջին ձևերը գծում թեթև։
@@ -815,10 +1079,12 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 5. Նկարի՛ր ձուկ և զարդարի՛ր թեփուկներով։
 6. Նկարի՛ր բու շրջաններից և օվալներից։
 7. Ձևերից հորինի՛ր քո կենդանին և անուն տուր նրան։
+~~~
 
-### Պատասխաններ
-
-1. Օվալ։ 2. Եռանկյուն։ 3. Որպեսզի հետո կարողանանք ջնջել ավելորդ գծերը։ 4. Ստուգի՛ր՝ շրջան գլուխ, օվալ մարմին, եռանկյուն ականջներ, պոչ, դեմք։ 5. Օվալ մարմին, եռանկյուն պոչ, աղեղներ՝ թեփուկներ։ 6. Մեծ օվալ մարմին, շրջան գլուխ, երկու մեծ կլոր աչք, եռանկյուն կտուց։ 7. Պատասխանները տարբեր են։`,
+~~~art
+hints
+1. Օվալ։ 2. Եռանկյուն։ 3. Որպեսզի հետո կարողանանք ջնջել ավելորդ գծերը։ 4. Ստուգի՛ր՝ շրջան գլուխ, օվալ մարմին, եռանկյուն ականջներ, պոչ, դեմք։ 5. Օվալ մարմին, եռանկյուն պոչ, աղեղներ՝ թեփուկներ։ 6. Մեծ օվալ մարմին, շրջան գլուխ, երկու մեծ կլոր աչք, եռանկյուն կտուց։ 7. Պատասխանները տարբեր են։
+~~~`,
         ru: `## Каждое животное состоит из форм
 
 Посмотри внимательно: голова кошки — **круг**, туловище — **овал**, уши — **треугольники**. Художники начинают с лёгких простых форм, а детали добавляют потом.
@@ -831,9 +1097,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 4. Длинная изогнутая линия — хвост, маленькие овалы — лапки.
 5. Добавь глаза, нос, усы. Сотри лишние линии и раскрась.
 
+~~~art
+steps cat
+~~~
+
 ## Птица
 
 **Овал** — туловище, **круг** — голова, **треугольник** — клюв, **пол-овала** — крыло, две тонкие линии — лапки.
+
+~~~art
+steps bird
+~~~
 
 ## Рыба
 
@@ -846,8 +1120,17 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 | рыба | — | овал | хвост-треугольник |
 | сова | круг | большой овал | два больших круглых глаза |
 
-### Упражнения
+~~~art
+steps fish
+~~~
 
+~~~art
+sketch
+А теперь придумай своего зверя из кругов, овалов и треугольников.
+~~~
+
+~~~art
+tasks
 1. Какой формы туловище кошки?
 2. Какой формы клюв птицы?
 3. Почему первые формы рисуем слегка?
@@ -855,10 +1138,12 @@ Look carefully: a cat's head is a **circle**, its body is an **oval**, its ears 
 5. Нарисуй рыбу и укрась её чешуёй.
 6. Нарисуй сову из кругов и овалов.
 7. Придумай своё животное из форм и дай ему имя.
+~~~
 
-### Ответы
-
-1. Овал. 2. Треугольник. 3. Чтобы потом можно было стереть лишние линии. 4. Проверь: голова-круг, туловище-овал, уши-треугольники, хвост, мордочка. 5. Туловище-овал, хвост-треугольник, чешуя-дуги. 6. Большой овал, круглая голова, два больших круглых глаза, клюв-треугольник. 7. Ответы разные.`,
+~~~art
+hints
+1. Овал. 2. Треугольник. 3. Чтобы потом можно было стереть лишние линии. 4. Проверь: голова-круг, туловище-овал, уши-треугольники, хвост, мордочка. 5. Туловище-овал, хвост-треугольник, чешуя-дуги. 6. Большой овал, круглая голова, два больших круглых глаза, клюв-треугольник. 7. Ответы разные.
+~~~`,
       },
       [
         q(t("A cat's ears are drawn as…", "Կատվի ականջները գծում ենք…", "Уши кошки рисуем как…"), [t("circles", "շրջաններ", "круги"), t("squares", "քառակուսիներ", "квадраты"), t("triangles", "եռանկյուններ", "треугольники")], 2),

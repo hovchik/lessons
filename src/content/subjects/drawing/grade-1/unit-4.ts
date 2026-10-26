@@ -32,6 +32,10 @@ When shapes repeat in order, the pattern has **rhythm**, like music or a poem: *
 | alternate colours | red ●, blue ●, red ●, blue ● |
 | big and small | ● • ● • ● • |
 
+~~~art
+pattern layout=strip palettes=dymkovo,armenian,gzhel motifs=circle,triangle,leaf,flower,wave
+~~~
+
 ## Drawing a border step by step
 
 1. Take a long strip of paper. Draw two thin lines along it with a ruler or by eye.
@@ -42,8 +46,17 @@ When shapes repeat in order, the pattern has **rhythm**, like music or a poem: *
 
 A border can go round a plate, along the edge of a scarf or the bottom of a dress.
 
-### Exercises
+~~~art
+steps border
+~~~
 
+~~~art
+sketch mode=strip cells=6
+Draw one shape in any cell: it repeats along the whole strip.
+~~~
+
+~~~art
+tasks
 1. What is a pattern?
 2. What is rhythm in a pattern?
 3. Continue the pattern: ● ▲ ● ▲ ● …
@@ -51,10 +64,12 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 5. Find three things at home with a border pattern.
 6. Draw a border of circles and dots in a strip, using two colours.
 7. Invent your own border with three different shapes.
+~~~
 
-### Answers
-
-1. A picture made of the same shapes repeated again and again. 2. Shapes and colours repeating in order. 3. ▲ ● ▲. 4. Small dot, big leaf, small dot. 5. For example, a plate, a towel, a carpet. 6. Check: the spaces are equal and the colours alternate. 7. Check that the order of the three shapes repeats exactly.`,
+~~~art
+hints
+1. A picture made of the same shapes repeated again and again. 2. Shapes and colours repeating in order. 3. ▲ ● ▲. 4. Small dot, big leaf, small dot. 5. For example, a plate, a towel, a carpet. 6. Check: the spaces are equal and the colours alternate. 7. Check that the order of the three shapes repeats exactly.
+~~~`,
         hy: `## Ի՞նչ է նախշը
 
 **Նախշը** նկար է, որը կազմված է նորից ու նորից կրկնվող նույն ձևերից։ **Զարդանախշը** զարդարող նախշ է հագուստի, ամանների, գորգերի, պատերի և գրքերի վրա։
@@ -70,6 +85,10 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 | գույների հերթափոխ | կարմիր ●, կապույտ ●, կարմիր ●, կապույտ ● |
 | մեծ և փոքր | ● • ● • ● • |
 
+~~~art
+pattern layout=strip palettes=dymkovo,armenian,gzhel motifs=circle,triangle,leaf,flower,wave
+~~~
+
 ## Եզրանախշը նկարում ենք քայլ առ քայլ
 
 1. Վերցրո՛ւ թղթի երկար շերտ։ Քանոնով կամ աչքաչափով գծի՛ր երկու բարակ գիծ։
@@ -80,8 +99,17 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 
 Եզրանախշը կարող է շրջապատել ափսեն, անցնել շարֆի եզրով կամ զգեստի ստորին մասով։
 
-### Վարժություններ
+~~~art
+steps border
+~~~
 
+~~~art
+sketch mode=strip cells=6
+Նկարի՛ր մեկ ձև ցանկացած վանդակում․ այն կրկնվում է ամբողջ շերտով։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ է նախշը։
 2. Ի՞նչ է ռիթմը նախշում։
 3. Շարունակի՛ր նախշը՝ ● ▲ ● ▲ ● …
@@ -89,10 +117,12 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 5. Տանը գտի՛ր եզրանախշով երեք իր։
 6. Շերտում նկարի՛ր շրջաններից և կետերից եզրանախշ՝ երկու գույնով։
 7. Հորինի՛ր քո եզրանախշը երեք տարբեր ձևերով։
+~~~
 
-### Պատասխաններ
-
-1. Նկար, որը կազմված է նորից ու նորից կրկնվող նույն ձևերից։ 2. Ձևերի և գույների կրկնությունը հերթականությամբ։ 3. ▲ ● ▲։ 4. Փոքր կետ, մեծ տերև, փոքր կետ։ 5. Օրինակ՝ ափսե, սրբիչ, գորգ։ 6. Ստուգի՛ր՝ տարածությունները հավասար են, գույները հերթափոխվում են։ 7. Ստուգի՛ր, որ երեք ձևերի հերթականությունը ճիշտ կրկնվում է։`,
+~~~art
+hints
+1. Նկար, որը կազմված է նորից ու նորից կրկնվող նույն ձևերից։ 2. Ձևերի և գույների կրկնությունը հերթականությամբ։ 3. ▲ ● ▲։ 4. Փոքր կետ, մեծ տերև, փոքր կետ։ 5. Օրինակ՝ ափսե, սրբիչ, գորգ։ 6. Ստուգի՛ր՝ տարածությունները հավասար են, գույները հերթափոխվում են։ 7. Ստուգի՛ր, որ երեք ձևերի հերթականությունը ճիշտ կրկնվում է։
+~~~`,
         ru: `## Что такое узор?
 
 **Узор** — это рисунок из одинаковых форм, которые повторяются снова и снова. **Орнамент** — украшающий узор на одежде, посуде, коврах, стенах и книгах.
@@ -108,6 +138,10 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 | чередование цветов | красный ●, синий ●, красный ●, синий ● |
 | большой и маленький | ● • ● • ● • |
 
+~~~art
+pattern layout=strip palettes=dymkovo,armenian,gzhel motifs=circle,triangle,leaf,flower,wave
+~~~
+
 ## Рисуем бордюр по шагам
 
 1. Возьми длинную полоску бумаги. Проведи вдоль неё две тонкие линии по линейке или на глаз.
@@ -118,8 +152,17 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 
 Бордюр может идти по краю тарелки, вдоль края платка или по низу платья.
 
-### Упражнения
+~~~art
+steps border
+~~~
 
+~~~art
+sketch mode=strip cells=6
+Нарисуй фигуру в любой клетке — она повторится по всей полосе.
+~~~
+
+~~~art
+tasks
 1. Что такое узор?
 2. Что такое ритм в узоре?
 3. Продолжи узор: ● ▲ ● ▲ ● …
@@ -127,10 +170,12 @@ A border can go round a plate, along the edge of a scarf or the bottom of a dres
 5. Найди дома три предмета с бордюром.
 6. Нарисуй в полосе бордюр из кругов и точек двумя цветами.
 7. Придумай свой бордюр из трёх разных форм.
+~~~
 
-### Ответы
-
-1. Рисунок из одинаковых форм, которые повторяются снова и снова. 2. Повтор форм и цветов по порядку. 3. ▲ ● ▲. 4. Маленькая точка, большой лист, маленькая точка. 5. Например, тарелка, полотенце, ковёр. 6. Проверь: промежутки равные, цвета чередуются. 7. Проверь, что порядок трёх форм повторяется точно.`,
+~~~art
+hints
+1. Рисунок из одинаковых форм, которые повторяются снова и снова. 2. Повтор форм и цветов по порядку. 3. ▲ ● ▲. 4. Маленькая точка, большой лист, маленькая точка. 5. Например, тарелка, полотенце, ковёр. 6. Проверь: промежутки равные, цвета чередуются. 7. Проверь, что порядок трёх форм повторяется точно.
+~~~`,
       },
       [
         q(t("A pattern is made of…", "Նախշը կազմված է…", "Узор состоит из…"), [t("one big shape", "մեկ մեծ ձևից", "одной большой формы"), t("repeating shapes", "կրկնվող ձևերից", "повторяющихся форм"), t("random spots", "պատահական բծերից", "случайных пятен")], 1),
@@ -164,6 +209,10 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 | birds | doves or peacocks facing each other | peace, beauty |
 | braided band | lines woven over and under each other | strength, unity |
 
+~~~art
+pic arevakhach pomegranate grapevine bird-motif tree-of-life
+~~~
+
 ## Drawing a pomegranate border
 
 1. Draw a strip with two lines.
@@ -172,8 +221,16 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 4. In every "valley" draw a **leaf** or a small bunch of grapes.
 5. Colour: red pomegranates, green leaves and vine, purple grapes. A warm yellow or terracotta background looks like old Armenian stone.
 
-### Exercises
+~~~art
+steps pomegranate-border
+~~~
 
+~~~art
+pattern palettes=armenian motifs=pomegranate,leaf,sun,bird,star
+~~~
+
+~~~art
+tasks
 1. Where can you see Armenian ornament? Name three places.
 2. What do we call the hand-painted old books?
 3. What does the pomegranate stand for?
@@ -181,10 +238,12 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 5. What does the eternity sign look like?
 6. Draw a border with a wavy vine, pomegranates and leaves.
 7. Draw an eternity sign in a circle and colour it.
+~~~
 
-### Answers
-
-1. For example, on khachkars, carpets and in manuscripts. 2. Manuscripts. 3. Life, plenty, a big family. 4. A circle with a little crown of teeth on top. 5. A wheel of curved arms turning round a centre. 6. Check: pomegranates in the hills of the wave, leaves in the valleys. 7. Check: all the arms curve the same way.`,
+~~~art
+hints
+1. For example, on khachkars, carpets and in manuscripts. 2. Manuscripts. 3. Life, plenty, a big family. 4. A circle with a little crown of teeth on top. 5. A wheel of curved arms turning round a centre. 6. Check: pomegranates in the hills of the wave, leaves in the valleys. 7. Check: all the arms curve the same way.
+~~~`,
         hy: `## Զարդանախշը Հայաստանում
 
 Շատ դարեր հայ վարպետները զարդանախշով զարդարել են քարը, փայտը, գորգերը, մետաղը և գրքերը։ Այն կարելի է տեսնել **խաչքարերի** վրա, եկեղեցիների պատերին, հին **գորգերի** վրա և մանրանկարներով **ձեռագրերում**՝ ձեռքով նկարազարդված գրքերում, որոնք այսօր պահվում են Երևանի Մատենադարանում։
@@ -199,6 +258,10 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 | թռչուններ | իրար դեմ նայող աղավնիներ կամ սիրամարգեր | խաղաղություն, գեղեցկություն |
 | հյուսկեն ժապավեն | իրար վրայով և տակով հյուսված գծեր | ուժ, միասնություն |
 
+~~~art
+pic arevakhach pomegranate grapevine bird-motif tree-of-life
+~~~
+
 ## Նռով եզրանախշը նկարում ենք
 
 1. Երկու գծով գծի՛ր շերտ։
@@ -207,8 +270,16 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 4. Ամեն «հովտում» նկարի՛ր **տերև** կամ խաղողի փոքր ողկույզ։
 5. Գունավորի՛ր՝ կարմիր նռներ, կանաչ տերևներ և որթատունկ, մանուշակագույն խաղող։ Տաք դեղին կամ աղյուսագույն ֆոնը նման է հին հայկական քարի։
 
-### Վարժություններ
+~~~art
+steps pomegranate-border
+~~~
 
+~~~art
+pattern palettes=armenian motifs=pomegranate,leaf,sun,bird,star
+~~~
+
+~~~art
+tasks
 1. Որտե՞ղ կարելի է տեսնել հայկական զարդանախշ։ Անվանի՛ր երեք տեղ։
 2. Ինչպե՞ս ենք անվանում ձեռքով նկարազարդված հին գրքերը։
 3. Ի՞նչ է խորհրդանշում նուռը։
@@ -216,10 +287,12 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 5. Ի՞նչ տեսք ունի հավերժության նշանը։
 6. Նկարի՛ր եզրանախշ՝ ալիքաձև որթատունկով, նռներով և տերևներով։
 7. Շրջանի մեջ նկարի՛ր հավերժության նշան և գունավորի՛ր այն։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ խաչքարերի, գորգերի վրա և ձեռագրերում։ 2. Ձեռագրեր։ 3. Կյանք, առատություն, մեծ ընտանիք։ 4. Շրջան՝ վերևում ատամներով փոքրիկ թագով։ 5. Կենտրոնի շուրջ պտտվող կոր թևերով անիվ։ 6. Ստուգի՛ր՝ նռները ալիքի բլուրներում են, տերևները՝ հովիտներում։ 7. Ստուգի՛ր՝ բոլոր թևերը թեքված են նույն կողմ։`,
+~~~art
+hints
+1. Օրինակ՝ խաչքարերի, գորգերի վրա և ձեռագրերում։ 2. Ձեռագրեր։ 3. Կյանք, առատություն, մեծ ընտանիք։ 4. Շրջան՝ վերևում ատամներով փոքրիկ թագով։ 5. Կենտրոնի շուրջ պտտվող կոր թևերով անիվ։ 6. Ստուգի՛ր՝ նռները ալիքի բլուրներում են, տերևները՝ հովիտներում։ 7. Ստուգի՛ր՝ բոլոր թևերը թեքված են նույն կողմ։
+~~~`,
         ru: `## Орнамент в Армении
 
 Много веков армянские мастера украшали орнаментом камень, дерево, ковры, металл и книги. Его можно увидеть на **хачкарах** (крест-камнях), на стенах церквей, на старинных **коврах** и в **рукописях** с миниатюрами — книгах, расписанных от руки. Сегодня они хранятся в Матенадаране в Ереване.
@@ -234,6 +307,10 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 | птицы | голуби или павлины, смотрящие друг на друга | мир, красота |
 | плетёная лента | линии, проходящие друг над другом и под другом | сила, единство |
 
+~~~art
+pic arevakhach pomegranate grapevine bird-motif tree-of-life
+~~~
+
 ## Рисуем бордюр с гранатом
 
 1. Начерти полосу двумя линиями.
@@ -242,8 +319,16 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 4. В каждой «долине» нарисуй **листок** или маленькую гроздь винограда.
 5. Раскрась: красные гранаты, зелёные листья и лоза, фиолетовый виноград. Тёплый жёлтый или терракотовый фон похож на старый армянский камень.
 
-### Упражнения
+~~~art
+steps pomegranate-border
+~~~
 
+~~~art
+pattern palettes=armenian motifs=pomegranate,leaf,sun,bird,star
+~~~
+
+~~~art
+tasks
 1. Где можно увидеть армянский орнамент? Назови три места.
 2. Как называют старинные книги, расписанные от руки?
 3. Что означает гранат?
@@ -251,10 +336,12 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 5. Как выглядит знак вечности?
 6. Нарисуй бордюр с волнистой лозой, гранатами и листьями.
 7. Нарисуй в круге знак вечности и раскрась его.
+~~~
 
-### Ответы
-
-1. Например, на хачкарах, коврах и в рукописях. 2. Рукописи. 3. Жизнь, изобилие, большую семью. 4. Круг с маленькой зубчатой короной сверху. 5. Колесо из изогнутых лучей, вращающихся вокруг центра. 6. Проверь: гранаты на холмах волны, листья в долинах. 7. Проверь: все лучи изогнуты в одну сторону.`,
+~~~art
+hints
+1. Например, на хачкарах, коврах и в рукописях. 2. Рукописи. 3. Жизнь, изобилие, большую семью. 4. Круг с маленькой зубчатой короной сверху. 5. Колесо из изогнутых лучей, вращающихся вокруг центра. 6. Проверь: гранаты на холмах волны, листья в долинах. 7. Проверь: все лучи изогнуты в одну сторону.
+~~~`,
       },
       [
         q(t("What does the pomegranate stand for in Armenian ornament?", "Ի՞նչ է խորհրդանշում նուռը հայկական զարդանախշում։", "Что означает гранат в армянском орнаменте?"), [t("cold and winter", "ցուրտ և ձմեռ", "холод и зиму"), t("life and plenty", "կյանք և առատություն", "жизнь и изобилие"), t("speed", "արագություն", "скорость")], 1),
@@ -278,6 +365,10 @@ For many centuries Armenian masters decorated stone, wood, carpets, metal and bo
 
 The **Dymkovo toy** comes from the village of Dymkovo near the city of Vyatka (today Kirov) in Russia. Craftswomen model ladies, horses, roosters, turkeys and goats from **clay**, fire them, cover them with **white** and paint them in bright colours.
 
+~~~art
+pic dymkovo
+~~~
+
 ## The elements of the painting
 
 | Element | How to paint it |
@@ -291,9 +382,17 @@ The **Dymkovo toy** comes from the village of Dymkovo near the city of Vyatka (t
 
 The colours are **pure and bright**: red, crimson, blue, yellow, orange, green. The background stays **white**. Small pieces of gold leaf are sometimes added on top.
 
+~~~art
+palette dymkovo
+~~~
+
 ## A rule of the painting
 
 Big shapes come first, small ones last: first circles and stripes, then rings and wavy lines, and at the end tiny **dots**. A Dymkovo lady often has a skirt painted with circles or checks, and a rooster has a tail of coloured stripes.
+
+~~~art
+pattern layout=grid palettes=dymkovo motifs=circle,wave,rhombus,flower
+~~~
 
 ## Painting a paper toy
 
@@ -303,8 +402,13 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 4. Add rings and wavy lines in another colour.
 5. Finish with small dots.
 
-### Exercises
+~~~art
+sketch
+Paint a Dymkovo pattern: circles, rings, dots and wavy lines on white.
+~~~
 
+~~~art
+tasks
 1. Where does the Dymkovo toy come from?
 2. What is the toy made of?
 3. What colour is the background?
@@ -312,13 +416,19 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 5. In what order do we paint the elements?
 6. Draw a Dymkovo horse and paint it with circles and stripes.
 7. Paint a lady's skirt with checks and dots.
+~~~
 
-### Answers
-
-1. From the village of Dymkovo near Vyatka (Kirov). 2. Clay. 3. White. 4. For example, circle, ring, dot, stripe. 5. Big shapes first, then smaller ones, tiny dots last. 6. Check: bright pure colours on white. 7. Check: the checks are even and every square has a dot.`,
+~~~art
+hints
+1. From the village of Dymkovo near Vyatka (Kirov). 2. Clay. 3. White. 4. For example, circle, ring, dot, stripe. 5. Big shapes first, then smaller ones, tiny dots last. 6. Check: bright pure colours on white. 7. Check: the checks are even and every square has a dot.
+~~~`,
         hy: `## Որտեղից է խաղալիքը
 
 **Դիմկովոյի խաղալիքը** Ռուսաստանի Վյատկա (այժմ՝ Կիրով) քաղաքի մոտ գտնվող Դիմկովո գյուղից է։ Վարպետուհիները **կավից** ծեփում են տիկնայք, ձիեր, աքլորներ, հնդկահավեր և այծեր, թրծում են դրանք, ծածկում **սպիտակով** և ներկում վառ գույներով։
+
+~~~art
+pic dymkovo
+~~~
 
 ## Նկարազարդման տարրերը
 
@@ -333,9 +443,17 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 
 Գույները **մաքուր և վառ** են՝ կարմիր, մուգ կարմիր, կապույտ, դեղին, նարնջագույն, կանաչ։ Ֆոնը մնում է **սպիտակ**։ Երբեմն վրայից ավելացնում են ոսկե թերթիկի կտորներ։
 
+~~~art
+palette dymkovo
+~~~
+
 ## Նկարազարդման կանոնը
 
 Նախ մեծ ձևերը, վերջում՝ փոքրերը՝ նախ շրջաններ և գծեր, հետո օղակներ և ալիքաձև գծեր, իսկ վերջում՝ մանր **կետեր**։ Դիմկովոյի տիկինը հաճախ ունի շրջաններով կամ վանդակներով ներկված փեշ, իսկ աքլորը՝ գունավոր գծերով պոչ։
+
+~~~art
+pattern layout=grid palettes=dymkovo motifs=circle,wave,rhombus,flower
+~~~
 
 ## Թղթե խաղալիքն ենք նկարազարդում
 
@@ -345,8 +463,13 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 4. Ավելացրո՛ւ օղակներ և ալիքաձև գծեր այլ գույնով։
 5. Ավարտի՛ր մանր կետերով։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր Դիմկովոյի նախշ՝ շրջաններ, օղակներ, կետեր և ալիքաձև գծեր սպիտակի վրա։
+~~~
 
+~~~art
+tasks
 1. Որտեղի՞ց է Դիմկովոյի խաղալիքը։
 2. Ինչի՞ց է պատրաստված խաղալիքը։
 3. Ի՞նչ գույն ունի ֆոնը։
@@ -354,13 +477,19 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 5. Ի՞նչ հերթականությամբ ենք նկարում տարրերը։
 6. Նկարի՛ր Դիմկովոյի ձի և զարդարի՛ր շրջաններով ու գծերով։
 7. Տիկնոջ փեշը զարդարի՛ր վանդակներով և կետերով։
+~~~
 
-### Պատասխաններ
-
-1. Վյատկայի (Կիրովի) մոտ գտնվող Դիմկովո գյուղից։ 2. Կավից։ 3. Սպիտակ։ 4. Օրինակ՝ շրջան, օղակ, կետ, գիծ։ 5. Նախ մեծ ձևերը, հետո ավելի փոքրերը, վերջում՝ մանր կետերը։ 6. Ստուգի՛ր՝ վառ մաքուր գույներ սպիտակի վրա։ 7. Ստուգի՛ր՝ վանդակները հավասար են, ամեն քառակուսում կա կետ։`,
+~~~art
+hints
+1. Վյատկայի (Կիրովի) մոտ գտնվող Դիմկովո գյուղից։ 2. Կավից։ 3. Սպիտակ։ 4. Օրինակ՝ շրջան, օղակ, կետ, գիծ։ 5. Նախ մեծ ձևերը, հետո ավելի փոքրերը, վերջում՝ մանր կետերը։ 6. Ստուգի՛ր՝ վառ մաքուր գույներ սպիտակի վրա։ 7. Ստուգի՛ր՝ վանդակները հավասար են, ամեն քառակուսում կա կետ։
+~~~`,
         ru: `## Откуда игрушка
 
 **Дымковская игрушка** родом из слободы Дымково возле города Вятки (сейчас Киров) в России. Мастерицы лепят из **глины** барынь, коней, петухов, индюков и козликов, обжигают их, покрывают **белой** краской и расписывают яркими цветами.
+
+~~~art
+pic dymkovo
+~~~
 
 ## Элементы росписи
 
@@ -375,9 +504,17 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 
 Цвета **чистые и яркие**: красный, малиновый, синий, жёлтый, оранжевый, зелёный. Фон остаётся **белым**. Иногда сверху добавляют кусочки сусального золота.
 
+~~~art
+palette dymkovo
+~~~
+
 ## Правило росписи
 
 Сначала крупные формы, в конце мелкие: сначала круги и полоски, потом кольца и волнистые линии, а в самом конце — мелкие **точки**. У дымковской барыни юбка часто расписана кругами или клеткой, а у петуха — хвост из цветных полосок.
+
+~~~art
+pattern layout=grid palettes=dymkovo motifs=circle,wave,rhombus,flower
+~~~
 
 ## Расписываем бумажную игрушку
 
@@ -387,8 +524,13 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 4. Добавь кольца и волнистые линии другим цветом.
 5. Закончи мелкими точками.
 
-### Упражнения
+~~~art
+sketch
+Распиши по-дымковски: круги, кольца, точки и волнистые линии на белом.
+~~~
 
+~~~art
+tasks
 1. Откуда родом дымковская игрушка?
 2. Из чего сделана игрушка?
 3. Какого цвета фон?
@@ -396,10 +538,12 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 5. В каком порядке рисуем элементы?
 6. Нарисуй дымковского коня и распиши его кругами и полосками.
 7. Распиши юбку барыни клеткой и точками.
+~~~
 
-### Ответы
-
-1. Из слободы Дымково возле Вятки (Кирова). 2. Из глины. 3. Белого. 4. Например, круг, кольцо, точка, полоска. 5. Сначала крупные формы, потом мельче, в конце мелкие точки. 6. Проверь: яркие чистые цвета на белом. 7. Проверь: клетки ровные, в каждом квадрате есть точка.`,
+~~~art
+hints
+1. Из слободы Дымково возле Вятки (Кирова). 2. Из глины. 3. Белого. 4. Например, круг, кольцо, точка, полоска. 5. Сначала крупные формы, потом мельче, в конце мелкие точки. 6. Проверь: яркие чистые цвета на белом. 7. Проверь: клетки ровные, в каждом квадрате есть точка.
+~~~`,
       },
       [
         q(t("The Dymkovo toy is made of…", "Դիմկովոյի խաղալիքը պատրաստված է…", "Дымковская игрушка сделана из…"), [t("plastic", "պլաստիկից", "пластмассы"), t("glass", "ապակուց", "стекла"), t("clay", "կավից", "глины")], 2),
@@ -423,6 +567,10 @@ Big shapes come first, small ones last: first circles and stripes, then rings an
 
 Fold a picture in half. If the two halves match exactly, the picture is **symmetrical**. The fold line is the **line of symmetry** (the axis). The left half is a **mirror image** of the right half.
 
+~~~art
+pic butterfly
+~~~
+
 ## Symmetry around us
 
 | Symmetrical | Not symmetrical |
@@ -433,6 +581,10 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 | the letter A | the letter R |
 | a heart shape | a running cat |
 
+~~~art
+pic leaf-maple snowflake garni
+~~~
+
 ## Butterfly by printing (a blot butterfly)
 
 1. Fold a sheet of paper in half and open it again.
@@ -441,6 +593,11 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 4. Open it: the second wing is printed as a mirror image.
 5. When it is dry, add the body and the feelers on the fold line with a felt-tip pen.
 
+~~~art
+sketch mode=blot
+Paint one half of a butterfly next to the middle line, then fold the paper!
+~~~
+
 ## Butterfly by drawing
 
 1. Draw a thin line of symmetry down the middle.
@@ -448,8 +605,12 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 3. Draw the left wings. Then draw the right wings **the same size, at the same height**.
 4. Every spot on the left wing needs the **same spot** on the right wing, in the same colour.
 
-### Exercises
+~~~art
+steps butterfly
+~~~
 
+~~~art
+tasks
 1. When is a picture symmetrical?
 2. What is the line of symmetry?
 3. Which are symmetrical: a butterfly, a cloud, a heart?
@@ -457,13 +618,19 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 5. Make a blot butterfly.
 6. Draw a butterfly with a line of symmetry and matching spots.
 7. Find three symmetrical things in your classroom.
+~~~
 
-### Answers
-
-1. When its two halves match exactly after folding. 2. The fold line that divides it into two mirror halves. 3. The butterfly and the heart. 4. A, H, O. 5. Check: the paint is on one half before folding. 6. Check: every spot has a twin on the other side. 7. For example, a window, a door, a chair seen from the front.`,
+~~~art
+hints
+1. When its two halves match exactly after folding. 2. The fold line that divides it into two mirror halves. 3. The butterfly and the heart. 4. A, H, O. 5. Check: the paint is on one half before folding. 6. Check: every spot has a twin on the other side. 7. For example, a window, a door, a chair seen from the front.
+~~~`,
         hy: `## Ի՞նչ է համաչափությունը
 
 Ծալի՛ր նկարը կիսով չափ։ Եթե երկու կեսերը ճիշտ համընկնում են, նկարը **համաչափ է**։ Ծալման գիծը **համաչափության առանցքն** է։ Ձախ կեսը աջ կեսի **հայելային պատկերն** է։
+
+~~~art
+pic butterfly
+~~~
 
 ## Համաչափությունը մեր շուրջը
 
@@ -475,6 +642,10 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 | Օ տառը | Ռ տառը |
 | սրտաձև | վազող կատու |
 
+~~~art
+pic leaf-maple snowflake garni
+~~~
+
 ## Թիթեռ դրոշմով (բծաթիթեռ)
 
 1. Թղթի թերթը ծալի՛ր կիսով չափ և նորից բացի՛ր։
@@ -483,6 +654,11 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 4. Բացի՛ր՝ երկրորդ թևը դրոշմվել է որպես հայելային պատկեր։
 5. Երբ չորանա, ծալքի գծի վրա ֆլոմաստերով ավելացրո՛ւ մարմինը և բեղիկները։
 
+~~~art
+sketch mode=blot
+Նկարի՛ր թիթեռի մի կեսը միջին գծի մոտ, հետո ծալի՛ր թուղթը։
+~~~
+
 ## Թիթեռ նկարելով
 
 1. Մեջտեղով գծի՛ր համաչափության բարակ առանցք։
@@ -490,8 +666,12 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 3. Նկարի՛ր ձախ թևերը։ Հետո նկարի՛ր աջ թևերը **նույն չափի, նույն բարձրության վրա**։
 4. Ձախ թևի ամեն բծին պետք է համապատասխանի **նույն բիծը** աջ թևին, նույն գույնով։
 
-### Վարժություններ
+~~~art
+steps butterfly
+~~~
 
+~~~art
+tasks
 1. Ե՞րբ է նկարը համաչափ։
 2. Ի՞նչ է համաչափության առանցքը։
 3. Որո՞նք են համաչափ՝ թիթեռը, ամպը, սրտաձևը։
@@ -499,13 +679,19 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 5. Պատրաստի՛ր բծաթիթեռ։
 6. Նկարի՛ր թիթեռ՝ համաչափության առանցքով և իրար համապատասխանող բծերով։
 7. Դասարանում գտի՛ր երեք համաչափ իր։
+~~~
 
-### Պատասխաններ
-
-1. Երբ ծալելուց հետո երկու կեսերը ճիշտ համընկնում են։ 2. Ծալման գիծը, որը նկարը բաժանում է երկու հայելային կեսերի։ 3. Թիթեռը և սրտաձևը։ 4. Շրջանը, քառակուսին և աստղը։ 5. Ստուգի՛ր՝ ներկը ծալելուց առաջ միայն մեկ կեսի վրա է։ 6. Ստուգի՛ր՝ ամեն բիծ մյուս կողմում ունի իր զույգը։ 7. Օրինակ՝ պատուհան, դուռ, առջևից երևացող աթոռ։`,
+~~~art
+hints
+1. Երբ ծալելուց հետո երկու կեսերը ճիշտ համընկնում են։ 2. Ծալման գիծը, որը նկարը բաժանում է երկու հայելային կեսերի։ 3. Թիթեռը և սրտաձևը։ 4. Շրջանը, քառակուսին և աստղը։ 5. Ստուգի՛ր՝ ներկը ծալելուց առաջ միայն մեկ կեսի վրա է։ 6. Ստուգի՛ր՝ ամեն բիծ մյուս կողմում ունի իր զույգը։ 7. Օրինակ՝ պատուհան, դուռ, առջևից երևացող աթոռ։
+~~~`,
         ru: `## Что такое симметрия?
 
 Сложи рисунок пополам. Если две половинки точно совпадают, рисунок **симметричный**. Линия сгиба — это **ось симметрии**. Левая половинка — **зеркальное отражение** правой.
+
+~~~art
+pic butterfly
+~~~
 
 ## Симметрия вокруг нас
 
@@ -517,6 +703,10 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 | буква Ш | буква Я |
 | сердечко | бегущая кошка |
 
+~~~art
+pic leaf-maple snowflake garni
+~~~
+
 ## Бабочка-отпечаток (кляксография)
 
 1. Сложи лист пополам и снова раскрой.
@@ -525,6 +715,11 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 4. Раскрой: второе крыло отпечаталось как зеркальное отражение.
 5. Когда высохнет, нарисуй фломастером на линии сгиба тельце и усики.
 
+~~~art
+sketch mode=blot
+Нарисуй половинку бабочки у средней линии и сложи лист!
+~~~
+
 ## Бабочка рисованием
 
 1. Проведи посередине тонкую ось симметрии.
@@ -532,8 +727,12 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 3. Нарисуй левые крылья. Потом нарисуй правые **такого же размера, на той же высоте**.
 4. Каждому пятнышку на левом крыле нужно **такое же пятнышко** на правом, того же цвета.
 
-### Упражнения
+~~~art
+steps butterfly
+~~~
 
+~~~art
+tasks
 1. Когда рисунок симметричный?
 2. Что такое ось симметрии?
 3. Что симметрично: бабочка, облако, сердечко?
@@ -541,10 +740,12 @@ Fold a picture in half. If the two halves match exactly, the picture is **symmet
 5. Сделай бабочку-отпечаток.
 6. Нарисуй бабочку с осью симметрии и одинаковыми пятнами.
 7. Найди в классе три симметричных предмета.
+~~~
 
-### Ответы
-
-1. Когда после складывания две половинки точно совпадают. 2. Линия сгиба, которая делит рисунок на две зеркальные половинки. 3. Бабочка и сердечко. 4. А, Ж, О. 5. Проверь: краска перед складыванием только на одной половинке. 6. Проверь: у каждого пятнышка есть пара на другой стороне. 7. Например, окно, дверь, стул спереди.`,
+~~~art
+hints
+1. Когда после складывания две половинки точно совпадают. 2. Линия сгиба, которая делит рисунок на две зеркальные половинки. 3. Бабочка и сердечко. 4. А, Ж, О. 5. Проверь: краска перед складыванием только на одной половинке. 6. Проверь: у каждого пятнышка есть пара на другой стороне. 7. Например, окно, дверь, стул спереди.
+~~~`,
       },
       [
         q(t("A picture is symmetrical when its halves…", "Նկարը համաչափ է, երբ նրա կեսերը…", "Рисунок симметричен, когда его половинки…"), [t("match after folding", "ծալելուց հետո համընկնում են", "совпадают при складывании"), t("are different colours", "տարբեր գույների են", "разного цвета"), t("are torn apart", "պատռված են", "разорваны")], 0),
@@ -579,9 +780,21 @@ Masters never put a pattern anywhere at random. The pattern **follows the shape*
 
 **Gzhel** is a group of villages near Moscow famous for **white porcelain painted in blue**. One brush stroke can be light blue at one side and dark blue at the other, so a single stroke makes a petal with shadow. The favourite motif is the **Gzhel rose**, made of a few such strokes, with thin leaves and curls around it.
 
+~~~art
+pic gzhel-plate
+~~~
+
+~~~art
+steps gzhel-stroke
+~~~
+
 ## Armenian clay pots
 
 Armenian potters made **clay jugs and bowls** painted in brown, red and cream, with zigzags, waves and birds. Clay vessels have been made in Armenia for thousands of years.
+
+~~~art
+pic karas ceramic-plate
+~~~
 
 ## Designing a cup
 
@@ -591,8 +804,13 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 4. Repeat a small element from the border on the handle.
 5. Use only **two or three colours**, so the cup looks calm and neat.
 
-### Exercises
+~~~art
+sketch
+Design a cup: draw its shape, a border on the rim and one flower in the middle.
+~~~
 
+~~~art
+tasks
 1. Why does the pattern follow the shape of a thing?
 2. Where does a pattern go on a round plate?
 3. What colours does Gzhel use?
@@ -600,10 +818,12 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 5. How many colours are best for a cup?
 6. Draw a cup and decorate it in the Gzhel style.
 7. Draw a round plate with a ring along the edge and a rosette in the middle.
+~~~
 
-### Answers
-
-1. So that the pattern decorates the thing and does not hide its shape. 2. A ring along the edge and a rosette in the centre. 3. Blue on white. 4. The Gzhel rose. 5. Two or three. 6. Check: only shades of blue on white, a border under the rim. 7. Check: the ring is even and the rosette is in the centre.`,
+~~~art
+hints
+1. So that the pattern decorates the thing and does not hide its shape. 2. A ring along the edge and a rosette in the centre. 3. Blue on white. 4. The Gzhel rose. 5. Two or three. 6. Check: only shades of blue on white, a border under the rim. 7. Check: the ring is even and the rosette is in the centre.
+~~~`,
         hy: `## Նախշը համապատասխանում է ձևին
 
 Վարպետները երբեք նախշը պատահական տեղ չեն դնում։ Նախշը **հետևում է իրի ձևին**։
@@ -619,9 +839,21 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 
 **Գժելը** Մոսկվայի մոտ գտնվող գյուղերի խումբ է, որը հայտնի է **կապույտով նկարազարդված սպիտակ ճենապակիով**։ Վրձնի մեկ հարվածը մի կողմից կարող է բաց կապույտ լինել, մյուսից՝ մուգ կապույտ, այնպես որ մեկ հարվածով ստացվում է ստվերով թերթիկ։ Սիրելի զարդը **գժելյան վարդն** է՝ մի քանի այդպիսի հարվածից, շուրջը՝ բարակ տերևներ և գանգուրներ։
 
+~~~art
+pic gzhel-plate
+~~~
+
+~~~art
+steps gzhel-stroke
+~~~
+
 ## Հայկական կավե ամաններ
 
 Հայ բրուտները պատրաստել են **կավե սափորներ և թասեր**՝ նկարազարդված շագանակագույնով, կարմիրով և կաթնագույնով, զիգզագներով, ալիքներով և թռչուններով։ Հայաստանում կավե ամաններ պատրաստվում են հազարավոր տարիներ։
+
+~~~art
+pic karas ceramic-plate
+~~~
 
 ## Բաժակ ենք մտածում
 
@@ -631,8 +863,13 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 4. Բռնակի վրա կրկնի՛ր եզրանախշի փոքր տարրը։
 5. Օգտագործի՛ր միայն **երկու-երեք գույն**, որ բաժակը հանգիստ և կոկիկ տեսք ունենա։
 
-### Վարժություններ
+~~~art
+sketch
+Ձևավորի՛ր բաժակ․ նկարի՛ր դրա ձևը, եզրազարդ շուրթին և մեկ ծաղիկ մեջտեղում։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ է նախշը հետևում իրի ձևին։
 2. Որտե՞ղ է նախշը կլոր ափսեի վրա։
 3. Ի՞նչ գույներ է օգտագործում Գժելը։
@@ -640,10 +877,12 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 5. Քանի՞ գույնն է լավագույնը բաժակի համար։
 6. Նկարի՛ր բաժակ և զարդարի՛ր այն Գժելի ոճով։
 7. Նկարի՛ր կլոր ափսե՝ եզրի երկայնքով օղակով և մեջտեղում վարդյակով։
+~~~
 
-### Պատասխաններ
-
-1. Որպեսզի նախշը զարդարի իրը և չթաքցնի նրա ձևը։ 2. Օղակ եզրի երկայնքով և վարդյակ՝ կենտրոնում։ 3. Կապույտը սպիտակի վրա։ 4. Գժելյան վարդը։ 5. Երկու-երեք։ 6. Ստուգի՛ր՝ միայն կապույտի երանգներ սպիտակի վրա, եզրանախշ եզրի տակ։ 7. Ստուգի՛ր՝ օղակը հավասար է, վարդյակը կենտրոնում է։`,
+~~~art
+hints
+1. Որպեսզի նախշը զարդարի իրը և չթաքցնի նրա ձևը։ 2. Օղակ եզրի երկայնքով և վարդյակ՝ կենտրոնում։ 3. Կապույտը սպիտակի վրա։ 4. Գժելյան վարդը։ 5. Երկու-երեք։ 6. Ստուգի՛ր՝ միայն կապույտի երանգներ սպիտակի վրա, եզրանախշ եզրի տակ։ 7. Ստուգի՛ր՝ օղակը հավասար է, վարդյակը կենտրոնում է։
+~~~`,
         ru: `## Узор подходит к форме
 
 Мастера никогда не ставят узор куда попало. Узор **следует за формой** предмета:
@@ -659,9 +898,21 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 
 **Гжель** — группа сёл под Москвой, знаменитая **белым фарфором с синей росписью**. Один мазок кисти может быть с одного края светло-синим, а с другого — тёмно-синим, так что одним мазком получается лепесток с тенью. Любимый мотив — **гжельская роза** из нескольких таких мазков, вокруг тонкие листья и завитки.
 
+~~~art
+pic gzhel-plate
+~~~
+
+~~~art
+steps gzhel-stroke
+~~~
+
 ## Армянская глиняная посуда
 
 Армянские гончары делали **глиняные кувшины и чаши**, расписанные коричневым, красным и кремовым, с зигзагами, волнами и птицами. Глиняную посуду в Армении делают уже тысячи лет.
+
+~~~art
+pic karas ceramic-plate
+~~~
 
 ## Придумываем чашку
 
@@ -671,8 +922,13 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 4. На ручке повтори маленький элемент из бордюра.
 5. Возьми только **два-три цвета**, чтобы чашка выглядела спокойно и аккуратно.
 
-### Упражнения
+~~~art
+sketch
+Придумай чашку: нарисуй форму, бордюр по краю и цветок в центре.
+~~~
 
+~~~art
+tasks
 1. Почему узор следует за формой предмета?
 2. Где узор на круглой тарелке?
 3. Какие цвета у гжели?
@@ -680,10 +936,12 @@ Armenian potters made **clay jugs and bowls** painted in brown, red and cream, w
 5. Сколько цветов лучше взять для чашки?
 6. Нарисуй чашку и распиши её в стиле гжели.
 7. Нарисуй круглую тарелку с кольцом по краю и розеткой в середине.
+~~~
 
-### Ответы
-
-1. Чтобы узор украшал предмет и не прятал его форму. 2. Кольцо по краю и розетка в центре. 3. Синее на белом. 4. Гжельская роза. 5. Два-три. 6. Проверь: только оттенки синего на белом, бордюр под краем. 7. Проверь: кольцо ровное, розетка в центре.`,
+~~~art
+hints
+1. Чтобы узор украшал предмет и не прятал его форму. 2. Кольцо по краю и розетка в центре. 3. Синее на белом. 4. Гжельская роза. 5. Два-три. 6. Проверь: только оттенки синего на белом, бордюр под краем. 7. Проверь: кольцо ровное, розетка в центре.
+~~~`,
       },
       [
         q(t("Gzhel painting is…", "Գժելի նկարազարդումը…", "Гжельская роспись — это…"), [t("red on black", "կարմիրը սևի վրա է", "красное на чёрном"), t("blue on white", "կապույտը սպիտակի վրա է", "синее на белом"), t("gold on green", "ոսկեգույնը կանաչի վրա է", "золотое на зелёном")], 1),
@@ -717,9 +975,18 @@ Long before people, nature made patterns. Folk masters often took their ideas fr
 | leaf veins | on any leaf | lines branching from the middle |
 | sunflower | in the field | seeds in curved rows round the centre |
 
+~~~art
+pic butterfly shell web snowflake leaf-oak feather
+~~~
+
 ## A snowflake always has six rays
 
 Look closely at a snowflake: it always has **six** arms, and every arm is decorated in the same way. That is why a snowflake is a pattern both **round** and **symmetrical**.
+
+~~~art
+sketch mode=kaleido n=6 paper=dark
+A snowflake always has six rays. Draw on one ray and watch.
+~~~
 
 ## Drawing a decorative picture
 
@@ -730,8 +997,8 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 3. Fill it with a pattern: the shell with a spiral of stripes, the fish with rows of arcs, the snowflake with branches on every ray.
 4. Colour it brightly. You may invent colours: a pink snail or a golden fish.
 
-### Exercises
-
+~~~art
+tasks
 1. How many rays does a snowflake have?
 2. Which shape do we see in a snail shell?
 3. What shape are the cells of a honeycomb?
@@ -739,10 +1006,12 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 5. What does "decorative" mean?
 6. Draw a big snowflake with six decorated rays.
 7. Draw a decorative fish covered with scales.
+~~~
 
-### Answers
-
-1. Six. 2. A spiral. 3. Six-sided, a hexagon. 4. For example, zebra and tiger; ladybird and leopard. 5. Made for beauty, not exactly like in life. 6. Check: six rays, each one decorated in the same way. 7. Check: the scales are drawn in rows of small arcs.`,
+~~~art
+hints
+1. Six. 2. A spiral. 3. Six-sided, a hexagon. 4. For example, zebra and tiger; ladybird and leopard. 5. Made for beauty, not exactly like in life. 6. Check: six rays, each one decorated in the same way. 7. Check: the scales are drawn in rows of small arcs.
+~~~`,
         hy: `## Բնությունն առաջին նկարիչն է
 
 Մարդկանցից շատ առաջ բնությունը նախշեր էր ստեղծում։ Ժողովրդական վարպետները հաճախ իրենց գաղափարները վերցնում էին ծաղիկներից, տերևներից, թռչուններից և ձյունից։
@@ -757,9 +1026,18 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 | տերևի ջղեր | ցանկացած տերևի վրա | մեջտեղից ճյուղավորվող գծեր |
 | արևածաղիկ | դաշտում | կենտրոնի շուրջ կոր շարքերով սերմեր |
 
+~~~art
+pic butterfly shell web snowflake leaf-oak feather
+~~~
+
 ## Ձյան փաթիլը միշտ ունի վեց ճառագայթ
 
 Ուշադիր նայի՛ր ձյան փաթիլին՝ այն միշտ ունի **վեց** թև, և ամեն թև զարդարված է նույն ձևով։ Ահա թե ինչու փաթիլը նախշ է՝ և՛ **կլոր**, և՛ **համաչափ**։
+
+~~~art
+sketch mode=kaleido n=6 paper=dark
+Ձյան փաթիլը միշտ վեց ճառագայթ ունի։ Նկարի՛ր մեկ ճառագայթի վրա և նայի՛ր։
+~~~
 
 ## Դեկորատիվ նկար ենք նկարում
 
@@ -770,8 +1048,8 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 3. Լցրո՛ւ այն նախշով՝ խեցին գծերի պարույրով, ձուկը աղեղների շարքերով, փաթիլը՝ ամեն ճառագայթի վրա ճյուղերով։
 4. Վառ գունավորի՛ր։ Կարող ես գույներ հորինել՝ վարդագույն խխունջ կամ ոսկե ձուկ։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Քանի՞ ճառագայթ ունի ձյան փաթիլը։
 2. Ի՞նչ ձև ենք տեսնում խխունջի խեցում։
 3. Ի՞նչ ձև ունեն մեղրախորիսխի բջիջները։
@@ -779,10 +1057,12 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 5. Ի՞նչ է նշանակում «դեկորատիվ»։
 6. Նկարի՛ր մեծ ձյան փաթիլ՝ վեց զարդարված ճառագայթով։
 7. Նկարի՛ր թեփուկներով ծածկված դեկորատիվ ձուկ։
+~~~
 
-### Պատասխաններ
-
-1. Վեց։ 2. Պարույր։ 3. Վեցակողմ, վեցանկյուն։ 4. Օրինակ՝ զեբր և վագր, զատիկ և ընձառյուծ։ 5. Ստեղծված գեղեցկության համար, ոչ ճիշտ այնպես, ինչպես կյանքում։ 6. Ստուգի՛ր՝ վեց ճառագայթ, ամեն մեկը զարդարված է նույն ձևով։ 7. Ստուգի՛ր՝ թեփուկները նկարված են փոքր աղեղների շարքերով։`,
+~~~art
+hints
+1. Վեց։ 2. Պարույր։ 3. Վեցակողմ, վեցանկյուն։ 4. Օրինակ՝ զեբր և վագր, զատիկ և ընձառյուծ։ 5. Ստեղծված գեղեցկության համար, ոչ ճիշտ այնպես, ինչպես կյանքում։ 6. Ստուգի՛ր՝ վեց ճառագայթ, ամեն մեկը զարդարված է նույն ձևով։ 7. Ստուգի՛ր՝ թեփուկները նկարված են փոքր աղեղների շարքերով։
+~~~`,
         ru: `## Природа — первый художник
 
 Задолго до людей природа создавала узоры. Народные мастера часто брали идеи у цветов, листьев, птиц и снега.
@@ -797,9 +1077,18 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 | жилки листа | на любом листе | линии, ветвящиеся от середины |
 | подсолнух | в поле | семечки изогнутыми рядами вокруг центра |
 
+~~~art
+pic butterfly shell web snowflake leaf-oak feather
+~~~
+
 ## У снежинки всегда шесть лучей
 
 Посмотри внимательно на снежинку: у неё всегда **шесть** лучей, и каждый украшен одинаково. Поэтому снежинка — узор и **круглый**, и **симметричный**.
+
+~~~art
+sketch mode=kaleido n=6 paper=dark
+У снежинки всегда шесть лучей. Рисуй на одном луче и смотри.
+~~~
 
 ## Рисуем декоративную картинку
 
@@ -810,8 +1099,8 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 3. Заполни её узором: раковину — спиралью из полосок, рыбку — рядами дужек, снежинку — веточками на каждом луче.
 4. Раскрась ярко. Цвета можно придумать: розовая улитка или золотая рыбка.
 
-### Упражнения
-
+~~~art
+tasks
 1. Сколько лучей у снежинки?
 2. Какую форму мы видим в раковине улитки?
 3. Какой формы ячейки сот?
@@ -819,10 +1108,12 @@ Look closely at a snowflake: it always has **six** arms, and every arm is decora
 5. Что значит «декоративный»?
 6. Нарисуй большую снежинку с шестью украшенными лучами.
 7. Нарисуй декоративную рыбку, покрытую чешуёй.
+~~~
 
-### Ответы
-
-1. Шесть. 2. Спираль. 3. Шестигранные, шестиугольник. 4. Например, зебра и тигр; божья коровка и леопард. 5. Сделанный для красоты, не точно как в жизни. 6. Проверь: шесть лучей, каждый украшен одинаково. 7. Проверь: чешуя нарисована рядами маленьких дужек.`,
+~~~art
+hints
+1. Шесть. 2. Спираль. 3. Шестигранные, шестиугольник. 4. Например, зебра и тигр; божья коровка и леопард. 5. Сделанный для красоты, не точно как в жизни. 6. Проверь: шесть лучей, каждый украшен одинаково. 7. Проверь: чешуя нарисована рядами маленьких дужек.
+~~~`,
       },
       [
         q(t("A snowflake has…", "Ձյան փաթիլն ունի…", "У снежинки…"), [t("four rays", "չորս ճառագայթ", "четыре луча"), t("six rays", "վեց ճառագայթ", "шесть лучей"), t("ten rays", "տասը ճառագայթ", "десять лучей")], 1),

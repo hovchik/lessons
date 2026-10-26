@@ -37,11 +37,23 @@ There are two main kinds:
 
 The border works like a frame for a picture: it holds the composition together.
 
+~~~art
+pic carpet
+~~~
+
 ## Dragon carpets and natural colours
 
 **Vishapagorg** (dragon carpets) are among the most famous old Armenian carpets. Their field is divided into large diamond shapes with stylized dragons, birds and flowers.
 
 The colours of old carpets came from **natural dyes**: madder root for red, walnut shells for brown, plants for yellow. A special deep red was made from a tiny insect that lives near Mount Ararat: **որդան կարմիր** (vordan karmir, "worm red"). This red was famous far beyond Armenia.
+
+~~~art
+pic vishap
+~~~
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Draw a carpet
 
@@ -51,8 +63,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 4. Draw a repeated motif along the border.
 5. Paint in carpet colours: deep red, dark blue, ivory, a little yellow and green.
 
-### Exercises
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian motifs=rhombus,star,spiral,pomegranate
+~~~
 
+~~~art
+tasks
 1. What is the difference between a pile carpet and a flat-woven carpet?
 2. Name the four parts of a carpet composition.
 3. What does the border do in a carpet?
@@ -60,10 +76,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 5. Where did the colours of old carpets come from? Name two sources.
 6. What is vordan karmir?
 7. Draw a carpet with a medallion, a field and three borders.
+~~~
 
-### Answers
-
-1. A pile carpet has many knots and a thick surface; a flat-woven one has no knots and is thin and smooth. 2. Field, medallion, border, motifs. 3. It frames the composition and holds it together. 4. A dragon carpet, with large diamond shapes and stylized dragons. 5. For example: madder root, walnut shells, plants, a small insect. 6. A famous deep red dye made from a tiny insect near Mount Ararat. 7. Your drawing.`,
+~~~art
+hints
+1. A pile carpet has many knots and a thick surface; a flat-woven one has no knots and is thin and smooth. 2. Field, medallion, border, motifs. 3. It frames the composition and holds it together. 4. A dragon carpet, with large diamond shapes and stylized dragons. 5. For example: madder root, walnut shells, plants, a small insect. 6. A famous deep red dye made from a tiny insect near Mount Ararat. 7. Your drawing.
+~~~`,
         hy: `## Հնագույն արհեստ
 
 Գորգագործությունը Հայաստանի ամենահին արհեստներից է։ Գորգերը տաքացնում էին տների հատակներն ու պատերը, տրվում էին որպես օժիտ և տատից անցնում էին թոռնուհուն։
@@ -84,11 +102,23 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 
 Եզրազարդը նկարի շրջանակի պես է․ այն միասին է պահում կոմպոզիցիան։
 
+~~~art
+pic carpet
+~~~
+
 ## Վիշապագորգեր և բնական գույներ
 
 **Վիշապագորգերը** ամենահայտնի հին հայկական գորգերից են։ Նրանց դաշտը բաժանված է մեծ շեղանկյունների՝ ոճավորված վիշապներով, թռչուններով և ծաղիկներով։
 
 Հին գորգերի գույները ստացվում էին **բնական ներկերից**՝ տորոնի արմատից կարմիր, ընկույզի կեղևից դարչնագույն, բույսերից դեղին։ Հատուկ մուգ կարմիր էին ստանում Արարատ լեռան մոտ ապրող փոքրիկ միջատից՝ **որդան կարմիր**։ Այս կարմիրը հայտնի էր Հայաստանից շատ հեռու։
+
+~~~art
+pic vishap
+~~~
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Նկարիր գորգ
 
@@ -98,8 +128,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 4. Եզրազարդի երկայնքով նկարիր կրկնվող մոտիվ։
 5. Ներկիր գորգի գույներով՝ մուգ կարմիր, մուգ կապույտ, փղոսկրագույն, մի քիչ դեղին և կանաչ։
 
-### Վարժություններ
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian motifs=rhombus,star,spiral,pomegranate
+~~~
 
+~~~art
+tasks
 1. Ինչով է տարբերվում խավոր գորգը կապերտից։
 2. Անվանիր գորգի կոմպոզիցիայի չորս մասը։
 3. Ինչ դեր ունի եզրազարդը գորգում։
@@ -107,10 +141,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 5. Որտեղից էին ստացվում հին գորգերի գույները։ Անվանիր երկու աղբյուր։
 6. Ինչ է որդան կարմիրը։
 7. Նկարիր գորգ՝ մեդալիոնով, դաշտով և երեք եզրազարդով։
+~~~
 
-### Պատասխաններ
-
-1. Խավոր գորգն ունի բազմաթիվ հանգույցներ և հաստ մակերես, կապերտն առանց հանգույցների է, բարակ և հարթ։ 2. Դաշտ, մեդալիոն, եզրազարդ, մոտիվներ։ 3. Շրջանակում է կոմպոզիցիան և միասին պահում այն։ 4. Վիշապներով գորգ՝ մեծ շեղանկյուններով և ոճավորված վիշապներով։ 5. Օրինակ՝ տորոնի արմատ, ընկույզի կեղև, բույսեր, փոքրիկ միջատ։ 6. Հայտնի մուգ կարմիր ներկ, որ ստանում էին Արարատի մոտ ապրող փոքրիկ միջատից։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Խավոր գորգն ունի բազմաթիվ հանգույցներ և հաստ մակերես, կապերտն առանց հանգույցների է, բարակ և հարթ։ 2. Դաշտ, մեդալիոն, եզրազարդ, մոտիվներ։ 3. Շրջանակում է կոմպոզիցիան և միասին պահում այն։ 4. Վիշապներով գորգ՝ մեծ շեղանկյուններով և ոճավորված վիշապներով։ 5. Օրինակ՝ տորոնի արմատ, ընկույզի կեղև, բույսեր, փոքրիկ միջատ։ 6. Հայտնի մուգ կարմիր ներկ, որ ստանում էին Արարատի մոտ ապրող փոքրիկ միջատից։ 7. Քո նկարը։
+~~~`,
         ru: `## Древнее ремесло
 
 Ковроткачество — одно из древнейших ремёсел Армении. Ковры согревали полы и стены домов, их давали в приданое и передавали от бабушки к внучке.
@@ -131,11 +167,23 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 
 Кайма работает как рама картины: она скрепляет композицию.
 
+~~~art
+pic carpet
+~~~
+
 ## Вишапагорги и природные краски
 
 **Вишапагорги** (ковры с драконами) — одни из самых знаменитых старинных армянских ковров. Их поле разделено на крупные ромбы со стилизованными драконами, птицами и цветами.
 
 Цвета старых ковров давали **природные красители**: корень марены — красный, скорлупа грецкого ореха — коричневый, травы — жёлтый. Особый глубокий красный получали из крошечного насекомого, живущего у горы Арарат: **որդան կարմիր** (вордан кармир, «червячный красный»). Этот красный славился далеко за пределами Армении.
+
+~~~art
+pic vishap
+~~~
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Нарисуй ковёр
 
@@ -145,8 +193,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 4. Вдоль каймы нарисуй повторяющийся мотив.
 5. Раскрась в ковровые цвета: глубокий красный, тёмно-синий, цвет слоновой кости, немного жёлтого и зелёного.
 
-### Упражнения
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian motifs=rhombus,star,spiral,pomegranate
+~~~
 
+~~~art
+tasks
 1. Чем ворсовый ковёр отличается от безворсового?
 2. Назови четыре части композиции ковра.
 3. Какую роль играет кайма в ковре?
@@ -154,10 +206,12 @@ The colours of old carpets came from **natural dyes**: madder root for red, waln
 5. Откуда брались цвета старых ковров? Назови два источника.
 6. Что такое вордан кармир?
 7. Нарисуй ковёр с медальоном, полем и тремя каймами.
+~~~
 
-### Ответы
-
-1. У ворсового много узелков и толстая поверхность, безворсовый ткут без узлов, он тонкий и гладкий. 2. Поле, медальон, кайма, мотивы. 3. Обрамляет композицию и скрепляет её. 4. Ковёр с драконами: крупные ромбы и стилизованные драконы. 5. Например: корень марены, ореховая скорлупа, травы, крошечное насекомое. 6. Знаменитая глубокая красная краска из крошечного насекомого, живущего у Арарата. 7. Твой рисунок.`,
+~~~art
+hints
+1. У ворсового много узелков и толстая поверхность, безворсовый ткут без узлов, он тонкий и гладкий. 2. Поле, медальон, кайма, мотивы. 3. Обрамляет композицию и скрепляет её. 4. Ковёр с драконами: крупные ромбы и стилизованные драконы. 5. Например: корень марены, ореховая скорлупа, травы, крошечное насекомое. 6. Знаменитая глубокая красная краска из крошечного насекомого, живущего у Арарата. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("The central part of a carpet is the…", "Գորգի կենտրոնական մասը…", "Центральная часть ковра — это…"), [t("field", "դաշտն է", "поле"), t("border", "եզրազարդն է", "кайма"), t("fringe", "ծոպն է", "бахрома")], 0),
@@ -193,11 +247,19 @@ The weaver did not choose figures by chance. Many motifs were signs that people 
 
 Different villages had their own versions, so one symbol can look a little different on two carpets. Scholars do not always agree on every meaning, but the idea of a "wish in the pattern" is shared by many peoples.
 
+~~~art
+pic eight-star ram-horns tree-of-life water-sign earth-sign sun-sign
+~~~
+
 ## How symbols are drawn
 
 * They are **geometric**: made of steps, diamonds and hooks, because the knots form a grid.
 * They are **symmetrical**: the left side mirrors the right.
 * They often stand in **rows** or around a **centre**.
+
+~~~art
+steps tree-of-life
+~~~
 
 ## Compose a "carpet of wishes"
 
@@ -207,8 +269,13 @@ Different villages had their own versions, so one symbol can look a little diffe
 4. Draw on squared paper so the shapes become stepped, like knots.
 5. Add a border with a water zigzag. Explain your carpet to a friend.
 
-### Exercises
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Compose a carpet of wishes: pick symbols for what you wish your family, and place them symmetrically.
+~~~
 
+~~~art
+tasks
 1. Why can we say that a carpet "speaks"?
 2. What does the pomegranate usually mean?
 3. Draw an eternity sign and say what it means.
@@ -216,10 +283,12 @@ Different villages had their own versions, so one symbol can look a little diffe
 5. What symbol shows water? How does it look?
 6. Why can the same symbol look different on two carpets?
 7. Compose a carpet fragment with three symbols and write the wish it carries.
+~~~
 
-### Answers
-
-1. Its motifs are signs that carry wishes and ideas. 2. Plenty, many children, unity. 3. A wheel with curved rays; eternity, the sun, the circle of life. 4. Because knots form a grid, so lines become steps. 5. A zigzag or wavy line. 6. Different villages had their own versions. 7. Your work.`,
+~~~art
+hints
+1. Its motifs are signs that carry wishes and ideas. 2. Plenty, many children, unity. 3. A wheel with curved rays; eternity, the sun, the circle of life. 4. Because knots form a grid, so lines become steps. 5. A zigzag or wavy line. 6. Different villages had their own versions. 7. Your work.
+~~~`,
         hy: `## Խոսող նախշեր
 
 Գորգագործուհին պատկերներն ընտրում էր ոչ պատահական։ Շատ մոտիվներ նշաններ էին, որոնք մարդիկ «կարդում» էին։ Գորգը կարող էր ընտանիքի համար բարեմաղթանք կրել՝ առողջություն, լավ բերք, երկար կյանք, պաշտպանություն։
@@ -236,11 +305,19 @@ Different villages had their own versions, so one symbol can look a little diffe
 
 Տարբեր գյուղեր ունեին իրենց տարբերակները, ուստի նույն խորհրդանիշն երկու գորգի վրա կարող է մի փոքր տարբեր լինել։ Գիտնականները միշտ չէ, որ համաձայն են ամեն իմաստի շուրջ, բայց «նախշի մեջ բարեմաղթանքի» գաղափարը բնորոշ է շատ ժողովուրդների։
 
+~~~art
+pic eight-star ram-horns tree-of-life water-sign earth-sign sun-sign
+~~~
+
 ## Ինչպես են նկարում խորհրդանիշները
 
 * Դրանք **երկրաչափական** են՝ կազմված աստիճաններից, շեղանկյուններից և կեռիկներից, որովհետև հանգույցները ցանց են կազմում։
 * Դրանք **համաչափ** են՝ ձախ կողմը կրկնում է աջը։
 * Դրանք հաճախ կանգնած են **շարքերով** կամ **կենտրոնի** շուրջը։
+
+~~~art
+steps tree-of-life
+~~~
 
 ## Կազմիր «բարեմաղթանքների գորգ»
 
@@ -250,8 +327,13 @@ Different villages had their own versions, so one symbol can look a little diffe
 4. Նկարիր վանդակավոր թղթի վրա, որ ձևերն աստիճանաձև դառնան, ինչպես հանգույցները։
 5. Ավելացրու եզրազարդ՝ ջրի զիգզագով։ Ընկերոջդ բացատրիր քո գորգը։
 
-### Վարժություններ
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Կազմի՛ր «Ցանկությունների գորգ»․ ընտրի՛ր խորհրդանիշներ այն ամենի համար, ինչ մաղթում ես ընտանիքիդ, և դասավորի՛ր դրանք համաչափ։
+~~~
 
+~~~art
+tasks
 1. Ինչու կարող ենք ասել, որ գորգը «խոսում է»։
 2. Ինչ է սովորաբար նշանակում նուռը։
 3. Նկարիր հավերժության նշան և ասա, թե ինչ է այն նշանակում։
@@ -259,10 +341,12 @@ Different villages had their own versions, so one symbol can look a little diffe
 5. Որ խորհրդանիշն է ցույց տալիս ջուրը։ Ինչ տեսք ունի այն։
 6. Ինչու կարող է նույն խորհրդանիշն երկու գորգի վրա տարբեր տեսք ունենալ։
 7. Կազմիր գորգի հատված երեք խորհրդանիշով և գրիր այն բարեմաղթանքը, որ այն կրում է։
+~~~
 
-### Պատասխաններ
-
-1. Նրա մոտիվները նշաններ են, որոնք բարեմաղթանքներ և գաղափարներ են կրում։ 2. Առատություն, բազմազավակություն, միասնություն։ 3. Կոր ճառագայթներով անիվ․ հավերժություն, արև, կյանքի շրջապտույտ։ 4. Որովհետև հանգույցները ցանց են կազմում, և գծերը դառնում են աստիճաններ։ 5. Զիգզագ կամ ալիքաձև գիծ։ 6. Տարբեր գյուղեր ունեին իրենց տարբերակները։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Նրա մոտիվները նշաններ են, որոնք բարեմաղթանքներ և գաղափարներ են կրում։ 2. Առատություն, բազմազավակություն, միասնություն։ 3. Կոր ճառագայթներով անիվ․ հավերժություն, արև, կյանքի շրջապտույտ։ 4. Որովհետև հանգույցները ցանց են կազմում, և գծերը դառնում են աստիճաններ։ 5. Զիգզագ կամ ալիքաձև գիծ։ 6. Տարբեր գյուղեր ունեին իրենց տարբերակները։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Говорящие узоры
 
 Ковровщица выбирала фигуры не случайно. Многие мотивы были знаками, которые люди «читали». Ковёр мог нести пожелание семье: здоровья, хорошего урожая, долгой жизни, защиты.
@@ -279,11 +363,19 @@ Different villages had their own versions, so one symbol can look a little diffe
 
 В разных сёлах были свои варианты, поэтому один символ на двух коврах может выглядеть немного по-разному. Учёные не всегда согласны в каждом значении, но идея «пожелания в узоре» знакома многим народам.
 
+~~~art
+pic eight-star ram-horns tree-of-life water-sign earth-sign sun-sign
+~~~
+
 ## Как рисуют символы
 
 * Они **геометричные**: из ступенек, ромбов и крючков, потому что узелки образуют сетку.
 * Они **симметричные**: левая сторона повторяет правую.
 * Они часто стоят **рядами** или вокруг **центра**.
+
+~~~art
+steps tree-of-life
+~~~
 
 ## Составь «ковёр пожеланий»
 
@@ -293,8 +385,13 @@ Different villages had their own versions, so one symbol can look a little diffe
 4. Рисуй на бумаге в клетку, чтобы формы стали ступенчатыми, как узелки.
 5. Добавь кайму с водным зигзагом. Объясни свой ковёр другу.
 
-### Упражнения
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Составь «ковёр желаний»: выбери символы того, что желаешь своей семье, и расположи их симметрично.
+~~~
 
+~~~art
+tasks
 1. Почему можно сказать, что ковёр «говорит»?
 2. Что обычно означает гранат?
 3. Нарисуй знак вечности и скажи, что он означает.
@@ -302,10 +399,12 @@ Different villages had their own versions, so one symbol can look a little diffe
 5. Какой символ обозначает воду? Как он выглядит?
 6. Почему один символ на двух коврах может выглядеть по-разному?
 7. Составь фрагмент ковра из трёх символов и напиши, какое пожелание он несёт.
+~~~
 
-### Ответы
-
-1. Его мотивы — знаки, которые несут пожелания и идеи. 2. Изобилие, многодетность, единство. 3. Колесо с изогнутыми лучами; вечность, солнце, круговорот жизни. 4. Узелки образуют сетку, и линии становятся ступеньками. 5. Зигзаг или волнистая линия. 6. В разных сёлах были свои варианты. 7. Твоя работа.`,
+~~~art
+hints
+1. Его мотивы — знаки, которые несут пожелания и идеи. 2. Изобилие, многодетность, единство. 3. Колесо с изогнутыми лучами; вечность, солнце, круговорот жизни. 4. Узелки образуют сетку, и линии становятся ступеньками. 5. Зигзаг или волнистая линия. 6. В разных сёлах были свои варианты. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Many carpet motifs were…", "Գորգի շատ մոտիվներ…", "Многие мотивы ковра были…"), [t("signs with meanings", "իմաստ ունեցող նշաններ էին", "знаками со смыслом"), t("random spots", "պատահական բծեր էին", "случайными пятнами"), t("letters of a name", "անվան տառեր էին", "буквами имени")], 0),
@@ -342,12 +441,20 @@ People in the Armenian Highland have worked with clay for thousands of years.
 * Thin dark **outlines** around every shape, filled with clean colour.
 * A **rosette** in the centre and a **border** on the rim.
 
+~~~art
+pic ceramic-plate
+~~~
+
 ## How a painted plate is made
 
 1. The potter shapes the plate on a **wheel** and lets it dry.
 2. It is covered with a white layer and painted with mineral colours.
 3. A transparent **glaze** is put on top.
 4. The plate is **fired** in a kiln; the glaze melts into glass and the colours shine.
+
+~~~art
+palette gzhel armenian-carpet
+~~~
 
 ## Paint a plate
 
@@ -357,8 +464,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 4. On the rim draw a simple border: waves, scales or little leaves.
 5. Outline everything in dark blue, then fill with turquoise, green and yellow on white.
 
-### Exercises
+~~~art
+pattern layout=rosette rhythm=alternate palettes=gzhel,armenian motifs=flower,leaf,bird,pomegranate
+~~~
 
+~~~art
+tasks
 1. Name two places near Yerevan where Urartian vessels were found.
 2. What was Kütahya famous for in the 17th and 18th centuries?
 3. Where did Armenian potters from Kütahya settle in the 20th century?
@@ -366,10 +477,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 5. Name four typical motifs.
 6. What is glaze, and what happens to it in the kiln?
 7. Paint a plate with a rosette in the centre and a border on the rim.
+~~~
 
-### Answers
-
-1. Karmir Blur and Erebuni. 2. Its Armenian masters of painted ceramics. 3. In Jerusalem. 4. Cobalt blue, turquoise, green, yellow, reddish brown on white. 5. For example: tulips, carnations, pomegranates, vines, birds, angels. 6. A transparent layer on top of the painting; in the kiln it melts into glass. 7. Your work.`,
+~~~art
+hints
+1. Karmir Blur and Erebuni. 2. Its Armenian masters of painted ceramics. 3. In Jerusalem. 4. Cobalt blue, turquoise, green, yellow, reddish brown on white. 5. For example: tulips, carnations, pomegranates, vines, birds, angels. 6. A transparent layer on top of the painting; in the kiln it melts into glass. 7. Your work.
+~~~`,
         hy: `## Կավը դարերի միջով
 
 Հայկական լեռնաշխարհում մարդիկ հազարավոր տարիներ աշխատում են կավի հետ։
@@ -387,12 +500,20 @@ People in the Armenian Highland have worked with clay for thousands of years.
 * Յուրաքանչյուր ձևի շուրջը բարակ մուգ **եզրագծեր**, որոնք լցված են մաքուր գույնով։
 * Կենտրոնում **վարդյակ**, իսկ եզրին՝ **եզրազարդ**։
 
+~~~art
+pic ceramic-plate
+~~~
+
 ## Ինչպես են պատրաստում նկարազարդ ափսեն
 
 1. Բրուտն ափսեն ձևավորում է **բրուտի անիվի** վրա և թողնում, որ չորանա։
 2. Այն ծածկում են սպիտակ շերտով և նկարում հանքային ներկերով։
 3. Վրայից դնում են թափանցիկ **ջնարակ**։
 4. Ափսեն **թրծում** են հնոցում․ ջնարակը հալվում ու ապակի է դառնում, և գույները փայլում են։
+
+~~~art
+palette gzhel armenian-carpet
+~~~
 
 ## Զարդանկարիր ափսե
 
@@ -402,8 +523,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 4. Եզրին նկարիր պարզ եզրազարդ՝ ալիքներ, թեփուկներ կամ փոքրիկ տերևներ։
 5. Ամեն ինչ եզրագծիր մուգ կապույտով, հետո սպիտակի վրա լցրու փիրուզագույնով, կանաչով և դեղինով։
 
-### Վարժություններ
+~~~art
+pattern layout=rosette rhythm=alternate palettes=gzhel,armenian motifs=flower,leaf,bird,pomegranate
+~~~
 
+~~~art
+tasks
 1. Անվանիր Երևանի մոտ երկու վայր, որտեղ գտնվել են ուրարտական անոթներ։
 2. Ինչով էր հայտնի Կյուտահիան 17–18-րդ դարերում։
 3. Որտեղ հաստատվեցին Կյուտահիայի հայ բրուտները 20-րդ դարում։
@@ -411,10 +536,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 5. Անվանիր չորս բնորոշ մոտիվ։
 6. Ինչ է ջնարակը, և ինչ է կատարվում նրա հետ հնոցում։
 7. Զարդանկարիր ափսե՝ կենտրոնում վարդյակով և եզրին եզրազարդով։
+~~~
 
-### Պատասխաններ
-
-1. Կարմիր բլուր և Էրեբունի։ 2. Նկարազարդ խեցեղենի իր հայ վարպետներով։ 3. Երուսաղեմում։ 4. Կոբալտային կապույտ, փիրուզագույն, կանաչ, դեղին, կարմրադարչնագույն՝ սպիտակի վրա։ 5. Օրինակ՝ կակաչներ, մեխակներ, նռներ, որթեր, թռչուններ, հրեշտակներ։ 6. Թափանցիկ շերտ նկարի վրա․ հնոցում այն հալվում ու ապակի է դառնում։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Կարմիր բլուր և Էրեբունի։ 2. Նկարազարդ խեցեղենի իր հայ վարպետներով։ 3. Երուսաղեմում։ 4. Կոբալտային կապույտ, փիրուզագույն, կանաչ, դեղին, կարմրադարչնագույն՝ սպիտակի վրա։ 5. Օրինակ՝ կակաչներ, մեխակներ, նռներ, որթեր, թռչուններ, հրեշտակներ։ 6. Թափանցիկ շերտ նկարի վրա․ հնոցում այն հալվում ու ապակի է դառնում։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Глина сквозь века
 
 На Армянском нагорье люди работают с глиной тысячи лет.
@@ -432,12 +559,20 @@ People in the Armenian Highland have worked with clay for thousands of years.
 * Тонкий тёмный **контур** вокруг каждой формы, залитой чистым цветом.
 * **Розетка** в центре и **кайма** по краю.
 
+~~~art
+pic ceramic-plate
+~~~
+
 ## Как делают расписную тарелку
 
 1. Гончар формует тарелку на **гончарном круге** и сушит её.
 2. Её покрывают белым слоем и расписывают минеральными красками.
 3. Сверху наносят прозрачную **глазурь**.
 4. Тарелку **обжигают** в печи; глазурь плавится в стекло, и краски сияют.
+
+~~~art
+palette gzhel armenian-carpet
+~~~
 
 ## Распиши тарелку
 
@@ -447,8 +582,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 4. На борту нарисуй простую кайму: волны, чешуйки или листочки.
 5. Обведи всё тёмно-синим, потом залей бирюзовым, зелёным и жёлтым по белому.
 
-### Упражнения
+~~~art
+pattern layout=rosette rhythm=alternate palettes=gzhel,armenian motifs=flower,leaf,bird,pomegranate
+~~~
 
+~~~art
+tasks
 1. Назови два места возле Еревана, где нашли урартские сосуды.
 2. Чем славилась Кютахья в XVII–XVIII веках?
 3. Где поселились армянские гончары из Кютахьи в XX веке?
@@ -456,10 +595,12 @@ People in the Armenian Highland have worked with clay for thousands of years.
 5. Назови четыре типичных мотива.
 6. Что такое глазурь и что с ней происходит в печи?
 7. Распиши тарелку с розеткой в центре и каймой по борту.
+~~~
 
-### Ответы
-
-1. Кармир-Блур и Эребуни. 2. Армянскими мастерами расписной керамики. 3. В Иерусалиме. 4. Кобальтовый синий, бирюзовый, зелёный, жёлтый, красно-коричневый по белому. 5. Например: тюльпаны, гвоздики, гранаты, лозы, птицы, ангелы. 6. Прозрачный слой поверх росписи; в печи она плавится в стекло. 7. Твоя работа.`,
+~~~art
+hints
+1. Кармир-Блур и Эребуни. 2. Армянскими мастерами расписной керамики. 3. В Иерусалиме. 4. Кобальтовый синий, бирюзовый, зелёный, жёлтый, красно-коричневый по белому. 5. Например: тюльпаны, гвоздики, гранаты, лозы, птицы, ангелы. 6. Прозрачный слой поверх росписи; в печи она плавится в стекло. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Urartian vessels were found at…", "Ուրարտական անոթներ գտնվել են…", "Урартские сосуды нашли на…"), [t("Karmir Blur", "Կարմիր բլուրում", "Кармир-Блуре"), t("Sevan island only", "միայն Սևանի կղզում", "только на острове Севан"), t("Mount Aragats summit", "Արագածի գագաթին", "вершине Арагаца")], 0),
@@ -483,6 +624,10 @@ People in the Armenian Highland have worked with clay for thousands of years.
 
 Armenian smiths have worked metal since ancient times: bronze in the Urartian age, later silver, gold, copper and iron.
 
+~~~art
+pic copper-jug jewellery
+~~~
+
 ## Techniques
 
 | Technique | What the master does | Effect |
@@ -505,6 +650,11 @@ Armenian smiths have worked metal since ancient times: bronze in the Urartian ag
 
 Metal is not just painted: it **reflects light**. A raised ornament gets bright highlights and dark shadows; an openwork pattern lets light pass through. When you draw metal, show **highlights** (white or pale spots) and **reflections** of nearby colours.
 
+~~~art
+light
+Metal shines: a bright highlight, a deep shadow and a reflex. Move the lamp and watch the highlight run.
+~~~
+
 ## Design a metal object
 
 1. Choose an object: a belt buckle, a tray, a book cover, a gate.
@@ -512,8 +662,12 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 3. Draw the ornament: for a book cover, a cross in the centre and a border; for a gate, symmetrical spirals.
 4. Colour it as metal: silver grey, copper orange, iron black. Add white highlights on raised parts.
 
-### Exercises
+~~~art
+sketch paper=dark
+~~~
 
+~~~art
+tasks
 1. What is the difference between chasing and repoussé?
 2. What is filigree made of?
 3. What is niello? On what metal does it look best?
@@ -521,13 +675,19 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 5. Where can you see forged iron balconies in Armenia?
 6. How do you show shine when you draw metal?
 7. Design a silver book cover with a cross and a border.
+~~~
 
-### Answers
-
-1. Chasing is hammered on the front and gives a low raised pattern; repoussé is pushed out from the back and gives high relief. 2. Thin twisted wires. 3. A black alloy filling engraved lines; on shining silver. 4. Silver belts of linked plates with engraving, niello and filigree. 5. For example in old houses of Gyumri and Yerevan. 6. With highlights and reflections. 7. Your design.`,
+~~~art
+hints
+1. Chasing is hammered on the front and gives a low raised pattern; repoussé is pushed out from the back and gives high relief. 2. Thin twisted wires. 3. A black alloy filling engraved lines; on shining silver. 4. Silver belts of linked plates with engraving, niello and filigree. 5. For example in old houses of Gyumri and Yerevan. 6. With highlights and reflections. 7. Your design.
+~~~`,
         hy: `## Մետաղի վարպետներ
 
 Հայ վարպետները մետաղ են մշակել հնագույն ժամանակներից՝ բրոնզ ուրարտական դարաշրջանում, ավելի ուշ արծաթ, ոսկի, պղինձ և երկաթ։
+
+~~~art
+pic copper-jug jewellery
+~~~
 
 ## Տեխնիկաներ
 
@@ -551,6 +711,11 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 
 Մետաղը պարզապես ներկված չէ․ այն **անդրադարձնում է լույսը**։ Ուռուցիկ զարդը ստանում է վառ փայլեր և մուգ ստվերներ, իսկ ցանցկեն նախշը լույսն անցկացնում է։ Երբ մետաղ ես նկարում, ցույց տուր **փայլերը** (սպիտակ կամ բաց բծեր) և մոտակա գույների **անդրադարձները**։
 
+~~~art
+light
+Մետաղը փայլում է․ վառ փայլ, խորը ստվեր և ռեֆլեքս։ Շարժի՛ր լամպը և տե՛ս, ինչպես է փայլը վազում։
+~~~
+
 ## Նախագծիր մետաղե առարկա
 
 1. Ընտրիր առարկա՝ գոտու ճարմանդ, սկուտեղ, գրքի կազմ, դարպաս։
@@ -558,8 +723,12 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 3. Նկարիր զարդը․ գրքի կազմի համար՝ կենտրոնում խաչ և եզրազարդ, դարպասի համար՝ համաչափ պարույրներ։
 4. Ներկիր որպես մետաղ՝ արծաթագույն մոխրագույն, պղնձի նարնջագույն, երկաթի սև։ Ուռուցիկ մասերին ավելացրու սպիտակ փայլեր։
 
-### Վարժություններ
+~~~art
+sketch paper=dark
+~~~
 
+~~~art
+tasks
 1. Ինչով է տարբերվում դրվագումը ռելիեֆային կռումից։
 2. Ինչից է պատրաստվում ֆիլիգրանը։
 3. Ինչ է սևադրումը։ Որ մետաղի վրա է այն լավագույնս երևում։
@@ -567,13 +736,19 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 5. Որտեղ կարելի է տեսնել կռած երկաթե պատշգամբներ Հայաստանում։
 6. Ինչպես ցույց տալ փայլը, երբ մետաղ ես նկարում։
 7. Նախագծիր արծաթե գրքի կազմ՝ խաչով և եզրազարդով։
+~~~
 
-### Պատասխաններ
-
-1. Դրվագումը կռում են առջևից, և այն ցածր ուռուցիկ նախշ է տալիս, ռելիեֆային կռումը մղում են ետևից, և այն բարձր ռելիեֆ է տալիս։ 2. Բարակ ոլորված թելերից։ 3. Փորագրված գծերը լցնող սև համաձուլվածք․ փայլուն արծաթի վրա։ 4. Իրար միացված թիթեղներից արծաթե գոտիներով՝ փորագրությամբ, սևադրմամբ և ֆիլիգրանով։ 5. Օրինակ՝ Գյումրու և Երևանի հին տներում։ 6. Փայլերով և անդրադարձներով։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Դրվագումը կռում են առջևից, և այն ցածր ուռուցիկ նախշ է տալիս, ռելիեֆային կռումը մղում են ետևից, և այն բարձր ռելիեֆ է տալիս։ 2. Բարակ ոլորված թելերից։ 3. Փորագրված գծերը լցնող սև համաձուլվածք․ փայլուն արծաթի վրա։ 4. Իրար միացված թիթեղներից արծաթե գոտիներով՝ փորագրությամբ, սևադրմամբ և ֆիլիգրանով։ 5. Օրինակ՝ Գյումրու և Երևանի հին տներում։ 6. Փայլերով և անդրադարձներով։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Мастера металла
 
 Армянские мастера обрабатывают металл с древности: бронзу в урартскую эпоху, позже серебро, золото, медь и железо.
+
+~~~art
+pic copper-jug jewellery
+~~~
 
 ## Техники
 
@@ -597,6 +772,11 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 
 Металл не просто окрашен: он **отражает свет**. Выпуклый орнамент получает яркие блики и тёмные тени, ажурный узор пропускает свет. Рисуя металл, покажи **блики** (белые или светлые пятна) и **рефлексы** соседних цветов.
 
+~~~art
+light
+Металл блестит: яркий блик, глубокая тень и рефлекс. Двигай лампу и смотри, как бежит блик.
+~~~
+
 ## Придумай металлический предмет
 
 1. Выбери предмет: пряжку пояса, поднос, оклад книги, ворота.
@@ -604,8 +784,12 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 3. Нарисуй орнамент: для оклада — крест в центре и кайму, для ворот — симметричные спирали.
 4. Раскрась как металл: серебристо-серый, медно-оранжевый, чёрный для железа. На выпуклых частях добавь белые блики.
 
-### Упражнения
+~~~art
+sketch paper=dark
+~~~
 
+~~~art
+tasks
 1. Чем чеканка отличается от выколотки?
 2. Из чего делают филигрань?
 3. Что такое чернь? На каком металле она смотрится лучше всего?
@@ -613,10 +797,12 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 5. Где в Армении можно увидеть кованые балконы?
 6. Как показать блеск, когда рисуешь металл?
 7. Придумай серебряный оклад книги с крестом и каймой.
+~~~
 
-### Ответы
-
-1. Чеканку выбивают с лицевой стороны, она даёт невысокий узор; выколотку выдавливают с обратной, она даёт высокий рельеф. 2. Из тонкой кручёной проволоки. 3. Чёрный сплав в гравированных линиях; на блестящем серебре. 4. Серебряными поясами из пластин с гравировкой, чернью и филигранью. 5. Например, на старых домах Гюмри и Еревана. 6. Бликами и рефлексами. 7. Твой проект.`,
+~~~art
+hints
+1. Чеканку выбивают с лицевой стороны, она даёт невысокий узор; выколотку выдавливают с обратной, она даёт высокий рельеф. 2. Из тонкой кручёной проволоки. 3. Чёрный сплав в гравированных линиях; на блестящем серебре. 4. Серебряными поясами из пластин с гравировкой, чернью и филигранью. 5. Например, на старых домах Гюмри и Еревана. 6. Бликами и рефлексами. 7. Твой проект.
+~~~`,
       },
       [
         q(t("Filigree is made of…", "Ֆիլիգրանը պատրաստվում է…", "Филигрань делают из…"), [t("thin twisted wires", "բարակ ոլորված թելերից", "тонкой кручёной проволоки"), t("clay", "կավից", "глины"), t("wool", "բրդից", "шерсти")], 0),
@@ -640,6 +826,10 @@ Metal is not just painted: it **reflects light**. A raised ornament gets bright 
 
 A **khachkar** (from խաչ, "cross", and քար, "stone") is a stone slab with a carved cross. Khachkars were set up in memory of people and events, near churches, on roads and in villages. There are many thousands of them in Armenia, and no two are exactly alike. In 2010 the art of the khachkar was included in the **UNESCO** list of the intangible heritage of humanity.
 
+~~~art
+pic khachkar
+~~~
+
 ## Composition of a khachkar
 
 | Part | Where | What it shows |
@@ -653,6 +843,10 @@ A **khachkar** (from խաչ, "cross", and քար, "stone") is a stone slab with 
 
 The cross is shown as a **blossoming tree of life**: it grows from the base and puts out leaves and fruit.
 
+~~~art
+steps interlace
+~~~
+
 ## Masterpieces
 
 * The **Goshavank khachkar** carved by the master **Poghos** in **1291** is so fine that it is often called "needle-worked" (ասեղնագործ). Layers of openwork pattern lie one over another like lace.
@@ -661,6 +855,10 @@ The cross is shown as a **blossoming tree of life**: it grows from the base and 
 ## Ornament of a khachkar
 
 The ornament is made of **interlace**: bands that go over and under each other without end. It is usually built on a grid, so it is easy to draw on squared paper.
+
+~~~art
+pic eight-star grapevine
+~~~
 
 ## Draw a khachkar
 
@@ -671,8 +869,13 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Fill the free spaces above with two small rosettes.
 6. Shade it in the colour of tuff: pink, ochre or grey. Make the carved parts darker.
 
-### Exercises
+~~~art
+sketch mode=mirror paper=grey
+Draw a khachkar: the cross on the axis, interlace around it. The mirror keeps both sides equal.
+~~~
 
+~~~art
+tasks
 1. What does the word «khachkar» mean?
 2. Name four parts of a khachkar composition.
 3. Why is the cross on a khachkar called a blossoming tree?
@@ -680,13 +883,19 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Why is the Goshavank khachkar called "needle-worked"?
 6. Where is Noratus, and what is it known for?
 7. Draw an interlace border on squared paper, 10 squares long.
+~~~
 
-### Answers
-
-1. "Cross-stone": խաչ (cross) and քար (stone). 2. For example: cross, base, shoots, upper part, frame, cornice. 3. It grows from the base and has leaves and fruit. 4. Master Poghos, in 1291. 5. Its openwork pattern is as fine as lace. 6. Near Lake Sevan; it has the largest surviving group of khachkars. 7. Your drawing.`,
+~~~art
+hints
+1. "Cross-stone": խաչ (cross) and քար (stone). 2. For example: cross, base, shoots, upper part, frame, cornice. 3. It grows from the base and has leaves and fruit. 4. Master Poghos, in 1291. 5. Its openwork pattern is as fine as lace. 6. Near Lake Sevan; it has the largest surviving group of khachkars. 7. Your drawing.
+~~~`,
         hy: `## Ինչ է խաչքարը
 
 **Խաչքարը** (խաչ և քար բառերից) քարե սալ է՝ փորագրված խաչով։ Խաչքարեր կանգնեցնում էին մարդկանց և իրադարձությունների հիշատակին, եկեղեցիների մոտ, ճանապարհներին և գյուղերում։ Հայաստանում դրանք բազմաթիվ հազարներ են, և ոչ մի երկուսը լրիվ նույնը չեն։ 2010 թվականին խաչքարի արվեստը ներառվեց **ՅՈՒՆԵՍԿՕ**-ի մարդկության ոչ նյութական ժառանգության ցանկում։
+
+~~~art
+pic khachkar
+~~~
 
 ## Խաչքարի կոմպոզիցիան
 
@@ -701,6 +910,10 @@ The ornament is made of **interlace**: bands that go over and under each other w
 
 Խաչը պատկերված է որպես **ծաղկող կենաց ծառ**․ այն աճում է պատվանդանից և տերևներ ու պտուղներ է տալիս։
 
+~~~art
+steps interlace
+~~~
+
 ## Գլուխգործոցներ
 
 * **Գոշավանքի խաչքարը**, որ փորագրել է վարպետ **Պողոսը** **1291** թվականին, այնքան նուրբ է, որ այն հաճախ անվանում են «ասեղնագործ»։ Ցանցկեն նախշի շերտերը դրված են իրար վրա, ինչպես ժանյակ։
@@ -709,6 +922,10 @@ The ornament is made of **interlace**: bands that go over and under each other w
 ## Խաչքարի զարդը
 
 Զարդը կազմված է **հյուսքից**՝ ժապավեններից, որոնք անվերջ անցնում են իրար վրայով և տակով։ Այն սովորաբար կառուցված է ցանցի վրա, ուստի հեշտ է նկարել վանդակավոր թղթի վրա։
+
+~~~art
+pic eight-star grapevine
+~~~
 
 ## Նկարիր խաչքար
 
@@ -719,8 +936,13 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Վերևի ազատ տեղերը լցրու երկու փոքր վարդյակով։
 6. Ներկիր տուֆի գույնով՝ վարդագույն, օխրա կամ մոխրագույն։ Փորագրված մասերն ավելի մուգ արա։
 
-### Վարժություններ
+~~~art
+sketch mode=mirror paper=grey
+Նկարի՛ր խաչքար․ խաչը առանցքի վրա, հյուսքը շուրջը։ Հայելին երկու կողմերը հավասար է պահում։
+~~~
 
+~~~art
+tasks
 1. Ինչ է նշանակում «խաչքար» բառը։
 2. Անվանիր խաչքարի կոմպոզիցիայի չորս մաս։
 3. Ինչու է խաչքարի խաչը կոչվում ծաղկող ծառ։
@@ -728,13 +950,19 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Ինչու են Գոշավանքի խաչքարը կոչում «ասեղնագործ»։
 6. Որտեղ է Նորատուսը, և ինչով է այն հայտնի։
 7. Վանդակավոր թղթի վրա նկարիր 10 վանդակ երկարությամբ հյուսքե եզրազարդ։
+~~~
 
-### Պատասխաններ
-
-1. Խաչ և քար՝ «քար խաչով»։ 2. Օրինակ՝ խաչ, պատվանդան, շիվեր, վերին մաս, շրջանակ, քիվ։ 3. Այն աճում է պատվանդանից և ունի տերևներ ու պտուղներ։ 4. Վարպետ Պողոսը՝ 1291 թվականին։ 5. Նրա ցանցկեն նախշը նուրբ է ժանյակի պես։ 6. Սևանա լճի մոտ․ այնտեղ պահպանվել է խաչքարերի ամենամեծ խումբը։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Խաչ և քար՝ «քար խաչով»։ 2. Օրինակ՝ խաչ, պատվանդան, շիվեր, վերին մաս, շրջանակ, քիվ։ 3. Այն աճում է պատվանդանից և ունի տերևներ ու պտուղներ։ 4. Վարպետ Պողոսը՝ 1291 թվականին։ 5. Նրա ցանցկեն նախշը նուրբ է ժանյակի պես։ 6. Սևանա լճի մոտ․ այնտեղ պահպանվել է խաչքարերի ամենամեծ խումբը։ 7. Քո նկարը։
+~~~`,
         ru: `## Что такое хачкар
 
 **Хачкар** (от армянских слов խաչ — «крест» и քար — «камень») — каменная плита с вырезанным крестом. Хачкары ставили в память о людях и событиях, у церквей, на дорогах и в сёлах. В Армении их многие тысячи, и нет двух совершенно одинаковых. В 2010 году искусство хачкара включили в список нематериального наследия человечества **ЮНЕСКО**.
+
+~~~art
+pic khachkar
+~~~
 
 ## Композиция хачкара
 
@@ -749,6 +977,10 @@ The ornament is made of **interlace**: bands that go over and under each other w
 
 Крест показан как **цветущее древо жизни**: он растёт из основания и даёт листья и плоды.
 
+~~~art
+steps interlace
+~~~
+
 ## Шедевры
 
 * **Хачкар Гошаванка**, вырезанный мастером **Погосом** в **1291** году, настолько тонок, что его часто называют «вышитым иглой» (ասեղնագործ). Слои ажурного узора лежат друг на друге, как кружево.
@@ -757,6 +989,10 @@ The ornament is made of **interlace**: bands that go over and under each other w
 ## Орнамент хачкара
 
 Орнамент состоит из **плетёнки**: лент, которые бесконечно проходят друг над другом и под другом. Обычно он построен на сетке, поэтому его легко рисовать на бумаге в клетку.
+
+~~~art
+pic eight-star grapevine
+~~~
 
 ## Нарисуй хачкар
 
@@ -767,8 +1003,13 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Свободные места вверху заполни двумя маленькими розетками.
 6. Раскрась в цвет туфа: розовый, охристый или серый. Вырезанные места сделай темнее.
 
-### Упражнения
+~~~art
+sketch mode=mirror paper=grey
+Нарисуй хачкар: крест по оси, плетёнка вокруг. Зеркало сделает обе стороны равными.
+~~~
 
+~~~art
+tasks
 1. Что означает слово «хачкар»?
 2. Назови четыре части композиции хачкара.
 3. Почему крест на хачкаре называют цветущим деревом?
@@ -776,10 +1017,12 @@ The ornament is made of **interlace**: bands that go over and under each other w
 5. Почему хачкар Гошаванка называют «вышитым иглой»?
 6. Где находится Норатус и чем он известен?
 7. Нарисуй на бумаге в клетку кайму-плетёнку длиной 10 клеток.
+~~~
 
-### Ответы
-
-1. «Крест-камень»: խաչ (крест) и քար (камень). 2. Например: крест, основание, побеги, верхняя часть, рамка, карниз. 3. Он растёт из основания и имеет листья и плоды. 4. Мастер Погос, в 1291 году. 5. Его ажурный узор тонок, как кружево. 6. У озера Севан; там самая большая сохранившаяся группа хачкаров. 7. Твой рисунок.`,
+~~~art
+hints
+1. «Крест-камень»: խաչ (крест) и քար (камень). 2. Например: крест, основание, побеги, верхняя часть, рамка, карниз. 3. Он растёт из основания и имеет листья и плоды. 4. Мастер Погос, в 1291 году. 5. Его ажурный узор тонок, как кружево. 6. У озера Севан; там самая большая сохранившаяся группа хачкаров. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("«Khachkar» means…", "«Խաչքար» նշանակում է…", "«Хачкар» означает…"), [t("cross-stone", "խաչ և քար", "крест-камень"), t("stone house", "քարե տուն", "каменный дом"), t("holy book", "սուրբ գիրք", "священная книга")], 0),
@@ -813,6 +1056,10 @@ A **frieze** is a long horizontal band of ornament or scenes running around a bu
 * capitals like baskets, with spiral **volutes**;
 * friezes of **grapevines** and **pomegranates**, with little figures of grape-pickers among the leaves.
 
+~~~art
+pic zvartnots
+~~~
+
 ## Akhtamar
 
 The **Church of the Holy Cross** on the island of **Akhtamar** in Lake Van was built in **915–921** for King **Gagik Artsruni**. Its outer walls are covered with reliefs like a stone book:
@@ -820,6 +1067,10 @@ The **Church of the Holy Cross** on the island of **Akhtamar** in Lake Van was b
 * **Bible scenes**: Adam and Eve, Jonah and the whale, David and Goliath;
 * King **Gagik** holding a model of the church in his hands;
 * a long **grapevine frieze** with people gathering grapes, animals and birds.
+
+~~~art
+pic grapevine bird-motif
+~~~
 
 ## Another master
 
@@ -833,8 +1084,16 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 4. Keep a **rhythm**: the curves and figures repeat at equal distances.
 5. Shade it like stone: light on top of the shapes, dark in the deep places.
 
-### Exercises
+~~~art
+pic frieze
+~~~
 
+~~~art
+pattern layout=strip rhythm=alternate palettes=mono motifs=pomegranate,leaf,bird
+~~~
+
+~~~art
+tasks
 1. What is the difference between a statue and a relief?
 2. What is the difference between a low relief and a high relief?
 3. What is a frieze?
@@ -842,10 +1101,12 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 5. When and for whom was the church of Akhtamar built?
 6. Name three Bible scenes on the walls of Akhtamar.
 7. Design a frieze of a grapevine with three small figures.
+~~~
 
-### Answers
-
-1. A statue stands free; a relief rises from a flat surface. 2. A low relief rises a little; a high relief comes out strongly. 3. A long horizontal band of ornament or scenes around a building. 4. Eagles. 5. In 915–921, for King Gagik Artsruni. 6. For example: Adam and Eve, Jonah and the whale, David and Goliath. 7. Your design.`,
+~~~art
+hints
+1. A statue stands free; a relief rises from a flat surface. 2. A low relief rises a little; a high relief comes out strongly. 3. A long horizontal band of ornament or scenes around a building. 4. Eagles. 5. In 915–921, for King Gagik Artsruni. 6. For example: Adam and Eve, Jonah and the whale, David and Goliath. 7. Your design.
+~~~`,
         hy: `## Ինչ է բարձրաքանդակը
 
 **Արձանը** կանգնած է ազատ․ կարող ես պտտվել նրա շուրջը։ **Բարձրաքանդակը** (ռելիեֆը) փորագրված է հարթ մակերեսի վրա և բարձրանում է նրանից, ինչպես քարից պատրաստված նկար։ **Ցածր ռելիեֆում** պատկերները քիչ են բարձրանում, **բարձր ռելիեֆում**՝ ուժեղ դուրս են գալիս։ Բարձրաքանդակները զարդարում էին հայկական եկեղեցիները ներսից և դրսից՝ պատերին, պատուհանների և դռների շուրջը, սյուների խոյակներին։
@@ -860,6 +1121,10 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 * զամբյուղի նման խոյակներ՝ պարուրաձև **վոլյուտներով**,
 * **խաղողի որթի** և **նռան** ֆրիզներ՝ տերևների մեջ խաղող քաղողների փոքրիկ պատկերներով։
 
+~~~art
+pic zvartnots
+~~~
+
 ## Աղթամար
 
 Վանա լճի **Աղթամար** կղզու **Սուրբ Խաչ եկեղեցին** կառուցվել է **915–921** թվականներին **Գագիկ Արծրունի** թագավորի համար։ Նրա արտաքին պատերը ծածկված են բարձրաքանդակներով, ինչպես քարե գիրք․
@@ -867,6 +1132,10 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 * **Աստվածաշնչյան տեսարաններ**՝ Ադամ և Եվա, Հովնանը և կետը, Դավիթը և Գողիաթը,
 * **Գագիկ** թագավորը՝ ձեռքերում եկեղեցու մոդելը,
 * երկար **խաղողի որթի ֆրիզ**՝ խաղող քաղող մարդկանցով, կենդանիներով և թռչուններով։
+
+~~~art
+pic grapevine bird-motif
+~~~
 
 ## Եվս մեկ վարպետ
 
@@ -880,8 +1149,16 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 4. Պահպանիր **ռիթմը**՝ ոլորաններն ու պատկերները կրկնվում են հավասար հեռավորությամբ։
 5. Ստվերագծիր քարի պես՝ ձևերի վերևում լույս, խոր տեղերում մութ։
 
-### Վարժություններ
+~~~art
+pic frieze
+~~~
 
+~~~art
+pattern layout=strip rhythm=alternate palettes=mono motifs=pomegranate,leaf,bird
+~~~
+
+~~~art
+tasks
 1. Ինչով է տարբերվում արձանը բարձրաքանդակից։
 2. Ինչով է տարբերվում ցածր ռելիեֆը բարձր ռելիեֆից։
 3. Ինչ է ֆրիզը։
@@ -889,10 +1166,12 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 5. Երբ և ում համար է կառուցվել Աղթամարի եկեղեցին։
 6. Անվանիր Աղթամարի պատերի երեք աստվածաշնչյան տեսարան։
 7. Նախագծիր խաղողի որթի ֆրիզ՝ երեք փոքր պատկերով։
+~~~
 
-### Պատասխաններ
-
-1. Արձանը կանգնած է ազատ, բարձրաքանդակը բարձրանում է հարթ մակերեսից։ 2. Ցածր ռելիեֆը քիչ է բարձրանում, բարձրն ուժեղ դուրս է գալիս։ 3. Զարդի կամ տեսարանների երկար հորիզոնական գոտի շենքի շուրջը։ 4. Արծիվներ։ 5. 915–921 թվականներին՝ Գագիկ Արծրունի թագավորի համար։ 6. Օրինակ՝ Ադամ և Եվա, Հովնանը և կետը, Դավիթը և Գողիաթը։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Արձանը կանգնած է ազատ, բարձրաքանդակը բարձրանում է հարթ մակերեսից։ 2. Ցածր ռելիեֆը քիչ է բարձրանում, բարձրն ուժեղ դուրս է գալիս։ 3. Զարդի կամ տեսարանների երկար հորիզոնական գոտի շենքի շուրջը։ 4. Արծիվներ։ 5. 915–921 թվականներին՝ Գագիկ Արծրունի թագավորի համար։ 6. Օրինակ՝ Ադամ և Եվա, Հովնանը և կետը, Դավիթը և Գողիաթը։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Что такое рельеф
 
 **Статуя** стоит свободно: её можно обойти. **Рельеф** вырезан на плоской поверхности и выступает из неё, как картина из камня. В **барельефе** (низком рельефе) фигуры выступают немного, в **горельефе** (высоком) — сильно. Рельефы украшали армянские храмы внутри и снаружи: стены, обрамления окон и дверей, капители колонн.
@@ -907,6 +1186,10 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 * капители-корзины со спиральными **волютами**;
 * фризы из **виноградной лозы** и **гранатов** с маленькими фигурками сборщиков винограда среди листьев.
 
+~~~art
+pic zvartnots
+~~~
+
 ## Ахтамар
 
 **Церковь Святого Креста** на острове **Ахтамар** на озере Ван построена в **915–921** годах для царя **Гагика Арцруни**. Её внешние стены покрыты рельефами, как каменная книга:
@@ -914,6 +1197,10 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 * **библейские сцены**: Адам и Ева, Иона и кит, Давид и Голиаф;
 * царь **Гагик** с моделью храма в руках;
 * длинный **фриз с виноградной лозой**, сборщиками винограда, зверями и птицами.
+
+~~~art
+pic grapevine bird-motif
+~~~
 
 ## Ещё один мастер
 
@@ -927,8 +1214,16 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 4. Соблюдай **ритм**: изгибы и фигуры повторяются на равных расстояниях.
 5. Растушуй как камень: свет на верхних частях форм, тень в углублениях.
 
-### Упражнения
+~~~art
+pic frieze
+~~~
 
+~~~art
+pattern layout=strip rhythm=alternate palettes=mono motifs=pomegranate,leaf,bird
+~~~
+
+~~~art
+tasks
 1. Чем статуя отличается от рельефа?
 2. Чем барельеф отличается от горельефа?
 3. Что такое фриз?
@@ -936,10 +1231,12 @@ In the 14th century the master **Momik** carved fine reliefs above the doors of 
 5. Когда и для кого построена церковь на Ахтамаре?
 6. Назови три библейские сцены на стенах Ахтамара.
 7. Придумай фриз с виноградной лозой и тремя маленькими фигурками.
+~~~
 
-### Ответы
-
-1. Статуя стоит свободно, рельеф выступает из плоской поверхности. 2. Барельеф выступает немного, горельеф — сильно. 3. Длинная горизонтальная полоса орнамента или сцен вокруг здания. 4. Орлы. 5. В 915–921 годах, для царя Гагика Арцруни. 6. Например: Адам и Ева, Иона и кит, Давид и Голиаф. 7. Твой проект.`,
+~~~art
+hints
+1. Статуя стоит свободно, рельеф выступает из плоской поверхности. 2. Барельеф выступает немного, горельеф — сильно. 3. Длинная горизонтальная полоса орнамента или сцен вокруг здания. 4. Орлы. 5. В 915–921 годах, для царя Гагика Арцруни. 6. Например: Адам и Ева, Иона и кит, Давид и Голиаф. 7. Твой проект.
+~~~`,
       },
       [
         q(t("A relief is carved…", "Բարձրաքանդակը փորագրված է…", "Рельеф вырезан…"), [t("on a flat surface", "հարթ մակերեսի վրա", "на плоской поверхности"), t("free-standing", "ազատ կանգնած", "отдельно стоящим"), t("in glass", "ապակու մեջ", "в стекле")], 0),

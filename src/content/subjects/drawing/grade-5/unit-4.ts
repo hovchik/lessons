@@ -30,6 +30,10 @@ In ancient Egypt, clothes and jewellery were not only beautiful: they showed **w
 
 The gold **mask of Tutankhamun** shows all of these: a striped head-cloth of gold and blue, the cobra and the vulture on the forehead, and a wide collar.
 
+~~~art
+pic ankh
+~~~
+
 ## Egyptian symbols
 
 | Symbol | What it meant |
@@ -40,9 +44,17 @@ The gold **mask of Tutankhamun** shows all of these: a striped head-cloth of gol
 | **eye** (the Eye of Horus) | protection and health |
 | **ankh** (a cross with a loop) | life |
 
+~~~art
+pic lotus
+~~~
+
 ## Colours and materials
 
 Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (deep blue, the sky), **turquoise** and **carnelian** (red-orange). The colours are pure and placed side by side in clear shapes. Patterns are strictly **symmetrical** and arranged in rows.
+
+~~~art
+palette egypt
+~~~
 
 ## Design a collar
 
@@ -52,8 +64,16 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 4. Add a scarab or an eye in the centre as an amulet.
 5. Colour with gold, deep blue, turquoise and red-orange. Keep it symmetrical.
 
-### Exercises
+~~~art
+pic egypt-collar
+~~~
 
+~~~art
+pattern layout=rosette rhythm=repeat palettes=egypt motifs=drop,leaf,circle,triangle
+~~~
+
+~~~art
+tasks
 1. What did clothes and jewellery show in ancient Egypt?
 2. Name three signs of the pharaoh.
 3. What did the scarab mean?
@@ -61,10 +81,12 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 5. Name three materials of Egyptian jewellery and their colours.
 6. Why is the Tutankhamun mask a good example of status decoration?
 7. Design an Egyptian collar with five rows and an amulet in the centre.
+~~~
 
-### Answers
-
-1. Who a person was: his or her place in society. 2. For example: a crown or nemes, a cobra on the forehead, a false beard, a wide collar. 3. The rising sun and new life. 4. The lotus; its flower opens every morning. 5. For example: gold (yellow), lapis lazuli (deep blue), turquoise (blue-green), carnelian (red-orange). 6. It shows the head-cloth, the cobra, the vulture and the collar, all signs of royal power. 7. Your design.`,
+~~~art
+hints
+1. Who a person was: his or her place in society. 2. For example: a crown or nemes, a cobra on the forehead, a false beard, a wide collar. 3. The rising sun and new life. 4. The lotus; its flower opens every morning. 5. For example: gold (yellow), lapis lazuli (deep blue), turquoise (blue-green), carnelian (red-orange). 6. It shows the head-cloth, the cobra, the vulture and the collar, all signs of royal power. 7. Your design.
+~~~`,
         hy: `## Զարդը պատմում է, թե ով ես դու
 
 Հին Եգիպտոսում հագուստն ու զարդերը միայն գեղեցիկ չէին․ դրանք ցույց էին տալիս, թե **ով է մարդը**։ Փարավոնը, քրմերը, պաշտոնյաները և հողագործները տարբեր տեսք ունեին։ Որքան հարուստ և կարևոր էր մարդը, այնքան շատ ոսկի և այնքան վառ քարեր։
@@ -78,6 +100,10 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 
 **Թութանխամոնի** ոսկե դիմակը ցույց է տալիս այս ամենը՝ ոսկեգույն և կապույտ գծավոր գլխաշոր, ճակատին կոբրա և անգղ, լայն մանյակ։
 
+~~~art
+pic ankh
+~~~
+
 ## Եգիպտական խորհրդանիշներ
 
 | Խորհրդանիշ | Ինչ էր նշանակում |
@@ -88,9 +114,17 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 | **աչք** (Հորուսի աչքը) | պաշտպանություն և առողջություն |
 | **անխ** (օղակով խաչ) | կյանք |
 
+~~~art
+pic lotus
+~~~
+
 ## Գույներ և նյութեր
 
 Եգիպտացի ոսկերիչները սիրում էին **ոսկին** (արևի գույնը), **լազուրիտը** (մուգ կապույտ, երկինք), **փիրուզը** և **սարդիոնը** (կարմրանարնջագույն)։ Գույները մաքուր են և դրված են կողք կողքի՝ հստակ ձևերով։ Նախշերը խիստ **համաչափ** են և դասավորված շարքերով։
+
+~~~art
+palette egypt
+~~~
 
 ## Նախագծիր մանյակ
 
@@ -100,8 +134,16 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 4. Կենտրոնում ավելացրու ջրաբզեզ կամ աչք՝ որպես հմայիլ։
 5. Ներկիր ոսկեգույնով, մուգ կապույտով, փիրուզագույնով և կարմրանարնջագույնով։ Պահպանիր համաչափությունը։
 
-### Վարժություններ
+~~~art
+pic egypt-collar
+~~~
 
+~~~art
+pattern layout=rosette rhythm=repeat palettes=egypt motifs=drop,leaf,circle,triangle
+~~~
+
+~~~art
+tasks
 1. Ինչ էին ցույց տալիս հագուստն ու զարդերը Հին Եգիպտոսում։
 2. Անվանիր փարավոնի երեք նշան։
 3. Ինչ էր նշանակում ջրաբզեզը։
@@ -109,10 +151,12 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 5. Անվանիր եգիպտական զարդերի երեք նյութ և դրանց գույները։
 6. Ինչու է Թութանխամոնի դիմակը կարգավիճակի զարդի լավ օրինակ։
 7. Նախագծիր եգիպտական մանյակ՝ հինգ շարքով և կենտրոնում հմայիլով։
+~~~
 
-### Պատասխաններ
-
-1. Թե ով է մարդը՝ նրա տեղը հասարակության մեջ։ 2. Օրինակ՝ թագ կամ նեմես, ճակատին կոբրա, արհեստական մորուք, լայն մանյակ։ 3. Ծագող արև և նոր կյանք։ 4. Լոտոսը․ նրա ծաղիկը բացվում է ամեն առավոտ։ 5. Օրինակ՝ ոսկի (դեղին), լազուրիտ (մուգ կապույտ), փիրուզ (կապտականաչ), սարդիոն (կարմրանարնջագույն)։ 6. Այն ցույց է տալիս գլխաշորը, կոբրան, անգղը և մանյակը՝ թագավորական իշխանության բոլոր նշանները։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Թե ով է մարդը՝ նրա տեղը հասարակության մեջ։ 2. Օրինակ՝ թագ կամ նեմես, ճակատին կոբրա, արհեստական մորուք, լայն մանյակ։ 3. Ծագող արև և նոր կյանք։ 4. Լոտոսը․ նրա ծաղիկը բացվում է ամեն առավոտ։ 5. Օրինակ՝ ոսկի (դեղին), լազուրիտ (մուգ կապույտ), փիրուզ (կապտականաչ), սարդիոն (կարմրանարնջագույն)։ 6. Այն ցույց է տալիս գլխաշորը, կոբրան, անգղը և մանյակը՝ թագավորական իշխանության բոլոր նշանները։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Украшение говорит, кто ты
 
 В Древнем Египте одежда и украшения были не только красивыми: они показывали, **кем был человек**. Фараон, жрецы, чиновники и земледельцы выглядели по-разному. Чем богаче и важнее человек, тем больше золота и ярче камни.
@@ -126,6 +170,10 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 
 Золотая **маска Тутанхамона** показывает всё это: полосатый платок из золота и синевы, кобру и коршуна на лбу, широкое ожерелье.
 
+~~~art
+pic ankh
+~~~
+
 ## Египетские символы
 
 | Символ | Что означал |
@@ -136,9 +184,17 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 | **глаз** (Око Гора) | защита и здоровье |
 | **анх** (крест с петлёй) | жизнь |
 
+~~~art
+pic lotus
+~~~
+
 ## Цвета и материалы
 
 Египетские ювелиры любили **золото** (цвет солнца), **лазурит** (глубокий синий, небо), **бирюзу** и **сердолик** (красно-оранжевый). Цвета чистые и стоят рядом чёткими формами. Узоры строго **симметричны** и расположены рядами.
+
+~~~art
+palette egypt
+~~~
 
 ## Придумай ожерелье
 
@@ -148,8 +204,16 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 4. В центре добавь скарабея или глаз как амулет.
 5. Раскрась золотым, тёмно-синим, бирюзовым и красно-оранжевым. Соблюдай симметрию.
 
-### Упражнения
+~~~art
+pic egypt-collar
+~~~
 
+~~~art
+pattern layout=rosette rhythm=repeat palettes=egypt motifs=drop,leaf,circle,triangle
+~~~
+
+~~~art
+tasks
 1. Что показывали одежда и украшения в Древнем Египте?
 2. Назови три знака фараона.
 3. Что означал скарабей?
@@ -157,10 +221,12 @@ Egyptian jewellers loved **gold** (the colour of the sun), **lapis lazuli** (dee
 5. Назови три материала египетских украшений и их цвета.
 6. Почему маска Тутанхамона — хороший пример украшения как знака положения?
 7. Придумай египетское ожерелье из пяти рядов с амулетом в центре.
+~~~
 
-### Ответы
-
-1. Кем был человек, его место в обществе. 2. Например: корона или немес, кобра на лбу, накладная борода, широкое ожерелье. 3. Восходящее солнце и новую жизнь. 4. Лотос; его цветок раскрывается каждое утро. 5. Например: золото (жёлтый), лазурит (тёмно-синий), бирюза (голубовато-зелёный), сердолик (красно-оранжевый). 6. На ней платок, кобра, коршун и ожерелье — все знаки царской власти. 7. Твой проект.`,
+~~~art
+hints
+1. Кем был человек, его место в обществе. 2. Например: корона или немес, кобра на лбу, накладная борода, широкое ожерелье. 3. Восходящее солнце и новую жизнь. 4. Лотос; его цветок раскрывается каждое утро. 5. Например: золото (жёлтый), лазурит (тёмно-синий), бирюза (голубовато-зелёный), сердолик (красно-оранжевый). 6. На ней платок, кобра, коршун и ожерелье — все знаки царской власти. 7. Твой проект.
+~~~`,
       },
       [
         q(t("In ancient Egypt jewellery showed…", "Հին Եգիպտոսում զարդերը ցույց էին տալիս…", "В Древнем Египте украшения показывали…"), [t("a person's place in society", "մարդու տեղը հասարակության մեջ", "место человека в обществе"), t("the weather", "եղանակը", "погоду"), t("the time of day", "օրվա ժամը", "время суток")], 0),
@@ -201,9 +267,18 @@ The traditional Armenian costume is called the **taraz**. It differed from regio
 
 Today the taraz is worn in folk dance ensembles and on holidays.
 
+~~~art
+pic taraz
+~~~
+
 ## Silhouette first
 
 When you draw a costume, begin with the **silhouette**: is it wide or narrow? Long or short? Straight or flowing? Then add folds, then details of decoration.
+
+~~~art
+pic mode=silhouette taraz sarafan
+A silhouette shows the epoch before any detail. Guess the costume by its outline.
+~~~
 
 ## Draw a costume
 
@@ -213,8 +288,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 4. Decorate the collar, cuffs, hem and belt.
 5. Colour it in the palette of the epoch.
 
-### Exercises
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. What can a costume tell about a person? Name four things.
 2. What were the chiton and the himation?
 3. Describe the Baroque silhouette.
@@ -222,10 +301,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 5. Name three parts of the women's taraz.
 6. Where was decoration usually placed on a costume?
 7. Draw two figures from different epochs and compare their silhouettes.
+~~~
 
-### Answers
-
-1. For example: the epoch, the country, age, work, position. 2. A long tunic and a cloak of ancient Greece. 3. Wide, rich and heavy, with lace, wigs and wide skirts. 4. The traditional Armenian costume. 5. For example: arkhaluk, apron, silver belt, headdress with coins, scarf. 6. On the collar, cuffs, hem and belt. 7. Your drawing.`,
+~~~art
+hints
+1. For example: the epoch, the country, age, work, position. 2. A long tunic and a cloak of ancient Greece. 3. Wide, rich and heavy, with lace, wigs and wide skirts. 4. The traditional Armenian costume. 5. For example: arkhaluk, apron, silver belt, headdress with coins, scarf. 6. On the collar, cuffs, hem and belt. 7. Your drawing.
+~~~`,
         hy: `## Հագուստն որպես ժամանակի հայելի
 
 Տարազը շատ բան է պատմում՝ **դարաշրջանը**, **երկիրը**, մարդու **տարիքը**, **աշխատանքը** և **դիրքը**։ Նայիր ձևին (ուրվագծին), գործվածքին, գույներին և զարդարանքին։
@@ -247,9 +328,18 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 
 Այսօր տարազ կրում են ժողովրդական պարի համույթներում և տոներին։
 
+~~~art
+pic taraz
+~~~
+
 ## Սկզբում՝ ուրվագիծը
 
 Երբ տարազ ես նկարում, սկսիր **ուրվագծից**․ այն լայն է, թե նեղ, երկար, թե կարճ, ուղիղ, թե ծածանվող։ Հետո ավելացրու ծալքերը, հետո՝ զարդարանքի մանրամասները։
+
+~~~art
+pic mode=silhouette taraz sarafan
+Ուրվագիծը ցույց է տալիս դարաշրջանը դեռ մինչև մանրուքները։ Գուշակի՛ր տարազը ըստ ուրվագծի։
+~~~
 
 ## Նկարիր տարազ
 
@@ -259,8 +349,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 4. Զարդարիր օձիքը, թևքաբերանները, փեշի եզրը և գոտին։
 5. Ներկիր դարաշրջանի գունապնակով։
 
-### Վարժություններ
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Ինչ կարող է տարազը պատմել մարդու մասին։ Անվանիր չորս բան։
 2. Ինչ էին խիտոնը և հիմատիոնը։
 3. Նկարագրիր բարոկկոյի ուրվագիծը։
@@ -268,10 +362,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 5. Անվանիր կանացի տարազի երեք մաս։
 6. Որտեղ էր սովորաբար լինում զարդարանքը տարազի վրա։
 7. Նկարիր տարբեր դարաշրջանների երկու կերպար և համեմատիր նրանց ուրվագծերը։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ դարաշրջանը, երկիրը, տարիքը, աշխատանքը, դիրքը։ 2. Հին Հունաստանի երկար շապիկ և թիկնոց։ 3. Լայն, հարուստ և ծանր՝ ժանյակով, կեղծամներով և լայն փեշերով։ 4. Ավանդական հայկական հագուստը։ 5. Օրինակ՝ արխալուղ, գոգնոց, արծաթե գոտի, մետաղադրամներով գլխազարդ, գլխաշոր։ 6. Օձիքին, թևքաբերաններին, փեշի եզրին և գոտուն։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Օրինակ՝ դարաշրջանը, երկիրը, տարիքը, աշխատանքը, դիրքը։ 2. Հին Հունաստանի երկար շապիկ և թիկնոց։ 3. Լայն, հարուստ և ծանր՝ ժանյակով, կեղծամներով և լայն փեշերով։ 4. Ավանդական հայկական հագուստը։ 5. Օրինակ՝ արխալուղ, գոգնոց, արծաթե գոտի, մետաղադրամներով գլխազարդ, գլխաշոր։ 6. Օձիքին, թևքաբերաններին, փեշի եզրին և գոտուն։ 7. Քո նկարը։
+~~~`,
         ru: `## Одежда как зеркало времени
 
 Костюм многое рассказывает: **эпоху**, **страну**, **возраст** человека, его **занятие** и **положение**. Смотри на форму (силуэт), ткань, цвета и украшения.
@@ -293,9 +389,18 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 
 Сегодня тараз надевают в ансамблях народного танца и по праздникам.
 
+~~~art
+pic taraz
+~~~
+
 ## Сначала силуэт
 
 Рисуя костюм, начни с **силуэта**: широкий или узкий? Длинный или короткий? Прямой или струящийся? Потом добавь складки, потом детали украшения.
+
+~~~art
+pic mode=silhouette taraz sarafan
+Силуэт показывает эпоху раньше любых деталей. Угадай костюм по контуру.
+~~~
 
 ## Нарисуй костюм
 
@@ -305,8 +410,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 4. Укрась ворот, манжеты, подол и пояс.
 5. Раскрась в палитре эпохи.
 
-### Упражнения
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Что костюм может рассказать о человеке? Назови четыре вещи.
 2. Что такое хитон и гиматий?
 3. Опиши силуэт барокко.
@@ -314,10 +423,12 @@ When you draw a costume, begin with the **silhouette**: is it wide or narrow? Lo
 5. Назови три части женского тараза.
 6. Где обычно располагался декор на костюме?
 7. Нарисуй две фигуры разных эпох и сравни их силуэты.
+~~~
 
-### Ответы
-
-1. Например: эпоху, страну, возраст, занятие, положение. 2. Длинная туника и плащ Древней Греции. 3. Широкий, пышный и тяжёлый, с кружевом, париками и широкими юбками. 4. Традиционный армянский костюм. 5. Например: архалук, передник, серебряный пояс, головной убор с монетами, платок. 6. На вороте, манжетах, подоле и поясе. 7. Твой рисунок.`,
+~~~art
+hints
+1. Например: эпоху, страну, возраст, занятие, положение. 2. Длинная туника и плащ Древней Греции. 3. Широкий, пышный и тяжёлый, с кружевом, париками и широкими юбками. 4. Традиционный армянский костюм. 5. Например: архалук, передник, серебряный пояс, головной убор с монетами, платок. 6. На вороте, манжетах, подоле и поясе. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("The general shape of a costume is its…", "Տարազի ընդհանուր ձևը նրա…", "Общая форма костюма — это его…"), [t("silhouette", "ուրվագիծն է", "силуэт"), t("fabric", "գործվածքն է", "ткань"), t("button", "կոճակն է", "пуговица")], 0),
@@ -351,6 +462,10 @@ In the Middle Ages knights fought in armour and helmets, and their faces could n
 | **crown or helmet** | above the shield |
 | **motto** | a short saying on a ribbon below |
 
+~~~art
+pic shield
+~~~
+
 ## Heraldic colours
 
 Heraldry uses few colours, all pure and bright:
@@ -359,6 +474,10 @@ Heraldry uses few colours, all pure and bright:
 * **colours:** red, blue, green, black, purple.
 
 The main rule: do **not** put a metal on a metal or a colour on a colour. A gold lion on a red field is right; a red lion on a blue field is hard to see from far away. This rule makes a coat of arms clear at a distance.
+
+~~~art
+palette heraldry
+~~~
 
 ## The coat of arms of Armenia
 
@@ -369,6 +488,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 * The shield is held by an **eagle** and a **lion**: wisdom, strength, courage.
 * Below are a **sword** (strength of the nation), a **broken chain** (freedom), a **sheaf of wheat** (work), a **pen** (culture and learning) and a **ribbon**.
 
+~~~art
+palette armenia-flag
+~~~
+
 ## Draw a coat of arms
 
 1. Draw a shield shape and choose a field colour.
@@ -376,8 +499,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 3. Draw two supporters and a ribbon with a motto below.
 4. Check the rule of colours.
 
-### Exercises
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. Why did knights paint signs on their shields?
 2. Name five parts of a coat of arms.
 3. What are the two heraldic metals?
@@ -385,10 +512,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 5. What is shown in the centre of the coat of arms of Armenia?
 6. Which animals hold the shield, and what do they mean?
 7. What do the sword, the broken chain, the wheat and the pen mean?
+~~~
 
-### Answers
-
-1. To recognize each other in armour. 2. Shield (field), charges, supporters, crown or helmet, motto. 3. Gold and silver. 4. No metal on metal and no colour on colour; so the coat of arms is clear at a distance. 5. Mount Ararat with Noah's Ark. 6. An eagle and a lion: wisdom, strength, courage. 7. Strength of the nation, freedom, work, culture and learning.`,
+~~~art
+hints
+1. To recognize each other in armour. 2. Shield (field), charges, supporters, crown or helmet, motto. 3. Gold and silver. 4. No metal on metal and no colour on colour; so the coat of arms is clear at a distance. 5. Mount Ararat with Noah's Ark. 6. An eagle and a lion: wisdom, strength, courage. 7. Strength of the nation, freedom, work, culture and learning.
+~~~`,
         hy: `## Ինչու հայտնվեցին զինանշանները
 
 Միջնադարում ասպետները կռվում էին զրահով և սաղավարտով, և նրանց դեմքերը չէին երևում։ Իրար ճանաչելու համար նրանք իրենց **վահանների** վրա նշաններ էին նկարում։ Այդ նշանները դարձան տոհմական **զինանշաններ**, որոնք հորից անցնում էին որդուն։ Հետագայում քաղաքներն ու երկրներն էլ ստացան իրենց զինանշանները։ Զինանշանների գիտությունը կոչվում է **հերալդիկա** (զինանշանագիտություն)։
@@ -403,6 +532,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 | **թագ կամ սաղավարտ** | վահանից վեր |
 | **նշանաբան** | կարճ ասույթ ներքևի ժապավենի վրա |
 
+~~~art
+pic shield
+~~~
+
 ## Զինանշանային գույներ
 
 Հերալդիկան օգտագործում է քիչ գույներ՝ բոլորը մաքուր և վառ․
@@ -411,6 +544,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 * **գույներ**՝ կարմիր, կապույտ, կանաչ, սև, ծիրանի։
 
 Գլխավոր կանոնը․ **մի՛** դիր մետաղը մետաղի վրա և գույնը գույնի վրա։ Ոսկե առյուծը կարմիր դաշտի վրա ճիշտ է, իսկ կարմիր առյուծը կապույտ դաշտի վրա հեռվից դժվար է երևում։ Այս կանոնը զինանշանը հեռվից հստակ է դարձնում։
+
+~~~art
+palette heraldry
+~~~
 
 ## Հայաստանի զինանշանը
 
@@ -421,6 +558,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 * Վահանը պահում են **արծիվն** ու **առյուծը**՝ իմաստություն, ուժ, արիություն։
 * Ներքևում **սուր** է (ժողովրդի ուժը), **կոտրված շղթա** (ազատություն), **ցորենի հասկեր** (աշխատանք), **գրիչ** (մշակույթ և կրթություն) և **ժապավեն**։
 
+~~~art
+palette armenia-flag
+~~~
+
 ## Նկարիր զինանշան
 
 1. Նկարիր վահանի ձև և ընտրիր դաշտի գույնը։
@@ -428,8 +569,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 3. Նկարիր երկու վահանակիր և ներքևում նշանաբանով ժապավեն։
 4. Ստուգիր գույների կանոնը։
 
-### Վարժություններ
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. Ինչու էին ասպետները նշաններ նկարում իրենց վահանների վրա։
 2. Անվանիր զինանշանի հինգ մաս։
 3. Որոնք են երկու զինանշանային մետաղները։
@@ -437,10 +582,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 5. Ինչ է պատկերված Հայաստանի զինանշանի կենտրոնում։
 6. Որ կենդանիներն են պահում վահանը, և ինչ են նրանք նշանակում։
 7. Ինչ են նշանակում սուրը, կոտրված շղթան, ցորենը և գրիչը։
+~~~
 
-### Պատասխաններ
-
-1. Որ զրահի մեջ իրար ճանաչեն։ 2. Վահան (դաշտ), պատկերներ, վահանակիրներ, թագ կամ սաղավարտ, նշանաբան։ 3. Ոսկի և արծաթ։ 4. Մետաղը մետաղի վրա և գույնը գույնի վրա չի կարելի դնել, որ զինանշանը հեռվից հստակ լինի։ 5. Արարատ լեռը Նոյան տապանով։ 6. Արծիվն ու առյուծը՝ իմաստություն, ուժ, արիություն։ 7. Ժողովրդի ուժը, ազատություն, աշխատանք, մշակույթ և կրթություն։`,
+~~~art
+hints
+1. Որ զրահի մեջ իրար ճանաչեն։ 2. Վահան (դաշտ), պատկերներ, վահանակիրներ, թագ կամ սաղավարտ, նշանաբան։ 3. Ոսկի և արծաթ։ 4. Մետաղը մետաղի վրա և գույնը գույնի վրա չի կարելի դնել, որ զինանշանը հեռվից հստակ լինի։ 5. Արարատ լեռը Նոյան տապանով։ 6. Արծիվն ու առյուծը՝ իմաստություն, ուժ, արիություն։ 7. Ժողովրդի ուժը, ազատություն, աշխատանք, մշակույթ և կրթություն։
+~~~`,
         ru: `## Зачем появились гербы
 
 В Средние века рыцари сражались в доспехах и шлемах, и их лиц не было видно. Чтобы узнавать друг друга, они рисовали знаки на **щитах**. Эти знаки стали родовыми **гербами**, которые переходили от отца к сыну. Позже свои гербы получили города и страны. Наука о гербах называется **геральдикой**.
@@ -455,6 +602,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 | **корона или шлем** | над щитом |
 | **девиз** | короткое изречение на ленте внизу |
 
+~~~art
+pic shield
+~~~
+
 ## Геральдические цвета
 
 Геральдика использует немного цветов, все чистые и яркие:
@@ -463,6 +614,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 * **цвета (финифти):** красный, синий, зелёный, чёрный, пурпурный.
 
 Главное правило: **не** класть металл на металл и цвет на цвет. Золотой лев на красном поле — правильно; красный лев на синем поле издалека трудно разглядеть. Это правило делает герб ясным на расстоянии.
+
+~~~art
+palette heraldry
+~~~
 
 ## Герб Армении
 
@@ -473,6 +628,10 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 * Щит держат **орёл** и **лев**: мудрость, сила, мужество.
 * Внизу — **меч** (сила народа), **разорванная цепь** (свобода), **сноп пшеницы** (труд), **перо** (культура и знания) и **лента**.
 
+~~~art
+palette armenia-flag
+~~~
+
 ## Нарисуй герб
 
 1. Нарисуй форму щита и выбери цвет поля.
@@ -480,8 +639,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 3. Нарисуй двух щитодержателей и ленту с девизом внизу.
 4. Проверь правило цветов.
 
-### Упражнения
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. Зачем рыцари рисовали знаки на щитах?
 2. Назови пять частей герба.
 3. Какие два геральдических металла ты знаешь?
@@ -489,10 +652,12 @@ The coat of arms of the Republic of Armenia was adopted in 1992.
 5. Что изображено в центре герба Армении?
 6. Какие животные держат щит и что они означают?
 7. Что означают меч, разорванная цепь, пшеница и перо?
+~~~
 
-### Ответы
-
-1. Чтобы узнавать друг друга в доспехах. 2. Щит (поле), фигуры, щитодержатели, корона или шлем, девиз. 3. Золото и серебро. 4. Не класть металл на металл и цвет на цвет, чтобы герб был ясен издалека. 5. Гора Арарат с Ноевым ковчегом. 6. Орёл и лев: мудрость, сила, мужество. 7. Силу народа, свободу, труд, культуру и знания.`,
+~~~art
+hints
+1. Чтобы узнавать друг друга в доспехах. 2. Щит (поле), фигуры, щитодержатели, корона или шлем, девиз. 3. Золото и серебро. 4. Не класть металл на металл и цвет на цвет, чтобы герб был ясен издалека. 5. Гора Арарат с Ноевым ковчегом. 6. Орёл и лев: мудрость, сила, мужество. 7. Силу народа, свободу, труд, культуру и знания.
+~~~`,
       },
       [
         q(t("Coats of arms first appeared on…", "Զինանշաններն առաջին անգամ հայտնվեցին…", "Гербы впервые появились на…"), [t("knights' shields", "ասպետների վահանների վրա", "щитах рыцарей"), t("coins only", "միայն մետաղադրամների վրա", "только на монетах"), t("carpets", "գորգերի վրա", "коврах")], 0),
@@ -522,12 +687,21 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 * The **red cross** and **red crescent**: help and protection for the wounded.
 * School emblems often use an **open book**, a **torch** or a **tree**: knowledge, light, growth.
 
+~~~art
+pic logo-kinds
+~~~
+
 ## A good emblem
 
 1. **Simple:** it can be drawn from memory.
 2. **Clear:** it reads well even very small, on a badge.
 3. **Meaningful:** each part tells something.
 4. **Few colours:** two or three.
+
+~~~art
+pic mode=silhouette dove stork horse
+A good emblem is clear even as a black shape. Test these, then test yours.
+~~~
 
 ## Design the emblem of your class
 
@@ -537,8 +711,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 4. Put the main sign in the centre and the name or number of the class on a ribbon or around the edge.
 5. Draw three versions small, vote for the best one, then draw it large and colour it with two or three colours.
 
-### Exercises
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. What is the difference between a coat of arms and an emblem?
 2. Name the five colours of the Olympic rings.
 3. What do the five rings stand for?
@@ -546,10 +724,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 5. Name four signs of a good emblem.
 6. Why should an emblem read well when it is very small?
 7. Design an emblem for your class with a motto.
+~~~
 
-### Answers
-
-1. A coat of arms follows strict heraldic rules; an emblem is a freer picture-sign of a group. 2. Blue, yellow, black, green, red. 3. The five inhabited parts of the world joined by sport. 4. They mean knowledge and light. 5. Simple, clear, meaningful, with few colours. 6. Because it is often printed small, for example on a badge. 7. Your design.`,
+~~~art
+hints
+1. A coat of arms follows strict heraldic rules; an emblem is a freer picture-sign of a group. 2. Blue, yellow, black, green, red. 3. The five inhabited parts of the world joined by sport. 4. They mean knowledge and light. 5. Simple, clear, meaningful, with few colours. 6. Because it is often printed small, for example on a badge. 7. Your design.
+~~~`,
         hy: `## Զինանշան, թե խորհրդանշան
 
 **Զինանշանը** հետևում է հին խիստ կանոնների՝ վահան, զինանշանային գույներ, վահանակիրներ։ **Խորհրդանշանը** (էմբլեմը) ավելի ազատ է։ Այն մարդկանց խմբի պատկեր-նշան է՝ դպրոցի, ակումբի, թիմի, փառատոնի։ Այն կարող է ունենալ ցանկացած ձև՝ շրջան, աստղ, կրծքանշան։
@@ -560,12 +740,21 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 * **Կարմիր խաչ** և **կարմիր մահիկ**՝ օգնություն և պաշտպանություն վիրավորներին։
 * Դպրոցական խորհրդանշաններում հաճախ կա **բաց գիրք**, **ջահ** կամ **ծառ**՝ գիտելիք, լույս, աճ։
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Լավ խորհրդանշան
 
 1. **Պարզ է**՝ կարելի է նկարել հիշողությամբ։
 2. **Հստակ է**՝ լավ է երևում նույնիսկ շատ փոքր՝ կրծքանշանի վրա։
 3. **Իմաստալից է**՝ ամեն մասն ինչ-որ բան է պատմում։
 4. **Քիչ գույներ ունի**՝ երկու կամ երեք։
+
+~~~art
+pic mode=silhouette dove stork horse
+Լավ խորհրդանշանը հասկանալի է նույնիսկ որպես սև ձև։ Ստուգի՛ր սրանք, հետո՝ քոնը։
+~~~
 
 ## Նախագծիր քո դասարանի խորհրդանշանը
 
@@ -575,8 +764,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 4. Գլխավոր նշանը դրեք կենտրոնում, իսկ դասարանի անունը կամ համարը՝ ժապավենի վրա կամ եզրով։
 5. Նկարեք երեք փոքր տարբերակ, քվեարկեք լավագույնի օգտին, հետո այն մեծ նկարեք և ներկեք երկու կամ երեք գույնով։
 
-### Վարժություններ
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. Ինչով է տարբերվում զինանշանը խորհրդանշանից։
 2. Անվանիր օլիմպիական օղակների հինգ գույները։
 3. Ինչ են նշանակում հինգ օղակները։
@@ -584,10 +777,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 5. Անվանիր լավ խորհրդանշանի չորս նշան։
 6. Ինչու պետք է խորհրդանշանը լավ երևա, երբ շատ փոքր է։
 7. Նախագծիր քո դասարանի խորհրդանշանը՝ նշանաբանով։
+~~~
 
-### Պատասխաններ
-
-1. Զինանշանը հետևում է խիստ զինանշանային կանոնների, խորհրդանշանը խմբի ավելի ազատ պատկեր-նշան է։ 2. Կապույտ, դեղին, սև, կանաչ, կարմիր։ 3. Աշխարհի հինգ բնակեցված մասերը՝ միավորված սպորտով։ 4. Դրանք նշանակում են գիտելիք և լույս։ 5. Պարզ, հստակ, իմաստալից, քիչ գույներով։ 6. Որովհետև այն հաճախ տպում են փոքր, օրինակ՝ կրծքանշանի վրա։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Զինանշանը հետևում է խիստ զինանշանային կանոնների, խորհրդանշանը խմբի ավելի ազատ պատկեր-նշան է։ 2. Կապույտ, դեղին, սև, կանաչ, կարմիր։ 3. Աշխարհի հինգ բնակեցված մասերը՝ միավորված սպորտով։ 4. Դրանք նշանակում են գիտելիք և լույս։ 5. Պարզ, հստակ, իմաստալից, քիչ գույներով։ 6. Որովհետև այն հաճախ տպում են փոքր, օրինակ՝ կրծքանշանի վրա։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Герб или эмблема?
 
 **Герб** подчиняется строгим старинным правилам: щит, геральдические цвета, щитодержатели. **Эмблема** свободнее. Это знак-рисунок группы людей: школы, клуба, команды, фестиваля. Она может быть любой формы: круг, звезда, значок.
@@ -598,12 +793,21 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 * **Красный крест** и **красный полумесяц**: помощь и защита раненым.
 * В школьных эмблемах часто есть **раскрытая книга**, **факел** или **дерево**: знание, свет, рост.
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Хорошая эмблема
 
 1. **Простая:** её можно нарисовать по памяти.
 2. **Ясная:** читается даже совсем маленькой, на значке.
 3. **Осмысленная:** каждая часть что-то рассказывает.
 4. **Немногоцветная:** два-три цвета.
+
+~~~art
+pic mode=silhouette dove stork horse
+Хорошая эмблема понятна даже чёрным пятном. Проверь эти, а потом свою.
+~~~
 
 ## Придумай эмблему своего класса
 
@@ -613,8 +817,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 4. Главный знак поместите в центр, а название или номер класса — на ленту или по краю.
 5. Нарисуйте три маленьких варианта, проголосуйте за лучший, потом нарисуйте его крупно в двух-трёх цветах.
 
-### Упражнения
+~~~art
+steps shield
+~~~
 
+~~~art
+tasks
 1. Чем герб отличается от эмблемы?
 2. Назови пять цветов олимпийских колец.
 3. Что означают пять колец?
@@ -622,10 +830,12 @@ A **coat of arms** follows strict old rules: a shield, heraldic colours, support
 5. Назови четыре признака хорошей эмблемы.
 6. Почему эмблема должна хорошо читаться в маленьком размере?
 7. Придумай эмблему своего класса с девизом.
+~~~
 
-### Ответы
-
-1. Герб подчиняется строгим геральдическим правилам, эмблема — более свободный знак группы. 2. Синий, жёлтый, чёрный, зелёный, красный. 3. Пять населённых частей света, объединённых спортом. 4. Они означают знание и свет. 5. Простая, ясная, осмысленная, немногоцветная. 6. Её часто печатают маленькой, например на значке. 7. Твой проект.`,
+~~~art
+hints
+1. Герб подчиняется строгим геральдическим правилам, эмблема — более свободный знак группы. 2. Синий, жёлтый, чёрный, зелёный, красный. 3. Пять населённых частей света, объединённых спортом. 4. Они означают знание и свет. 5. Простая, ясная, осмысленная, немногоцветная. 6. Её часто печатают маленькой, например на значке. 7. Твой проект.
+~~~`,
       },
       [
         q(t("An emblem compared with a coat of arms is…", "Զինանշանի համեմատ խորհրդանշանը…", "По сравнению с гербом эмблема…"), [t("freer", "ավելի ազատ է", "свободнее"), t("stricter", "ավելի խիստ է", "строже"), t("always a shield", "միշտ վահան է", "всегда щит")], 0),
@@ -657,6 +867,10 @@ Long ago, potters and smiths put a small **mark** on their work so people knew w
 | **symbol** | a simple picture without words | a bird, a leaf, a mountain, a geometric shape |
 | **combination** | a symbol and a name together | the most common kind |
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Rules of a good logo
 
 * **One idea.** A logo is not a whole picture; it says one thing.
@@ -669,6 +883,10 @@ Long ago, potters and smiths put a small **mark** on their work so people knew w
 
 In Armenian manuscripts, letters were turned into birds and animals. A modern designer can do the same: the letter **Ո** can become a horseshoe, the letter **O** a sun, the letter **Ш** a crown.
 
+~~~art
+letters
+~~~
+
 ## Design a logo
 
 1. Invent the owner: a bakery, a chess club, a music festival, an eco-shop.
@@ -677,8 +895,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 4. Choose the best one and draw it large and clean.
 5. Check it in black and white and very small. Then add one or two colours.
 
-### Exercises
+~~~art
+steps logo
+~~~
 
+~~~art
+tasks
 1. What did old craftsmen put on their work, and why?
 2. What signboard could a baker hang over the shop?
 3. Name the three kinds of logos.
@@ -686,10 +908,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 5. What character should a logo for a library have? For a toy shop?
 6. How can a letter become a picture? Give an example.
 7. Design a logo for a chess club.
+~~~
 
-### Answers
-
-1. A small mark, so people knew who made it. 2. For example, a loaf of bread. 3. Wordmark, symbol, combination. 4. If it is clear without colour, it works everywhere, even in a newspaper or on a stamp. 5. Calm for a library, playful for a toy shop. 6. Its shape is turned into an object, for example O into a sun. 7. Your design.`,
+~~~art
+hints
+1. A small mark, so people knew who made it. 2. For example, a loaf of bread. 3. Wordmark, symbol, combination. 4. If it is clear without colour, it works everywhere, even in a newspaper or on a stamp. 5. Calm for a library, playful for a toy shop. 6. Its shape is turned into an object, for example O into a sun. 7. Your design.
+~~~`,
         hy: `## Վարպետի դրոշմից մինչև լոգո
 
 Վաղուց բրուտներն ու դարբիններն իրենց գործի վրա փոքր **դրոշմ** էին դնում, որ մարդիկ իմանան, թե ով է այն պատրաստել։ Վաճառականները խանութների վերևում պատկերով **ցուցանակներ** էին կախում՝ կոշիկ կոշկակարի համար, հաց հացթուխի համար։ Այսօր ընկերությունները, դպրոցները, թանգարաններն ու փառատոներն ունեն **լոգոներ**՝ կարճ նշաններ, որոնք ճանաչվում են մեկ վայրկյանում։
@@ -701,6 +925,10 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 | **բառային լոգո** | հատուկ տառատեսակով գրված անուն | տառերն իրենք են պատկերը |
 | **խորհրդանիշ** | պարզ պատկեր առանց բառերի | թռչուն, տերև, լեռ, երկրաչափական ձև |
 | **համակցված** | խորհրդանիշ և անուն միասին | ամենատարածված տեսակը |
+
+~~~art
+pic logo-kinds
+~~~
 
 ## Լավ լոգոյի կանոնները
 
@@ -714,6 +942,10 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 
 Հայկական ձեռագրերում տառերը վերածվում էին թռչունների և կենդանիների։ Ժամանակակից դիզայները կարող է նույնն անել․ **Ո** տառը կարող է պայտ դառնալ, **Օ** տառը՝ արև, **Ш** տառը՝ թագ։
 
+~~~art
+letters
+~~~
+
 ## Նախագծիր լոգո
 
 1. Հորինիր տիրոջը՝ հացատուն, շախմատի ակումբ, երաժշտական փառատոն, էկո-խանութ։
@@ -722,8 +954,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 4. Ընտրիր լավագույնը և նկարիր այն մեծ ու մաքուր։
 5. Ստուգիր այն սև-սպիտակում և շատ փոքր չափով։ Հետո ավելացրու մեկ կամ երկու գույն։
 
-### Վարժություններ
+~~~art
+steps logo
+~~~
 
+~~~art
+tasks
 1. Ինչ էին դնում հին վարպետներն իրենց գործի վրա, և ինչու։
 2. Ինչ ցուցանակ կարող էր հացթուխը կախել խանութի վերևում։
 3. Անվանիր լոգոների երեք տեսակը։
@@ -731,10 +967,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 5. Ինչ բնավորություն պետք է ունենա գրադարանի լոգոն։ Իսկ խաղալիքների խանութինը։
 6. Ինչպես կարող է տառը պատկեր դառնալ։ Բեր օրինակ։
 7. Նախագծիր լոգո շախմատի ակումբի համար։
+~~~
 
-### Պատասխաններ
-
-1. Փոքր դրոշմ, որ մարդիկ իմանան, թե ով է պատրաստել։ 2. Օրինակ՝ հացի նկար։ 3. Բառային, խորհրդանիշ, համակցված։ 4. Եթե առանց գույնի հստակ է, ամենուր է աշխատում, նույնիսկ թերթում կամ կնիքի վրա։ 5. Հանդարտ՝ գրադարանի համար, խաղային՝ խաղալիքների խանութի համար։ 6. Նրա ձևը վերածվում է առարկայի, օրինակ՝ Օ-ն արևի։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Փոքր դրոշմ, որ մարդիկ իմանան, թե ով է պատրաստել։ 2. Օրինակ՝ հացի նկար։ 3. Բառային, խորհրդանիշ, համակցված։ 4. Եթե առանց գույնի հստակ է, ամենուր է աշխատում, նույնիսկ թերթում կամ կնիքի վրա։ 5. Հանդարտ՝ գրադարանի համար, խաղային՝ խաղալիքների խանութի համար։ 6. Նրա ձևը վերածվում է առարկայի, օրինակ՝ Օ-ն արևի։ 7. Քո նախագիծը։
+~~~`,
         ru: `## От клейма мастера до логотипа
 
 Давным-давно гончары и кузнецы ставили на изделие маленькое **клеймо**, чтобы люди знали, кто его сделал. Купцы вешали над лавками **вывески** с картинкой: сапог у сапожника, калач у пекаря. Сегодня у компаний, школ, музеев и фестивалей есть **логотипы**: короткие знаки, которые узнают за секунду.
@@ -746,6 +984,10 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 | **шрифтовой** | название, написанное особым шрифтом | сами буквы — это картинка |
 | **знак** | простое изображение без слов | птица, лист, гора, геометрическая фигура |
 | **комбинированный** | знак и название вместе | самый распространённый вид |
+
+~~~art
+pic logo-kinds
+~~~
 
 ## Правила хорошего логотипа
 
@@ -759,6 +1001,10 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 
 В армянских рукописях буквы превращались в птиц и зверей. Современный дизайнер может сделать то же: буква **Ո** может стать подковой, буква **О** — солнцем, буква **Ш** — короной.
 
+~~~art
+letters
+~~~
+
 ## Придумай логотип
 
 1. Придумай владельца: пекарня, шахматный клуб, музыкальный фестиваль, эко-магазин.
@@ -767,8 +1013,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 4. Выбери лучший и нарисуй его крупно и чисто.
 5. Проверь его в чёрно-белом и в очень маленьком размере. Потом добавь один-два цвета.
 
-### Упражнения
+~~~art
+steps logo
+~~~
 
+~~~art
+tasks
 1. Что ставили старые мастера на свои изделия и зачем?
 2. Какую вывеску мог повесить над лавкой пекарь?
 3. Назови три вида логотипов.
@@ -776,10 +1026,12 @@ In Armenian manuscripts, letters were turned into birds and animals. A modern de
 5. Каким по характеру должен быть логотип библиотеки? А магазина игрушек?
 6. Как буква может стать картинкой? Приведи пример.
 7. Придумай логотип шахматного клуба.
+~~~
 
-### Ответы
-
-1. Маленькое клеймо, чтобы знали, кто сделал. 2. Например, калач. 3. Шрифтовой, знак, комбинированный. 4. Если он ясен без цвета, он работает везде, даже в газете или на печати. 5. Спокойным для библиотеки, весёлым для магазина игрушек. 6. Её форму превращают в предмет, например О — в солнце. 7. Твой проект.`,
+~~~art
+hints
+1. Маленькое клеймо, чтобы знали, кто сделал. 2. Например, калач. 3. Шрифтовой, знак, комбинированный. 4. Если он ясен без цвета, он работает везде, даже в газете или на печати. 5. Спокойным для библиотеки, весёлым для магазина игрушек. 6. Её форму превращают в предмет, например О — в солнце. 7. Твой проект.
+~~~`,
       },
       [
         q(t("An old craftsman's sign on his work was a…", "Հին վարպետի նշանն իր գործի վրա…", "Знак старого мастера на изделии — это…"), [t("mark", "դրոշմ էր", "клеймо"), t("logo on TV", "հեռուստատեսային լոգո էր", "логотип на ТВ"), t("flag", "դրոշ էր", "флаг")], 0),
@@ -815,6 +1067,10 @@ A king's palace had to amaze. Its splendour showed the **wealth and power** of t
 * **parquet** floors with patterns of different kinds of wood;
 * crystal **chandeliers**.
 
+~~~art
+pic letter-initial lace
+~~~
+
 ## Famous palaces
 
 * **Versailles** near Paris, the palace of King Louis XIV. Its **Hall of Mirrors** has seventeen arches filled with mirrors facing seventeen windows.
@@ -824,6 +1080,11 @@ A king's palace had to amaze. Its splendour showed the **wealth and power** of t
 
 Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but it is right for a palace hall, not for a school classroom or a workshop. Every place needs its own measure of decoration.
 
+~~~art
+compose
+Is more always better? Add more and more shapes and watch the balance break.
+~~~
+
 ## Draw a palace fragment
 
 1. Choose: a mirror in a frame, a door with a carved top, or a corner of a painted ceiling.
@@ -831,8 +1092,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 3. Add shells, scrolls and garlands, symmetrical left and right.
 4. Colour the carving gold (yellow, ochre and a few white highlights), the walls white, pale green or blue.
 
-### Exercises
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. What did the splendour of a palace show?
 2. When was Baroque the main style?
 3. Name five features of a Baroque interior.
@@ -840,10 +1105,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 5. Who built the Winter Palace? Which museum is it part of today?
 6. What is special about the Hall of Mirrors at Versailles?
 7. Why is Baroque decoration not suitable for every room?
+~~~
 
-### Answers
-
-1. The wealth and power of the ruler and the country. 2. In the 17th and first half of the 18th century. 3. For example: curves, gilding, mirrors, painted ceilings, stucco, parquet, chandeliers. 4. To fill the hall with light. 5. Francesco Bartolomeo Rastrelli; the Hermitage. 6. Seventeen arches filled with mirrors face seventeen windows. 7. Each place needs its own measure of decoration; a classroom or workshop needs calm.`,
+~~~art
+hints
+1. The wealth and power of the ruler and the country. 2. In the 17th and first half of the 18th century. 3. For example: curves, gilding, mirrors, painted ceilings, stucco, parquet, chandeliers. 4. To fill the hall with light. 5. Francesco Bartolomeo Rastrelli; the Hermitage. 6. Seventeen arches filled with mirrors face seventeen windows. 7. Each place needs its own measure of decoration; a classroom or workshop needs calm.
+~~~`,
         hy: `## Զարդն որպես իշխանության նշան
 
 Թագավորի պալատը պետք է զարմացներ։ Նրա շքեղությունը ցույց էր տալիս տիրակալի և երկրի **հարստությունն ու իշխանությունը**։ Հյուրերն անցնում էին դահլիճների շարքով, որոնցից յուրաքանչյուրը նախորդից ավելի պայծառ էր։
@@ -860,6 +1127,10 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 * տարբեր տեսակի փայտերի նախշերով **մանրահատակ**,
 * բյուրեղապակե **ջահեր**։
 
+~~~art
+pic letter-initial lace
+~~~
+
 ## Հայտնի պալատներ
 
 * **Վերսալը** Փարիզի մոտ՝ Լյուդովիկոս XIV թագավորի պալատը։ Նրա **Հայելիների սրահում** տասնյոթ պատուհանի դիմաց տասնյոթ կամար կա՝ լցված հայելիներով։
@@ -869,6 +1140,11 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 
 Բարոկկոն դաս է տալիս զարդի մասին․ այն **ուրախ** է և **տոնական**, բայց սազում է պալատական դահլիճին, ոչ թե դպրոցի դասասենյակին կամ արհեստանոցին։ Յուրաքանչյուր վայր պահանջում է զարդի իր չափը։
 
+~~~art
+compose
+Արդյո՞ք շատը միշտ լավ է։ Ավելացրո՛ւ ավելի ու ավելի ձևեր և տե՛ս, ինչպես է հավասարակշռությունը խախտվում։
+~~~
+
 ## Նկարիր պալատի հատված
 
 1. Ընտրիր՝ հայելի շրջանակում, փորագրված վերնամասով դուռ կամ նկարազարդ առաստաղի անկյուն։
@@ -876,8 +1152,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 3. Ավելացրու խեցիներ, ոլորքներ և ծաղկեպսակներ՝ ձախում և աջում համաչափ։
 4. Փորագրությունը ներկիր ոսկեգույն (դեղին, օխրա և մի քանի սպիտակ փայլ), պատերը՝ սպիտակ, բաց կանաչ կամ կապույտ։
 
-### Վարժություններ
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. Ինչ էր ցույց տալիս պալատի շքեղությունը։
 2. Երբ էր բարոկկոն գլխավոր ոճը։
 3. Անվանիր բարոկկոյի ինտերիերի հինգ առանձնահատկություն։
@@ -885,10 +1165,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 5. Ով է կառուցել Ձմեռային պալատը։ Որ թանգարանի մասն է այն այսօր։
 6. Ինչով է առանձնահատուկ Վերսալի Հայելիների սրահը։
 7. Ինչու բարոկկոյի զարդը չի սազում ամեն սենյակի։
+~~~
 
-### Պատասխաններ
-
-1. Տիրակալի և երկրի հարստությունն ու իշխանությունը։ 2. 17-րդ և 18-րդ դարի առաջին կեսին։ 3. Օրինակ՝ կորեր, ոսկեզօծում, հայելիներ, նկարազարդ առաստաղներ, գաջ, մանրահատակ, ջահեր։ 4. Որ դահլիճը լույսով լցվի։ 5. Ֆրանչեսկո Բարտոլոմեո Ռաստրելլին․ Էրմիտաժի։ 6. Տասնյոթ պատուհանի դիմաց տասնյոթ կամար կա՝ լցված հայելիներով։ 7. Յուրաքանչյուր վայր պահանջում է զարդի իր չափը․ դասասենյակին կամ արհեստանոցին հանդարտություն է պետք։`,
+~~~art
+hints
+1. Տիրակալի և երկրի հարստությունն ու իշխանությունը։ 2. 17-րդ և 18-րդ դարի առաջին կեսին։ 3. Օրինակ՝ կորեր, ոսկեզօծում, հայելիներ, նկարազարդ առաստաղներ, գաջ, մանրահատակ, ջահեր։ 4. Որ դահլիճը լույսով լցվի։ 5. Ֆրանչեսկո Բարտոլոմեո Ռաստրելլին․ Էրմիտաժի։ 6. Տասնյոթ պատուհանի դիմաց տասնյոթ կամար կա՝ լցված հայելիներով։ 7. Յուրաքանչյուր վայր պահանջում է զարդի իր չափը․ դասասենյակին կամ արհեստանոցին հանդարտություն է պետք։
+~~~`,
         ru: `## Украшение как знак власти
 
 Дворец короля должен был поражать. Его пышность показывала **богатство и могущество** правителя и страны. Гости проходили анфиладу залов, один ярче другого.
@@ -905,6 +1187,10 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 * **паркет** с узорами из разных пород дерева;
 * хрустальные **люстры**.
 
+~~~art
+pic letter-initial lace
+~~~
+
 ## Знаменитые дворцы
 
 * **Версаль** под Парижем — дворец короля Людовика XIV. В его **Зеркальной галерее** напротив семнадцати окон — семнадцать арок, заполненных зеркалами.
@@ -914,6 +1200,11 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 
 Барокко учит важному о декоре: оно **радостное** и **праздничное**, но уместно в дворцовом зале, а не в школьном классе или мастерской. Каждому месту нужна своя мера украшения.
 
+~~~art
+compose
+Больше — всегда лучше? Добавляй всё больше фигур и смотри, как рушится равновесие.
+~~~
+
 ## Нарисуй фрагмент дворца
 
 1. Выбери: зеркало в раме, дверь с резным навершием или угол расписного плафона.
@@ -921,8 +1212,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 3. Добавь раковины, завитки и гирлянды, симметрично слева и справа.
 4. Резьбу раскрась золотом (жёлтый, охра и несколько белых бликов), стены — белым, бледно-зелёным или голубым.
 
-### Упражнения
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. Что показывала пышность дворца?
 2. Когда барокко было главным стилем?
 3. Назови пять черт интерьера барокко.
@@ -930,10 +1225,12 @@ Baroque teaches a lesson about decoration: it is **joyful** and **festive**, but
 5. Кто построил Зимний дворец? Частью какого музея он является сегодня?
 6. Чем особенна Зеркальная галерея Версаля?
 7. Почему декор барокко подходит не для каждой комнаты?
+~~~
 
-### Ответы
-
-1. Богатство и могущество правителя и страны. 2. В XVII и первой половине XVIII века. 3. Например: изгибы, позолота, зеркала, расписные плафоны, лепнина, паркет, люстры. 4. Чтобы наполнить зал светом. 5. Франческо Бартоломео Растрелли; Эрмитажа. 6. Напротив семнадцати окон — семнадцать арок, заполненных зеркалами. 7. Каждому месту нужна своя мера украшения; классу или мастерской нужен покой.`,
+~~~art
+hints
+1. Богатство и могущество правителя и страны. 2. В XVII и первой половине XVIII века. 3. Например: изгибы, позолота, зеркала, расписные плафоны, лепнина, паркет, люстры. 4. Чтобы наполнить зал светом. 5. Франческо Бартоломео Растрелли; Эрмитажа. 6. Напротив семнадцати окон — семнадцать арок, заполненных зеркалами. 7. Каждому месту нужна своя мера украшения; классу или мастерской нужен покой.
+~~~`,
       },
       [
         q(t("The splendour of a palace showed…", "Պալատի շքեղությունը ցույց էր տալիս…", "Пышность дворца показывала…"), [t("wealth and power", "հարստություն և իշխանություն", "богатство и могущество"), t("poverty", "աղքատություն", "бедность"), t("the weather", "եղանակը", "погоду")], 0),

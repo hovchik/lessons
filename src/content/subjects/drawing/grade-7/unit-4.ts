@@ -32,9 +32,18 @@ The **silhouette** is the outline of a costume. Designers name silhouettes by le
 | **X** | wide shoulders, narrow waist, wide skirt | elegant, festive |
 | **O** | rounded, wide in the middle | soft, cosy |
 
+~~~art
+pic mode=silhouette taraz sarafan
+The silhouette comes first. Guess the costume by its outline.
+~~~
+
 ## The Armenian taraz
 
 The **taraz** is the traditional Armenian costume. A woman's taraz has a long dress with an **arkhaluk** over it, a wide belt, an apron and a headdress with a veil; the colours and the embroidery differed from region to region. A man's taraz has a shirt, wide trousers, an arkhaluk and a **chukha** coat with a belt or a dagger. Today designers take its colours, embroidery and silhouettes into modern dresses, coats and even sports clothes.
+
+~~~art
+pic taraz embroidery
+~~~
 
 ## How a designer works
 
@@ -45,6 +54,10 @@ The **taraz** is the traditional Armenian costume. A woman's taraz has a long dr
 5. **Details:** collar, pockets, buttons, embroidery; they give character.
 6. **Collection:** several costumes in one style, as a family.
 
+~~~art
+proportions
+~~~
+
 ## Fashion and responsibility
 
 Clothes are made in huge numbers and often thrown away quickly. Designers speak about **slow fashion**: good quality, repairs, second-hand clothes, local materials and traditional crafts instead of endless buying.
@@ -53,8 +66,12 @@ Clothes are made in huge numbers and often thrown away quickly. Designers speak 
 
 Make a mood board and then three sketches of a small collection on one theme, for example «Mountains», «Pomegranate» or «My city». Use one silhouette family and two or three colours. Add a detail inspired by the taraz.
 
-### Exercises
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. What does the silhouette of a costume mean?
 2. Which silhouette is wide at the bottom and narrow at the top?
 3. Name three parts of a woman's or a man's taraz.
@@ -62,10 +79,12 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 5. What is a mood board?
 6. What does slow fashion mean?
 7. Make a mood board and three sketches of a collection.
+~~~
 
-### Answers
-
-1. The outline of the costume. 2. The A silhouette. 3. For example: dress, arkhaluk, belt, apron, headdress; or shirt, wide trousers, arkhaluk, chukha. 4. Different fabrics hang and move differently, so they change the silhouette. 5. A board with colours, photos and fabrics that sets the mood of a collection. 6. Good quality, repairs and local crafts instead of buying and throwing away. 7. Your work.`,
+~~~art
+hints
+1. The outline of the costume. 2. The A silhouette. 3. For example: dress, arkhaluk, belt, apron, headdress; or shirt, wide trousers, arkhaluk, chukha. 4. Different fabrics hang and move differently, so they change the silhouette. 5. A board with colours, photos and fabrics that sets the mood of a collection. 6. Good quality, repairs and local crafts instead of buying and throwing away. 7. Your work.
+~~~`,
         hy: `## Հագուստը խոսում է
 
 Հագուստը պաշտպանում է մեզ ցրտից և շոգից, բայց նաև ասում է, թե ովքեր ենք մենք՝ մեր աշխատանքը, երկիրը, տարիքը, տրամադրությունը։ Հագուստի դիզայներն աշխատում է մարդու կազմվածքի հետ և պետք է իմանա համամասնություններ, շարժում և նյութեր։
@@ -81,9 +100,18 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 | **X** | լայն ուսեր, նեղ գոտկատեղ, լայն փեշ | նրբագեղ, տոնական |
 | **O** | կլորացված, մեջտեղում լայն | փափուկ, հարմարավետ |
 
+~~~art
+pic mode=silhouette taraz sarafan
+Ուրվագիծը առաջինն է։ Գուշակի՛ր տարազը ըստ ուրվագծի։
+~~~
+
 ## Հայկական տարազը
 
 **Տարազը** ավանդական հայկական հագուստն է։ Կանացի տարազն ունի երկար զգեստ՝ վրայից **արխալուխ**, լայն գոտի, գոգնոց և գլխաշոր։ Գույներն ու ասեղնագործությունը տարբերվում էին ըստ գավառների։ Տղամարդու տարազն ունի շապիկ, լայն շալվար, արխալուխ և **չուխա**՝ գոտիով կամ դաշույնով։ Այսօր դիզայներները նրա գույները, ասեղնագործությունն ու ուրվագծերը տեղափոխում են ժամանակակից զգեստների, վերարկուների և նույնիսկ սպորտային հագուստի մեջ։
+
+~~~art
+pic taraz embroidery
+~~~
 
 ## Ինչպես է աշխատում դիզայները
 
@@ -94,6 +122,10 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 5. **Մանրամասներ**՝ օձիք, գրպաններ, կոճակներ, ասեղնագործություն, դրանք բնավորություն են տալիս։
 6. **Հավաքածու**՝ մի քանի հագուստ մեկ ոճով, որպես ընտանիք։
 
+~~~art
+proportions
+~~~
+
 ## Նորաձևություն և պատասխանատվություն
 
 Հագուստն արտադրվում է հսկայական քանակով և հաճախ արագ դեն նետվում։ Դիզայներները խոսում են **դանդաղ նորաձևության** մասին՝ լավ որակ, նորոգում, օգտագործված հագուստ, տեղական նյութեր և ավանդական արհեստներ՝ անվերջ գնումների փոխարեն։
@@ -102,8 +134,12 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 
 Պատրաստիր տրամադրության տախտակ, ապա երեք էսքիզ փոքր հավաքածուի՝ մեկ թեմայով, օրինակ՝ «Լեռներ», «Նուռ» կամ «Իմ քաղաքը»։ Օգտագործիր ուրվագծերի մեկ ընտանիք և երկու-երեք գույն։ Ավելացրու տարազից ներշնչված մանրամաս։
 
-### Վարժություններ
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Ինչ է նշանակում հագուստի ուրվագիծը։
 2. Որ ուրվագիծն է ներքևում լայն, վերևում՝ նեղ։
 3. Անվանիր կանացի կամ տղամարդու տարազի երեք մաս։
@@ -111,10 +147,12 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 5. Ինչ է տրամադրության տախտակը։
 6. Ինչ է նշանակում դանդաղ նորաձևությունը։
 7. Պատրաստիր տրամադրության տախտակ և հավաքածուի երեք էսքիզ։
+~~~
 
-### Պատասխաններ
-
-1. Հագուստի եզրագիծը։ 2. A ուրվագիծը։ 3. Օրինակ՝ զգեստ, արխալուխ, գոտի, գոգնոց, գլխաշոր կամ շապիկ, լայն շալվար, արխալուխ, չուխա։ 4. Տարբեր գործվածքներ տարբեր կերպ են ընկնում և շարժվում, ուստի փոխում են ուրվագիծը։ 5. Տախտակ՝ գույներով, լուսանկարներով և գործվածքներով, որը սահմանում է հավաքածուի տրամադրությունը։ 6. Լավ որակ, նորոգում և տեղական արհեստներ՝ գնելու և դեն նետելու փոխարեն։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Հագուստի եզրագիծը։ 2. A ուրվագիծը։ 3. Օրինակ՝ զգեստ, արխալուխ, գոտի, գոգնոց, գլխաշոր կամ շապիկ, լայն շալվար, արխալուխ, չուխա։ 4. Տարբեր գործվածքներ տարբեր կերպ են ընկնում և շարժվում, ուստի փոխում են ուրվագիծը։ 5. Տախտակ՝ գույներով, լուսանկարներով և գործվածքներով, որը սահմանում է հավաքածուի տրամադրությունը։ 6. Լավ որակ, նորոգում և տեղական արհեստներ՝ գնելու և դեն նետելու փոխարեն։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Одежда говорит
 
 Одежда защищает нас от холода и жары, но ещё и рассказывает, кто мы: наша работа, страна, возраст, настроение. Дизайнер костюма работает с фигурой человека и должен знать пропорции, движение и материалы.
@@ -130,9 +168,18 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 | **Х** | широкие плечи, узкая талия, широкая юбка | нарядный, праздничный |
 | **О** | округлый, широкий в середине | мягкий, уютный |
 
+~~~art
+pic mode=silhouette taraz sarafan
+Силуэт — прежде всего. Угадай костюм по контуру.
+~~~
+
 ## Армянский тараз
 
 **Тараз** — традиционный армянский костюм. Женский тараз — длинное платье, поверх него **архалух**, широкий пояс, передник и головной убор с покрывалом; цвета и вышивка различались по областям. Мужской тараз — рубаха, широкие штаны, архалух и **чуха** с поясом или кинжалом. Сегодня дизайнеры переносят его цвета, вышивку и силуэты в современные платья, пальто и даже спортивную одежду.
+
+~~~art
+pic taraz embroidery
+~~~
 
 ## Как работает дизайнер
 
@@ -143,6 +190,10 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 5. **Детали:** воротник, карманы, пуговицы, вышивка — они дают характер.
 6. **Коллекция:** несколько костюмов в одном стиле, как семья.
 
+~~~art
+proportions
+~~~
+
 ## Мода и ответственность
 
 Одежду выпускают огромными партиями и часто быстро выбрасывают. Дизайнеры говорят о **медленной моде**: хорошее качество, починка, вещи из вторых рук, местные материалы и традиционные ремёсла вместо бесконечных покупок.
@@ -151,8 +202,12 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 
 Сделай мудборд, а затем три эскиза небольшой коллекции на одну тему, например «Горы», «Гранат» или «Мой город». Используй одно семейство силуэтов и два-три цвета. Добавь деталь, вдохновлённую таразом.
 
-### Упражнения
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Что означает силуэт костюма?
 2. Какой силуэт узкий вверху и широкий внизу?
 3. Назови три части женского или мужского тараза.
@@ -160,10 +215,12 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 5. Что такое мудборд?
 6. Что означает медленная мода?
 7. Сделай мудборд и три эскиза коллекции.
+~~~
 
-### Ответы
-
-1. Очертание костюма. 2. Силуэт А. 3. Например: платье, архалух, пояс, передник, головной убор; или рубаха, широкие штаны, архалух, чуха. 4. Разные ткани по-разному падают и двигаются и меняют силуэт. 5. Доска с цветами, фотографиями и тканями, задающая настроение коллекции. 6. Качество, починка и местные ремёсла вместо покупок и выбрасывания. 7. Твоя работа.`,
+~~~art
+hints
+1. Очертание костюма. 2. Силуэт А. 3. Например: платье, архалух, пояс, передник, головной убор; или рубаха, широкие штаны, архалух, чуха. 4. Разные ткани по-разному падают и двигаются и меняют силуэт. 5. Доска с цветами, фотографиями и тканями, задающая настроение коллекции. 6. Качество, починка и местные ремёсла вместо покупок и выбрасывания. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("The outline of a costume is called the…", "Հագուստի եզրագիծը կոչվում է…", "Очертание костюма называется…"), [t("silhouette", "ուրվագիծ", "силуэтом"), t("pattern", "ձևվածք", "выкройкой"), t("detail", "մանրամաս", "деталью")], 0),
@@ -200,6 +257,10 @@ Make a mood board and then three sketches of a small collection on one theme, fo
 
 Mixing two styles can work well; mixing four at once usually does not.
 
+~~~art
+palette pastel loud earth greys
+~~~
+
 ## The image
 
 An **image** is the whole picture a person makes: clothes, shoes, hair, bag, way of standing and speaking. Designers build an image from:
@@ -210,6 +271,10 @@ An **image** is the whole picture a person makes: clothes, shoes, hair, bag, way
 * **The details:** a scarf, a badge, a bag can change the whole image.
 * **Comfort:** if you cannot move or sit, the image has failed.
 
+~~~art
+mood scene=abstract moods=joy,quiet,loud
+~~~
+
 ## Yourself and others
 
 Clothes help to say who you are, but fashion should not command. A good question before buying: do I really like this, will I wear it many times, and does it fit my life? Judging other people by their clothes is unfair: style is a choice, not a mark of value.
@@ -218,8 +283,12 @@ Clothes help to say who you are, but fashion should not command. A good question
 
 Build three images for the same person and three situations: a school day, a sports competition and a family celebration. Draw the figure three times and describe colours, materials and details. Explain in two sentences why each image fits its situation.
 
-### Exercises
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. What is style?
 2. Name three signs of the classic style.
 3. Which style uses ornament and embroidery?
@@ -227,10 +296,12 @@ Build three images for the same person and three situations: a school day, a spo
 5. Why is comfort part of a good image?
 6. What questions should you ask before buying a new thing?
 7. Draw three images of one person for three situations.
+~~~
 
-### Answers
-
-1. A set of repeating features that make a whole. 2. Simple cut, calm colours, good materials. 3. The folk or ethnic style. 4. Shoes, hair, bag, way of standing and speaking. 5. If you cannot move or sit comfortably, the image does not work. 6. Do I like it, will I wear it often, does it fit my life? 7. Your drawings.`,
+~~~art
+hints
+1. A set of repeating features that make a whole. 2. Simple cut, calm colours, good materials. 3. The folk or ethnic style. 4. Shoes, hair, bag, way of standing and speaking. 5. If you cannot move or sit comfortably, the image does not work. 6. Do I like it, will I wear it often, does it fit my life? 7. Your drawings.
+~~~`,
         hy: `## Ինչ է ոճը
 
 **Ոճը** գծերի ամբողջություն է, որոնք կրկնվում են և ստեղծում ամբողջություն՝ ճարտարապետության, կահույքի, հագուստի, խոսելաձևի մեջ։ Մարդու ոճը թանկ հագուստը չէ, այլ ընտրություն, որը համապատասխանում է մարդուն և առիթին։
@@ -248,6 +319,10 @@ Build three images for the same person and three situations: a school day, a spo
 
 Երկու ոճ խառնելը կարող է լավ ստացվել, չորսը միաժամանակ՝ սովորաբար ոչ։
 
+~~~art
+palette pastel loud earth greys
+~~~
+
 ## Կերպարը
 
 **Կերպարը** այն ամբողջ պատկերն է, որ ստեղծում է մարդը՝ հագուստ, կոշիկ, սանրվածք, պայուսակ, կանգնելու և խոսելու ձև։ Դիզայներները կերպարը կառուցում են՝
@@ -258,6 +333,10 @@ Build three images for the same person and three situations: a school day, a spo
 * **Մանրամասներից**՝ շարֆը, նշանը, պայուսակը կարող են փոխել ամբողջ կերպարը։
 * **Հարմարավետությունից**՝ եթե չես կարող շարժվել կամ նստել, կերպարը ձախողվել է։
 
+~~~art
+mood scene=abstract moods=joy,quiet,loud
+~~~
+
 ## Դու և ուրիշները
 
 Հագուստն օգնում է ասել, թե ով ես դու, բայց նորաձևությունը չպետք է հրամայի։ Լավ հարց գնելուց առաջ՝ իրո՞ք դուր է գալիս ինձ, շա՞տ անգամ կհագնեմ, և համապատասխանո՞ւմ է իմ կյանքին։ Մարդկանց հագուստով դատելն անարդար է. ոճն ընտրություն է, ոչ թե արժեքի նշան։
@@ -266,8 +345,12 @@ Build three images for the same person and three situations: a school day, a spo
 
 Կառուցիր երեք կերպար նույն մարդու և երեք իրավիճակի համար՝ դպրոցական օր, սպորտային մրցում և ընտանեկան տոն։ Նկարիր կերպարն երեք անգամ և նկարագրիր գույները, նյութերը և մանրամասները։ Երկու նախադասությամբ բացատրիր, թե ինչու է յուրաքանչյուր կերպար համապատասխանում իր իրավիճակին։
 
-### Վարժություններ
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Ինչ է ոճը։
 2. Անվանիր դասական ոճի երեք նշան։
 3. Որ ոճն է օգտագործում զարդանախշ և ասեղնագործություն։
@@ -275,10 +358,12 @@ Build three images for the same person and three situations: a school day, a spo
 5. Ինչու է հարմարավետությունը լավ կերպարի մաս։
 6. Ինչ հարցեր պետք է տալ նոր իր գնելուց առաջ։
 7. Նկարիր մեկ մարդու երեք կերպար երեք իրավիճակի համար։
+~~~
 
-### Պատասխաններ
-
-1. Կրկնվող գծերի ամբողջություն, որը ստեղծում է մեկ ամբողջություն։ 2. Պարզ կտրվածք, հանգիստ գույներ, լավ նյութեր։ 3. Ժողովրդական կամ էթնիկ ոճը։ 4. Կոշիկից, սանրվածքից, պայուսակից, կանգնելու և խոսելու ձևից։ 5. Եթե չես կարող հարմար շարժվել կամ նստել, կերպարը չի աշխատում։ 6. Դուր է գալիս ինձ, հաճախ կհագնե՞մ, համապատասխանում է իմ կյանքին։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Կրկնվող գծերի ամբողջություն, որը ստեղծում է մեկ ամբողջություն։ 2. Պարզ կտրվածք, հանգիստ գույներ, լավ նյութեր։ 3. Ժողովրդական կամ էթնիկ ոճը։ 4. Կոշիկից, սանրվածքից, պայուսակից, կանգնելու և խոսելու ձևից։ 5. Եթե չես կարող հարմար շարժվել կամ նստել, կերպարը չի աշխատում։ 6. Դուր է գալիս ինձ, հաճախ կհագնե՞մ, համապատասխանում է իմ կյանքին։ 7. Քո նկարները։
+~~~`,
         ru: `## Что такое стиль
 
 **Стиль** — это набор черт, которые повторяются и создают целое: в архитектуре, мебели, одежде, манере говорить. Стиль человека — не дорогая одежда, а выбор, который подходит ему и случаю.
@@ -296,6 +381,10 @@ Build three images for the same person and three situations: a school day, a spo
 
 Смешать два стиля часто удаётся, четыре сразу — обычно нет.
 
+~~~art
+palette pastel loud earth greys
+~~~
+
 ## Образ
 
 **Образ** — это цельная картина, которую создаёт человек: одежда, обувь, причёска, сумка, манера держаться и говорить. Дизайнеры строят образ из:
@@ -306,6 +395,10 @@ Build three images for the same person and three situations: a school day, a spo
 * **Деталей:** шарф, значок, сумка могут изменить весь образ.
 * **Удобства:** если нельзя двигаться и сидеть, образ не удался.
 
+~~~art
+mood scene=abstract moods=joy,quiet,loud
+~~~
+
 ## Ты и другие
 
 Одежда помогает сказать, кто ты, но мода не должна командовать. Хорошие вопросы перед покупкой: действительно ли мне это нравится, надену ли я это много раз, подходит ли это моей жизни? Судить людей по одежде несправедливо: стиль — это выбор, а не знак ценности человека.
@@ -314,8 +407,12 @@ Build three images for the same person and three situations: a school day, a spo
 
 Построй три образа для одного человека и трёх ситуаций: школьный день, спортивные соревнования и семейный праздник. Нарисуй фигуру три раза и опиши цвета, материалы и детали. Двумя предложениями объясни, почему каждый образ подходит своей ситуации.
 
-### Упражнения
+~~~art
+sketch guide=figure
+~~~
 
+~~~art
+tasks
 1. Что такое стиль?
 2. Назови три признака классического стиля.
 3. В каком стиле используют орнамент и вышивку?
@@ -323,10 +420,12 @@ Build three images for the same person and three situations: a school day, a spo
 5. Почему удобство — часть хорошего образа?
 6. Какие вопросы стоит задать перед покупкой новой вещи?
 7. Нарисуй три образа одного человека для трёх ситуаций.
+~~~
 
-### Ответы
-
-1. Набор повторяющихся черт, создающих целое. 2. Простой крой, спокойные цвета, хорошие материалы. 3. В народном (этническом). 4. Из обуви, причёски, сумки, манеры держаться и говорить. 5. Если нельзя удобно двигаться и сидеть, образ не работает. 6. Нравится ли мне, надену ли часто, подходит ли моей жизни. 7. Твои рисунки.`,
+~~~art
+hints
+1. Набор повторяющихся черт, создающих целое. 2. Простой крой, спокойные цвета, хорошие материалы. 3. В народном (этническом). 4. Из обуви, причёски, сумки, манеры держаться и говорить. 5. Если нельзя удобно двигаться и сидеть, образ не работает. 6. Нравится ли мне, надену ли часто, подходит ли моей жизни. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("Simple cut, calm colours and good materials belong to the … style.", "Պարզ կտրվածքը, հանգիստ գույներն ու լավ նյութերը պատկանում են … ոճին։", "Простой крой, спокойные цвета и хорошие материалы — это … стиль."), [t("classic", "դասական", "классический"), t("sport", "սպորտային", "спортивный"), t("streetwear", "փողոցային", "уличный")], 0),
@@ -358,6 +457,10 @@ Kinds of logos:
 * **Combined:** a symbol plus the name.
 * **Emblem:** the name inside a shape, like a badge or a seal.
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Rules of a good logo
 
 1. **Simple:** it can be drawn from memory.
@@ -366,6 +469,10 @@ Kinds of logos:
 4. **Works in one colour:** try it in black and white first.
 5. **Honest:** it says what the organisation really is.
 6. **Lasting:** not built on a short-lived fashion.
+
+~~~art
+steps logo
+~~~
 
 ## Brand identity
 
@@ -381,16 +488,24 @@ A logo is only the beginning. A **brand identity** is the whole family of elemen
 
 The rules are written in a **brand book**, so that everybody uses the identity in the same way.
 
+~~~art
+palette digital
+~~~
+
 ## Signs around us
 
 Mount Ararat, the pomegranate, the apricot, the Armenian letter and carpet ornament often appear in Armenian logos. A good designer uses such symbols carefully, so that the sign stays simple and does not repeat someone else's.
+
+~~~art
+pic pictograms poster
+~~~
 
 ## Task
 
 Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick ideas, choose one, and make the logo in black and white and in colour. Then show it on three carriers: a badge, a T-shirt and a bag. Write the rules: colours, fonts, free space around the logo.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a logo?
 2. Name three kinds of logos.
 3. Why should a logo be checked in black and white?
@@ -398,10 +513,12 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 5. What is a brand identity?
 6. What is written in a brand book?
 7. Design a logo and show it on three carriers.
+~~~
 
-### Answers
-
-1. The sign of an organisation, product or event. 2. Any three: letter mark, word mark, symbol, combined, emblem. 3. To be sure it works in one colour. 4. Because it is used on small things such as pens and badges. 5. The whole family of elements: logo, colours, fonts, pattern and carriers. 6. The rules for using the identity. 7. Your work.`,
+~~~art
+hints
+1. The sign of an organisation, product or event. 2. Any three: letter mark, word mark, symbol, combined, emblem. 3. To be sure it works in one colour. 4. Because it is used on small things such as pens and badges. 5. The whole family of elements: logo, colours, fonts, pattern and carriers. 6. The rules for using the identity. 7. Your work.
+~~~`,
         hy: `## Նշան, որը հիշվում է
 
 **Լոգոն** կազմակերպության, ապրանքի կամ միջոցառման նշանն է։ Այն աշխատում է դեմքի պես՝ առաջինն է երևում և ամենաերկարը հիշվում։
@@ -414,6 +531,10 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 * **Համակցված**՝ խորհրդանիշ և անուն։
 * **Էմբլեմա**՝ անունը ձևի ներսում, ինչպես կրծքանշան կամ կնիք։
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Լավ լոգոյի կանոնները
 
 1. **Պարզ**՝ կարելի է նկարել հիշողությամբ։
@@ -422,6 +543,10 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 4. **Աշխատում է մեկ գույնով**՝ նախ փորձիր սև-սպիտակով։
 5. **Ազնիվ**՝ ասում է, թե իրականում ինչ է կազմակերպությունը։
 6. **Երկարակյաց**՝ կառուցված չէ կարճատև նորաձևության վրա։
+
+~~~art
+steps logo
+~~~
 
 ## Բրենդի ինքնություն
 
@@ -437,16 +562,24 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 
 Կանոնները գրվում են **բրենդբուքում**, որպեսզի բոլորն ինքնությունը նույն կերպ օգտագործեն։
 
+~~~art
+palette digital
+~~~
+
 ## Նշաններ մեր շուրջը
 
 Արարատ լեռը, նուռը, ծիրանը, հայերեն տառը և գորգի զարդանախշը հաճախ են հայտնվում հայկական լոգոներում։ Լավ դիզայներն այդպիսի խորհրդանիշներն օգտագործում է զգուշորեն, որպեսզի նշանը մնա պարզ և չկրկնի ուրիշինը։
+
+~~~art
+pic pictograms poster
+~~~
 
 ## Առաջադրանք
 
 Ընտրիր դպրոցական ակումբ, հացատուն, գրախանութ կամ սպորտային թիմ։ Նկարիր տասն արագ գաղափար, ընտրիր մեկը և պատրաստիր լոգոն սև-սպիտակով և գունավոր։ Հետո ցույց տուր այն երեք կրիչի վրա՝ կրծքանշան, շապիկ և պայուսակ։ Գրիր կանոնները՝ գույներ, տառատեսակներ, լոգոյի շուրջ ազատ տարածություն։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է լոգոն։
 2. Անվանիր լոգոների երեք տեսակ։
 3. Ինչու պետք է լոգոն ստուգել սև-սպիտակով։
@@ -454,10 +587,12 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 5. Ինչ է բրենդի ինքնությունը։
 6. Ինչ է գրվում բրենդբուքում։
 7. Նախագծիր լոգո և ցույց տուր երեք կրիչի վրա։
+~~~
 
-### Պատասխաններ
-
-1. Կազմակերպության, ապրանքի կամ միջոցառման նշանը։ 2. Ցանկացած երեքը՝ տառային, բառային, խորհրդանշական, համակցված, էմբլեմա։ 3. Որպեսզի համոզվես, որ այն աշխատում է մեկ գույնով։ 4. Որովհետև օգտագործվում է փոքր իրերի վրա՝ գրիչներ, կրծքանշաններ։ 5. Տարրերի ամբողջ ընտանիքը՝ լոգո, գույներ, տառատեսակներ, նախշ և կրիչներ։ 6. Ինքնությունն օգտագործելու կանոնները։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Կազմակերպության, ապրանքի կամ միջոցառման նշանը։ 2. Ցանկացած երեքը՝ տառային, բառային, խորհրդանշական, համակցված, էմբլեմա։ 3. Որպեսզի համոզվես, որ այն աշխատում է մեկ գույնով։ 4. Որովհետև օգտագործվում է փոքր իրերի վրա՝ գրիչներ, կրծքանշաններ։ 5. Տարրերի ամբողջ ընտանիքը՝ լոգո, գույներ, տառատեսակներ, նախշ և կրիչներ։ 6. Ինքնությունն օգտագործելու կանոնները։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Знак, который запоминают
 
 **Логотип** — знак организации, товара или события. Он работает как лицо: его видят первым и помнят дольше всего.
@@ -470,6 +605,10 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 * **Комбинированный:** символ плюс название.
 * **Эмблема:** название внутри формы, как значок или печать.
 
+~~~art
+pic logo-kinds
+~~~
+
 ## Правила хорошего логотипа
 
 1. **Простой:** его можно нарисовать по памяти.
@@ -478,6 +617,10 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 4. **Работает в один цвет:** сначала проверь в чёрно-белом варианте.
 5. **Честный:** он говорит о том, чем организация является на самом деле.
 6. **Долговечный:** не построен на короткой моде.
+
+~~~art
+steps logo
+~~~
 
 ## Фирменный стиль
 
@@ -493,16 +636,24 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 
 Правила записывают в **брендбук**, чтобы все использовали стиль одинаково.
 
+~~~art
+palette digital
+~~~
+
 ## Знаки вокруг нас
 
 Гора Арарат, гранат, абрикос, армянская буква и ковровый орнамент часто встречаются в армянских логотипах. Хороший дизайнер использует такие символы осторожно, чтобы знак остался простым и не повторял чужой.
+
+~~~art
+pic pictograms poster
+~~~
 
 ## Задание
 
 Выбери школьный клуб, пекарню, книжный магазин или спортивную команду. Нарисуй десять быстрых идей, выбери одну и сделай логотип в чёрно-белом и цветном варианте. Затем покажи его на трёх носителях: значке, футболке и сумке. Запиши правила: цвета, шрифты, свободное поле вокруг логотипа.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое логотип?
 2. Назови три вида логотипов.
 3. Зачем проверять логотип в чёрно-белом варианте?
@@ -510,10 +661,12 @@ Choose a school club, a bakery, a bookshop or a sports team. Draw ten quick idea
 5. Что такое фирменный стиль?
 6. Что записывают в брендбуке?
 7. Создай логотип и покажи его на трёх носителях.
+~~~
 
-### Ответы
-
-1. Знак организации, товара или события. 2. Любые три: буквенный, словесный, символ, комбинированный, эмблема. 3. Чтобы убедиться, что он работает в один цвет. 4. Потому что его используют на маленьких предметах: ручках, значках. 5. Целая семья элементов: логотип, цвета, шрифты, паттерн и носители. 6. Правила использования стиля. 7. Твоя работа.`,
+~~~art
+hints
+1. Знак организации, товара или события. 2. Любые три: буквенный, словесный, символ, комбинированный, эмблема. 3. Чтобы убедиться, что он работает в один цвет. 4. Потому что его используют на маленьких предметах: ручках, значках. 5. Целая семья элементов: логотип, цвета, шрифты, паттерн и носители. 6. Правила использования стиля. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A logo made only of the name in a special font is a…", "Լոգոն, որը բաղկացած է միայն հատուկ տառատեսակով անունից…", "Логотип только из названия особым шрифтом — это…"), [t("word mark", "բառային լոգո է", "словесный"), t("symbol", "խորհրդանիշ է", "символ"), t("emblem", "էմբլեմա է", "эмблема")], 0),
@@ -539,6 +692,10 @@ The word **photography** means «drawing with light». The first lasting photogr
 
 Photography changed painting: artists no longer had to copy reality exactly and turned to colour, feeling and new forms.
 
+~~~art
+pic camera
+~~~
+
 ## Genres
 
 Photography has the same genres as painting: **portrait**, **landscape**, **still life**, **everyday (documentary)**, **architecture**, **sport**, **nature**. There is also **reportage**, the photography of events as they happen.
@@ -553,12 +710,24 @@ Photography has the same genres as painting: **portrait**, **landscape**, **stil
 * **Background:** look at it before you press; a pole «growing» from a head spoils a portrait.
 * **Point of view:** kneel down or climb up; a different height makes an ordinary thing new.
 
+~~~art
+shots
+~~~
+
+~~~art
+compose
+~~~
+
 ## Light
 
 * **Soft light** of a cloudy day or a shaded place is good for portraits.
 * **Hard sunlight** at noon gives strong shadows and squinting eyes.
 * **The golden hour**, just after sunrise and before sunset, gives warm, long shadows.
 * **Backlight** makes a silhouette; **side light** shows texture.
+
+~~~art
+light
+~~~
 
 ## Ethics
 
@@ -568,8 +737,8 @@ Ask before photographing a person close up, especially a stranger or a child. Do
 
 Shoot a small series of five photographs on one theme: «My street», «Hands at work», «Morning light». Use the rule of thirds in at least two of them and two different points of view. Choose the best five, give them titles and arrange them in an order that tells a story.
 
-### Exercises
-
+~~~art
+tasks
 1. What does the word «photography» mean?
 2. When did photography begin to spread widely?
 3. Explain the rule of thirds.
@@ -577,15 +746,21 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 5. What is the golden hour?
 6. Name one ethical rule of photographing people.
 7. Shoot a series of five photographs on one theme and arrange them.
+~~~
 
-### Answers
-
-1. Drawing with light. 2. From 1839, with the daguerreotype. 3. Divide the frame in three across and down and put the subject near a crossing of the lines. 4. Exactly in the middle of the frame. 5. The time just after sunrise and before sunset, with warm light and long shadows. 6. Ask permission before photographing a person close up. 7. Your series.`,
+~~~art
+hints
+1. Drawing with light. 2. From 1839, with the daguerreotype. 3. Divide the frame in three across and down and put the subject near a crossing of the lines. 4. Exactly in the middle of the frame. 5. The time just after sunrise and before sunset, with warm light and long shadows. 6. Ask permission before photographing a person close up. 7. Your series.
+~~~`,
         hy: `## Նկարել լույսով
 
 **Լուսանկարչություն** բառը նշանակում է «լույսով նկարել»։ Առաջին մնայուն լուսանկարները ստեղծվել են 1820–1830-ական թվականներին, իսկ 1839 թվականին Ֆրանսիայում հայտարարվեց **դագերոտիպը**, և լուսանկարչությունը սկսեց տարածվել։ Նկարահանումը տևում էր րոպեներ, ուստի մարդիկ նստում էին անշարժ՝ գլխի հենարաններով։
 
 Լուսանկարչությունը փոխեց գեղանկարչությունը. նկարիչներն այլևս պարտավոր չէին ճշգրիտ կրկնել իրականությունը և դիմեցին գույնին, զգացմունքին և նոր ձևերին։
+
+~~~art
+pic camera
+~~~
 
 ## Ժանրեր
 
@@ -601,12 +776,24 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 * **Ֆոն**՝ նայիր դրան սեղմելուց առաջ, գլխից «աճող» սյունը փչացնում է դիմանկարը։
 * **Տեսակետ**՝ ծնկիր կամ բարձրացիր, այլ բարձրությունը սովորական բանը նոր է դարձնում։
 
+~~~art
+shots
+~~~
+
+~~~art
+compose
+~~~
+
 ## Լույս
 
 * **Մեղմ լույսը** ամպամած օրվա կամ ստվերոտ տեղի լավ է դիմանկարների համար։
 * **Կոշտ արևը** կեսօրին տալիս է ուժեղ ստվերներ և կկոցված աչքեր։
 * **Ոսկե ժամը**՝ արևածագից անմիջապես հետո և մայրամուտից առաջ, տալիս է ջերմ, երկար ստվերներ։
 * **Հակառակ լույսը** ստեղծում է ուրվագիծ, **կողային լույսը** ցույց է տալիս ֆակտուրան։
+
+~~~art
+light
+~~~
 
 ## Էթիկա
 
@@ -616,8 +803,8 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 
 Նկարիր հինգ լուսանկարի փոքր շարք մեկ թեմայով՝ «Իմ փողոցը», «Ձեռքերն աշխատանքի մեջ», «Առավոտյան լույս»։ Առնվազն երկուսում օգտագործիր երրորդների կանոնը և երկու տարբեր տեսակետ։ Ընտրիր լավագույն հինգը, տուր վերնագրեր և դասավորիր այնպես, որ պատմություն պատմեն։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է նշանակում «լուսանկարչություն» բառը։
 2. Երբ սկսեց լայնորեն տարածվել լուսանկարչությունը։
 3. Բացատրիր երրորդների կանոնը։
@@ -625,15 +812,21 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 5. Ինչ է ոսկե ժամը։
 6. Անվանիր մարդկանց լուսանկարելու մեկ էթիկական կանոն։
 7. Նկարիր հինգ լուսանկարի շարք մեկ թեմայով և դասավորիր դրանք։
+~~~
 
-### Պատասխաններ
-
-1. Լույսով նկարել։ 2. 1839 թվականից՝ դագերոտիպով։ 3. Կադրը բաժանիր երեք մասի լայնքով և երկայնքով և առարկան տեղադրիր գծերի հատման մոտ։ 4. Ճիշտ կադրի մեջտեղում։ 5. Արևածագից հետո և մայրամուտից առաջ ժամանակը՝ ջերմ լույսով և երկար ստվերներով։ 6. Թույլտվություն հարցնել մարդուն մոտիկից լուսանկարելուց առաջ։ 7. Քո շարքը։`,
+~~~art
+hints
+1. Լույսով նկարել։ 2. 1839 թվականից՝ դագերոտիպով։ 3. Կադրը բաժանիր երեք մասի լայնքով և երկայնքով և առարկան տեղադրիր գծերի հատման մոտ։ 4. Ճիշտ կադրի մեջտեղում։ 5. Արևածագից հետո և մայրամուտից առաջ ժամանակը՝ ջերմ լույսով և երկար ստվերներով։ 6. Թույլտվություն հարցնել մարդուն մոտիկից լուսանկարելուց առաջ։ 7. Քո շարքը։
+~~~`,
         ru: `## Рисование светом
 
 Слово **фотография** означает «рисование светом». Первые устойчивые фотографии сделаны в 1820–1830-х годах; в 1839 году во Франции был представлен **дагеротип**, и фотография начала распространяться. Выдержка длилась минутами, поэтому люди сидели неподвижно, опираясь головой на подставку.
 
 Фотография изменила живопись: художникам больше не нужно было точно повторять действительность, и они обратились к цвету, чувству и новым формам.
+
+~~~art
+pic camera
+~~~
 
 ## Жанры
 
@@ -649,12 +842,24 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 * **Фон:** посмотри на него до нажатия; столб, «растущий» из головы, портит портрет.
 * **Точка съёмки:** присядь или поднимись выше; другая высота делает привычное новым.
 
+~~~art
+shots
+~~~
+
+~~~art
+compose
+~~~
+
 ## Свет
 
 * **Мягкий свет** пасмурного дня или тени хорош для портрета.
 * **Жёсткое солнце** в полдень даёт резкие тени и прищуренные глаза.
 * **Золотой час** — сразу после восхода и перед закатом — даёт тёплый свет и длинные тени.
 * **Контровой свет** даёт силуэт, **боковой** выявляет фактуру.
+
+~~~art
+light
+~~~
 
 ## Этика
 
@@ -664,8 +869,8 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 
 Сними небольшую серию из пяти фотографий на одну тему: «Моя улица», «Руки в работе», «Утренний свет». Минимум в двух используй правило третей и две разные точки съёмки. Отбери лучшие пять, дай им названия и выстрой в порядке, который рассказывает историю.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что означает слово «фотография»?
 2. Когда фотография начала широко распространяться?
 3. Объясни правило третей.
@@ -673,10 +878,12 @@ Shoot a small series of five photographs on one theme: «My street», «Hands at
 5. Что такое золотой час?
 6. Назови одно этическое правило съёмки людей.
 7. Сними серию из пяти фотографий на одну тему и выстрой её.
+~~~
 
-### Ответы
-
-1. Рисование светом. 2. С 1839 года, с появлением дагеротипа. 3. Раздели кадр на три части по ширине и высоте и помести главное у пересечения линий. 4. Ровно посередине кадра. 5. Время сразу после восхода и перед закатом с тёплым светом и длинными тенями. 6. Спрашивать разрешение перед крупной съёмкой человека. 7. Твоя серия.`,
+~~~art
+hints
+1. Рисование светом. 2. С 1839 года, с появлением дагеротипа. 3. Раздели кадр на три части по ширине и высоте и помести главное у пересечения линий. 4. Ровно посередине кадра. 5. Время сразу после восхода и перед закатом с тёплым светом и длинными тенями. 6. Спрашивать разрешение перед крупной съёмкой человека. 7. Твоя серия.
+~~~`,
       },
       [
         q(t("The word «photography» means…", "«Լուսանկարչություն» բառը նշանակում է…", "Слово «фотография» означает…"), [t("drawing with light", "լույսով նկարել", "рисование светом"), t("printing on glass", "ապակու վրա տպել", "печать на стекле"), t("writing in a book", "գրքում գրել", "письмо в книге")], 0),
@@ -704,6 +911,10 @@ The first public film shows were given by the **Lumière brothers** in Paris in 
 
 Armenia has a strong animation tradition; one of its best known works is the short film «Lake» (1964) by **Robert Sahakyants**, and the country also has a famous master of unusual cinema, **Sergei Parajanov**.
 
+~~~art
+pic film-strip
+~~~
+
 ## Shot sizes
 
 | Shot | What is seen | What it is for |
@@ -716,6 +927,10 @@ Armenia has a strong animation tradition; one of its best known works is the sho
 
 Changing shot sizes keeps the viewer interested; a whole film in one shot size becomes boring.
 
+~~~art
+shots
+~~~
+
 ## The storyboard
 
 A **storyboard** is a comic strip of the future film: small drawings of each shot with notes on what happens, what the camera does and what we hear. It is cheaper to redraw a storyboard than to reshoot a film.
@@ -725,18 +940,31 @@ A **storyboard** is a comic strip of the future film: small drawings of each sho
 3. Mark the shot size and the camera movement with arrows.
 4. Write the sound under each frame: speech, music, noise.
 
+~~~art
+pic storyboard
+~~~
+
 ## Make an animation
 
 * **Flip book:** draw a small figure on the corner of each page, changing a little; flip the pages.
 * **Stop motion:** make a figure from plasticine, photograph it, move it a little, photograph again. 12 photos give one second of calm movement.
 * **Rule:** change one thing at a time, and make the moves small.
 
+~~~art
+flipbook ball
+~~~
+
+~~~art
+sketch mode=frames cells=4
+Your storyboard: four frames, one action. Change the shot size at least once.
+~~~
+
 ## Task
 
 Write a short story in five sentences. Draw a storyboard of 6–8 frames using at least three different shot sizes. Then make a flip book or a stop-motion film of a few seconds.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a frame?
 2. How many frames per second give smooth movement?
 3. Who gave the first public film shows and when?
@@ -744,10 +972,12 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 5. What is a storyboard and why is it useful?
 6. How many photographs give one second of stop motion?
 7. Make a storyboard and a short animation.
+~~~
 
-### Answers
-
-1. One separate picture of a film. 2. About 24. 3. The Lumière brothers, in 1895. 4. The close-up. 5. A comic strip of the future film; it is cheaper to redraw than to reshoot. 6. About 12 for calm movement. 7. Your work.`,
+~~~art
+hints
+1. One separate picture of a film. 2. About 24. 3. The Lumière brothers, in 1895. 4. The close-up. 5. A comic strip of the future film; it is cheaper to redraw than to reshoot. 6. About 12 for calm movement. 7. Your work.
+~~~`,
         hy: `## Նկարներ, որոնք շարժվում են
 
 Մեր աչքը պատկերը պահում է մի ակնթարթ այն անհետանալուց հետո։ Եթե նկարները բավական արագ փոխվեն, մոտ 24-ը վայրկյանում, մենք տեսնում ենք անընդհատ շարժում։ Յուրաքանչյուր առանձին նկար **կադր** է։
@@ -755,6 +985,10 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 Առաջին հրապարակային կինոցուցադրությունները կազմակերպել են **Լյումիեր եղբայրները** Փարիզում 1895 թվականին։ Շուտով նկարիչները սկսեցին ֆիլմեր նկարել կադր առ կադր. դա **անիմացիան** է։
 
 Հայաստանն ունի ուժեղ անիմացիոն ավանդույթ, նրա ամենահայտնի գործերից է **Ռոբերտ Սահակյանցի** «Լճակ» կարճամետրաժ ֆիլմը (1964), իսկ երկիրն ունի նաև անսովոր կինոյի հայտնի վարպետ՝ **Սերգեյ Փարաջանովին**։
+
+~~~art
+pic film-strip
+~~~
 
 ## Կադրերի խոշորացումները
 
@@ -768,6 +1002,10 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 
 Կադրերի խոշորացումների փոփոխությունը պահում է դիտողի հետաքրքրությունը, ամբողջ ֆիլմը մեկ խոշորացմամբ դառնում է ձանձրալի։
 
+~~~art
+shots
+~~~
+
 ## Սցենարային տախտակը
 
 **Սցենարային տախտակը** ապագա ֆիլմի կոմիքսն է՝ յուրաքանչյուր կադրի փոքր նկարներ՝ նշումներով, թե ինչ է կատարվում, ինչ է անում տեսախցիկը և ինչ ենք լսում։ Սցենարային տախտակը վերագծելն ավելի էժան է, քան ֆիլմը վերանկարահանելը։
@@ -777,18 +1015,31 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 3. Սլաքներով նշիր կադրի խոշորացումը և տեսախցիկի շարժումը։
 4. Յուրաքանչյուր կադրի տակ գրիր ձայնը՝ խոսք, երաժշտություն, աղմուկ։
 
+~~~art
+pic storyboard
+~~~
+
 ## Պատրաստիր անիմացիա
 
 * **Թերթվող գրքույկ**՝ յուրաքանչյուր էջի անկյունում նկարիր փոքր կերպար՝ քիչ փոփոխելով, հետո թերթիր էջերը։
 * **Օբյեկտային անիմացիա**՝ պլաստիլինից կերպար պատրաստիր, լուսանկարիր, քիչ տեղաշարժիր, նորից լուսանկարիր։ 12 լուսանկարը տալիս է հանդարտ շարժման մեկ վայրկյան։
 * **Կանոն**՝ փոխիր մեկ բան միաժամանակ և շարժումները փոքր արա։
 
+~~~art
+flipbook ball
+~~~
+
+~~~art
+sketch mode=frames cells=4
+Քո կադրաշարը․ չորս կադր, մեկ գործողություն։ Գոնե մեկ անգամ փոխի՛ր կադրի չափը։
+~~~
+
 ## Առաջադրանք
 
 Գրիր կարճ պատմություն հինգ նախադասությամբ։ Գծիր 6–8 կադրից սցենարային տախտակ՝ օգտագործելով առնվազն երեք տարբեր խոշորացում։ Հետո պատրաստիր թերթվող գրքույկ կամ մի քանի վայրկյան տևողությամբ օբյեկտային անիմացիա։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է կադրը։
 2. Վայրկյանում քանի կադր է տալիս սահուն շարժում։
 3. Ով և երբ է կազմակերպել առաջին հրապարակային կինոցուցադրությունները։
@@ -796,10 +1047,12 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 5. Ինչ է սցենարային տախտակը և ինչու է օգտակար։
 6. Քանի լուսանկար է տալիս օբյեկտային անիմացիայի մեկ վայրկյան։
 7. Պատրաստիր սցենարային տախտակ և կարճ անիմացիա։
+~~~
 
-### Պատասխաններ
-
-1. Ֆիլմի մեկ առանձին նկարը։ 2. Մոտ 24։ 3. Լյումիեր եղբայրները, 1895 թվականին։ 4. Խոշոր կադրը։ 5. Ապագա ֆիլմի կոմիքսը, վերագծելն ավելի էժան է, քան վերանկարահանելը։ 6. Հանդարտ շարժման համար մոտ 12։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ֆիլմի մեկ առանձին նկարը։ 2. Մոտ 24։ 3. Լյումիեր եղբայրները, 1895 թվականին։ 4. Խոշոր կադրը։ 5. Ապագա ֆիլմի կոմիքսը, վերագծելն ավելի էժան է, քան վերանկարահանելը։ 6. Հանդարտ շարժման համար մոտ 12։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Картинки, которые движутся
 
 Наш глаз удерживает изображение мгновение после того, как оно исчезло. Если картинки меняются достаточно быстро, около 24 в секунду, мы видим непрерывное движение. Каждое отдельное изображение — **кадр**.
@@ -807,6 +1060,10 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 Первые публичные киносеансы устроили **братья Люмьер** в Париже в 1895 году. Вскоре художники стали рисовать фильмы кадр за кадром — это **анимация**.
 
 В Армении сильная анимационная традиция; одна из самых известных работ — короткометражный фильм «Лужа» (1964) **Роберта Саакянца**, а ещё страна дала знаменитого мастера необычного кино — **Сергея Параджанова**.
+
+~~~art
+pic film-strip
+~~~
 
 ## Планы
 
@@ -820,6 +1077,10 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 
 Смена планов удерживает интерес зрителя; весь фильм на одном плане становится скучным.
 
+~~~art
+shots
+~~~
+
 ## Раскадровка
 
 **Раскадровка** — комикс будущего фильма: маленькие рисунки каждого кадра с пометками, что происходит, что делает камера и что мы слышим. Перерисовать раскадровку дешевле, чем переснять фильм.
@@ -829,18 +1090,31 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 3. Отметь план и движение камеры стрелками.
 4. Под каждым кадром напиши звук: речь, музыку, шум.
 
+~~~art
+pic storyboard
+~~~
+
 ## Сделай анимацию
 
 * **Флипбук:** нарисуй маленькую фигурку в углу каждой страницы, чуть меняя её, и пролистай.
 * **Покадровая съёмка (стоп-моушен):** слепи фигурку из пластилина, сфотографируй, чуть сдвинь, снова сфотографируй. 12 снимков дают секунду спокойного движения.
 * **Правило:** меняй по одному и делай движения маленькими.
 
+~~~art
+flipbook ball
+~~~
+
+~~~art
+sketch mode=frames cells=4
+Твоя раскадровка: четыре кадра, одно действие. Хотя бы раз поменяй крупность плана.
+~~~
+
 ## Задание
 
 Напиши короткую историю в пяти предложениях. Нарисуй раскадровку из 6–8 кадров, используя не меньше трёх разных планов. Затем сделай флипбук или стоп-моушен длиной в несколько секунд.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое кадр?
 2. Сколько кадров в секунду дают плавное движение?
 3. Кто и когда устроил первые публичные киносеансы?
@@ -848,10 +1122,12 @@ Write a short story in five sentences. Draw a storyboard of 6–8 frames using a
 5. Что такое раскадровка и чем она полезна?
 6. Сколько снимков дают секунду стоп-моушена?
 7. Сделай раскадровку и короткую анимацию.
+~~~
 
-### Ответы
-
-1. Одно отдельное изображение фильма. 2. Около 24. 3. Братья Люмьер, в 1895 году. 4. Крупный план. 5. Комикс будущего фильма; перерисовать её дешевле, чем переснять фильм. 6. Около 12 для спокойного движения. 7. Твоя работа.`,
+~~~art
+hints
+1. Одно отдельное изображение фильма. 2. Около 24. 3. Братья Люмьер, в 1895 году. 4. Крупный план. 5. Комикс будущего фильма; перерисовать её дешевле, чем переснять фильм. 6. Около 12 для спокойного движения. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("One separate picture of a film is a…", "Ֆիլմի մեկ առանձին նկարը…", "Одно отдельное изображение фильма — это…"), [t("frame", "կադր է", "кадр"), t("storyboard", "սցենարային տախտակ է", "раскадровка"), t("shot size", "խոշորացում է", "план")], 0),
@@ -877,6 +1153,10 @@ Most pictures we see today are on screens. The design of what happens on a scree
 
 An interface is good when a person reaches the goal **quickly and without thinking about the interface at all**.
 
+~~~art
+pic app-screen
+~~~
+
 ## Rules of a good interface
 
 * **Clear hierarchy:** the most important thing is the biggest and first.
@@ -886,6 +1166,10 @@ An interface is good when a person reaches the goal **quickly and without thinki
 * **Readability:** enough contrast, text not too small, lines not too long.
 * **Accessibility:** large tap targets, captions for pictures, a mode for weak eyesight.
 * **Consistency:** the same things look the same on every screen.
+
+~~~art
+palette digital
+~~~
 
 ## Raster and vector
 
@@ -898,6 +1182,11 @@ An interface is good when a person reaches the goal **quickly and without thinki
 
 **Resolution** says how many pixels an image has. For printing it must be high; for a screen a smaller image is enough.
 
+~~~art
+pic pictograms
+Vector icons stay sharp at any size; a photo is made of pixels and blurs when you zoom in.
+~~~
+
 ## Designing a screen
 
 1. **Task:** what does the person want to do here?
@@ -907,6 +1196,10 @@ An interface is good when a person reaches the goal **quickly and without thinki
 5. **Style:** colours, fonts, icons, the same as in the brand identity.
 6. **Check:** show it to someone and watch where they get lost.
 
+~~~art
+sketch guide=grid
+~~~
+
 ## Honest design
 
 A design should not trick people: hidden buttons that make you buy, a tiny «no, thank you», endless scrolling that steals time. Good designers think about the user's time and attention, and about privacy.
@@ -915,8 +1208,8 @@ A design should not trick people: hidden buttons that make you buy, a tiny «no,
 
 Design an app for your school on paper: a timetable, a library or a sports club. Draw three screens as wireframes, then draw one of them in colour with icons. Explain in two sentences what task each screen solves.
 
-### Exercises
-
+~~~art
+tasks
 1. What is interface design?
 2. Name three rules of a good interface.
 3. What is a pixel?
@@ -924,15 +1217,21 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 5. Which format is better for a logo: JPEG or SVG?
 6. Give an example of dishonest design.
 7. Draw three wireframes and one coloured screen of an app.
+~~~
 
-### Answers
-
-1. The design of what happens on a screen: apps, websites, games. 2. Any three: clear hierarchy, few actions, familiar signs, feedback, readability, accessibility, consistency. 3. One coloured dot of a raster image. 4. Vector graphics. 5. SVG. 6. For example a hidden button that makes you buy, or a tiny «no, thank you». 7. Your screens.`,
+~~~art
+hints
+1. The design of what happens on a screen: apps, websites, games. 2. Any three: clear hierarchy, few actions, familiar signs, feedback, readability, accessibility, consistency. 3. One coloured dot of a raster image. 4. Vector graphics. 5. SVG. 6. For example a hidden button that makes you buy, or a tiny «no, thank you». 7. Your screens.
+~~~`,
         hy: `## Դիզայն, որին դիպչում ես
 
 Այսօր մեր տեսած պատկերների մեծ մասն էկրաններին է։ Էկրանին կատարվողի դիզայնը կոչվում է **ինտերֆեյսի դիզայն**՝ հավելվածներ, կայքեր, խաղեր, քարտեզներ, տոմսեր։
 
 Ինտերֆեյսը լավն է, երբ մարդը նպատակին հասնում է **արագ և ինտերֆեյսի մասին ընդհանրապես չմտածելով**։
+
+~~~art
+pic app-screen
+~~~
 
 ## Լավ ինտերֆեյսի կանոնները
 
@@ -943,6 +1242,10 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 * **Ընթեռնելիություն**՝ բավարար կոնտրաստ, տեքստն ոչ շատ մանր, տողերը՝ ոչ շատ երկար։
 * **Հասանելիություն**՝ մեծ հպման գոտիներ, նկարների նկարագրություններ, թույլ տեսողության ռեժիմ։
 * **Հետևողականություն**՝ նույն բաները նույն տեսքն ունեն բոլոր էկրաններին։
+
+~~~art
+palette digital
+~~~
 
 ## Ռաստերային և վեկտորային
 
@@ -955,6 +1258,11 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 
 **Լուծաչափը** ասում է, թե քանի փիքսել ունի պատկերը։ Տպագրության համար այն պետք է բարձր լինի, էկրանի համար բավական է ավելի փոքր պատկերը։
 
+~~~art
+pic pictograms
+Վեկտորային պատկերակները ցանկացած չափով մնում են սուր, իսկ լուսանկարը կազմված է պիքսելներից և մեծացնելիս պղտորվում է։
+~~~
+
 ## Էկրանի նախագծում
 
 1. **Խնդիր**՝ ինչ է ուզում անել մարդն այստեղ։
@@ -964,6 +1272,10 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 5. **Ոճ**՝ գույներ, տառատեսակներ, պատկերակներ՝ նույնը, ինչ բրենդի ինքնությունում։
 6. **Ստուգում**՝ ցույց տուր մեկին և նայիր, թե որտեղ է նա մոլորվում։
 
+~~~art
+sketch guide=grid
+~~~
+
 ## Ազնիվ դիզայն
 
 Դիզայնը չպետք է խաբի մարդկանց՝ թաքնված կոճակներ, որոնք ստիպում են գնել, մանրիկ «ոչ, շնորհակալություն», անվերջ ոլորում, որը գողանում է ժամանակը։ Լավ դիզայներները մտածում են օգտվողի ժամանակի, ուշադրության և գաղտնիության մասին։
@@ -972,8 +1284,8 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 
 Թղթի վրա նախագծիր հավելված քո դպրոցի համար՝ դասացուցակ, գրադարան կամ սպորտային ակումբ։ Գծիր երեք էկրան որպես ուրվագիծ, հետո դրանցից մեկը նկարիր գունավոր՝ պատկերակներով։ Երկու նախադասությամբ բացատրիր, թե յուրաքանչյուր էկրան ինչ խնդիր է լուծում։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է ինտերֆեյսի դիզայնը։
 2. Անվանիր լավ ինտերֆեյսի երեք կանոն։
 3. Ինչ է փիքսելը։
@@ -981,15 +1293,21 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 5. Որ ձևաչափն է ավելի լավ լոգոյի համար՝ JPEG, թե SVG։
 6. Բեր անազնիվ դիզայնի օրինակ։
 7. Գծիր երեք ուրվագիծ և հավելվածի մեկ գունավոր էկրան։
+~~~
 
-### Պատասխաններ
-
-1. Էկրանին կատարվողի դիզայնը՝ հավելվածներ, կայքեր, խաղեր։ 2. Ցանկացած երեքը՝ հստակ հիերարխիա, քիչ գործողություն, ծանոթ նշաններ, հետադարձ կապ, ընթեռնելիություն, հասանելիություն, հետևողականություն։ 3. Ռաստերային պատկերի մեկ գունավոր կետը։ 4. Վեկտորայինը։ 5. SVG-ն։ 6. Օրինակ՝ թաքնված կոճակը, որը ստիպում է գնել, կամ մանրիկ «ոչ, շնորհակալություն»։ 7. Քո էկրանները։`,
+~~~art
+hints
+1. Էկրանին կատարվողի դիզայնը՝ հավելվածներ, կայքեր, խաղեր։ 2. Ցանկացած երեքը՝ հստակ հիերարխիա, քիչ գործողություն, ծանոթ նշաններ, հետադարձ կապ, ընթեռնելիություն, հասանելիություն, հետևողականություն։ 3. Ռաստերային պատկերի մեկ գունավոր կետը։ 4. Վեկտորայինը։ 5. SVG-ն։ 6. Օրինակ՝ թաքնված կոճակը, որը ստիպում է գնել, կամ մանրիկ «ոչ, շնորհակալություն»։ 7. Քո էկրանները։
+~~~`,
         ru: `## Дизайн, к которому прикасаются
 
 Большую часть изображений сегодня мы видим на экранах. Дизайн того, что происходит на экране, называется **дизайном интерфейсов**: приложения, сайты, игры, карты, билеты.
 
 Интерфейс хорош, когда человек достигает цели **быстро и вообще не думая об интерфейсе**.
+
+~~~art
+pic app-screen
+~~~
 
 ## Правила хорошего интерфейса
 
@@ -1000,6 +1318,10 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 * **Читаемость:** достаточный контраст, не слишком мелкий текст, не слишком длинные строки.
 * **Доступность:** крупные зоны нажатия, описания картинок, режим для слабого зрения.
 * **Единообразие:** одинаковые вещи выглядят одинаково на всех экранах.
+
+~~~art
+palette digital
+~~~
 
 ## Растр и вектор
 
@@ -1012,6 +1334,11 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 
 **Разрешение** говорит, сколько пикселей в изображении. Для печати оно должно быть высоким, для экрана достаточно меньшего.
 
+~~~art
+pic pictograms
+Векторные значки остаются чёткими в любом размере, а фото состоит из пикселей и размывается при увеличении.
+~~~
+
 ## Проектирование экрана
 
 1. **Задача:** что человек хочет здесь сделать?
@@ -1021,6 +1348,10 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 5. **Стиль:** цвета, шрифты, иконки — те же, что в фирменном стиле.
 6. **Проверка:** покажи кому-нибудь и посмотри, где он теряется.
 
+~~~art
+sketch guide=grid
+~~~
+
 ## Честный дизайн
 
 Дизайн не должен обманывать: спрятанные кнопки, подталкивающие к покупке, крошечное «нет, спасибо», бесконечная лента, крадущая время. Хорошие дизайнеры думают о времени, внимании и приватности пользователя.
@@ -1029,8 +1360,8 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 
 Спроектируй на бумаге приложение для своей школы: расписание, библиотеку или спортивный клуб. Нарисуй три экрана каркасами, затем один из них в цвете с иконками. Двумя предложениями объясни, какую задачу решает каждый экран.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое дизайн интерфейсов?
 2. Назови три правила хорошего интерфейса.
 3. Что такое пиксель?
@@ -1038,10 +1369,12 @@ Design an app for your school on paper: a timetable, a library or a sports club.
 5. Какой формат лучше для логотипа: JPEG или SVG?
 6. Приведи пример нечестного дизайна.
 7. Нарисуй три каркаса и один цветной экран приложения.
+~~~
 
-### Ответы
-
-1. Дизайн того, что происходит на экране: приложений, сайтов, игр. 2. Любые три: ясная иерархия, мало действий, знакомые знаки, обратная связь, читаемость, доступность, единообразие. 3. Одна цветная точка растрового изображения. 4. Векторная. 5. SVG. 6. Например, спрятанная кнопка, подталкивающая к покупке, или крошечное «нет, спасибо». 7. Твои экраны.`,
+~~~art
+hints
+1. Дизайн того, что происходит на экране: приложений, сайтов, игр. 2. Любые три: ясная иерархия, мало действий, знакомые знаки, обратная связь, читаемость, доступность, единообразие. 3. Одна цветная точка растрового изображения. 4. Векторная. 5. SVG. 6. Например, спрятанная кнопка, подталкивающая к покупке, или крошечное «нет, спасибо». 7. Твои экраны.
+~~~`,
       },
       [
         q(t("A grid of coloured dots is … graphics.", "Գունավոր կետերի ցանցը … գրաֆիկա է։", "Сетка цветных точек — это … графика."), [t("raster", "ռաստերային", "растровая"), t("vector", "վեկտորային", "векторная"), t("printed", "տպագիր", "печатная")], 0),
