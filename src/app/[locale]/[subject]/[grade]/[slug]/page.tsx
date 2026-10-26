@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Markdown } from "@/components/site/markdown";
 import { LessonProgressCard } from "@/components/site/lesson-progress";
 import { Quiz } from "@/components/site/quiz";
+import { localQuiz } from "@/lib/quiz";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
@@ -98,7 +99,7 @@ export default async function LessonPage({ params }: { params: Params }) {
         </div>
       )}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={lesson.quiz} save={user ? { lessonId: lesson.id } : null} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l)} save={user ? { lessonId: lesson.id } : null} />}
 
       {ready && (
         <LessonProgressCard

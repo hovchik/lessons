@@ -1,21 +1,20 @@
 "use client";
 
 import { CheckCircle2, CircleHelp, RotateCcw, Save, XCircle } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import type { QuizQuestion } from "@/server/db/schema";
+import type { LocalQuestion } from "@/lib/quiz";
 import { Button } from "@/components/ui/button";
-import { cn, pick } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 type Props = {
-  questions: QuizQuestion[];
+  questions: LocalQuestion[];
   /** When set (signed-in pupil), a finished quiz is saved to /api/progress/quiz. */
   save?: { lessonId: string } | null;
 };
 
 export function Quiz({ questions, save }: Props) {
   const t = useTranslations("lesson");
-  const locale = useLocale();
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [checked, setChecked] = useState<Record<number, boolean>>({});
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
@@ -58,7 +57,7 @@ export function Quiz({ questions, save }: Props) {
           return (
             <li key={i} className="space-y-3 border-t border-border/60 pt-5 first:border-t-0 first:pt-0">
               <p className="text-xs font-extrabold uppercase tracking-wide text-muted-foreground">{t("question", { n: i + 1, total })}</p>
-              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{pick(qq.prompt, locale)}</p>
+              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{qq.prompt}</p>
               <div role="radiogroup" aria-labelledby={`q-${i}`} className="grid gap-2.5 md:grid-cols-3">
                 {qq.options.map((opt, oi) => {
                   const selected = chosen === oi;
@@ -82,7 +81,7 @@ export function Quiz({ questions, save }: Props) {
                       <span className="flex items-start gap-2 leading-snug">
                         {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
                         {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
-                        {pick(opt, locale)}
+                        {opt}
                       </span>
                     </button>
                   );
@@ -105,7 +104,7 @@ export function Quiz({ questions, save }: Props) {
                 )}
               </div>
               {isChecked && showWhy[i] && qq.explanation && (
-                <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(qq.explanation, locale)}</p>
+                <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
             </li>
           );

@@ -6,8 +6,9 @@
  * an outline was rewritten into a full course) are removed, so they do not show up
  * as stale, empty units.
  */
-import { and, eq, notInArray } from "drizzle-orm";
-import { getDb, schema } from "../src/server/db/client";
+import fs from "node:fs";
+import { and, eq, notInArray, sql } from "drizzle-orm";
+import { DB_PATH, getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
 import { seedTips } from "./seed-tips";
@@ -20,6 +21,8 @@ const slugify = (s: string) =>
 
 async function run() {
   const db = await getDb();
+  // Thousands of small writes: let WAL batch the disk syncs (still safe against crashes).
+  await db.run(sql`PRAGMA synchronous = NORMAL`);
   let unitsCount = 0;
   let lessonsCount = 0;
   let withContent = 0;
@@ -188,6 +191,12 @@ async function run() {
   console.log(
     `Seeded ${subjects.length} subjects, ${courses.length} courses, ${unitsCount} units, ${lessonsCount} lessons (${withContent} with full content, ${lessonsCount - withContent} outlines).`,
   );
+
+  // Rewritten rows leave free pages behind and the write-ahead log grows; compact the file.
+  await db.run(sql`PRAGMA wal_checkpoint(TRUNCATE)`);
+  await db.run(sql`VACUUM`);
+  await db.run(sql`PRAGMA wal_checkpoint(TRUNCATE)`);
+  console.log(`Database: ${(fs.statSync(DB_PATH).size / 1024 / 1024).toFixed(1)} MB (${DB_PATH}).`);
 }
 
 run().then(() => process.exit(0), (e) => {

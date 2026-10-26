@@ -10,7 +10,7 @@ import * as schema from "./schema";
  * Linux that do not depend on the Node.js version, so `npm install` never has
  * to compile anything.
  */
-const DB_PATH = process.env.DATABASE_PATH || path.join(process.cwd(), "data", "lessons.db");
+export const DB_PATH = process.env.DATABASE_PATH || path.join(process.cwd(), "data", "lessons.db");
 
 type Db = ReturnType<typeof drizzle<typeof schema>>;
 

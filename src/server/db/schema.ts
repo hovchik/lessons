@@ -1,5 +1,9 @@
 import { sqliteTable, text, integer, index, primaryKey } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
+import { packedJson } from "./packed";
+import { TIP_CATEGORIES, type TipCategory } from "../../lib/tip-categories";
+
+export { TIP_CATEGORIES, type TipCategory };
 
 /** A string translated into the three UI languages. */
 export type I18nText = { en: string; hy: string; ru: string };
@@ -69,12 +73,10 @@ export const lessons = sqliteTable(
     position: integer("position").notNull(),
     slug: text("slug").notNull(),
     title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
-    objectives: text("objectives", { mode: "json" })
-      .$type<{ en: string[]; hy: string[]; ru: string[] }>()
-      .notNull(),
+    objectives: packedJson<{ en: string[]; hy: string[]; ru: string[] }>("objectives").notNull(),
     /** Markdown (GFM + KaTeX math) body per language. Empty string = not yet written. */
-    content: text("content", { mode: "json" }).$type<I18nText>().notNull(),
-    quiz: text("quiz", { mode: "json" }).$type<QuizQuestion[]>().notNull().default([]),
+    content: packedJson<I18nText>("content").notNull(),
+    quiz: packedJson<QuizQuestion[]>("quiz").notNull().default([]),
     durationMin: integer("duration_min").notNull().default(45),
     /** draft | published */
     status: text("status").notNull().default("draft"),
@@ -186,8 +188,6 @@ export type User = typeof users.$inferSelect;
 export type LessonProgress = typeof lessonProgress.$inferSelect;
 export type Attempt = typeof attempts.$inferSelect;
 /** Tips, tricks and shortcuts that go beyond the standard course for one grade of a subject. */
-export const TIP_CATEGORIES = ["mentalMath", "memory", "problemSolving", "language", "exam", "study"] as const;
-export type TipCategory = (typeof TIP_CATEGORIES)[number];
 
 export const tips = sqliteTable(
   "tips",
