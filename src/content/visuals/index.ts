@@ -29,7 +29,7 @@ export const VISUALS: Record<string, VisualMap> = {
   geometry: geometryVisuals,
 };
 
-const EXERCISES = /^#{2,3} (Exercises|Упражнения|Վարժություններ|Առաջադրանքներ)\s*$/m;
+const EXERCISES = /^#{2,3} (Exercises|Упражнения|Задания|Վարժություններ|Առաջադրանքներ)\s*$/m;
 const HEADING = /^#{2,3} /gm;
 
 function fence(spec: string, prompt?: string) {
