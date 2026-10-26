@@ -9,7 +9,8 @@ import { ru as ru8 } from "./grade-8.ru";
 import { worldHistoryGrade9 } from "./grade-9";
 import { ru as ru9 } from "./grade-9.ru";
 import { worldHistoryGrade10 } from "./grade-10";
+import { ru as ru10 } from "./grade-10.ru";
 import { worldHistoryGrade11 } from "./grade-11";
 import { worldHistoryGrade12 } from "./grade-12";
 
-export const worldHistory: CourseSeed[] = [withRu(worldHistoryGrade6, ru6), withRu(worldHistoryGrade7, ru7), withRu(worldHistoryGrade8, ru8), withRu(worldHistoryGrade9, ru9), worldHistoryGrade10, worldHistoryGrade11, worldHistoryGrade12];
+export const worldHistory: CourseSeed[] = [withRu(worldHistoryGrade6, ru6), withRu(worldHistoryGrade7, ru7), withRu(worldHistoryGrade8, ru8), withRu(worldHistoryGrade9, ru9), withRu(worldHistoryGrade10, ru10), worldHistoryGrade11, worldHistoryGrade12];
