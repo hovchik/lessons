@@ -139,6 +139,18 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
 .subject-orange  { --s: #ea580c; --s-soft: #ffedd5; --s-text: #9a3412; }
 .subject-red     { --s: #dc2626; --s-soft: #fee2e2; --s-text: #991b1b; }
 .subject-emerald { --s: #059669; --s-soft: #d1fae5; --s-text: #065f46; }
+.subject-teal    { --s: #0d9488; --s-soft: #ccfbf1; --s-text: #115e59; }
+.subject-green   { --s: #16a34a; --s-soft: #dcfce7; --s-text: #166534; }
+.subject-lime    { --s: #65a30d; --s-soft: #ecfccb; --s-text: #3f6212; }
+.subject-cyan    { --s: #0891b2; --s-soft: #cffafe; --s-text: #155e75; }
+.subject-blue    { --s: #2563eb; --s-soft: #dbeafe; --s-text: #1e40af; }
+.subject-stone   { --s: #78716c; --s-soft: #f5f5f4; --s-text: #44403c; }
+.subject-yellow  { --s: #ca8a04; --s-soft: #fef9c3; --s-text: #854d0e; }
+.subject-slate   { --s: #475569; --s-soft: #f1f5f9; --s-text: #1e293b; }
+.subject-fuchsia { --s: #c026d3; --s-soft: #fae8ff; --s-text: #86198f; }
+.subject-pink    { --s: #db2777; --s-soft: #fce7f3; --s-text: #9d174d; }
+.subject-purple  { --s: #9333ea; --s-soft: #f3e8ff; --s-text: #6b21a8; }
+.subject-zinc    { --s: #52525b; --s-soft: #f4f4f5; --s-text: #27272a; }
 
 /* ---- Clay surfaces ---- */
 .clay {

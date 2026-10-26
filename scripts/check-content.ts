@@ -25,7 +25,12 @@ for (const c of courses) {
   const slugs = new Set<string>();
   let cTotal = 0;
   let cWritten = 0;
+  const langs = c.languages ?? LANGS;
+  for (const lang of LANGS) {
+    if (!c.title[lang]?.trim() || !c.description[lang]?.trim()) errors.push(`${id}: missing ${lang} course title or description`);
+  }
   for (const u of c.units) {
+    for (const lang of LANGS) if (!u.title[lang]?.trim()) errors.push(`${id}: unit "${u.title.en}" missing ${lang} title`);
     for (const l of u.lessons) {
       cTotal++;
       const where = `${id}/${l.slug}`;
@@ -35,11 +40,12 @@ for (const c of courses) {
       for (const lang of LANGS) if (!l.title[lang]?.trim()) errors.push(`${where}: missing ${lang} title`);
       if (!l.content) continue;
       cWritten++;
-      for (const lang of LANGS) {
+      for (const lang of langs) {
         if (!l.content[lang]?.trim()) errors.push(`${where}: missing ${lang} body`);
         if (!l.objectives?.[lang]?.length) errors.push(`${where}: missing ${lang} objectives`);
       }
-      for (const lang of LANGS) {
+      if (/[\u0596\u05bf\u4e00-\u9fff]/.test(Object.values(l.content).join(""))) errors.push(`${where}: stray non-Armenian/CJK character`);
+      for (const lang of langs) {
         const re = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
         for (const m of (l.content[lang] ?? "").matchAll(re)) {
           const tex = m[1] ?? m[2];
@@ -55,7 +61,8 @@ for (const c of courses) {
       for (const [i, qq] of (l.quiz ?? []).entries()) {
         questions++;
         if (qq.answer < 0 || qq.answer >= qq.options.length) errors.push(`${where}: quiz ${i + 1} answer out of range`);
-        for (const lang of LANGS) {
+        if (qq.options.length < 2) errors.push(`${where}: quiz ${i + 1} needs at least 2 options`);
+        for (const lang of langs) {
           if (!qq.prompt[lang]?.trim()) errors.push(`${where}: quiz ${i + 1} missing ${lang} prompt`);
           qq.options.forEach((o, oi) => {
             if (!o[lang]?.trim()) errors.push(`${where}: quiz ${i + 1} option ${oi + 1} missing ${lang}`);
@@ -66,7 +73,8 @@ for (const c of courses) {
   }
   total += cTotal;
   written += cWritten;
-  if (process.argv.includes("--verbose") || cWritten > 0) console.log(`${id.padEnd(14)} ${String(cWritten).padStart(3)}/${cTotal} written`);
+  const only = c.languages ? ` (${c.languages.join(", ")} only)` : "";
+  if (process.argv.includes("--verbose") || cWritten > 0) console.log(`${id.padEnd(22)} ${String(cWritten).padStart(3)}/${cTotal} written${only}`);
 }
 
 // Exams: unique ids, every text in three languages, answers in range, one trial per written course.

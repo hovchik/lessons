@@ -7,6 +7,18 @@ import {
   Languages,
   Palette,
   Shapes,
+  Church,
+  Crown,
+  EighthNotes,
+  FlaskConical,
+  Landmark,
+  Leaf,
+  Map as MapIcon,
+  Monitor,
+  ScrollText,
+  Sprout,
+  Users,
+  Wrench,
   type LucideProps,
 } from "lucide-react";
 
@@ -19,6 +31,18 @@ const ICONS: Record<string, React.ComponentType<LucideProps>> = {
   Languages,
   Palette,
   Shapes,
+  Church,
+  Crown,
+  EighthNotes,
+  FlaskConical,
+  Landmark,
+  Leaf,
+  Map: MapIcon,
+  Monitor,
+  ScrollText,
+  Sprout,
+  Users,
+  Wrench,
 };
 
 export function SubjectIcon({ name, ...props }: { name: string } & LucideProps) {

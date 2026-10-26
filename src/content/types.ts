@@ -26,6 +26,12 @@ export type CourseSeed = {
   curriculumNotes: { armenia: I18nText; russia: I18nText };
   hoursPerWeek: { armenia: number | null; russia: number | null };
   units: UnitSeed[];
+  /**
+   * Languages the lesson bodies, objectives and quizzes are written in. Defaults to all three.
+   * Titles of courses, units and lessons are always trilingual so navigation works in every locale;
+   * a lesson missing the visitor's language falls back to Armenian with a notice.
+   */
+  languages?: Array<"en" | "hy" | "ru">;
 };
 
 export type SubjectSeed = {
@@ -68,3 +74,29 @@ export const lesson = (
   quiz: QuizQuestion[],
   durationMin = 40,
 ): LessonSeed => ({ slug, title: t(...title), objectives, content, quiz, durationMin });
+
+/** Armenian-only text: English and Russian are filled in later. */
+export const hyText = (hy: string): I18nText => ({ en: "", hy, ru: "" });
+
+/** Armenian-only quiz question: [prompt, options, index of the correct option]. */
+export type HyQuestion = [prompt: string, options: string[], answer: number];
+
+/**
+ * Full lesson written in Armenian only (English and Russian versions to follow).
+ * Title stays trilingual for navigation; objectives, body and quiz are Armenian.
+ */
+export const hyLesson = (
+  slug: string,
+  title: [en: string, hy: string, ru: string],
+  objectives: string[],
+  content: string,
+  quiz: HyQuestion[],
+  durationMin = 40,
+): LessonSeed => ({
+  slug,
+  title: t(...title),
+  objectives: { en: [], hy: objectives, ru: [] },
+  content: hyText(content),
+  quiz: quiz.map(([prompt, options, answer]) => ({ prompt: hyText(prompt), options: options.map(hyText), answer })),
+  durationMin,
+});

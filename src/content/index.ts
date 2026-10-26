@@ -8,6 +8,18 @@ import { drawing } from "./subjects/drawing";
 import { armenian } from "./subjects/armenian";
 import { russian } from "./subjects/russian";
 import { english } from "./subjects/english";
+import { chemistry } from "./subjects/chemistry";
+import { biology } from "./subjects/biology";
+import { geography } from "./subjects/geography";
+import { armenianHistory } from "./subjects/armenian-history";
+import { worldHistory } from "./subjects/world-history";
+import { informatics } from "./subjects/informatics";
+import { socialStudies } from "./subjects/social-studies";
+import { science } from "./subjects/science";
+import { churchHistory } from "./subjects/church-history";
+import { music } from "./subjects/music";
+import { technology } from "./subjects/technology";
+import { chess } from "./subjects/chess";
 
 export { subjects };
 
@@ -20,6 +32,18 @@ export const courses: CourseSeed[] = [
   ...armenian,
   ...russian,
   ...english,
+  ...chemistry,
+  ...biology,
+  ...geography,
+  ...armenianHistory,
+  ...worldHistory,
+  ...informatics,
+  ...socialStudies,
+  ...science,
+  ...churchHistory,
+  ...music,
+  ...technology,
+  ...chess,
 ];
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;
