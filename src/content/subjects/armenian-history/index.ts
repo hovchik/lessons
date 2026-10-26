@@ -1,7 +1,8 @@
 import type { CourseSeed } from "../../types";
-import { withRu } from "../../ru-overlay";
+import { withEn, withRu } from "../../ru-overlay";
 import { armenianHistoryGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
+import { en as en5 } from "./grade-5.en";
 import { armenianHistoryGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
 import { armenianHistoryGrade7 } from "./grade-7";
@@ -17,4 +18,4 @@ import { ru as ru11 } from "./grade-11.ru";
 import { armenianHistoryGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 
-export const armenianHistory: CourseSeed[] = [withRu(armenianHistoryGrade5, ru5), withRu(armenianHistoryGrade6, ru6), withRu(armenianHistoryGrade7, ru7), withRu(armenianHistoryGrade8, ru8), withRu(armenianHistoryGrade9, ru9), withRu(armenianHistoryGrade10, ru10), withRu(armenianHistoryGrade11, ru11), withRu(armenianHistoryGrade12, ru12)];
+export const armenianHistory: CourseSeed[] = [withEn(withRu(armenianHistoryGrade5, ru5), en5), withRu(armenianHistoryGrade6, ru6), withRu(armenianHistoryGrade7, ru7), withRu(armenianHistoryGrade8, ru8), withRu(armenianHistoryGrade9, ru9), withRu(armenianHistoryGrade10, ru10), withRu(armenianHistoryGrade11, ru11), withRu(armenianHistoryGrade12, ru12)];
