@@ -193,7 +193,12 @@ function Solve({ spec, lang }: SimProps) {
     const p = piText(s / 180);
     return p.includes(".") ? `${nf(s, lang, 1)}°` : p;
   };
-  const general = fn === "sin" ? `x = (−1)ⁿ·arcsin ${aText} + πn` : fn === "cos" ? `x = ±arccos ${aText} + 2πn` : `x = ${lang === "en" ? "arctan" : "arctg"} ${aText} + πn`;
+  // the principal value, as a multiple of π when it is a neat one (arcsin 1/2 → π/6)
+  const inv = fn === "sin" ? "arcsin" : fn === "cos" ? "arccos" : lang === "en" ? "arctan" : "arctg";
+  const pv = fn === "tan" ? Math.atan(a) : Math.abs(a) <= 1 ? (fn === "sin" ? Math.asin(a) : Math.acos(a)) : NaN;
+  const pText = piText(pv / Math.PI);
+  const base = chip && !pText.includes(".") ? (pText.startsWith("−") ? `(${pText})` : pText) : `${inv} ${aText}`;
+  const general = pText === "0" ? (fn === "cos" ? "x = 2πn" : "x = πn") : fn === "sin" ? `x = (−1)ⁿ·${base} + πn` : fn === "cos" ? `x = ±${base} + 2πn` : `x = ${base} + πn`;
   const yLine = O.y - a * R, xLine = O.x + a * R;
   return (
     <ArtFrame kind="experiment" title={L(W.solve, lang)} body={spec.body || L(W.solveHint, lang)}>

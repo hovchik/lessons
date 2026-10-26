@@ -82,7 +82,7 @@ export const divide = (lang: ArtLang) => (lang === "en" ? "÷" : ":");
 /** π-multiples for trig axes, periods and radians: 2 → "2π", 0.5 → "π/2", 4/3 → "4π/3". */
 export function piText(p: number) {
   if (Math.abs(p) < 1e-9) return "0";
-  for (const den of [1, 2, 3, 4, 5, 6, 12]) {
+  for (const den of [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 18, 36]) {
     const n = Math.round(p * den);
     if (Math.abs(n / den - p) < 1e-3) {
       const a = Math.abs(n);
