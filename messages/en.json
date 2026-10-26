@@ -1,30 +1,163 @@
 {
-  "app": { "name": "Lessons", "tagline": "Grades 1–12. Three languages. Every subject.", "skipToContent": "Skip to content" },
-  "nav": { "home": "Home", "grades": "Grades", "subjects": "Subjects", "admin": "Admin", "language": "Language", "menu": "Menu" },
+  "app": {
+    "name": "Lessons",
+    "tagline": "Grades 1–12. Three languages. Every subject.",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "home": "Home",
+    "grades": "Grades",
+    "subjects": "Subjects",
+    "admin": "Admin",
+    "language": "Language",
+    "menu": "Menu",
+    "progress": "Progress",
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "account": "Account"
+  },
   "home": {
     "heroTitle": "Learn every subject, from grade 1 to 12",
     "heroText": "Complete courses in Math, Algebra, Geometry, Physics, Drawing and Languages, built on the Armenian and Russian school curricula and available in English, Armenian and Russian.",
     "pickGrade": "Pick your grade",
     "browseSubjects": "Browse by subject",
-    "stats": { "courses": "courses", "lessons": "lessons", "languages": "languages" },
+    "stats": {
+      "courses": "courses",
+      "lessons": "lessons",
+      "languages": "languages"
+    },
     "curriculumTitle": "Two curricula, one program",
     "curriculumText": "Every course explains how the topic is taught in Armenia and in Russia, so pupils, parents and teachers in either system can follow along.",
     "ctaGrade": "Start with grade {grade}"
   },
-  "grade": { "label": "Grade", "short": "G{grade}", "title": "Grade {grade}", "subtitle": "{count} courses for grade {grade}", "noCourses": "No courses for this grade yet.", "allGrades": "All grades", "prev": "Grade {grade}", "next": "Grade {grade}" },
-  "subject": { "title": "Subjects", "coursesCount": "{count} courses", "grades": "Grades {from}–{to}", "viewCourses": "View courses" },
+  "grade": {
+    "label": "Grade",
+    "short": "G{grade}",
+    "title": "Grade {grade}",
+    "subtitle": "{count} courses for grade {grade}",
+    "noCourses": "No courses for this grade yet.",
+    "allGrades": "All grades",
+    "prev": "Grade {grade}",
+    "next": "Grade {grade}"
+  },
+  "subject": {
+    "title": "Subjects",
+    "coursesCount": "{count} courses",
+    "grades": "Grades {from}–{to}",
+    "viewCourses": "View courses"
+  },
   "course": {
-    "units": "Units", "lessons": "lessons", "lesson": "lesson", "lessonsCount": "{count} lessons",
-    "unit": "Unit {n}", "lessonN": "Lesson {n}", "start": "Start learning", "continue": "Continue",
-    "curriculum": "Curriculum map", "armenia": "Armenia", "russia": "Russia", "hoursPerWeek": "{hours} h/week", "hoursNA": "not taught", "comingSoon": "Coming soon", "published": "Ready", "progress": "{done} of {total} lessons ready",
-    "otherGrades": "Other grades in {subject}"
+    "units": "Units",
+    "lessons": "lessons",
+    "lesson": "lesson",
+    "lessonsCount": "{count} lessons",
+    "unit": "Unit {n}",
+    "lessonN": "Lesson {n}",
+    "start": "Start learning",
+    "continue": "Continue",
+    "curriculum": "Curriculum map",
+    "armenia": "Armenia",
+    "russia": "Russia",
+    "hoursPerWeek": "{hours} h/week",
+    "hoursNA": "not taught",
+    "comingSoon": "Coming soon",
+    "published": "Ready",
+    "progress": "{done} of {total} lessons ready",
+    "otherGrades": "Other grades in {subject}",
+    "completedCount": "{done} of {total} completed",
+    "done": "Done"
   },
   "lesson": {
-    "objectives": "What you will learn", "duration": "{min} min", "quiz": "Check yourself", "check": "Check answer", "next": "Next lesson", "prev": "Previous lesson", "backToCourse": "Back to course",
-    "comingSoonTitle": "This lesson is being written", "comingSoonText": "The full lesson text is not ready yet. Browse the course outline or come back soon.",
-    "correct": "Correct!", "incorrect": "Not quite. Try again.", "score": "You got {score} of {total}", "retry": "Try again", "showExplanation": "Why?", "question": "Question {n} of {total}", "inUnit": "Unit {n}: {title}"
+    "objectives": "What you will learn",
+    "duration": "{min} min",
+    "quiz": "Check yourself",
+    "check": "Check answer",
+    "next": "Next lesson",
+    "prev": "Previous lesson",
+    "backToCourse": "Back to course",
+    "comingSoonTitle": "This lesson is being written",
+    "comingSoonText": "The full lesson text is not ready yet. Browse the course outline or come back soon.",
+    "correct": "Correct!",
+    "incorrect": "Not quite. Try again.",
+    "score": "You got {score} of {total}",
+    "retry": "Try again",
+    "showExplanation": "Why?",
+    "question": "Question {n} of {total}",
+    "inUnit": "Unit {n}: {title}",
+    "markDone": "Mark as done",
+    "done": "Completed",
+    "undone": "Mark as not done",
+    "saved": "Saved to your progress",
+    "saveHint": "Log in to save your score",
+    "bestScore": "Your best: {score} of {total}"
   },
-  "tips": {"title": "Tips & tricks", "subtitle": "Shortcuts, memory aids and habits that are not in the standard course.", "count": "{count} tips", "category": {"mentalMath": "Mental math", "memory": "Memory aid", "problemSolving": "Problem solving", "language": "Language hack", "exam": "Exam strategy", "study": "Study habit"}},
-  "footer": { "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.", "admin": "Admin panel", "language": "Language" },
-  "notFound": { "title": "Page not found", "text": "The page you are looking for does not exist.", "home": "Go to the home page" }
+  "tips": {
+    "title": "Tips & tricks",
+    "subtitle": "Shortcuts, memory aids and habits that are not in the standard course.",
+    "count": "{count} tips",
+    "category": {
+      "mentalMath": "Mental math",
+      "memory": "Memory aid",
+      "problemSolving": "Problem solving",
+      "language": "Language hack",
+      "exam": "Exam strategy",
+      "study": "Study habit"
+    }
+  },
+  "footer": {
+    "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.",
+    "admin": "Admin panel",
+    "language": "Language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist.",
+    "home": "Go to the home page"
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginText": "Log in to keep track of your lessons and quiz scores.",
+    "signupTitle": "Create your account",
+    "signupText": "Pick a username and a password. No email needed.",
+    "username": "Username",
+    "usernameHint": "3–24 Latin letters, numbers, dots, dashes or underscores",
+    "password": "Password",
+    "passwordHint": "At least 4 characters",
+    "displayName": "Your name",
+    "grade": "Your grade",
+    "gradeOptional": "Not set",
+    "submitLogin": "Log in",
+    "submitSignup": "Create account",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "busy": "Please wait…",
+    "errors": {
+      "wrong_credentials": "Wrong username or password.",
+      "taken": "That username is taken.",
+      "bad_username": "Use 3–24 Latin letters, numbers, dots, dashes or underscores.",
+      "disabled": "This account is disabled. Ask your teacher or parent.",
+      "not_configured": "Accounts are not set up on this server yet.",
+      "generic": "Something went wrong. Try again."
+    }
+  },
+  "progress": {
+    "title": "My progress",
+    "hello": "Hi, {name}!",
+    "lessonsDone": "lessons completed",
+    "avgScore": "average quiz score",
+    "courses": "courses started",
+    "attempts": "quizzes taken",
+    "bySubject": "By subject",
+    "emptyTitle": "Nothing here yet",
+    "emptyText": "Open a lesson and finish its quiz, or mark it done. Your results will show up here.",
+    "startLearning": "Pick a grade",
+    "courseLine": "{done} of {total} lessons",
+    "best": "Best score {pct}%",
+    "noQuiz": "No quizzes yet",
+    "recent": "Recent activity",
+    "quizResult": "Quiz: {score} of {total}",
+    "exam": "Exam",
+    "continue": "Continue"
+  }
 }

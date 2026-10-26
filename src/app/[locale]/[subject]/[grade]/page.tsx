@@ -7,7 +7,9 @@ import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { TipsSection } from "@/components/site/tips-section";
+import { getCourseProgress } from "@/server/progress";
 import { getCourse, getCourses, getCourseTips } from "@/server/queries";
+import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
 
@@ -24,9 +26,10 @@ export default async function CoursePage({ params }: { params: Params }) {
   const grade = Number(g);
   const data = await getCourse(subject, grade);
   if (!data) notFound();
-  const t = await getTranslations();
-  const l = await getLocale();
+  const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { course, subject: subj, units, readyCount, totalCount } = data;
+  const progress = user ? await getCourseProgress(user.id, course.id) : new Map<string, { completedAt: string | null }>();
+  const completedCount = [...progress.values()].filter((p) => p.completedAt).length;
   const siblings = await getCourses({ subjectId: subject });
   const tips = await getCourseTips(course.id);
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
@@ -57,6 +60,12 @@ export default async function CoursePage({ params }: { params: Params }) {
             <div className="mt-4 flex flex-wrap items-center gap-2 text-sm font-bold sm:mt-5 sm:gap-3">
               <span className="rounded-full bg-muted px-3 py-1">{t("course.lessonsCount", { count: totalCount })}</span>
               <span className="rounded-full bg-muted px-3 py-1">{t("course.progress", { done: readyCount, total: totalCount })}</span>
+              {user && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-success">
+                  <CheckCircle2 className="size-4" aria-hidden="true" />
+                  {t("course.completedCount", { done: completedCount, total: readyCount })}
+                </span>
+              )}
             </div>
             {firstReady && (
               <Link href={`/${subject}/${grade}/${firstReady.slug}`} className={buttonClasses({ size: "lg", className: "mt-5 w-full sm:mt-6 sm:w-auto" })}>
@@ -105,6 +114,7 @@ export default async function CoursePage({ params }: { params: Params }) {
               <ol className="divide-y divide-border/70 border-t border-border/70">
                 {u.lessons.map((lsn, li) => {
                   const ready = lsn.status === "published";
+                  const done = !!progress.get(lsn.id)?.completedAt;
                   return (
                     <li key={lsn.id}>
                       <Link
@@ -113,7 +123,12 @@ export default async function CoursePage({ params }: { params: Params }) {
                       >
                         <span className="w-6 shrink-0 text-sm font-extrabold tabular-nums text-muted-foreground sm:w-8">{li + 1}</span>
                         <span className="min-w-0 flex-1 font-semibold leading-snug">{pick(lsn.title, l)}</span>
-                        {ready ? (
+                        {done ? (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-bold text-success">
+                            <CheckCircle2 className="size-4" aria-hidden="true" />
+                            <span className="hidden sm:inline">{t("course.done")}</span>
+                          </span>
+                        ) : ready ? (
                           <span className="inline-flex items-center gap-1 text-xs font-bold text-success">
                             <CheckCircle2 className="size-4" aria-hidden="true" />
                             <span className="hidden sm:inline">{t("course.published")}</span>
