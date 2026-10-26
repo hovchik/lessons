@@ -1,29 +1,31 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { isAdmin } from "@/server/auth";
+import { getUserCount } from "@/server/progress";
 import { getAdminCourses, getExamStats, getStats, getSubjects } from "@/server/queries";
 
 export default async function AdminDashboard() {
   if (!(await isAdmin())) redirect("/admin/login");
-  const [stats, subjects, courses, examStats] = await Promise.all([getStats(), getSubjects(), getAdminCourses(), getExamStats()]);
+  const [stats, subjects, courses, userCount, examStats] = await Promise.all([getStats(), getSubjects(), getAdminCourses(), getUserCount(), getExamStats()]);
   const pct = stats.lessons ? Math.round((stats.published / stats.lessons) * 100) : 0;
   const claudeReady = !!process.env.ANTHROPIC_API_KEY;
 
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-black sm:text-3xl">Dashboard</h1>
-      <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
         {[
           ["Subjects", subjects.length],
           ["Courses", stats.courses],
           ["Lessons", stats.lessons],
           ["Published", `${stats.published} (${pct}%)`],
+          ["Users", userCount],
           ["State exams", examStats.state],
           ["Year-end trials", examStats.trial],
           ["Exam questions", examStats.questions],
         ].map(([k, v]) => (
           <div key={String(k)} className="clay-sm p-4 sm:p-5">
-            <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k}</dt>
+            <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k === "Users" ? <Link href="/admin/users" className="hover:text-primary">Users</Link> : k}</dt>
             <dd className="mt-1 text-2xl font-black text-primary sm:text-3xl">{v}</dd>
           </div>
         ))}

@@ -11,7 +11,12 @@
     "admin": "Admin",
     "language": "Language",
     "menu": "Menu",
-    "exams": "Exams"
+    "exams": "Exams",
+    "progress": "Progress",
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "account": "Account"
   },
   "home": {
     "heroTitle": "Learn every subject, from grade 1 to 12",
@@ -60,7 +65,10 @@
     "comingSoon": "Coming soon",
     "published": "Ready",
     "progress": "{done} of {total} lessons ready",
-    "otherGrades": "Other grades in {subject}"
+    "otherGrades": "Other grades in {subject}",
+    "otherGrades": "Other grades in {subject}",
+    "completedCount": "{done} of {total} completed",
+    "done": "Done"
   },
   "lesson": {
     "objectives": "What you will learn",
@@ -78,7 +86,14 @@
     "retry": "Try again",
     "showExplanation": "Why?",
     "question": "Question {n} of {total}",
-    "inUnit": "Unit {n}: {title}"
+    "inUnit": "Unit {n}: {title}",
+    "inUnit": "Unit {n}: {title}",
+    "markDone": "Mark as done",
+    "done": "Completed",
+    "undone": "Mark as not done",
+    "saved": "Saved to your progress",
+    "saveHint": "Log in to save your score",
+    "bestScore": "Your best: {score} of {total}"
   },
   "footer": {
     "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.",
@@ -149,5 +164,50 @@
     "question": "Question {n} of {total}",
     "points": "{n, plural, one {# point} other {# points}}",
     "skipped": "Not answered"
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginText": "Log in to keep track of your lessons and quiz scores.",
+    "signupTitle": "Create your account",
+    "signupText": "Pick a username and a password. No email needed.",
+    "username": "Username",
+    "usernameHint": "3–24 Latin letters, numbers, dots, dashes or underscores",
+    "password": "Password",
+    "passwordHint": "At least 4 characters",
+    "displayName": "Your name",
+    "grade": "Your grade",
+    "gradeOptional": "Not set",
+    "submitLogin": "Log in",
+    "submitSignup": "Create account",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "busy": "Please wait…",
+    "errors": {
+      "wrong_credentials": "Wrong username or password.",
+      "taken": "That username is taken.",
+      "bad_username": "Use 3–24 Latin letters, numbers, dots, dashes or underscores.",
+      "disabled": "This account is disabled. Ask your teacher or parent.",
+      "not_configured": "Accounts are not set up on this server yet.",
+      "generic": "Something went wrong. Try again."
+    }
+  },
+  "progress": {
+    "title": "My progress",
+    "hello": "Hi, {name}!",
+    "lessonsDone": "lessons completed",
+    "avgScore": "average quiz score",
+    "courses": "courses started",
+    "attempts": "quizzes taken",
+    "bySubject": "By subject",
+    "emptyTitle": "Nothing here yet",
+    "emptyText": "Open a lesson and finish its quiz, or mark it done. Your results will show up here.",
+    "startLearning": "Pick a grade",
+    "courseLine": "{done} of {total} lessons",
+    "best": "Best score {pct}%",
+    "noQuiz": "No quizzes yet",
+    "recent": "Recent activity",
+    "quizResult": "Quiz: {score} of {total}",
+    "exam": "Exam",
+    "continue": "Continue"
   }
 }

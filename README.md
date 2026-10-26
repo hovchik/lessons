@@ -39,6 +39,24 @@ npm run dev                    # http://localhost:3000/en  (or /hy, /ru)
 
 Admin panel: <http://localhost:3000/admin> (password from `ADMIN_PASSWORD`).
 
+## Student accounts and progress
+
+Pupils create their own account at `/en/signup` (username + password, optional grade; no email). Signed-in
+pupils get:
+
+- quiz results saved automatically when they finish a lesson quiz (best and latest score, attempt count);
+- a **Mark as done** button on every lesson, and completed ticks on the course outline;
+- **My progress** (`/en/progress`, also in the phone tab bar): lessons completed, average score, per-subject
+  and per-grade progress bars and recent activity, in all three languages.
+
+Admins see every account under **Users** in the admin panel: progress per course, recent attempts, and
+actions to rename, change grade, reset the password, disable or delete an account. Student sessions are
+signed with the same `ADMIN_SESSION_SECRET`; passwords are stored as scrypt hashes.
+
+Progress data lives in three tables: `users`, `lesson_progress` (one summary row per user and lesson) and
+`attempts` (an append-only log with `kind` = `quiz` today, so exams can record `kind` = `exam` later without
+a schema change; see `src/server/progress.ts`).
+
 ## Content
 
 | Subject | Grades | Source file |
@@ -79,12 +97,13 @@ generated from the admin panel stay in draft until you review and publish them. 
 ## Project layout
 
 ```
-src/app/[locale]/            public site (home, grade, subjects, course, lesson)
-src/app/admin/               admin panel (login, dashboard, courses, lesson editor)
+src/app/[locale]/            public site (home, grade, subjects, course, lesson, login, signup, progress)
+src/app/admin/               admin panel (login, dashboard, courses, lesson editor, users)
 src/app/api/admin/           JSON API used by the admin panel
+src/app/api/auth|progress/   student sign-up / login and progress recording
 src/components/site|admin|ui UI components (Claymorphism design tokens in src/app/globals.css)
 src/content/                 seed content (TypeScript) and helpers
-src/server/                  database client, queries, auth, Claude generation
+src/server/                  database client, queries, admin auth, student auth + progress, Claude generation
 scripts/seed.ts              npm run db:seed
 scripts/generate.ts          npm run generate
 ```

@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer, index } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, index, primaryKey } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
 /** A string translated into the three UI languages. */
@@ -94,6 +94,97 @@ export type Subject = typeof subjects.$inferSelect;
 export type Course = typeof courses.$inferSelect;
 export type Unit = typeof units.$inferSelect;
 export type Lesson = typeof lessons.$inferSelect;
+
+/* ------------------------------------------------------------------------- */
+/* Student accounts and progress                                             */
+/* ------------------------------------------------------------------------- */
+
+export const users = sqliteTable(
+  "users",
+  {
+    id: text("id").primaryKey(), // random base64url id
+    /** Lower-cased login name, unique. */
+    username: text("username").notNull().unique(),
+    displayName: text("display_name").notNull(),
+    /** `scrypt$<salt>$<hash>` (see src/server/user-auth.ts). */
+    passwordHash: text("password_hash").notNull(),
+    /** The pupil's own grade, 1..12; optional. */
+    grade: integer("grade"),
+    /** Preferred UI language (en | hy | ru). */
+    locale: text("locale").notNull().default("en"),
+    /** student (the only role for now; admins use the separate admin login). */
+    role: text("role").notNull().default("student"),
+    disabled: integer("disabled", { mode: "boolean" }).notNull().default(false),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+    lastSeenAt: text("last_seen_at"),
+  },
+  (t) => [index("users_created").on(t.createdAt)],
+);
+
+/**
+ * One row per (user, lesson): whether the lesson is completed and the best /
+ * latest quiz result. Kept small so the progress page is a few grouped queries.
+ */
+export const lessonProgress = sqliteTable(
+  "lesson_progress",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    lessonId: text("lesson_id")
+      .notNull()
+      .references(() => lessons.id, { onDelete: "cascade" }),
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    completedAt: text("completed_at"),
+    bestScore: integer("best_score"),
+    bestTotal: integer("best_total"),
+    lastScore: integer("last_score"),
+    lastTotal: integer("last_total"),
+    attempts: integer("attempts").notNull().default(0),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [
+    primaryKey({ columns: [t.userId, t.lessonId] }),
+    index("lesson_progress_user_course").on(t.userId, t.courseId),
+  ],
+);
+
+/**
+ * Every scored activity a user finishes. `kind` + `refId` identify the thing
+ * that was taken: today `kind = "quiz"` with the lesson id; exams can record
+ * `kind = "exam"` with their own id without a schema change.
+ */
+export const attempts = sqliteTable(
+  "attempts",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    /** quiz | exam | ... */
+    kind: text("kind").notNull(),
+    refId: text("ref_id").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "set null" }),
+    score: integer("score").notNull(),
+    total: integer("total").notNull(),
+    /** Chosen option index per question (or any activity-specific payload). */
+    answers: text("answers", { mode: "json" }).$type<unknown>(),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("attempts_user_kind").on(t.userId, t.kind, t.createdAt), index("attempts_ref").on(t.kind, t.refId)],
+);
+
+export type User = typeof users.$inferSelect;
+export type LessonProgress = typeof lessonProgress.$inferSelect;
+export type Attempt = typeof attempts.$inferSelect;
 
 /** One exam question: a multiple-choice item worth `points` (default 1), optionally tagged with a topic. */
 export type ExamQuestion = QuizQuestion & {
