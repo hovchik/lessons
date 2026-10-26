@@ -1,10 +1,18 @@
 import type { CourseSeed } from "../../types";
+import { withRu } from "../../ru-overlay";
 import { technologyGrade1 } from "./grade-1";
+import { ru as ru1 } from "./grade-1.ru";
 import { technologyGrade2 } from "./grade-2";
+import { ru as ru2 } from "./grade-2.ru";
 import { technologyGrade3 } from "./grade-3";
+import { ru as ru3 } from "./grade-3.ru";
 import { technologyGrade4 } from "./grade-4";
+import { ru as ru4 } from "./grade-4.ru";
 import { technologyGrade5 } from "./grade-5";
+import { ru as ru5 } from "./grade-5.ru";
 import { technologyGrade6 } from "./grade-6";
+import { ru as ru6 } from "./grade-6.ru";
 import { technologyGrade7 } from "./grade-7";
+import { ru as ru7 } from "./grade-7.ru";
 
-export const technology: CourseSeed[] = [technologyGrade1, technologyGrade2, technologyGrade3, technologyGrade4, technologyGrade5, technologyGrade6, technologyGrade7];
+export const technology: CourseSeed[] = [withRu(technologyGrade1, ru1), withRu(technologyGrade2, ru2), withRu(technologyGrade3, ru3), withRu(technologyGrade4, ru4), withRu(technologyGrade5, ru5), withRu(technologyGrade6, ru6), withRu(technologyGrade7, ru7)];

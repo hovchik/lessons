@@ -1,11 +1,20 @@
 import type { CourseSeed } from "../../types";
+import { withRu } from "../../ru-overlay";
 import { armenianHistoryGrade5 } from "./grade-5";
+import { ru as ru5 } from "./grade-5.ru";
 import { armenianHistoryGrade6 } from "./grade-6";
+import { ru as ru6 } from "./grade-6.ru";
 import { armenianHistoryGrade7 } from "./grade-7";
+import { ru as ru7 } from "./grade-7.ru";
 import { armenianHistoryGrade8 } from "./grade-8";
+import { ru as ru8 } from "./grade-8.ru";
 import { armenianHistoryGrade9 } from "./grade-9";
+import { ru as ru9 } from "./grade-9.ru";
 import { armenianHistoryGrade10 } from "./grade-10";
+import { ru as ru10 } from "./grade-10.ru";
 import { armenianHistoryGrade11 } from "./grade-11";
+import { ru as ru11 } from "./grade-11.ru";
 import { armenianHistoryGrade12 } from "./grade-12";
+import { ru as ru12 } from "./grade-12.ru";
 
-export const armenianHistory: CourseSeed[] = [armenianHistoryGrade5, armenianHistoryGrade6, armenianHistoryGrade7, armenianHistoryGrade8, armenianHistoryGrade9, armenianHistoryGrade10, armenianHistoryGrade11, armenianHistoryGrade12];
+export const armenianHistory: CourseSeed[] = [withRu(armenianHistoryGrade5, ru5), withRu(armenianHistoryGrade6, ru6), withRu(armenianHistoryGrade7, ru7), withRu(armenianHistoryGrade8, ru8), withRu(armenianHistoryGrade9, ru9), withRu(armenianHistoryGrade10, ru10), withRu(armenianHistoryGrade11, ru11), withRu(armenianHistoryGrade12, ru12)];

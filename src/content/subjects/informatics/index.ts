@@ -1,11 +1,20 @@
 import type { CourseSeed } from "../../types";
+import { withRu } from "../../ru-overlay";
 import { informaticsGrade5 } from "./grade-5";
+import { ru as ru5 } from "./grade-5.ru";
 import { informaticsGrade6 } from "./grade-6";
+import { ru as ru6 } from "./grade-6.ru";
 import { informaticsGrade7 } from "./grade-7";
+import { ru as ru7 } from "./grade-7.ru";
 import { informaticsGrade8 } from "./grade-8";
+import { ru as ru8 } from "./grade-8.ru";
 import { informaticsGrade9 } from "./grade-9";
+import { ru as ru9 } from "./grade-9.ru";
 import { informaticsGrade10 } from "./grade-10";
+import { ru as ru10 } from "./grade-10.ru";
 import { informaticsGrade11 } from "./grade-11";
+import { ru as ru11 } from "./grade-11.ru";
 import { informaticsGrade12 } from "./grade-12";
+import { ru as ru12 } from "./grade-12.ru";
 
-export const informatics: CourseSeed[] = [informaticsGrade5, informaticsGrade6, informaticsGrade7, informaticsGrade8, informaticsGrade9, informaticsGrade10, informaticsGrade11, informaticsGrade12];
+export const informatics: CourseSeed[] = [withRu(informaticsGrade5, ru5), withRu(informaticsGrade6, ru6), withRu(informaticsGrade7, ru7), withRu(informaticsGrade8, ru8), withRu(informaticsGrade9, ru9), withRu(informaticsGrade10, ru10), withRu(informaticsGrade11, ru11), withRu(informaticsGrade12, ru12)];
