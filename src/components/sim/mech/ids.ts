@@ -8,7 +8,10 @@ export const MECH_GROUPS = {
     "radio", "hydro", "solar", "wind", "laser", "gps", "evaporation", "eclipse", "echo", "powerline", "lc",
     "selfinduction", "conductor", "emwave", "oildrop", "proton", "electroscope", "thermometer", "boiling",
   ],
-  chem: [] as string[],
+  chem: [
+    "filtration", "distillation", "separate", "ionic", "covalent", "metallic", "electrolysis", "dissolve", "redox", "combustion", "catalyst",
+    "polymer", "corrosion", "blastfurnace", "haber", "contact", "soap", "greenhouse", "hardness", "ester", "dna", "acidrain",
+  ],
   geo: [] as string[],
 } as const;
 
@@ -22,7 +25,7 @@ export function mechGroup(id: string): MechGroup | null {
 /** Which file holds each labelled diagram. */
 export const DIAGRAM_GROUPS = {
   phys: ["sun", "solarsystem", "galaxy", "galaxytypes", "thermos", "eye", "microscope", "telescope", "standardmodel", "interactions", "hr", "smartphone", "tracks"],
-  chem: [] as string[],
+  chem: ["lab", "burner", "oilcolumn", "hazards"],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;
