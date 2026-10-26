@@ -605,3 +605,8 @@ button.art-card:active { transform: scale(0.97); }
 .sim-bal-row > span:nth-child(2) { text-align: center; font-variant-numeric: tabular-nums; }
 .sim-bal-row .is-ok { color: #15803d; }
 .sim-bal-row .is-off { color: #b91c1c; }
+.sim-eqlist { display: grid; gap: 0.35rem; margin-top: 0.6rem; padding: 0.6rem 0.8rem; border-radius: 16px; background: #fff; border: 2px solid var(--border); }
+.sim-eqlist > div { display: grid; grid-template-columns: minmax(6rem, auto) 1fr; gap: 0.6rem; align-items: baseline; }
+.sim-eqlist span { font-size: 0.75rem; font-weight: 800; color: var(--muted-foreground); }
+.sim-eqlist b { font-size: 1rem; font-weight: 800; }
+@media (max-width: 30rem) { .sim-eqlist > div { grid-template-columns: 1fr; gap: 0; } }

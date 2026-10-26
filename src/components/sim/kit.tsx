@@ -433,3 +433,17 @@ export function EnergyBars({ items, max, lang }: { items: Array<[label: string, 
     </div>
   );
 }
+
+/** Equations or long formulas, one per line with a small label. */
+export function EqList({ items }: { items: Array<[label: string, text: string, color?: string]> }) {
+  return (
+    <div className="sim-eqlist">
+      {items.map(([l, v, c]) => (
+        <div key={l}>
+          <span>{l}</span>
+          <b style={c ? { color: c } : undefined}>{v}</b>
+        </div>
+      ))}
+    </div>
+  );
+}

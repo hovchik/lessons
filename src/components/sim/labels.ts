@@ -78,5 +78,6 @@ export const UNITS = {
   h: t("h", "ժ", "ч"),
   C: t("°C", "°C", "°C"),
   pct: t("%", "%", "%"),
+  atm: t("atm", "մթն", "атм"),
 };
 export const un = (k: keyof typeof UNITS, lang: Parameters<typeof L>[1]) => L(UNITS[k], lang);

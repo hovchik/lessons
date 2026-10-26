@@ -36,6 +36,14 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   measure: lazy(() => import("./widgets/measure")),
   ptable: lazy(() => import("./widgets/ptable")),
   balance: lazy(() => import("./widgets/balance")),
+  ph: lazy(() => import("./widgets/ph")),
+  mole: lazy(() => import("./widgets/mole")),
+  solution: lazy(() => import("./widgets/solution")),
+  ions: lazy(() => import("./widgets/ions")),
+  activity: lazy(() => import("./widgets/activity")),
+  rate: lazy(() => import("./widgets/rate")),
+  lattice: lazy(() => import("./widgets/lattice")),
+  flame: lazy(() => import("./widgets/flame")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
