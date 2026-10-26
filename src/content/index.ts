@@ -20,10 +20,11 @@ import { churchHistory } from "./subjects/church-history";
 import { music } from "./subjects/music";
 import { technology } from "./subjects/technology";
 import { chess } from "./subjects/chess";
+import { withVisuals } from "./visuals";
 
 export { subjects };
 
-export const courses: CourseSeed[] = [
+export const courses: CourseSeed[] = withVisuals([
   ...math,
   ...algebra,
   ...geometry,
@@ -44,6 +45,6 @@ export const courses: CourseSeed[] = [
   ...music,
   ...technology,
   ...chess,
-];
+]);
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;
