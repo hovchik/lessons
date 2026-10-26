@@ -9,6 +9,8 @@
  */
 import katex from "katex";
 import { courses, courseId } from "../src/content";
+import { exams } from "../src/content/exams";
+import { subjects } from "../src/content/subjects";
 import { checkTips } from "./check-tips";
 
 const LANGS = ["en", "hy", "ru"] as const;
@@ -64,6 +66,57 @@ for (const c of courses) {
   written += cWritten;
   if (process.argv.includes("--verbose") || cWritten > 0) console.log(`${id.padEnd(14)} ${String(cWritten).padStart(3)}/${cTotal} written`);
 }
+
+// Exams: unique ids, every text in three languages, answers in range, one trial per written course.
+const examIds = new Set<string>();
+let examQuestions = 0;
+const subjectIds = new Set(subjects.map((s) => s.id));
+for (const e of exams) {
+  const where = `exam ${e.id}`;
+  if (examIds.has(e.id)) errors.push(`${where}: duplicate id`);
+  examIds.add(e.id);
+  if (!/^[a-z0-9-]+$/.test(e.id)) errors.push(`${where}: id must be lowercase ASCII letters, digits and dashes`);
+  if (e.subject && !subjectIds.has(e.subject)) errors.push(`${where}: unknown subject ${e.subject}`);
+  if (e.kind === "trial" && !courses.some((c) => c.subject === e.subject && c.grade === e.grade)) errors.push(`${where}: no course ${e.subject}-${e.grade}`);
+  for (const lang of LANGS) {
+    for (const [field, text] of [["title", e.title], ["description", e.description], ["format", e.format]] as const) {
+      if (!text[lang]?.trim()) errors.push(`${where}: missing ${lang} ${field}`);
+    }
+    const re = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
+    for (const m of (e.format[lang] ?? "").matchAll(re)) {
+      const tex = m[1] ?? m[2];
+      try {
+        katex.renderToString(tex, { throwOnError: true, strict: (code: string) => { throw new Error(code); } });
+      } catch (err) {
+        errors.push(`${where} [${lang}]: formula "${tex.slice(0, 40)}" fails: ${(err as Error).message.slice(0, 60)}`);
+      }
+    }
+  }
+  if (e.questions.length < 5) errors.push(`${where}: only ${e.questions.length} questions`);
+  if (e.passPercent < 1 || e.passPercent > 99) errors.push(`${where}: passPercent out of range`);
+  for (const [i, qq] of e.questions.entries()) {
+    examQuestions++;
+    if (qq.answer < 0 || qq.answer >= qq.options.length) errors.push(`${where}: question ${i + 1} answer out of range`);
+    if (qq.options.length < 2) errors.push(`${where}: question ${i + 1} needs at least 2 options`);
+    if (qq.points !== undefined && (!Number.isInteger(qq.points) || qq.points < 1)) errors.push(`${where}: question ${i + 1} points must be a positive integer`);
+    for (const lang of LANGS) {
+      if (!qq.prompt[lang]?.trim()) errors.push(`${where}: question ${i + 1} missing ${lang} prompt`);
+      if (qq.explanation && !qq.explanation[lang]?.trim()) errors.push(`${where}: question ${i + 1} missing ${lang} explanation`);
+      qq.options.forEach((o, oi) => {
+        if (!o[lang]?.trim()) errors.push(`${where}: question ${i + 1} option ${oi + 1} missing ${lang}`);
+      });
+    }
+    const seen = new Set<string>();
+    for (const o of qq.options) {
+      if (seen.has(o.en)) errors.push(`${where}: question ${i + 1} has duplicate option "${o.en}"`);
+      seen.add(o.en);
+    }
+  }
+}
+const trialsFor = new Set(exams.filter((e) => e.kind === "trial").map((e) => `${e.subject}-${e.grade}`));
+const missingTrials = courses.map((c) => courseId(c.subject, c.grade)).filter((id) => !trialsFor.has(id));
+console.log(`\n${exams.length} exams (${exams.filter((e) => e.kind === "state").length} state, ${trialsFor.size} trials), ${examQuestions} exam questions.`);
+if (missingTrials.length) console.log(`Courses without a year-end trial: ${missingTrials.join(", ")}`);
 
 const tipCheck = checkTips();
 errors.push(...tipCheck.errors);

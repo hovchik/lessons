@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Clock, Flag, Lock, PlayCircle } from "lucide-react";
+import { Award, CheckCircle2, Clock, Flag, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
+import { ExamCard } from "@/components/site/exam-card";
 import { TipsSection } from "@/components/site/tips-section";
 import { getCourseProgress } from "@/server/progress";
-import { getCourse, getCourses, getCourseTips } from "@/server/queries";
+import { getCourse, getCourses, getCourseTips, getExams } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
@@ -31,6 +32,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const progress = user ? await getCourseProgress(user.id, course.id) : new Map<string, { completedAt: string | null }>();
   const completedCount = [...progress.values()].filter((p) => p.completedAt).length;
   const siblings = await getCourses({ subjectId: subject });
+  const exams = await getExams({ subjectId: subject, grade });
   const tips = await getCourseTips(course.id);
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
@@ -150,6 +152,25 @@ export default async function CoursePage({ params }: { params: Params }) {
       </section>
 
       <TipsSection tips={tips} />
+      {exams.length > 0 && (
+        <section aria-labelledby="exams-title" className="space-y-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="exams-title" className="flex items-center gap-2 text-xl font-extrabold sm:text-2xl">
+                <Award className="size-6 text-primary" aria-hidden="true" />
+                {t("exam.courseSection")}
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">{t("exam.courseSectionText")}</p>
+            </div>
+            <Link href="/exams" className="inline-flex min-h-11 items-center font-bold text-primary hover:underline">{t("exam.all")}</Link>
+          </div>
+          <ul className="grid gap-4 stagger sm:grid-cols-2 lg:grid-cols-3">
+            {exams.map((e) => (
+              <li key={e.exam.id}><ExamCard item={e} /></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {siblings.length > 1 && (
         <section aria-labelledby="other-grades">

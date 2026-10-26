@@ -23,6 +23,9 @@ export async function SiteHeader() {
           <Link href="/subjects" className="h-11 rounded-xl px-4 text-sm font-bold leading-[44px] hover:bg-muted">
             {t("nav.subjects")}
           </Link>
+          <Link href="/exams" className="h-11 rounded-xl px-4 text-sm font-bold leading-[44px] hover:bg-muted">
+            {t("nav.exams")}
+          </Link>
         </nav>
         <div className="flex shrink-0 items-center gap-2">
           <UserMenu user={user} />

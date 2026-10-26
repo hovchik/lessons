@@ -2,11 +2,11 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { isAdmin } from "@/server/auth";
 import { getUserCount } from "@/server/progress";
-import { getAdminCourses, getStats, getSubjects } from "@/server/queries";
+import { getAdminCourses, getExamStats, getStats, getSubjects } from "@/server/queries";
 
 export default async function AdminDashboard() {
   if (!(await isAdmin())) redirect("/admin/login");
-  const [stats, subjects, courses, userCount] = await Promise.all([getStats(), getSubjects(), getAdminCourses(), getUserCount()]);
+  const [stats, subjects, courses, userCount, examStats] = await Promise.all([getStats(), getSubjects(), getAdminCourses(), getUserCount(), getExamStats()]);
   const pct = stats.lessons ? Math.round((stats.published / stats.lessons) * 100) : 0;
   const claudeReady = !!process.env.ANTHROPIC_API_KEY;
 
@@ -20,6 +20,9 @@ export default async function AdminDashboard() {
           ["Lessons", stats.lessons],
           ["Published", `${stats.published} (${pct}%)`],
           ["Users", userCount],
+          ["State exams", examStats.state],
+          ["Year-end trials", examStats.trial],
+          ["Exam questions", examStats.questions],
         ].map(([k, v]) => (
           <div key={String(k)} className="clay-sm p-4 sm:p-5">
             <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k === "Users" ? <Link href="/admin/users" className="hover:text-primary">Users</Link> : k}</dt>
@@ -32,6 +35,9 @@ export default async function AdminDashboard() {
           ? "Claude generation is enabled. Open any lesson and press “Generate with Claude”, or run npm run generate for bulk generation."
           : "Set ANTHROPIC_API_KEY in .env.local to enable “Generate with Claude” and the bulk generation script."}
       </div>
+      <p className="text-sm">
+        <Link href="/admin/exams" className="font-bold text-primary hover:underline">Manage exams</Link> — state exams (Armenia, Russia) and year-end trial tests, all editable in three languages.
+      </p>
       <section>
         <h2 className="text-xl font-extrabold">Content progress by subject</h2>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
