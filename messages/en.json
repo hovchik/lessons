@@ -70,6 +70,7 @@
     "done": "Done"
   },
   "lesson": {
+    "armenianOnly": "This lesson is available in Armenian for now. The English version is coming.",
     "objectives": "What you will learn",
     "duration": "{min} min",
     "quiz": "Check yourself",

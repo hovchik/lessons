@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, Clock, Hammer, ListChecks } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Hammer, Languages, ListChecks } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -32,7 +32,10 @@ export default async function LessonPage({ params }: { params: Params }) {
   const progress = user ? await getLessonProgress(user.id, lesson.id) : undefined;
   const body = pick(lesson.content, l);
   const ready = lesson.status === "published" && hasContent(lesson.content);
-  const objectives = lesson.objectives?.[l as "en" | "hy" | "ru"] ?? lesson.objectives?.en ?? [];
+  const own = lesson.objectives?.[l as "en" | "hy" | "ru"];
+  const objectives = own?.length ? own : lesson.objectives?.en?.length ? lesson.objectives.en : (lesson.objectives?.hy ?? []);
+  // Some courses are written in Armenian first; show that text with a notice in the other locales.
+  const fallbackToArmenian = ready && l !== "hy" && !lesson.content?.[l as "en" | "ru"]?.trim() && !!lesson.content?.hy?.trim();
 
   return (
     <article className={cn("mx-auto max-w-3xl space-y-6 sm:space-y-8", `subject-${subj.color}`)}>
@@ -71,8 +74,15 @@ export default async function LessonPage({ params }: { params: Params }) {
         </section>
       )}
 
+      {fallbackToArmenian && (
+        <p role="note" lang={l} className="clay-sm flex items-start gap-2 p-4 text-sm font-semibold" style={{ background: "var(--s-soft)", color: "var(--s-text)" }}>
+          <Languages className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
+          {t("lesson.armenianOnly")}
+        </p>
+      )}
+
       {ready ? (
-        <div className="clay p-4 sm:p-10">
+        <div className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
           <Markdown>{body}</Markdown>
         </div>
       ) : (
