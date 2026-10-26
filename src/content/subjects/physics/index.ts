@@ -2,6 +2,7 @@ import { t, unit, type CourseSeed } from "../../types";
 import { physicsGrade7 } from "./grade-7";
 import { physicsGrade8 } from "./grade-8";
 import { physicsGrade9 } from "./grade-9";
+import { physicsGrade10 } from "./grade-10";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -12,53 +13,7 @@ export const physics: CourseSeed[] = [
   physicsGrade7,
   physicsGrade8,
   physicsGrade9,
-  {
-    subject: "physics",
-    grade: 10,
-    title: t("Physics · Grade 10", "Ֆիզիկա · 10-րդ դասարան", "Физика · 10 класс"),
-    description: t("Mechanics in depth, molecular physics and thermodynamics, electrostatics and direct current.", "Մեխանիկա խորությամբ, մոլեկուլային ֆիզիկա և թերմոդինամիկա, էլեկտրաստատիկա և հաստատուն հոսանք։", "Углублённая механика, молекулярная физика и термодинамика, электростатика и постоянный ток."),
-    curriculumNotes: notes(
-      ["Armenia grade 10 (2–4 h/week by stream): kinematics and dynamics with vectors, statics, conservation laws, molecular-kinetic theory, ideal gas laws, thermodynamics, electrostatics, direct current, current in different media.", "Հայաստան, 10-րդ դասարան (2–4 ժ/շաբ. հոսքից կախված)՝ կինեմատիկա և դինամիկա վեկտորներով, ստատիկա, պահպանման օրենքներ, մոլեկուլային-կինետիկ տեսություն, իդեալական գազի օրենքներ, թերմոդինամիկա, էլեկտրաստատիկա, հաստատուն հոսանք, հոսանքը տարբեր միջավայրերում։", "Армения, 10 класс (2–4 ч/нед. по потоку): кинематика и динамика с векторами, статика, законы сохранения, молекулярно-кинетическая теория, газовые законы, термодинамика, электростатика, постоянный ток, ток в различных средах."],
-      ["Russia grade 10 (ФГОС СОО, base 2 h / advanced 5 h; Мякишев textbook tradition): mechanics, molecular physics and thermodynamics, electrodynamics (electrostatics, DC, current in media).", "Ռուսաստան, 10-րդ դասարան (ФГОС СОО, հիմնական 2 ժ / խորացված 5 ժ, Մյակիշևի դասագրքեր)՝ մեխանիկա, մոլեկուլային ֆիզիկա և թերմոդինամիկա, էլեկտրադինամիկա (էլեկտրաստատիկա, հաստատուն հոսանք, հոսանքը միջավայրերում)։", "Россия, 10 класс (ФГОС СОО, база 2 ч / углублённый 5 ч; учебники Мякишева): механика, молекулярная физика и термодинамика, электродинамика (электростатика, постоянный ток, ток в средах)."],
-    ),
-    hoursPerWeek: { armenia: 3, russia: 2 },
-    units: [
-      unit(t("Kinematics and dynamics", "Կինեմատիկա և դինամիկա", "Кинематика и динамика"), t("Vector description of motion, projectile motion, Newton's laws applied, forces in nature, statics.", "Շարժման վեկտորային նկարագրություն, նետված մարմնի շարժում, Նյուտոնի օրենքների կիրառում, ուժերը բնության մեջ, ստատիկա։", "Векторное описание движения, движение брошенного тела, применение законов Ньютона, силы в природе, статика."), [
-        ["vector-kinematics", "Vectors in kinematics; projection method", "Վեկտորները կինեմատիկայում, պրոյեկցիաների եղանակ", "Векторы в кинематике; метод проекций"],
-        ["projectile-motion", "Motion of a body thrown at an angle", "Անկյան տակ նետված մարմնի շարժում", "Движение тела, брошенного под углом к горизонту"],
-        ["newtons-laws-problems", "Newton's laws: solving problems", "Նյուտոնի օրենքներ․ խնդիրների լուծում", "Законы Ньютона: решение задач"],
-        ["forces-in-nature", "Gravitation, elasticity, friction in depth", "Ձգողություն, առաձգականություն, շփում խորությամբ", "Силы тяготения, упругости, трения углублённо"],
-        ["statics", "Statics: equilibrium, moment of force", "Ստատիկա․ հավասարակշռություն, ուժի մոմենտ", "Статика: равновесие, момент силы"],
-        ["conservation-laws-problems", "Momentum and energy conservation: problems", "Իմպուլսի և էներգիայի պահպանում․ խնդիրներ", "Законы сохранения импульса и энергии: задачи"],
-      ]),
-      unit(t("Molecular physics", "Մոլեկուլային ֆիզիկա", "Молекулярная физика"), t("Molecular-kinetic theory, ideal gas, temperature, gas laws, saturated vapour, liquids and solids.", "Մոլեկուլային-կինետիկ տեսություն, իդեալական գազ, ջերմաստիճան, գազի օրենքներ, հագեցած գոլորշի, հեղուկներ և պինդ մարմիններ։", "Молекулярно-кинетическая теория, идеальный газ, температура, газовые законы, насыщенный пар, жидкости и твёрдые тела."), [
-        ["mkt-basics", "Basic statements of MKT; mass and size of molecules", "ՄԿՍ հիմնական դրույթներ, մոլեկուլների զանգված և չափ", "Основные положения МКТ; масса и размеры молекул"],
-        ["ideal-gas-equation", "Ideal gas; basic MKT equation; temperature", "Իդեալական գազ, ՄԿՏ հիմնական հավասարում, ջերմաստիճան", "Идеальный газ; основное уравнение МКТ; температура"],
-        ["gas-laws", "Equation of state; isoprocesses", "Վիճակի հավասարում, իզոպրոցեսներ", "Уравнение состояния; изопроцессы"],
-        ["saturated-vapour-humidity", "Saturated vapour; boiling; humidity", "Հագեցած գոլորշի, եռում, խոնավություն", "Насыщенный пар; кипение; влажность"],
-        ["liquids-solids", "Surface tension; crystalline and amorphous bodies", "Մակերևութային լարվածություն, բյուրեղային և ամորֆ մարմիններ", "Поверхностное натяжение; кристаллические и аморфные тела"],
-      ]),
-      unit(t("Thermodynamics", "Թերմոդինամիկա", "Термодинамика"), t("Internal energy, work, first law, adiabatic process, second law, heat engines.", "Ներքին էներգիա, աշխատանք, առաջին օրենք, ադիաբատ պրոցես, երկրորդ օրենք, ջերմային շարժիչներ։", "Внутренняя энергия, работа, первый закон, адиабатный процесс, второй закон, тепловые двигатели."), [
-        ["internal-energy-work", "Internal energy of an ideal gas; work in thermodynamics", "Իդեալական գազի ներքին էներգիա, աշխատանքը թերմոդինամիկայում", "Внутренняя энергия идеального газа; работа в термодинамике"],
-        ["first-law", "First law of thermodynamics; applications to isoprocesses", "Թերմոդինամիկայի առաջին օրենք, իզոպրոցեսներ", "Первый закон термодинамики; применение к изопроцессам"],
-        ["second-law-engines", "Irreversibility; second law; Carnot efficiency", "Անդարձելիություն, երկրորդ օրենք, Կարնոյի ՕԳԳ", "Необратимость; второй закон; КПД Карно"],
-      ]),
-      unit(t("Electrostatics", "Էլեկտրաստատիկա", "Электростатика"), t("Coulomb's law, electric field strength, potential, capacitors.", "Կուլոնի օրենք, էլեկտրական դաշտի լարվածություն, պոտենցիալ, կոնդենսատորներ։", "Закон Кулона, напряжённость электрического поля, потенциал, конденсаторы."), [
-        ["coulombs-law", "Charge conservation; Coulomb's law", "Լիցքի պահպանում, Կուլոնի օրենք", "Закон сохранения заряда; закон Кулона"],
-        ["field-strength", "Electric field strength; field lines", "Էլեկտրական դաշտի լարվածություն, դաշտի գծեր", "Напряжённость электрического поля; силовые линии"],
-        ["conductors-dielectrics", "Conductors and dielectrics in a field", "Հաղորդիչներ և դիէլեկտրիկներ դաշտում", "Проводники и диэлектрики в электрическом поле"],
-        ["potential", "Potential and potential difference", "Պոտենցիալ և պոտենցիալների տարբերություն", "Потенциал и разность потенциалов"],
-        ["capacitors", "Capacitance; capacitors; energy of a charged capacitor", "Ունակություն, կոնդենսատորներ, լիցքավորված կոնդենսատորի էներգիա", "Электроёмкость; конденсаторы; энергия заряженного конденсатора"],
-      ]),
-      unit(t("Direct current", "Հաստատուն հոսանք", "Законы постоянного тока"), t("Ohm's law for a complete circuit, EMF, Kirchhoff's rules basics, current in metals, electrolytes, gases, semiconductors.", "Օհմի օրենք լրիվ շղթայի համար, ԷլՇՈւ, Կիրխհոֆի կանոնների հիմունքներ, հոսանքը մետաղներում, էլեկտրոլիտներում, գազերում, կիսահաղորդիչներում։", "Закон Ома для полной цепи, ЭДС, основы правил Кирхгофа, ток в металлах, электролитах, газах, полупроводниках."), [
-        ["ohm-full-circuit", "EMF; Ohm's law for a complete circuit", "ԷլՇՈւ, Օհմի օրենք լրիվ շղթայի համար", "ЭДС; закон Ома для полной цепи"],
-        ["circuits-analysis", "Analysing circuits; measuring instruments", "Շղթաների վերլուծություն, չափիչ սարքեր", "Расчёт цепей; измерительные приборы"],
-        ["current-in-metals", "Current in metals; superconductivity", "Հոսանքը մետաղներում, գերհաղորդականություն", "Электрический ток в металлах; сверхпроводимость"],
-        ["semiconductors", "Semiconductors; diode and transistor", "Կիսահաղորդիչներ, դիոդ և տրանզիստոր", "Полупроводники; диод и транзистор"],
-        ["current-electrolytes-gases", "Current in electrolytes, gases and vacuum", "Հոսանքը էլեկտրոլիտներում, գազերում և վակուումում", "Ток в электролитах, газах и вакууме"],
-      ]),
-    ],
-  },
+  physicsGrade10,
   {
     subject: "physics",
     grade: 11,
