@@ -1,18 +1,25 @@
 import type { CourseSeed } from "../../types";
-import { withRu } from "../../ru-overlay";
+import { withEn, withRu } from "../../ru-overlay";
 import { technologyGrade1 } from "./grade-1";
 import { ru as ru1 } from "./grade-1.ru";
+import { en as en1 } from "./grade-1.en";
 import { technologyGrade2 } from "./grade-2";
 import { ru as ru2 } from "./grade-2.ru";
+import { en as en2 } from "./grade-2.en";
 import { technologyGrade3 } from "./grade-3";
 import { ru as ru3 } from "./grade-3.ru";
+import { en as en3 } from "./grade-3.en";
 import { technologyGrade4 } from "./grade-4";
 import { ru as ru4 } from "./grade-4.ru";
+import { en as en4 } from "./grade-4.en";
 import { technologyGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
+import { en as en5 } from "./grade-5.en";
 import { technologyGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
+import { en as en6 } from "./grade-6.en";
 import { technologyGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
+import { en as en7 } from "./grade-7.en";
 
-export const technology: CourseSeed[] = [withRu(technologyGrade1, ru1), withRu(technologyGrade2, ru2), withRu(technologyGrade3, ru3), withRu(technologyGrade4, ru4), withRu(technologyGrade5, ru5), withRu(technologyGrade6, ru6), withRu(technologyGrade7, ru7)];
+export const technology: CourseSeed[] = [withEn(withRu(technologyGrade1, ru1), en1), withEn(withRu(technologyGrade2, ru2), en2), withEn(withRu(technologyGrade3, ru3), en3), withEn(withRu(technologyGrade4, ru4), en4), withEn(withRu(technologyGrade5, ru5), en5), withEn(withRu(technologyGrade6, ru6), en6), withEn(withRu(technologyGrade7, ru7), en7)];
