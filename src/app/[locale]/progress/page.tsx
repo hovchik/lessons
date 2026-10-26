@@ -140,7 +140,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
           <ol className="clay divide-y divide-border/70 overflow-hidden">
             {recent.map((a) => {
               const okPct = a.total ? a.score / a.total : 0;
-              const href = a.lessonSlug && a.subjectId ? `/${a.subjectId}/${a.grade}/${a.lessonSlug}` : null;
+              const href = a.lessonSlug && a.subjectId ? `/${a.subjectId}/${a.grade}/${a.lessonSlug}` : a.kind === "exam" && a.examTitle ? `/exams/${a.refId}` : null;
               const inner = (
                 <>
                   <span
@@ -149,7 +149,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
                     {a.score}/{a.total}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate font-bold">{a.lessonTitle ? pick(a.lessonTitle, l) : t("progress.exam")}</span>
+                    <span className="block truncate font-bold">{a.lessonTitle ? pick(a.lessonTitle, l) : a.examTitle ? pick(a.examTitle, l) : t("progress.exam")}</span>
                     <span className="block text-xs font-semibold text-muted-foreground">
                       {a.subjectName ? `${pick(a.subjectName, l)} · ${t("grade.title", { grade: a.grade! })} · ` : ""}
                       {dateFmt.format(new Date(a.createdAt.endsWith("Z") || a.createdAt.includes("T") ? a.createdAt : a.createdAt + "Z"))}

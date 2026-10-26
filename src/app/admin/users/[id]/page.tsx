@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { UserActions } from "@/components/admin/user-actions";
 import { isAdmin } from "@/server/auth";
+import { getMemoryStats } from "@/server/learner";
 import { getRecentAttempts, getUserCourseSummaries, getUserTotals } from "@/server/progress";
 import { findUserById } from "@/server/user-auth";
 
@@ -12,7 +13,7 @@ export default async function AdminUserPage({ params }: { params: Promise<{ id: 
   const { id } = await params;
   const user = await findUserById(id);
   if (!user) notFound();
-  const [totals, courses, recent] = await Promise.all([getUserTotals(id), getUserCourseSummaries(id), getRecentAttempts(id, 20)]);
+  const [totals, courses, recent, memory] = await Promise.all([getUserTotals(id), getUserCourseSummaries(id), getRecentAttempts(id, 20), getMemoryStats(id)]);
 
   return (
     <div className="space-y-8">
@@ -36,7 +37,7 @@ export default async function AdminUserPage({ params }: { params: Promise<{ id: 
           ["Lessons done", totals.completed],
           ["Avg score", totals.avgScore === null ? "–" : `${Math.round(totals.avgScore * 100)}%`],
           ["Courses", totals.courses],
-          ["Quizzes", totals.attempts],
+          ["Quizzes and exams", totals.attempts],
         ].map(([k, v]) => (
           <div key={String(k)} className="clay-sm p-4 sm:p-5">
             <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k}</dt>
@@ -44,6 +45,24 @@ export default async function AdminUserPage({ params }: { params: Promise<{ id: 
           </div>
         ))}
       </dl>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-extrabold">Learning memory</h2>
+        <p className="text-sm text-muted-foreground">Every answered question is scheduled for spaced review (FSRS). &ldquo;Forgotten&rdquo; counts answers that were wrong after once being right.</p>
+        <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {[
+            ["Answers recorded", memory.answers],
+            ["Questions in memory", memory.cards],
+            ["Due for review now", memory.due],
+            ["Forgotten", memory.lapses],
+          ].map(([k, v]) => (
+            <div key={String(k)} className="clay-sm p-4 sm:p-5">
+              <dt className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{k}</dt>
+              <dd className="mt-1 text-2xl font-black text-primary sm:text-3xl">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
       <UserActions user={{ id: user.id, displayName: user.displayName, grade: user.grade, disabled: user.disabled }} />
 
@@ -89,7 +108,7 @@ export default async function AdminUserPage({ params }: { params: Promise<{ id: 
               <li key={a.id} className="flex items-center gap-3 px-4 py-3">
                 <span className="w-14 shrink-0 font-black tabular-nums text-primary">{a.score}/{a.total}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate font-bold">{a.lessonTitle?.en ?? `${a.kind} ${a.refId}`}</span>
+                  <span className="block truncate font-bold">{a.lessonTitle?.en ?? a.examTitle?.en ?? `${a.kind} ${a.refId}`}</span>
                   <span className="block text-xs text-muted-foreground">{a.subjectName ? `${a.subjectName.en} · grade ${a.grade} · ` : ""}{fmt(a.createdAt)}</span>
                 </span>
               </li>

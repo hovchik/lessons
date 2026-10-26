@@ -9,6 +9,7 @@ import { SubjectIcon } from "@/components/ui/subject-icon";
 import { examTotal } from "@/lib/exam-score";
 import { cn, pick } from "@/lib/utils";
 import { getExam, getExams } from "@/server/queries";
+import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; id: string }>;
 
@@ -24,8 +25,7 @@ export default async function ExamPage({ params }: { params: Params }) {
   setRequestLocale(locale);
   const data = await getExam(id);
   if (!data) notFound();
-  const t = await getTranslations();
-  const l = await getLocale();
+  const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { exam, subject } = data;
   const total = examTotal(exam.questions);
   const Icon = exam.kind === "state" ? Award : ClipboardCheck;
@@ -73,7 +73,7 @@ export default async function ExamPage({ params }: { params: Params }) {
         <Markdown>{pick(exam.format, l)}</Markdown>
       </section>
 
-      <ExamRunner questions={exam.questions} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} />
+      <ExamRunner questions={exam.questions} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} />
 
       {related.length > 0 && (
         <section aria-labelledby="related-title">

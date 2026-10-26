@@ -172,6 +172,7 @@
       "ru5": "Russian mark"
     },
     "scaleNote": "The marks are an approximate conversion. Real exams publish a conversion table every year, and schools may set their own thresholds.",
+    "saved": "Saved to your progress",
     "retake": "Retake",
     "question": "Question {n} of {total}",
     "points": "{n, plural, one {# point} other {# points}}",
@@ -211,7 +212,7 @@
     "lessonsDone": "lessons completed",
     "avgScore": "average quiz score",
     "courses": "courses started",
-    "attempts": "quizzes taken",
+    "attempts": "quizzes and exams",
     "bySubject": "By subject",
     "emptyTitle": "Nothing here yet",
     "emptyText": "Open a lesson and finish its quiz, or mark it done. Your results will show up here.",

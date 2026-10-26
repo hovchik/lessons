@@ -1,6 +1,9 @@
 import { and, asc, desc, eq, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import { newId } from "./user-auth";
+import { recordAnswers } from "./learner";
+import { examItemId, quizItemId } from "@/lib/memory";
+import { scoreExam } from "@/lib/exam-score";
 
 /**
  * Progress tracking. Two layers:
@@ -47,6 +50,17 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
   const total = lesson.quiz.length;
   const score = lesson.quiz.filter((q, i) => input.answers[i] === q.answer).length;
   await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score, total, answers: input.answers });
+  await recordAnswers(
+    input.userId,
+    lesson.quiz.map((q, i) => ({
+      itemId: quizItemId(lesson.id, i),
+      source: "quiz" as const,
+      refId: lesson.id,
+      courseId: lesson.courseId,
+      correct: input.answers[i] === q.answer,
+      choice: input.answers[i],
+    })),
+  );
   const now = new Date().toISOString();
   const lp = schema.lessonProgress;
   // Best-score comparison happens inside the upsert so two overlapping
@@ -80,6 +94,39 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
     })
     .run();
   return getLessonProgress(input.userId, lesson.id);
+}
+
+/**
+ * Record a finished exam or trial. The score is computed on the server; each
+ * answered question goes into the learner model, unanswered ones are skipped
+ * (the pupil may have stopped early). Returns null when the exam does not exist
+ * or the answers do not match it.
+ */
+export async function recordExamResult(input: { userId: string; examId: string; answers: Array<number | null> }) {
+  const db = await getDb();
+  const exam = await db
+    .select({ id: schema.exams.id, subjectId: schema.exams.subjectId, grade: schema.exams.grade, questions: schema.exams.questions, passPercent: schema.exams.passPercent, status: schema.exams.status })
+    .from(schema.exams)
+    .where(eq(schema.exams.id, input.examId))
+    .get();
+  if (!exam || exam.status !== "published" || exam.questions.length === 0 || input.answers.length !== exam.questions.length) return null;
+  // Exams of a subject and grade that has a course count towards that course.
+  const course = exam.subjectId
+    ? await db.select({ id: schema.courses.id }).from(schema.courses).where(and(eq(schema.courses.subjectId, exam.subjectId), eq(schema.courses.grade, exam.grade))).get()
+    : undefined;
+  const courseId = course?.id ?? null;
+  const chosen = Object.fromEntries(input.answers.map((a, i) => [i, a ?? undefined]));
+  const result = scoreExam(exam.questions, chosen, exam.passPercent);
+  await recordAttempt({ userId: input.userId, kind: "exam", refId: exam.id, courseId, score: result.score, total: result.total, answers: input.answers });
+  await recordAnswers(
+    input.userId,
+    exam.questions.flatMap((q, i) => {
+      const a = input.answers[i];
+      if (a === null || a === undefined) return [];
+      return [{ itemId: examItemId(exam.id, i), source: "exam" as const, refId: exam.id, courseId, correct: a === q.answer, choice: a }];
+    }),
+  );
+  return result;
 }
 
 /** Mark a lesson as done (or not) without a quiz, e.g. drawing lessons. */
@@ -216,6 +263,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
       createdAt: schema.attempts.createdAt,
       lessonTitle: schema.lessons.title,
       lessonSlug: schema.lessons.slug,
+      examTitle: schema.exams.title,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -223,6 +271,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
     })
     .from(schema.attempts)
     .leftJoin(schema.lessons, and(eq(schema.attempts.kind, "quiz"), eq(schema.attempts.refId, schema.lessons.id)))
+    .leftJoin(schema.exams, and(eq(schema.attempts.kind, "exam"), eq(schema.attempts.refId, schema.exams.id)))
     .leftJoin(schema.courses, eq(schema.attempts.courseId, schema.courses.id))
     .leftJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(schema.attempts.userId, userId))
