@@ -59,6 +59,12 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   percent: lazy(() => import("./widgets/percent")),
   shapes: lazy(() => import("./widgets/shapes")),
   trip: lazy(() => import("./widgets/trip")),
+  plot: lazy(() => import("./widgets/plot")),
+  tiles: lazy(() => import("./widgets/tiles")),
+  interval: lazy(() => import("./widgets/interval")),
+  seq: lazy(() => import("./widgets/seq")),
+  chance: lazy(() => import("./widgets/chance")),
+  unit: lazy(() => import("./widgets/unit")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */

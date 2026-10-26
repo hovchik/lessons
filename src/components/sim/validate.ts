@@ -59,6 +59,12 @@ const MODES: Record<string, string[]> = {
   percent: ["grid", "of", "whole"],
   shapes: ["flat", "rect", "complex", "box"],
   trip: ["one", "towards", "apart", "chase"],
+  plot: ["linear", "system", "quad", "power", "shift", "trig", "exp", "log", "tangent", "area", "complex"],
+  tiles: ["square", "minus", "diff", "product"],
+  interval: ["ineq", "system", "signs"],
+  seq: ["arith", "geom"],
+  chance: ["coin", "die", "dice"],
+  unit: ["angle", "signs", "solve"],
 };
 
 export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale"];
