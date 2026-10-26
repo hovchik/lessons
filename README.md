@@ -25,7 +25,9 @@ Double-click the runner for your system (Node.js 20+ must be installed, from <ht
 
 It installs dependencies, creates `.env.local` (asks for an admin password, or generates one and prints
 it), seeds the database, builds the app and starts it at <http://localhost:3000>, then opens your browser.
-Later starts skip the steps that are already done. Options: `node start.mjs --dev` for the development
+Later starts skip the steps that are already done, but after an update (`git pull` or a new download)
+they reinstall dependencies if `package-lock.json` changed, re-seed the database if the course content
+changed (pupils, progress and admin edits are kept) and rebuild the app if the code changed. Options: `node start.mjs --dev` for the development
 server, `node start.mjs --rebuild` to force a fresh build, `PORT=4000` to change the port.
 
 ## Manual start
