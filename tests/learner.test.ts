@@ -79,9 +79,20 @@ test("an exam is scored on the server; blank answers are not put in memory", asy
   assert.equal(recent[0].courseId, "math-1");
 });
 
+test("overlapping submissions of the same question both count", async () => {
+  const item = { itemId: "quiz:math-1-counting#0", source: "quiz" as const, refId: "math-1-counting", courseId: "math-1", correct: true, choice: 0 };
+  const db = await m.client.getDb();
+  const { reviewCards } = m.client.schema;
+  const before = (await db.select().from(reviewCards).all()).find((c) => c.itemId === item.itemId)!;
+  await Promise.all([m.learner.recordAnswers("u1", [item]), m.learner.recordAnswers("u1", [item]), m.learner.recordAnswers("u1", [{ ...item, correct: false }])]);
+  const after = (await db.select().from(reviewCards).all()).find((c) => c.itemId === item.itemId)!;
+  assert.equal(after.reps, before.reps + 3);
+  assert.equal((await m.learner.getMemoryStats("u1")).answers, 12);
+});
+
 test("answers that do not match the quiz or exam are rejected and nothing is logged", async () => {
   assert.equal(await m.progress.recordQuizResult({ userId: "u1", lessonId: "math-1-counting", answers: [0] }), null);
   assert.equal(await m.progress.recordExamResult({ userId: "u1", examId: "trial-math-1", answers: [0, 0] }), null);
   assert.equal(await m.progress.recordExamResult({ userId: "u1", examId: "missing", answers: [0] }), null);
-  assert.equal((await m.learner.getMemoryStats("u1")).answers, 9);
+  assert.equal((await m.learner.getMemoryStats("u1")).answers, 12);
 });

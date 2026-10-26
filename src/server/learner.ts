@@ -1,4 +1,4 @@
-import { and, eq, inArray, lte, sql } from "drizzle-orm";
+import { and, eq, lte, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { AnswerSource } from "./db/schema";
 import { newId } from "./user-auth";
@@ -22,48 +22,62 @@ export type AnswerInput = {
   hintUsed?: boolean;
 };
 
-/** Logs the answers and reschedules their cards. Safe to call with an empty list. */
+/**
+ * Logs the answers and reschedules their cards. Safe to call with an empty list.
+ * Two submissions can overlap (two tabs, a double click), so each card is
+ * updated optimistically: the write only lands if the card still has the
+ * repetition count it was read with, otherwise it is read again and retried.
+ */
 export async function recordAnswers(userId: string, answers: AnswerInput[], now = new Date()) {
   if (answers.length === 0) return;
   const db = await getDb();
   const rc = schema.reviewCards;
-  const itemIds = [...new Set(answers.map((a) => a.itemId))];
-  const existing = await db
-    .select({ itemId: rc.itemId, card: rc.card })
-    .from(rc)
-    .where(and(eq(rc.userId, userId), inArray(rc.itemId, itemIds)))
-    .all();
-  const cards = new Map(existing.map((r) => [r.itemId, r.card]));
   const at = now.toISOString();
 
-  const writes = answers.flatMap((a) => {
-    // The same question twice in one call (not expected, but cheap to get right): chain the cards.
-    const card = scheduleAnswer(cards.get(a.itemId) ?? null, a.correct, now, a.confidence);
-    cards.set(a.itemId, card);
-    const row = { due: card.due, card, reps: card.reps, lapses: card.lapses, lastCorrect: a.correct, updatedAt: at };
-    return [
-      db.insert(schema.answerEvents).values({
-        id: newId(),
-        userId,
-        itemId: a.itemId,
-        source: a.source,
-        refId: a.refId,
-        courseId: a.courseId ?? null,
-        correct: a.correct,
-        choice: a.choice ?? null,
-        confidence: a.confidence ?? null,
-        ms: a.ms ?? null,
-        hintUsed: a.hintUsed ?? false,
-        createdAt: at,
-      }),
-      db
-        .insert(rc)
-        .values({ userId, itemId: a.itemId, source: a.source, refId: a.refId, courseId: a.courseId ?? null, ...row })
-        .onConflictDoUpdate({ target: [rc.userId, rc.itemId], set: row }),
-    ];
-  });
-  // One transaction: the log and the cards never disagree.
-  await db.batch(writes as [(typeof writes)[number], ...(typeof writes)[number][]]);
+  // The log is append-only, so it can go in first, in one transaction.
+  const events = answers.map((a) =>
+    db.insert(schema.answerEvents).values({
+      id: newId(),
+      userId,
+      itemId: a.itemId,
+      source: a.source,
+      refId: a.refId,
+      courseId: a.courseId ?? null,
+      correct: a.correct,
+      choice: a.choice ?? null,
+      confidence: a.confidence ?? null,
+      ms: a.ms ?? null,
+      hintUsed: a.hintUsed ?? false,
+      createdAt: at,
+    }),
+  );
+  await db.batch(events as [(typeof events)[number], ...(typeof events)[number][]]);
+
+  // Answers are applied in order, so the same question twice in one call chains its card.
+  for (const a of answers) {
+    for (let attempt = 0; ; attempt++) {
+      const cur = await db
+        .select({ card: rc.card, reps: rc.reps })
+        .from(rc)
+        .where(and(eq(rc.userId, userId), eq(rc.itemId, a.itemId)))
+        .get();
+      const card = scheduleAnswer(cur?.card ?? null, a.correct, now, a.confidence);
+      const row = { due: card.due, card, reps: card.reps, lapses: card.lapses, lastCorrect: a.correct, updatedAt: at };
+      const res = cur
+        ? await db
+            .update(rc)
+            .set(row)
+            .where(and(eq(rc.userId, userId), eq(rc.itemId, a.itemId), eq(rc.reps, cur.reps)))
+            .run()
+        : await db
+            .insert(rc)
+            .values({ userId, itemId: a.itemId, source: a.source, refId: a.refId, courseId: a.courseId ?? null, ...row })
+            .onConflictDoNothing()
+            .run();
+      if (res.rowsAffected > 0) break;
+      if (attempt >= 4) throw new Error(`review card ${a.itemId} kept changing while it was being updated`);
+    }
+  }
 }
 
 /** How many questions the pupil holds in memory, and how many are due for review now. */
