@@ -48,7 +48,7 @@ export const grade5: VisualMap[number] = {
     closer(
       `**Rounding keeps the important part.** The first digits of a number carry most of its size; the last ones are details. Rounding throws away details we don't need.
 
-**The error of rounding.** When we round 648 to 600? No: to the nearest hundred it is 600 or 700, and 648 is closer to 600. The error is $648 - 600 = 48$, always less than half of a hundred.
+**The error of rounding.** Rounded to the nearest hundred, 648 is either 600 or 700, and it is closer to 600. The error is $648 - 600 = 48$, always less than half of a hundred.
 
 **Rounding in calculations.** Round only at the end, not in the middle. If you round each step, small errors pile up. Engineers and shops agree in advance how they round, so that everyone gets the same answer.`,
       `**Կլորացումը պահում է կարևոր մասը։** Թվի առաջին թվանշանները կրում են նրա մեծության հիմնական մասը, վերջինները մանրամասներ են։ Կլորացնելիս դեն ենք նետում այն մանրամասները, որոնք պետք չեն։
