@@ -1,5 +1,5 @@
 /**
- * Visual and interactive blocks for science and geometry lessons.
+ * Visual and interactive blocks for science, math and language lessons.
  *
  * The lesson texts stay as they are written; this layer adds ~~~sim blocks to every language
  * of a lesson when the courses are loaded, so English, Armenian and Russian (and any later
@@ -13,6 +13,7 @@ import { geometryVisuals } from "./geometry";
 import { physicsVisuals } from "./physics";
 import { mathVisuals } from "./math";
 import { algebraVisuals } from "./algebra";
+import { armenianVisuals } from "./armenian";
 
 type At = {
   /** Where to put it: before the n-th heading (1-based, ## and ###), "top" (before the first heading) or "end". Default: before the exercises. */
@@ -32,6 +33,7 @@ export const VISUALS: Record<string, VisualMap> = {
   geometry: geometryVisuals,
   math: mathVisuals,
   algebra: algebraVisuals,
+  armenian: armenianVisuals,
 };
 
 const EXERCISES = /^#{2,3} (Exercises|Упражнения|Задания|Վարժություններ|Առաջադրանքներ)\s*$/m;

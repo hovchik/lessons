@@ -65,6 +65,11 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   seq: lazy(() => import("./widgets/seq")),
   chance: lazy(() => import("./widgets/chance")),
   unit: lazy(() => import("./widgets/unit")),
+  letters: lazy(() => import("./widgets/letters")),
+  word: lazy(() => import("./widgets/word")),
+  sentence: lazy(() => import("./widgets/sentence")),
+  tense: lazy(() => import("./widgets/tense")),
+  forms: lazy(() => import("./widgets/forms")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
