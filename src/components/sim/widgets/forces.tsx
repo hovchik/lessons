@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArtFrame } from "@/components/art/frame";
 import type { SimProps } from "../sim-block";
 import { Arrow, Choice, Controls, fmt, Note, PlayBar, rad, Readouts, Slider, Stage, Toggle, useClock } from "../kit";
-import { L, t } from "../labels";
+import { L, t, un } from "../labels";
 
 const W = {
   cart: t("Experiment: force, mass and acceleration", "Փորձ․ ուժ, զանգված և արագացում", "Опыт: сила, масса и ускорение"),
@@ -146,7 +146,7 @@ function Cart({ spec, lang }: SimProps) {
         items={[
           ["a = F/m", `${fmt(clock.t ? a : (F - (fric ? Math.min(F, mu * m * g) : 0)) / m, 2, lang)} ${L(U.ms2, lang)}`, "#059669"],
           ["v", `${fmt(s.v, 1, lang)} ${L(U.ms, lang)}`, "#4f46e5"],
-          ["t", `${fmt(clock.t, 1, lang)} s`],
+          ["t", `${fmt(clock.t, 1, lang)} ${un("s", lang)}`],
         ]}
       />
       <Controls>

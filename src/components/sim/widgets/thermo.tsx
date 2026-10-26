@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ArtFrame } from "@/components/art/frame";
 import type { SimProps } from "../sim-block";
 import { Arrow, Choice, Controls, fmt, Graph, Note, PlayBar, Readouts, Slider, Stage, useClock, useLoop } from "../kit";
-import { L, t } from "../labels";
+import { L, t, un } from "../labels";
 
 const W = {
   heating: t("Experiment: heating ice into steam", "Փորձ․ սառույցից մինչև գոլորշի", "Опыт: от льда до пара"),
@@ -215,11 +215,11 @@ function PV({ spec, lang }: SimProps) {
           <rect x="38" y="32" width={pistonX - 38} height="96" fill={`hsl(${220 - hot * 220} 85% ${90 - hot * 20}%)`} />
           <rect x={pistonX} y="30" width="10" height="100" fill="#64748b" />
           <rect x={pistonX + 10} y="76" width={290 - pistonX} height="8" fill="#94a3b8" />
-          <text x="44" y="148" className="sim-tag" fill="#1e1b4b">p = {fmt(cur.p * 100, 0, lang)} kPa · V = {fmt(cur.V, 1, lang)} L · T = {fmt(cur.T, 0, lang)} K</text>
+          <text x="44" y="148" className="sim-tag" fill="#1e1b4b">p = {fmt(cur.p * 100, 0, lang)} {un("kPa", lang)} · V = {fmt(cur.V, 1, lang)} {un("L", lang)} · T = {fmt(cur.T, 0, lang)} {un("K", lang)}</text>
         </Stage>
         <Graph x={[0, 7]} y={[0, 4.5]} xLabel="V, L" yLabel="p, 100 kPa" series={[{ pts: curve, color: "#94a3b8", dash: "4 3" }, { pts: upto, color: "#e11d48" }, ...(proc !== "isochoric" ? [{ pts: [[upto[0][0], 0], ...upto, [upto[upto.length - 1][0], 0]] as Array<[number, number]>, color: "#fda4af" }] : [])]} dots={[[cur.V, cur.p, "#e11d48"]]} />
       </div>
-      <Readouts items={[[L(W.work, lang), `${fmt(A * 100, 0, lang)} J`, "#e11d48"]]} />
+      <Readouts items={[[L(W.work, lang), `${fmt(A * 100, 0, lang)} ${un("J", lang)}`, "#e11d48"]]} />
       <Controls>
         <Choice value={proc} options={(["isothermal", "isobaric", "isochoric", "adiabatic"] as Proc[]).map((p) => [p, L(W[p], lang)])} onChange={(p) => { setProc(p); setS(0); }} />
         <Slider label={L(W.state, lang)} value={s} min={0} max={100} step={5} unit="%" digits={0} lang={lang} onChange={setS} />
@@ -245,23 +245,23 @@ function Cycle({ spec, lang }: SimProps) {
       <div className="sim-layout is-split">
         <Stage w={300} h={190} label={L(W.cycle, lang)}>
           <rect x="20" y="20" width="80" height="40" rx="8" fill="#fecaca" stroke="#dc2626" strokeWidth="2" />
-          <text x="60" y="44" textAnchor="middle" className="sim-tag" fill="#991b1b">{th} K</text>
+          <text x="60" y="44" textAnchor="middle" className="sim-tag" fill="#991b1b">{th} {un("K", lang)}</text>
           <rect x="20" y="130" width="80" height="40" rx="8" fill="#bfdbfe" stroke="#2563eb" strokeWidth="2" />
-          <text x="60" y="154" textAnchor="middle" className="sim-tag" fill="#1e40af">{tc} K</text>
+          <text x="60" y="154" textAnchor="middle" className="sim-tag" fill="#1e40af">{tc} {un("K", lang)}</text>
           <circle cx="60" cy="95" r="18" fill="#e2e8f0" stroke="#475569" strokeWidth="2" />
           <text x="60" y="99" textAnchor="middle" className="sim-tag is-plain" fill="#1e1b4b">⚙</text>
           <Arrow x1={60} y1={60} x2={60} y2={77} color="#dc2626" width={6} label="" />
           <Arrow x1={60} y1={113} x2={60} y2={130} color="#2563eb" width={2 + 4 * (1 - eta)} />
-          <Arrow x1={78} y1={95} x2={78 + 70 * eta + 10} y2={95} color="#059669" width={2 + 6 * eta} label={`A = ${fmt(a, 0, lang)} J`} />
-          <text x="104" y="40" className="sim-tag" fill="#dc2626">Q₁ = {q1} J</text>
-          <text x="104" y="160" className="sim-tag" fill="#2563eb">Q₂ = {fmt(q1 - a, 0, lang)} J</text>
+          <Arrow x1={78} y1={95} x2={78 + 70 * eta + 10} y2={95} color="#059669" width={2 + 6 * eta} label={`A = ${fmt(a, 0, lang)} ${un("J", lang)}`} />
+          <text x="104" y="40" className="sim-tag" fill="#dc2626">Q₁ = {q1} {un("J", lang)}</text>
+          <text x="104" y="160" className="sim-tag" fill="#2563eb">Q₂ = {fmt(q1 - a, 0, lang)} {un("J", lang)}</text>
         </Stage>
         <Graph x={[0, 7]} y={[0, 5]} xLabel="V" yLabel="p" series={[{ pts: loop, color: "#7c3aed" }]} dots={[[cur[0], cur[1], "#e11d48"]]} />
       </div>
       <Readouts items={[[L(W.carnot, lang), `${fmt(eta * 100, 0, lang)} %`, "#059669"], ["1 − T₂/T₁", `1 − ${tc}/${th}`]]} />
       <Controls>
-        <Slider label={L(W.th, lang)} value={th} min={350} max={1200} step={50} unit="K" digits={0} lang={lang} onChange={(v) => setTh(Math.max(v, tc + 50))} />
-        <Slider label={L(W.tc, lang)} value={tc} min={250} max={400} step={10} unit="K" digits={0} lang={lang} onChange={(v) => setTc(Math.min(v, th - 50))} />
+        <Slider label={L(W.th, lang)} value={th} min={350} max={1200} step={50} unit={un("K", lang)} digits={0} lang={lang} onChange={(v) => setTh(Math.max(v, tc + 50))} />
+        <Slider label={L(W.tc, lang)} value={tc} min={250} max={400} step={10} unit={un("K", lang)} digits={0} lang={lang} onChange={(v) => setTc(Math.min(v, th - 50))} />
       </Controls>
     </ArtFrame>
   );

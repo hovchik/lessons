@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArtFrame } from "@/components/art/frame";
 import type { SimProps } from "../sim-block";
 import { Choice, Controls, fmt, Note, Readouts, Slider, Stage, Toggle } from "../kit";
-import { L, t } from "../labels";
+import { L, t, un } from "../labels";
 
 const W = {
   states: t("Experiment: solid, liquid, gas", "Փորձ․ պինդ, հեղուկ, գազ", "Опыт: твёрдое, жидкое, газ"),
@@ -225,12 +225,12 @@ function Gas({ spec, lang }: SimProps) {
         <rect x={x1} y={y0 - 2} width="10" height={y1 - y0 + 4} fill="#64748b" />
         <rect x={x1 + 10} y={(y0 + y1) / 2 - 4} width={300 - x1} height="8" fill="#94a3b8" />
         {ps.map((q, i) => <circle key={i} cx={q.x} cy={q.y} r="4" fill="#4f46e5" />)}
-        <text x="44" y="196" className="sim-tag" fill="#e11d48">T = {T} K</text>
+        <text x="44" y="196" className="sim-tag" fill="#e11d48">T = {T} {un("K", lang)}</text>
       </Stage>
-      <Readouts items={[[L(W.hits, lang), fmt(rate, 0, lang), "#4f46e5"], [L(W.pressure, lang), `${fmt(p, 0, lang)} kPa`, "#e11d48"], [L(W.speed, lang), `${fmt(480 * Math.sqrt(T / 300), 0, lang)} m/s`]]} />
+      <Readouts items={[[L(W.hits, lang), fmt(rate, 0, lang), "#4f46e5"], [L(W.pressure, lang), `${fmt(p, 0, lang)} ${un("kPa", lang)}`, "#e11d48"], [L(W.speed, lang), `${fmt(480 * Math.sqrt(T / 300), 0, lang)} ${un("ms", lang)}`]]} />
       <Controls>
         <Slider label={L(W.volume, lang)} value={vol} min={30} max={100} step={5} unit="%" digits={0} lang={lang} onChange={setVol} />
-        <Slider label={L(W.temp, lang)} value={T} min={150} max={600} step={25} unit="K" digits={0} lang={lang} onChange={setT} />
+        <Slider label={L(W.temp, lang)} value={T} min={150} max={600} step={25} unit={un("K", lang)} digits={0} lang={lang} onChange={setT} />
       </Controls>
     </ArtFrame>
   );

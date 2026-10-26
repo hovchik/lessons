@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ArtFrame } from "@/components/art/frame";
 import type { SimProps } from "../sim-block";
 import { Choice, Controls, fmt, Graph, PlayBar, rad, Readouts, Slider, Stage, Toggle, useClock } from "../kit";
-import { L, t } from "../labels";
+import { L, t, un } from "../labels";
 
 const W = {
   title: t("Experiment: the pendulum", "Փորձ․ ճոճանակ", "Опыт: маятник"),
@@ -71,7 +71,7 @@ function Free({ spec, lang }: SimProps) {
         </Stage>
         <div>
           <Graph x={[from, from + win]} y={[-40, 40]} xLabel={`t, ${L(U.s, lang)}`} yLabel="α, °" series={[{ pts: trace, color: "#e11d48" }]} />
-          <Readouts items={[[L(W.period, lang), `${fmt(T, 2, lang)} ${L(U.s, lang)}`, "#e11d48"], ["g", `${fmt(g, 1, lang)} m/s²`], [L(W.swings, lang), `${Math.floor(tt / T)}`]]} />
+          <Readouts items={[[L(W.period, lang), `${fmt(T, 2, lang)} ${L(U.s, lang)}`, "#e11d48"], ["g", `${fmt(g, 1, lang)} ${un("ms2", lang)}`], [L(W.swings, lang), `${Math.floor(tt / T)}`]]} />
         </div>
       </div>
       <Controls>
