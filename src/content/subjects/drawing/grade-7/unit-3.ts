@@ -36,6 +36,11 @@ Walk along an old street and you read centuries: a medieval wall, a classical fa
 | **Modern (20th c.)** | from the 1920s | glass, steel, concrete, simple shapes, no decoration |
 | **Today** | from the 1980s | free forms, computers, energy-saving buildings |
 
+~~~art
+pic greek-temple gothic st-basil tamanyan skyscraper
+A street as a timeline: from ancient columns to glass towers.
+~~~
+
 ## How to read a facade
 
 * **Round arch** points to Romanesque or Renaissance; **pointed arch**, to Gothic.
@@ -43,16 +48,25 @@ Walk along an old street and you read centuries: a medieval wall, a classical fa
 * **Rich curved decoration** points to Baroque.
 * **A flat glass wall** points to modern architecture.
 
+~~~art
+pic orders
+~~~
+
 ## The city changes
 
 Ancient cities grew around a temple or a fortress, with narrow winding streets. In the Renaissance architects drew straight avenues and round squares. In the 19th century factories and railways appeared, and cities grew quickly. In the 20th century came skyscrapers, wide roads and parks between apartment blocks.
+
+~~~art
+pic mode=silhouette greek-temple gothic pagoda skyscraper
+Read a facade by its silhouette: guess the style, then tap to check.
+~~~
 
 ## Task
 
 Find two buildings in your town or on photos: an old one and a modern one. Draw their facades side by side and name the signs that show their time.
 
-### Exercises
-
+~~~art
+tasks
 1. What do the three Greek orders belong to?
 2. Which arch belongs to Gothic architecture?
 3. What materials did the Romans use for domes and aqueducts?
@@ -60,10 +74,12 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 5. What are the signs of 20th-century modern architecture?
 6. How did city streets change in the Renaissance?
 7. Draw an old and a modern facade and explain their signs.
+~~~
 
-### Answers
-
-1. To ancient Greek architecture (post and beam). 2. The pointed arch. 3. Concrete, with the arch, vault and dome. 4. Curved lines, rich decoration, play of light (any two). 5. Glass, steel, concrete, simple shapes without decoration. 6. Architects drew straight avenues and round squares. 7. Your drawings.`,
+~~~art
+hints
+1. To ancient Greek architecture (post and beam). 2. The pointed arch. 3. Concrete, with the arch, vault and dome. 4. Curved lines, rich decoration, play of light (any two). 5. Glass, steel, concrete, simple shapes without decoration. 6. Architects drew straight avenues and round squares. 7. Your drawings.
+~~~`,
         hy: `## Քաղաքը ժամանակի գիրք է
 
 Քայլիր հին փողոցով, և կկարդաս դարեր՝ միջնադարյան պարիսպ, դասական ճակատ, ապակե աշտարակ։ Յուրաքանչյուր դարաշրջան կառուցում է յուրովի, որովհետև ունի իր նյութերը, կարիքներն ու գեղեցիկի մասին պատկերացումները։
@@ -83,6 +99,11 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 | **Մոդեռն (20-րդ դար)** | 1920-ականներից | ապակի, պողպատ, բետոն, պարզ ձևեր, առանց զարդի |
 | **Այսօր** | 1980-ականներից | ազատ ձևեր, համակարգիչներ, էներգախնայող շենքեր |
 
+~~~art
+pic greek-temple gothic st-basil tamanyan skyscraper
+Փողոցը որպես ժամանակագրություն․ հնագույն սյուներից մինչև ապակե աշտարակներ։
+~~~
+
 ## Ինչպես կարդալ ճակատը
 
 * **Կլոր կամարը** ցույց է տալիս ռոմանական կամ Վերածննդի ոճ, **սրածայր կամարը**՝ գոթական։
@@ -90,16 +111,25 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 * **Հարուստ կոր զարդարանքը** ցույց է տալիս բարոկկո։
 * **Հարթ ապակե պատը** ցույց է տալիս ժամանակակից ճարտարապետություն։
 
+~~~art
+pic orders
+~~~
+
 ## Քաղաքը փոխվում է
 
 Հին քաղաքներն աճում էին տաճարի կամ ամրոցի շուրջ՝ նեղ ոլորուն փողոցներով։ Վերածննդի ժամանակ ճարտարապետները գծում էին ուղիղ պողոտաներ և կլոր հրապարակներ։ 19-րդ դարում հայտնվեցին գործարաններ և երկաթուղիներ, և քաղաքներն արագ աճեցին։ 20-րդ դարում եկան երկնաքերերը, լայն ճանապարհները և այգիները բնակելի շենքերի միջև։
+
+~~~art
+pic mode=silhouette greek-temple gothic pagoda skyscraper
+Կարդա՛ ճակատը ըստ ուրվագծի․ գուշակի՛ր ոճը, հետո հպի՛ր՝ ստուգելու համար։
+~~~
 
 ## Առաջադրանք
 
 Գտիր երկու շենք քո քաղաքում կամ լուսանկարներում՝ մեկը հին, մյուսը ժամանակակից։ Նկարիր նրանց ճակատները կողք կողքի և անվանիր այն նշանները, որոնք ցույց են տալիս դրանց ժամանակը։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Երեք հունական օրդերն որ ճարտարապետությանն են պատկանում։
 2. Որ կամարն է պատկանում գոթական ճարտարապետությանը։
 3. Ինչ նյութեր էին հռոմեացիներն օգտագործում գմբեթների և ջրատարների համար։
@@ -107,10 +137,12 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 5. Որոնք են 20-րդ դարի մոդեռն ճարտարապետության նշանները։
 6. Ինչպես փոխվեցին քաղաքի փողոցները Վերածննդի ժամանակ։
 7. Նկարիր հին և ժամանակակից ճակատ և բացատրիր դրանց նշանները։
+~~~
 
-### Պատասխաններ
-
-1. Հին հունական ճարտարապետությանը (սյուն և հեծան)։ 2. Սրածայր կամարը։ 3. Բետոն՝ կամարի, թաղի և գմբեթի հետ։ 4. Կոր գծեր, հարուստ զարդարանք, լույսի խաղ (ցանկացած երկուսը)։ 5. Ապակի, պողպատ, բետոն, պարզ ձևեր առանց զարդի։ 6. Ճարտարապետները գծեցին ուղիղ պողոտաներ և կլոր հրապարակներ։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Հին հունական ճարտարապետությանը (սյուն և հեծան)։ 2. Սրածայր կամարը։ 3. Բետոն՝ կամարի, թաղի և գմբեթի հետ։ 4. Կոր գծեր, հարուստ զարդարանք, լույսի խաղ (ցանկացած երկուսը)։ 5. Ապակի, պողպատ, բետոն, պարզ ձևեր առանց զարդի։ 6. Ճարտարապետները գծեցին ուղիղ պողոտաներ և կլոր հրապարակներ։ 7. Քո նկարները։
+~~~`,
         ru: `## Город — книга времени
 
 Пройди по старой улице, и ты прочитаешь века: средневековая стена, классический фасад, стеклянная башня. Каждая эпоха строит по-своему, потому что у неё свои материалы, потребности и представления о красоте.
@@ -130,6 +162,11 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 | **Модернизм (XX век)** | с 1920-х годов | стекло, сталь, бетон, простые формы без украшений |
 | **Сегодня** | с 1980-х годов | свободные формы, компьютеры, энергосберегающие здания |
 
+~~~art
+pic greek-temple gothic st-basil tamanyan skyscraper
+Улица как лента времени: от античных колонн до стеклянных башен.
+~~~
+
 ## Как читать фасад
 
 * **Полукруглая арка** указывает на романский стиль или Возрождение, **стрельчатая** — на готику.
@@ -137,16 +174,25 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 * **Пышный изогнутый декор** указывает на барокко.
 * **Ровная стеклянная стена** указывает на современную архитектуру.
 
+~~~art
+pic orders
+~~~
+
 ## Город меняется
 
 Древние города росли вокруг храма или крепости, с узкими извилистыми улицами. В эпоху Возрождения архитекторы чертили прямые проспекты и круглые площади. В XIX веке появились фабрики и железные дороги, и города стали расти быстро. В XX веке пришли небоскрёбы, широкие магистрали и парки между жилыми домами.
+
+~~~art
+pic mode=silhouette greek-temple gothic pagoda skyscraper
+Прочитай фасад по силуэту: угадай стиль, потом нажми, чтобы проверить.
+~~~
 
 ## Задание
 
 Найди два здания в своём городе или на фотографиях: старое и современное. Нарисуй их фасады рядом и назови признаки, по которым видно их время.
 
-### Упражнения
-
+~~~art
+tasks
 1. К какой архитектуре относятся три греческих ордера?
 2. Какая арка характерна для готики?
 3. Какие материалы римляне использовали для куполов и акведуков?
@@ -154,10 +200,12 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 5. Каковы признаки архитектуры модернизма XX века?
 6. Как изменились городские улицы в эпоху Возрождения?
 7. Нарисуй старый и современный фасад и объясни их признаки.
+~~~
 
-### Ответы
-
-1. К древнегреческой (стоечно-балочной). 2. Стрельчатая. 3. Бетон вместе с аркой, сводом и куполом. 4. Изогнутые линии, пышный декор, игра света (любые два). 5. Стекло, сталь, бетон, простые формы без украшений. 6. Архитекторы прочертили прямые проспекты и круглые площади. 7. Твои рисунки.`,
+~~~art
+hints
+1. К древнегреческой (стоечно-балочной). 2. Стрельчатая. 3. Бетон вместе с аркой, сводом и куполом. 4. Изогнутые линии, пышный декор, игра света (любые два). 5. Стекло, сталь, бетон, простые формы без украшений. 6. Архитекторы прочертили прямые проспекты и круглые площади. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The pointed arch is a sign of…", "Սրածայր կամարը … նշան է։", "Стрельчатая арка — признак…"), [t("Gothic", "գոթականի", "готики"), t("Baroque", "բարոկկոյի", "барокко"), t("Classicism", "կլասիցիզմի", "классицизма")], 0),
@@ -194,9 +242,21 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 | **Geghard** | 13th c. | halls cut inside the rock |
 | **Noravank** | 13th–14th c. | the two-storey church of Momik with an outside stair |
 
+~~~art
+pic erebuni garni zvartnots
+~~~
+
 ## Tamanyan's Yerevan
 
 **Alexander Tamanyan** (1878–1936) made the general plan of Yerevan in 1924. He proposed a circle of boulevards, radial avenues, a central square and a cascade of parks leading up the hill. He designed many buildings, among them the **Government House** on Republic Square and the **Opera and Ballet Theatre**. Tamanyan used **pink, orange and black tuff** and combined classical order with motifs of Armenian medieval carving. That is why Yerevan is called the **Pink City**.
+
+~~~art
+pic tamanyan
+~~~
+
+~~~art
+palette tuff
+~~~
 
 ## Parts of an Armenian church
 
@@ -206,12 +266,16 @@ Find two buildings in your town or on photos: an old one and a modern one. Draw 
 * **Khachkar:** a cross-stone standing near or built into the wall.
 * **Carved ornament:** around windows and doors, geometric and plant patterns.
 
+~~~art
+steps armenian-church
+~~~
+
 ## Task
 
 Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical roof, narrow windows, a carved frame around the door. Then draw a Yerevan street of Tamanyan's time in the same sheet and compare the two.
 
-### Exercises
-
+~~~art
+tasks
 1. Who founded Erebuni and when?
 2. What kind of temple is Garni?
 3. Of what stone are most Armenian churches built?
@@ -219,10 +283,12 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 5. Name two famous medieval monuments and what makes each special.
 6. What did Tamanyan plan in 1924?
 7. Draw an Armenian church facade and name its parts.
+~~~
 
-### Answers
-
-1. King Argishti I, in 782 BC. 2. A Greek-Roman post and beam temple with columns. 3. Tuff. 4. The round or polygonal tower that carries the dome. 5. For example Akhtamar with its outside reliefs, and Geghard cut inside the rock. 6. The general plan of Yerevan. 7. Your drawing.`,
+~~~art
+hints
+1. King Argishti I, in 782 BC. 2. A Greek-Roman post and beam temple with columns. 3. Tuff. 4. The round or polygonal tower that carries the dome. 5. For example Akhtamar with its outside reliefs, and Geghard cut inside the rock. 6. The general plan of Yerevan. 7. Your drawing.
+~~~`,
         hy: `## Ուրարտուից մինչև այսօր
 
 **Ուրարտու (մ.թ.ա. 9–6-րդ դդ.)։** Բերդեր բլուրների վրա՝ կիկլոպյան քարե բլոկներից, պահեստներով և ջրանցքներով։ **Էրեբունին** հիմնադրել է Արգիշտի Առաջին արքան մ.թ.ա. 782 թվականին Արին Բերդ բլրի վրա, Երևանն իր տարիքը հաշվում է դրանից։
@@ -240,9 +306,21 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 | **Գեղարդ** | 13-րդ դար | ժայռի մեջ փորված դահլիճներ |
 | **Նորավանք** | 13–14-րդ դդ. | Մոմիկի երկհարկանի եկեղեցին՝ արտաքին աստիճաններով |
 
+~~~art
+pic erebuni garni zvartnots
+~~~
+
 ## Թամանյանի Երևանը
 
 **Ալեքսանդր Թամանյանը** (1878–1936) Երևանի գլխավոր հատակագիծը կազմել է 1924 թվականին։ Նա առաջարկել է պողոտաների օղակ, ճառագայթաձև պողոտաներ, կենտրոնական հրապարակ և բլրով վեր տանող այգիների կասկադ։ Նա նախագծել է բազմաթիվ շենքեր, այդ թվում՝ **Կառավարական տունը** Հանրապետության հրապարակում և **Օպերայի և բալետի թատրոնը**։ Թամանյանն օգտագործել է **վարդագույն, նարնջագույն և սև տուֆ** և դասական օրդերը զուգորդել հայկական միջնադարյան փորագրության մոտիվների հետ։ Ահա թե ինչու Երևանը կոչվում է **Վարդագույն քաղաք**։
+
+~~~art
+pic tamanyan
+~~~
+
+~~~art
+palette tuff
+~~~
 
 ## Հայկական եկեղեցու մասերը
 
@@ -252,12 +330,16 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 * **Խաչքար**՝ խաչաքար, որը կանգնած է մոտակայքում կամ ագուցված է պատին։
 * **Փորագիր զարդանախշ**՝ պատուհանների և դռների շուրջ, երկրաչափական և բուսական նախշեր։
 
+~~~art
+steps armenian-church
+~~~
+
 ## Առաջադրանք
 
 Նկարիր հայկական եկեղեցու ճակատը՝ խաչաձև մարմին, թմբուկ, կոնաձև տանիք, նեղ պատուհաններ, փորագիր շրջանակ դռան շուրջ։ Հետո նույն թերթին նկարիր Թամանյանի ժամանակի Երևանի փողոցը և համեմատիր երկուսը։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ով և երբ է հիմնադրել Էրեբունին։
 2. Ինչպիսի տաճար է Գառնին։
 3. Որ քարից են կառուցված հայկական եկեղեցիների մեծ մասը։
@@ -265,10 +347,12 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 5. Անվանիր երկու հայտնի միջնադարյան հուշարձան և ինչով է յուրաքանչյուրն առանձնահատուկ։
 6. Ինչ է նախագծել Թամանյանը 1924 թվականին։
 7. Նկարիր հայկական եկեղեցու ճակատը և անվանիր նրա մասերը։
+~~~
 
-### Պատասխաններ
-
-1. Արգիշտի Առաջին արքան, մ.թ.ա. 782 թվականին։ 2. Հունահռոմեական սյուն-հեծանային տաճար՝ սյուներով։ 3. Տուֆից։ 4. Կլոր կամ բազմանիստ աշտարակը, որը կրում է գմբեթը։ 5. Օրինակ՝ Աղթամարը՝ արտաքին քանդակներով, և Գեղարդը՝ ժայռի մեջ փորված։ 6. Երևանի գլխավոր հատակագիծը։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Արգիշտի Առաջին արքան, մ.թ.ա. 782 թվականին։ 2. Հունահռոմեական սյուն-հեծանային տաճար՝ սյուներով։ 3. Տուֆից։ 4. Կլոր կամ բազմանիստ աշտարակը, որը կրում է գմբեթը։ 5. Օրինակ՝ Աղթամարը՝ արտաքին քանդակներով, և Գեղարդը՝ ժայռի մեջ փորված։ 6. Երևանի գլխավոր հատակագիծը։ 7. Քո նկարը։
+~~~`,
         ru: `## От Урарту до наших дней
 
 **Урарту (IX–VI вв. до н. э.).** Крепости на холмах из циклопических каменных блоков, с хранилищами и каналами. **Эребуни** основал в 782 году до н. э. царь Аргишти I на холме Арин-Берд; от него Ереван ведёт свой возраст.
@@ -286,9 +370,21 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 | **Гегард** | XIII в. | залы, вырубленные внутри скалы |
 | **Нораванк** | XIII–XIV вв. | двухэтажная церковь Момика с наружной лестницей |
 
+~~~art
+pic erebuni garni zvartnots
+~~~
+
 ## Ереван Таманяна
 
 **Александр Таманян** (1878–1936) составил генеральный план Еревана в 1924 году. Он предложил кольцо бульваров, лучевые проспекты, центральную площадь и каскад парков, поднимающийся по холму. Он спроектировал многие здания, среди них **Дом правительства** на площади Республики и **Театр оперы и балета**. Таманян использовал **розовый, оранжевый и чёрный туф** и соединил классический ордер с мотивами армянской средневековой резьбы. Поэтому Ереван называют **розовым городом**.
+
+~~~art
+pic tamanyan
+~~~
+
+~~~art
+palette tuff
+~~~
 
 ## Части армянского храма
 
@@ -298,12 +394,16 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 * **Хачкар:** крест-камень, стоящий рядом или вделанный в стену.
 * **Резной орнамент:** вокруг окон и дверей, геометрический и растительный.
 
+~~~art
+steps armenian-church
+~~~
+
 ## Задание
 
 Нарисуй фасад армянской церкви: крестообразный объём, барабан, коническую кровлю, узкие окна, резное обрамление двери. Затем на том же листе нарисуй ереванскую улицу времён Таманяна и сравни их.
 
-### Упражнения
-
+~~~art
+tasks
 1. Кто и когда основал Эребуни?
 2. Какой это храм — Гарни?
 3. Из какого камня построено большинство армянских церквей?
@@ -311,10 +411,12 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 5. Назови два знаменитых средневековых памятника и чем каждый особенен.
 6. Что спроектировал Таманян в 1924 году?
 7. Нарисуй фасад армянской церкви и назови её части.
+~~~
 
-### Ответы
-
-1. Царь Аргишти I, в 782 году до н. э. 2. Греко-римский стоечно-балочный храм с колоннами. 3. Из туфа. 4. Круглая или многогранная башня, несущая купол. 5. Например, Ахтамар с наружными рельефами и Гегард, вырубленный в скале. 6. Генеральный план Еревана. 7. Твой рисунок.`,
+~~~art
+hints
+1. Царь Аргишти I, в 782 году до н. э. 2. Греко-римский стоечно-балочный храм с колоннами. 3. Из туфа. 4. Круглая или многогранная башня, несущая купол. 5. Например, Ахтамар с наружными рельефами и Гегард, вырубленный в скале. 6. Генеральный план Еревана. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Erebuni was founded in…", "Էրեբունին հիմնադրվել է…", "Эребуни основан в…"), [t("782 BC", "մ.թ.ա. 782 թվականին", "782 году до н. э."), t("301 AD", "301 թվականին", "301 году н. э."), t("1924", "1924 թվականին", "1924 году")], 0),
@@ -338,6 +440,10 @@ Draw the facade of an Armenian church: a cross-shaped body, a drum, a conical ro
 
 A city is designed by **urban planners** together with architects, engineers and ecologists. They decide where people will live, work, study and rest, and how they will move between these places.
 
+~~~art
+pic skyscraper tamanyan
+~~~
+
 ## Zones of a city
 
 | Zone | What is there |
@@ -354,6 +460,11 @@ A city is designed by **urban planners** together with architects, engineers and
 * **Radial and ring:** avenues go from the centre like rays, rings join them; Moscow, and Tamanyan's plan for Yerevan.
 * **Free:** streets follow the relief of hills and rivers; old towns and mountain villages.
 
+~~~art
+sketch guide=grid
+Plan a district: try a grid of streets, then a ring and rays like Tamanyan's Yerevan. Where are the parks?
+~~~
+
 ## A comfortable city
 
 Modern planners try to make a city for people, not only for cars:
@@ -365,6 +476,10 @@ Modern planners try to make a city for people, not only for cars:
 * **Accessible space:** ramps and smooth pavements for prams and wheelchairs, tactile tiles for blind people.
 * **Safety:** lighting, low speed in yards, crossings that are seen from far away.
 
+~~~art
+mood scene=city moods=noon,evening
+~~~
+
 ## Problems to solve
 
 Traffic jams, noise, air pollution, heat in summer, rubbish, and buildings that do not fit the old street. Designers answer with green roofs, solar panels, rainwater gardens, restored old buildings and public squares.
@@ -373,8 +488,8 @@ Traffic jams, noise, air pollution, heat in summer, rubbish, and buildings that 
 
 Draw a plan of a district on squared paper: streets, a few houses with yards, a school, a shop, a park, a bus stop and bicycle paths. Mark north and the scale, and add a short legend with symbols.
 
-### Exercises
-
+~~~art
+tasks
 1. Who plans a city?
 2. Name four zones of a city.
 3. What is a radial and ring street network?
@@ -382,13 +497,19 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 5. Why are trees important in a city?
 6. Name two things that make a street accessible to everyone.
 7. Draw a plan of a district with a legend and a scale.
+~~~
 
-### Answers
-
-1. Urban planners with architects, engineers and ecologists. 2. Any four: residential, public and business, industrial, recreation, transport. 3. Avenues go from the centre like rays, and rings join them. 4. School, shop, clinic and park are within 15 minutes on foot. 5. They cool the streets, hold dust and lower the noise. 6. For example ramps, smooth pavements and tactile tiles. 7. Your plan.`,
+~~~art
+hints
+1. Urban planners with architects, engineers and ecologists. 2. Any four: residential, public and business, industrial, recreation, transport. 3. Avenues go from the centre like rays, and rings join them. 4. School, shop, clinic and park are within 15 minutes on foot. 5. They cool the streets, hold dust and lower the noise. 6. For example ramps, smooth pavements and tactile tiles. 7. Your plan.
+~~~`,
         hy: `## Ով է պլանավորում քաղաքը
 
 Քաղաքը նախագծում են **քաղաքաշինարարները** ճարտարապետների, ինժեներների և էկոլոգների հետ միասին։ Նրանք որոշում են, թե որտեղ են մարդիկ ապրելու, աշխատելու, սովորելու և հանգստանալու և ինչպես են տեղաշարժվելու այդ վայրերի միջև։
+
+~~~art
+pic skyscraper tamanyan
+~~~
 
 ## Քաղաքի գոտիները
 
@@ -406,6 +527,11 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 * **Ճառագայթաօղակաձև**՝ պողոտաները կենտրոնից գնում են ճառագայթների պես, օղակները միացնում են դրանք. Մոսկվա և Թամանյանի Երևանի հատակագիծը։
 * **Ազատ**՝ փողոցները հետևում են բլուրների և գետերի ռելիեֆին. հին քաղաքներ և լեռնային գյուղեր։
 
+~~~art
+sketch guide=grid
+Հատակագծի՛ր թաղամաս․ փորձի՛ր փողոցների ցանց, հետո օղակ և ճառագայթներ, ինչպես Թամանյանի Երևանում։ Որտե՞ղ են այգիները։
+~~~
+
 ## Հարմարավետ քաղաք
 
 Ժամանակակից պլանավորողները փորձում են քաղաքը դարձնել մարդկանց, ոչ միայն մեքենաների համար.
@@ -417,6 +543,10 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 * **Հասանելի տարածք**՝ թեքահարթակներ և հարթ մայթեր մանկասայլակների և սայլակների համար, շոշափելի սալիկներ կույրերի համար։
 * **Անվտանգություն**՝ լուսավորություն, ցածր արագություն բակերում, հեռվից տեսանելի անցումներ։
 
+~~~art
+mood scene=city moods=noon,evening
+~~~
+
 ## Լուծելու խնդիրներ
 
 Խցանումներ, աղմուկ, օդի աղտոտվածություն, ամառային շոգ, աղբ և շենքեր, որոնք չեն համապատասխանում հին փողոցին։ Դիզայներները պատասխանում են կանաչ տանիքներով, արևային վահանակներով, անձրևաջրերի այգիներով, վերականգնված հին շենքերով և հասարակական հրապարակներով։
@@ -425,8 +555,8 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 
 Վանդակավոր թղթի վրա գծիր թաղամասի հատակագիծը՝ փողոցներ, մի քանի տուն բակերով, դպրոց, խանութ, այգի, ավտոբուսի կանգառ և հեծանվային ուղիներ։ Նշիր հյուսիսը և մասշտաբը, ավելացրու կարճ պայմանական նշանների ցանկ։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ով է պլանավորում քաղաքը։
 2. Անվանիր քաղաքի չորս գոտի։
 3. Ինչ է ճառագայթաօղակաձև փողոցների ցանցը։
@@ -434,13 +564,19 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 5. Ինչու են ծառերը կարևոր քաղաքում։
 6. Անվանիր երկու բան, որ փողոցը բոլորի համար հասանելի են դարձնում։
 7. Գծիր թաղամասի հատակագիծ՝ պայմանական նշաններով և մասշտաբով։
+~~~
 
-### Պատասխաններ
-
-1. Քաղաքաշինարարները ճարտարապետների, ինժեներների և էկոլոգների հետ։ 2. Ցանկացած չորսը՝ բնակելի, հասարակական և գործարար, արդյունաբերական, հանգստի, տրանսպորտային։ 3. Պողոտաները կենտրոնից գնում են ճառագայթների պես, օղակները միացնում են դրանք։ 4. Դպրոցը, խանութը, պոլիկլինիկան և այգին 15 րոպեում ոտքով են։ 5. Զովացնում են փողոցները, պահում են փոշին և նվազեցնում աղմուկը։ 6. Օրինակ՝ թեքահարթակները, հարթ մայթերը և շոշափելի սալիկները։ 7. Քո հատակագիծը։`,
+~~~art
+hints
+1. Քաղաքաշինարարները ճարտարապետների, ինժեներների և էկոլոգների հետ։ 2. Ցանկացած չորսը՝ բնակելի, հասարակական և գործարար, արդյունաբերական, հանգստի, տրանսպորտային։ 3. Պողոտաները կենտրոնից գնում են ճառագայթների պես, օղակները միացնում են դրանք։ 4. Դպրոցը, խանութը, պոլիկլինիկան և այգին 15 րոպեում ոտքով են։ 5. Զովացնում են փողոցները, պահում են փոշին և նվազեցնում աղմուկը։ 6. Օրինակ՝ թեքահարթակները, հարթ մայթերը և շոշափելի սալիկները։ 7. Քո հատակագիծը։
+~~~`,
         ru: `## Кто планирует город
 
 Город проектируют **градостроители** вместе с архитекторами, инженерами и экологами. Они решают, где люди будут жить, работать, учиться и отдыхать и как они будут перемещаться между этими местами.
+
+~~~art
+pic skyscraper tamanyan
+~~~
 
 ## Зоны города
 
@@ -458,6 +594,11 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 * **Радиально-кольцевая:** проспекты идут от центра лучами, кольца их соединяют; Москва и план Еревана Таманяна.
 * **Свободная:** улицы следуют рельефу холмов и рек; старые города и горные сёла.
 
+~~~art
+sketch guide=grid
+Спланируй район: попробуй сетку улиц, потом кольцо и лучи, как в Ереване Таманяна. Где парки?
+~~~
+
 ## Удобный город
 
 Современные планировщики стараются сделать город для людей, а не только для машин:
@@ -469,6 +610,10 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 * **Доступная среда:** пандусы и ровные тротуары для колясок, тактильная плитка для незрячих.
 * **Безопасность:** освещение, низкая скорость во дворах, переходы, видимые издалека.
 
+~~~art
+mood scene=city moods=noon,evening
+~~~
+
 ## Задачи, которые надо решать
 
 Пробки, шум, загрязнение воздуха, летняя жара, мусор и здания, которые не вписываются в старую улицу. Дизайнеры отвечают зелёными крышами, солнечными панелями, дождевыми садами, восстановленными старыми домами и общественными площадями.
@@ -477,8 +622,8 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 
 Начерти на клетчатой бумаге план квартала: улицы, несколько домов с дворами, школу, магазин, парк, остановку и велодорожки. Отметь север и масштаб, добавь короткую легенду с условными знаками.
 
-### Упражнения
-
+~~~art
+tasks
 1. Кто планирует город?
 2. Назови четыре зоны города.
 3. Что такое радиально-кольцевая сеть улиц?
@@ -486,10 +631,12 @@ Draw a plan of a district on squared paper: streets, a few houses with yards, a 
 5. Почему в городе важны деревья?
 6. Назови две вещи, которые делают улицу доступной для всех.
 7. Начерти план квартала с легендой и масштабом.
+~~~
 
-### Ответы
-
-1. Градостроители вместе с архитекторами, инженерами и экологами. 2. Любые четыре: жилая, общественно-деловая, промышленная, рекреационная, транспортная. 3. Проспекты идут от центра лучами, а кольца их соединяют. 4. Школа, магазин, поликлиника и парк находятся в 15 минутах ходьбы. 5. Они охлаждают улицы, задерживают пыль и снижают шум. 6. Например, пандусы, ровные тротуары и тактильная плитка. 7. Твой план.`,
+~~~art
+hints
+1. Градостроители вместе с архитекторами, инженерами и экологами. 2. Любые четыре: жилая, общественно-деловая, промышленная, рекреационная, транспортная. 3. Проспекты идут от центра лучами, а кольца их соединяют. 4. Школа, магазин, поликлиника и парк находятся в 15 минутах ходьбы. 5. Они охлаждают улицы, задерживают пыль и снижают шум. 6. Например, пандусы, ровные тротуары и тактильная плитка. 7. Твой план.
+~~~`,
       },
       [
         q(t("Factories and warehouses belong to the … zone.", "Գործարաններն ու պահեստները պատկանում են … գոտուն։", "Заводы и склады относятся к … зоне."), [t("industrial", "արդյունաբերական", "промышленной"), t("residential", "բնակելի", "жилой"), t("recreation", "հանգստի", "рекреационной")], 0),
@@ -527,6 +674,10 @@ A landscape designer must think in **four seasons** and in **years**: a young tr
 
 Armenian gardens have their own tradition: shade, water channels, fruit trees, grapevines over a terrace, and a view of the mountains.
 
+~~~art
+pic park-plan
+~~~
+
 ## Elements of a design
 
 * **Paths:** people walk the shortest way; draw paths where they really go.
@@ -536,12 +687,20 @@ Armenian gardens have their own tradition: shade, water channels, fruit trees, g
 * **Furniture:** benches, lamps, bins, playgrounds, a pergola.
 * **Viewpoints:** a place from which the park looks best.
 
+~~~art
+palette spring summer autumn
+~~~
+
 ## Task
 
 Design a courtyard of your school or house. Draw the plan in scale, show the entrance, paths, trees, grass, benches, a playground and a quiet corner. Then draw one view of the courtyard in perspective, as a visitor sees it.
 
-### Exercises
+~~~art
+sketch guide=grid
+~~~
 
+~~~art
+tasks
 1. What does landscape design work with?
 2. Why must a designer think about four seasons?
 3. Name three features of a regular park.
@@ -549,10 +708,12 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 5. Where should paths be drawn?
 6. Name three elements of park furniture.
 7. Design a courtyard: a plan and one perspective view.
+~~~
 
-### Answers
-
-1. Open space: gardens, parks, courtyards, embankments, with living and built elements. 2. Plants change through the year and over the years. 3. Straight axes, symmetry, clipped trees, geometric beds (any three). 4. Winding paths, natural tree shapes, ponds with irregular banks. 5. Where people really walk, the shortest way. 6. For example benches, lamps, bins, playgrounds, a pergola. 7. Your design.`,
+~~~art
+hints
+1. Open space: gardens, parks, courtyards, embankments, with living and built elements. 2. Plants change through the year and over the years. 3. Straight axes, symmetry, clipped trees, geometric beds (any three). 4. Winding paths, natural tree shapes, ponds with irregular banks. 5. Where people really walk, the shortest way. 6. For example benches, lamps, bins, playgrounds, a pergola. 7. Your design.
+~~~`,
         hy: `## Նախագծել կենդանի նյութով
 
 **Լանդշաֆտի դիզայնը** ձևավորում է բաց տարածությունը՝ այգիներ, պուրակներ, բակեր, առափնյակներ և հրապարակներ։ Նրա նյութերը կենդանի են և փոփոխվող՝ ծառեր, խոտ, ծաղիկներ, ջուր, քարեր, հող, լույս, ինչպես նաև արահետներ, նստարաններ, լապտերներ և ցանկապատեր։
@@ -571,6 +732,10 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 
 Հայկական այգիներն ունեն իրենց ավանդույթը՝ ստվեր, ջրանցքներ, պտղատու ծառեր, որթատունկ պատշգամբի վրայով և լեռների տեսարան։
 
+~~~art
+pic park-plan
+~~~
+
 ## Նախագծի տարրերը
 
 * **Արահետներ**՝ մարդիկ քայլում են ամենակարճ ճանապարհով, արահետները գծիր այնտեղ, որտեղ նրանք իրականում գնում են։
@@ -580,12 +745,20 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 * **Կահույք**՝ նստարաններ, լապտերներ, աղբամաններ, խաղահրապարակներ, թառ։
 * **Դիտակետեր**՝ տեղ, որտեղից այգին ամենալավն է երևում։
 
+~~~art
+palette spring summer autumn
+~~~
+
 ## Առաջադրանք
 
 Նախագծիր քո դպրոցի կամ տան բակը։ Գծիր հատակագիծը մասշտաբով, ցույց տուր մուտքը, արահետները, ծառերը, խոտը, նստարանները, խաղահրապարակը և հանգիստ անկյունը։ Հետո նկարիր բակի մեկ տեսարանը հեռանկարով, ինչպես տեսնում է այցելուն։
 
-### Վարժություններ
+~~~art
+sketch guide=grid
+~~~
 
+~~~art
+tasks
 1. Ինչով է աշխատում լանդշաֆտի դիզայնը։
 2. Ինչու պետք է դիզայները մտածի չորս եղանակի մասին։
 3. Անվանիր կանոնավոր այգու երեք գիծ։
@@ -593,10 +766,12 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 5. Որտեղ պետք է գծել արահետները։
 6. Անվանիր այգու կահույքի երեք տարր։
 7. Նախագծիր բակ՝ հատակագիծ և մեկ հեռանկարային տեսարան։
+~~~
 
-### Պատասխաններ
-
-1. Բաց տարածությամբ՝ այգիներ, պուրակներ, բակեր, առափնյակներ՝ կենդանի և կառուցված տարրերով։ 2. Բույսերը փոխվում են տարվա ընթացքում և տարիների հետ։ 3. Ուղիղ առանցքներ, համաչափություն, սանրված ծառեր, երկրաչափական ծաղկանոցներ (ցանկացած երեքը)։ 4. Ոլորուն արահետներ, ծառերի բնական ձևեր, անկանոն ափերով լճակներ։ 5. Այնտեղ, որտեղ մարդիկ իրականում քայլում են՝ ամենակարճ ճանապարհով։ 6. Օրինակ՝ նստարաններ, լապտերներ, աղբամաններ, խաղահրապարակներ, թառ։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Բաց տարածությամբ՝ այգիներ, պուրակներ, բակեր, առափնյակներ՝ կենդանի և կառուցված տարրերով։ 2. Բույսերը փոխվում են տարվա ընթացքում և տարիների հետ։ 3. Ուղիղ առանցքներ, համաչափություն, սանրված ծառեր, երկրաչափական ծաղկանոցներ (ցանկացած երեքը)։ 4. Ոլորուն արահետներ, ծառերի բնական ձևեր, անկանոն ափերով լճակներ։ 5. Այնտեղ, որտեղ մարդիկ իրականում քայլում են՝ ամենակարճ ճանապարհով։ 6. Օրինակ՝ նստարաններ, լապտերներ, աղբամաններ, խաղահրապարակներ, թառ։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Проектировать живым материалом
 
 **Ландшафтный дизайн** формирует открытое пространство: сады, парки, дворы, набережные и площади. Его материалы живые и изменчивые: деревья, трава, цветы, вода, камни, земля, свет, а также дорожки, скамейки, фонари и ограды.
@@ -615,6 +790,10 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 
 У армянских садов своя традиция: тень, водные каналы, плодовые деревья, виноградная лоза над террасой и вид на горы.
 
+~~~art
+pic park-plan
+~~~
+
 ## Элементы проекта
 
 * **Дорожки:** люди идут кратчайшим путём; черти дорожки там, где они действительно ходят.
@@ -624,12 +803,20 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 * **Мебель:** скамейки, фонари, урны, детские площадки, пергола.
 * **Видовые точки:** место, откуда парк смотрится лучше всего.
 
+~~~art
+palette spring summer autumn
+~~~
+
 ## Задание
 
 Спроектируй двор своей школы или дома. Начерти план в масштабе, покажи вход, дорожки, деревья, газон, скамейки, площадку и тихий уголок. Затем нарисуй один вид двора в перспективе, как его видит посетитель.
 
-### Упражнения
+~~~art
+sketch guide=grid
+~~~
 
+~~~art
+tasks
 1. С чем работает ландшафтный дизайн?
 2. Почему дизайнер должен думать о четырёх сезонах?
 3. Назови три черты регулярного парка.
@@ -637,10 +824,12 @@ Design a courtyard of your school or house. Draw the plan in scale, show the ent
 5. Где следует прокладывать дорожки?
 6. Назови три элемента парковой мебели.
 7. Спроектируй двор: план и один вид в перспективе.
+~~~
 
-### Ответы
-
-1. С открытым пространством: садами, парками, дворами, набережными, живыми и построенными элементами. 2. Растения меняются в течение года и с годами. 3. Прямые оси, симметрия, стриженые деревья, геометрические клумбы (любые три). 4. Извилистые дорожки, естественная форма деревьев, пруды с неровными берегами. 5. Там, где люди действительно ходят, кратчайшим путём. 6. Например, скамейки, фонари, урны, площадки, пергола. 7. Твой проект.`,
+~~~art
+hints
+1. С открытым пространством: садами, парками, дворами, набережными, живыми и построенными элементами. 2. Растения меняются в течение года и с годами. 3. Прямые оси, симметрия, стриженые деревья, геометрические клумбы (любые три). 4. Извилистые дорожки, естественная форма деревьев, пруды с неровными берегами. 5. Там, где люди действительно ходят, кратчайшим путём. 6. Например, скамейки, фонари, урны, площадки, пергола. 7. Твой проект.
+~~~`,
       },
       [
         q(t("Clipped trees, straight axes and symmetry belong to a … park.", "Սանրված ծառերը, ուղիղ առանցքները և համաչափությունը պատկանում են … այգուն։", "Стриженые деревья, прямые оси и симметрия — признаки … парка."), [t("regular", "կանոնավոր", "регулярного"), t("landscape", "բնապատկերային", "пейзажного"), t("industrial", "արդյունաբերական", "промышленного")], 0),
@@ -677,6 +866,10 @@ Divide a child's or a teenager's room into zones:
 
 Zones can be separated by a shelf, a carpet, a curtain or simply by different light.
 
+~~~art
+pic room-plan
+~~~
+
 ## Rules that make a room work
 
 * **Passages:** leave at least 60–70 cm to walk between furniture.
@@ -687,6 +880,10 @@ Zones can be separated by a shelf, a carpet, a curtain or simply by different li
 * **Safety:** no wobbling shelves above the bed, free way to the door.
 * **Storage first:** think where every thing lives, or the room will never be tidy.
 
+~~~art
+palette pastel earth
+~~~
+
 ## How to draw an interior
 
 1. Measure the room and draw the **plan** in scale (for example 1:50: 1 cm is 50 cm).
@@ -695,12 +892,21 @@ Zones can be separated by a shelf, a carpet, a curtain or simply by different li
 4. Choose the best variant and draw it neatly.
 5. Draw one **perspective view** of the room from the door, and colour it.
 
+~~~art
+perspective modes=one
+~~~
+
+~~~art
+sketch guide=vp
+Draw a room in one-point perspective: the back wall is a rectangle, the floor and ceiling lines run to the point.
+~~~
+
 ## Task
 
 Design your own room or a room for a friend. Make a plan in scale with furniture, a short note on colours and lamps, and one perspective view.
 
-### Exercises
-
+~~~art
+tasks
 1. What is an interior?
 2. Name four zones of a teenager's room.
 3. How wide should a passage between furniture be?
@@ -708,10 +914,12 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 5. Name the three kinds of light in a room.
 6. How do light colours change a small room?
 7. Draw a plan of a room in scale and one perspective view.
+~~~
 
-### Answers
-
-1. The inside space of a building. 2. Sleeping, study, storage, free time. 3. At least 60–70 cm. 4. From the left. 5. General, local and decorative. 6. They make it look bigger. 7. Your drawings.`,
+~~~art
+hints
+1. The inside space of a building. 2. Sleeping, study, storage, free time. 3. At least 60–70 cm. 4. From the left. 5. General, local and decorative. 6. They make it look bigger. 7. Your drawings.
+~~~`,
         hy: `## Տարածությունը ներսում
 
 **Ինտերիերը** շենքի ներքին տարածությունն է։ Ինտերիերի դիզայներն աշխատում է հատակագծի, կահույքի, լույսի, գույնի և նյութերի հետ, որպեսզի սենյակը լինի հարմարավետ, ապահով և հաճելի։
@@ -729,6 +937,10 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 
 Գոտիները կարելի է բաժանել դարակով, գորգով, վարագույրով կամ պարզապես տարբեր լույսով։
 
+~~~art
+pic room-plan
+~~~
+
 ## Կանոններ, որոնք սենյակը դարձնում են աշխատող
 
 * **Անցումներ**՝ կահույքի միջև թող առնվազն 60–70 սմ քայլելու համար։
@@ -739,6 +951,10 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 * **Անվտանգություն**՝ ոչ մի երերուն դարակ մահճակալի վերևում, ազատ ճանապարհ դեպի դուռը։
 * **Նախ պահեստավորումը**՝ մտածիր, թե որտեղ է ապրելու ամեն իր, այլապես սենյակն երբեք կարգին չի լինի։
 
+~~~art
+palette pastel earth
+~~~
+
 ## Ինչպես գծել ինտերիերը
 
 1. Չափիր սենյակը և գծիր **հատակագիծը** մասշտաբով (օրինակ՝ 1:50, 1 սմ-ն 50 սմ է)։
@@ -747,12 +963,21 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 4. Ընտրիր լավագույն տարբերակը և գծիր կոկիկ։
 5. Նկարիր սենյակի մեկ **հեռանկարային տեսարան** դռնից և գունավորիր։
 
+~~~art
+perspective modes=one
+~~~
+
+~~~art
+sketch guide=vp
+Նկարի՛ր սենյակը մեկ կետով հեռանկարով․ հետևի պատը ուղղանկյուն է, հատակի և առաստաղի գծերը գնում են դեպի կետը։
+~~~
+
 ## Առաջադրանք
 
 Նախագծիր քո սենյակը կամ սենյակ ընկերոջ համար։ Արա մասշտաբով հատակագիծ՝ կահույքով, կարճ նշում գույների և լամպերի մասին և մեկ հեռանկարային տեսարան։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է ինտերիերը։
 2. Անվանիր դեռահասի սենյակի չորս գոտի։
 3. Որքան լայն պետք է լինի անցումը կահույքի միջև։
@@ -760,10 +985,12 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 5. Անվանիր սենյակի լույսի երեք տեսակը։
 6. Ինչպես են բաց գույները փոխում փոքր սենյակը։
 7. Գծիր սենյակի հատակագիծ մասշտաբով և մեկ հեռանկարային տեսարան։
+~~~
 
-### Պատասխաններ
-
-1. Շենքի ներքին տարածությունը։ 2. Քնելու, պարապելու, պահեստավորման, ազատ ժամանակի։ 3. Առնվազն 60–70 սմ։ 4. Ձախից։ 5. Ընդհանուր, տեղային և դեկորատիվ։ 6. Դարձնում են ավելի մեծ թվացող։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Շենքի ներքին տարածությունը։ 2. Քնելու, պարապելու, պահեստավորման, ազատ ժամանակի։ 3. Առնվազն 60–70 սմ։ 4. Ձախից։ 5. Ընդհանուր, տեղային և դեկորատիվ։ 6. Դարձնում են ավելի մեծ թվացող։ 7. Քո նկարները։
+~~~`,
         ru: `## Пространство внутри
 
 **Интерьер** — внутреннее пространство здания. Дизайнер интерьера работает с планом, мебелью, светом, цветом и материалами, чтобы комната была удобной, безопасной и приятной.
@@ -781,6 +1008,10 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 
 Зоны можно разделить стеллажом, ковром, шторой или просто разным светом.
 
+~~~art
+pic room-plan
+~~~
+
 ## Правила, которые делают комнату удобной
 
 * **Проходы:** между мебелью оставляй не меньше 60–70 см.
@@ -791,6 +1022,10 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 * **Безопасность:** никаких шатких полок над кроватью, свободный путь к двери.
 * **Сначала хранение:** подумай, где будет жить каждая вещь, иначе порядка не будет.
 
+~~~art
+palette pastel earth
+~~~
+
 ## Как нарисовать интерьер
 
 1. Измерь комнату и начерти **план** в масштабе (например 1:50: 1 см — это 50 см).
@@ -799,12 +1034,21 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 4. Выбери лучший вариант и вычерти аккуратно.
 5. Нарисуй один **вид комнаты в перспективе** от двери и раскрась его.
 
+~~~art
+perspective modes=one
+~~~
+
+~~~art
+sketch guide=vp
+Нарисуй комнату в перспективе с одной точкой: задняя стена — прямоугольник, линии пола и потолка бегут к точке.
+~~~
+
 ## Задание
 
 Спроектируй свою комнату или комнату для друга. Сделай план в масштабе с мебелью, короткую заметку о цветах и светильниках и один вид в перспективе.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое интерьер?
 2. Назови четыре зоны комнаты подростка.
 3. Какой ширины должен быть проход между мебелью?
@@ -812,10 +1056,12 @@ Design your own room or a room for a friend. Make a plan in scale with furniture
 5. Назови три вида света в комнате.
 6. Как светлые цвета меняют маленькую комнату?
 7. Начерти план комнаты в масштабе и один вид в перспективе.
+~~~
 
-### Ответы
-
-1. Внутреннее пространство здания. 2. Сна, учёбы, хранения, отдыха. 3. Не меньше 60–70 см. 4. Слева. 5. Общий, местный и декоративный. 6. Зрительно увеличивают её. 7. Твои рисунки.`,
+~~~art
+hints
+1. Внутреннее пространство здания. 2. Сна, учёбы, хранения, отдыха. 3. Не меньше 60–70 см. 4. Слева. 5. Общий, местный и декоративный. 6. Зрительно увеличивают её. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The inside space of a building is the…", "Շենքի ներքին տարածությունը…", "Внутреннее пространство здания — это…"), [t("interior", "ինտերիերն է", "интерьер"), t("facade", "ճակատն է", "фасад"), t("plan", "հատակագիծն է", "план")], 0),
@@ -841,11 +1087,19 @@ A street is made not only of buildings. **City furniture** is everything that st
 
 These small objects are closest to people. They decide whether a street feels cared for or abandoned.
 
+~~~art
+pic street-furniture
+~~~
+
 ## A family of objects
 
 Good city furniture is designed as a **family**: the same material, the same colour, the same kind of details. Then the street looks calm and whole. If every bench, lamp and bin is from a different set, the street feels noisy even when it is quiet.
 
 Many cities have a **design code**: rules for signs, awnings, colours and materials in the historic centre, so that advertising does not hide the architecture.
+
+~~~art
+pic chair lamp street-furniture
+~~~
 
 ## Requirements
 
@@ -866,8 +1120,12 @@ In Yerevan, benches, lamps and fountains of tuff and metal are made in the spiri
 
 Design a set of three objects for your street: a bench, a bin and a lamp. Keep one material and one style for all three. Draw them from the front and side, show sizes, and draw a small scene with people using them.
 
-### Exercises
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. What is city furniture? Name five objects.
 2. Why should objects be designed as a family?
 3. What is a design code?
@@ -875,21 +1133,31 @@ Design a set of three objects for your street: a bench, a bin and a lamp. Keep o
 5. How can a bench be made more accessible?
 6. What is a pulpulak?
 7. Design a bench, a bin and a lamp in one style.
+~~~
 
-### Answers
-
-1. Everything standing on the pavement; for example benches, lamps, bins, bus shelters, planters. 2. So that the street looks calm and whole. 3. Rules for signs, awnings, colours and materials in a city or its centre. 4. Any three: durability, safety, comfort, accessibility, easy repair, fitting the place. 5. With armrests to push up from and space for a wheelchair next to it. 6. A small drinking fountain in Yerevan. 7. Your designs.`,
+~~~art
+hints
+1. Everything standing on the pavement; for example benches, lamps, bins, bus shelters, planters. 2. So that the street looks calm and whole. 3. Rules for signs, awnings, colours and materials in a city or its centre. 4. Any three: durability, safety, comfort, accessibility, easy repair, fitting the place. 5. With armrests to push up from and space for a wheelchair next to it. 6. A small drinking fountain in Yerevan. 7. Your designs.
+~~~`,
         hy: `## Փոքր բաներ, մեծ տարբերություն
 
 Փողոցը կազմված է ոչ միայն շենքերից։ **Քաղաքային կահույքը** այն ամենն է, ինչ կանգնած է մայթին՝ նստարաններ, լապտերներ, աղբամաններ, ավտոբուսի կանգառներ, ցանկապատեր, ծաղկամաններ, շատրվաններ, ցուցանակներ, կրպակներ և խաղահրապարակի սարքեր։
 
 Այս փոքր առարկաներն ամենամոտն են մարդկանց։ Նրանք որոշում են՝ փողոցը խնամված է թվում, թե լքված։
 
+~~~art
+pic street-furniture
+~~~
+
 ## Առարկաների ընտանիք
 
 Լավ քաղաքային կահույքը նախագծվում է որպես **ընտանիք**՝ նույն նյութը, նույն գույնը, նույն տեսակի մանրամասները։ Այդ դեպքում փողոցը հանգիստ և ամբողջական տեսք ունի։ Եթե յուրաքանչյուր նստարան, լապտեր և աղբաման տարբեր շարքից է, փողոցն աղմկոտ է զգացվում նույնիսկ լռության մեջ։
 
 Շատ քաղաքներ ունեն **դիզայն-կոդ**՝ կանոններ ցուցանակների, հովանոցների, գույների և նյութերի համար պատմական կենտրոնում, որպեսզի գովազդը չթաքցնի ճարտարապետությունը։
+
+~~~art
+pic chair lamp street-furniture
+~~~
 
 ## Պահանջներ
 
@@ -910,8 +1178,12 @@ Design a set of three objects for your street: a bench, a bin and a lamp. Keep o
 
 Նախագծիր երեք առարկայի շարք քո փողոցի համար՝ նստարան, աղբաման և լապտեր։ Պահիր մեկ նյութ և մեկ ոճ բոլոր երեքի համար։ Նկարիր դրանք առջևից և կողքից, ցույց տուր չափերը և նկարիր փոքր տեսարան՝ մարդկանցով, որոնք օգտվում են դրանցից։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. Ինչ է քաղաքային կահույքը։ Անվանիր հինգ առարկա։
 2. Ինչու պետք է առարկաները նախագծվեն որպես ընտանիք։
 3. Ինչ է դիզայն-կոդը։
@@ -919,21 +1191,31 @@ Design a set of three objects for your street: a bench, a bin and a lamp. Keep o
 5. Ինչպես կարելի է նստարանն ավելի հասանելի դարձնել։
 6. Ինչ է պուլպուլակը։
 7. Նախագծիր նստարան, աղբաման և լապտեր մեկ ոճով։
+~~~
 
-### Պատասխաններ
-
-1. Այն ամենը, ինչ կանգնած է մայթին. օրինակ՝ նստարաններ, լապտերներ, աղբամաններ, կանգառներ, ծաղկամաններ։ 2. Որպեսզի փողոցը հանգիստ և ամբողջական տեսք ունենա։ 3. Կանոններ ցուցանակների, հովանոցների, գույների և նյութերի համար քաղաքում կամ նրա կենտրոնում։ 4. Ցանկացած երեքը՝ դիմացկունություն, անվտանգություն, հարմարավետություն, հասանելիություն, հեշտ նորոգում, տեղին համապատասխանություն։ 5. Բազրիքներով, որոնցից հեշտ է վեր կենալ, և կողքին սայլակի տեղով։ 6. Երևանի փոքրիկ խմելու շատրվանը։ 7. Քո նախագծերը։`,
+~~~art
+hints
+1. Այն ամենը, ինչ կանգնած է մայթին. օրինակ՝ նստարաններ, լապտերներ, աղբամաններ, կանգառներ, ծաղկամաններ։ 2. Որպեսզի փողոցը հանգիստ և ամբողջական տեսք ունենա։ 3. Կանոններ ցուցանակների, հովանոցների, գույների և նյութերի համար քաղաքում կամ նրա կենտրոնում։ 4. Ցանկացած երեքը՝ դիմացկունություն, անվտանգություն, հարմարավետություն, հասանելիություն, հեշտ նորոգում, տեղին համապատասխանություն։ 5. Բազրիքներով, որոնցից հեշտ է վեր կենալ, և կողքին սայլակի տեղով։ 6. Երևանի փոքրիկ խմելու շատրվանը։ 7. Քո նախագծերը։
+~~~`,
         ru: `## Мелочи, которые решают всё
 
 Улица состоит не только из зданий. **Городская мебель** — это всё, что стоит на тротуаре: скамейки, фонари, урны, остановочные павильоны, ограды, вазоны, фонтанчики, указатели, киоски и оборудование площадок.
 
 Эти небольшие предметы ближе всего к человеку. Именно они решают, выглядит улица ухоженной или заброшенной.
 
+~~~art
+pic street-furniture
+~~~
+
 ## Семья предметов
 
 Хорошая городская мебель проектируется как **семья**: один материал, один цвет, один характер деталей. Тогда улица выглядит спокойной и цельной. Если каждая скамейка, фонарь и урна из разных наборов, улица кажется шумной даже в тишине.
 
 Во многих городах есть **дизайн-код** — правила для вывесок, навесов, цветов и материалов в историческом центре, чтобы реклама не закрывала архитектуру.
+
+~~~art
+pic chair lamp street-furniture
+~~~
 
 ## Требования
 
@@ -954,8 +1236,12 @@ Design a set of three objects for your street: a bench, a bin and a lamp. Keep o
 
 Спроектируй набор из трёх предметов для своей улицы: скамейку, урну и фонарь. Сохрани один материал и один стиль для всех трёх. Нарисуй их спереди и сбоку, укажи размеры и нарисуй маленькую сценку с людьми, которые ими пользуются.
 
-### Упражнения
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. Что такое городская мебель? Назови пять предметов.
 2. Почему предметы проектируют как семью?
 3. Что такое дизайн-код?
@@ -963,10 +1249,12 @@ Design a set of three objects for your street: a bench, a bin and a lamp. Keep o
 5. Как сделать скамейку доступнее?
 6. Что такое пулпулак?
 7. Спроектируй скамейку, урну и фонарь в одном стиле.
+~~~
 
-### Ответы
-
-1. Всё, что стоит на тротуаре: например, скамейки, фонари, урны, остановки, вазоны. 2. Чтобы улица выглядела спокойной и цельной. 3. Правила для вывесок, навесов, цветов и материалов в городе или его центре. 4. Любые три: долговечность, безопасность, удобство, доступность, простой ремонт, соответствие месту. 5. Сделать подлокотники, чтобы опереться, и оставить место для коляски рядом. 6. Маленький питьевой фонтанчик в Ереване. 7. Твои проекты.`,
+~~~art
+hints
+1. Всё, что стоит на тротуаре: например, скамейки, фонари, урны, остановки, вазоны. 2. Чтобы улица выглядела спокойной и цельной. 3. Правила для вывесок, навесов, цветов и материалов в городе или его центре. 4. Любые три: долговечность, безопасность, удобство, доступность, простой ремонт, соответствие месту. 5. Сделать подлокотники, чтобы опереться, и оставить место для коляски рядом. 6. Маленький питьевой фонтанчик в Ереване. 7. Твои проекты.
+~~~`,
       },
       [
         q(t("Which is NOT city furniture?", "Որը քաղաքային կահույք ՉԷ։", "Что НЕ относится к городской мебели?"), [t("a block of flats", "բնակելի շենքը", "жилой дом"), t("a bench", "նստարանը", "скамейка"), t("a bin", "աղբամանը", "урна")], 0),

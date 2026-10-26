@@ -31,6 +31,11 @@ Music and literature unfold in **time**. Painting, sculpture and architecture ex
 
 Painting, graphics and sculpture are the **fine (visual) arts** in the narrow sense: they **depict** the world.
 
+~~~art
+pic easel plasticine garni poster
+Painting, sculpture, architecture, design: four members of one family.
+~~~
+
 ## Genres
 
 A **genre** is a group of works with the same kind of subject.
@@ -48,12 +53,16 @@ A **genre** is a group of works with the same kind of subject.
 
 One work can belong to two genres, for example a portrait in a landscape.
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-animal genre-battle genre-everyday genre-marine genre-fairy
+~~~
+
 ## Why learn kinds and genres?
 
 They are like a map of art. When you know them, you can walk through a museum and understand what each artist chose to show and with what means.
 
-### Exercises
-
+~~~art
+tasks
 1. Why are painting, sculpture and architecture called spatial arts?
 2. What is the main means of painting? Of graphics? Of sculpture?
 3. Name the genre: a bowl of apples on a table; the sea in a storm; a family at dinner.
@@ -61,10 +70,12 @@ They are like a map of art. When you know them, you can walk through a museum an
 5. Name one Armenian and one Russian landscape painter.
 6. Can one work belong to two genres? Give an example.
 7. Choose five pictures from a book or a museum website and sort them by kind and genre.
+~~~
 
-### Answers
-
-1. They exist in space, and we see the whole work at once. 2. Colour; line, spot and tone; volume. 3. Still life; marine painting; everyday genre. 4. A kind is defined by its means (painting, sculpture), a genre by its subject (portrait, landscape). 5. For example: Saryan or Bashinjaghian; Levitan or Shishkin. 6. Yes, for example a portrait in a landscape. 7. Your work.`,
+~~~art
+hints
+1. They exist in space, and we see the whole work at once. 2. Colour; line, spot and tone; volume. 3. Still life; marine painting; everyday genre. 4. A kind is defined by its means (painting, sculpture), a genre by its subject (portrait, landscape). 5. For example: Saryan or Bashinjaghian; Levitan or Shishkin. 6. Yes, for example a portrait in a landscape. 7. Your work.
+~~~`,
         hy: `## Տարածական արվեստների ընտանիքը
 
 Երաժշտությունն ու գրականությունը ծավալվում են **ժամանակի** մեջ։ Գեղանկարչությունը, քանդակը և ճարտարապետությունը գոյություն ունեն **տարածության** մեջ․ մենք ամբողջ գործը տեսնում ենք միանգամից։ Դրանք կոչվում են **տարածական արվեստներ**։
@@ -78,6 +89,11 @@ They are like a map of art. When you know them, you can walk through a museum an
 | **դեկորատիվ-կիրառական արվեստ** | գեղեցիկ օգտակար իրեր | գորգեր, խեցեղեն, զարդեր |
 
 Գեղանկարչությունը, գրաֆիկան և քանդակը նեղ իմաստով **կերպարվեստն** են․ դրանք **պատկերում** են աշխարհը։
+
+~~~art
+pic easel plasticine garni poster
+Գեղանկարչություն, քանդակ, ճարտարապետություն, դիզայն․ մեկ ընտանիքի չորս անդամ։
+~~~
 
 ## Ժանրեր
 
@@ -96,12 +112,16 @@ They are like a map of art. When you know them, you can walk through a museum an
 
 Մեկ գործը կարող է պատկանել երկու ժանրի, օրինակ՝ դիմանկար բնանկարի ֆոնին։
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-animal genre-battle genre-everyday genre-marine genre-fairy
+~~~
+
 ## Ինչու իմանալ տեսակներն ու ժանրերը
 
 Դրանք արվեստի քարտեզի պես են։ Երբ դրանք գիտես, կարող ես քայլել թանգարանով և հասկանալ, թե ամեն նկարիչ ինչ է ընտրել ցույց տալու և ինչ միջոցներով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու են գեղանկարչությունը, քանդակը և ճարտարապետությունը կոչվում տարածական արվեստներ։
 2. Որն է գեղանկարչության հիմնական միջոցը։ Իսկ գրաֆիկայի։ Իսկ քանդակի։
 3. Անվանիր ժանրը՝ խնձորներով աման սեղանին, փոթորկոտ ծով, ընտանիքը ճաշի ժամին։
@@ -109,10 +129,12 @@ They are like a map of art. When you know them, you can walk through a museum an
 5. Անվանիր մեկ հայ և մեկ ռուս բնանկարիչ։
 6. Կարող է մեկ գործը պատկանել երկու ժանրի։ Բեր օրինակ։
 7. Գրքից կամ թանգարանի կայքից ընտրիր հինգ նկար և դասակարգիր ըստ տեսակի և ժանրի։
+~~~
 
-### Պատասխաններ
-
-1. Դրանք գոյություն ունեն տարածության մեջ, և մենք ամբողջ գործը տեսնում ենք միանգամից։ 2. Գույնը, գիծը, բիծն ու տոնը, ծավալը։ 3. Նատյուրմորտ, ծովանկար, կենցաղային ժանր։ 4. Տեսակն որոշվում է միջոցներով (գեղանկարչություն, քանդակ), ժանրը՝ թեմայով (դիմանկար, բնանկար)։ 5. Օրինակ՝ Սարյան կամ Բաշինջաղյան, Լևիտան կամ Շիշկին։ 6. Այո, օրինակ՝ դիմանկար բնանկարի ֆոնին։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Դրանք գոյություն ունեն տարածության մեջ, և մենք ամբողջ գործը տեսնում ենք միանգամից։ 2. Գույնը, գիծը, բիծն ու տոնը, ծավալը։ 3. Նատյուրմորտ, ծովանկար, կենցաղային ժանր։ 4. Տեսակն որոշվում է միջոցներով (գեղանկարչություն, քանդակ), ժանրը՝ թեմայով (դիմանկար, բնանկար)։ 5. Օրինակ՝ Սարյան կամ Բաշինջաղյան, Լևիտան կամ Շիշկին։ 6. Այո, օրինակ՝ դիմանկար բնանկարի ֆոնին։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Семья пространственных искусств
 
 Музыка и литература разворачиваются во **времени**. Живопись, скульптура и архитектура существуют в **пространстве**: мы видим всё произведение сразу. Их называют **пространственными искусствами**.
@@ -126,6 +148,11 @@ They are like a map of art. When you know them, you can walk through a museum an
 | **декоративно-прикладное искусство** | красивые полезные вещи | ковры, керамика, украшения |
 
 Живопись, графика и скульптура — **изобразительные искусства** в узком смысле: они **изображают** мир.
+
+~~~art
+pic easel plasticine garni poster
+Живопись, скульптура, архитектура, дизайн: четыре члена одной семьи.
+~~~
 
 ## Жанры
 
@@ -144,12 +171,16 @@ They are like a map of art. When you know them, you can walk through a museum an
 
 Одно произведение может относиться к двум жанрам, например портрет на фоне пейзажа.
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-animal genre-battle genre-everyday genre-marine genre-fairy
+~~~
+
 ## Зачем знать виды и жанры?
 
 Они похожи на карту искусства. Зная их, можно пройти по музею и понять, что каждый художник решил показать и какими средствами.
 
-### Упражнения
-
+~~~art
+tasks
 1. Почему живопись, скульптуру и архитектуру называют пространственными искусствами?
 2. Какое главное средство живописи? Графики? Скульптуры?
 3. Назови жанр: ваза с яблоками на столе; море в бурю; семья за обедом.
@@ -157,10 +188,12 @@ They are like a map of art. When you know them, you can walk through a museum an
 5. Назови одного армянского и одного русского пейзажиста.
 6. Может ли одно произведение относиться к двум жанрам? Приведи пример.
 7. Выбери пять картин из книги или с сайта музея и распредели их по видам и жанрам.
+~~~
 
-### Ответы
-
-1. Они существуют в пространстве, и мы видим всё произведение сразу. 2. Цвет; линия, пятно и тон; объём. 3. Натюрморт; марина; бытовой жанр. 4. Вид определяется средствами (живопись, скульптура), жанр — сюжетом (портрет, пейзаж). 5. Например: Сарьян или Башинджагян; Левитан или Шишкин. 6. Да, например портрет на фоне пейзажа. 7. Твоя работа.`,
+~~~art
+hints
+1. Они существуют в пространстве, и мы видим всё произведение сразу. 2. Цвет; линия, пятно и тон; объём. 3. Натюрморт; марина; бытовой жанр. 4. Вид определяется средствами (живопись, скульптура), жанр — сюжетом (портрет, пейзаж). 5. Например: Сарьян или Башинджагян; Левитан или Шишкин. 6. Да, например портрет на фоне пейзажа. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Painting, sculpture and architecture are … arts.", "Գեղանկարչությունը, քանդակը և ճարտարապետությունը … արվեստներ են։", "Живопись, скульптура и архитектура — … искусства."), [t("spatial", "տարածական", "пространственные"), t("temporal", "ժամանակային", "временные"), t("musical", "երաժշտական", "музыкальные")], 0),
@@ -194,6 +227,10 @@ A painter plans a picture with a drawing; a sculptor draws a statue before carvi
 
 Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonardo da Vinci drew every day.
 
+~~~art
+steps cube
+~~~
+
 ## Graphic materials
 
 * **Graphite pencils:** marked **H** (hard, light grey) and **B** (soft, dark). HB is in the middle. Use 2H–HB for light construction lines, 2B–6B for dark tones.
@@ -201,6 +238,10 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 * **Sanguine:** a red-brown chalk, warm and alive; loved for portraits.
 * **Pastel:** soft coloured chalk.
 * **Ink:** with a pen or a brush; lines cannot be erased, so the hand must be confident.
+
+~~~art
+pic pencil ink felt pastel
+~~~
 
 ## How to hold the pencil
 
@@ -215,8 +256,13 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 2. Make one study of a leaf or a shell, twenty minutes, with light and shade.
 3. Compare: what did the sketches teach you, and what did the study teach you?
 
-### Exercises
+~~~art
+sketch guide=frame
+Warm-up: fill the frame with long confident lines, circles in one move, and lines from light to strong pressure.
+~~~
 
+~~~art
+tasks
 1. Why is drawing called the basis of fine art? Give two examples.
 2. What is the difference between a sketch and a study?
 3. What do the letters H and B on a pencil mean?
@@ -224,10 +270,12 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 5. What is sanguine?
 6. Why must the hand be confident when drawing with ink?
 7. Make three sketches of a classmate sitting, standing and walking.
+~~~
 
-### Answers
-
-1. Every kind of art begins with a drawing: a painter plans a picture, an architect draws a building. 2. A sketch is quick and catches a pose or idea; a study is longer and explores form and light. 3. H means hard and light, B means soft and dark. 4. 2H–HB; 2B–6B. 5. A red-brown chalk. 6. Ink lines cannot be erased. 7. Your sketches.`,
+~~~art
+hints
+1. Every kind of art begins with a drawing: a painter plans a picture, an architect draws a building. 2. A sketch is quick and catches a pose or idea; a study is longer and explores form and light. 3. H means hard and light, B means soft and dark. 4. 2H–HB; 2B–6B. 5. A red-brown chalk. 6. Ink lines cannot be erased. 7. Your sketches.
+~~~`,
         hy: `## Յուրաքանչյուր գործ սկսվում է գծանկարով
 
 Գեղանկարիչը նկարը պլանավորում է գծանկարով, քանդակագործն արձանը նկարում է, նախքան այն քանդակելը, ճարտարապետը շենքը նկարում է, նախքան այն կառուցելը, դիզայներն աթոռը նկարում է, նախքան այն պատրաստելը։ **Գծանկարը** նկարչի՝ թղթի վրա մտածելու եղանակն է։
@@ -242,6 +290,10 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 
 Շատ մեծ նկարիչներ լցրել են հարյուրավոր **ալբոմներ**։ Սարյանը, Ռեպինը և Լեոնարդո դա Վինչին նկարում էին ամեն օր։
 
+~~~art
+steps cube
+~~~
+
 ## Գրաֆիկական նյութեր
 
 * **Գրաֆիտե մատիտներ**՝ նշված **H** (կարծր, բաց մոխրագույն) և **B** (փափուկ, մուգ)։ HB-ն մեջտեղում է։ Բաց կառուցողական գծերի համար օգտագործիր 2H–HB, մուգ տոների համար՝ 2B–6B։
@@ -249,6 +301,10 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 * **Սանգինա**՝ կարմրադարչնագույն կավիճ, տաք և կենդանի․ սիրված է դիմանկարների համար։
 * **Պաստել**՝ փափուկ գունավոր կավիճ։
 * **Տուշ**՝ գրչով կամ վրձնով․ գծերը չեն ջնջվում, ուստի ձեռքը պետք է վստահ լինի։
+
+~~~art
+pic pencil ink felt pastel
+~~~
 
 ## Ինչպես բռնել մատիտը
 
@@ -263,8 +319,13 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 2. Արա տերևի կամ խխունջի խեցու մեկ էտյուդ՝ քսան րոպե, լույսով և ստվերով։
 3. Համեմատիր․ ինչ սովորեցրին ուրվանկարները, և ինչ սովորեցրեց էտյուդը։
 
-### Վարժություններ
+~~~art
+sketch guide=frame
+Տաքացում․ լցրու շրջանակը երկար վստահ գծերով, մեկ շարժումով շրջաններով և թեթևից ուժեղ ճնշման գծերով։
+~~~
 
+~~~art
+tasks
 1. Ինչու է գծանկարը կոչվում կերպարվեստի հիմք։ Բեր երկու օրինակ։
 2. Ինչով է տարբերվում ուրվանկարն էտյուդից։
 3. Ինչ են նշանակում մատիտի վրայի H և B տառերը։
@@ -272,10 +333,12 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 5. Ինչ է սանգինան։
 6. Ինչու պետք է ձեռքը վստահ լինի տուշով նկարելիս։
 7. Արա դասընկերոջդ երեք ուրվանկար՝ նստած, կանգնած և քայլելիս։
+~~~
 
-### Պատասխաններ
-
-1. Արվեստի յուրաքանչյուր տեսակ սկսվում է գծանկարով․ գեղանկարիչը պլանավորում է նկարը, ճարտարապետը նկարում է շենքը։ 2. Ուրվանկարն արագ է և որսում է դիրքը կամ գաղափարը, էտյուդն ավելի երկար է և ուսումնասիրում է ձևն ու լույսը։ 3. H-ը նշանակում է կարծր և բաց, B-ն՝ փափուկ և մուգ։ 4. 2H–HB, 2B–6B։ 5. Կարմրադարչնագույն կավիճ։ 6. Տուշի գծերը չեն ջնջվում։ 7. Քո ուրվանկարները։`,
+~~~art
+hints
+1. Արվեստի յուրաքանչյուր տեսակ սկսվում է գծանկարով․ գեղանկարիչը պլանավորում է նկարը, ճարտարապետը նկարում է շենքը։ 2. Ուրվանկարն արագ է և որսում է դիրքը կամ գաղափարը, էտյուդն ավելի երկար է և ուսումնասիրում է ձևն ու լույսը։ 3. H-ը նշանակում է կարծր և բաց, B-ն՝ փափուկ և մուգ։ 4. 2H–HB, 2B–6B։ 5. Կարմրադարչնագույն կավիճ։ 6. Տուշի գծերը չեն ջնջվում։ 7. Քո ուրվանկարները։
+~~~`,
         ru: `## Каждая работа начинается с рисунка
 
 Живописец намечает картину рисунком; скульптор рисует статую, прежде чем высечь её; архитектор рисует здание, прежде чем его построят; дизайнер рисует стул, прежде чем его сделают. **Рисунок** — это способ художника думать на бумаге.
@@ -290,6 +353,10 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 
 Многие великие художники заполнили сотни **альбомов**. Сарьян, Репин и Леонардо да Винчи рисовали каждый день.
 
+~~~art
+steps cube
+~~~
+
 ## Графические материалы
 
 * **Графитные карандаши:** маркируются **H** (твёрдый, светло-серый; в России — Т) и **B** (мягкий, тёмный; в России — М). HB (ТМ) — посередине. Для лёгких линий построения бери 2H–HB, для тёмных тонов — 2B–6B.
@@ -297,6 +364,10 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 * **Сангина:** красно-коричневый мелок, тёплый и живой; любим портретистами.
 * **Пастель:** мягкие цветные мелки.
 * **Тушь:** пером или кистью; линии не стираются, поэтому рука должна быть уверенной.
+
+~~~art
+pic pencil ink felt pastel
+~~~
 
 ## Как держать карандаш
 
@@ -311,8 +382,13 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 2. Сделай один этюд листа или ракушки, двадцать минут, со светом и тенью.
 3. Сравни: чему научили наброски и чему — этюд?
 
-### Упражнения
+~~~art
+sketch guide=frame
+Разминка: заполни рамку длинными уверенными линиями, кругами в одно движение и линиями от лёгкого к сильному нажиму.
+~~~
 
+~~~art
+tasks
 1. Почему рисунок называют основой изобразительного искусства? Приведи два примера.
 2. Чем набросок отличается от этюда?
 3. Что означают буквы H и B на карандаше?
@@ -320,10 +396,12 @@ Many great artists filled hundreds of **sketchbooks**. Saryan, Repin and Leonard
 5. Что такое сангина?
 6. Почему при рисунке тушью рука должна быть уверенной?
 7. Сделай три наброска одноклассника: сидя, стоя и в движении.
+~~~
 
-### Ответы
-
-1. Все виды искусства начинаются с рисунка: живописец намечает картину, архитектор рисует здание. 2. Набросок быстрый и ловит позу или идею, этюд дольше и изучает форму и свет. 3. H — твёрдый и светлый, B — мягкий и тёмный. 4. 2H–HB; 2B–6B. 5. Красно-коричневый мелок. 6. Линии туши не стираются. 7. Твои наброски.`,
+~~~art
+hints
+1. Все виды искусства начинаются с рисунка: живописец намечает картину, архитектор рисует здание. 2. Набросок быстрый и ловит позу или идею, этюд дольше и изучает форму и свет. 3. H — твёрдый и светлый, B — мягкий и тёмный. 4. 2H–HB; 2B–6B. 5. Красно-коричневый мелок. 6. Линии туши не стираются. 7. Твои наброски.
+~~~`,
       },
       [
         q(t("A quick drawing that catches a pose is a…", "Արագ նկարը, որ որսում է դիրքը…", "Быстрый рисунок, ловящий позу, — это…"), [t("sketch", "ուրվանկար է", "набросок"), t("fresco", "որմնանկար է", "фреска"), t("mosaic", "խճանկար է", "мозаика")], 0),
@@ -357,9 +435,17 @@ A line is not just a border. It has **character**:
 
 A good drawing uses lines of **different weight**: the outline of near objects is stronger, of far ones lighter.
 
+~~~art
+lines
+~~~
+
 ## Tone
 
 **Tone** is how light or dark a place is, without thinking about colour. A black-and-white photo shows only tones. Artists use a **tonal scale**: steps from white through light, middle and dark grey to black.
+
+~~~art
+tone
+~~~
 
 ## Hatching
 
@@ -370,6 +456,11 @@ A good drawing uses lines of **different weight**: the outline of near objects i
 * **layers:** a second layer at an angle (**cross-hatching**) makes the tone darker.
 
 Strokes should **follow the form**: on a cylinder they go around it; on a flat wall they go straight. Then the hatching helps to show the volume.
+
+~~~art
+sketch guide=grid
+Make a tone scale: in each cell, hatch a little darker than in the one before.
+~~~
 
 ## Rules of good hatching
 
@@ -384,8 +475,8 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 2. Draw lines that express: calm, joy, anger, fear.
 3. Draw a cylinder and a cube and hatch them following the form.
 
-### Exercises
-
+~~~art
+tasks
 1. What feelings can a zigzag line express?
 2. Why are near outlines drawn stronger than far ones?
 3. What is tone?
@@ -393,10 +484,12 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 5. What is cross-hatching?
 6. How should strokes go on a cylinder?
 7. Make a seven-step tonal scale.
+~~~
 
-### Answers
-
-1. Sharpness, nervousness, danger. 2. To show that they are nearer and more important. 3. How light or dark a place is, without colour. 4. Put strokes closer, press harder, add another layer at an angle. 5. A second layer of hatching at an angle to the first. 6. Around the form, following its curve. 7. Your scale.`,
+~~~art
+hints
+1. Sharpness, nervousness, danger. 2. To show that they are nearer and more important. 3. How light or dark a place is, without colour. 4. Put strokes closer, press harder, add another layer at an angle. 5. A second layer of hatching at an angle to the first. 6. Around the form, following its curve. 7. Your scale.
+~~~`,
         hy: `## Գծի բնավորությունը
 
 Գիծը պարզապես սահման չէ։ Այն ունի **բնավորություն**․
@@ -411,9 +504,17 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 
 Լավ գծանկարում օգտագործվում են **տարբեր ուժգնության** գծեր․ մոտիկ առարկաների եզրագիծն ավելի ուժեղ է, հեռավորներինը՝ ավելի թեթև։
 
+~~~art
+lines
+~~~
+
 ## Տոն
 
 **Տոնը** այն է, թե որքան բաց կամ մուգ է որևէ տեղ՝ առանց գույնի մասին մտածելու։ Սև-սպիտակ լուսանկարը ցույց է տալիս միայն տոներ։ Նկարիչներն օգտագործում են **տոնային սանդղակ**՝ աստիճաններ սպիտակից բաց, միջին և մուգ մոխրագույնով մինչև սև։
+
+~~~art
+tone
+~~~
 
 ## Շտրիխ
 
@@ -424,6 +525,11 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 * **շերտեր**՝ անկյան տակ երկրորդ շերտը (**խաչվող շտրիխ**) տոնն ավելի մուգ է դարձնում։
 
 Հարվածները պետք է **հետևեն ձևին**․ գլանի վրա դրանք գնում են նրա շուրջը, հարթ պատի վրա՝ ուղիղ։ Այդ դեպքում շտրիխն օգնում է ցույց տալ ծավալը։
+
+~~~art
+sketch guide=grid
+Կազմի՛ր տոնային սանդղակ․ յուրաքանչյուր վանդակում շտրիխավորի՛ր մի փոքր ավելի մուգ, քան նախորդում։
+~~~
 
 ## Լավ շտրիխի կանոններ
 
@@ -438,8 +544,8 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 2. Նկարիր գծեր, որոնք արտահայտում են հանդարտություն, ուրախություն, զայրույթ, վախ։
 3. Նկարիր գլան և խորանարդ և շտրիխիր՝ հետևելով ձևին։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ զգացումներ կարող է արտահայտել զիգզագ գիծը։
 2. Ինչու են մոտիկ եզրագծերը նկարում ավելի ուժեղ, քան հեռավորները։
 3. Ինչ է տոնը։
@@ -447,10 +553,12 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 5. Ինչ է խաչվող շտրիխը։
 6. Ինչպես պետք է գնան հարվածները գլանի վրա։
 7. Կառուցիր յոթ աստիճանով տոնային սանդղակ։
+~~~
 
-### Պատասխաններ
-
-1. Սրություն, նյարդայնություն, վտանգ։ 2. Ցույց տալու համար, որ դրանք ավելի մոտ են և ավելի կարևոր։ 3. Թե որքան բաց կամ մուգ է որևէ տեղ՝ առանց գույնի։ 4. Հարվածներն իրար մոտեցնել, ավելի ուժեղ սեղմել, անկյան տակ մեկ այլ շերտ ավելացնել։ 5. Առաջինի նկատմամբ անկյան տակ դրված շտրիխի երկրորդ շերտ։ 6. Ձևի շուրջը՝ հետևելով նրա կորությանը։ 7. Քո սանդղակը։`,
+~~~art
+hints
+1. Սրություն, նյարդայնություն, վտանգ։ 2. Ցույց տալու համար, որ դրանք ավելի մոտ են և ավելի կարևոր։ 3. Թե որքան բաց կամ մուգ է որևէ տեղ՝ առանց գույնի։ 4. Հարվածներն իրար մոտեցնել, ավելի ուժեղ սեղմել, անկյան տակ մեկ այլ շերտ ավելացնել։ 5. Առաջինի նկատմամբ անկյան տակ դրված շտրիխի երկրորդ շերտ։ 6. Ձևի շուրջը՝ հետևելով նրա կորությանը։ 7. Քո սանդղակը։
+~~~`,
         ru: `## Характер линии
 
 Линия — не просто граница. У неё есть **характер**:
@@ -465,9 +573,17 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 
 В хорошем рисунке линии **разной силы**: контур близких предметов сильнее, дальних — легче.
 
+~~~art
+lines
+~~~
+
 ## Тон
 
 **Тон** — это степень светлоты или темноты места без учёта цвета. Чёрно-белая фотография показывает только тона. Художники пользуются **тональной шкалой**: ступенями от белого через светло-, средне- и тёмно-серый к чёрному.
+
+~~~art
+tone
+~~~
 
 ## Штриховка
 
@@ -478,6 +594,11 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 * **слои:** второй слой под углом (**перекрёстная штриховка**) делает тон темнее.
 
 Штрихи должны **идти по форме**: на цилиндре — вокруг него, на плоской стене — прямо. Тогда штриховка помогает показать объём.
+
+~~~art
+sketch guide=grid
+Сделай тоновую растяжку: в каждой клетке штрихуй чуть темнее, чем в предыдущей.
+~~~
 
 ## Правила хорошей штриховки
 
@@ -492,8 +613,8 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 2. Нарисуй линии, выражающие спокойствие, радость, гнев, страх.
 3. Нарисуй цилиндр и куб и заштрихуй их по форме.
 
-### Упражнения
-
+~~~art
+tasks
 1. Какие чувства может выразить зигзаг?
 2. Почему контуры близких предметов рисуют сильнее, чем дальних?
 3. Что такое тон?
@@ -501,10 +622,12 @@ Strokes should **follow the form**: on a cylinder they go around it; on a flat w
 5. Что такое перекрёстная штриховка?
 6. Как должны идти штрихи на цилиндре?
 7. Построй тональную шкалу из семи ступеней.
+~~~
 
-### Ответы
-
-1. Резкость, тревогу, опасность. 2. Чтобы показать, что они ближе и важнее. 3. Степень светлоты или темноты без учёта цвета. 4. Положить штрихи плотнее, сильнее нажать, добавить слой под углом. 5. Второй слой штриховки под углом к первому. 6. Вокруг формы, по её изгибу. 7. Твоя шкала.`,
+~~~art
+hints
+1. Резкость, тревогу, опасность. 2. Чтобы показать, что они ближе и важнее. 3. Степень светлоты или темноты без учёта цвета. 4. Положить штрихи плотнее, сильнее нажать, добавить слой под углом. 5. Второй слой штриховки под углом к первому. 6. Вокруг формы, по её изгибу. 7. Твоя шкала.
+~~~`,
       },
       [
         q(t("A smooth, flowing line usually feels…", "Սահուն, հոսող գիծը սովորաբար թողնում է…", "Плавная текучая линия обычно передаёт…"), [t("calm", "հանդարտ տպավորություն", "спокойствие"), t("danger", "վտանգի տպավորություն", "опасность"), t("anger", "զայրույթի տպավորություն", "гнев")], 0),
@@ -538,9 +661,19 @@ A **silhouette** is a dark flat shape on a light background (or the opposite), w
 
 Silhouettes were very popular in the 18th and 19th centuries: artists **cut** portraits of people in profile from black paper. Shadow theatre also uses silhouettes.
 
+~~~art
+pic mode=silhouette horse dove butterfly stork
+A good silhouette tells everything. Guess, then tap to see the full picture.
+~~~
+
 ## Positive and negative space
 
 The figure is the **positive** space; the background around it is the **negative** space. In a good composition both are interesting. Sometimes they change places, and we see two pictures at once.
+
+~~~art
+sketch mode=blot paper=white
+Positive and negative: make a black blot, fold the sheet, then look at the white shapes between the black ones.
+~~~
 
 ## Balance of spots
 
@@ -548,14 +681,18 @@ The figure is the **positive** space; the background around it is the **negative
 * A dark spot near the edge "pulls" the eye; place it with care.
 * Black, white and one grey give a clear, strong picture.
 
+~~~art
+compose
+~~~
+
 ## Try it
 
 1. Cut three silhouettes from black paper: an animal, a tree and a person in motion. Check: are they recognizable?
 2. Make a composition "A city at night" from black and grey silhouettes on a light paper.
 3. Draw a vase so that its negative space shows two faces in profile.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a spot in a picture?
 2. How can you see the tonal structure of a picture?
 3. What is a silhouette?
@@ -563,10 +700,12 @@ The figure is the **positive** space; the background around it is the **negative
 5. What is negative space?
 6. How can a big dark spot be balanced?
 7. Cut a silhouette portrait of a classmate in profile.
+~~~
 
-### Answers
-
-1. An area of tone or colour. 2. Look at it through half-closed eyes. 3. A flat dark shape on a light background without inner details. 4. By its ears and tail. 5. The background around the figure. 6. With several small dark spots. 7. Your work.`,
+~~~art
+hints
+1. An area of tone or colour. 2. Look at it through half-closed eyes. 3. A flat dark shape on a light background without inner details. 4. By its ears and tail. 5. The background around the figure. 6. With several small dark spots. 7. Your work.
+~~~`,
         hy: `## Բիծը
 
 Բացի գծերից, նկարը կազմված է **բծերից**՝ տոնի կամ գույնի տարածքներից։ Նայիր նկարին կիսափակ աչքերով․ մանրամասներն անհետանում են, և տեսնում ես միայն մեծ բաց և մուգ բծեր։ Սա նկարի **տոնային կառուցվածքն** է։ Եթե այն հստակ է, նկարը «կարդացվում» է հեռվից։
@@ -581,9 +720,19 @@ The figure is the **positive** space; the background around it is the **negative
 
 Ուրվապատկերները շատ տարածված էին 18-րդ և 19-րդ դարերում․ նկարիչները սև թղթից **կտրում** էին մարդկանց դիմանկարները պրոֆիլով։ Ստվերների թատրոնը նույնպես ուրվապատկերներ է օգտագործում։
 
+~~~art
+pic mode=silhouette horse dove butterfly stork
+Լավ ուրվագիծը ամեն ինչ պատմում է։ Գուշակի՛ր, հետո հպի՛ր՝ ամբողջ նկարը տեսնելու համար։
+~~~
+
 ## Դրական և բացասական տարածություն
 
 Պատկերը **դրական** տարածությունն է, իսկ նրա շուրջը ֆոնը՝ **բացասական**։ Լավ կոմպոզիցիայում երկուսն էլ հետաքրքիր են։ Երբեմն դրանք տեղերով փոխվում են, և մենք միանգամից երկու պատկեր ենք տեսնում։
+
+~~~art
+sketch mode=blot paper=white
+Դրական և բացասական․ արա՛ սև բիծ, ծալի՛ր թերթը, հետո նայի՛ր սև ձևերի միջև եղած սպիտակ ձևերին։
+~~~
 
 ## Բծերի հավասարակշռություն
 
@@ -591,14 +740,18 @@ The figure is the **positive** space; the background around it is the **negative
 * Եզրին մոտ մուգ բիծը «քաշում» է աչքը․ այն զգուշությամբ տեղադրիր։
 * Սևը, սպիտակը և մեկ մոխրագույնը տալիս են հստակ, ուժեղ նկար։
 
+~~~art
+compose
+~~~
+
 ## Փորձիր
 
 1. Սև թղթից կտրիր երեք ուրվապատկեր՝ կենդանի, ծառ և շարժման մեջ գտնվող մարդ։ Ստուգիր՝ ճանաչելի են։
 2. Բաց թղթի վրա սև և մոխրագույն ուրվապատկերներից կազմիր «Գիշերային քաղաք» կոմպոզիցիան։
 3. Նկարիր ծաղկաման այնպես, որ նրա բացասական տարածությունը ցույց տա երկու դեմք պրոֆիլով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է բիծը նկարում։
 2. Ինչպես կարելի է տեսնել նկարի տոնային կառուցվածքը։
 3. Ինչ է ուրվապատկերը։
@@ -606,10 +759,12 @@ The figure is the **positive** space; the background around it is the **negative
 5. Ինչ է բացասական տարածությունը։
 6. Ինչպես կարելի է հավասարակշռել մեծ մուգ բիծը։
 7. Կտրիր դասընկերոջդ ուրվապատկերային դիմանկարը պրոֆիլով։
+~~~
 
-### Պատասխաններ
-
-1. Տոնի կամ գույնի տարածք։ 2. Նայել նրան կիսափակ աչքերով։ 3. Հարթ մուգ ձև բաց ֆոնի վրա՝ առանց ներքին մանրամասների։ 4. Ականջներով և պոչով։ 5. Պատկերի շուրջն եղած ֆոնը։ 6. Մի քանի փոքր մուգ բծով։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Տոնի կամ գույնի տարածք։ 2. Նայել նրան կիսափակ աչքերով։ 3. Հարթ մուգ ձև բաց ֆոնի վրա՝ առանց ներքին մանրամասների։ 4. Ականջներով և պոչով։ 5. Պատկերի շուրջն եղած ֆոնը։ 6. Մի քանի փոքր մուգ բծով։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Пятно
 
 Кроме линий, картина состоит из **пятен**: участков тона или цвета. Посмотри на картину прищурившись: детали исчезают, и видны только крупные светлые и тёмные пятна. Это **тональное строение** картины. Если оно ясное, картина «читается» издалека.
@@ -624,9 +779,19 @@ The figure is the **positive** space; the background around it is the **negative
 
 Силуэты были очень популярны в XVIII–XIX веках: художники **вырезали** из чёрной бумаги портреты людей в профиль. Теневой театр тоже использует силуэты.
 
+~~~art
+pic mode=silhouette horse dove butterfly stork
+Хороший силуэт рассказывает всё. Угадай, потом нажми, чтобы увидеть рисунок целиком.
+~~~
+
 ## Позитивное и негативное пространство
 
 Фигура — **позитивное** пространство, фон вокруг неё — **негативное**. В хорошей композиции интересны оба. Иногда они меняются местами, и мы видим сразу две картинки.
+
+~~~art
+sketch mode=blot paper=white
+Позитив и негатив: поставь чёрную кляксу, сложи лист и посмотри на белые формы между чёрными.
+~~~
 
 ## Равновесие пятен
 
@@ -634,14 +799,18 @@ The figure is the **positive** space; the background around it is the **negative
 * Тёмное пятно у края «тянет» взгляд; ставь его осторожно.
 * Чёрный, белый и один серый дают ясную, сильную картину.
 
+~~~art
+compose
+~~~
+
 ## Попробуй
 
 1. Вырежи из чёрной бумаги три силуэта: животное, дерево и человека в движении. Проверь: узнаются ли они?
 2. Составь композицию «Ночной город» из чёрных и серых силуэтов на светлой бумаге.
 3. Нарисуй вазу так, чтобы её негативное пространство показывало два лица в профиль.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое пятно в картине?
 2. Как увидеть тональное строение картины?
 3. Что такое силуэт?
@@ -649,10 +818,12 @@ The figure is the **positive** space; the background around it is the **negative
 5. Что такое негативное пространство?
 6. Как уравновесить большое тёмное пятно?
 7. Вырежи силуэтный портрет одноклассника в профиль.
+~~~
 
-### Ответы
-
-1. Участок тона или цвета. 2. Посмотреть на неё прищурившись. 3. Плоская тёмная форма на светлом фоне без внутренних деталей. 4. По ушам и хвосту. 5. Фон вокруг фигуры. 6. Несколькими маленькими тёмными пятнами. 7. Твоя работа.`,
+~~~art
+hints
+1. Участок тона или цвета. 2. Посмотреть на неё прищурившись. 3. Плоская тёмная форма на светлом фоне без внутренних деталей. 4. По ушам и хвосту. 5. Фон вокруг фигуры. 6. Несколькими маленькими тёмными пятнами. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Half-closed eyes help to see…", "Կիսափակ աչքերն օգնում են տեսնել…", "Прищуренные глаза помогают увидеть…"), [t("the big spots of a picture", "նկարի մեծ բծերը", "крупные пятна картины"), t("tiny details", "մանր մանրամասները", "мелкие детали"), t("the signature", "ստորագրությունը", "подпись")], 0),
@@ -682,6 +853,10 @@ Artists arrange colours in a **wheel**.
 
 Together they form a wheel of **twelve** colours.
 
+~~~art
+wheel modes=primary,secondary
+~~~
+
 ## Three properties of colour
 
 | Property | Question | Example |
@@ -691,6 +866,10 @@ Together they form a wheel of **twelve** colours.
 | **saturation** | how pure and bright? | a bright red poppy vs a dusty red brick |
 
 Adding **white** makes a colour lighter; adding **black** or a complementary colour makes it darker and less saturated; adding **grey** makes it dull.
+
+~~~art
+tints
+~~~
 
 ## Complementary colours
 
@@ -702,11 +881,19 @@ Colours **opposite** each other on the wheel are **complementary**:
 
 Side by side, they make each other **brighter**: this is **complementary contrast**. Mixed together, they give a grey-brown and cancel each other. Look at a red flower among green leaves, or at Saryan's orange mountains under a blue sky.
 
+~~~art
+wheel mode=complementary
+~~~
+
 ## Other contrasts
 
 * **warm and cool:** red, orange, yellow against blue, green, violet;
 * **light and dark:** yellow against violet;
 * **saturated and dull:** one pure colour among greyish ones.
+
+~~~art
+wheel modes=warmcool,analogous,triad
+~~~
 
 ## Try it
 
@@ -714,8 +901,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 2. Paint three small squares, each with one complementary pair side by side.
 3. Paint a fruit still life where the background is complementary to the fruit.
 
-### Exercises
+~~~art
+mixer
+~~~
 
+~~~art
+tasks
 1. Name the primary colours. Why are they called primary?
 2. How do you get green? Violet?
 3. Name the three properties of colour.
@@ -723,10 +914,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 5. What happens when you mix two complementary colours?
 6. How does saturation differ from lightness?
 7. Paint one landscape twice: once in warm, once in cool colours.
+~~~
 
-### Answers
-
-1. Red, yellow, blue; they cannot be mixed from other paints. 2. Yellow + blue; blue + red. 3. Hue, lightness, saturation. 4. Blue; yellow. 5. A grey-brown colour: they cancel each other. 6. Saturation is how pure and bright a colour is; lightness is how light or dark it is. 7. Your work.`,
+~~~art
+hints
+1. Red, yellow, blue; they cannot be mixed from other paints. 2. Yellow + blue; blue + red. 3. Hue, lightness, saturation. 4. Blue; yellow. 5. A grey-brown colour: they cancel each other. 6. Saturation is how pure and bright a colour is; lightness is how light or dark it is. 7. Your work.
+~~~`,
         hy: `## Գունային շրջանը
 
 Նկարիչները գույները դասավորում են **շրջանաձև**։
@@ -736,6 +929,10 @@ Side by side, they make each other **brighter**: this is **complementary contras
 * **Երրորդային գույներ**՝ հիմնական և հարևան երկրորդային գույնի խառնուրդներ, օրինակ՝ դեղնանարնջագույն կամ կապտականաչ։
 
 Միասին նրանք կազմում են **տասներկու** գույնից շրջան։
+
+~~~art
+wheel modes=primary,secondary
+~~~
 
 ## Գույնի երեք հատկություն
 
@@ -747,6 +944,10 @@ Side by side, they make each other **brighter**: this is **complementary contras
 
 **Սպիտակ** ավելացնելիս գույնը բացվում է, **սև** կամ փոխլրացնող գույն ավելացնելիս մգանում է և պակաս հագեցված դառնում, **մոխրագույն** ավելացնելիս՝ խամրում է։
 
+~~~art
+tints
+~~~
+
 ## Փոխլրացնող գույներ
 
 Շրջանի վրա **իրար դիմաց** գտնվող գույները **փոխլրացնող** են․
@@ -757,11 +958,19 @@ Side by side, they make each other **brighter**: this is **complementary contras
 
 Կողք կողքի նրանք իրար ավելի **վառ** են դարձնում․ սա **փոխլրացնող հակադրությունն** է։ Խառնված՝ տալիս են մոխրադարչնագույն և չեզոքացնում իրար։ Նայիր կարմիր ծաղկին կանաչ տերևների մեջ կամ Սարյանի նարնջագույն լեռներին կապույտ երկնքի տակ։
 
+~~~art
+wheel mode=complementary
+~~~
+
 ## Այլ հակադրություններ
 
 * **տաք և սառը**՝ կարմիր, նարնջագույն, դեղին՝ կապույտի, կանաչի, մանուշակագույնի դեմ,
 * **բաց և մուգ**՝ դեղին մանուշակագույնի դեմ,
 * **հագեցված և խամրած**՝ մեկ մաքուր գույն մոխրավուն գույների մեջ։
+
+~~~art
+wheel modes=warmcool,analogous,triad
+~~~
 
 ## Փորձիր
 
@@ -769,8 +978,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 2. Նկարիր երեք փոքր քառակուսի, ամեն մեկում՝ մեկ փոխլրացնող զույգ կողք կողքի։
 3. Նկարիր մրգերով նատյուրմորտ, որտեղ ֆոնը փոխլրացնող է մրգերին։
 
-### Վարժություններ
+~~~art
+mixer
+~~~
 
+~~~art
+tasks
 1. Անվանիր հիմնական գույները։ Ինչու են դրանք կոչվում հիմնական։
 2. Ինչպես ստանալ կանաչ։ Իսկ մանուշակագույն։
 3. Անվանիր գույնի երեք հատկությունը։
@@ -778,10 +991,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 5. Ինչ է տեղի ունենում, երբ խառնում ես երկու փոխլրացնող գույն։
 6. Ինչով է հագեցվածությունը տարբերվում բացությունից։
 7. Նկարիր նույն բնանկարն երկու անգամ՝ մեկ անգամ տաք, մեկ անգամ սառը գույներով։
+~~~
 
-### Պատասխաններ
-
-1. Կարմիր, դեղին, կապույտ․ դրանք չի կարելի ստանալ այլ ներկեր խառնելով։ 2. Դեղին + կապույտ, կապույտ + կարմիր։ 3. Գունային երանգ, բացություն, հագեցվածություն։ 4. Կապույտը, դեղինը։ 5. Ստացվում է մոխրադարչնագույն․ դրանք չեզոքացնում են իրար։ 6. Հագեցվածությունն այն է, թե որքան մաքուր և վառ է գույնը, բացությունը՝ թե որքան բաց կամ մուգ է։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Կարմիր, դեղին, կապույտ․ դրանք չի կարելի ստանալ այլ ներկեր խառնելով։ 2. Դեղին + կապույտ, կապույտ + կարմիր։ 3. Գունային երանգ, բացություն, հագեցվածություն։ 4. Կապույտը, դեղինը։ 5. Ստացվում է մոխրադարչնագույն․ դրանք չեզոքացնում են իրար։ 6. Հագեցվածությունն այն է, թե որքան մաքուր և վառ է գույնը, բացությունը՝ թե որքան բաց կամ մուգ է։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Цветовой круг
 
 Художники располагают цвета по **кругу**.
@@ -791,6 +1006,10 @@ Side by side, they make each other **brighter**: this is **complementary contras
 * **Промежуточные цвета:** смеси основного и соседнего составного, например жёлто-оранжевый или сине-зелёный.
 
 Вместе они образуют круг из **двенадцати** цветов.
+
+~~~art
+wheel modes=primary,secondary
+~~~
 
 ## Три характеристики цвета
 
@@ -802,6 +1021,10 @@ Side by side, they make each other **brighter**: this is **complementary contras
 
 Если добавить **белила**, цвет светлеет; **чёрную** или дополнительную краску — темнеет и теряет насыщенность; **серую** — тускнеет.
 
+~~~art
+tints
+~~~
+
 ## Дополнительные цвета
 
 Цвета, стоящие **друг напротив друга** в круге, — **дополнительные**:
@@ -812,11 +1035,19 @@ Side by side, they make each other **brighter**: this is **complementary contras
 
 Рядом они делают друг друга **ярче**: это **контраст дополнительных цветов**. Смешанные, они дают серо-коричневый и гасят друг друга. Посмотри на красный цветок среди зелёных листьев или на оранжевые горы Сарьяна под синим небом.
 
+~~~art
+wheel mode=complementary
+~~~
+
 ## Другие контрасты
 
 * **тёплое и холодное:** красный, оранжевый, жёлтый против синего, зелёного, фиолетового;
 * **светлое и тёмное:** жёлтый против фиолетового;
 * **насыщенное и приглушённое:** один чистый цвет среди сероватых.
+
+~~~art
+wheel modes=warmcool,analogous,triad
+~~~
 
 ## Попробуй
 
@@ -824,8 +1055,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 2. Напиши три маленьких квадрата, в каждом — пара дополнительных цветов рядом.
 3. Напиши натюрморт с фруктами, где фон дополнителен к фруктам.
 
-### Упражнения
+~~~art
+mixer
+~~~
 
+~~~art
+tasks
 1. Назови основные цвета. Почему они так называются?
 2. Как получить зелёный? Фиолетовый?
 3. Назови три характеристики цвета.
@@ -833,10 +1068,12 @@ Side by side, they make each other **brighter**: this is **complementary contras
 5. Что будет, если смешать два дополнительных цвета?
 6. Чем насыщенность отличается от светлоты?
 7. Напиши один пейзаж дважды: в тёплой и в холодной гамме.
+~~~
 
-### Ответы
-
-1. Красный, жёлтый, синий; их нельзя получить смешением других красок. 2. Жёлтый + синий; синий + красный. 3. Цветовой тон, светлота, насыщенность. 4. Синий; жёлтый. 5. Серо-коричневый цвет: они гасят друг друга. 6. Насыщенность — чистота и яркость цвета, светлота — насколько он светлый или тёмный. 7. Твоя работа.`,
+~~~art
+hints
+1. Красный, жёлтый, синий; их нельзя получить смешением других красок. 2. Жёлтый + синий; синий + красный. 3. Цветовой тон, светлота, насыщенность. 4. Синий; жёлтый. 5. Серо-коричневый цвет: они гасят друг друга. 6. Насыщенность — чистота и яркость цвета, светлота — насколько он светлый или тёмный. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("The primary colours are…", "Հիմնական գույներն են…", "Основные цвета —…"), [t("red, yellow, blue", "կարմիրը, դեղինը, կապույտը", "красный, жёлтый, синий"), t("green, orange, violet", "կանաչը, նարնջագույնը, մանուշակագույնը", "зелёный, оранжевый, фиолетовый"), t("black, white, grey", "սևը, սպիտակը, մոխրագույնը", "чёрный, белый, серый")], 0),
@@ -869,6 +1106,10 @@ By size and place:
 | **easel** | in a room or museum, close to the viewer | a portrait bust |
 | **small sculpture** | on a shelf or table | a figurine, a medal |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Materials
 
 | Material | Character |
@@ -881,13 +1122,26 @@ By size and place:
 | **wood** | warm, with a pattern of fibres |
 | **clay, terracotta** | soft for modelling; fired clay is called terracotta |
 
+~~~art
+pic plasticine pebbles
+~~~
+
 ## Texture
 
 **Texture** is the character of a surface: smooth, rough, grainy, striped. A polished surface reflects light and looks calm and noble; a rough surface catches shadows and looks strong and alive. Sculptors often combine them: a smooth face and rough hair or clothes.
 
+~~~art
+tone
+Texture can be drawn: smooth marble with soft tone, rough stone with dots, wood with lines.
+~~~
+
 ## Light and sculpture
 
 A sculpture lives in **light**. Under the midday sun its shadows are sharp; in the evening they are soft. The same statue looks different from different sides and at different times.
+
+~~~art
+light
+~~~
 
 ## Try it
 
@@ -896,8 +1150,8 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 3. Give different parts different textures: smooth (wet finger), rough (a toothbrush), striped (a fork), dotted (a pencil tip).
 4. Light it with a lamp from the side and look at the shadows.
 
-### Exercises
-
+~~~art
+tasks
 1. What is the difference between round sculpture and relief?
 2. What is monumental sculpture? Give an example.
 3. Name four materials of sculpture and their character.
@@ -905,10 +1159,12 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 5. What is texture? What can a rough texture express?
 6. Why does a sculpture look different in the morning and in the evening?
 7. Model a figure with at least three different textures.
+~~~
 
-### Answers
-
-1. Round sculpture can be seen from all sides; relief rises from a flat background. 2. Large sculpture for squares and parks, seen from far away; for example «Mother Armenia». 3. For example: marble (white, smooth), granite (hard, dark), bronze (cast, shining), wood (warm, fibrous). 4. From hammered copper. 5. The character of a surface; strength and life. 6. The light changes, and so do the shadows. 7. Your work.`,
+~~~art
+hints
+1. Round sculpture can be seen from all sides; relief rises from a flat background. 2. Large sculpture for squares and parks, seen from far away; for example «Mother Armenia». 3. For example: marble (white, smooth), granite (hard, dark), bronze (cast, shining), wood (warm, fibrous). 4. From hammered copper. 5. The character of a surface; strength and life. 6. The light changes, and so do the shadows. 7. Your work.
+~~~`,
         hy: `## Քանդակի տեսակները
 
 * **Կլոր քանդակը** կարելի է տեսնել բոլոր կողմերից․ դու պտտվում ես նրա շուրջը։
@@ -922,6 +1178,10 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 | **հաստոցային** | սենյակում կամ թանգարանում, դիտողին մոտ | դիմաքանդակ (կիսանդրի) |
 | **փոքր քանդակ** | դարակի կամ սեղանի վրա | արձանիկ, մեդալ |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Նյութեր
 
 | Նյութ | Բնավորություն |
@@ -934,13 +1194,26 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 | **փայտ** | տաք, մանրաթելերի նախշով |
 | **կավ, տերակոտա** | փափուկ է ծեփելու համար, թրծված կավը կոչվում է տերակոտա |
 
+~~~art
+pic plasticine pebbles
+~~~
+
 ## Ֆակտուրա
 
 **Ֆակտուրան** մակերեսի բնույթն է՝ հարթ, կոպիտ, հատիկավոր, գծավոր։ Հղկված մակերեսն անդրադարձնում է լույսը և հանդարտ ու ազնիվ տեսք ունի, կոպիտ մակերեսն որսում է ստվերները և ուժեղ ու կենդանի տեսք ունի։ Քանդակագործները հաճախ համադրում են դրանք՝ հարթ դեմք և կոպիտ մազեր կամ հագուստ։
 
+~~~art
+tone
+Ֆակտուրան կարելի է նկարել․ հարթ մարմարը՝ մեղմ տոնով, կոպիտ քարը՝ կետերով, փայտը՝ գծերով։
+~~~
+
 ## Լույսը և քանդակը
 
 Քանդակն ապրում է **լույսի** մեջ։ Կեսօրվա արևի տակ նրա ստվերները սուր են, երեկոյան՝ փափուկ։ Նույն արձանը տարբեր կողմերից և տարբեր ժամերին տարբեր տեսք ունի։
+
+~~~art
+light
+~~~
 
 ## Փորձիր
 
@@ -949,8 +1222,8 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 3. Տարբեր մասերին տուր տարբեր ֆակտուրաներ՝ հարթ (թաց մատով), կոպիտ (ատամի խոզանակով), գծավոր (պատառաքաղով), կետավոր (մատիտի ծայրով)։
 4. Լուսավորիր այն լամպով կողքից և նայիր ստվերներին։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչով է տարբերվում կլոր քանդակը բարձրաքանդակից։
 2. Ինչ է մոնումենտալ քանդակը։ Բեր օրինակ։
 3. Անվանիր քանդակի չորս նյութ և դրանց բնավորությունը։
@@ -958,10 +1231,12 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 5. Ինչ է ֆակտուրան։ Ինչ կարող է արտահայտել կոպիտ ֆակտուրան։
 6. Ինչու է քանդակը տարբեր տեսք ունենում առավոտյան և երեկոյան։
 7. Ծեփիր արձանիկ՝ առնվազն երեք տարբեր ֆակտուրայով։
+~~~
 
-### Պատասխաններ
-
-1. Կլոր քանդակը կարելի է տեսնել բոլոր կողմերից, բարձրաքանդակը բարձրանում է հարթ ֆոնից։ 2. Հրապարակների և այգիների մեծ քանդակ, որ դիտում են հեռվից, օրինակ՝ «Մայր Հայաստանը»։ 3. Օրինակ՝ մարմար (սպիտակ, հարթ), գրանիտ (կարծր, մուգ), բրոնզ (ձուլված, փայլուն), փայտ (տաք, մանրաթելային)։ 4. Կռած պղնձից։ 5. Մակերեսի բնույթը․ ուժ և կենդանություն։ 6. Լույսը փոխվում է, և նրա հետ՝ ստվերները։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Կլոր քանդակը կարելի է տեսնել բոլոր կողմերից, բարձրաքանդակը բարձրանում է հարթ ֆոնից։ 2. Հրապարակների և այգիների մեծ քանդակ, որ դիտում են հեռվից, օրինակ՝ «Մայր Հայաստանը»։ 3. Օրինակ՝ մարմար (սպիտակ, հարթ), գրանիտ (կարծր, մուգ), բրոնզ (ձուլված, փայլուն), փայտ (տաք, մանրաթելային)։ 4. Կռած պղնձից։ 5. Մակերեսի բնույթը․ ուժ և կենդանություն։ 6. Լույսը փոխվում է, և նրա հետ՝ ստվերները։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Виды скульптуры
 
 * **Круглую скульптуру** можно осмотреть со всех сторон: её обходят вокруг.
@@ -975,6 +1250,10 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 | **станковая** | в комнате или музее, близко к зрителю | портретный бюст |
 | **мелкая пластика** | на полке или столе | статуэтка, медаль |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## Материалы
 
 | Материал | Характер |
@@ -987,13 +1266,26 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 | **дерево** | тёплое, с рисунком волокон |
 | **глина, терракота** | мягкая для лепки; обожжённую глину называют терракотой |
 
+~~~art
+pic plasticine pebbles
+~~~
+
 ## Фактура
 
 **Фактура** — характер поверхности: гладкая, шероховатая, зернистая, полосатая. Полированная поверхность отражает свет и выглядит спокойной и благородной; шероховатая ловит тени и выглядит сильной и живой. Скульпторы часто сочетают их: гладкое лицо и шероховатые волосы или одежда.
 
+~~~art
+tone
+Фактуру можно нарисовать: гладкий мрамор мягким тоном, грубый камень точками, дерево линиями.
+~~~
+
 ## Свет и скульптура
 
 Скульптура живёт в **свете**. Под полуденным солнцем её тени резкие, вечером — мягкие. Одна и та же статуя выглядит по-разному с разных сторон и в разное время.
+
+~~~art
+light
+~~~
 
 ## Попробуй
 
@@ -1002,8 +1294,8 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 3. Придай разным частям разную фактуру: гладкую (мокрым пальцем), шероховатую (зубной щёткой), полосатую (вилкой), точечную (кончиком карандаша).
 4. Освети её лампой сбоку и посмотри на тени.
 
-### Упражнения
-
+~~~art
+tasks
 1. Чем круглая скульптура отличается от рельефа?
 2. Что такое монументальная скульптура? Приведи пример.
 3. Назови четыре материала скульптуры и их характер.
@@ -1011,10 +1303,12 @@ A sculpture lives in **light**. Under the midday sun its shadows are sharp; in t
 5. Что такое фактура? Что может выразить шероховатая фактура?
 6. Почему скульптура утром и вечером выглядит по-разному?
 7. Вылепи фигуру не менее чем с тремя разными фактурами.
+~~~
 
-### Ответы
-
-1. Круглую скульптуру видно со всех сторон, рельеф выступает из плоского фона. 2. Большая скульптура для площадей и парков, рассчитанная на взгляд издалека; например «Мать Армения». 3. Например: мрамор (белый, гладкий), гранит (твёрдый, тёмный), бронза (литая, блестящая), дерево (тёплое, волокнистое). 4. Из чеканной меди. 5. Характер поверхности; силу и жизнь. 6. Меняется свет, а с ним и тени. 7. Твоя работа.`,
+~~~art
+hints
+1. Круглую скульптуру видно со всех сторон, рельеф выступает из плоского фона. 2. Большая скульптура для площадей и парков, рассчитанная на взгляд издалека; например «Мать Армения». 3. Например: мрамор (белый, гладкий), гранит (твёрдый, тёмный), бронза (литая, блестящая), дерево (тёплое, волокнистое). 4. Из чеканной меди. 5. Характер поверхности; силу и жизнь. 6. Меняется свет, а с ним и тени. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Sculpture you can walk around is…", "Քանդակը, որի շուրջը կարելի է պտտվել…", "Скульптура, которую можно обойти, —…"), [t("round sculpture", "կլոր քանդակ է", "круглая"), t("relief", "բարձրաքանդակ է", "рельеф"), t("a mosaic", "խճանկար է", "мозаика")], 0),

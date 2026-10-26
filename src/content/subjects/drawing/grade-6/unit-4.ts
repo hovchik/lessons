@@ -30,6 +30,11 @@ The world has three dimensions, but a sheet of paper has two. Every epoch found 
 | **Japan, China** | far things are placed **higher** on the sheet; empty space and mist show distance |
 | **20th century** | artists again free themselves: several points of view, flat colour planes |
 
+~~~art
+pic pyramids genre-icon genre-landscape
+Three ways to show space: Egyptian flat figures, icon space, and the deep landscape of later painters.
+~~~
+
 ## Why there are different systems
 
 Each system expresses a **way of thinking**:
@@ -47,8 +52,12 @@ Draw the same scene, "A family at the table", twice:
 1. **in the "ancient" way:** figures in rows, the most important person bigger, a flat background;
 2. **in the Renaissance way:** a horizon, a vanishing point, figures smaller in the distance.
 
-### Exercises
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. Why is showing depth a problem for an artist?
 2. How did Egyptian artists show who was important?
 3. What is reverse perspective?
@@ -56,10 +65,12 @@ Draw the same scene, "A family at the table", twice:
 5. How do Chinese and Japanese artists show distance?
 6. Why did icon painters not use linear perspective?
 7. Draw one scene in two systems and compare.
+~~~
 
-### Answers
-
-1. The world has three dimensions, but the sheet has two. 2. Important people were drawn bigger. 3. Lines that widen into the distance, as if space opens towards the viewer. 4. In the 15th century in Italy, during the Renaissance. 5. Far things are higher on the sheet; empty space and mist show distance. 6. They showed a spiritual world, not an earthly space seen from one point. 7. Your drawings.`,
+~~~art
+hints
+1. The world has three dimensions, but the sheet has two. 2. Important people were drawn bigger. 3. Lines that widen into the distance, as if space opens towards the viewer. 4. In the 15th century in Italy, during the Renaissance. 5. Far things are higher on the sheet; empty space and mist show distance. 6. They showed a spiritual world, not an earthly space seen from one point. 7. Your drawings.
+~~~`,
         hy: `## Հարթ թերթ և խոր աշխարհ
 
 Աշխարհն ունի երեք չափում, իսկ թղթի թերթը՝ երկու։ Ամեն դարաշրջան գտել է խորությունը ցույց տալու իր եղանակը։
@@ -72,6 +83,11 @@ Draw the same scene, "A family at the table", twice:
 | **Վերածնունդ, 15-րդ դար, Իտալիա** | **գծային հեռանկար**՝ զուգահեռ գծերը հանդիպում են հորիզոնի վրայի անհետացման կետում, հեռավոր առարկաներն ավելի փոքր են |
 | **Ճապոնիա, Չինաստան** | հեռավոր առարկաները տեղադրվում են թերթի **ավելի վերևում**, դատարկ տարածությունն ու մշուշը ցույց են տալիս հեռավորությունը |
 | **20-րդ դար** | նկարիչները նորից ազատվում են՝ մի քանի տեսակետ, հարթ գունային հարթություններ |
+
+~~~art
+pic pyramids genre-icon genre-landscape
+Տարածություն ցույց տալու երեք ձև․ եգիպտական հարթ կերպարներ, սրբապատկերի տարածություն և հետագա նկարիչների խորը բնանկար։
+~~~
 
 ## Ինչու կան տարբեր համակարգեր
 
@@ -90,8 +106,12 @@ Draw the same scene, "A family at the table", twice:
 1. **«հնագույն» ձևով**՝ պատկերները շարքերով, ամենակարևոր մարդն ավելի մեծ, հարթ ֆոն,
 2. **վերածննդյան ձևով**՝ հորիզոն, անհետացման կետ, հեռվում ավելի փոքր պատկերներ։
 
-### Վարժություններ
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. Ինչու է խորությունը ցույց տալը խնդիր նկարչի համար։
 2. Ինչպես էին եգիպտացի նկարիչները ցույց տալիս, թե ով է կարևոր։
 3. Ինչ է հակադարձ հեռանկարը։
@@ -99,10 +119,12 @@ Draw the same scene, "A family at the table", twice:
 5. Ինչպես են չինացի և ճապոնացի նկարիչները ցույց տալիս հեռավորությունը։
 6. Ինչու սրբապատկերիչները չէին օգտագործում գծային հեռանկար։
 7. Նկարիր մեկ տեսարան երկու համակարգով և համեմատիր։
+~~~
 
-### Պատասխաններ
-
-1. Աշխարհն ունի երեք չափում, իսկ թերթը՝ երկու։ 2. Կարևոր մարդկանց նկարում էին ավելի մեծ։ 3. Գծեր, որոնք լայնանում են դեպի հեռուն, կարծես տարածությունը բացվում է դեպի դիտողը։ 4. 15-րդ դարում Իտալիայում՝ Վերածննդի ժամանակ։ 5. Հեռավոր առարկաները թերթի վերևում են, դատարկ տարածությունն ու մշուշը ցույց են տալիս հեռավորությունը։ 6. Նրանք ցույց էին տալիս հոգևոր աշխարհ, ոչ թե մեկ կետից տեսած երկրային տարածություն։ 7. Քո գծանկարները։`,
+~~~art
+hints
+1. Աշխարհն ունի երեք չափում, իսկ թերթը՝ երկու։ 2. Կարևոր մարդկանց նկարում էին ավելի մեծ։ 3. Գծեր, որոնք լայնանում են դեպի հեռուն, կարծես տարածությունը բացվում է դեպի դիտողը։ 4. 15-րդ դարում Իտալիայում՝ Վերածննդի ժամանակ։ 5. Հեռավոր առարկաները թերթի վերևում են, դատարկ տարածությունն ու մշուշը ցույց են տալիս հեռավորությունը։ 6. Նրանք ցույց էին տալիս հոգևոր աշխարհ, ոչ թե մեկ կետից տեսած երկրային տարածություն։ 7. Քո գծանկարները։
+~~~`,
         ru: `## Плоский лист и глубокий мир
 
 У мира три измерения, а у листа бумаги — два. Каждая эпоха нашла свой способ показать глубину.
@@ -115,6 +137,11 @@ Draw the same scene, "A family at the table", twice:
 | **Возрождение, XV век, Италия** | **линейная перспектива**: параллельные линии сходятся в точке схода на горизонте; дальнее меньше |
 | **Япония, Китай** | дальнее располагают **выше** на листе; пустота и туман передают даль |
 | **XX век** | художники снова освобождаются: несколько точек зрения, плоские цветовые плоскости |
+
+~~~art
+pic pyramids genre-icon genre-landscape
+Три способа показать пространство: плоские египетские фигуры, пространство иконы и глубокий пейзаж поздних художников.
+~~~
 
 ## Почему системы разные
 
@@ -133,8 +160,12 @@ Draw the same scene, "A family at the table", twice:
 1. **«по-древнему»:** фигуры рядами, самый важный человек крупнее, плоский фон;
 2. **по-ренессансному:** горизонт, точка схода, фигуры вдали меньше.
 
-### Упражнения
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. Почему изображение глубины — задача для художника?
 2. Как египетские художники показывали, кто важнее?
 3. Что такое обратная перспектива?
@@ -142,10 +173,12 @@ Draw the same scene, "A family at the table", twice:
 5. Как китайские и японские художники передают даль?
 6. Почему иконописцы не пользовались линейной перспективой?
 7. Нарисуй одну сцену в двух системах и сравни.
+~~~
 
-### Ответы
-
-1. У мира три измерения, а у листа — два. 2. Важных людей изображали крупнее. 3. Линии, расходящиеся вглубь, будто пространство раскрывается к зрителю. 4. В XV веке в Италии, в эпоху Возрождения. 5. Дальнее располагают выше на листе; пустота и туман передают даль. 6. Они показывали духовный мир, а не земное пространство из одной точки. 7. Твои рисунки.`,
+~~~art
+hints
+1. У мира три измерения, а у листа — два. 2. Важных людей изображали крупнее. 3. Линии, расходящиеся вглубь, будто пространство раскрывается к зрителю. 4. В XV веке в Италии, в эпоху Возрождения. 5. Дальнее располагают выше на листе; пустота и туман передают даль. 6. Они показывали духовный мир, а не земное пространство из одной точки. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("In ancient Egypt important people were drawn…", "Հին Եգիպտոսում կարևոր մարդկանց նկարում էին…", "В Древнем Египте важных людей изображали…"), [t("bigger", "ավելի մեծ", "крупнее"), t("smaller", "ավելի փոքր", "мельче"), t("only in blue", "միայն կապույտով", "только синим")], 0),
@@ -172,6 +205,10 @@ Draw the same scene, "A family at the table", twice:
 3. Vertical lines stay **vertical**; horizontal lines parallel to the picture stay **horizontal**.
 4. The horizon is at the height of the viewer's **eyes**.
 
+~~~art
+perspective
+~~~
+
 ## Point of view
 
 * **Low horizon:** we look from below; the sky is big, buildings look tall and majestic.
@@ -187,6 +224,11 @@ Use it when you look **straight along** a road, a street, a corridor, a row of t
 3. Connect their corners with the vanishing point by light lines.
 4. Place the far objects between these lines: they become smaller.
 
+~~~art
+sketch guide=vp
+One-point road: draw the road edges, rails and fence posts running to the point on the horizon.
+~~~
+
 ## Two-point perspective
 
 Use it when you see a building from its **corner**.
@@ -196,14 +238,18 @@ Use it when you see a building from its **corner**.
 3. From its top and bottom draw lines to both vanishing points.
 4. Mark the far vertical edges; windows and doors also follow the lines to the vanishing points.
 
+~~~art
+sketch guide=vp2
+~~~
+
 ## Try it
 
 1. Draw a road with poles going into the distance (one point).
 2. Draw a street of Yerevan or your town with houses on both sides (one point).
 3. Draw a house or a church seen from the corner (two points).
 
-### Exercises
-
+~~~art
+tasks
 1. Why do far objects look smaller?
 2. What is a vanishing point?
 3. Which lines stay vertical in perspective?
@@ -211,16 +257,22 @@ Use it when you see a building from its **corner**.
 5. When do we use one-point perspective? Two-point perspective?
 6. Where should the vanishing points be in two-point perspective?
 7. Draw your classroom in one-point perspective.
+~~~
 
-### Answers
-
-1. Because of the distance: the farther, the smaller they appear. 2. The point on the horizon where parallel lines going away seem to meet. 3. Vertical lines. 4. A low horizon makes things look tall and majestic; a high horizon shows a view from above. 5. When looking straight along a road or street; when seeing a building from its corner. 6. Far apart on the horizon, at the edges of the sheet or beyond. 7. Your drawing.`,
+~~~art
+hints
+1. Because of the distance: the farther, the smaller they appear. 2. The point on the horizon where parallel lines going away seem to meet. 3. Vertical lines. 4. A low horizon makes things look tall and majestic; a high horizon shows a view from above. 5. When looking straight along a road or street; when seeing a building from its corner. 6. Far apart on the horizon, at the edges of the sheet or beyond. 7. Your drawing.
+~~~`,
         hy: `## Գծային հեռանկարի կանոնները
 
 1. **Ավելի հեռու** գտնվող առարկաները **ավելի փոքր** են երևում։ Ճանապարհի երկայնքով հեռագրասյուները կարճանում են և մոտենում իրար։
 2. Մեզնից հեռացող զուգահեռ գծերը **կարծես հանդիպում են** հորիզոնի վրայի մեկ կետում՝ **անհետացման կետում**։ Մտածիր ռելսերի կամ երկար ճանապարհի եզրերի մասին։
 3. Ուղղահայաց գծերը մնում են **ուղղահայաց**, նկարին զուգահեռ հորիզոնական գծերը մնում են **հորիզոնական**։
 4. Հորիզոնը դիտողի **աչքերի** բարձրության վրա է։
+
+~~~art
+perspective
+~~~
 
 ## Տեսակետ
 
@@ -237,6 +289,11 @@ Use it when you see a building from its **corner**.
 3. Նրանց անկյունները թեթև գծերով միացրու անհետացման կետին։
 4. Հեռավոր առարկաները տեղադրիր այդ գծերի միջև․ դրանք փոքրանում են։
 
+~~~art
+sketch guide=vp
+Մեկ կետով ճանապարհ․ նկարի՛ր ճանապարհի եզրերը, ռելսերը և ցանկապատի սյուները, որոնք գնում են դեպի հորիզոնի կետը։
+~~~
+
 ## Երկու կետով հեռանկար
 
 Օգտագործիր այն, երբ շենքը տեսնում ես **անկյունից**։
@@ -246,14 +303,18 @@ Use it when you see a building from its **corner**.
 3. Նրա վերևից և ներքևից գծեր տար դեպի երկու անհետացման կետերը։
 4. Նշիր հեռավոր ուղղահայաց կողերը, պատուհաններն ու դռները նույնպես հետևում են դեպի անհետացման կետերը գնացող գծերին։
 
+~~~art
+sketch guide=vp2
+~~~
+
 ## Փորձիր
 
 1. Նկարիր ճանապարհ՝ հեռուն գնացող սյուներով (մեկ կետ)։
 2. Նկարիր Երևանի կամ քո քաղաքի փողոց՝ երկու կողմից տներով (մեկ կետ)։
 3. Նկարիր անկյունից տեսած տուն կամ եկեղեցի (երկու կետ)։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու են հեռավոր առարկաներն ավելի փոքր երևում։
 2. Ինչ է անհետացման կետը։
 3. Որ գծերն են մնում ուղղահայաց հեռանկարում։
@@ -261,16 +322,22 @@ Use it when you see a building from its **corner**.
 5. Երբ ենք օգտագործում մեկ կետով հեռանկար։ Իսկ երկու կետով։
 6. Որտեղ պետք է լինեն անհետացման կետերն երկու կետով հեռանկարում։
 7. Նկարիր քո դասասենյակը մեկ կետով հեռանկարում։
+~~~
 
-### Պատասխաններ
-
-1. Հեռավորության պատճառով․ որքան հեռու, այնքան փոքր են երևում։ 2. Հորիզոնի այն կետը, որտեղ հեռացող զուգահեռ գծերը կարծես հանդիպում են։ 3. Ուղղահայաց գծերը։ 4. Ցածր հորիզոնն առարկաները բարձր և վեհ է ցույց տալիս, բարձրը՝ տեսք վերևից։ 5. Երբ նայում ենք ուղիղ ճանապարհի կամ փողոցի երկայնքով, երբ շենքը տեսնում ենք անկյունից։ 6. Հորիզոնի վրա իրարից հեռու՝ թերթի եզրերին կամ դրանցից դուրս։ 7. Քո գծանկարը։`,
+~~~art
+hints
+1. Հեռավորության պատճառով․ որքան հեռու, այնքան փոքր են երևում։ 2. Հորիզոնի այն կետը, որտեղ հեռացող զուգահեռ գծերը կարծես հանդիպում են։ 3. Ուղղահայաց գծերը։ 4. Ցածր հորիզոնն առարկաները բարձր և վեհ է ցույց տալիս, բարձրը՝ տեսք վերևից։ 5. Երբ նայում ենք ուղիղ ճանապարհի կամ փողոցի երկայնքով, երբ շենքը տեսնում ենք անկյունից։ 6. Հորիզոնի վրա իրարից հեռու՝ թերթի եզրերին կամ դրանցից դուրս։ 7. Քո գծանկարը։
+~~~`,
         ru: `## Правила линейной перспективы
 
 1. Предметы, которые **дальше**, кажутся **меньше**. Столбы вдоль дороги становятся ниже и ближе друг к другу.
 2. Параллельные линии, уходящие от нас, **как будто сходятся** в одной точке на горизонте — **точке схода**. Вспомни рельсы или края длинной дороги.
 3. Вертикальные линии остаются **вертикальными**; горизонтальные линии, параллельные картине, остаются **горизонтальными**.
 4. Горизонт находится на высоте **глаз** зрителя.
+
+~~~art
+perspective
+~~~
 
 ## Точка зрения
 
@@ -287,6 +354,11 @@ Use it when you see a building from its **corner**.
 3. Соедини их углы с точкой схода лёгкими линиями.
 4. Дальние предметы размещай между этими линиями: они становятся меньше.
 
+~~~art
+sketch guide=vp
+Дорога с одной точкой схода: края дороги, рельсы и столбики забора бегут к точке на горизонте.
+~~~
+
 ## Перспектива с двумя точками схода
 
 Используй её, когда видишь здание **с угла**.
@@ -296,14 +368,18 @@ Use it when you see a building from its **corner**.
 3. От его верха и низа проведи линии к обеим точкам схода.
 4. Отметь дальние вертикальные рёбра; окна и двери тоже подчиняются линиям к точкам схода.
 
+~~~art
+sketch guide=vp2
+~~~
+
 ## Попробуй
 
 1. Нарисуй дорогу со столбами, уходящую вдаль (одна точка).
 2. Нарисуй улицу Еревана или своего города с домами по обеим сторонам (одна точка).
 3. Нарисуй дом или церковь, видимые с угла (две точки).
 
-### Упражнения
-
+~~~art
+tasks
 1. Почему дальние предметы кажутся меньше?
 2. Что такое точка схода?
 3. Какие линии остаются вертикальными в перспективе?
@@ -311,10 +387,12 @@ Use it when you see a building from its **corner**.
 5. Когда используют перспективу с одной точкой схода? С двумя?
 6. Где должны быть точки схода в перспективе с двумя точками?
 7. Нарисуй свой класс в перспективе с одной точкой схода.
+~~~
 
-### Ответы
-
-1. Из-за расстояния: чем дальше, тем меньше они кажутся. 2. Точка на горизонте, где как будто сходятся уходящие параллельные линии. 3. Вертикальные. 4. Низкий горизонт делает предметы высокими и величественными, высокий показывает вид сверху. 5. Когда смотрим прямо вдоль дороги или улицы; когда видим здание с угла. 6. Далеко друг от друга на горизонте, на краях листа или за ними. 7. Твой рисунок.`,
+~~~art
+hints
+1. Из-за расстояния: чем дальше, тем меньше они кажутся. 2. Точка на горизонте, где как будто сходятся уходящие параллельные линии. 3. Вертикальные. 4. Низкий горизонт делает предметы высокими и величественными, высокий показывает вид сверху. 5. Когда смотрим прямо вдоль дороги или улицы; когда видим здание с угла. 6. Далеко друг от друга на горизонте, на краях листа или за ними. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Parallel lines going away meet at the…", "Հեռացող զուգահեռ գծերը հանդիպում են…", "Уходящие параллельные линии сходятся в…"), [t("vanishing point", "անհետացման կետում", "точке схода"), t("highlight", "փայլում", "блике"), t("frame", "շրջանակում", "раме")], 0),
@@ -338,6 +416,10 @@ Use it when you see a building from its **corner**.
 
 Between the eye and a far mountain there is a thick layer of **air**, with dust and water vapour. It changes what we see. Leonardo da Vinci wrote about this and painted soft, hazy distances. The effect is called **aerial perspective**.
 
+~~~art
+aerial
+~~~
+
 ## Signs of aerial perspective
 
 | Near | Far |
@@ -359,6 +441,10 @@ Landscape painters often build space with **planes**:
 * **middle ground:** fields, villages, hills; smaller and calmer;
 * **background:** far mountains and sky; pale, cool, simple.
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Try it: mountains in layers
 
 1. Draw four or five lines of mountains one behind another.
@@ -367,8 +453,13 @@ Landscape painters often build space with **planes**:
 4. The nearest row is dark and warm; add details: rocks, trees, a house.
 5. Compare: does the picture look deep?
 
-### Exercises
+~~~art
+mixer paints=blue,white,black
+Mix the layers of the mountains: dark blue in front, paler and paler towards the sky.
+~~~
 
+~~~art
+tasks
 1. Why do far mountains look different from near ones?
 2. Name five signs of aerial perspective.
 3. Which colours are typical of the distance? Of the foreground?
@@ -376,13 +467,19 @@ Landscape painters often build space with **planes**:
 5. What are the three planes of a landscape?
 6. How does Mount Ararat look from Yerevan on a hazy day?
 7. Paint a landscape with three clear planes.
+~~~
 
-### Answers
-
-1. Because of the layer of air with dust and water vapour between us and them. 2. Far things are lighter, cooler, less contrasting, softer in outline and less detailed. 3. Cool blue and violet; warm red, orange, brown and yellow-green. 4. They become softer and blurred. 5. Foreground, middle ground, background. 6. Pale blue, with details lost in the haze. 7. Your painting.`,
+~~~art
+hints
+1. Because of the layer of air with dust and water vapour between us and them. 2. Far things are lighter, cooler, less contrasting, softer in outline and less detailed. 3. Cool blue and violet; warm red, orange, brown and yellow-green. 4. They become softer and blurred. 5. Foreground, middle ground, background. 6. Pale blue, with details lost in the haze. 7. Your painting.
+~~~`,
         hy: `## Օդը մեր և լեռների միջև
 
 Աչքի և հեռավոր լեռան միջև կա **օդի** հաստ շերտ՝ փոշով և ջրային գոլորշով։ Այն փոխում է այն, ինչ տեսնում ենք։ Լեոնարդո դա Վինչին գրել է այդ մասին և նկարել փափուկ, մշուշոտ հեռուներ։ Այս երևույթը կոչվում է **օդային հեռանկար**։
+
+~~~art
+aerial
+~~~
 
 ## Օդային հեռանկարի նշանները
 
@@ -405,6 +502,10 @@ Landscape painters often build space with **planes**:
 * **միջին պլան**՝ դաշտեր, գյուղեր, բլուրներ՝ ավելի փոքր և հանդարտ,
 * **հետին պլան**՝ հեռավոր լեռներ և երկինք՝ գունատ, սառը, պարզ։
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Փորձիր․ լեռներ շերտերով
 
 1. Նկարիր լեռների չորս-հինգ շարք՝ մեկը մյուսի ետևում։
@@ -413,8 +514,13 @@ Landscape painters often build space with **planes**:
 4. Ամենամոտ շարքը մուգ և տաք է, ավելացրու մանրամասներ՝ ժայռեր, ծառեր, տուն։
 5. Համեմատիր․ նկարը խոր է թվում։
 
-### Վարժություններ
+~~~art
+mixer paints=blue,white,black
+Խառնի՛ր լեռների շերտերը․ մուգ կապույտ առջևում, ավելի ու ավելի գունատ դեպի երկինք։
+~~~
 
+~~~art
+tasks
 1. Ինչու են հեռավոր լեռները մոտիկներից տարբեր երևում։
 2. Անվանիր օդային հեռանկարի հինգ նշան։
 3. Որ գույներն են բնորոշ հեռուին։ Իսկ առաջին պլանին։
@@ -422,13 +528,19 @@ Landscape painters often build space with **planes**:
 5. Որոնք են բնանկարի երեք պլանները։
 6. Ինչ տեսք ունի Արարատն Երևանից մշուշոտ օրը։
 7. Նկարիր բնանկար երեք հստակ պլանով։
+~~~
 
-### Պատասխաններ
-
-1. Մեր և նրանց միջև փոշով և ջրային գոլորշով օդի շերտի պատճառով։ 2. Հեռավորն ավելի բաց է, ավելի սառը, պակաս հակադիր, ավելի փափուկ եզրագծով և պակաս մանրամասն։ 3. Սառը կապույտ և մանուշակագույն, տաք կարմիր, նարնջագույն, դարչնագույն և դեղնականաչ։ 4. Դառնում են ավելի փափուկ և աղոտ։ 5. Առաջին, միջին և հետին պլան։ 6. Բաց կապույտ, մանրամասները կորած մշուշում։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Մեր և նրանց միջև փոշով և ջրային գոլորշով օդի շերտի պատճառով։ 2. Հեռավորն ավելի բաց է, ավելի սառը, պակաս հակադիր, ավելի փափուկ եզրագծով և պակաս մանրամասն։ 3. Սառը կապույտ և մանուշակագույն, տաք կարմիր, նարնջագույն, դարչնագույն և դեղնականաչ։ 4. Դառնում են ավելի փափուկ և աղոտ։ 5. Առաջին, միջին և հետին պլան։ 6. Բաց կապույտ, մանրամասները կորած մշուշում։ 7. Քո նկարը։
+~~~`,
         ru: `## Воздух между нами и горами
 
 Между глазом и далёкой горой лежит толстый слой **воздуха** с пылью и водяным паром. Он меняет то, что мы видим. Об этом писал Леонардо да Винчи, и он писал мягкие, затуманенные дали. Это явление называется **воздушной перспективой**.
+
+~~~art
+aerial
+~~~
 
 ## Признаки воздушной перспективы
 
@@ -451,6 +563,10 @@ Landscape painters often build space with **planes**:
 * **средний план:** поля, сёла, холмы; мельче и спокойнее;
 * **дальний план:** далёкие горы и небо; бледно, холодно, просто.
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Попробуй: горы слоями
 
 1. Нарисуй четыре-пять гряд гор одну за другой.
@@ -459,8 +575,13 @@ Landscape painters often build space with **planes**:
 4. Ближняя гряда тёмная и тёплая; добавь детали: скалы, деревья, дом.
 5. Сравни: кажется ли картина глубокой?
 
-### Упражнения
+~~~art
+mixer paints=blue,white,black
+Смешай слои гор: тёмно-синий впереди, всё бледнее к небу.
+~~~
 
+~~~art
+tasks
 1. Почему далёкие горы выглядят иначе, чем близкие?
 2. Назови пять признаков воздушной перспективы.
 3. Какие цвета характерны для дали? Для переднего плана?
@@ -468,10 +589,12 @@ Landscape painters often build space with **planes**:
 5. Какие три плана есть в пейзаже?
 6. Как выглядит Арарат из Еревана в дымке?
 7. Напиши пейзаж с тремя ясными планами.
+~~~
 
-### Ответы
-
-1. Из-за слоя воздуха с пылью и водяным паром между нами и ними. 2. Дальнее светлее, холоднее, менее контрастно, мягче по контуру и беднее деталями. 3. Холодные синие и фиолетовые; тёплые красные, оранжевые, коричневые и жёлто-зелёные. 4. Становятся мягче и размытее. 5. Передний, средний и дальний. 6. Бледно-голубым, детали теряются в дымке. 7. Твоя работа.`,
+~~~art
+hints
+1. Из-за слоя воздуха с пылью и водяным паром между нами и ними. 2. Дальнее светлее, холоднее, менее контрастно, мягче по контуру и беднее деталями. 3. Холодные синие и фиолетовые; тёплые красные, оранжевые, коричневые и жёлто-зелёные. 4. Становятся мягче и размытее. 5. Передний, средний и дальний. 6. Бледно-голубым, детали теряются в дымке. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Far mountains look…", "Հեռավոր լեռներն երևում են…", "Далёкие горы выглядят…"), [t("paler and cooler", "ավելի գունատ և սառը", "бледнее и холоднее"), t("darker and warmer", "ավելի մուգ և տաք", "темнее и теплее"), t("more detailed", "ավելի մանրամասն", "подробнее")], 0),
@@ -510,11 +633,19 @@ For a long time nature was only a **background** for people and events. Graduall
 * **Arkhip Kuindzhi**, «Moonlit Night on the Dnieper» (1880): moonlight so bright that people looked for a lamp behind the canvas.
 * **Isaac Levitan**, «Above Eternal Peace» (1894): a little church, a vast lake and sky; thoughts about life and eternity.
 
+~~~art
+palette shishkin
+~~~
+
 ## Armenian landscape
 
 * **Gevorg Bashinjaghian** painted Ararat, Lake Sevan and the gorges of Lori in calm, true light.
 * **Panos Terlemezian** painted the land around Van and later the landscapes of Armenia with warm, sincere feeling.
 * **Martiros Saryan** found a new language: bright pure colour, simple big shapes, the hot sun of Armenia.
+
+~~~art
+palette saryan tuff
+~~~
 
 ## How to describe a landscape
 
@@ -525,8 +656,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. **Colour:** warm or cool, bright or quiet.
 6. **Mood:** joyful, calm, sad, solemn, mysterious.
 
-### Exercises
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
 
+~~~art
+tasks
 1. What was nature in paintings before landscape became a genre?
 2. What is plein air?
 3. Which painting gave its name to Impressionism?
@@ -534,10 +669,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. Why did viewers look for a lamp behind Kuindzhi's painting?
 6. Name two Armenian landscape painters and what they painted.
 7. Describe one landscape using the six questions.
+~~~
 
-### Answers
-
-1. A background for people and events. 2. Painting outdoors, from life. 3. Monet's «Impression, Sunrise» (1872). 4. Early spring, melting snow, rooks, a village church; modest and touching. 5. The moonlight in it looked so bright. 6. For example: Bashinjaghian (Ararat, Sevan, Lori), Terlemezian (Van and Armenia), Saryan (bright Armenian landscapes). 7. Your description.`,
+~~~art
+hints
+1. A background for people and events. 2. Painting outdoors, from life. 3. Monet's «Impression, Sunrise» (1872). 4. Early spring, melting snow, rooks, a village church; modest and touching. 5. The moonlight in it looked so bright. 6. For example: Bashinjaghian (Ararat, Sevan, Lori), Terlemezian (Van and Armenia), Saryan (bright Armenian landscapes). 7. Your description.
+~~~`,
         hy: `## Ֆոնից՝ գլխավոր թեմա
 
 Երկար ժամանակ բնությունը միայն **ֆոն** էր մարդկանց և իրադարձությունների համար։ Աստիճանաբար նկարիչները սկսեցին նկարել բնությունը հանուն իրեն։
@@ -557,11 +694,19 @@ For a long time nature was only a **background** for people and events. Graduall
 * **Արխիպ Կուինջի**, «Լուսնյակ գիշեր Դնեպրի վրա» (1880)՝ լուսնի լույսն այնքան վառ է, որ մարդիկ կտավի ետևում լամպ էին փնտրում։
 * **Իսահակ Լևիտան**, «Հավերժական խաղաղության վերևում» (1894)՝ փոքրիկ եկեղեցի, ընդարձակ լիճ և երկինք, մտորումներ կյանքի և հավերժության մասին։
 
+~~~art
+palette shishkin
+~~~
+
 ## Հայկական բնանկար
 
 * **Գևորգ Բաշինջաղյանը** նկարել է Արարատը, Սևանա լիճը և Լոռու կիրճերը հանդարտ, ճշմարիտ լույսով։
 * **Փանոս Թերլեմեզյանը** նկարել է Վանի շրջակայքը, իսկ հետո Հայաստանի բնանկարները՝ ջերմ, անկեղծ զգացմունքով։
 * **Մարտիրոս Սարյանը** գտավ նոր լեզու՝ վառ մաքուր գույն, պարզ մեծ ձևեր, Հայաստանի տաք արև։
+
+~~~art
+palette saryan tuff
+~~~
 
 ## Ինչպես նկարագրել բնանկարը
 
@@ -572,8 +717,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. **Գույնը**՝ տաք, թե սառը, վառ, թե հանդարտ։
 6. **Տրամադրությունը**՝ ուրախ, հանդարտ, տխուր, հանդիսավոր, խորհրդավոր։
 
-### Վարժություններ
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
 
+~~~art
+tasks
 1. Ինչ էր բնությունը նկարներում, նախքան բնանկարի ժանր դառնալը։
 2. Ինչ է պլեները։
 3. Որ կտավն իր անունը տվեց իմպրեսիոնիզմին։
@@ -581,10 +730,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. Ինչու էին դիտողները Կուինջու կտավի ետևում լամպ փնտրում։
 6. Անվանիր երկու հայ բնանկարիչ և թե ինչ են նրանք նկարել։
 7. Նկարագրիր մեկ բնանկար՝ օգտագործելով վեց հարցը։
+~~~
 
-### Պատասխաններ
-
-1. Ֆոն մարդկանց և իրադարձությունների համար։ 2. Բաց երկնքի տակ, բնությունից նկարելը։ 3. Մոնեի «Տպավորություն․ ծագող արև» (1872)։ 4. Վաղ գարուն, հալվող ձյուն, սերմնագռավներ, գյուղական եկեղեցի, համեստ և հուզիչ։ 5. Դրանում լուսնի լույսն այնքան վառ էր թվում։ 6. Օրինակ՝ Բաշինջաղյան (Արարատ, Սևան, Լոռի), Թերլեմեզյան (Վան և Հայաստան), Սարյան (Հայաստանի վառ բնանկարներ)։ 7. Քո նկարագրությունը։`,
+~~~art
+hints
+1. Ֆոն մարդկանց և իրադարձությունների համար։ 2. Բաց երկնքի տակ, բնությունից նկարելը։ 3. Մոնեի «Տպավորություն․ ծագող արև» (1872)։ 4. Վաղ գարուն, հալվող ձյուն, սերմնագռավներ, գյուղական եկեղեցի, համեստ և հուզիչ։ 5. Դրանում լուսնի լույսն այնքան վառ էր թվում։ 6. Օրինակ՝ Բաշինջաղյան (Արարատ, Սևան, Լոռի), Թերլեմեզյան (Վան և Հայաստան), Սարյան (Հայաստանի վառ բնանկարներ)։ 7. Քո նկարագրությունը։
+~~~`,
         ru: `## От фона к главной теме
 
 Долгое время природа была лишь **фоном** для людей и событий. Постепенно художники начали писать природу ради неё самой.
@@ -604,11 +755,19 @@ For a long time nature was only a **background** for people and events. Graduall
 * **Архип Куинджи**, «Лунная ночь на Днепре» (1880): лунный свет так ярок, что зрители искали лампу за холстом.
 * **Исаак Левитан**, «Над вечным покоем» (1894): маленькая церковь, огромное озеро и небо; мысли о жизни и вечности.
 
+~~~art
+palette shishkin
+~~~
+
 ## Армянский пейзаж
 
 * **Геворг Башинджагян** писал Арарат, озеро Севан и ущелья Лори в спокойном, правдивом свете.
 * **Панос Терлемезян** писал окрестности Вана, а потом пейзажи Армении с тёплым, искренним чувством.
 * **Мартирос Сарьян** нашёл новый язык: яркий чистый цвет, простые крупные формы, жаркое солнце Армении.
+
+~~~art
+palette saryan tuff
+~~~
 
 ## Как описать пейзаж
 
@@ -619,8 +778,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. **Цвет:** тёплый или холодный, яркий или тихий.
 6. **Настроение:** радостное, спокойное, грустное, торжественное, таинственное.
 
-### Упражнения
+~~~art
+mood scene=landscape moods=spring,summer,autumn,winter
+~~~
 
+~~~art
+tasks
 1. Чем была природа в картинах до того, как пейзаж стал жанром?
 2. Что такое пленэр?
 3. Какая картина дала имя импрессионизму?
@@ -628,10 +791,12 @@ For a long time nature was only a **background** for people and events. Graduall
 5. Почему зрители искали лампу за картиной Куинджи?
 6. Назови двух армянских пейзажистов и то, что они писали.
 7. Опиши один пейзаж по шести вопросам.
+~~~
 
-### Ответы
-
-1. Фоном для людей и событий. 2. Работа на открытом воздухе, с натуры. 3. «Впечатление. Восходящее солнце» Моне (1872). 4. Ранняя весна, тающий снег, грачи, сельская церковь; скромная и трогательная. 5. Лунный свет на ней казался таким ярким. 6. Например: Башинджагян (Арарат, Севан, Лори), Терлемезян (Ван и Армения), Сарьян (яркие армянские пейзажи). 7. Твоё описание.`,
+~~~art
+hints
+1. Фоном для людей и событий. 2. Работа на открытом воздухе, с натуры. 3. «Впечатление. Восходящее солнце» Моне (1872). 4. Ранняя весна, тающий снег, грачи, сельская церковь; скромная и трогательная. 5. Лунный свет на ней казался таким ярким. 6. Например: Башинджагян (Арарат, Севан, Лори), Терлемезян (Ван и Армения), Сарьян (яркие армянские пейзажи). 7. Твоё описание.
+~~~`,
       },
       [
         q(t("Painting outdoors from life is called…", "Բաց երկնքի տակ բնությունից նկարելը կոչվում է…", "Работа с натуры на открытом воздухе называется…"), [t("plein air", "պլեներ", "пленэр"), t("fresco", "որմնանկար", "фреска"), t("collage", "կոլաժ", "коллаж")], 0),
@@ -655,6 +820,10 @@ For a long time nature was only a **background** for people and events. Graduall
 
 A landscape is not just a view. The same place can look joyful in the morning sun and sad in autumn rain. When an artist chooses the season, the time of day, the weather and the colours to express a **feeling**, we call it a **mood landscape**. Levitan was a great master of such landscapes in Russia.
 
+~~~art
+mood scene=landscape moods=joy,sad,calm,storm
+~~~
+
 ## Means of mood
 
 | Means | Joyful, energetic | Calm, quiet | Sad, anxious |
@@ -663,6 +832,10 @@ A landscape is not just a view. The same place can look joyful in the morning su
 | **light** | strong sun, clear shadows | even, soft light | dull light, dusk |
 | **lines** | dynamic diagonals | long horizontals | broken or drooping lines |
 | **sky** | clear blue | wide, calm | heavy clouds |
+
+~~~art
+lines
+~~~
 
 ## Saryan's Armenia
 
@@ -677,6 +850,10 @@ How he shows the **character** of Armenia:
 
 His paintings are not a copy of nature; they are a **song** about the land. You can see many of them in the **Saryan House-Museum** in Yerevan and in the National Gallery of Armenia.
 
+~~~art
+mood scene=landscape moods=saryan,noon
+~~~
+
 ## Paint a mood landscape
 
 1. Choose a place: your street, a mountain, a garden, the sea.
@@ -686,8 +863,12 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Simplify the shapes like Saryan, or keep soft transitions like Levitan.
 6. Give your landscape a title that names the mood.
 
-### Exercises
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. What is a mood landscape?
 2. Which colours and lines express calm? Anxiety?
 3. What places of Armenia did Saryan often paint?
@@ -695,13 +876,19 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Why does Saryan simplify shapes?
 6. Where can you see many of Saryan's works?
 7. Paint the same place twice, in two opposite moods.
+~~~
 
-### Answers
-
-1. A landscape in which the season, light, weather and colour express a feeling. 2. Calm: soft close colours and long horizontals; anxiety: cool grey or dark colours, broken lines, heavy clouds. 3. For example: Ararat, Aragats, the Ararat valley, villages, gardens. 4. With the contrast of orange and yellow light and blue and violet shadows. 5. To make the image strong, clear and expressive. 6. In the Saryan House-Museum and the National Gallery of Armenia in Yerevan. 7. Your paintings.`,
+~~~art
+hints
+1. A landscape in which the season, light, weather and colour express a feeling. 2. Calm: soft close colours and long horizontals; anxiety: cool grey or dark colours, broken lines, heavy clouds. 3. For example: Ararat, Aragats, the Ararat valley, villages, gardens. 4. With the contrast of orange and yellow light and blue and violet shadows. 5. To make the image strong, clear and expressive. 6. In the Saryan House-Museum and the National Gallery of Armenia in Yerevan. 7. Your paintings.
+~~~`,
         hy: `## Բնանկարը կարող է զգալ
 
 Բնանկարը պարզապես տեսարան չէ։ Նույն վայրը կարող է ուրախ լինել առավոտյան արևի տակ և տխուր՝ աշնանային անձրևի ժամանակ։ Երբ նկարիչն ընտրում է տարվա եղանակը, օրվա ժամը, եղանակը և գույները՝ **զգացմունք** արտահայտելու համար, մենք դա անվանում ենք **տրամադրության բնանկար**։ Ռուսաստանում այդպիսի բնանկարների մեծ վարպետ էր Լևիտանը։
+
+~~~art
+mood scene=landscape moods=joy,sad,calm,storm
+~~~
 
 ## Տրամադրության միջոցներ
 
@@ -711,6 +898,10 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 | **լույս** | ուժեղ արև, հստակ ստվերներ | հավասար, փափուկ լույս | աղոտ լույս, մթնշաղ |
 | **գծեր** | դինամիկ անկյունագծեր | երկար հորիզոնականներ | կոտրված կամ կախ ընկած գծեր |
 | **երկինք** | պարզ կապույտ | լայն, հանդարտ | ծանր ամպեր |
+
+~~~art
+lines
+~~~
 
 ## Սարյանի Հայաստանը
 
@@ -725,6 +916,10 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 
 Նրա կտավները բնության պատճենը չեն, դրանք **երգ** են երկրի մասին։ Նրանցից շատերը կարող ես տեսնել Երևանում՝ **Սարյանի տուն-թանգարանում** և Հայաստանի ազգային պատկերասրահում։
 
+~~~art
+mood scene=landscape moods=saryan,noon
+~~~
+
 ## Նկարիր տրամադրության բնանկար
 
 1. Ընտրիր վայր՝ քո փողոցը, լեռ, այգի, ծով։
@@ -734,8 +929,12 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Պարզեցրու ձևերը Սարյանի պես կամ պահիր փափուկ անցումները Լևիտանի պես։
 6. Բնանկարիդ տուր վերնագիր, որն անվանում է տրամադրությունը։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. Ինչ է տրամադրության բնանկարը։
 2. Որ գույներն ու գծերն են արտահայտում հանդարտություն։ Իսկ անհանգստություն։
 3. Հայաստանի որ վայրերն էր Սարյանը հաճախ նկարում։
@@ -743,13 +942,19 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Ինչու է Սարյանը պարզեցնում ձևերը։
 6. Որտեղ կարելի է տեսնել Սարյանի շատ գործեր։
 7. Նույն վայրը նկարիր երկու անգամ՝ երկու հակադիր տրամադրությամբ։
+~~~
 
-### Պատասխաններ
-
-1. Բնանկար, որում տարվա եղանակը, լույսը, եղանակը և գույնը զգացմունք են արտահայտում։ 2. Հանդարտություն՝ փափուկ մոտ գույներ և երկար հորիզոնականներ, անհանգստություն՝ սառը մոխրագույն կամ մուգ գույներ, կոտրված գծեր, ծանր ամպեր։ 3. Օրինակ՝ Արարատ, Արագած, Արարատյան դաշտ, գյուղեր, այգիներ։ 4. Նարնջագույն ու դեղին լույսի և կապույտ ու մանուշակագույն ստվերների հակադրությամբ։ 5. Որ կերպարը դառնա ուժեղ, հստակ և արտահայտիչ։ 6. Երևանում՝ Սարյանի տուն-թանգարանում և Հայաստանի ազգային պատկերասրահում։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Բնանկար, որում տարվա եղանակը, լույսը, եղանակը և գույնը զգացմունք են արտահայտում։ 2. Հանդարտություն՝ փափուկ մոտ գույներ և երկար հորիզոնականներ, անհանգստություն՝ սառը մոխրագույն կամ մուգ գույներ, կոտրված գծեր, ծանր ամպեր։ 3. Օրինակ՝ Արարատ, Արագած, Արարատյան դաշտ, գյուղեր, այգիներ։ 4. Նարնջագույն ու դեղին լույսի և կապույտ ու մանուշակագույն ստվերների հակադրությամբ։ 5. Որ կերպարը դառնա ուժեղ, հստակ և արտահայտիչ։ 6. Երևանում՝ Սարյանի տուն-թանգարանում և Հայաստանի ազգային պատկերասրահում։ 7. Քո նկարները։
+~~~`,
         ru: `## Пейзаж умеет чувствовать
 
 Пейзаж — не просто вид. Одно и то же место может казаться радостным в утреннем солнце и грустным под осенним дождём. Когда художник выбирает время года, время суток, погоду и цвета, чтобы выразить **чувство**, это называют **пейзажем настроения**. Великим мастером таких пейзажей в России был Левитан.
+
+~~~art
+mood scene=landscape moods=joy,sad,calm,storm
+~~~
 
 ## Средства настроения
 
@@ -759,6 +964,10 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 | **свет** | сильное солнце, чёткие тени | ровный, мягкий свет | тусклый свет, сумерки |
 | **линии** | динамичные диагонали | длинные горизонтали | ломаные или поникшие линии |
 | **небо** | ясное голубое | широкое, спокойное | тяжёлые тучи |
+
+~~~art
+lines
+~~~
 
 ## Армения Сарьяна
 
@@ -773,6 +982,10 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 
 Его картины — не копия природы, а **песня** о земле. Многие из них можно увидеть в **Доме-музее Сарьяна** в Ереване и в Национальной галерее Армении.
 
+~~~art
+mood scene=landscape moods=saryan,noon
+~~~
+
 ## Напиши пейзаж настроения
 
 1. Выбери место: свою улицу, гору, сад, море.
@@ -782,8 +995,12 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Упрости формы, как Сарьян, или сохрани мягкие переходы, как Левитан.
 6. Дай пейзажу название, называющее настроение.
 
-### Упражнения
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. Что такое пейзаж настроения?
 2. Какие цвета и линии выражают покой? Тревогу?
 3. Какие места Армении часто писал Сарьян?
@@ -791,10 +1008,12 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 5. Зачем Сарьян упрощает формы?
 6. Где можно увидеть много работ Сарьяна?
 7. Напиши одно место дважды, в двух противоположных настроениях.
+~~~
 
-### Ответы
-
-1. Пейзаж, в котором время года, свет, погода и цвет выражают чувство. 2. Покой — мягкие близкие цвета и длинные горизонтали; тревогу — холодные серые или тёмные цвета, ломаные линии, тяжёлые тучи. 3. Например: Арарат, Арагац, Араратскую долину, сёла, сады. 4. Контрастом оранжевого и жёлтого света и синих и фиолетовых теней. 5. Чтобы образ был сильным, ясным и выразительным. 6. В Доме-музее Сарьяна и Национальной галерее Армении в Ереване. 7. Твои работы.`,
+~~~art
+hints
+1. Пейзаж, в котором время года, свет, погода и цвет выражают чувство. 2. Покой — мягкие близкие цвета и длинные горизонтали; тревогу — холодные серые или тёмные цвета, ломаные линии, тяжёлые тучи. 3. Например: Арарат, Арагац, Араратскую долину, сёла, сады. 4. Контрастом оранжевого и жёлтого света и синих и фиолетовых теней. 5. Чтобы образ был сильным, ясным и выразительным. 6. В Доме-музее Сарьяна и Национальной галерее Армении в Ереване. 7. Твои работы.
+~~~`,
       },
       [
         q(t("A landscape that expresses a feeling is a … landscape.", "Զգացմունք արտահայտող բնանկարը … բնանկար է։", "Пейзаж, выражающий чувство, — это пейзаж…"), [t("mood", "տրամադրության", "настроения"), t("city", "քաղաքային", "городской"), t("marine", "ծովային", "морской")], 0),
@@ -818,12 +1037,20 @@ His paintings are not a copy of nature; they are a **song** about the land. You 
 
 A city landscape shows streets, squares, bridges, roofs and courtyards. The Impressionists loved the busy boulevards of Paris, painted from high windows in different weather. Russian painters such as **Konstantin Yuon** painted the colourful life of Moscow streets and old towns. Armenian artists have painted the courtyards of old Yerevan, the pink tuff buildings of Tamanyan, and the cascade of streets climbing the hills.
 
+~~~art
+pic genre-city
+~~~
+
 ## Every city has a character
 
 * **Old town:** narrow crooked streets, small houses, balconies, courtyards.
 * **Modern city:** wide avenues, tall glass buildings, cars, lights.
 * **Yerevan:** pink and orange tuff, arcades, Republic Square, the Cascade, Mount Ararat above the roofs.
 * **Moscow:** the Kremlin towers, onion domes, wide boulevards.
+
+~~~art
+pic tamanyan kremlin skyscraper
+~~~
 
 ## Means of the city landscape
 
@@ -839,6 +1066,10 @@ A city landscape shows streets, squares, bridges, roofs and courtyards. The Impr
 
 At night the sky is dark blue, the windows are warm yellow, and the lamps make round spots of light. Wet streets reflect them. Use the contrast of **warm light** and **cool darkness**.
 
+~~~art
+mood scene=city moods=evening,night
+~~~
+
 ## Draw your street
 
 1. Choose a viewpoint and a horizon line.
@@ -847,8 +1078,12 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 4. Add people and transport for scale.
 5. Choose a time and weather, and paint the mood.
 
-### Exercises
+~~~art
+perspective modes=two
+~~~
 
+~~~art
+tasks
 1. What can a city landscape show?
 2. Which painters loved the boulevards of Paris?
 3. Describe the character of Yerevan in three features.
@@ -856,13 +1091,19 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 5. Why are small figures of people useful in a city landscape?
 6. Which colours make a night city expressive?
 7. Draw your street in one-point perspective at a time of day you choose.
+~~~
 
-### Answers
-
-1. Streets, squares, bridges, roofs, courtyards. 2. The Impressionists. 3. For example: pink and orange tuff, arcades, the Cascade, Mount Ararat above the roofs. 4. With rows of windows, columns, trees and lamps. 5. They bring life and show the scale of the buildings. 6. Warm yellow lights against cool dark blue. 7. Your drawing.`,
+~~~art
+hints
+1. Streets, squares, bridges, roofs, courtyards. 2. The Impressionists. 3. For example: pink and orange tuff, arcades, the Cascade, Mount Ararat above the roofs. 4. With rows of windows, columns, trees and lamps. 5. They bring life and show the scale of the buildings. 6. Warm yellow lights against cool dark blue. 7. Your drawing.
+~~~`,
         hy: `## Քաղաքն որպես թեմա
 
 Քաղաքային բնանկարը ցույց է տալիս փողոցներ, հրապարակներ, կամուրջներ, տանիքներ և բակեր։ Իմպրեսիոնիստները սիրում էին Փարիզի աշխույժ բուլվարները, որոնք նկարում էին բարձր պատուհաններից՝ տարբեր եղանակներին։ Ռուս նկարիչները, օրինակ՝ **Կոնստանտին Յուոնը**, նկարել են մոսկովյան փողոցների և հին քաղաքների գունեղ կյանքը։ Հայ նկարիչները նկարել են հին Երևանի բակերը, Թամանյանի վարդագույն տուֆե շենքերը և բլուրներն ի վեր բարձրացող փողոցները։
+
+~~~art
+pic genre-city
+~~~
 
 ## Յուրաքանչյուր քաղաք ունի բնավորություն
 
@@ -870,6 +1111,10 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 * **Ժամանակակից քաղաք**՝ լայն պողոտաներ, բարձր ապակե շենքեր, մեքենաներ, լույսեր։
 * **Երևան**՝ վարդագույն և նարնջագույն տուֆ, կամարաշարեր, Հանրապետության հրապարակ, Կասկադ, Արարատ լեռը տանիքների վերևում։
 * **Մոսկվա**՝ Կրեմլի աշտարակներ, սոխաձև գմբեթներ, լայն բուլվարներ։
+
+~~~art
+pic tamanyan kremlin skyscraper
+~~~
 
 ## Քաղաքային բնանկարի միջոցներ
 
@@ -885,6 +1130,10 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 
 Գիշերն երկինքը մուգ կապույտ է, պատուհանները՝ տաք դեղին, իսկ լապտերները լույսի կլոր բծեր են ստեղծում։ Թաց փողոցներն անդրադարձնում են դրանք։ Օգտագործիր **տաք լույսի** և **սառը մթության** հակադրությունը։
 
+~~~art
+mood scene=city moods=evening,night
+~~~
+
 ## Նկարիր քո փողոցը
 
 1. Ընտրիր տեսակետ և հորիզոնի գիծ։
@@ -893,8 +1142,12 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 4. Մասշտաբի համար ավելացրու մարդիկ և տրանսպորտ։
 5. Ընտրիր ժամը և եղանակը և նկարիր տրամադրությունը։
 
-### Վարժություններ
+~~~art
+perspective modes=two
+~~~
 
+~~~art
+tasks
 1. Ինչ կարող է ցույց տալ քաղաքային բնանկարը։
 2. Որ նկարիչներն էին սիրում Փարիզի բուլվարները։
 3. Երեք գծով նկարագրիր Երևանի բնավորությունը։
@@ -902,13 +1155,19 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 5. Ինչու են մարդկանց փոքր պատկերներն օգտակար քաղաքային բնանկարում։
 6. Որ գույներն են գիշերային քաղաքը դարձնում արտահայտիչ։
 7. Նկարիր քո փողոցը մեկ կետով հեռանկարում՝ քո ընտրած ժամին։
+~~~
 
-### Պատասխաններ
-
-1. Փողոցներ, հրապարակներ, կամուրջներ, տանիքներ, բակեր։ 2. Իմպրեսիոնիստները։ 3. Օրինակ՝ վարդագույն և նարնջագույն տուֆ, կամարաշարեր, Կասկադ, Արարատը տանիքների վերևում։ 4. Պատուհանների, սյուների, ծառերի և լապտերների շարքերով։ 5. Կյանք են բերում և ցույց են տալիս շենքերի մասշտաբը։ 6. Տաք դեղին լույսերը սառը մուգ կապույտի դեմ։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Փողոցներ, հրապարակներ, կամուրջներ, տանիքներ, բակեր։ 2. Իմպրեսիոնիստները։ 3. Օրինակ՝ վարդագույն և նարնջագույն տուֆ, կամարաշարեր, Կասկադ, Արարատը տանիքների վերևում։ 4. Պատուհանների, սյուների, ծառերի և լապտերների շարքերով։ 5. Կյանք են բերում և ցույց են տալիս շենքերի մասշտաբը։ 6. Տաք դեղին լույսերը սառը մուգ կապույտի դեմ։ 7. Քո նկարը։
+~~~`,
         ru: `## Город как тема
 
 Городской пейзаж показывает улицы, площади, мосты, крыши и дворы. Импрессионисты любили оживлённые бульвары Парижа и писали их из высоких окон в разную погоду. Русские художники, например **Константин Юон**, писали яркую жизнь московских улиц и старинных городов. Армянские художники писали дворики старого Еревана, розовые туфовые здания Таманяна и улицы, взбирающиеся на холмы.
+
+~~~art
+pic genre-city
+~~~
 
 ## У каждого города свой характер
 
@@ -916,6 +1175,10 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 * **Современный город:** широкие проспекты, высокие стеклянные здания, машины, огни.
 * **Ереван:** розовый и оранжевый туф, аркады, площадь Республики, Каскад, Арарат над крышами.
 * **Москва:** башни Кремля, луковичные купола, широкие бульвары.
+
+~~~art
+pic tamanyan kremlin skyscraper
+~~~
 
 ## Средства городского пейзажа
 
@@ -931,6 +1194,10 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 
 Ночью небо тёмно-синее, окна тёплые жёлтые, а фонари дают круглые пятна света. Мокрые улицы отражают их. Используй контраст **тёплого света** и **холодной темноты**.
 
+~~~art
+mood scene=city moods=evening,night
+~~~
+
 ## Нарисуй свою улицу
 
 1. Выбери точку зрения и линию горизонта.
@@ -939,8 +1206,12 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 4. Добавь людей и транспорт для масштаба.
 5. Выбери время и погоду и передай настроение.
 
-### Упражнения
+~~~art
+perspective modes=two
+~~~
 
+~~~art
+tasks
 1. Что может показывать городской пейзаж?
 2. Какие художники любили бульвары Парижа?
 3. Опиши характер Еревана тремя чертами.
@@ -948,10 +1219,12 @@ At night the sky is dark blue, the windows are warm yellow, and the lamps make r
 5. Зачем в городском пейзаже маленькие фигурки людей?
 6. Какие цвета делают ночной город выразительным?
 7. Нарисуй свою улицу в перспективе с одной точкой схода в выбранное время суток.
+~~~
 
-### Ответы
-
-1. Улицы, площади, мосты, крыши, дворы. 2. Импрессионисты. 3. Например: розовый и оранжевый туф, аркады, Каскад, Арарат над крышами. 4. Рядами окон, колонн, деревьев и фонарей. 5. Они приносят жизнь и показывают масштаб зданий. 6. Тёплые жёлтые огни на холодном тёмно-синем. 7. Твой рисунок.`,
+~~~art
+hints
+1. Улицы, площади, мосты, крыши, дворы. 2. Импрессионисты. 3. Например: розовый и оранжевый туф, аркады, Каскад, Арарат над крышами. 4. Рядами окон, колонн, деревьев и фонарей. 5. Они приносят жизнь и показывают масштаб зданий. 6. Тёплые жёлтые огни на холодном тёмно-синем. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("The Impressionists loved to paint…", "Իմպրեսիոնիստները սիրում էին նկարել…", "Импрессионисты любили писать…"), [t("the boulevards of Paris", "Փարիզի բուլվարները", "бульвары Парижа"), t("Egyptian pyramids", "եգիպտական բուրգերը", "египетские пирамиды"), t("battle scenes", "մարտական տեսարաններ", "батальные сцены")], 0),

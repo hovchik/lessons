@@ -21,6 +21,10 @@ export const unit1: UnitSeed = {
 
 This year we study the arts that shape the world around us. **Design** creates useful and beautiful things: books, posters, chairs, phones, clothes. **Architecture** creates buildings and cities. Both start with a sheet of paper and with **composition**, the art of arranging parts into a whole.
 
+~~~art
+pic poster app-screen chair tamanyan
+~~~
+
 ## The main laws
 
 | Law | What it means | Example |
@@ -31,6 +35,10 @@ This year we study the arts that shape the world around us. **Design** creates u
 | **Rhythm** | shapes or intervals repeat | windows of a building, columns |
 | **Contrast** | strong differences: big and small, dark and light | a red circle on a grey page |
 | **Dominant** | the main element that catches the eye first | a tower above a city, a title on a poster |
+
+~~~art
+compose
+~~~
 
 ## Visual weight
 
@@ -53,8 +61,13 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 4. Make one element the dominant: biggest, darkest or brightest.
 5. Make a second version that feels dynamic, with a diagonal.
 
-### Exercises
+~~~art
+sketch guide=thirds
+Composition with three shapes: a big one, a middle one, a small one. Make them balance on the sheet.
+~~~
 
+~~~art
+tasks
 1. What do design and architecture have in common?
 2. What is balance in a composition?
 3. Give an example of rhythm in architecture.
@@ -62,13 +75,19 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 5. What is a dominant?
 6. When is a composition dynamic?
 7. Make two compositions from rectangles and a line: one static and one dynamic.
+~~~
 
-### Answers
-
-1. Both are built on composition, the arrangement of parts into a whole. 2. The parts feel equally heavy on both sides. 3. A row of windows or columns. 4. The black square. 5. The main element that catches the eye first. 6. When diagonals and open space lead the eye. 7. Your compositions.`,
+~~~art
+hints
+1. Both are built on composition, the arrangement of parts into a whole. 2. The parts feel equally heavy on both sides. 3. A row of windows or columns. 4. The black square. 5. The main element that catches the eye first. 6. When diagonals and open space lead the eye. 7. Your compositions.
+~~~`,
         hy: `## Դիզայն և ճարտարապետություն
 
 Այս տարի ուսումնասիրում ենք այն արվեստները, որոնք ձևավորում են մեզ շրջապատող աշխարհը։ **Դիզայնը** ստեղծում է օգտակար և գեղեցիկ իրեր՝ գրքեր, պաստառներ, աթոռներ, հեռախոսներ, հագուստ։ **Ճարտարապետությունը** ստեղծում է շենքեր և քաղաքներ։ Երկուսն էլ սկսվում են թղթի թերթից և **կոմպոզիցիայից**՝ մասերն ամբողջության մեջ դասավորելու արվեստից։
+
+~~~art
+pic poster app-screen chair tamanyan
+~~~
 
 ## Հիմնական օրենքները
 
@@ -80,6 +99,10 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 | **Ռիթմ** | ձևերը կամ միջակայքերը կրկնվում են | շենքի պատուհանները, սյուները |
 | **Կոնտրաստ** | ուժեղ տարբերություններ՝ մեծ և փոքր, մուգ և բաց | կարմիր շրջան մոխրագույն էջի վրա |
 | **Դոմինանտ** | գլխավոր տարրը, որն առաջինն է գրավում հայացքը | աշտարակ քաղաքի վերևում, վերնագիր պաստառի վրա |
+
+~~~art
+compose
+~~~
 
 ## Տեսողական ծանրություն
 
@@ -102,8 +125,13 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 4. Մի տարրը դարձրու դոմինանտ՝ ամենամեծը, ամենամուգը կամ ամենավառը։
 5. Արա երկրորդ տարբերակ, որը դինամիկ լինի՝ անկյունագծով։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+Կոմպոզիցիա երեք ձևով․ մեկ մեծ, մեկ միջին, մեկ փոքր։ Թող դրանք հավասարակշռված լինեն թերթի վրա։
+~~~
 
+~~~art
+tasks
 1. Ինչն է ընդհանուր դիզայնի և ճարտարապետության մեջ։
 2. Ինչ է հավասարակշռությունը կոմպոզիցիայում։
 3. Բեր ճարտարապետության մեջ ռիթմի օրինակ։
@@ -111,13 +139,19 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 5. Ինչ է դոմինանտը։
 6. Երբ է կոմպոզիցիան դինամիկ։
 7. Ուղղանկյուններից և գծից կազմիր երկու կոմպոզիցիա՝ մեկը ստատիկ, մյուսը՝ դինամիկ։
+~~~
 
-### Պատասխաններ
-
-1. Երկուսն էլ կառուցվում են կոմպոզիցիայի վրա՝ մասերն ամբողջության մեջ դասավորելով։ 2. Մասերն երկու կողմից հավասարապես ծանր են թվում։ 3. Պատուհանների կամ սյուների շարքը։ 4. Սև քառակուսին։ 5. Գլխավոր տարրը, որն առաջինն է գրավում հայացքը։ 6. Երբ անկյունագծերն ու բաց տարածությունն առաջնորդում են հայացքը։ 7. Քո կոմպոզիցիաները։`,
+~~~art
+hints
+1. Երկուսն էլ կառուցվում են կոմպոզիցիայի վրա՝ մասերն ամբողջության մեջ դասավորելով։ 2. Մասերն երկու կողմից հավասարապես ծանր են թվում։ 3. Պատուհանների կամ սյուների շարքը։ 4. Սև քառակուսին։ 5. Գլխավոր տարրը, որն առաջինն է գրավում հայացքը։ 6. Երբ անկյունագծերն ու բաց տարածությունն առաջնորդում են հայացքը։ 7. Քո կոմպոզիցիաները։
+~~~`,
         ru: `## Дизайн и архитектура
 
 В этом году мы изучаем искусства, которые формируют мир вокруг нас. **Дизайн** создаёт полезные и красивые вещи: книги, плакаты, стулья, телефоны, одежду. **Архитектура** создаёт здания и города. И то и другое начинается с листа бумаги и с **композиции** — искусства соединять части в целое.
+
+~~~art
+pic poster app-screen chair tamanyan
+~~~
 
 ## Основные законы
 
@@ -129,6 +163,10 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 | **Ритм** | повторяются формы или интервалы | окна здания, колонны |
 | **Контраст** | сильные различия: большое и малое, тёмное и светлое | красный круг на сером листе |
 | **Доминанта** | главный элемент, который первым притягивает взгляд | башня над городом, заголовок на плакате |
+
+~~~art
+compose
+~~~
 
 ## Зрительный вес
 
@@ -151,8 +189,13 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 4. Сделай один элемент доминантой: самым большим, тёмным или ярким.
 5. Сделай второй вариант, динамичный, с диагональю.
 
-### Упражнения
+~~~art
+sketch guide=thirds
+Композиция из трёх фигур: большая, средняя и маленькая. Добейся равновесия на листе.
+~~~
 
+~~~art
+tasks
 1. Что общего у дизайна и архитектуры?
 2. Что такое равновесие в композиции?
 3. Приведи пример ритма в архитектуре.
@@ -160,10 +203,12 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 5. Что такое доминанта?
 6. Когда композиция динамичная?
 7. Составь из прямоугольников и линии две композиции: статичную и динамичную.
+~~~
 
-### Ответы
-
-1. Оба основаны на композиции — соединении частей в целое. 2. Части кажутся одинаково тяжёлыми с обеих сторон. 3. Ряд окон или колонн. 4. Чёрный квадрат. 5. Главный элемент, который первым притягивает взгляд. 6. Когда взгляд ведут диагонали и свободное пространство. 7. Твои композиции.`,
+~~~art
+hints
+1. Оба основаны на композиции — соединении частей в целое. 2. Части кажутся одинаково тяжёлыми с обеих сторон. 3. Ряд окон или колонн. 4. Чёрный квадрат. 5. Главный элемент, который первым притягивает взгляд. 6. Когда взгляд ведут диагонали и свободное пространство. 7. Твои композиции.
+~~~`,
       },
       [
         q(t("The main element that catches the eye first is the…", "Գլխավոր տարրը, որն առաջինն է գրավում հայացքը…", "Главный элемент, который первым притягивает взгляд, — это…"), [t("dominant", "դոմինանտն է", "доминанта"), t("background", "ֆոնն է", "фон"), t("margin", "լուսանցքն է", "поле")], 0),
@@ -187,6 +232,10 @@ Designers start with the simplest elements: **point, line, spot**. Try it:
 
 In design, colour is not decoration only. It **attracts attention**, **groups** things, **tells** us what is important and creates a **mood**. A red button says «press me», a green sign says «exit», a calm blue makes a hospital feel safe.
 
+~~~art
+palette digital eco bauhaus
+~~~
+
 ## Colour harmonies
 
 Remember the colour wheel. Designers use a few proven schemes:
@@ -198,6 +247,10 @@ Remember the colour wheel. Designers use a few proven schemes:
 | **Complementary** | two opposite colours, e.g. blue and orange | bright, energetic |
 | **Triad** | three colours evenly spaced, e.g. red, yellow, blue | lively, playful |
 | **Accent** | neutral greys or whites plus one bright colour | modern, clear |
+
+~~~art
+wheel modes=complementary,analogous,triad
+~~~
 
 ## Rules designers follow
 
@@ -211,12 +264,20 @@ Remember the colour wheel. Designers use a few proven schemes:
 
 Flags are the simplest colour compositions. The flag of Armenia has three horizontal stripes: red, blue and apricot (orange). The flag of Russia is white, blue and red. Many cities and brands also choose their own colours, like the pink tuff of Yerevan.
 
+~~~art
+palette armenia-flag russia-flag
+~~~
+
 ## Task
 
 Make three versions of the same simple composition (for example, a square with three shapes): monochrome, complementary and accent. Compare which is calm and which is loud.
 
-### Exercises
+~~~art
+tints
+~~~
 
+~~~art
+tasks
 1. Name three jobs colour does in design.
 2. What is a monochrome scheme?
 3. Which colours are complementary to blue?
@@ -224,13 +285,19 @@ Make three versions of the same simple composition (for example, a square with t
 5. Why can't yellow text be used on a white background?
 6. What are the colours of the Armenian flag?
 7. Make three colour versions of one composition.
+~~~
 
-### Answers
-
-1. Attracts attention, groups things, creates mood (also shows what is important). 2. One hue in light and dark shades. 3. Orange. 4. About 60% main colour, 30% second colour, 10% accent. 5. The contrast is too weak to read. 6. Red, blue and apricot. 7. Your work.`,
+~~~art
+hints
+1. Attracts attention, groups things, creates mood (also shows what is important). 2. One hue in light and dark shades. 3. Orange. 4. About 60% main colour, 30% second colour, 10% accent. 5. The contrast is too weak to read. 6. Red, blue and apricot. 7. Your work.
+~~~`,
         hy: `## Գույնն աշխատում է
 
 Դիզայնում գույնը միայն զարդ չէ։ Այն **գրավում է ուշադրությունը**, **խմբավորում** է իրերը, **ասում** է, թե ինչն է կարևոր, և ստեղծում **տրամադրություն**։ Կարմիր կոճակն ասում է «սեղմիր ինձ», կանաչ նշանը՝ «ելք», հանգիստ կապույտը հիվանդանոցը դարձնում է ապահով թվացող։
+
+~~~art
+palette digital eco bauhaus
+~~~
 
 ## Գունային հարմոնիաներ
 
@@ -244,6 +311,10 @@ Make three versions of the same simple composition (for example, a square with t
 | **Եռյակ** | երեք հավասարաչափ դասավորված գույն, օրինակ՝ կարմիր, դեղին, կապույտ | աշխույժ, խաղային |
 | **Շեշտ** | չեզոք մոխրագույններ կամ սպիտակներ և մեկ վառ գույն | ժամանակակից, հստակ |
 
+~~~art
+wheel modes=complementary,analogous,triad
+~~~
+
 ## Կանոններ, որոնց հետևում են դիզայներները
 
 * **Կոնտրաստ՝ ընթերցելու համար։** Մուգ տեքստ բաց ֆոնի վրա կամ բաց՝ մուգի վրա։ Դեղին տեքստը սպիտակի վրա չի կարդացվում։
@@ -256,12 +327,20 @@ Make three versions of the same simple composition (for example, a square with t
 
 Դրոշներն ամենապարզ գունային կոմպոզիցիաներն են։ Հայաստանի դրոշն ունի երեք հորիզոնական շերտ՝ կարմիր, կապույտ և ծիրանագույն։ Ռուսաստանի դրոշը սպիտակ, կապույտ և կարմիր է։ Շատ քաղաքներ և բրենդներ նույնպես ընտրում են իրենց գույները, ինչպես Երևանի վարդագույն տուֆը։
 
+~~~art
+palette armenia-flag russia-flag
+~~~
+
 ## Առաջադրանք
 
 Նույն պարզ կոմպոզիցիայից (օրինակ՝ քառակուսի երեք ձևով) արա երեք տարբերակ՝ միագույն, լրացուցիչ և շեշտով։ Համեմատիր, թե որն է հանգիստ, և որը՝ բարձրաձայն։
 
-### Վարժություններ
+~~~art
+tints
+~~~
 
+~~~art
+tasks
 1. Անվանիր երեք գործ, որ գույնը կատարում է դիզայնում։
 2. Ինչ է միագույն սխեման։
 3. Որ գույնն է լրացուցիչ կապույտին։
@@ -269,13 +348,19 @@ Make three versions of the same simple composition (for example, a square with t
 5. Ինչու չի կարելի դեղին տեքստ օգտագործել սպիտակ ֆոնի վրա։
 6. Որոնք են Հայաստանի դրոշի գույները։
 7. Մեկ կոմպոզիցիայից արա երեք գունային տարբերակ։
+~~~
 
-### Պատասխաններ
-
-1. Գրավում է ուշադրությունը, խմբավորում է իրերը, ստեղծում է տրամադրություն (նաև ցույց է տալիս կարևորը)։ 2. Մեկ երանգ՝ բաց և մուգ տարբերակներով։ 3. Նարնջագույնը։ 4. Մոտ 60%՝ հիմնական գույն, 30%՝ երկրորդ, 10%՝ շեշտ։ 5. Կոնտրաստը չափազանց թույլ է կարդալու համար։ 6. Կարմիր, կապույտ և ծիրանագույն։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Գրավում է ուշադրությունը, խմբավորում է իրերը, ստեղծում է տրամադրություն (նաև ցույց է տալիս կարևորը)։ 2. Մեկ երանգ՝ բաց և մուգ տարբերակներով։ 3. Նարնջագույնը։ 4. Մոտ 60%՝ հիմնական գույն, 30%՝ երկրորդ, 10%՝ շեշտ։ 5. Կոնտրաստը չափազանց թույլ է կարդալու համար։ 6. Կարմիր, կապույտ և ծիրանագույն։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Цвет работает
 
 В дизайне цвет — не только украшение. Он **привлекает внимание**, **группирует** предметы, **сообщает**, что важно, и создаёт **настроение**. Красная кнопка говорит «нажми меня», зелёный знак — «выход», спокойный голубой делает больницу уютной.
+
+~~~art
+palette digital eco bauhaus
+~~~
 
 ## Цветовые гармонии
 
@@ -289,6 +374,10 @@ Make three versions of the same simple composition (for example, a square with t
 | **Триада** | три цвета на равном расстоянии, например красный, жёлтый, синий | живая, весёлая |
 | **Акцентная** | нейтральные серые или белые плюс один яркий цвет | современная, ясная |
 
+~~~art
+wheel modes=complementary,analogous,triad
+~~~
+
 ## Правила дизайнеров
 
 * **Контраст для чтения.** Тёмный текст на светлом фоне или светлый на тёмном. Жёлтый текст на белом прочитать нельзя.
@@ -301,12 +390,20 @@ Make three versions of the same simple composition (for example, a square with t
 
 Флаги — простейшие цветовые композиции. Флаг Армении состоит из трёх горизонтальных полос: красной, синей и абрикосовой (оранжевой). Флаг России белый, синий и красный. Многие города и бренды тоже выбирают свои цвета — как розовый туф Еревана.
 
+~~~art
+palette armenia-flag russia-flag
+~~~
+
 ## Задание
 
 Сделай три варианта одной простой композиции (например, квадрат с тремя фигурами): монохромный, контрастный и акцентный. Сравни, какой спокойный, а какой «громкий».
 
-### Упражнения
+~~~art
+tints
+~~~
 
+~~~art
+tasks
 1. Назови три задачи цвета в дизайне.
 2. Что такое монохромная схема?
 3. Какой цвет контрастен (дополнителен) синему?
@@ -314,10 +411,12 @@ Make three versions of the same simple composition (for example, a square with t
 5. Почему нельзя использовать жёлтый текст на белом фоне?
 6. Какие цвета у флага Армении?
 7. Сделай три цветовых варианта одной композиции.
+~~~
 
-### Ответы
-
-1. Привлекает внимание, группирует, создаёт настроение (а также показывает главное). 2. Один цвет в светлых и тёмных оттенках. 3. Оранжевый. 4. Около 60% основного цвета, 30% второго, 10% акцента. 5. Контраст слишком слабый для чтения. 6. Красный, синий и абрикосовый. 7. Твоя работа.`,
+~~~art
+hints
+1. Привлекает внимание, группирует, создаёт настроение (а также показывает главное). 2. Один цвет в светлых и тёмных оттенках. 3. Оранжевый. 4. Около 60% основного цвета, 30% второго, 10% акцента. 5. Контраст слишком слабый для чтения. 6. Красный, синий и абрикосовый. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Two opposite colours on the wheel form a … harmony.", "Շրջանի երկու հակադիր գույները կազմում են … հարմոնիա։", "Два противоположных цвета круга образуют … гармонию."), [t("complementary", "լրացուցիչ", "контрастную"), t("monochrome", "միագույն", "монохромную"), t("analogous", "հարակից", "родственную")], 0),
@@ -354,6 +453,10 @@ Every letter is a small composition of lines and spaces. **Typography** is the a
 
 Today Armenian designers create new fonts for books, screens and street signs. Near Artashavan in Aragatsotn stands the **Alphabet Monument** with large stone letters, made in 2005 for the 1600th anniversary of the alphabet.
 
+~~~art
+pic letter-initial
+~~~
+
 ## Cyrillic letters
 
 Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**. Old Russian books were written in **ustav**, solemn upright letters. In 1708 **Peter the Great** introduced the simpler **civil script**, close to the modern Russian letters.
@@ -366,6 +469,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 * **Letter spacing** and **line spacing:** the air between letters and between lines.
 * **Readability:** body text needs a simple font; bright decorative fonts are for titles.
 
+~~~art
+letters
+~~~
+
 ## Designing a letter
 
 1. Choose the first letter of your name in Armenian or Russian.
@@ -373,8 +480,13 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 3. Make a version with serifs and one without.
 4. Turn the best version into a decorated **initial** with an ornament, like in a manuscript.
 
-### Exercises
+~~~art
+sketch guide=grid
+Design a letter on the grid: keep the same stroke thickness and the same height as its neighbours.
+~~~
 
+~~~art
+tasks
 1. What is typography?
 2. Who created the Armenian alphabet and when?
 3. Which two letters were added to the Armenian alphabet later?
@@ -382,10 +494,12 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 5. What did Peter the Great change in 1708?
 6. What is the difference between serif and sans serif fonts?
 7. Draw the first letter of your name in two styles and decorate one as an initial.
+~~~
 
-### Answers
-
-1. The art of designing letters and arranging them on a page. 2. Mesrop Mashtots, in 405. 3. Օ and Ֆ. 4. Rounded small letters. 5. He introduced the simpler civil script. 6. Serif fonts have small strokes at the ends of letters; sans serif fonts do not. 7. Your drawings.`,
+~~~art
+hints
+1. The art of designing letters and arranging them on a page. 2. Mesrop Mashtots, in 405. 3. Օ and Ֆ. 4. Rounded small letters. 5. He introduced the simpler civil script. 6. Serif fonts have small strokes at the ends of letters; sans serif fonts do not. 7. Your drawings.
+~~~`,
         hy: `## Տառը նկար է
 
 Յուրաքանչյուր տառ գծերի և տարածությունների փոքր կոմպոզիցիա է։ **Տիպոգրաֆիան** տառեր նախագծելու և դրանք էջի վրա դասավորելու արվեստն է։ **Տառատեսակը** մեկ ոճով նկարված տառերի հավաքածու է։
@@ -403,6 +517,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 
 Այսօր հայ դիզայներները նոր տառատեսակներ են ստեղծում գրքերի, էկրանների և փողոցային ցուցանակների համար։ Արագածոտնի Արտաշավանի մոտ կանգնած է **Այբուբենի հուշարձանը**՝ մեծ քարե տառերով, ստեղծված 2005 թվականին՝ այբուբենի 1600-ամյակի առթիվ։
 
+~~~art
+pic letter-initial
+~~~
+
 ## Կիրիլյան տառեր
 
 Կիրիլիցան ի հայտ է եկել 9–10-րդ դարերում և կոչվում է **Սուրբ Կիրիլի** անունով։ Հին ռուսական գրքերը գրվում էին **ուստավով**՝ հանդիսավոր ուղիղ տառերով։ 1708 թվականին **Պետրոս Առաջինը** ներմուծեց ավելի պարզ **քաղաքացիական գիրը**, որը մոտ է ժամանակակից ռուսական տառերին։
@@ -415,6 +533,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 * **Միջատառային** և **միջտողային տարածություն**՝ օդը տառերի և տողերի միջև։
 * **Ընթեռնելիություն**՝ հիմնական տեքստին պետք է պարզ տառատեսակ, վառ զարդարուն տառատեսակները վերնագրերի համար են։
 
+~~~art
+letters
+~~~
+
 ## Տառի նախագծում
 
 1. Ընտրիր քո անվան առաջին տառը հայերեն կամ ռուսերեն։
@@ -422,8 +544,13 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 3. Արա մի տարբերակ թաթիկներով և մեկը՝ առանց։
 4. Լավագույն տարբերակը դարձրու զարդարված **գլխազարդ տառ**՝ զարդանախշով, ինչպես ձեռագրում։
 
-### Վարժություններ
+~~~art
+sketch guide=grid
+Ձևավորի՛ր տառ ցանցի վրա․ պահպանի՛ր գծի նույն հաստությունը և նույն բարձրությունը, ինչ հարևան տառերինը։
+~~~
 
+~~~art
+tasks
 1. Ինչ է տիպոգրաֆիան։
 2. Ով և երբ է ստեղծել հայոց այբուբենը։
 3. Որ երկու տառն են հետագայում ավելացվել հայոց այբուբենին։
@@ -431,10 +558,12 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 5. Ինչ փոխեց Պետրոս Առաջինը 1708 թվականին։
 6. Ինչով են տարբերվում թաթիկներով և առանց թաթիկի տառատեսակները։
 7. Նկարիր քո անվան առաջին տառն երկու ոճով և մեկը զարդարիր որպես գլխազարդ տառ։
+~~~
 
-### Պատասխաններ
-
-1. Տառեր նախագծելու և էջի վրա դասավորելու արվեստը։ 2. Մեսրոպ Մաշտոցը, 405 թվականին։ 3. Օ և Ֆ։ 4. Կլորավուն փոքրատառեր։ 5. Ներմուծեց ավելի պարզ քաղաքացիական գիրը։ 6. Թաթիկներով տառատեսակներն ունեն փոքր գծիկներ տառերի ծայրերին, առանց թաթիկիները՝ ոչ։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Տառեր նախագծելու և էջի վրա դասավորելու արվեստը։ 2. Մեսրոպ Մաշտոցը, 405 թվականին։ 3. Օ և Ֆ։ 4. Կլորավուն փոքրատառեր։ 5. Ներմուծեց ավելի պարզ քաղաքացիական գիրը։ 6. Թաթիկներով տառատեսակներն ունեն փոքր գծիկներ տառերի ծայրերին, առանց թաթիկիները՝ ոչ։ 7. Քո նկարները։
+~~~`,
         ru: `## Буква — это рисунок
 
 Каждая буква — маленькая композиция из линий и промежутков. **Типографика** — искусство создавать буквы и располагать их на странице. **Шрифт** — набор букв, нарисованных в одном стиле.
@@ -452,6 +581,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 
 Сегодня армянские дизайнеры создают новые шрифты для книг, экранов и уличных вывесок. Возле Арташавана в Арагацотне стоит **памятник армянскому алфавиту** с большими каменными буквами, созданный в 2005 году к 1600-летию алфавита.
 
+~~~art
+pic letter-initial
+~~~
+
 ## Кириллица
 
 Кириллица появилась в IX–X веках и названа в честь **святого Кирилла**. Древнерусские книги писали **уставом** — торжественными прямыми буквами. В 1708 году **Пётр I** ввёл более простой **гражданский шрифт**, близкий к современным русским буквам.
@@ -464,6 +597,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 * **Межбуквенный** и **межстрочный интервал** (интерлиньяж): воздух между буквами и строками.
 * **Удобочитаемость:** для основного текста нужен простой шрифт, яркие декоративные — для заголовков.
 
+~~~art
+letters
+~~~
+
 ## Рисуем букву
 
 1. Выбери первую букву своего имени по-армянски или по-русски.
@@ -471,8 +608,13 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 3. Сделай вариант с засечками и без.
 4. Преврати лучший вариант в украшенную **буквицу** с орнаментом, как в рукописи.
 
-### Упражнения
+~~~art
+sketch guide=grid
+Нарисуй букву на сетке: держи ту же толщину штриха и ту же высоту, что у соседних букв.
+~~~
 
+~~~art
+tasks
 1. Что такое типографика?
 2. Кто и когда создал армянский алфавит?
 3. Какие две буквы позже добавились к армянскому алфавиту?
@@ -480,10 +622,12 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 5. Что изменил Пётр I в 1708 году?
 6. Чем шрифт с засечками отличается от рубленого?
 7. Нарисуй первую букву своего имени в двух стилях и укрась одну как буквицу.
+~~~
 
-### Ответы
-
-1. Искусство создавать буквы и располагать их на странице. 2. Месроп Маштоц, в 405 году. 3. Օ и Ֆ. 4. Округлые строчные буквы. 5. Ввёл более простой гражданский шрифт. 6. У шрифта с засечками на концах букв есть маленькие штрихи, у рубленого их нет. 7. Твои рисунки.`,
+~~~art
+hints
+1. Искусство создавать буквы и располагать их на странице. 2. Месроп Маштоц, в 405 году. 3. Օ и Ֆ. 4. Округлые строчные буквы. 5. Ввёл более простой гражданский шрифт. 6. У шрифта с засечками на концах букв есть маленькие штрихи, у рубленого их нет. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The Armenian alphabet was created in…", "Հայոց այբուբենը ստեղծվել է…", "Армянский алфавит создан в…"), [t("405", "405 թվականին", "405 году"), t("1512", "1512 թվականին", "1512 году"), t("1708", "1708 թվականին", "1708 году")], 0),
@@ -507,6 +651,10 @@ Cyrillic appeared in the 9th–10th centuries and is named after **Saint Cyril**
 
 A painting is looked at for a long time. A **poster** must be understood **in three seconds**, from a distance, by a person passing by. That is why a poster speaks loudly and briefly: one idea, a big image, a short text.
 
+~~~art
+pic poster
+~~~
+
 ## Kinds of posters
 
 * **Advertising:** a concert, a film, a product, an exhibition.
@@ -521,6 +669,10 @@ A painting is looked at for a long time. A **poster** must be understood **in th
 * **Vladimir Mayakovsky** and other artists made the «ROSTA Windows», poster comics with short rhyming texts.
 * Today posters for festivals, theatres and films are made in Yerevan, Moscow and all over the world, often on a computer.
 
+~~~art
+palette loud bauhaus
+~~~
+
 ## How a poster is built
 
 1. **Idea:** one message, one sentence.
@@ -530,16 +682,28 @@ A painting is looked at for a long time. A **poster** must be understood **in th
 5. **Contrast and colour:** two or three colours, a clear dominant.
 6. **Font:** bold and readable; the style of the letters supports the mood.
 
+~~~art
+steps poster-layout
+~~~
+
 ## The image and the word
 
 The text should not repeat the picture; they must **complete** each other. A picture of a melting ice cream with the slogan «The planet is melting too» says more than either part alone.
+
+~~~art
+letters
+~~~
 
 ## Task
 
 Choose a topic: a school concert, a book day, saving water, or a city cleanup. Make three thumbnails, choose the best, then draw the poster in A3 with gouache or markers.
 
-### Exercises
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. How long should it take to understand a poster?
 2. Name four kinds of posters.
 3. What did Toulouse-Lautrec draw posters for?
@@ -547,13 +711,19 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 5. How long should a slogan be?
 6. Why must text and image not repeat each other?
 7. Make a poster on a topic of your choice.
+~~~
 
-### Answers
-
-1. About three seconds. 2. Advertising, social, political (historical), information. 3. The Paris cabaret Moulin Rouge. 4. He points straight at the viewer. 5. About 3–7 words. 6. They must complete each other and together say more. 7. Your poster.`,
+~~~art
+hints
+1. About three seconds. 2. Advertising, social, political (historical), information. 3. The Paris cabaret Moulin Rouge. 4. He points straight at the viewer. 5. About 3–7 words. 6. They must complete each other and together say more. 7. Your poster.
+~~~`,
         hy: `## Ճիչ պատի վրա
 
 Կտավին երկար են նայում։ **Պաստառը** պետք է հասկանալի լինի **երեք վայրկյանում**, հեռվից, կողքով անցնող մարդու համար։ Ահա թե ինչու պաստառը խոսում է բարձր և կարճ՝ մեկ գաղափար, մեծ պատկեր, կարճ տեքստ։
+
+~~~art
+pic poster
+~~~
 
 ## Պաստառների տեսակները
 
@@ -569,6 +739,10 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 * **Վլադիմիր Մայակովսկին** և այլ նկարիչներ ստեղծում էին «ՌՈՍՏԱ-ի պատուհանները»՝ պաստառ-կոմիքսներ կարճ հանգավոր տեքստերով։
 * Այսօր փառատոների, թատրոնների և ֆիլմերի պաստառներ ստեղծվում են Երևանում, Մոսկվայում և ամբողջ աշխարհում, հաճախ համակարգչով։
 
+~~~art
+palette loud bauhaus
+~~~
+
 ## Ինչպես է կառուցվում պաստառը
 
 1. **Գաղափար**՝ մեկ ուղերձ, մեկ նախադասություն։
@@ -578,16 +752,28 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 5. **Կոնտրաստ և գույն**՝ երկու-երեք գույն, հստակ դոմինանտ։
 6. **Տառատեսակ**՝ թավ և ընթեռնելի, տառերի ոճն աջակցում է տրամադրությանը։
 
+~~~art
+steps poster-layout
+~~~
+
 ## Պատկեր և բառ
 
 Տեքստը չպետք է կրկնի նկարը, դրանք պետք է **լրացնեն** միմյանց։ Հալվող պաղպաղակի նկարը «Մոլորակն էլ է հալվում» կարգախոսով ավելին է ասում, քան մասերից յուրաքանչյուրն առանձին։
+
+~~~art
+letters
+~~~
 
 ## Առաջադրանք
 
 Ընտրիր թեմա՝ դպրոցական համերգ, գրքի օր, ջրի խնայողություն կամ քաղաքի մաքրում։ Արա երեք փոքր էսքիզ, ընտրիր լավագույնը, ապա պաստառը նկարիր A3 չափով՝ գուաշով կամ մարկերներով։
 
-### Վարժություններ
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Որքան ժամանակում պետք է պաստառը հասկանալի լինի։
 2. Անվանիր պաստառների չորս տեսակ։
 3. Ինչի համար էր Թուլուզ-Լոտրեկը պաստառներ նկարում։
@@ -595,13 +781,19 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 5. Որքան երկար պետք է լինի կարգախոսը։
 6. Ինչու տեքստն ու պատկերը չպետք է կրկնեն միմյանց։
 7. Ստեղծիր պաստառ քո ընտրած թեմայով։
+~~~
 
-### Պատասխաններ
-
-1. Մոտ երեք վայրկյանում։ 2. Գովազդային, սոցիալական, քաղաքական (պատմական), տեղեկատվական։ 3. Փարիզի «Մուլեն Ռուժ» կաբարեի համար։ 4. Մատնացույց է անում ուղիղ դիտողին։ 5. Մոտ 3–7 բառ։ 6. Նրանք պետք է լրացնեն միմյանց և միասին ավելին ասեն։ 7. Քո պաստառը։`,
+~~~art
+hints
+1. Մոտ երեք վայրկյանում։ 2. Գովազդային, սոցիալական, քաղաքական (պատմական), տեղեկատվական։ 3. Փարիզի «Մուլեն Ռուժ» կաբարեի համար։ 4. Մատնացույց է անում ուղիղ դիտողին։ 5. Մոտ 3–7 բառ։ 6. Նրանք պետք է լրացնեն միմյանց և միասին ավելին ասեն։ 7. Քո պաստառը։
+~~~`,
         ru: `## Крик на стене
 
 На картину смотрят долго. **Плакат** должен быть понятен **за три секунды**, издалека, человеку, который проходит мимо. Поэтому плакат говорит громко и кратко: одна идея, крупное изображение, короткий текст.
+
+~~~art
+pic poster
+~~~
 
 ## Виды плакатов
 
@@ -617,6 +809,10 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 * **Владимир Маяковский** и другие художники делали «Окна РОСТА» — плакаты-комиксы с короткими стихотворными подписями.
 * Сегодня плакаты к фестивалям, спектаклям и фильмам создают в Ереване, Москве и по всему миру, часто на компьютере.
 
+~~~art
+palette loud bauhaus
+~~~
+
 ## Как строится плакат
 
 1. **Идея:** одно сообщение, одна фраза.
@@ -626,16 +822,28 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 5. **Контраст и цвет:** два-три цвета, ясная доминанта.
 6. **Шрифт:** жирный и читаемый; стиль букв поддерживает настроение.
 
+~~~art
+steps poster-layout
+~~~
+
 ## Изображение и слово
 
 Текст не должен повторять картинку — они должны **дополнять** друг друга. Тающее мороженое со слоганом «Планета тоже тает» говорит больше, чем каждая часть по отдельности.
+
+~~~art
+letters
+~~~
 
 ## Задание
 
 Выбери тему: школьный концерт, день книги, экономия воды или уборка города. Сделай три маленьких эскиза, выбери лучший и нарисуй плакат формата А3 гуашью или маркерами.
 
-### Упражнения
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. За сколько времени должен быть понятен плакат?
 2. Назови четыре вида плакатов.
 3. Для чего рисовал афиши Тулуз-Лотрек?
@@ -643,10 +851,12 @@ Choose a topic: a school concert, a book day, saving water, or a city cleanup. M
 5. Какой длины должен быть слоган?
 6. Почему текст и изображение не должны повторять друг друга?
 7. Создай плакат на выбранную тему.
+~~~
 
-### Ответы
-
-1. Примерно за три секунды. 2. Рекламный, социальный, политический (исторический), информационный. 3. Для парижского кабаре «Мулен Руж». 4. Указывает пальцем прямо на зрителя. 5. Примерно 3–7 слов. 6. Они должны дополнять друг друга и вместе говорить больше. 7. Твой плакат.`,
+~~~art
+hints
+1. Примерно за три секунды. 2. Рекламный, социальный, политический (исторический), информационный. 3. Для парижского кабаре «Мулен Руж». 4. Указывает пальцем прямо на зрителя. 5. Примерно 3–7 слов. 6. Они должны дополнять друг друга и вместе говорить больше. 7. Твой плакат.
+~~~`,
       },
       [
         q(t("A poster should be understood in about…", "Պաստառը պետք է հասկանալի լինի մոտ…", "Плакат должен быть понятен примерно за…"), [t("three seconds", "երեք վայրկյանում", "три секунды"), t("three minutes", "երեք րոպեում", "три минуты"), t("an hour", "մեկ ժամում", "час")], 0),
@@ -684,9 +894,18 @@ Every book, magazine, booklet or menu was planned by a **graphic designer**. The
 
 Armenian manuscripts were real works of book design: decorated title pages, margins with birds and plants, and initial letters made of figures.
 
+~~~art
+pic book-spread
+~~~
+
 ## The grid
 
 Designers divide a page into **columns** and **rows**, an invisible **grid**. Text and pictures are placed along the grid lines, so the pages look orderly and the reader's eye moves easily. A novel usually has one wide column; a magazine or newspaper has two to four.
+
+~~~art
+sketch guide=grid
+Lay out a spread on the grid: a big picture across columns, a heading, two text columns as grey lines.
+~~~
 
 ## A magazine spread
 
@@ -696,6 +915,10 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 * **Photos and captions:** a large photo attracts attention; captions explain.
 * **White space:** empty areas give rest to the eye. Do not fill everything.
 
+~~~art
+compose
+~~~
+
 ## Make a mock-up
 
 1. Fold two A4 sheets in half and put one inside the other: you have an 8-page booklet.
@@ -704,8 +927,8 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 4. Glue or draw pictures, write a headline and short texts (lines can show the body text).
 5. Design the cover with a title, a picture and the author's name: you.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a layout, and what is a mock-up?
 2. What is the spine of a book?
 3. What is a spread?
@@ -713,10 +936,12 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 5. What is the lead in a magazine article?
 6. Why is white space important?
 7. Make an 8-page booklet mock-up on a topic you like.
+~~~
 
-### Answers
-
-1. A layout is the plan of the pages; a mock-up is a hand-made model of it. 2. The narrow back edge we see on a shelf. 3. Two pages seen together when the book is open. 4. So that pages look orderly and are easy to read. 5. A short introduction in bigger letters. 6. It gives rest to the eye. 7. Your booklet.`,
+~~~art
+hints
+1. A layout is the plan of the pages; a mock-up is a hand-made model of it. 2. The narrow back edge we see on a shelf. 3. Two pages seen together when the book is open. 4. So that pages look orderly and are easy to read. 5. A short introduction in bigger letters. 6. It gives rest to the eye. 7. Your booklet.
+~~~`,
         hy: `## Ձևավորված գիրքը
 
 Յուրաքանչյուր գիրք, ամսագիր, բուկլետ կամ ճաշացանկ պլանավորել է **գրաֆիկական դիզայները**։ Դիզայներն որոշում է չափը, տառատեսակը, թե որտեղ են լինելու նկարները և որքան դատարկ տարածություն է մնալու։ Այս պլանը կոչվում է **մակետավորում**, իսկ դրա ձեռքով պատրաստված մոդելը՝ **մակետ**։
@@ -735,9 +960,18 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 
 Հայկական ձեռագրերը գրքի դիզայնի իսկական գործեր էին՝ զարդարված տիտղոսաթերթեր, թռչուններով և բույսերով լուսանցքներ, պատկերներից կազմված գլխատառեր։
 
+~~~art
+pic book-spread
+~~~
+
 ## Ցանցը
 
 Դիզայներներն էջը բաժանում են **սյունակների** և **տողաշարերի**՝ անտեսանելի **ցանցի**։ Տեքստն ու նկարները տեղադրվում են ցանցի գծերով, այնպես որ էջերը կարգավորված տեսք ունեն, և ընթերցողի աչքը հեշտությամբ է շարժվում։ Վեպը սովորաբար ունի մեկ լայն սյունակ, ամսագիրը կամ թերթը՝ երկուսից չորս։
+
+~~~art
+sketch guide=grid
+Դասավորի՛ր տարածքը ցանցի վրա․ մեծ նկար սյունակների վրայով, վերնագիր, տեքստի երկու սյունակ՝ մոխրագույն գծերով։
+~~~
 
 ## Ամսագրի բացվածք
 
@@ -747,6 +981,10 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 * **Լուսանկարներ և ստորագրություններ**՝ մեծ լուսանկարը գրավում է ուշադրությունը, ստորագրությունները բացատրում են։
 * **Դատարկ տարածություն**՝ դատարկ մասերը հանգիստ են տալիս աչքին։ Ամեն ինչ մի լցրու։
 
+~~~art
+compose
+~~~
+
 ## Պատրաստիր մակետ
 
 1. Երկու A4 թերթ ծալիր կիսով և մեկը դիր մյուսի մեջ՝ ունես 8 էջանոց գրքույկ։
@@ -755,8 +993,8 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 4. Սոսնձիր կամ նկարիր նկարներ, գրիր վերնագիր և կարճ տեքստեր (գծերը կարող են ցույց տալ հիմնական տեքստը)։
 5. Ձևավորիր կազմը՝ վերնագրով, նկարով և հեղինակի անունով՝ քո։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է մակետավորումը, և ինչ է մակետը։
 2. Ինչ է գրքի կողքը։
 3. Ինչ է բացվածքը։
@@ -764,10 +1002,12 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 5. Ինչ է լիդն ամսագրի հոդվածում։
 6. Ինչու է կարևոր դատարկ տարածությունը։
 7. Պատրաստիր 8 էջանոց գրքույկի մակետ քեզ դուր եկող թեմայով։
+~~~
 
-### Պատասխաններ
-
-1. Մակետավորումն էջերի պլանն է, մակետը՝ դրա ձեռքով պատրաստված մոդելը։ 2. Նեղ հետևի եզրը, որը տեսնում ենք դարակի վրա։ 3. Երկու էջ, որ տեսնում ենք միասին բաց գրքում։ 4. Որպեսզի էջերը կարգավորված լինեն և հեշտ կարդացվեն։ 5. Կարճ ներածություն ավելի մեծ տառերով։ 6. Այն հանգիստ է տալիս աչքին։ 7. Քո գրքույկը։`,
+~~~art
+hints
+1. Մակետավորումն էջերի պլանն է, մակետը՝ դրա ձեռքով պատրաստված մոդելը։ 2. Նեղ հետևի եզրը, որը տեսնում ենք դարակի վրա։ 3. Երկու էջ, որ տեսնում ենք միասին բաց գրքում։ 4. Որպեսզի էջերը կարգավորված լինեն և հեշտ կարդացվեն։ 5. Կարճ ներածություն ավելի մեծ տառերով։ 6. Այն հանգիստ է տալիս աչքին։ 7. Քո գրքույկը։
+~~~`,
         ru: `## Книга, которую придумали
 
 Каждую книгу, журнал, буклет или меню спланировал **графический дизайнер**. Он решает, каким будет формат, шрифт, где разместить иллюстрации и сколько оставить свободного места. Этот план называется **вёрсткой**, а сделанная руками модель — **макетом**.
@@ -786,9 +1026,18 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 
 Армянские рукописи были настоящими произведениями книжного дизайна: украшенные заставки, поля с птицами и растениями, буквицы из фигур.
 
+~~~art
+pic book-spread
+~~~
+
 ## Модульная сетка
 
 Дизайнеры делят страницу на **колонки** и **ряды** — невидимую **сетку**. Текст и картинки ставят по линиям сетки, поэтому страницы выглядят упорядоченно, а взгляд читателя движется легко. В романе обычно одна широкая колонка, в журнале или газете — от двух до четырёх.
+
+~~~art
+sketch guide=grid
+Сверстай разворот по сетке: большая картинка через колонки, заголовок, две колонки текста серыми линиями.
+~~~
 
 ## Журнальный разворот
 
@@ -798,6 +1047,10 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 * **Фотографии и подписи:** большое фото привлекает внимание, подписи объясняют.
 * **Свободное пространство:** пустые места дают глазу отдохнуть. Не заполняй всё.
 
+~~~art
+compose
+~~~
+
 ## Сделай макет
 
 1. Сложи два листа А4 пополам и вложи один в другой: получилась 8-страничная книжечка.
@@ -806,8 +1059,8 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 4. Наклей или нарисуй картинки, напиши заголовок и короткие тексты (основной текст можно обозначить линиями).
 5. Оформи обложку: название, картинка и имя автора — твоё.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое вёрстка и что такое макет?
 2. Что такое корешок книги?
 3. Что такое разворот?
@@ -815,10 +1068,12 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 5. Что такое лид в журнальной статье?
 6. Почему важно свободное пространство?
 7. Сделай макет 8-страничной книжечки на интересную тебе тему.
+~~~
 
-### Ответы
-
-1. Вёрстка — план страниц, макет — его модель, сделанная руками. 2. Узкий задний край, который виден на полке. 3. Две страницы, видимые вместе в открытой книге. 4. Чтобы страницы были упорядоченными и легко читались. 5. Короткое вступление более крупным шрифтом. 6. Оно даёт глазу отдохнуть. 7. Твоя книжечка.`,
+~~~art
+hints
+1. Вёрстка — план страниц, макет — его модель, сделанная руками. 2. Узкий задний край, который виден на полке. 3. Две страницы, видимые вместе в открытой книге. 4. Чтобы страницы были упорядоченными и легко читались. 5. Короткое вступление более крупным шрифтом. 6. Оно даёт глазу отдохнуть. 7. Твоя книжечка.
+~~~`,
       },
       [
         q(t("The narrow edge of a book we see on a shelf is the…", "Գրքի նեղ եզրը, որ տեսնում ենք դարակի վրա…", "Узкий край книги, видимый на полке, — это…"), [t("spine", "կողքն է", "корешок"), t("margin", "լուսանցքն է", "поле"), t("title page", "տիտղոսաթերթն է", "титул")], 0),
@@ -842,6 +1097,10 @@ Designers divide a page into **columns** and **rows**, an invisible **grid**. Te
 
 At an airport people speak dozens of languages, but everyone understands a picture of a suitcase, a cup or a plane. Such simple pictures are **pictograms**. They are one of the oldest ideas of humanity: rock drawings and the first writing systems also used pictures for words.
 
+~~~art
+pic pictograms
+~~~
+
 ## Rules of a good pictogram
 
 * **Simple:** a silhouette, no small details.
@@ -851,6 +1110,10 @@ At an airport people speak dozens of languages, but everyone understands a pictu
 * **Colour code:** in road and safety signs colour and shape have a meaning: red circle for a ban, triangle for a warning, blue for information, green for safety and exit.
 
 For the Munich Olympic Games of 1972, the designer **Otl Aicher** drew a famous set of sport pictograms on a strict grid of lines at 45 and 90 degrees. Since then every Olympics has its own set.
+
+~~~art
+steps pictogram
+~~~
 
 ## Wayfinding
 
@@ -865,12 +1128,16 @@ Signs that help people find their way in a city, a metro, a hospital or a school
 3. use few colours and clear labels;
 4. state where the numbers come from.
 
+~~~art
+pic infographic
+~~~
+
 ## Task
 
 Choose one: design a set of six pictograms for your school (library, gym, canteen, art room, toilets, exit), or make an infographic about your class: how many pupils walk, take the bus or come by car.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a pictogram?
 2. Why are pictograms used at airports?
 3. What does a red circle mean on a sign?
@@ -878,13 +1145,19 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 5. What did Harry Beck change in the London Underground map?
 6. Name three forms of infographics.
 7. Design six pictograms for your school or an infographic about your class.
+~~~
 
-### Answers
-
-1. A simple picture that stands for a word or idea. 2. People speak many languages, but everyone understands a picture. 3. A ban. 4. Otl Aicher. 5. He drew lines straight and stations evenly spaced, not as on a real map. 6. Any three: chart, diagram, map, timeline, icons with numbers. 7. Your work.`,
+~~~art
+hints
+1. A simple picture that stands for a word or idea. 2. People speak many languages, but everyone understands a picture. 3. A ban. 4. Otl Aicher. 5. He drew lines straight and stations evenly spaced, not as on a real map. 6. Any three: chart, diagram, map, timeline, icons with numbers. 7. Your work.
+~~~`,
         hy: `## Նկարներ բառերի փոխարեն
 
 Օդանավակայանում մարդիկ խոսում են տասնյակ լեզուներով, բայց բոլորը հասկանում են ճամպրուկի, բաժակի կամ ինքնաթիռի նկարը։ Նման պարզ նկարները **պիկտոգրամներ** են։ Դրանք մարդկության ամենահին գաղափարներից են՝ ժայռապատկերներն ու առաջին գրային համակարգերը նույնպես նկարներ էին օգտագործում բառերի փոխարեն։
+
+~~~art
+pic pictograms
+~~~
 
 ## Լավ պիկտոգրամի կանոնները
 
@@ -895,6 +1168,10 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 * **Գունային կոդ**՝ ճանապարհային և անվտանգության նշաններում գույնն ու ձևն իմաստ ունեն. կարմիր շրջանը՝ արգելք, եռանկյունին՝ զգուշացում, կապույտը՝ տեղեկություն, կանաչը՝ անվտանգություն և ելք։
 
 1972 թվականի Մյունխենի օլիմպիական խաղերի համար դիզայներ **Օտլ Այխերը** նկարեց սպորտային պիկտոգրամների հայտնի շարք՝ 45 և 90 աստիճանի գծերի խիստ ցանցի վրա։ Այդ ժամանակից ի վեր յուրաքանչյուր օլիմպիադա ունի իր շարքը։
+
+~~~art
+steps pictogram
+~~~
 
 ## Կողմնորոշման համակարգ
 
@@ -909,12 +1186,16 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 3. օգտագործում է քիչ գույներ և հստակ պիտակներ,
 4. նշում է, թե որտեղից են թվերը։
 
+~~~art
+pic infographic
+~~~
+
 ## Առաջադրանք
 
 Ընտրիր մեկը՝ նախագծիր վեց պիկտոգրամի շարք քո դպրոցի համար (գրադարան, մարզադահլիճ, ճաշարան, նկարչության սենյակ, զուգարաններ, ելք), կամ պատրաստիր ինֆոգրաֆիկա քո դասարանի մասին՝ քանի աշակերտ է գալիս ոտքով, ավտոբուսով կամ մեքենայով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է պիկտոգրամը։
 2. Ինչու են պիկտոգրամներն օգտագործվում օդանավակայաններում։
 3. Ինչ է նշանակում կարմիր շրջանը նշանի վրա։
@@ -922,13 +1203,19 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 5. Ինչ փոխեց Հարրի Բեկը Լոնդոնի մետրոյի սխեմայում։
 6. Անվանիր ինֆոգրաֆիկայի երեք ձև։
 7. Նախագծիր վեց պիկտոգրամ քո դպրոցի համար կամ ինֆոգրաֆիկա քո դասարանի մասին։
+~~~
 
-### Պատասխաններ
-
-1. Պարզ նկար, որը փոխարինում է բառին կամ գաղափարին։ 2. Մարդիկ խոսում են տարբեր լեզուներով, բայց նկարը բոլորն են հասկանում։ 3. Արգելք։ 4. Օտլ Այխերը։ 5. Գծերը նկարեց ուղիղ, կայարանները՝ հավասար հեռավորությամբ, ոչ թե ինչպես իրական քարտեզում։ 6. Ցանկացած երեքը՝ գծապատկեր, դիագրամ, քարտեզ, ժամանակագիծ, թվերով պատկերակներ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Պարզ նկար, որը փոխարինում է բառին կամ գաղափարին։ 2. Մարդիկ խոսում են տարբեր լեզուներով, բայց նկարը բոլորն են հասկանում։ 3. Արգելք։ 4. Օտլ Այխերը։ 5. Գծերը նկարեց ուղիղ, կայարանները՝ հավասար հեռավորությամբ, ոչ թե ինչպես իրական քարտեզում։ 6. Ցանկացած երեքը՝ գծապատկեր, դիագրամ, քարտեզ, ժամանակագիծ, թվերով պատկերակներ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Картинки вместо слов
 
 В аэропорту люди говорят на десятках языков, но каждый понимает изображение чемодана, чашки или самолёта. Такие простые картинки называются **пиктограммами**. Это одна из древнейших идей человечества: наскальные рисунки и первые системы письма тоже обозначали слова картинками.
+
+~~~art
+pic pictograms
+~~~
 
 ## Правила хорошей пиктограммы
 
@@ -939,6 +1226,10 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 * **Цветовой код:** в дорожных знаках и знаках безопасности цвет и форма имеют значение — красный круг запрещает, треугольник предупреждает, синий информирует, зелёный обозначает безопасность и выход.
 
 Для Олимпийских игр 1972 года в Мюнхене дизайнер **Отль Айхер** нарисовал знаменитый набор спортивных пиктограмм на строгой сетке из линий под 45 и 90 градусов. С тех пор у каждой Олимпиады свой набор.
+
+~~~art
+steps pictogram
+~~~
 
 ## Навигация
 
@@ -953,12 +1244,16 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 3. использует мало цветов и ясные подписи;
 4. указывает, откуда взяты числа.
 
+~~~art
+pic infographic
+~~~
+
 ## Задание
 
 Выбери одно: создай набор из шести пиктограмм для своей школы (библиотека, спортзал, столовая, кабинет ИЗО, туалеты, выход) или сделай инфографику о своём классе: сколько учеников приходит пешком, приезжает на автобусе или на машине.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое пиктограмма?
 2. Почему пиктограммы используют в аэропортах?
 3. Что означает красный круг на знаке?
@@ -966,10 +1261,12 @@ Choose one: design a set of six pictograms for your school (library, gym, cantee
 5. Что изменил Гарри Бек в схеме лондонского метро?
 6. Назови три формы инфографики.
 7. Создай шесть пиктограмм для школы или инфографику о своём классе.
+~~~
 
-### Ответы
-
-1. Простая картинка, обозначающая слово или понятие. 2. Люди говорят на разных языках, а картинку понимают все. 3. Запрет. 4. Отль Айхер. 5. Нарисовал линии прямыми, а станции на равном расстоянии, не как на настоящей карте. 6. Любые три: график, диаграмма, карта, лента времени, значки с числами. 7. Твоя работа.`,
+~~~art
+hints
+1. Простая картинка, обозначающая слово или понятие. 2. Люди говорят на разных языках, а картинку понимают все. 3. Запрет. 4. Отль Айхер. 5. Нарисовал линии прямыми, а станции на равном расстоянии, не как на настоящей карте. 6. Любые три: график, диаграмма, карта, лента времени, значки с числами. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A simple picture that stands for a word is a…", "Պարզ նկարը, որը փոխարինում է բառին…", "Простая картинка, заменяющая слово, — это…"), [t("pictogram", "պիկտոգրամ է", "пиктограмма"), t("spread", "բացվածք է", "разворот"), t("serif", "թաթիկ է", "засечка")], 0),

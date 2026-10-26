@@ -21,6 +21,10 @@ export const unit5: UnitSeed = {
 
 The **everyday genre** shows ordinary life: work, rest, family, holidays, games, markets. It tells about people's customs and feelings, and often about the problems of their time.
 
+~~~art
+pic genre-everyday
+~~~
+
 ## Masters
 
 | Artist | Work | What it shows |
@@ -39,6 +43,10 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 * **Composition:** the main group is in the centre or in the light; secondary figures support it.
 * **The artist's attitude:** humour, sympathy, admiration, criticism.
 
+~~~art
+shots
+~~~
+
 ## Compose a scene
 
 1. Choose a scene from your life: a family dinner, a market, a school break, a wedding, a football match in the yard.
@@ -47,8 +55,12 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 4. Place the main group in the centre of attention; add details that tell about place and time.
 5. Paint it with colours that support the mood.
 
-### Exercises
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. What does the everyday genre show?
 2. What does Bruegel's «Children's Games» show?
 3. What feeling does Perov's «Troika» arouse?
@@ -56,13 +68,19 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 5. Name five questions that help to "read" a genre painting.
 6. How can an artist show the main group in a crowd?
 7. Compose and paint a scene "Break at our school".
+~~~
 
-### Answers
-
-1. Ordinary life: work, rest, family, holidays, games. 2. Hundreds of children playing in a town square. 3. Compassion for poor children. 4. Minas Avetisyan. 5. Who are the characters? Where and when? What is happening? How is it composed? What is the artist's attitude? 6. Put it in the centre or in the light. 7. Your work.`,
+~~~art
+hints
+1. Ordinary life: work, rest, family, holidays, games. 2. Hundreds of children playing in a town square. 3. Compassion for poor children. 4. Minas Avetisyan. 5. Who are the characters? Where and when? What is happening? How is it composed? What is the artist's attitude? 6. Put it in the centre or in the light. 7. Your work.
+~~~`,
         hy: `## Առօրյա կյանքի նկարներ
 
 **Կենցաղային ժանրը** ցույց է տալիս սովորական կյանքը՝ աշխատանք, հանգիստ, ընտանիք, տոներ, խաղեր, շուկաներ։ Այն պատմում է մարդկանց սովորույթների և զգացմունքների, հաճախ նաև իրենց ժամանակի խնդիրների մասին։
+
+~~~art
+pic genre-everyday
+~~~
 
 ## Վարպետներ
 
@@ -82,6 +100,10 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 * **Կոմպոզիցիա**՝ գլխավոր խումբը կենտրոնում է կամ լույսի տակ, երկրորդական պատկերներն աջակցում են նրան։
 * **Նկարչի վերաբերմունքը**՝ հումոր, կարեկցանք, հիացմունք, քննադատություն։
 
+~~~art
+shots
+~~~
+
 ## Կազմիր տեսարան
 
 1. Ընտրիր տեսարան քո կյանքից՝ ընտանեկան ճաշ, շուկա, դպրոցական դադար, հարսանիք, ֆուտբոլ բակում։
@@ -90,8 +112,12 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 4. Գլխավոր խումբը դիր ուշադրության կենտրոնում, ավելացրու մանրամասներ, որոնք պատմում են վայրի և ժամանակի մասին։
 5. Նկարիր այն տրամադրությանն աջակցող գույներով։
 
-### Վարժություններ
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Ինչ է ցույց տալիս կենցաղային ժանրը։
 2. Ինչ է ցույց տալիս Բրեյգելի «Մանկական խաղեր» կտավը։
 3. Ինչ զգացում է առաջացնում Պերովի «Եռաձին»։
@@ -99,13 +125,19 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 5. Անվանիր հինգ հարց, որոնք օգնում են «կարդալ» կենցաղային նկարը։
 6. Ինչպես կարող է նկարիչն ամբոխի մեջ առանձնացնել գլխավոր խումբը։
 7. Կազմիր և նկարիր «Դադար մեր դպրոցում» տեսարանը։
+~~~
 
-### Պատասխաններ
-
-1. Սովորական կյանքը՝ աշխատանք, հանգիստ, ընտանիք, տոներ, խաղեր։ 2. Հարյուրավոր երեխաներ խաղում են քաղաքի հրապարակում։ 3. Կարեկցանք աղքատ երեխաների հանդեպ։ 4. Մինաս Ավետիսյան։ 5. Ովքեր են հերոսները, որտեղ և երբ, ինչ է կատարվում, ինչպես է կառուցված կոմպոզիցիան, ինչ է նկարչի վերաբերմունքը։ 6. Այն դնել կենտրոնում կամ լույսի տակ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Սովորական կյանքը՝ աշխատանք, հանգիստ, ընտանիք, տոներ, խաղեր։ 2. Հարյուրավոր երեխաներ խաղում են քաղաքի հրապարակում։ 3. Կարեկցանք աղքատ երեխաների հանդեպ։ 4. Մինաս Ավետիսյան։ 5. Ովքեր են հերոսները, որտեղ և երբ, ինչ է կատարվում, ինչպես է կառուցված կոմպոզիցիան, ինչ է նկարչի վերաբերմունքը։ 6. Այն դնել կենտրոնում կամ լույսի տակ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Картины повседневной жизни
 
 **Бытовой жанр** показывает обычную жизнь: работу, отдых, семью, праздники, игры, рынки. Он рассказывает об обычаях и чувствах людей, а часто и о проблемах своего времени.
+
+~~~art
+pic genre-everyday
+~~~
 
 ## Мастера
 
@@ -125,6 +157,10 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 * **Композиция:** главная группа в центре или на свету; второстепенные фигуры её поддерживают.
 * **Отношение художника:** юмор, сочувствие, восхищение, критика.
 
+~~~art
+shots
+~~~
+
 ## Составь сцену
 
 1. Выбери сцену из своей жизни: семейный обед, рынок, школьная перемена, свадьба, футбол во дворе.
@@ -133,8 +169,12 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 4. Помести главную группу в центр внимания; добавь детали, рассказывающие о месте и времени.
 5. Напиши её цветами, поддерживающими настроение.
 
-### Упражнения
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Что показывает бытовой жанр?
 2. Что изображено на картине Брейгеля «Детские игры»?
 3. Какое чувство вызывает «Тройка» Перова?
@@ -142,10 +182,12 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 5. Назови пять вопросов, которые помогают «прочитать» жанровую картину.
 6. Как художник может выделить главную группу в толпе?
 7. Составь и напиши сцену «Перемена в нашей школе».
+~~~
 
-### Ответы
-
-1. Обычную жизнь: работу, отдых, семью, праздники, игры. 2. Сотни детей, играющих на городской площади. 3. Сострадание к бедным детям. 4. Минас Аветисян. 5. Кто герои? Где и когда? Что происходит? Как построена композиция? Каково отношение художника? 6. Поместить её в центр или на свет. 7. Твоя работа.`,
+~~~art
+hints
+1. Обычную жизнь: работу, отдых, семью, праздники, игры. 2. Сотни детей, играющих на городской площади. 3. Сострадание к бедным детям. 4. Минас Аветисян. 5. Кто герои? Где и когда? Что происходит? Как построена композиция? Каково отношение художника? 6. Поместить её в центр или на свет. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("The everyday genre shows…", "Կենցաղային ժանրը ցույց է տալիս…", "Бытовой жанр показывает…"), [t("ordinary daily life", "սովորական առօրյա կյանքը", "обычную повседневную жизнь"), t("only kings", "միայն թագավորներին", "только королей"), t("only the sea", "միայն ծովը", "только море")], 0),
@@ -169,6 +211,10 @@ The **everyday genre** shows ordinary life: work, rest, family, holidays, games,
 
 The **historical genre** shows important events of the past, legends and heroes. The **battle genre** shows wars and battles. These are the most complex paintings: many figures, costumes of the epoch, a dramatic moment. Before painting, the artist studies history, old weapons and clothes, and makes many sketches.
 
+~~~art
+pic genre-battle
+~~~
+
 ## Famous works
 
 | Artist | Work | What it shows |
@@ -190,6 +236,11 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 * **Diagonals** give movement and drama; horizontals and verticals give calm and grandeur.
 * **True details** of the epoch: clothes, weapons, buildings.
 
+~~~art
+compose
+A historical painting is built around a centre of attention. Move the shapes until the main one rules.
+~~~
+
 ## Plan your composition
 
 1. Choose an event: the legend of Hayk and Bel, the battle of Avarayr, the founding of Erebuni, a scene from «David of Sasun», or a Russian legend.
@@ -198,8 +249,12 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 4. Make a small sketch with the main hero and the crowd.
 5. Use diagonals for action, or verticals for solemnity.
 
-### Exercises
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. What do the historical and battle genres show?
 2. Why are historical paintings especially difficult?
 3. What does «Boyarynya Morozova» show?
@@ -207,13 +262,19 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 5. Which Armenian legend did Sureniants paint?
 6. What is the "decisive moment"?
 7. Make a sketch of a historical or legendary scene.
+~~~
 
-### Answers
-
-1. Important events of the past, legends and heroes; wars and battles. 2. They need many figures, true details of the epoch and a dramatic moment. 3. A proud woman taken away on a sledge through a crowd. 4. He wanted people to hate war. 5. The legend of Semiramis and Ara the Beautiful. 6. The peak of the story chosen by the artist. 7. Your sketch.`,
+~~~art
+hints
+1. Important events of the past, legends and heroes; wars and battles. 2. They need many figures, true details of the epoch and a dramatic moment. 3. A proud woman taken away on a sledge through a crowd. 4. He wanted people to hate war. 5. The legend of Semiramis and Ara the Beautiful. 6. The peak of the story chosen by the artist. 7. Your sketch.
+~~~`,
         hy: `## Անցյալը նկարում
 
 **Պատմական ժանրը** ցույց է տալիս անցյալի կարևոր իրադարձություններ, ավանդություններ և հերոսներ։ **Մարտական ժանրը** ցույց է տալիս պատերազմներ և ճակատամարտեր։ Սրանք ամենաբարդ կտավներն են՝ բազմաթիվ պատկերներ, դարաշրջանի տարազներ, դրամատիկ պահ։ Նախքան նկարելը նկարիչն ուսումնասիրում է պատմությունը, հին զենքերն ու հագուստը և անում բազմաթիվ ուրվանկարներ։
+
+~~~art
+pic genre-battle
+~~~
 
 ## Հայտնի գործեր
 
@@ -236,6 +297,11 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 * **Անկյունագծերը** շարժում և դրամա են տալիս, հորիզոնականներն ու ուղղահայացները՝ հանդարտություն և վեհություն։
 * Դարաշրջանի **ճշմարիտ մանրամասներ**՝ հագուստ, զենք, շենքեր։
 
+~~~art
+compose
+Պատմական նկարը կառուցվում է ուշադրության կենտրոնի շուրջ։ Տեղաշարժի՛ր ձևերը, մինչև գլխավորը իշխի։
+~~~
+
 ## Պլանավորիր քո կոմպոզիցիան
 
 1. Ընտրիր իրադարձություն՝ Հայկի և Բելի ավանդությունը, Ավարայրի ճակատամարտը, Էրեբունու հիմնադրումը, տեսարան «Սասունցի Դավթից» կամ ռուսական ավանդություն։
@@ -244,8 +310,12 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 4. Արա փոքր ուրվանկար՝ գլխավոր հերոսով և ամբոխով։
 5. Գործողության համար օգտագործիր անկյունագծեր, հանդիսավորության համար՝ ուղղահայացներ։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. Ինչ են ցույց տալիս պատմական և մարտական ժանրերը։
 2. Ինչու են պատմական կտավները հատկապես դժվար։
 3. Ինչ է ցույց տալիս «Բոյարուհի Մորոզովա» կտավը։
@@ -253,13 +323,19 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 5. Հայկական որ ավանդությունն է նկարել Սուրենյանցը։
 6. Ինչ է «վճռական պահը»։
 7. Արա պատմական կամ ավանդական տեսարանի ուրվանկար։
+~~~
 
-### Պատասխաններ
-
-1. Անցյալի կարևոր իրադարձություններ, ավանդություններ և հերոսներ, պատերազմներ և ճակատամարտեր։ 2. Պետք են բազմաթիվ պատկերներ, դարաշրջանի ճշմարիտ մանրամասներ և դրամատիկ պահ։ 3. Հպարտ կնոջը սահնակով տանում են ամբոխի միջով։ 4. Նա ուզում էր, որ մարդիկ ատեն պատերազմը։ 5. Շամիրամի և Արա Գեղեցիկի ավանդությունը։ 6. Պատմության գագաթնակետը, որ ընտրում է նկարիչը։ 7. Քո ուրվանկարը։`,
+~~~art
+hints
+1. Անցյալի կարևոր իրադարձություններ, ավանդություններ և հերոսներ, պատերազմներ և ճակատամարտեր։ 2. Պետք են բազմաթիվ պատկերներ, դարաշրջանի ճշմարիտ մանրամասներ և դրամատիկ պահ։ 3. Հպարտ կնոջը սահնակով տանում են ամբոխի միջով։ 4. Նա ուզում էր, որ մարդիկ ատեն պատերազմը։ 5. Շամիրամի և Արա Գեղեցիկի ավանդությունը։ 6. Պատմության գագաթնակետը, որ ընտրում է նկարիչը։ 7. Քո ուրվանկարը։
+~~~`,
         ru: `## Изображая прошлое
 
 **Исторический жанр** показывает важные события прошлого, легенды и героев. **Батальный жанр** изображает войны и сражения. Это самые сложные картины: много фигур, костюмы эпохи, драматичный момент. Перед работой художник изучает историю, старинное оружие и одежду и делает множество эскизов.
+
+~~~art
+pic genre-battle
+~~~
 
 ## Знаменитые произведения
 
@@ -282,6 +358,11 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 * **Диагонали** дают движение и драму; горизонтали и вертикали — покой и величие.
 * **Правдивые детали** эпохи: одежда, оружие, здания.
 
+~~~art
+compose
+Историческая картина строится вокруг композиционного центра. Двигай фигуры, пока главная не станет главной.
+~~~
+
 ## Спланируй композицию
 
 1. Выбери событие: легенду о Айке и Беле, битву при Аварайре, основание Эребуни, сцену из «Давида Сасунского» или русскую былину.
@@ -290,8 +371,12 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 4. Сделай маленький эскиз с главным героем и толпой.
 5. Используй диагонали для действия или вертикали для торжественности.
 
-### Упражнения
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. Что изображают исторический и батальный жанры?
 2. Почему исторические картины особенно сложны?
 3. Что изображено на картине «Боярыня Морозова»?
@@ -299,10 +384,12 @@ Armenian artists have also often painted **Vardan Mamikonyan** and the battle of
 5. Какую армянскую легенду написал Суренянц?
 6. Что такое «решающий момент»?
 7. Сделай эскиз исторической или легендарной сцены.
+~~~
 
-### Ответы
-
-1. Важные события прошлого, легенды и героев; войны и сражения. 2. Нужны многие фигуры, правдивые детали эпохи и драматичный момент. 3. Гордую женщину везут на санях через толпу. 4. Он хотел, чтобы люди возненавидели войну. 5. Легенду о Семирамиде и Ара Прекрасном. 6. Кульминация истории, выбранная художником. 7. Твой эскиз.`,
+~~~art
+hints
+1. Важные события прошлого, легенды и героев; войны и сражения. 2. Нужны многие фигуры, правдивые детали эпохи и драматичный момент. 3. Гордую женщину везут на санях через толпу. 4. Он хотел, чтобы люди возненавидели войну. 5. Легенду о Семирамиде и Ара Прекрасном. 6. Кульминация истории, выбранная художником. 7. Твой эскиз.
+~~~`,
       },
       [
         q(t("Paintings of wars and battles belong to the … genre.", "Պատերազմների և ճակատամարտերի կտավները պատկանում են … ժանրին։", "Картины войн и сражений относятся к … жанру."), [t("battle", "մարտական", "батальному"), t("still life", "նատյուրմորտի", "натюрморту"), t("animal", "կենդանանկարի", "анималистическому")], 0),
@@ -328,12 +415,20 @@ People drew animals long before they drew anything else. On the walls of caves s
 
 The art of drawing and sculpting animals is called the **animal genre**, and the artist is an **animalist**.
 
+~~~art
+pic genre-animal
+~~~
+
 ## Animals through the ages
 
 * In **Armenian manuscripts** artists made whole letters out of birds: a stork, a peacock or a heron bends its neck to become a letter. These are called **bird letters**.
 * **Albrecht Dürer** painted the watercolour «Young Hare» (1502). Every hair of the fur is drawn so carefully that the hare seems alive.
 * **Vasily Vatagin** spent his life in zoos and natural history museums. He made sculptures and drawings of tigers, elephants and monkeys.
 * **Yevgeny Charushin** drew soft, fluffy animal babies for children's books and wrote stories about them himself.
+
+~~~art
+pic vishap stork horse bird-motif
+~~~
 
 ## How an animalist works
 
@@ -344,6 +439,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. **Texture:** short strokes for fur, small arcs for feathers, overlapping scales for fish.
 6. **Character:** a fox is sly, a bear is heavy and kind, a goat is stubborn. Show it with the pose and the eyes.
 
+~~~art
+flipbook bird
+~~~
+
 ## Drawing an animal step by step
 
 1. Draw the line of action: one curve that shows the movement of the whole body.
@@ -352,8 +451,12 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 4. Clarify the outline; erase extra lines.
 5. Add fur or feathers with strokes that follow the form.
 
-### Exercises
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. What is the animal genre?
 2. What do the Ughtasar petroglyphs show?
 3. What are bird letters?
@@ -361,15 +464,21 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. Why does an animalist make quick sketches?
 6. What simple shapes can you use to draw a cat?
 7. Draw your favourite animal in three quick sketches and one finished drawing.
+~~~
 
-### Answers
-
-1. The art of drawing and sculpting animals. 2. Goats with long horns, deer, hunters and dogs. 3. Letters in Armenian manuscripts made out of birds. 4. A young hare. 5. Animals move, so you must catch the pose fast. 6. A pear for the body, a circle for the head, triangles for ears. 7. Your drawings.`,
+~~~art
+hints
+1. The art of drawing and sculpting animals. 2. Goats with long horns, deer, hunters and dogs. 3. Letters in Armenian manuscripts made out of birds. 4. A young hare. 5. Animals move, so you must catch the pose fast. 6. A pear for the body, a circle for the head, triangles for ears. 7. Your drawings.
+~~~`,
         hy: `## Ամենահին ժանրը
 
 Մարդիկ կենդանիներ էին նկարում շատ ավելի վաղ, քան որևէ այլ բան։ Ֆրանսիայի **Լասկո** քարանձավի պատերին որսորդներն ավելի քան 15 000 տարի առաջ նկարել են ցուլեր, ձիեր և եղջերուներ։ Հայաստանում, Սյունիքի **Ուղտասարի** բարձր սարահարթում, կան հազարավոր **ժայռապատկերներ**՝ երկար կոր եղջյուրներով այծեր, եղջերուներ, որսորդներ և շներ, փորագրված մուգ քարերի վրա։
 
 Կենդանիներ նկարելու և քանդակելու արվեստը կոչվում է **կենդանանկար** կամ **անիմալիստական ժանր**, իսկ նկարիչը՝ **անիմալիստ**։
+
+~~~art
+pic genre-animal
+~~~
 
 ## Կենդանիները դարերի ընթացքում
 
@@ -377,6 +486,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 * **Ալբրեխտ Դյուրերը** նկարել է «Երիտասարդ նապաստակ» ջրաներկը (1502)։ Մորթու յուրաքանչյուր մազն այնքան խնամքով է նկարված, որ նապաստակը կարծես կենդանի է։
 * **Վասիլի Վատագինն** իր կյանքն անցկացրել է կենդանաբանական այգիներում և բնագիտական թանգարաններում։ Նա վագրերի, փղերի և կապիկների քանդակներ ու նկարներ է ստեղծել։
 * **Եվգենի Չարուշինը** մանկական գրքերի համար նկարում էր փափուկ, փափլիկ կենդանիների ձագեր և ինքն էլ պատմվածքներ գրում նրանց մասին։
+
+~~~art
+pic vishap stork horse bird-motif
+~~~
 
 ## Ինչպես է աշխատում անիմալիստը
 
@@ -387,6 +500,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. **Ֆակտուրա**՝ մորթու համար կարճ վրձնահարվածներ, փետուրների համար՝ փոքր աղեղներ, ձկան համար՝ իրար ծածկող թեփուկներ։
 6. **Բնավորություն**՝ աղվեսը խորամանկ է, արջը՝ ծանր ու բարի, այծը՝ համառ։ Ցույց տուր դա դիրքով և աչքերով։
 
+~~~art
+flipbook bird
+~~~
+
 ## Կենդանու նկարը քայլ առ քայլ
 
 1. Գծիր շարժման գիծը՝ մեկ կոր, որը ցույց է տալիս ամբողջ մարմնի շարժումը։
@@ -395,8 +512,12 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 4. Ճշտիր եզրագիծը, ջնջիր ավելորդ գծերը։
 5. Ավելացրու մորթի կամ փետուրներ՝ ձևին հետևող վրձնահարվածներով։
 
-### Վարժություններ
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. Ինչ է կենդանանկարը։
 2. Ինչ են ցույց տալիս Ուղտասարի ժայռապատկերները։
 3. Ինչ են թռչնագրերը։
@@ -404,15 +525,21 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. Ինչու է անիմալիստն արագ ուրվանկարներ անում։
 6. Ինչ պարզ ձևերով կարող ես նկարել կատու։
 7. Նկարիր քո սիրելի կենդանուն երեք արագ ուրվանկարով և մեկ ավարտուն նկարով։
+~~~
 
-### Պատասխաններ
-
-1. Կենդանիներ նկարելու և քանդակելու արվեստը։ 2. Երկար եղջյուրներով այծեր, եղջերուներ, որսորդներ և շներ։ 3. Հայկական ձեռագրերի տառեր՝ կազմված թռչուններից։ 4. Նապաստակ։ 5. Կենդանիները շարժվում են, պետք է արագ որսալ դիրքը։ 6. Մարմնի համար տանձ, գլխի համար շրջան, ականջների համար եռանկյուններ։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Կենդանիներ նկարելու և քանդակելու արվեստը։ 2. Երկար եղջյուրներով այծեր, եղջերուներ, որսորդներ և շներ։ 3. Հայկական ձեռագրերի տառեր՝ կազմված թռչուններից։ 4. Նապաստակ։ 5. Կենդանիները շարժվում են, պետք է արագ որսալ դիրքը։ 6. Մարմնի համար տանձ, գլխի համար շրջան, ականջների համար եռանկյուններ։ 7. Քո նկարները։
+~~~`,
         ru: `## Самый древний жанр
 
 Люди рисовали животных раньше, чем что-либо другое. На стенах пещер, например **Ласко** во Франции, охотники больше 15 000 лет назад написали быков, лошадей и оленей. В Армении, на высоком плато **Угтасар** в Сюнике, тысячи **петроглифов**: козлы с длинными изогнутыми рогами, олени, охотники и собаки, выбитые на тёмных камнях.
 
 Искусство изображения животных в рисунке и скульптуре называется **анималистическим жанром**, а художник — **анималистом**.
+
+~~~art
+pic genre-animal
+~~~
 
 ## Животные сквозь века
 
@@ -420,6 +547,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 * **Альбрехт Дюрер** написал акварель «Молодой заяц» (1502). Каждая шерстинка нарисована так тщательно, что заяц кажется живым.
 * **Василий Ватагин** провёл жизнь в зоопарках и естественно-научных музеях. Он создал скульптуры и рисунки тигров, слонов и обезьян.
 * **Евгений Чарушин** рисовал для детских книг мягких пушистых зверят и сам писал о них рассказы.
+
+~~~art
+pic vishap stork horse bird-motif
+~~~
 
 ## Как работает анималист
 
@@ -430,6 +561,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. **Фактура:** короткие штрихи для шерсти, маленькие дуги для перьев, налегающие чешуйки для рыбы.
 6. **Характер:** лиса хитрая, медведь тяжёлый и добрый, козёл упрямый. Покажи это позой и глазами.
 
+~~~art
+flipbook bird
+~~~
+
 ## Рисуем животное по шагам
 
 1. Проведи линию движения: одну кривую, которая показывает движение всего тела.
@@ -438,8 +573,12 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 4. Уточни контур, сотри лишние линии.
 5. Добавь шерсть или перья штрихами по форме.
 
-### Упражнения
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. Что такое анималистический жанр?
 2. Что изображают петроглифы Угтасара?
 3. Что такое птичьи буквы?
@@ -447,10 +586,12 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
 5. Почему анималист делает быстрые наброски?
 6. Из каких простых форм можно нарисовать кошку?
 7. Нарисуй любимое животное: три быстрых наброска и один законченный рисунок.
+~~~
 
-### Ответы
-
-1. Искусство изображения животных. 2. Козлов с длинными рогами, оленей, охотников и собак. 3. Буквы в армянских рукописях, составленные из птиц. 4. Молодого зайца. 5. Животные двигаются, нужно быстро поймать позу. 6. Груша для туловища, круг для головы, треугольники для ушей. 7. Твои рисунки.`,
+~~~art
+hints
+1. Искусство изображения животных. 2. Козлов с длинными рогами, оленей, охотников и собак. 3. Буквы в армянских рукописях, составленные из птиц. 4. Молодого зайца. 5. Животные двигаются, нужно быстро поймать позу. 6. Груша для туловища, круг для головы, треугольники для ушей. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("An artist who draws and sculpts animals is an…", "Կենդանիներ նկարող և քանդակող նկարիչը…", "Художник, изображающий животных, — это…"), [t("animalist", "անիմալիստ է", "анималист"), t("portraitist", "դիմանկարիչ է", "портретист"), t("marine painter", "ծովանկարիչ է", "маринист")], 0),
@@ -473,6 +614,10 @@ The art of drawing and sculpting animals is called the **animal genre**, and the
         en: `## One drawing, many copies
 
 A drawing exists in one copy. **Printmaking** lets an artist make many copies. First the artist makes a **matrix** (a printing plate) from wood, linoleum, metal or stone. Ink is put on it, paper is pressed on top, and the picture passes onto the paper. Such a copy is called a **print**. Remember: the print is a **mirror image** of the matrix, so letters must be cut backwards.
+
+~~~art
+pic ink pencil
+~~~
 
 ## Kinds of printmaking
 
@@ -498,6 +643,11 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 * **Line and stroke:** the cutter leaves sharp, rhythmic lines.
 * **Spot:** large black areas make the picture strong and graphic.
 
+~~~art
+tone
+A print has no grey paint, only black and white. Tone is made with lines and dots, like here.
+~~~
+
 ## Make a cardboard print
 
 1. Cut shapes from thick cardboard and glue them onto a base. Or press lines into a foam tray with a pencil.
@@ -505,8 +655,13 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 3. Put paper on top and rub it with a spoon or your palm.
 4. Lift the paper carefully: your print is ready. Make three or four copies.
 
-### Exercises
+~~~art
+sketch mode=mirror paper=white
+A print comes out mirrored. Draw on one side and see what the print on the other side will look like.
+~~~
 
+~~~art
+tasks
 1. What is the difference between a matrix and a print?
 2. Why must letters on a matrix be cut backwards?
 3. Which parts print in a woodcut?
@@ -514,13 +669,19 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 5. Who invented lithography and when?
 6. Name the first printed Armenian book.
 7. Make a cardboard or foam print and print it at least three times.
+~~~
 
-### Answers
-
-1. The matrix is the printing plate; the print is the copy on paper. 2. Because the print is a mirror image. 3. The raised parts that were not cut away. 4. They are scratched through wax and bitten by acid. 5. Alois Senefelder, in 1796. 6. «Urbatagirk» (1512). 7. Your prints.`,
+~~~art
+hints
+1. The matrix is the printing plate; the print is the copy on paper. 2. Because the print is a mirror image. 3. The raised parts that were not cut away. 4. They are scratched through wax and bitten by acid. 5. Alois Senefelder, in 1796. 6. «Urbatagirk» (1512). 7. Your prints.
+~~~`,
         hy: `## Մեկ նկար, շատ օրինակներ
 
 Նկարը գոյություն ունի մեկ օրինակով։ **Տպագրական գրաֆիկան** թույլ է տալիս նկարչին ստանալ բազմաթիվ օրինակներ։ Նախ նկարիչը պատրաստում է **տպատախտակ** փայտից, լինոլեումից, մետաղից կամ քարից։ Դրա վրա ներկ են քսում, վրան թուղթ սեղմում, և պատկերն անցնում է թղթին։ Այդ օրինակը կոչվում է **տպվածք**։ Հիշիր. տպվածքը տպատախտակի **հայելային պատկերն** է, ուստի տառերը պետք է փորագրել հակառակ։
+
+~~~art
+pic ink pencil
+~~~
 
 ## Տպագրական գրաֆիկայի տեսակները
 
@@ -546,6 +707,11 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 * **Գիծ և վրձնահարված**՝ դանակը թողնում է սուր, ռիթմիկ գծեր։
 * **Բիծ**՝ մեծ սև մակերեսները պատկերը դարձնում են ուժեղ և գրաֆիկական։
 
+~~~art
+tone
+Տպագրության մեջ մոխրագույն ներկ չկա, միայն սև և սպիտակ։ Տոնը ստեղծվում է գծերով և կետերով, ինչպես այստեղ։
+~~~
+
 ## Պատրաստիր ստվարաթղթե տպվածք
 
 1. Հաստ ստվարաթղթից ձևեր կտրիր և սոսնձիր հիմքի վրա։ Կամ մատիտով գծեր սեղմիր փրփրապլաստե ափսեի վրա։
@@ -553,8 +719,13 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 3. Վրան թուղթ դիր և շփիր գդալով կամ ափով։
 4. Զգուշությամբ բարձրացրու թուղթը՝ տպվածքը պատրաստ է։ Արա երեք-չորս օրինակ։
 
-### Վարժություններ
+~~~art
+sketch mode=mirror paper=white
+Տպվածքը ստացվում է հայելային։ Նկարի՛ր մի կողմում և տե՛ս, թե ինչպիսին կլինի տպվածքը մյուս կողմում։
+~~~
 
+~~~art
+tasks
 1. Ինչով է տպատախտակը տարբերվում տպվածքից։
 2. Ինչու պետք է տպատախտակի տառերը հակառակ փորագրել։
 3. Որ մասերն են տպում փայտափորագրության ժամանակ։
@@ -562,13 +733,19 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 5. Ով և երբ է հայտնագործել վիմագրությունը։
 6. Անվանիր առաջին տպագիր հայերեն գիրքը։
 7. Պատրաստիր ստվարաթղթե կամ փրփրապլաստե տպատախտակ և տպիր առնվազն երեք անգամ։
+~~~
 
-### Պատասխաններ
-
-1. Տպատախտակը տպագրական ձևն է, տպվածքը՝ թղթի վրայի օրինակը։ 2. Որովհետև տպվածքը հայելային պատկեր է։ 3. Դուրս ցցված մասերը, որոնք չեն փորվել։ 4. Քերծում են մոմի միջով, և թթուն խածնում է դրանք։ 5. Ալոիզ Զենեֆելդերը, 1796 թվականին։ 6. «Ուրբաթագիրք» (1512)։ 7. Քո տպվածքները։`,
+~~~art
+hints
+1. Տպատախտակը տպագրական ձևն է, տպվածքը՝ թղթի վրայի օրինակը։ 2. Որովհետև տպվածքը հայելային պատկեր է։ 3. Դուրս ցցված մասերը, որոնք չեն փորվել։ 4. Քերծում են մոմի միջով, և թթուն խածնում է դրանք։ 5. Ալոիզ Զենեֆելդերը, 1796 թվականին։ 6. «Ուրբաթագիրք» (1512)։ 7. Քո տպվածքները։
+~~~`,
         ru: `## Один рисунок — много копий
 
 Рисунок существует в одном экземпляре. **Печатная графика** позволяет художнику получить много копий. Сначала художник делает **печатную форму** из дерева, линолеума, металла или камня. На неё наносят краску, сверху прижимают бумагу, и изображение переходит на бумагу. Такая копия называется **оттиском** (эстампом). Помни: оттиск — **зеркальное отражение** формы, поэтому буквы вырезают наоборот.
+
+~~~art
+pic ink pencil
+~~~
 
 ## Виды печатной графики
 
@@ -594,6 +771,11 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 * **Линия и штрих:** резец оставляет острые, ритмичные линии.
 * **Пятно:** крупные чёрные пятна делают изображение сильным и графичным.
 
+~~~art
+tone
+В гравюре нет серой краски, только чёрное и белое. Тон делают линиями и точками, как здесь.
+~~~
+
 ## Сделай оттиск с картона
 
 1. Вырежи фигуры из толстого картона и наклей на основу. Или продави карандашом линии на пенопластовой тарелке.
@@ -601,8 +783,13 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 3. Положи сверху бумагу и потри её ложкой или ладонью.
 4. Аккуратно сними бумагу: оттиск готов. Сделай три-четыре копии.
 
-### Упражнения
+~~~art
+sketch mode=mirror paper=white
+Оттиск получается зеркальным. Рисуй с одной стороны и смотри, каким будет отпечаток с другой.
+~~~
 
+~~~art
+tasks
 1. Чем печатная форма отличается от оттиска?
 2. Почему буквы на форме вырезают наоборот?
 3. Какие части печатают в гравюре на дереве?
@@ -610,10 +797,12 @@ Printing changed the world of books. The first printed Armenian book, «Urbatagi
 5. Кто и когда изобрёл литографию?
 6. Назови первую печатную армянскую книгу.
 7. Сделай форму из картона или пенопласта и отпечатай её не меньше трёх раз.
+~~~
 
-### Ответы
-
-1. Форма — это печатная пластина, оттиск — копия на бумаге. 2. Потому что оттиск — зеркальное отражение. 3. Выпуклые части, которые не вырезали. 4. Процарапывают сквозь воск и протравливают кислотой. 5. Алоиз Зенефельдер, в 1796 году. 6. «Урбатагирк» (1512). 7. Твои оттиски.`,
+~~~art
+hints
+1. Форма — это печатная пластина, оттиск — копия на бумаге. 2. Потому что оттиск — зеркальное отражение. 3. Выпуклые части, которые не вырезали. 4. Процарапывают сквозь воск и протравливают кислотой. 5. Алоиз Зенефельдер, в 1796 году. 6. «Урбатагирк» (1512). 7. Твои оттиски.
+~~~`,
       },
       [
         q(t("A copy made from a printing plate is called a…", "Տպատախտակից ստացված օրինակը կոչվում է…", "Копия с печатной формы называется…"), [t("print", "տպվածք", "оттиском"), t("sketch", "ուրվանկար", "наброском"), t("fresco", "որմնանկար", "фреской")], 0),
@@ -650,6 +839,10 @@ A reproduction in a book is small and its colours are not exact. In a museum you
 
 Many museums also have websites with virtual tours, so you can visit them from home.
 
+~~~art
+pic genre-landscape genre-portrait genre-icon genre-abstract
+~~~
+
 ## How to look at a painting
 
 1. **First impression.** Stand back. What do you feel: joy, calm, sadness, tension?
@@ -660,6 +853,10 @@ Many museums also have websites with virtual tours, so you can visit them from h
 
 Read the **label** next to the work: it gives the artist, the title, the year, the materials and the size.
 
+~~~art
+shots
+~~~
+
 ## Rules in the museum
 
 * Do not touch the works; even a clean hand leaves grease.
@@ -667,8 +864,8 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 * Take photos only where it is allowed, without a flash.
 * Do not stand too long in front of one painting if others are waiting.
 
-### Exercises
-
+~~~art
+tasks
 1. Why is it better to see the real painting than a reproduction?
 2. Which museum in Yerevan shows Armenian art from medieval times to today?
 3. Who started the collection of the Tretyakov Gallery?
@@ -676,10 +873,12 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 5. What information does the label give?
 6. Why must you not touch the works?
 7. Choose a painting from this year's lessons and write a short review using the five steps.
+~~~
 
-### Answers
-
-1. You see the true size, colours, brushstrokes and texture. 2. The National Gallery of Armenia. 3. The merchant Pavel Tretyakov. 4. In the Winter Palace in St Petersburg. 5. The artist, title, year, materials and size. 6. Even a clean hand leaves grease that damages them. 7. Your review.`,
+~~~art
+hints
+1. You see the true size, colours, brushstrokes and texture. 2. The National Gallery of Armenia. 3. The merchant Pavel Tretyakov. 4. In the Winter Palace in St Petersburg. 5. The artist, title, year, materials and size. 6. Even a clean hand leaves grease that damages them. 7. Your review.
+~~~`,
         hy: `## Ինչու գնալ թանգարան
 
 Գրքի վերատպությունը փոքր է, և գույները ճշգրիտ չեն։ Թանգարանում տեսնում ես իսկական կտավը՝ իր իրական չափով, վրձնահարվածներով, ներկի ֆակտուրայով։ Թանգարանները պահպանում են արվեստի գործերն ապագայի համար և ցույց են տալիս բոլորին։
@@ -697,6 +896,10 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 
 Շատ թանգարաններ ունեն նաև կայքեր վիրտուալ շրջայցերով, այնպես որ կարող ես այցելել դրանք տնից։
 
+~~~art
+pic genre-landscape genre-portrait genre-icon genre-abstract
+~~~
+
 ## Ինչպես դիտել կտավը
 
 1. **Առաջին տպավորություն։** Մի քիչ հեռու կանգնիր։ Ինչ ես զգում՝ ուրախություն, հանգստություն, տխրություն, լարվածություն։
@@ -707,6 +910,10 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 
 Կարդա գործի կողքի **պիտակը**՝ այն տալիս է նկարչի անունը, վերնագիրը, տարեթիվը, նյութերը և չափը։
 
+~~~art
+shots
+~~~
+
 ## Կանոններ թանգարանում
 
 * Մի դիպչիր գործերին. նույնիսկ մաքուր ձեռքը ճարպ է թողնում։
@@ -714,8 +921,8 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 * Լուսանկարիր միայն այնտեղ, որտեղ թույլատրված է, առանց լուսաթարթիչի։
 * Երկար մի կանգնիր մեկ կտավի առջև, եթե ուրիշները սպասում են։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու է ավելի լավ տեսնել իսկական կտավը, քան վերատպությունը։
 2. Երևանի որ թանգարանն է ցույց տալիս հայկական արվեստը միջնադարից մինչև մեր օրերը։
 3. Ով է սկսել Տրետյակովյան պատկերասրահի հավաքածուն։
@@ -723,10 +930,12 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 5. Ինչ տեղեկություն է տալիս պիտակը։
 6. Ինչու չի կարելի դիպչել գործերին։
 7. Ընտրիր այս տարվա դասերից մի կտավ և գրիր կարճ գրախոսություն՝ օգտագործելով հինգ քայլերը։
+~~~
 
-### Պատասխաններ
-
-1. Տեսնում ես իրական չափը, գույները, վրձնահարվածները և ֆակտուրան։ 2. Հայաստանի ազգային պատկերասրահը։ 3. Վաճառական Պավել Տրետյակովը։ 4. Սանկտ Պետերբուրգի Ձմեռային պալատում։ 5. Նկարչի անունը, վերնագիրը, տարեթիվը, նյութերը և չափը։ 6. Նույնիսկ մաքուր ձեռքը ճարպ է թողնում, որը վնասում է դրանց։ 7. Քո գրախոսությունը։`,
+~~~art
+hints
+1. Տեսնում ես իրական չափը, գույները, վրձնահարվածները և ֆակտուրան։ 2. Հայաստանի ազգային պատկերասրահը։ 3. Վաճառական Պավել Տրետյակովը։ 4. Սանկտ Պետերբուրգի Ձմեռային պալատում։ 5. Նկարչի անունը, վերնագիրը, տարեթիվը, նյութերը և չափը։ 6. Նույնիսկ մաքուր ձեռքը ճարպ է թողնում, որը վնասում է դրանց։ 7. Քո գրախոսությունը։
+~~~`,
         ru: `## Зачем идти в музей?
 
 Репродукция в книге маленькая, и цвета на ней неточные. В музее ты видишь настоящую картину: её истинный размер, мазки, фактуру краски. Музеи сохраняют произведения искусства для будущего и показывают их всем.
@@ -744,6 +953,10 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 
 У многих музеев есть сайты с виртуальными экскурсиями, так что их можно посетить из дома.
 
+~~~art
+pic genre-landscape genre-portrait genre-icon genre-abstract
+~~~
+
 ## Как смотреть на картину
 
 1. **Первое впечатление.** Отойди немного. Что ты чувствуешь: радость, покой, грусть, напряжение?
@@ -754,6 +967,10 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 
 Прочитай **этикетку** рядом с работой: на ней указаны художник, название, год, материалы и размер.
 
+~~~art
+shots
+~~~
+
 ## Правила в музее
 
 * Не трогай произведения: даже чистая рука оставляет жир.
@@ -761,8 +978,8 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 * Фотографируй только там, где разрешено, и без вспышки.
 * Не стой слишком долго у одной картины, если другие ждут.
 
-### Упражнения
-
+~~~art
+tasks
 1. Почему лучше увидеть настоящую картину, чем репродукцию?
 2. Какой музей Еревана показывает армянское искусство от Средневековья до наших дней?
 3. Кто начал собрание Третьяковской галереи?
@@ -770,10 +987,12 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 5. Какие сведения даёт этикетка?
 6. Почему нельзя трогать произведения?
 7. Выбери картину из уроков этого года и напиши короткий отзыв по пяти шагам.
+~~~
 
-### Ответы
-
-1. Видишь настоящий размер, цвета, мазки и фактуру. 2. Национальная галерея Армении. 3. Купец Павел Третьяков. 4. В Зимнем дворце в Санкт-Петербурге. 5. Художника, название, год, материалы и размер. 6. Даже чистая рука оставляет жир, который портит их. 7. Твой отзыв.`,
+~~~art
+hints
+1. Видишь настоящий размер, цвета, мазки и фактуру. 2. Национальная галерея Армении. 3. Купец Павел Третьяков. 4. В Зимнем дворце в Санкт-Петербурге. 5. Художника, название, год, материалы и размер. 6. Даже чистая рука оставляет жир, который портит их. 7. Твой отзыв.
+~~~`,
       },
       [
         q(t("In a museum you can see a painting's true…", "Թանգարանում կարող ես տեսնել կտավի իրական…", "В музее можно увидеть настоящий … картины."), [t("size and texture", "չափն ու ֆակտուրան", "размер и фактуру"), t("price", "գինը", "цену"), t("author's home", "հեղինակի տունը", "дом автора")], 0),
@@ -816,6 +1035,10 @@ Read the **label** next to the work: it gives the artist, the title, the year, t
 | historical | events of the past | Surikov, Sureniants |
 | animal | animals | Dürer «Young Hare» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-self-portrait genre-animal genre-battle genre-everyday genre-marine genre-city genre-fairy genre-icon genre-abstract
+~~~
+
 ## Final work
 
 Choose one genre and make a finished work.
@@ -827,8 +1050,12 @@ Choose one genre and make a finished work.
 5. Write a label: your name, title, year, materials.
 6. Present your work to the class: say what you wanted to show and how.
 
-### Exercises
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. Name four simple shapes that objects are built from.
 2. List the five parts of light and shade.
 3. Where are the eyes on a head?
@@ -836,10 +1063,12 @@ Choose one genre and make a finished work.
 5. Which genre shows ordinary life?
 6. Name four kinds of printmaking.
 7. Make your final work and present it with a label.
+~~~
 
-### Answers
-
-1. Cube, cylinder, cone, ball. 2. Light, half-tone, shadow, reflected light, cast shadow. 3. On the middle line of the head. 4. Linear perspective changes size and direction of lines; aerial perspective changes colour and sharpness. 5. The everyday genre. 6. Woodcut, linocut, etching, lithography. 7. Your work.`,
+~~~art
+hints
+1. Cube, cylinder, cone, ball. 2. Light, half-tone, shadow, reflected light, cast shadow. 3. On the middle line of the head. 4. Linear perspective changes size and direction of lines; aerial perspective changes colour and sharpness. 5. The everyday genre. 6. Woodcut, linocut, etching, lithography. 7. Your work.
+~~~`,
         hy: `## Ինչ սովորեցինք այս տարի
 
 **Կերպարվեստի լեզուն։** Գեղանկարչությունը, գրաֆիկան և քանդակը խոսում են գծով, տոնով, շտրիխով, բծով, ուրվագծով, գույնով և ֆակտուրայով։ Գունային շրջանը ցույց է տալիս հիմնական, բաղադրյալ, տաք, սառը և լրացուցիչ գույները։
@@ -863,6 +1092,10 @@ Choose one genre and make a finished work.
 | պատմական | անցյալի իրադարձություններ | Սուրիկով, Սուրենյանց |
 | կենդանանկար | կենդանիներ | Դյուրեր «Երիտասարդ նապաստակ» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-self-portrait genre-animal genre-battle genre-everyday genre-marine genre-city genre-fairy genre-icon genre-abstract
+~~~
+
 ## Ամփոփիչ աշխատանք
 
 Ընտրիր մեկ ժանր և ստեղծիր ավարտուն աշխատանք։
@@ -874,8 +1107,12 @@ Choose one genre and make a finished work.
 5. Գրիր պիտակ՝ անունդ, վերնագիրը, տարեթիվը, նյութերը։
 6. Ներկայացրու աշխատանքդ դասարանին՝ ասա, թե ինչ էիր ուզում ցույց տալ և ինչպես։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. Անվանիր չորս պարզ ձև, որոնցից կառուցվում են առարկաները։
 2. Թվարկիր լուսաստվերի հինգ մասերը։
 3. Որտեղ են գտնվում աչքերը գլխի վրա։
@@ -883,10 +1120,12 @@ Choose one genre and make a finished work.
 5. Որ ժանրն է ցույց տալիս սովորական կյանքը։
 6. Անվանիր տպագրական գրաֆիկայի չորս տեսակ։
 7. Ստեղծիր քո ամփոփիչ աշխատանքը և ներկայացրու այն պիտակով։
+~~~
 
-### Պատասխաններ
-
-1. Խորանարդ, գլան, կոն, գունդ։ 2. Լույս, կիսատոն, ստվեր, անդրադարձ, ընկնող ստվեր։ 3. Գլխի միջին գծի վրա։ 4. Գծայինը փոխում է չափը և գծերի ուղղությունը, օդայինը՝ գույնը և հստակությունը։ 5. Կենցաղային ժանրը։ 6. Փայտափորագրություն, լինոփորագրություն, օֆորտ, վիմագրություն։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Խորանարդ, գլան, կոն, գունդ։ 2. Լույս, կիսատոն, ստվեր, անդրադարձ, ընկնող ստվեր։ 3. Գլխի միջին գծի վրա։ 4. Գծայինը փոխում է չափը և գծերի ուղղությունը, օդայինը՝ գույնը և հստակությունը։ 5. Կենցաղային ժանրը։ 6. Փայտափորագրություն, լինոփորագրություն, օֆորտ, վիմագրություն։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Чему мы научились в этом году
 
 **Язык изобразительного искусства.** Живопись, графика и скульптура говорят линией, тоном, штрихом, пятном, силуэтом, цветом и фактурой. Цветовой круг показывает основные, составные, тёплые, холодные и дополнительные цвета.
@@ -910,6 +1149,10 @@ Choose one genre and make a finished work.
 | исторический | события прошлого | Суриков, Суренянц |
 | анималистический | животных | Дюрер «Молодой заяц» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-self-portrait genre-animal genre-battle genre-everyday genre-marine genre-city genre-fairy genre-icon genre-abstract
+~~~
+
 ## Итоговая работа
 
 Выбери один жанр и создай законченную работу.
@@ -921,8 +1164,12 @@ Choose one genre and make a finished work.
 5. Напиши этикетку: имя, название, год, материалы.
 6. Представь работу классу: расскажи, что ты хотел показать и как.
 
-### Упражнения
+~~~art
+sketch guide=thirds
+~~~
 
+~~~art
+tasks
 1. Назови четыре простые формы, из которых строятся предметы.
 2. Перечисли пять градаций светотени.
 3. Где находятся глаза на голове?
@@ -930,10 +1177,12 @@ Choose one genre and make a finished work.
 5. Какой жанр изображает обычную жизнь?
 6. Назови четыре вида печатной графики.
 7. Создай итоговую работу и представь её с этикеткой.
+~~~
 
-### Ответы
-
-1. Куб, цилиндр, конус, шар. 2. Свет, полутень, собственная тень, рефлекс, падающая тень. 3. На средней линии головы. 4. Линейная меняет размер и направление линий, воздушная — цвет и чёткость. 5. Бытовой жанр. 6. Гравюра на дереве, линогравюра, офорт, литография. 7. Твоя работа.`,
+~~~art
+hints
+1. Куб, цилиндр, конус, шар. 2. Свет, полутень, собственная тень, рефлекс, падающая тень. 3. На средней линии головы. 4. Линейная меняет размер и направление линий, воздушная — цвет и чёткость. 5. Бытовой жанр. 6. Гравюра на дереве, линогравюра, офорт, литография. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Which of these is NOT a simple shape for building objects?", "Սրանցից որը պարզ ձև ՉԻ առարկաներ կառուցելու համար։", "Что из этого НЕ простая форма для построения предметов?"), [t("a vanishing point", "կորստյան կետը", "точка схода"), t("a cylinder", "գլանը", "цилиндр"), t("a cone", "կոնը", "конус")], 0),

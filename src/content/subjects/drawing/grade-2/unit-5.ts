@@ -21,6 +21,10 @@ export const unit5: UnitSeed = {
 
 For centuries Armenian women and men have woven carpets by hand, knot by knot. A carpet decorated the home, kept it warm and was often given as a wedding present. The patterns were not random: each shape had a meaning.
 
+~~~art
+pic carpet
+~~~
+
 ## The parts of a carpet
 
 | Part | Where | What it looks like |
@@ -29,6 +33,10 @@ For centuries Armenian women and men have woven carpets by hand, knot by knot. A
 | **medallion** | in the centre of the field | a large rhombus, star or octagon |
 | **border** | the frame around the edge | a strip with a repeating small pattern |
 | **corners** | the four corners of the field | a quarter of the medallion |
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Favourite motifs
 
@@ -41,6 +49,10 @@ For centuries Armenian women and men have woven carpets by hand, knot by knot. A
 | tree of life 🌳 | family and growth |
 
 The famous red colour was made from a tiny insect, the **Ararat cochineal**, that lives in the Ararat valley.
+
+~~~art
+pic arevakhach eight-star ram-horns tree-of-life
+~~~
 
 ## Symmetry again
 
@@ -55,8 +67,17 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Fill the border with a repeating motif: small rhombuses or stars.
 6. Colour: red field, dark blue medallion, a little white and yellow for light.
 
-### Exercises
+~~~art
+pattern layout=grid palettes=armenian motifs=rhombus,star,spiral,sun
+~~~
 
+~~~art
+sketch mode=mirror paper=cream
+Design a carpet: draw on one half, the other half mirrors itself.
+~~~
+
+~~~art
+tasks
 1. Name the three main parts of a carpet.
 2. Where is the medallion?
 3. What does the eight-pointed star mean?
@@ -64,13 +85,19 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Why do we fold the paper in four?
 6. What motif will you put in the border?
 7. Draw your carpet design.
+~~~
 
-### Answers
-
-1. Field, medallion and border. 2. In the centre of the field. 3. Light, the sun. 4. From a tiny insect, the Ararat cochineal. 5. To find the centre and make the pattern symmetrical. 6. For example, a row of small rhombuses. 7. Your design.`,
+~~~art
+hints
+1. Field, medallion and border. 2. In the centre of the field. 3. Light, the sun. 4. From a tiny insect, the Ararat cochineal. 5. To find the centre and make the pattern symmetrical. 6. For example, a row of small rhombuses. 7. Your design.
+~~~`,
         hy: `## Գորգեր՝ նկարներ, որոնց վրայով կարելի է քայլել
 
 Դարեր շարունակ հայ կանայք և տղամարդիկ ձեռքով, հանգույց առ հանգույց գորգեր են գործել։ Գորգը զարդարում էր տունը, տաքացնում այն և հաճախ նվիրվում էր հարսանիքին։ Նախշերը պատահական չէին՝ յուրաքանչյուր ձև իմաստ ուներ։
+
+~~~art
+pic carpet
+~~~
 
 ## Գորգի մասերը
 
@@ -80,6 +107,10 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 | **մեդալիոն** | դաշտի կենտրոնում | մեծ շեղանկյուն, աստղ կամ ութանկյուն |
 | **եզրագիծ** | եզրի շրջանակը | կրկնվող մանր նախշով շերտ |
 | **անկյուններ** | դաշտի չորս անկյունները | մեդալիոնի քառորդը |
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Սիրված մոտիվներ
 
@@ -92,6 +123,10 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 | կենաց ծառ 🌳 | ընտանիք և աճ |
 
 Հայտնի կարմիր գույնը ստանում էին փոքրիկ միջատից՝ **արարատյան որդան կարմիրից**, որն ապրում է Արարատյան դաշտում։
+
+~~~art
+pic arevakhach eight-star ram-horns tree-of-life
+~~~
 
 ## Կրկին համաչափություն
 
@@ -106,8 +141,17 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Եզրագիծը լցրո՛ւ կրկնվող մոտիվով՝ մանր շեղանկյուններ կամ աստղեր։
 6. Գունավորի՛ր՝ կարմիր դաշտ, մուգ կապույտ մեդալիոն, մի քիչ սպիտակ և դեղին՝ լույսի համար։
 
-### Վարժություններ
+~~~art
+pattern layout=grid palettes=armenian motifs=rhombus,star,spiral,sun
+~~~
 
+~~~art
+sketch mode=mirror paper=cream
+Ձևավորի՛ր գորգ․ նկարի՛ր մի կեսում, մյուս կեսը կկրկնվի հայելու պես։
+~~~
+
+~~~art
+tasks
 1. Նշի՛ր գորգի երեք գլխավոր մասերը։
 2. Որտե՞ղ է մեդալիոնը։
 3. Ի՞նչ է նշանակում ութաթև աստղը։
@@ -115,13 +159,19 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Ինչո՞ւ ենք թուղթը ծալում չորս մասի։
 6. Ի՞նչ մոտիվ կդնես եզրագծում։
 7. Նկարի՛ր քո գորգի նախագիծը։
+~~~
 
-### Պատասխաններ
-
-1. Դաշտ, մեդալիոն և եզրագիծ։ 2. Դաշտի կենտրոնում։ 3. Լույսը, արևը։ 4. Փոքրիկ միջատից՝ արարատյան որդան կարմիրից։ 5. Որ գտնենք կենտրոնը և նախշը համաչափ ստացվի։ 6. Օրինակ՝ մանր շեղանկյունների շարք։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Դաշտ, մեդալիոն և եզրագիծ։ 2. Դաշտի կենտրոնում։ 3. Լույսը, արևը։ 4. Փոքրիկ միջատից՝ արարատյան որդան կարմիրից։ 5. Որ գտնենք կենտրոնը և նախշը համաչափ ստացվի։ 6. Օրինակ՝ մանր շեղանկյունների շարք։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Ковёр — картина, по которой можно ходить
 
 Веками армянские мастерицы и мастера ткали ковры вручную, узелок за узелком. Ковёр украшал дом, согревал его и часто дарился на свадьбу. Узоры были не случайными: каждая фигура что-то значила.
+
+~~~art
+pic carpet
+~~~
 
 ## Части ковра
 
@@ -131,6 +181,10 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 | **медальон** | в центре поля | большой ромб, звезда или восьмиугольник |
 | **кайма** | рамка по краю | полоса с повторяющимся мелким узором |
 | **углы** | четыре угла поля | четверть медальона |
+
+~~~art
+palette armenian-carpet
+~~~
 
 ## Любимые мотивы
 
@@ -143,6 +197,10 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 | древо жизни 🌳 | семья и рост |
 
 Знаменитый красный цвет получали из крошечного насекомого — **араратской кошенили**, которая живёт в Араратской долине.
+
+~~~art
+pic arevakhach eight-star ram-horns tree-of-life
+~~~
 
 ## Снова симметрия
 
@@ -157,8 +215,17 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Заполни кайму повторяющимся мотивом: маленькими ромбами или звёздочками.
 6. Раскрась: красное поле, тёмно-синий медальон, немного белого и жёлтого для света.
 
-### Упражнения
+~~~art
+pattern layout=grid palettes=armenian motifs=rhombus,star,spiral,sun
+~~~
 
+~~~art
+sketch mode=mirror paper=cream
+Придумай ковёр: рисуй на одной половине, другая отразится зеркально.
+~~~
+
+~~~art
+tasks
 1. Назови три главные части ковра.
 2. Где находится медальон?
 3. Что означает восьмиконечная звезда?
@@ -166,10 +233,12 @@ A carpet is almost always **symmetrical**: the left half mirrors the right, the 
 5. Зачем складывать лист вчетверо?
 6. Какой мотив ты поместишь в кайму?
 7. Нарисуй эскиз своего ковра.
+~~~
 
-### Ответы
-
-1. Поле, медальон и кайма. 2. В центре поля. 3. Свет, солнце. 4. Из крошечного насекомого — араратской кошенили. 5. Чтобы найти центр и сделать узор симметричным. 6. Например, ряд маленьких ромбов. 7. Твой эскиз.`,
+~~~art
+hints
+1. Поле, медальон и кайма. 2. В центре поля. 3. Свет, солнце. 4. Из крошечного насекомого — араратской кошенили. 5. Чтобы найти центр и сделать узор симметричным. 6. Например, ряд маленьких ромбов. 7. Твой эскиз.
+~~~`,
       },
       [
         q(t("The frame around the edge of a carpet is the…", "Գորգի եզրի շրջանակը…", "Рамка по краю ковра — это…"), [t("medallion", "մեդալիոնն է", "медальон"), t("border", "եզրագիծն է", "кайма"), t("field", "դաշտն է", "поле")], 1),
@@ -195,6 +264,10 @@ A **khachkar** (Armenian: *khach* = cross, *kar* = stone) is a tall stone slab w
 
 There are thousands of khachkars in Armenia. A famous place is the old cemetery of **Noratus**, near Lake Sevan, with hundreds of them. In 2010 the art of khachkars was added to UNESCO's list of the world's intangible cultural heritage.
 
+~~~art
+pic khachkar
+~~~
+
 ## What do we see on a khachkar?
 
 | Element | Where | What it looks like |
@@ -214,12 +287,21 @@ The cross that grows leaves means **life**: it is like a blossoming tree.
 3. Alternate: over, under, over, under.
 4. Make the lines double (two parallel lines) so they look like ribbons.
 
+~~~art
+steps interlace
+~~~
+
 ## Task: my khachkar
 
 Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it, two shoots with leaves growing from its foot, and a frame of interlace or small rhombuses. Use only one colour, like stone: grey, brown or terracotta pencil.
 
-### Exercises
+~~~art
+sketch mode=mirror paper=cream
+Your khachkar: a cross in the middle, a rosette below, an interlace border. Mirror mode keeps both sides equal.
+~~~
 
+~~~art
+tasks
 1. What do the two parts of the word "khachkar" mean?
 2. Why is the carving called "stone lace"?
 3. Where is the famous khachkar cemetery Noratus?
@@ -227,15 +309,21 @@ Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it
 5. What does a cross with leaves mean?
 6. Explain how to draw interlace.
 7. Draw your khachkar.
+~~~
 
-### Answers
-
-1. *Khach* = cross, *kar* = stone. 2. Because it is very fine and full of holes and patterns, like lace. 3. Near Lake Sevan. 4. Plant shoots with leaves. 5. Life, a blossoming tree. 6. Lines weave over and under each other at every crossing. 7. Your drawing.`,
+~~~art
+hints
+1. *Khach* = cross, *kar* = stone. 2. Because it is very fine and full of holes and patterns, like lace. 3. Near Lake Sevan. 4. Plant shoots with leaves. 5. Life, a blossoming tree. 6. Lines weave over and under each other at every crossing. 7. Your drawing.
+~~~`,
         hy: `## Քարե ժանյակ
 
 **Խաչքարը** բարձր քարե սալ է՝ փորագրված խաչով։ Հայ վարպետները խաչքարեր են քանդակում ավելի քան հազար տարի։ Փորագրությունն այնքան նուրբ է, որ այն անվանում են **«քարե ժանյակ»**։
 
 Հայաստանում հազարավոր խաչքարեր կան։ Հայտնի վայր է Սևանա լճի մոտ գտնվող **Նորատուսի** հին գերեզմանատունը՝ հարյուրավոր խաչքարերով։ 2010 թվականին խաչքարի արվեստը ներառվեց ՅՈՒՆԵՍԿՕ-ի ոչ նյութական մշակութային ժառանգության ցանկում։
+
+~~~art
+pic khachkar
+~~~
 
 ## Ի՞նչ ենք տեսնում խաչքարի վրա
 
@@ -256,12 +344,21 @@ Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it
 3. Հերթափոխի՛ր՝ վերևով, տակով, վերևով, տակով։
 4. Գծերը կրկնակի դարձրո՛ւ (երկու զուգահեռ գիծ), որ ժապավենի նման լինեն։
 
+~~~art
+steps interlace
+~~~
+
 ## Առաջադրանք՝ իմ խաչքարը
 
 Նկարի՛ր բարձր ուղղանկյուն։ Ներսում նկարի՛ր գալարավոր ծայրերով խաչ, դրա տակ՝ վարդյակ, հիմքից աճող երկու տերևավոր ընձյուղ և հյուսքից կամ փոքր շեղանկյուններից շրջանակ։ Օգտագործի՛ր միայն մեկ գույն, ինչպես քարը՝ մոխրագույն, դարչնագույն կամ աղյուսագույն մատիտ։
 
-### Վարժություններ
+~~~art
+sketch mode=mirror paper=cream
+Քո խաչքարը․ խաչ մեջտեղում, վարդյակ ներքևում, հյուսված եզրազարդ։ Հայելային ռեժիմը երկու կողմերը հավասար է պահում։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ են նշանակում «խաչքար» բառի երկու մասերը։
 2. Ինչո՞ւ են փորագրությունն անվանում «քարե ժանյակ»։
 3. Որտե՞ղ է գտնվում Նորատուսի հայտնի գերեզմանատունը։
@@ -269,15 +366,21 @@ Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it
 5. Ի՞նչ է նշանակում տերևներով խաչը։
 6. Բացատրի՛ր, թե ինչպես նկարել հյուսք։
 7. Նկարի՛ր քո խաչքարը։
+~~~
 
-### Պատասխաններ
-
-1. Խաչ և քար։ 2. Որովհետև այն շատ նուրբ է, լի անցքերով և նախշերով, ինչպես ժանյակը։ 3. Սևանա լճի մոտ։ 4. Տերևավոր բուսական ընձյուղներ։ 5. Կյանք, ծաղկող ծառ։ 6. Գծերը յուրաքանչյուր հատման տեղում անցնում են իրար վրայով և տակով։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Խաչ և քար։ 2. Որովհետև այն շատ նուրբ է, լի անցքերով և նախշերով, ինչպես ժանյակը։ 3. Սևանա լճի մոտ։ 4. Տերևավոր բուսական ընձյուղներ։ 5. Կյանք, ծաղկող ծառ։ 6. Գծերը յուրաքանչյուր հատման տեղում անցնում են իրար վրայով և տակով։ 7. Քո նկարը։
+~~~`,
         ru: `## Каменное кружево
 
 **Хачкар** (по-армянски *хач* — крест, *кар* — камень) — это высокая каменная плита с вырезанным крестом. Армянские мастера высекают хачкары больше тысячи лет. Резьба такая тонкая, что её называют **«каменным кружевом»**.
 
 В Армении тысячи хачкаров. Знаменитое место — старое кладбище **Норатус** у озера Севан, где их сотни. В 2010 году искусство хачкаров включили в список нематериального культурного наследия ЮНЕСКО.
+
+~~~art
+pic khachkar
+~~~
 
 ## Что мы видим на хачкаре?
 
@@ -298,12 +401,21 @@ Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it
 3. Чередуй: сверху, снизу, сверху, снизу.
 4. Сделай линии двойными (две параллельные), чтобы они были похожи на ленточки.
 
+~~~art
+steps interlace
+~~~
+
 ## Задание: мой хачкар
 
 Нарисуй высокий прямоугольник. Внутри нарисуй крест с завитками на концах, под ним розетку, два ростка с листьями из его основания и рамку из плетёнки или маленьких ромбиков. Используй только один цвет, как у камня: серый, коричневый или терракотовый карандаш.
 
-### Упражнения
+~~~art
+sketch mode=mirror paper=cream
+Твой хачкар: крест в центре, розетка внизу, плетёная рамка. Зеркальный режим делает стороны одинаковыми.
+~~~
 
+~~~art
+tasks
 1. Что означают две части слова «хачкар»?
 2. Почему резьбу называют «каменным кружевом»?
 3. Где находится знаменитое кладбище хачкаров Норатус?
@@ -311,10 +423,12 @@ Draw a tall rectangle. Inside, draw a cross with curled ends, a rosette below it
 5. Что означает крест с листьями?
 6. Объясни, как нарисовать плетёнку.
 7. Нарисуй свой хачкар.
+~~~
 
-### Ответы
-
-1. *Хач* — крест, *кар* — камень. 2. Потому что она очень тонкая, полная отверстий и узоров, как кружево. 3. У озера Севан. 4. Ростки с листьями. 5. Жизнь, цветущее дерево. 6. Линии на каждом пересечении проходят то сверху, то снизу друг друга. 7. Твой рисунок.`,
+~~~art
+hints
+1. *Хач* — крест, *кар* — камень. 2. Потому что она очень тонкая, полная отверстий и узоров, как кружево. 3. У озера Севан. 4. Ростки с листьями. 5. Жизнь, цветущее дерево. 6. Линии на каждом пересечении проходят то сверху, то снизу друг друга. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("\"Khachkar\" means…", "«Խաչքար» նշանակում է…", "«Хачкар» означает…"), [t("cross-stone", "խաչ և քար", "крест-камень"), t("red carpet", "կարմիր գորգ", "красный ковёр"), t("big house", "մեծ տուն", "большой дом")], 0),
@@ -345,9 +459,17 @@ Along the Volga river, in the Nizhny Novgorod region, two famous kinds of painti
 | motifs | berries (rowan, strawberry), leaves, curly "grass" | big roses, proud horses, roosters and birds, people |
 | feeling | rich, shining, like a fairy-tale treasure | cheerful, festive, like a holiday |
 
+~~~art
+pic khokhloma-bowl gorodets-board
+~~~
+
 ## The secret of Khokhloma gold
 
 Khokhloma bowls shine like gold, but there is **no real gold** in them. Masters cover the wood with a silvery metal powder, paint the pattern, varnish it and heat it in an oven. The varnish turns yellow, and the silver begins to look like gold.
+
+~~~art
+palette khokhloma gorodets
+~~~
 
 ## Basic strokes
 
@@ -360,6 +482,10 @@ Khokhloma bowls shine like gold, but there is **no real gold** in them. Masters 
 
 Practise each stroke ten times in a row before you paint the real pattern.
 
+~~~art
+steps khokhloma-berry
+~~~
+
 ## Task: a painted plate
 
 Take a paper plate. Choose a style:
@@ -367,8 +493,13 @@ Take a paper plate. Choose a style:
 - **Khokhloma**: black or red background, a gold (yellow ochre) branch with red berries and curly grass.
 - **Gorodets**: yellow background, two roses in the centre and green leaves around them, maybe a horse.
 
-### Exercises
+~~~art
+sketch paper=black guide=circle
+Paint a Khokhloma plate: a curling stem, red berries and golden leaves on black.
+~~~
 
+~~~art
+tasks
 1. Which three colours are typical for Khokhloma?
 2. What things were decorated with Gorodets painting?
 3. Is there real gold in Khokhloma? How do masters make it shine?
@@ -376,10 +507,12 @@ Take a paper plate. Choose a style:
 5. How is a grass curl painted?
 6. How do we show the shine on a berry?
 7. Paint a plate in one of the styles.
+~~~
 
-### Answers
-
-1. Gold, red and black. 2. Boards, boxes, chairs and the seats of spinning wheels. 3. No: silvery powder, varnish and oven heat make it look gold. 4. For example, roses and horses. 5. Touch with the tip, press, lift while curving. 6. With a tiny white highlight on top. 7. Your plate.`,
+~~~art
+hints
+1. Gold, red and black. 2. Boards, boxes, chairs and the seats of spinning wheels. 3. No: silvery powder, varnish and oven heat make it look gold. 4. For example, roses and horses. 5. Touch with the tip, press, lift while curving. 6. With a tiny white highlight on top. 7. Your plate.
+~~~`,
         hy: `## Ռուսական երկու ժողովրդական նկարչություն
 
 Վոլգա գետի ափին, Նիժնի Նովգորոդի մարզում, ծնվել են նկարչության երկու հայտնի տեսակներ։ Երկուսն էլ զարդարում են **փայտե** իրեր, բայց շատ տարբեր տեսք ունեն։
@@ -391,9 +524,17 @@ Take a paper plate. Choose a style:
 | մոտիվներ | հատապտուղներ (արոսենի, ելակ), տերևներ, գանգուր «խոտ» | մեծ վարդեր, հպարտ ձիեր, աքլորներ և թռչուններ, մարդիկ |
 | զգացողություն | հարուստ, փայլուն, ինչպես հեքիաթային գանձ | ուրախ, տոնական, ինչպես տոն |
 
+~~~art
+pic khokhloma-bowl gorodets-board
+~~~
+
 ## Խոխլոմայի ոսկու գաղտնիքը
 
 Խոխլոմայի ամանները ոսկու պես փայլում են, բայց դրանցում **իսկական ոսկի չկա**։ Վարպետները փայտը ծածկում են արծաթափայլ մետաղի փոշով, նկարում նախշը, պատում լաքով և տաքացնում վառարանում։ Լաքը դեղնում է, և արծաթը սկսում է ոսկու պես երևալ։
+
+~~~art
+palette khokhloma gorodets
+~~~
 
 ## Հիմնական հարվածներ
 
@@ -406,6 +547,10 @@ Take a paper plate. Choose a style:
 
 Իսկական նախշը նկարելուց առաջ յուրաքանչյուր հարվածը տասն անգամ անընդմեջ վարժեցրո՛ւ։
 
+~~~art
+steps khokhloma-berry
+~~~
+
 ## Առաջադրանք՝ նկարազարդված ափսե
 
 Վերցրո՛ւ թղթե ափսե։ Ընտրի՛ր ոճը․
@@ -413,8 +558,13 @@ Take a paper plate. Choose a style:
 - **Խոխլոմա**՝ սև կամ կարմիր ֆոն, ոսկեգույն (դեղին օխրա) ճյուղ՝ կարմիր հատապտուղներով և գանգուր խոտով։
 - **Գորոդեց**՝ դեղին ֆոն, կենտրոնում երկու վարդ, շուրջը կանաչ տերևներ, գուցե նաև ձի։
 
-### Վարժություններ
+~~~art
+sketch paper=black guide=circle
+Նկարի՛ր Խոխլոմայի ափսե․ ոլորվող ցողուն, կարմիր հատապտուղներ և ոսկե տերևներ սևի վրա։
+~~~
 
+~~~art
+tasks
 1. Ո՞ր երեք գույներն են բնորոշ խոխլոմային։
 2. Ի՞նչ իրեր էին զարդարում գորոդեցյան նկարչությամբ։
 3. Խոխլոմայում իսկական ոսկի կա՞։ Ինչպե՞ս են վարպետները փայլ ստանում։
@@ -422,10 +572,12 @@ Take a paper plate. Choose a style:
 5. Ինչպե՞ս է նկարվում խոտի գալարը։
 6. Ինչպե՞ս ենք ցույց տալիս հատապտղի փայլը։
 7. Նկարազարդի՛ր ափսե ոճերից մեկով։
+~~~
 
-### Պատասխաններ
-
-1. Ոսկեգույն, կարմիր և սև։ 2. Տախտակներ, տուփեր, աթոռներ և ճախարակի նստատեղեր։ 3. Ոչ․ արծաթափայլ փոշին, լաքը և վառարանի ջերմությունը ոսկու տեսք են տալիս։ 4. Օրինակ՝ վարդեր և ձիեր։ 5. Դիպչել ծայրով, սեղմել, թեքելով բարձրացնել։ 6. Վերևում փոքրիկ սպիտակ փայլով։ 7. Քո ափսեն։`,
+~~~art
+hints
+1. Ոսկեգույն, կարմիր և սև։ 2. Տախտակներ, տուփեր, աթոռներ և ճախարակի նստատեղեր։ 3. Ոչ․ արծաթափայլ փոշին, լաքը և վառարանի ջերմությունը ոսկու տեսք են տալիս։ 4. Օրինակ՝ վարդեր և ձիեր։ 5. Դիպչել ծայրով, սեղմել, թեքելով բարձրացնել։ 6. Վերևում փոքրիկ սպիտակ փայլով։ 7. Քո ափսեն։
+~~~`,
         ru: `## Две русские народные росписи
 
 На Волге, в Нижегородской области, родились две знаменитые росписи. Обе украшают **деревянные** вещи, но выглядят совсем по-разному.
@@ -437,9 +589,17 @@ Take a paper plate. Choose a style:
 | мотивы | ягоды (рябина, земляника), листья, кудрявая «травка» | крупные розаны, гордые кони, петухи и птицы, люди |
 | настроение | богато, блестяще, как сказочный клад | весело, нарядно, как праздник |
 
+~~~art
+pic khokhloma-bowl gorodets-board
+~~~
+
 ## Секрет хохломского золота
 
 Хохломские миски сияют, как золото, но **настоящего золота** в них нет. Мастера покрывают дерево серебристым металлическим порошком, рисуют узор, покрывают лаком и нагревают в печи. Лак желтеет, и серебро начинает выглядеть как золото.
+
+~~~art
+palette khokhloma gorodets
+~~~
 
 ## Основные мазки
 
@@ -452,6 +612,10 @@ Take a paper plate. Choose a style:
 
 Перед настоящим узором повтори каждый мазок по десять раз подряд.
 
+~~~art
+steps khokhloma-berry
+~~~
+
 ## Задание: расписная тарелка
 
 Возьми бумажную тарелку. Выбери стиль:
@@ -459,8 +623,13 @@ Take a paper plate. Choose a style:
 - **Хохлома**: чёрный или красный фон, золотая (жёлтая охра) веточка с красными ягодами и кудрявой травкой.
 - **Городец**: жёлтый фон, два розана в центре, вокруг зелёные листья, может быть, конь.
 
-### Упражнения
+~~~art
+sketch paper=black guide=circle
+Распиши хохломскую тарелку: вьющийся стебель, красные ягоды и золотые листья на чёрном.
+~~~
 
+~~~art
+tasks
 1. Какие три цвета типичны для хохломы?
 2. Какие вещи украшали городецкой росписью?
 3. Есть ли в хохломе настоящее золото? Как мастера добиваются блеска?
@@ -468,10 +637,12 @@ Take a paper plate. Choose a style:
 5. Как рисуется травинка-завиток?
 6. Как показать блеск ягодки?
 7. Распиши тарелку в одном из стилей.
+~~~
 
-### Ответы
-
-1. Золотой, красный и чёрный. 2. Доски, шкатулки, стулья и донца прялок. 3. Нет: серебристый порошок, лак и жар печи придают вид золота. 4. Например, розаны и кони. 5. Коснуться кончиком, нажать, поднять, закругляя. 6. Крошечным белым бликом сверху. 7. Твоя тарелка.`,
+~~~art
+hints
+1. Золотой, красный и чёрный. 2. Доски, шкатулки, стулья и донца прялок. 3. Нет: серебристый порошок, лак и жар печи придают вид золота. 4. Например, розаны и кони. 5. Коснуться кончиком, нажать, поднять, закругляя. 6. Крошечным белым бликом сверху. 7. Твоя тарелка.
+~~~`,
       },
       [
         q(t("Khokhloma's main colours are gold, red and…", "Խոխլոմայի գլխավոր գույներն են ոսկեգույնը, կարմիրը և…", "Главные цвета хохломы: золото, красный и…"), [t("black", "սևը", "чёрный"), t("green", "կանաչը", "зелёный"), t("purple", "մանուշակագույնը", "фиолетовый")], 0),
@@ -497,6 +668,10 @@ People have modelled clay for thousands of years: pots, jugs, huge Armenian wine
 
 You can use clay or plasticine for this lesson.
 
+~~~art
+pic plasticine karas
+~~~
+
 ## Two ways to model
 
 | Way | How | Good for |
@@ -519,16 +694,28 @@ You can use clay or plasticine for this lesson.
 | flat cake | press a ball flat | ears, wings |
 | drop | roll one end of a ball thinner | a bird's body, a beak |
 
+~~~art
+pic shapes
+~~~
+
 ## The Dymkovo toy
 
 In the village of Dymkovo, near the city of Kirov in Russia, craftswomen model clay toys: ladies, horses, turkeys, goats. After firing, the toys are painted **white**, then decorated with bright **circles, dots, stripes, wavy lines and checks** in red, blue, yellow and green.
+
+~~~art
+pic dymkovo filimonovo
+~~~
 
 ## Task: my clay animal
 
 Model an animal you like, either from one piece or from parts. When it is dry, paint it white and decorate it with Dymkovo-style patterns. If you use plasticine, add the patterns with thin coloured sausages and dots.
 
-### Exercises
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. What happens to clay when it is fired?
 2. What is a karas?
 3. Name the two ways of modelling.
@@ -536,15 +723,21 @@ Model an animal you like, either from one piece or from parts. When it is dry, p
 5. Which basic form is good for legs?
 6. Name three typical Dymkovo patterns.
 7. Model and decorate your animal.
+~~~
 
-### Answers
-
-1. It becomes hard. 2. A huge Armenian clay jar for wine. 3. From one piece and from parts. 4. Press them together and smooth the seam. 5. A sausage. 6. For example, circles, dots and wavy lines. 7. Your animal.`,
+~~~art
+hints
+1. It becomes hard. 2. A huge Armenian clay jar for wine. 3. From one piece and from parts. 4. Press them together and smooth the seam. 5. A sausage. 6. For example, circles, dots and wavy lines. 7. Your animal.
+~~~`,
         hy: `## Կավ՝ խաղալիքների ամենահին նյութը
 
 Մարդիկ հազարավոր տարիներ կավից ծեփել են՝ ամաններ, կժեր, գինու հսկա հայկական **կարասներ** և երեխաների համար խաղալիքներ։ Թաց կավը փափուկ է, իսկ չորանալիս կամ վառարանում թրծվելիս կարծրանում է։
 
 Այս դասին կարող ես օգտագործել կավ կամ պլաստիլին։
+
+~~~art
+pic plasticine karas
+~~~
 
 ## Ծեփելու երկու եղանակ
 
@@ -568,16 +761,28 @@ Model an animal you like, either from one piece or from parts. When it is dry, p
 | տափակ բլիթ | գունդը սեղմի՛ր տափակ | ականջներ, թևեր |
 | կաթիլ | գնդի մի ծայրը գլորելով բարակեցրո՛ւ | թռչնի մարմին, կտուց |
 
+~~~art
+pic shapes
+~~~
+
 ## Դիմկովյան խաղալիք
 
 Ռուսաստանի Կիրով քաղաքի մոտ գտնվող Դիմկովո գյուղում վարպետուհիները կավից խաղալիքներ են ծեփում՝ տիկնայք, ձիեր, հնդկահավեր, այծեր։ Թրծելուց հետո խաղալիքները ներկում են **սպիտակ**, հետո զարդարում վառ **շրջաններով, կետերով, շերտերով, ալիքաձև գծերով և վանդակներով**՝ կարմիր, կապույտ, դեղին և կանաչ գույներով։
+
+~~~art
+pic dymkovo filimonovo
+~~~
 
 ## Առաջադրանք՝ իմ կավե կենդանին
 
 Ծեփի՛ր քեզ դուր եկող կենդանի՝ մեկ կտորից կամ մասերից։ Երբ չորանա, ներկի՛ր սպիտակ և զարդարի՛ր դիմկովյան ոճի նախշերով։ Եթե պլաստիլին ես օգտագործում, նախշերն ավելացրո՛ւ բարակ գունավոր գլանիկներով և կետերով։
 
-### Վարժություններ
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է լինում կավի հետ, երբ այն թրծում են։
 2. Ի՞նչ է կարասը։
 3. Նշի՛ր ծեփելու երկու եղանակը։
@@ -585,15 +790,21 @@ Model an animal you like, either from one piece or from parts. When it is dry, p
 5. Ո՞ր հիմնական ձևն է հարմար ոտքերի համար։
 6. Նշի՛ր դիմկովյան երեք բնորոշ նախշ։
 7. Ծեփի՛ր և զարդարի՛ր քո կենդանուն։
+~~~
 
-### Պատասխաններ
-
-1. Կարծրանում է։ 2. Գինու համար հսկա հայկական կավե աման։ 3. Մեկ կտորից և մասերից։ 4. Սեղմում ենք իրար և հարթեցնում կարը։ 5. Գլանիկը։ 6. Օրինակ՝ շրջաններ, կետեր և ալիքաձև գծեր։ 7. Քո կենդանին։`,
+~~~art
+hints
+1. Կարծրանում է։ 2. Գինու համար հսկա հայկական կավե աման։ 3. Մեկ կտորից և մասերից։ 4. Սեղմում ենք իրար և հարթեցնում կարը։ 5. Գլանիկը։ 6. Օրինակ՝ շրջաններ, կետեր և ալիքաձև գծեր։ 7. Քո կենդանին։
+~~~`,
         ru: `## Глина — самый древний материал для игрушек
 
 Люди лепят из глины тысячи лет: горшки, кувшины, огромные армянские винные кувшины — **карасы**, и игрушки для детей. Мокрая глина мягкая, а высохнув или после обжига в печи становится твёрдой.
 
 На этом уроке можно использовать глину или пластилин.
+
+~~~art
+pic plasticine karas
+~~~
 
 ## Два способа лепки
 
@@ -617,16 +828,28 @@ Model an animal you like, either from one piece or from parts. When it is dry, p
 | лепёшка | сплющиваем шар | уши, крылья |
 | капля | раскатываем один конец шара тоньше | тело птицы, клюв |
 
+~~~art
+pic shapes
+~~~
+
 ## Дымковская игрушка
 
 В слободе Дымково возле города Кирова мастерицы лепят глиняные игрушки: барынь, коней, индюков, козликов. После обжига игрушки белят, а потом расписывают яркими **кругами, точками, полосками, волнистыми линиями и клеточками** красного, синего, жёлтого и зелёного цвета.
+
+~~~art
+pic dymkovo filimonovo
+~~~
 
 ## Задание: мой глиняный зверь
 
 Вылепи любимое животное — из целого куска или из частей. Когда оно высохнет, побели его и распиши дымковскими узорами. Если лепишь из пластилина, узоры сделай тонкими цветными колбасками и точками.
 
-### Упражнения
+~~~art
+steps horse
+~~~
 
+~~~art
+tasks
 1. Что происходит с глиной при обжиге?
 2. Что такое карас?
 3. Назови два способа лепки.
@@ -634,10 +857,12 @@ Model an animal you like, either from one piece or from parts. When it is dry, p
 5. Какая основная форма подойдёт для ног?
 6. Назови три типичных дымковских узора.
 7. Вылепи и распиши своего зверя.
+~~~
 
-### Ответы
-
-1. Она становится твёрдой. 2. Огромный армянский глиняный кувшин для вина. 3. Из целого куска и из частей. 4. Прижать друг к другу и загладить шов. 5. Колбаска. 6. Например, круги, точки и волнистые линии. 7. Твой зверь.`,
+~~~art
+hints
+1. Она становится твёрдой. 2. Огромный армянский глиняный кувшин для вина. 3. Из целого куска и из частей. 4. Прижать друг к другу и загладить шов. 5. Колбаска. 6. Например, круги, точки и волнистые линии. 7. Твой зверь.
+~~~`,
       },
       [
         q(t("Fired clay becomes…", "Թրծված կավը դառնում է…", "После обжига глина становится…"), [t("hard", "կարծր", "твёрдой"), t("liquid", "հեղուկ", "жидкой"), t("invisible", "անտեսանելի", "невидимой")], 0),
@@ -665,6 +890,10 @@ The first Russian matryoshka was made at the end of the 19th century. It was car
 
 The name comes from **Matryona**, a popular old Russian woman's name.
 
+~~~art
+pic matryoshka
+~~~
+
 ## How a matryoshka is painted
 
 | Part | What is painted |
@@ -691,12 +920,21 @@ The name comes from **Matryona**, a popular old Russian woman's name.
 4. Colour the scarf and dress, then paint flowers on the apron.
 5. Add rosy cheeks last.
 
+~~~art
+steps matryoshka
+~~~
+
 ## Task: a matryoshka family
 
 Draw three matryoshkas in a row: big, middle and small. Give them the same style, but different flowers on the aprons, so they look like one family.
 
-### Exercises
+~~~art
+sketch
+Paint a matryoshka family: each doll smaller than the one before, each with her own apron flower.
+~~~
 
+~~~art
+tasks
 1. What is special about a matryoshka?
 2. When was the first Russian matryoshka made?
 3. How many dolls did the first matryoshka have?
@@ -704,10 +942,12 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 5. What is the biggest decorated area of the doll?
 6. What is typical for the Semyonov matryoshka?
 7. Draw a family of three matryoshkas.
+~~~
 
-### Answers
-
-1. It opens, and smaller dolls are hidden inside. 2. At the end of the 19th century. 3. Eight. 4. From the old Russian name Matryona. 5. The apron. 6. A big bunch of flowers on the apron. 7. Your drawing.`,
+~~~art
+hints
+1. It opens, and smaller dolls are hidden inside. 2. At the end of the 19th century. 3. Eight. 4. From the old Russian name Matryona. 5. The apron. 6. A big bunch of flowers on the apron. 7. Your drawing.
+~~~`,
         hy: `## Տիկնիկ՝ ներսում անակնկալով
 
 **Մատրյոշկան** փայտե տիկնիկ է, որը բացվում է մեջտեղից։ Ներսում ավելի փոքր տիկնիկ է, դրա մեջ՝ ավելի փոքրը, և այդպես շարունակ՝ մինչև փոքրիկ մանուկը, որը չի բացվում։
@@ -715,6 +955,10 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 Առաջին ռուսական մատրյոշկան պատրաստվել է 19-րդ դարի վերջին։ Այն խառատել է **Վասիլի Զվյոզդոչկինը**, իսկ նկարազարդել՝ նկարիչ **Սերգեյ Մալյուտինը**։ Այն ուներ **ութ** տիկնիկ՝ աղջիկ աքլորով, հետո ավելի փոքր քույրեր ու եղբայրներ և մանուկ։
 
 Անունը գալիս է **Մատրյոնա** անունից, որը հին ռուսական տարածված կանացի անուն է։
+
+~~~art
+pic matryoshka
+~~~
 
 ## Ինչպես են նկարազարդում մատրյոշկան
 
@@ -742,12 +986,21 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 4. Գունավորի՛ր գլխաշորը և զգեստը, հետո գոգնոցին ծաղիկներ նկարի՛ր։
 5. Վերջում ավելացրո՛ւ վարդագույն այտերը։
 
+~~~art
+steps matryoshka
+~~~
+
 ## Առաջադրանք՝ մատրյոշկաների ընտանիք
 
 Նկարի՛ր երեք մատրյոշկա շարքով՝ մեծ, միջին և փոքր։ Նրանց տուր նույն ոճը, բայց գոգնոցներին տարբեր ծաղիկներ նկարի՛ր, որ մեկ ընտանիքի նման լինեն։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր մատրյոշկաների ընտանիք․ ամեն տիկնիկ նախորդից փոքր է՝ իր գոգնոցի ծաղկով։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞վ է առանձնահատուկ մատրյոշկան։
 2. Ե՞րբ է պատրաստվել առաջին ռուսական մատրյոշկան։
 3. Քանի՞ տիկնիկ ուներ առաջին մատրյոշկան։
@@ -755,10 +1008,12 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 5. Ո՞րն է տիկնիկի ամենամեծ զարդարված մասը։
 6. Ի՞նչն է բնորոշ սեմյոնովյան մատրյոշկային։
 7. Նկարի՛ր երեք մատրյոշկաներից բաղկացած ընտանիք։
+~~~
 
-### Պատասխաններ
-
-1. Այն բացվում է, և ներսում ավելի փոքր տիկնիկներ են թաքնված։ 2. 19-րդ դարի վերջին։ 3. Ութ։ 4. Հին ռուսական Մատրյոնա անունից։ 5. Գոգնոցը։ 6. Գոգնոցին մեծ ծաղկեփունջ։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Այն բացվում է, և ներսում ավելի փոքր տիկնիկներ են թաքնված։ 2. 19-րդ դարի վերջին։ 3. Ութ։ 4. Հին ռուսական Մատրյոնա անունից։ 5. Գոգնոցը։ 6. Գոգնոցին մեծ ծաղկեփունջ։ 7. Քո նկարը։
+~~~`,
         ru: `## Кукла с сюрпризом внутри
 
 **Матрёшка** — деревянная кукла, которая открывается посередине. Внутри кукла поменьше, в ней ещё меньше и так далее, до крошечного малыша, который не открывается.
@@ -766,6 +1021,10 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 Первая русская матрёшка появилась в конце XIX века. Её выточил токарь **Василий Звёздочкин**, а расписал художник **Сергей Малютин**. В ней было **восемь** кукол: девочка с петухом, потом сёстры и братья поменьше и младенец.
 
 Название происходит от имени **Матрёна** — старинного распространённого русского женского имени.
+
+~~~art
+pic matryoshka
+~~~
 
 ## Как расписывают матрёшку
 
@@ -793,12 +1052,21 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 4. Раскрась платок и сарафан, потом нарисуй цветы на фартуке.
 5. В конце добавь румяные щёки.
 
+~~~art
+steps matryoshka
+~~~
+
 ## Задание: семья матрёшек
 
 Нарисуй в ряд три матрёшки: большую, среднюю и маленькую. Сделай их в одном стиле, но с разными цветами на фартуках, чтобы было видно, что это одна семья.
 
-### Упражнения
+~~~art
+sketch
+Нарисуй семью матрёшек: каждая меньше предыдущей и со своим цветком на фартуке.
+~~~
 
+~~~art
+tasks
 1. Чем необычна матрёшка?
 2. Когда появилась первая русская матрёшка?
 3. Сколько кукол было в первой матрёшке?
@@ -806,10 +1074,12 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 5. Какая часть куклы расписана больше всего?
 6. Что характерно для семёновской матрёшки?
 7. Нарисуй семью из трёх матрёшек.
+~~~
 
-### Ответы
-
-1. Она открывается, а внутри спрятаны куклы поменьше. 2. В конце XIX века. 3. Восемь. 4. От старинного русского имени Матрёна. 5. Фартук. 6. Большой букет на фартуке. 7. Твой рисунок.`,
+~~~art
+hints
+1. Она открывается, а внутри спрятаны куклы поменьше. 2. В конце XIX века. 3. Восемь. 4. От старинного русского имени Матрёна. 5. Фартук. 6. Большой букет на фартуке. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Inside a matryoshka there are…", "Մատրյոշկայի ներսում կան…", "Внутри матрёшки находятся…"), [t("smaller dolls", "ավելի փոքր տիկնիկներ", "куклы поменьше"), t("sweets only", "միայն կոնֆետներ", "только конфеты"), t("nothing", "ոչինչ", "ничего")], 0),
@@ -839,6 +1109,10 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 | Reality and fantasy | illustrating a Tumanyan tale and a Russian tale; good and evil heroes; invented creatures; patterns of nature; a dream house |
 | Folk art and modelling | carpet patterns; khachkar motifs; Khokhloma and Gorodets; clay animals; the matryoshka |
 
+~~~art
+pic gouache watercolour pastel ink
+~~~
+
 ## Quick memory check
 
 | Question | Answer |
@@ -851,6 +1125,10 @@ Draw three matryoshkas in a row: big, middle and small. Give them the same style
 | Khokhloma colours are… | gold, red and black |
 | To join clay parts we… | press them and smooth the seam |
 
+~~~art
+mixer
+~~~
+
 ## Final project: "My favourite tale in folk style"
 
 Choose a fairy tale you love. Draw one scene from it, and use **at least three things** from this year. For example:
@@ -861,8 +1139,13 @@ Choose a fairy tale you love. Draw one scene from it, and use **at least three t
 
 Then look at your first drawings from September. Compare them. What have you learned to do better?
 
-### Exercises
+~~~art
+sketch guide=frame
+My favourite tale in folk style: a scene framed by an ornament border.
+~~~
 
+~~~art
+tasks
 1. Name three painting or drawing materials we used this year.
 2. What are the three colours (plus white) of the gouache lesson?
 3. Which colour is the opposite of blue?
@@ -870,10 +1153,12 @@ Then look at your first drawings from September. Compare them. What have you lea
 5. Name an Armenian and a Russian folk art we studied.
 6. What is a carpet's medallion?
 7. Make your final project.
+~~~
 
-### Answers
-
-1. For example, gouache, watercolour, pastel. 2. Red, yellow and blue. 3. Orange. 4. So that it does not touch the edges and looks comfortable on the sheet. 5. For example, khachkars and the matryoshka. 6. The big shape in the centre of the field. 7. Your project.`,
+~~~art
+hints
+1. For example, gouache, watercolour, pastel. 2. Red, yellow and blue. 3. Orange. 4. So that it does not touch the edges and looks comfortable on the sheet. 5. For example, khachkars and the matryoshka. 6. The big shape in the centre of the field. 7. Your project.
+~~~`,
         hy: `## Ինչ սովորեցինք այս տարի
 
 | Բաժին | Գլխավոր գաղափարներ |
@@ -883,6 +1168,10 @@ Then look at your first drawings from September. Compare them. What have you lea
 | Նկարչություն բնությունից | մրգերով նատյուրմորտ, տերևների ուսումնասիրություն, խաղալիքի նկարում, նկարի տեղադրումը թերթի վրա, թռչունների համամասնություններ, բնության մանր ձևեր |
 | Իրականություն և երևակայություն | Թումանյանի և ռուսական հեքիաթների նկարազարդում, բարի և չար հերոսներ, հորինված արարածներ, բնության նախշեր, երազանքների տուն |
 | Ժողովրդական արվեստ և ծեփում | գորգի նախշեր, խաչքարի մոտիվներ, խոխլոմա և գորոդեց, կավե կենդանիներ, մատրյոշկա |
+
+~~~art
+pic gouache watercolour pastel ink
+~~~
 
 ## Արագ ստուգում
 
@@ -896,6 +1185,10 @@ Then look at your first drawings from September. Compare them. What have you lea
 | Խոխլոմայի գույներն են… | ոսկեգույն, կարմիր և սև |
 | Կավե մասերը միացնելու համար… | սեղմում և հարթեցնում ենք կարը |
 
+~~~art
+mixer
+~~~
+
 ## Ամփոփիչ աշխատանք՝ «Իմ սիրած հեքիաթը ժողովրդական ոճով»
 
 Ընտրի՛ր քո սիրած հեքիաթը։ Նկարի՛ր դրանից մեկ տեսարան և օգտագործի՛ր այս տարվա **առնվազն երեք բան**։ Օրինակ՝
@@ -906,8 +1199,13 @@ Then look at your first drawings from September. Compare them. What have you lea
 
 Հետո նայի՛ր սեպտեմբերի քո առաջին նկարներին։ Համեմատի՛ր։ Ի՞նչն ես սովորել ավելի լավ անել։
 
-### Վարժություններ
+~~~art
+sketch guide=frame
+Իմ սիրելի հեքիաթը ժողովրդական ոճով՝ տեսարան զարդանախշ շրջանակում։
+~~~
 
+~~~art
+tasks
 1. Նշի՛ր այս տարի օգտագործած երեք նյութ։
 2. Որո՞նք են գուաշի դասի երեք գույները (և սպիտակը)։
 3. Ո՞ր գույնն է կապույտի հակադիրը։
@@ -915,10 +1213,12 @@ Then look at your first drawings from September. Compare them. What have you lea
 5. Նշի՛ր մեր ուսումնասիրած մեկ հայկական և մեկ ռուսական ժողովրդական արվեստ։
 6. Ի՞նչ է գորգի մեդալիոնը։
 7. Կատարի՛ր ամփոփիչ աշխատանքը։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ գուաշ, ջրաներկ, պաստել։ 2. Կարմիր, դեղին և կապույտ։ 3. Նարնջագույնը։ 4. Որպեսզի այն չդիպչի եզրերին և հարմար տեղավորվի թերթի վրա։ 5. Օրինակ՝ խաչքարերը և մատրյոշկան։ 6. Դաշտի կենտրոնի մեծ ձևը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Օրինակ՝ գուաշ, ջրաներկ, պաստել։ 2. Կարմիր, դեղին և կապույտ։ 3. Նարնջագույնը։ 4. Որպեսզի այն չդիպչի եզրերին և հարմար տեղավորվի թերթի վրա։ 5. Օրինակ՝ խաչքարերը և մատրյոշկան։ 6. Դաշտի կենտրոնի մեծ ձևը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Чему мы научились за год
 
 | Раздел | Главное |
@@ -928,6 +1228,10 @@ Then look at your first drawings from September. Compare them. What have you lea
 | Рисование с натуры | натюрморт с фруктами; изучение листьев; рисуем игрушку; размещение на листе; пропорции птиц; малые формы природы |
 | Реальность и фантазия | иллюстрации к сказке Туманяна и русской сказке; добрые и злые герои; придуманные существа; узоры природы; дом мечты |
 | Народное искусство и лепка | ковровые узоры; мотивы хачкаров; хохлома и городец; глиняные звери; матрёшка |
+
+~~~art
+pic gouache watercolour pastel ink
+~~~
 
 ## Быстрая проверка
 
@@ -941,6 +1245,10 @@ Then look at your first drawings from September. Compare them. What have you lea
 | Цвета хохломы… | золото, красный и чёрный |
 | Чтобы соединить части из глины… | прижимаем и заглаживаем шов |
 
+~~~art
+mixer
+~~~
+
 ## Итоговая работа: «Моя любимая сказка в народном стиле»
 
 Выбери любимую сказку. Нарисуй из неё одну сцену и используй **не меньше трёх приёмов** этого года. Например:
@@ -951,8 +1259,13 @@ Then look at your first drawings from September. Compare them. What have you lea
 
 Потом посмотри на свои первые сентябрьские рисунки. Сравни. Что ты научился делать лучше?
 
-### Упражнения
+~~~art
+sketch guide=frame
+Моя любимая сказка в народном стиле: сцена в узорной рамке.
+~~~
 
+~~~art
+tasks
 1. Назови три материала, которыми мы работали в этом году.
 2. Какие три цвета (и белила) были на уроке гуаши?
 3. Какой цвет противоположен синему?
@@ -960,10 +1273,12 @@ Then look at your first drawings from September. Compare them. What have you lea
 5. Назови одно армянское и одно русское народное искусство, которые мы изучали.
 6. Что такое медальон ковра?
 7. Выполни итоговую работу.
+~~~
 
-### Ответы
-
-1. Например, гуашь, акварель, пастель. 2. Красный, жёлтый и синий. 3. Оранжевый. 4. Чтобы он не касался краёв и удобно размещался на листе. 5. Например, хачкары и матрёшка. 6. Большая фигура в центре поля. 7. Твоя работа.`,
+~~~art
+hints
+1. Например, гуашь, акварель, пастель. 2. Красный, жёлтый и синий. 3. Оранжевый. 4. Чтобы он не касался краёв и удобно размещался на листе. 5. Например, хачкары и матрёшка. 6. Большая фигура в центре поля. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Which colour is the opposite of red?", "Ո՞ր գույնն է կարմիրի հակադիրը։", "Какой цвет противоположен красному?"), [t("green", "կանաչը", "зелёный"), t("yellow", "դեղինը", "жёлтый"), t("blue", "կապույտը", "синий")], 0),

@@ -148,7 +148,7 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
             </div>
             {preview && (
               <div className="clay-sm max-h-[60vh] overflow-auto p-4 sm:p-5">
-                <Markdown>{lesson.content[lang] || "*Nothing to preview yet.*"}</Markdown>
+                <Markdown lang={lang}>{lesson.content[lang] || "*Nothing to preview yet.*"}</Markdown>
               </div>
             )}
           </div>

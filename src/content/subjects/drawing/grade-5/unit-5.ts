@@ -21,6 +21,10 @@ export const unit5: UnitSeed = {
 
 Today's decorative artists work in **glass**, **ceramics**, **textile**, **metal**, **wood**, **paper** and even **plastic** and **recycled** materials. They make vases, wall panels, lamps, tapestries, jewellery and installations for exhibitions.
 
+~~~art
+pic ceramic-plate batik jewellery
+~~~
+
 ## Folk art and modern art: what is the difference?
 
 | Folk craft | Modern decorative art |
@@ -40,6 +44,10 @@ But modern artists often **learn from tradition**: they take a carpet ornament a
 * **paper art:** paper cutting, quilling, papier-mâché;
 * **eco-art:** objects made from bottle caps, old fabric, packaging.
 
+~~~art
+pic stained-glass lace
+~~~
+
 ## The material leads
 
 A good artist listens to the material: glass is transparent and plays with light; felt is soft and warm; paper can be cut and folded. The same motif, for example a pomegranate, looks completely different in glass, felt and paper.
@@ -51,8 +59,12 @@ A good artist listens to the material: glass is transparent and plays with light
 3. Lay out the motif from the material on cardboard. Try several arrangements.
 4. Glue it down. Add a border from the same material.
 
-### Exercises
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Name five materials modern decorative artists use.
 2. What is the main difference between a folk craft and modern decorative art?
 3. How can a modern artist learn from tradition? Give an example.
@@ -60,13 +72,19 @@ A good artist listens to the material: glass is transparent and plays with light
 5. What is eco-art?
 6. Why does the same motif look different in glass and in felt?
 7. Make a pomegranate from paper strips or buttons.
+~~~
 
-### Answers
-
-1. For example: glass, ceramics, textile, metal, wood, paper, plastic, recycled materials. 2. Folk craft is a tradition repeated by many masters; modern decorative art is an author's personal idea. 3. By taking a traditional ornament or colours into a new object, for example a carpet ornament in a glass panel. 4. For example: tapestry, batik, felt, patchwork. 5. Art made from recycled things such as caps, old fabric, packaging. 6. Each material has its own qualities: glass is transparent, felt is soft. 7. Your work.`,
+~~~art
+hints
+1. For example: glass, ceramics, textile, metal, wood, paper, plastic, recycled materials. 2. Folk craft is a tradition repeated by many masters; modern decorative art is an author's personal idea. 3. By taking a traditional ornament or colours into a new object, for example a carpet ornament in a glass panel. 4. For example: tapestry, batik, felt, patchwork. 5. Art made from recycled things such as caps, old fabric, packaging. 6. Each material has its own qualities: glass is transparent, felt is soft. 7. Your work.
+~~~`,
         hy: `## Արվեստ, որին կարելի է դիպչել
 
 Այսօրվա դեկորատիվ արվեստագետներն աշխատում են **ապակով**, **խեցեղենով**, **գործվածքով**, **մետաղով**, **փայտով**, **թղթով** և նույնիսկ **պլաստիկով** ու **վերամշակված** նյութերով։ Նրանք պատրաստում են ծաղկամաններ, պատի պանոներ, լամպեր, գոբելեններ, զարդեր և ինստալյացիաներ ցուցահանդեսների համար։
+
+~~~art
+pic ceramic-plate batik jewellery
+~~~
 
 ## Ժողովրդական և ժամանակակից արվեստ․ որն է տարբերությունը
 
@@ -87,6 +105,10 @@ A good artist listens to the material: glass is transparent and plays with light
 * **թղթի արվեստ**՝ թղթից կտրվածքներ, քվիլինգ, պապյե-մաշե,
 * **էկո-արվեստ**՝ շշի կափարիչներից, հին գործվածքից, փաթեթավորումից պատրաստված իրեր։
 
+~~~art
+pic stained-glass lace
+~~~
+
 ## Նյութն է առաջնորդում
 
 Լավ արվեստագետը լսում է նյութին․ ապակին թափանցիկ է և խաղում է լույսի հետ, թաղիքը փափուկ է և տաք, թուղթը կարելի է կտրել և ծալել։ Նույն մոտիվը, օրինակ՝ նուռը, ապակու, թաղիքի և թղթի մեջ բոլորովին տարբեր տեսք ունի։
@@ -98,8 +120,12 @@ A good artist listens to the material: glass is transparent and plays with light
 3. Ստվարաթղթի վրա նյութից դասավորիր մոտիվը։ Փորձիր մի քանի դասավորություն։
 4. Սոսնձիր։ Ավելացրու եզրազարդ նույն նյութից։
 
-### Վարժություններ
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Անվանիր հինգ նյութ, որոնցով աշխատում են ժամանակակից դեկորատիվ արվեստագետները։
 2. Որն է ժողովրդական արհեստի և ժամանակակից դեկորատիվ արվեստի հիմնական տարբերությունը։
 3. Ինչպես կարող է ժամանակակից արվեստագետը սովորել ավանդույթից։ Բեր օրինակ։
@@ -107,13 +133,19 @@ A good artist listens to the material: glass is transparent and plays with light
 5. Ինչ է էկո-արվեստը։
 6. Ինչու է նույն մոտիվը տարբեր տեսք ունենում ապակու և թաղիքի մեջ։
 7. Թղթի շերտերից կամ կոճակներից պատրաստիր նուռ։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ ապակի, խեցեղեն, գործվածք, մետաղ, փայտ, թուղթ, պլաստիկ, վերամշակված նյութեր։ 2. Ժողովրդական արհեստը շատ վարպետների կրկնած ավանդույթ է, ժամանակակից դեկորատիվ արվեստը՝ հեղինակի անձնական գաղափար։ 3. Ավանդական զարդը կամ գույները տեղափոխելով նոր իրի մեջ, օրինակ՝ գորգի զարդն ապակե պանոյում։ 4. Օրինակ՝ գոբելեն, բատիկ, թաղիք, կարկատան։ 5. Արվեստ վերամշակված իրերից՝ կափարիչներից, հին գործվածքից, փաթեթավորումից։ 6. Ամեն նյութ ունի իր հատկությունները․ ապակին թափանցիկ է, թաղիքը՝ փափուկ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Օրինակ՝ ապակի, խեցեղեն, գործվածք, մետաղ, փայտ, թուղթ, պլաստիկ, վերամշակված նյութեր։ 2. Ժողովրդական արհեստը շատ վարպետների կրկնած ավանդույթ է, ժամանակակից դեկորատիվ արվեստը՝ հեղինակի անձնական գաղափար։ 3. Ավանդական զարդը կամ գույները տեղափոխելով նոր իրի մեջ, օրինակ՝ գորգի զարդն ապակե պանոյում։ 4. Օրինակ՝ գոբելեն, բատիկ, թաղիք, կարկատան։ 5. Արվեստ վերամշակված իրերից՝ կափարիչներից, հին գործվածքից, փաթեթավորումից։ 6. Ամեն նյութ ունի իր հատկությունները․ ապակին թափանցիկ է, թաղիքը՝ փափուկ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Искусство, которого можно коснуться
 
 Современные художники-прикладники работают со **стеклом**, **керамикой**, **текстилем**, **металлом**, **деревом**, **бумагой** и даже с **пластиком** и **вторичными** материалами. Они создают вазы, настенные панно, светильники, гобелены, украшения и инсталляции для выставок.
+
+~~~art
+pic ceramic-plate batik jewellery
+~~~
 
 ## Народный промысел и современное искусство: в чём разница?
 
@@ -134,6 +166,10 @@ A good artist listens to the material: glass is transparent and plays with light
 * **бумажное искусство:** вырезание, квиллинг, папье-маше;
 * **эко-арт:** предметы из крышечек, старой ткани, упаковки.
 
+~~~art
+pic stained-glass lace
+~~~
+
 ## Материал ведёт
 
 Хороший художник слушает материал: стекло прозрачно и играет со светом; войлок мягкий и тёплый; бумагу можно резать и складывать. Один и тот же мотив, например гранат, совсем по-разному выглядит в стекле, войлоке и бумаге.
@@ -145,8 +181,12 @@ A good artist listens to the material: glass is transparent and plays with light
 3. Выложи мотив из материала на картоне. Попробуй несколько вариантов.
 4. Приклей. Добавь кайму из того же материала.
 
-### Упражнения
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Назови пять материалов, с которыми работают современные художники-прикладники.
 2. В чём главное отличие народного промысла от современного декоративного искусства?
 3. Как современный художник может учиться у традиции? Приведи пример.
@@ -154,10 +194,12 @@ A good artist listens to the material: glass is transparent and plays with light
 5. Что такое эко-арт?
 6. Почему один и тот же мотив по-разному выглядит в стекле и в войлоке?
 7. Сделай гранат из бумажных полосок или пуговиц.
+~~~
 
-### Ответы
-
-1. Например: стекло, керамика, текстиль, металл, дерево, бумага, пластик, вторичные материалы. 2. Промысел — традиция многих мастеров, современное искусство — личный замысел автора. 3. Перенести традиционный орнамент или цвета в новый предмет, например ковровый узор в стеклянное панно. 4. Например: гобелен, батик, войлок, лоскутное шитьё. 5. Искусство из вторичных вещей: крышечек, старой ткани, упаковки. 6. У каждого материала свои свойства: стекло прозрачно, войлок мягкий. 7. Твоя работа.`,
+~~~art
+hints
+1. Например: стекло, керамика, текстиль, металл, дерево, бумага, пластик, вторичные материалы. 2. Промысел — традиция многих мастеров, современное искусство — личный замысел автора. 3. Перенести традиционный орнамент или цвета в новый предмет, например ковровый узор в стеклянное панно. 4. Например: гобелен, батик, войлок, лоскутное шитьё. 5. Искусство из вторичных вещей: крышечек, старой ткани, упаковки. 6. У каждого материала свои свойства: стекло прозрачно, войлок мягкий. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Modern decorative art is usually…", "Ժամանակակից դեկորատիվ արվեստը սովորաբար…", "Современное декоративное искусство — это обычно…"), [t("an author's personal idea", "հեղինակի անձնական գաղափար է", "личный замысел автора"), t("an exact copy of folk art", "ժողովրդական արվեստի ճշգրիտ պատճեն է", "точная копия народного"), t("only paintings", "միայն կտավներ է", "только картины")], 0),
@@ -190,6 +232,10 @@ Jewellery is one of the oldest arts. Even in the Stone Age people made beads fro
 
 Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**. Women wore silver belts, temple pendants, necklaces of coins, and headdresses with rows of small coins that rang when they walked. Today Armenian jewellers make pieces with **pomegranates**, **eternity signs**, letters of the **alphabet** and **obsidian**.
 
+~~~art
+pic jewellery
+~~~
+
 ## Principles of design
 
 1. **One idea:** a leaf, a pomegranate, a drop, a star.
@@ -197,6 +243,11 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 3. **Material and colour:** shiny metal, a warm stone, a contrast of black and silver.
 4. **Comfort:** no sharp edges, not too heavy.
 5. **A set:** earrings, a pendant and a ring with the same motif look like a family.
+
+~~~art
+sketch mode=kaleido n=8 paper=dark
+Rhythm and symmetry make jewellery. Draw one petal of a brooch and see the whole piece.
+~~~
 
 ## Design a set
 
@@ -206,8 +257,8 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 4. Choose the metal colour and one stone colour.
 5. Draw the set on a dark background, with white highlights on the metal.
 
-### Exercises
-
+~~~art
+tasks
 1. What could jewellery show? Name four things.
 2. What did Stone Age people make beads from?
 3. Name three kinds of traditional Armenian jewellery.
@@ -215,10 +266,12 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 5. Why is scale important in jewellery?
 6. What is a jewellery set?
 7. Design a set of three pieces with one motif.
+~~~
 
-### Answers
-
-1. Beauty and holiday, position, protection, memory. 2. Shells, teeth, stones. 3. For example: silver belts, temple pendants, coin necklaces, headdresses with coins. 4. Pomegranates, eternity signs, letters of the alphabet, obsidian. 5. A piece must suit the human body and be comfortable. 6. Several pieces with the same motif. 7. Your design.`,
+~~~art
+hints
+1. Beauty and holiday, position, protection, memory. 2. Shells, teeth, stones. 3. For example: silver belts, temple pendants, coin necklaces, headdresses with coins. 4. Pomegranates, eternity signs, letters of the alphabet, obsidian. 5. A piece must suit the human body and be comfortable. 6. Several pieces with the same motif. 7. Your design.
+~~~`,
         hy: `## Ինչու են մարդիկ զարդեր կրում
 
 Զարդերն ամենահին արվեստներից են։ Դեռ քարի դարում մարդիկ ուլունքներ էին պատրաստում խեցիներից, ատամներից և քարերից։ Զարդերը կարող էին ցույց տալ․
@@ -232,6 +285,10 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 
 Հայ արծաթագործներն ու ոսկերիչները հայտնի էին **ֆիլիգրանով** և **սևադրմամբ**։ Կանայք կրում էին արծաթե գոտիներ, քունքազարդեր, մետաղադրամներից մանյակներ և գլխազարդեր՝ փոքր մետաղադրամների շարքերով, որոնք զնգում էին քայլելիս։ Այսօր հայ ոսկերիչները պատրաստում են զարդեր **նռներով**, **հավերժության նշաններով**, **այբուբենի** տառերով և **վանակնով**։
 
+~~~art
+pic jewellery
+~~~
+
 ## Ձևավորման սկզբունքներ
 
 1. **Մեկ գաղափար**՝ տերև, նուռ, կաթիլ, աստղ։
@@ -239,6 +296,11 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 3. **Նյութ և գույն**՝ փայլուն մետաղ, տաք քար, սևի և արծաթի հակադրություն։
 4. **Հարմարավետություն**՝ առանց սուր եզրերի, ոչ շատ ծանր։
 5. **Հավաքածու**՝ նույն մոտիվով ականջօղերը, կախազարդը և մատանին մի ընտանիքի տեսք ունեն։
+
+~~~art
+sketch mode=kaleido n=8 paper=dark
+Ռիթմն ու համաչափությունը ստեղծում են զարդը։ Նկարի՛ր կրծքազարդի մեկ թերթիկ և տե՛ս ամբողջը։
+~~~
 
 ## Նախագծիր հավաքածու
 
@@ -248,8 +310,8 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 4. Ընտրիր մետաղի գույնը և քարի մեկ գույն։
 5. Հավաքածուն նկարիր մուգ ֆոնի վրա՝ մետաղին սպիտակ փայլերով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ կարող էին ցույց տալ զարդերը։ Անվանիր չորս բան։
 2. Ինչից էին քարի դարի մարդիկ ուլունքներ պատրաստում։
 3. Անվանիր ավանդական հայկական զարդերի երեք տեսակ։
@@ -257,10 +319,12 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 5. Ինչու է մասշտաբը կարևոր զարդերում։
 6. Ինչ է զարդերի հավաքածուն։
 7. Նախագծիր երեք զարդից բաղկացած հավաքածու մեկ մոտիվով։
+~~~
 
-### Պատասխաններ
-
-1. Գեղեցկություն և տոն, դիրք, պաշտպանություն, հիշողություն։ 2. Խեցիներից, ատամներից, քարերից։ 3. Օրինակ՝ արծաթե գոտիներ, քունքազարդեր, մետաղադրամներից մանյակներ, մետաղադրամներով գլխազարդեր։ 4. Նռներ, հավերժության նշաններ, այբուբենի տառեր, վանակն։ 5. Զարդը պետք է համապատասխանի մարդու մարմնին և հարմար լինի։ 6. Մի քանի զարդ նույն մոտիվով։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Գեղեցկություն և տոն, դիրք, պաշտպանություն, հիշողություն։ 2. Խեցիներից, ատամներից, քարերից։ 3. Օրինակ՝ արծաթե գոտիներ, քունքազարդեր, մետաղադրամներից մանյակներ, մետաղադրամներով գլխազարդեր։ 4. Նռներ, հավերժության նշաններ, այբուբենի տառեր, վանակն։ 5. Զարդը պետք է համապատասխանի մարդու մարմնին և հարմար լինի։ 6. Մի քանի զարդ նույն մոտիվով։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Зачем люди носят украшения
 
 Украшения — одно из древнейших искусств. Ещё в каменном веке люди делали бусы из ракушек, зубов и камешков. Украшения могли показывать:
@@ -274,6 +338,10 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 
 Армянские серебряных и золотых дел мастера славились **филигранью** и **чернью**. Женщины носили серебряные пояса, височные подвески, ожерелья из монет и головные уборы с рядами мелких монет, звеневших при ходьбе. Сегодня армянские ювелиры создают украшения с **гранатами**, **знаками вечности**, буквами **алфавита** и **обсидианом**.
 
+~~~art
+pic jewellery
+~~~
+
 ## Принципы дизайна
 
 1. **Одна идея:** лист, гранат, капля, звезда.
@@ -281,6 +349,11 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 3. **Материал и цвет:** блестящий металл, тёплый камень, контраст чёрного и серебра.
 4. **Удобство:** без острых краёв, не слишком тяжёлое.
 5. **Гарнитур:** серьги, кулон и кольцо с одним мотивом выглядят как одна семья.
+
+~~~art
+sketch mode=kaleido n=8 paper=dark
+Ритм и симметрия делают украшение. Нарисуй один лепесток броши и увидишь целое.
+~~~
 
 ## Придумай гарнитур
 
@@ -290,8 +363,8 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 4. Выбери цвет металла и один цвет камня.
 5. Нарисуй гарнитур на тёмном фоне, с белыми бликами на металле.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что могли показывать украшения? Назови четыре вещи.
 2. Из чего люди каменного века делали бусы?
 3. Назови три вида традиционных армянских украшений.
@@ -299,10 +372,12 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 5. Почему в украшениях важен масштаб?
 6. Что такое гарнитур?
 7. Придумай гарнитур из трёх украшений с одним мотивом.
+~~~
 
-### Ответы
-
-1. Красоту и праздник, положение, защиту, память. 2. Из ракушек, зубов, камешков. 3. Например: серебряные пояса, височные подвески, ожерелья из монет, головные уборы с монетами. 4. Гранаты, знаки вечности, буквы алфавита, обсидиан. 5. Украшение должно соответствовать человеку и быть удобным. 6. Несколько украшений с одним мотивом. 7. Твой проект.`,
+~~~art
+hints
+1. Красоту и праздник, положение, защиту, память. 2. Из ракушек, зубов, камешков. 3. Например: серебряные пояса, височные подвески, ожерелья из монет, головные уборы с монетами. 4. Гранаты, знаки вечности, буквы алфавита, обсидиан. 5. Украшение должно соответствовать человеку и быть удобным. 6. Несколько украшений с одним мотивом. 7. Твой проект.
+~~~`,
       },
       [
         q(t("Stone Age beads were made from…", "Քարի դարի ուլունքները պատրաստում էին…", "Бусы каменного века делали из…"), [t("shells, teeth and stones", "խեցիներից, ատամներից և քարերից", "ракушек, зубов и камешков"), t("plastic", "պլաստիկից", "пластика"), t("glass only", "միայն ապակուց", "только стекла")], 0),
@@ -326,6 +401,10 @@ Armenian silversmiths and goldsmiths were famous for **filigree** and **niello**
 
 **Batik** is a way of decorating fabric. It comes from **Indonesia**, especially the island of **Java**, where it has been made for centuries. In 2009 Indonesian batik was added to the **UNESCO** list of intangible heritage.
 
+~~~art
+pic batik
+~~~
+
 ## The resist principle
 
 The secret of batik is a **resist**: a substance that does not let dye through.
@@ -336,6 +415,11 @@ The secret of batik is a **resist**: a substance that does not let dye through.
 4. At the end the wax is removed, and the pattern appears.
 
 Often the wax cracks, and thin **veins** of dye run through the light areas. This "crackle" is a famous feature of batik.
+
+~~~art
+sketch paper=dark
+Resist on screen: draw with white as if with wax. On real fabric the wax stays white and the dye fills the rest.
+~~~
 
 ## Hot and cold batik
 
@@ -350,6 +434,10 @@ Often the wax cracks, and thin **veins** of dye run through the light areas. Thi
 
 Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. Modern artists make batik scarves, wall panels and pictures with landscapes, fish and flowers.
 
+~~~art
+pattern layout=grid palettes=spring,gzhel motifs=flower,leaf,drop,wave
+~~~
+
 ## Batik on paper (safe for school)
 
 1. On white paper draw a picture with **white or light wax crayons**, pressing hard: a fish, flowers, waves.
@@ -357,8 +445,8 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 3. Use a second, darker colour in some places.
 4. For a crackle effect: crumple the dry sheet gently, open it and paint over again with dark, watery paint.
 
-### Exercises
-
+~~~art
+tasks
 1. Where does batik come from?
 2. What is a resist?
 3. Why does a batik picture go from light to dark?
@@ -366,13 +454,19 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 5. What is the difference between hot and cold batik?
 6. Why is cold batik used in schools?
 7. Make a batik-style picture on paper with wax crayons and watercolour.
+~~~
 
-### Answers
-
-1. From Indonesia, especially Java. 2. A substance that does not let dye through. 3. Wax keeps the lighter colours under it, and each new dye bath is darker. 4. Thin veins of dye in cracked wax. 5. Hot batik uses melted wax and layering; cold batik uses a liquid reserve line, each area painted separately. 6. Because it does not use hot wax, so it is safer. 7. Your work.`,
+~~~art
+hints
+1. From Indonesia, especially Java. 2. A substance that does not let dye through. 3. Wax keeps the lighter colours under it, and each new dye bath is darker. 4. Thin veins of dye in cracked wax. 5. Hot batik uses melted wax and layering; cold batik uses a liquid reserve line, each area painted separately. 6. Because it does not use hot wax, so it is safer. 7. Your work.
+~~~`,
         hy: `## Ինչ է բատիկը
 
 **Բատիկը** գործվածքի զարդարման եղանակ է։ Այն ծագել է **Ինդոնեզիայից**, հատկապես **Ճավա** կղզուց, որտեղ այն պատրաստում են դարեր շարունակ։ 2009 թվականին ինդոնեզական բատիկը ներառվեց **ՅՈՒՆԵՍԿՕ**-ի ոչ նյութական ժառանգության ցանկում։
+
+~~~art
+pic batik
+~~~
 
 ## Պահպանող շերտի սկզբունքը
 
@@ -384,6 +478,11 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 4. Վերջում մոմը հեռացնում են, և նախշն երևում է։
 
 Հաճախ մոմը ճաքում է, և ներկի բարակ **երակները** անցնում են բաց մասերով։ Այս «ճաքճքվածքը» բատիկի հայտնի առանձնահատկությունն է։
+
+~~~art
+sketch paper=dark
+Ռեզերվաժ էկրանին․ նկարի՛ր սպիտակով, ինչպես մոմով։ Իսկական կտորի վրա մոմը մնում է սպիտակ, իսկ ներկը լցնում է մնացածը։
+~~~
 
 ## Տաք և սառը բատիկ
 
@@ -398,6 +497,10 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 
 Ճավայական բատիկում կան ծաղիկներ, թռչուններ, ալիքներ, տերևներ և խիստ երկրաչափական նախշեր։ Ժամանակակից արվեստագետները պատրաստում են բատիկե շարֆեր, պատի պանոներ և նկարներ՝ բնապատկերներով, ձկներով և ծաղիկներով։
 
+~~~art
+pattern layout=grid palettes=spring,gzhel motifs=flower,leaf,drop,wave
+~~~
+
 ## Բատիկ թղթի վրա (անվտանգ դպրոցի համար)
 
 1. Սպիտակ թղթի վրա **սպիտակ կամ բաց մոմամատիտներով** ուժեղ սեղմելով նկարիր՝ ձուկ, ծաղիկներ, ալիքներ։
@@ -405,8 +508,8 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 3. Որոշ տեղերում օգտագործիր երկրորդ, ավելի մուգ գույնը։
 4. Ճաքճքվածքի էֆեկտի համար չոր թերթը մեղմ ճմռթիր, բացիր և նորից ներկիր մուգ, ջրիկ ներկով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Որտեղից է ծագել բատիկը։
 2. Ինչ է պահպանող շերտը։
 3. Ինչու է բատիկի նկարը գնում բացից դեպի մուգ։
@@ -414,13 +517,19 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 5. Ինչով է տարբերվում տաք բատիկը սառից։
 6. Ինչու են դպրոցներում օգտագործում սառը բատիկ։
 7. Մոմամատիտներով և ջրաներկով թղթի վրա պատրաստիր բատիկի ոճի նկար։
+~~~
 
-### Պատասխաններ
-
-1. Ինդոնեզիայից, հատկապես Ճավայից։ 2. Նյութ, որը ներկը չի թողնում անցնել։ 3. Մոմը պահպանում է իր տակի բաց գույները, և յուրաքանչյուր նոր ներկում ավելի մուգ է։ 4. Ներկի բարակ երակներ ճաքած մոմի մեջ։ 5. Տաք բատիկում հալած մոմ է և շերտավորում, սառում՝ հեղուկ ռեզերվի գիծ, և ամեն հատված առանձին է ներկվում։ 6. Որովհետև տաք մոմ չի օգտագործվում, ուստի ավելի անվտանգ է։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ինդոնեզիայից, հատկապես Ճավայից։ 2. Նյութ, որը ներկը չի թողնում անցնել։ 3. Մոմը պահպանում է իր տակի բաց գույները, և յուրաքանչյուր նոր ներկում ավելի մուգ է։ 4. Ներկի բարակ երակներ ճաքած մոմի մեջ։ 5. Տաք բատիկում հալած մոմ է և շերտավորում, սառում՝ հեղուկ ռեզերվի գիծ, և ամեն հատված առանձին է ներկվում։ 6. Որովհետև տաք մոմ չի օգտագործվում, ուստի ավելի անվտանգ է։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Что такое батик
 
 **Батик** — способ украшения ткани. Он пришёл из **Индонезии**, особенно с острова **Ява**, где его делают веками. В 2009 году индонезийский батик включили в список нематериального наследия **ЮНЕСКО**.
+
+~~~art
+pic batik
+~~~
 
 ## Принцип резерва
 
@@ -432,6 +541,11 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 4. В конце воск удаляют, и появляется узор.
 
 Часто воск трескается, и тонкие **прожилки** краски пробегают по светлым местам. Это «кракле» — знаменитая черта батика.
+
+~~~art
+sketch paper=dark
+Резерв на экране: рисуй белым, будто воском. На настоящей ткани воск остаётся белым, а краска заполняет остальное.
+~~~
 
 ## Горячий и холодный батик
 
@@ -446,6 +560,10 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 
 В яванском батике — цветы, птицы, волны, листья и строгие геометрические узоры. Современные художники делают батиковые платки, панно и картины с пейзажами, рыбами и цветами.
 
+~~~art
+pattern layout=grid palettes=spring,gzhel motifs=flower,leaf,drop,wave
+~~~
+
 ## Батик на бумаге (безопасно для школы)
 
 1. На белой бумаге нарисуй **белыми или светлыми восковыми мелками**, сильно нажимая: рыбу, цветы, волны.
@@ -453,8 +571,8 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 3. Местами используй второй, более тёмный цвет.
 4. Для эффекта кракле: осторожно скомкай сухой лист, расправь и снова покрой тёмной жидкой краской.
 
-### Упражнения
-
+~~~art
+tasks
 1. Откуда пришёл батик?
 2. Что такое резерв?
 3. Почему картина в батике строится от светлого к тёмному?
@@ -462,10 +580,12 @@ Javanese batik has flowers, birds, waves, leaves and strict geometric patterns. 
 5. Чем горячий батик отличается от холодного?
 6. Почему в школах используют холодный батик?
 7. Сделай картинку в стиле батика восковыми мелками и акварелью.
+~~~
 
-### Ответы
-
-1. Из Индонезии, особенно с Явы. 2. Вещество, которое не пропускает краску. 3. Воск сохраняет светлые цвета под собой, а каждое новое окрашивание темнее. 4. Тонкие прожилки краски в треснувшем воске. 5. В горячем — расплавленный воск и слои, в холодном — линия резерва, каждый участок красят отдельно. 6. Там нет горячего воска, поэтому безопаснее. 7. Твоя работа.`,
+~~~art
+hints
+1. Из Индонезии, особенно с Явы. 2. Вещество, которое не пропускает краску. 3. Воск сохраняет светлые цвета под собой, а каждое новое окрашивание темнее. 4. Тонкие прожилки краски в треснувшем воске. 5. В горячем — расплавленный воск и слои, в холодном — линия резерва, каждый участок красят отдельно. 6. Там нет горячего воска, поэтому безопаснее. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Batik comes from…", "Բատիկը ծագել է…", "Батик пришёл из…"), [t("Indonesia", "Ինդոնեզիայից", "Индонезии"), t("Norway", "Նորվեգիայից", "Норвегии"), t("Egypt", "Եգիպտոսից", "Египта")], 0),
@@ -493,6 +613,10 @@ An **interior** is the inside of a building: a room, a hall, a classroom. The in
 
 Ask: **what is the room for?** A bedroom needs calm, a kitchen needs order and easy cleaning, a playroom needs space, a library needs quiet and good light. Decoration must help the function, not disturb it.
 
+~~~art
+pic chair lamp
+~~~
+
 ## Tools of the designer
 
 | Tool | What it does |
@@ -505,9 +629,17 @@ Ask: **what is the room for?** A bedroom needs calm, a kitchen needs order and e
 
 **Rule of three colours:** a main colour (walls), a second colour (furniture, textiles) and an accent colour (small objects).
 
+~~~art
+palette pastel earth
+~~~
+
 ## A room with folk character
 
 An Armenian carpet on the floor, a copper coffee pot on a shelf, ceramic plates on the wall, an embroidered cushion: a few folk objects can give a modern room warmth and a story. But do not overload it: two or three accents are enough.
+
+~~~art
+pic carpet karas
+~~~
 
 ## Plan and view
 
@@ -515,6 +647,10 @@ A designer draws a room in two ways:
 
 * a **plan**: the room seen from above; furniture is shown as simple rectangles;
 * a **view**: the room as you see it standing inside, with perspective.
+
+~~~art
+pic room-plan
+~~~
 
 ## Design your dream room
 
@@ -524,8 +660,12 @@ A designer draws a room in two ways:
 4. Draw a view of one wall in perspective with furniture and decoration.
 5. Add one or two decorative objects with a story.
 
-### Exercises
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. What is an interior? Name five parts of it.
 2. Why should you ask "what is the room for?" first?
 3. How do warm and cool colours change a room?
@@ -533,10 +673,12 @@ A designer draws a room in two ways:
 5. What is the difference between a plan and a view?
 6. How can folk objects be used in a modern room? Why not use too many?
 7. Draw the plan of your dream room.
+~~~
 
-### Answers
-
-1. The inside of a building; for example walls, floor, ceiling, windows, furniture, lighting, textiles, decorative objects. 2. Because decoration must help the function. 3. Warm colours make it cosy; cool colours make it calm and seem larger. 4. A main colour, a second colour and an accent colour. 5. A plan shows the room from above; a view shows it as seen inside, in perspective. 6. As a few accents that add warmth and a story; too many would overload the room. 7. Your plan.`,
+~~~art
+hints
+1. The inside of a building; for example walls, floor, ceiling, windows, furniture, lighting, textiles, decorative objects. 2. Because decoration must help the function. 3. Warm colours make it cosy; cool colours make it calm and seem larger. 4. A main colour, a second colour and an accent colour. 5. A plan shows the room from above; a view shows it as seen inside, in perspective. 6. As a few accents that add warmth and a story; too many would overload the room. 7. Your plan.
+~~~`,
         hy: `## Ինչ է ինտերիերը
 
 **Ինտերիերը** շենքի ներսն է՝ սենյակ, դահլիճ, դասասենյակ։ Ինտերիերի մեջ են մտնում պատերը, հատակը, առաստաղը, պատուհանները, կահույքը, լուսավորությունը, գործվածքները և դեկորատիվ իրերը։ Լավ ինտերիերը **ամբողջություն** է․ ամեն ինչ ընտրված է միասին։
@@ -544,6 +686,10 @@ A designer draws a room in two ways:
 ## Սկզբում՝ գործառույթը
 
 Հարցրու․ **ինչի համար է սենյակը**։ Ննջարանին հանդարտություն է պետք, խոհանոցին՝ կարգուկանոն և հեշտ մաքրում, խաղասենյակին՝ տարածք, գրադարանին՝ լռություն և լավ լույս։ Զարդը պետք է օգնի գործառույթին, ոչ թե խանգարի։
+
+~~~art
+pic chair lamp
+~~~
 
 ## Դիզայների գործիքները
 
@@ -557,9 +703,17 @@ A designer draws a room in two ways:
 
 **Երեք գույնի կանոն**՝ գլխավոր գույն (պատեր), երկրորդ գույն (կահույք, գործվածքներ) և շեշտի գույն (փոքր իրեր)։
 
+~~~art
+palette pastel earth
+~~~
+
 ## Ժողովրդական բնավորությամբ սենյակ
 
 Հայկական գորգ հատակին, պղնձե սրճեփ դարակին, խեցե ափսեներ պատին, ասեղնագործ բարձ․ մի քանի ժողովրդական իր կարող է ժամանակակից սենյակին ջերմություն և պատմություն տալ։ Բայց մի՛ ծանրաբեռնիր այն․ երկու-երեք շեշտը բավական է։
+
+~~~art
+pic carpet karas
+~~~
 
 ## Հատակագիծ և տեսք
 
@@ -567,6 +721,10 @@ A designer draws a room in two ways:
 
 * **հատակագիծ**՝ սենյակը վերևից, կահույքը ցույց է տրվում պարզ ուղղանկյուններով,
 * **տեսք**՝ սենյակն այնպես, ինչպես տեսնում ես ներսում կանգնած, հեռանկարով։
+
+~~~art
+pic room-plan
+~~~
 
 ## Նախագծիր քո երազանքի սենյակը
 
@@ -576,8 +734,12 @@ A designer draws a room in two ways:
 4. Նկարիր մեկ պատի տեսքը հեռանկարով՝ կահույքով և զարդով։
 5. Ավելացրու մեկ կամ երկու պատմություն ունեցող դեկորատիվ իր։
 
-### Վարժություններ
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. Ինչ է ինտերիերը։ Անվանիր նրա հինգ մաս։
 2. Ինչու պետք է նախ հարցնել «ինչի համար է սենյակը»։
 3. Ինչպես են տաք և սառը գույները փոխում սենյակը։
@@ -585,10 +747,12 @@ A designer draws a room in two ways:
 5. Ինչով է տարբերվում հատակագիծը տեսքից։
 6. Ինչպես կարելի է ժողովրդական իրերն օգտագործել ժամանակակից սենյակում։ Ինչու չի կարելի շատ օգտագործել։
 7. Նկարիր քո երազանքի սենյակի հատակագիծը։
+~~~
 
-### Պատասխաններ
-
-1. Շենքի ներսը․ օրինակ՝ պատեր, հատակ, առաստաղ, պատուհաններ, կահույք, լուսավորություն, գործվածքներ, դեկորատիվ իրեր։ 2. Որովհետև զարդը պետք է օգնի գործառույթին։ 3. Տաք գույները հարմարավետ են դարձնում, սառը գույները՝ հանդարտ, և սենյակն ավելի մեծ է թվում։ 4. Գլխավոր գույն, երկրորդ գույն և շեշտի գույն։ 5. Հատակագիծը ցույց է տալիս սենյակը վերևից, տեսքը՝ ներսից, հեռանկարով։ 6. Որպես մի քանի շեշտ, որ ջերմություն և պատմություն են ավելացնում․ շատը կծանրաբեռնի սենյակը։ 7. Քո հատակագիծը։`,
+~~~art
+hints
+1. Շենքի ներսը․ օրինակ՝ պատեր, հատակ, առաստաղ, պատուհաններ, կահույք, լուսավորություն, գործվածքներ, դեկորատիվ իրեր։ 2. Որովհետև զարդը պետք է օգնի գործառույթին։ 3. Տաք գույները հարմարավետ են դարձնում, սառը գույները՝ հանդարտ, և սենյակն ավելի մեծ է թվում։ 4. Գլխավոր գույն, երկրորդ գույն և շեշտի գույն։ 5. Հատակագիծը ցույց է տալիս սենյակը վերևից, տեսքը՝ ներսից, հեռանկարով։ 6. Որպես մի քանի շեշտ, որ ջերմություն և պատմություն են ավելացնում․ շատը կծանրաբեռնի սենյակը։ 7. Քո հատակագիծը։
+~~~`,
         ru: `## Что такое интерьер
 
 **Интерьер** — внутреннее пространство здания: комната, зал, класс. В интерьер входят стены, пол, потолок, окна, мебель, освещение, текстиль и декоративные предметы. Хороший интерьер — **единое целое**: всё подобрано вместе.
@@ -596,6 +760,10 @@ A designer draws a room in two ways:
 ## Сначала назначение
 
 Спроси: **для чего эта комната?** Спальне нужен покой, кухне — порядок и лёгкая уборка, игровой — простор, библиотеке — тишина и хороший свет. Декор должен помогать назначению, а не мешать.
+
+~~~art
+pic chair lamp
+~~~
 
 ## Инструменты дизайнера
 
@@ -609,9 +777,17 @@ A designer draws a room in two ways:
 
 **Правило трёх цветов:** основной цвет (стены), второй цвет (мебель, текстиль) и акцентный цвет (мелкие предметы).
 
+~~~art
+palette pastel earth
+~~~
+
 ## Комната с народным характером
 
 Армянский ковёр на полу, медная джезва на полке, керамические тарелки на стене, вышитая подушка: несколько народных вещей придают современной комнате тепло и историю. Но не перегружай её: двух-трёх акцентов достаточно.
+
+~~~art
+pic carpet karas
+~~~
 
 ## План и вид
 
@@ -619,6 +795,10 @@ A designer draws a room in two ways:
 
 * **план**: комната сверху; мебель показана простыми прямоугольниками;
 * **вид**: комната такой, какой её видишь изнутри, в перспективе.
+
+~~~art
+pic room-plan
+~~~
 
 ## Спроектируй комнату мечты
 
@@ -628,8 +808,12 @@ A designer draws a room in two ways:
 4. Нарисуй вид одной стены в перспективе с мебелью и декором.
 5. Добавь один-два декоративных предмета со своей историей.
 
-### Упражнения
+~~~art
+perspective modes=one
+~~~
 
+~~~art
+tasks
 1. Что такое интерьер? Назови пять его частей.
 2. Почему сначала нужно спросить «для чего эта комната?»
 3. Как тёплые и холодные цвета меняют комнату?
@@ -637,10 +821,12 @@ A designer draws a room in two ways:
 5. Чем план отличается от вида?
 6. Как использовать народные вещи в современной комнате? Почему не стоит брать их слишком много?
 7. Нарисуй план комнаты своей мечты.
+~~~
 
-### Ответы
-
-1. Внутреннее пространство здания; например стены, пол, потолок, окна, мебель, освещение, текстиль, декоративные предметы. 2. Потому что декор должен помогать назначению. 3. Тёплые делают уютной, холодные — спокойной и зрительно больше. 4. Основной цвет, второй цвет и акцентный. 5. План показывает комнату сверху, вид — изнутри, в перспективе. 6. Как несколько акцентов, которые добавляют тепло и историю; слишком много перегрузит комнату. 7. Твой план.`,
+~~~art
+hints
+1. Внутреннее пространство здания; например стены, пол, потолок, окна, мебель, освещение, текстиль, декоративные предметы. 2. Потому что декор должен помогать назначению. 3. Тёплые делают уютной, холодные — спокойной и зрительно больше. 4. Основной цвет, второй цвет и акцентный. 5. План показывает комнату сверху, вид — изнутри, в перспективе. 6. Как несколько акцентов, которые добавляют тепло и историю; слишком много перегрузит комнату. 7. Твой план.
+~~~`,
       },
       [
         q(t("An interior is…", "Ինտերիերը…", "Интерьер — это…"), [t("the inside of a building", "շենքի ներսն է", "внутреннее пространство здания"), t("a street", "փողոց է", "улица"), t("a facade", "ճակատ է", "фасад")], 0),
@@ -679,9 +865,18 @@ A **panel** is a large decorative work for a wall. It can be painted, made of fa
 5. **Work.** Each one enlarges his or her square, keeping lines that cross the borders in the right places.
 6. **Assembly.** All squares are joined; the team fixes the joints and adds a common border.
 
+~~~art
+palette rainbow
+~~~
+
 ## The whole is more than the parts
 
 The most important thing in a collective panel is **unity**. A beautiful square that does not fit the others spoils the whole. So check your neighbours' squares: lines must continue, colours must match.
+
+~~~art
+sketch mode=frames cells=6
+Each frame is one person's part. Agree on a palette and a horizon first so the whole panel holds together.
+~~~
 
 ## Make the class panel
 
@@ -691,8 +886,8 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 4. Draw and colour your square large, in the agreed palette.
 5. Join the squares and hang the panel in the classroom or corridor.
 
-### Exercises
-
+~~~art
+tasks
 1. What is a decorative panel? Name four materials it can be made of.
 2. Where can panels be seen?
 3. Why do artists make big works in teams?
@@ -700,10 +895,12 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 5. How does a grid help to make a panel together?
 6. What does "unity" mean in a collective work?
 7. With your group, plan a panel "Four seasons": who makes which part?
+~~~
 
-### Answers
-
-1. A large decorative work for a wall; for example paint, fabric, ceramic tiles, mosaic, wood, paper. 2. In schools, metro stations, theatres, cafés. 3. It is faster, the result is richer, and they learn to agree. 4. It shows the whole composition, so all parts fit. 5. Each person gets one square, and lines meet at the borders. 6. One style, one palette, one rhythm: all parts fit together. 7. Your plan.`,
+~~~art
+hints
+1. A large decorative work for a wall; for example paint, fabric, ceramic tiles, mosaic, wood, paper. 2. In schools, metro stations, theatres, cafés. 3. It is faster, the result is richer, and they learn to agree. 4. It shows the whole composition, so all parts fit. 5. Each person gets one square, and lines meet at the borders. 6. One style, one palette, one rhythm: all parts fit together. 7. Your plan.
+~~~`,
         hy: `## Ինչ է պանոն
 
 **Պանոն** մեծ դեկորատիվ աշխատանք է պատի համար։ Այն կարող է լինել նկարված, պատրաստված գործվածքից, խեցե սալիկներից, խճանկարից, փայտից կամ թղթից։ Պանոներով զարդարում են դպրոցներ, մետրոյի կայարաններ, թատրոններ և սրճարաններ։ Մեծ պանոները հաճախ պատրաստում է արվեստագետների **թիմը**։
@@ -723,9 +920,18 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 5. **Աշխատանք։** Ամեն մեկը մեծացնում է իր քառակուսին՝ սահմաններով անցնող գծերը պահելով ճիշտ տեղերում։
 6. **Հավաքում։** Բոլոր քառակուսիները միացվում են, թիմն ուղղում է միացումները և ավելացնում ընդհանուր եզրազարդ։
 
+~~~art
+palette rainbow
+~~~
+
 ## Ամբողջը մասերից ավելին է
 
 Կոլեկտիվ պանոյում ամենակարևորը **միասնությունն** է։ Գեղեցիկ քառակուսին, որը չի համապատասխանում մյուսներին, փչացնում է ամբողջը։ Ուստի ստուգիր հարևաններիդ քառակուսիները․ գծերը պետք է շարունակվեն, գույները՝ համընկնեն։
+
+~~~art
+sketch mode=frames cells=6
+Յուրաքանչյուր շրջանակ մեկ մարդու մասն է։ Նախ համաձայնեցրե՛ք գունապնակն ու հորիզոնը, որ ամբողջ պանոն միասնական լինի։
+~~~
 
 ## Պատրաստեք դասարանի պանոն
 
@@ -735,8 +941,8 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 4. Քո քառակուսին մեծ նկարիր և ներկիր համաձայնեցված գունապնակով։
 5. Միացրեք քառակուսիները և պանոն կախեք դասասենյակում կամ միջանցքում։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է դեկորատիվ պանոն։ Անվանիր չորս նյութ, որից այն կարող է պատրաստվել։
 2. Որտեղ կարելի է տեսնել պանոներ։
 3. Ինչու են արվեստագետները մեծ աշխատանքները թիմով անում։
@@ -744,10 +950,12 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 5. Ինչպես է ցանցն օգնում միասին պանո պատրաստել։
 6. Ինչ է նշանակում «միասնություն» կոլեկտիվ աշխատանքում։
 7. Խմբով պլանավորեք «Չորս եղանակ» պանոն․ ով որ մասն է անում։
+~~~
 
-### Պատասխաններ
-
-1. Մեծ դեկորատիվ աշխատանք պատի համար․ օրինակ՝ ներկ, գործվածք, խեցե սալիկներ, խճանկար, փայտ, թուղթ։ 2. Դպրոցներում, մետրոյի կայարաններում, թատրոններում, սրճարաններում։ 3. Ավելի արագ է, արդյունքն ավելի հարուստ է, և սովորում են համաձայնվել։ 4. Այն ցույց է տալիս ամբողջ կոմպոզիցիան, որ բոլոր մասերը համապատասխանեն։ 5. Ամեն մեկը ստանում է մեկ քառակուսի, և գծերը հանդիպում են սահմաններին։ 6. Մեկ ոճ, մեկ գունապնակ, մեկ ռիթմ․ բոլոր մասերը համապատասխանում են իրար։ 7. Ձեր պլանը։`,
+~~~art
+hints
+1. Մեծ դեկորատիվ աշխատանք պատի համար․ օրինակ՝ ներկ, գործվածք, խեցե սալիկներ, խճանկար, փայտ, թուղթ։ 2. Դպրոցներում, մետրոյի կայարաններում, թատրոններում, սրճարաններում։ 3. Ավելի արագ է, արդյունքն ավելի հարուստ է, և սովորում են համաձայնվել։ 4. Այն ցույց է տալիս ամբողջ կոմպոզիցիան, որ բոլոր մասերը համապատասխանեն։ 5. Ամեն մեկը ստանում է մեկ քառակուսի, և գծերը հանդիպում են սահմաններին։ 6. Մեկ ոճ, մեկ գունապնակ, մեկ ռիթմ․ բոլոր մասերը համապատասխանում են իրար։ 7. Ձեր պլանը։
+~~~`,
         ru: `## Что такое панно
 
 **Панно** — большая декоративная работа для стены. Оно может быть расписным, из ткани, керамических плиток, мозаики, дерева или бумаги. Панно украшают школы, станции метро, театры и кафе. Большие панно часто делает **команда** художников.
@@ -767,9 +975,18 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 5. **Работа.** Каждый увеличивает свой квадрат, сохраняя линии, которые переходят через границы, в нужных местах.
 6. **Сборка.** Все квадраты соединяют; команда исправляет стыки и добавляет общую кайму.
 
+~~~art
+palette rainbow
+~~~
+
 ## Целое больше частей
 
 Самое важное в коллективном панно — **единство**. Красивый квадрат, который не сочетается с остальными, портит целое. Поэтому проверяй квадраты соседей: линии должны продолжаться, цвета — совпадать.
+
+~~~art
+sketch mode=frames cells=6
+Каждая рамка — часть одного человека. Сначала договоритесь о палитре и горизонте, чтобы панно было цельным.
+~~~
 
 ## Сделайте панно класса
 
@@ -779,8 +996,8 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 4. Нарисуй и раскрась свой квадрат крупно в согласованной палитре.
 5. Соедините квадраты и повесьте панно в классе или коридоре.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое декоративное панно? Назови четыре материала, из которых его делают.
 2. Где можно увидеть панно?
 3. Почему художники делают большие работы командой?
@@ -788,10 +1005,12 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 5. Как сетка помогает делать панно вместе?
 6. Что значит «единство» в коллективной работе?
 7. Спланируйте в группе панно «Четыре времени года»: кто делает какую часть?
+~~~
 
-### Ответы
-
-1. Большая декоративная работа для стены; например краска, ткань, керамическая плитка, мозаика, дерево, бумага. 2. В школах, на станциях метро, в театрах, кафе. 3. Так быстрее, результат богаче, и учатся договариваться. 4. Он показывает всю композицию, чтобы все части сочетались. 5. Каждый получает один квадрат, и линии сходятся на границах. 6. Один стиль, одна палитра, один ритм: все части подходят друг к другу. 7. Ваш план.`,
+~~~art
+hints
+1. Большая декоративная работа для стены; например краска, ткань, керамическая плитка, мозаика, дерево, бумага. 2. В школах, на станциях метро, в театрах, кафе. 3. Так быстрее, результат богаче, и учатся договариваться. 4. Он показывает всю композицию, чтобы все части сочетались. 5. Каждый получает один квадрат, и линии сходятся на границах. 6. Один стиль, одна палитра, один ритм: все части подходят друг к другу. 7. Ваш план.
+~~~`,
       },
       [
         q(t("A decorative panel is made for…", "Դեկորատիվ պանոն պատրաստվում է…", "Декоративное панно делают для…"), [t("a wall", "պատի համար", "стены"), t("a pocket", "գրպանի համար", "кармана"), t("a ring", "մատանու համար", "кольца")], 0),
@@ -825,6 +1044,10 @@ The most important thing in a collective panel is **unity**. A beautiful square 
 
 Decorative art is **art for life**. It makes useful things beautiful, tells who we are, keeps the memory of our ancestors and helps us live together. A pattern on a carpet, a coat of arms and a modern logo all speak the same language of **signs, rhythm and colour**.
 
+~~~art
+pic carpet khachkar gzhel-plate palekh-box egypt-collar shield
+~~~
+
 ## Key words
 
 * **ornament**: a repeated pattern; **rhythm**: regular repetition;
@@ -832,6 +1055,11 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 * **stylization**: turning a natural form into a simple decorative one;
 * **composition**: arrangement of the parts into a whole;
 * **accent**: a bright spot that attracts the eye.
+
+~~~art
+pic mode=silhouette dymkovo matryoshka karas ankh
+Quick check: guess the object by its silhouette and name the craft it comes from.
+~~~
 
 ## Prepare an exhibition
 
@@ -841,8 +1069,8 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 4. Arrange them with your classmates in a row with an even rhythm.
 5. Give a one-minute talk about the work you like most.
 
-### Exercises
-
+~~~art
+tasks
 1. Name three ancient symbols and their meanings.
 2. Name two Russian folk crafts and two Armenian crafts. What are they made of?
 3. Name the four parts of a carpet composition.
@@ -850,10 +1078,12 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 5. What is the difference between an emblem and a logo?
 6. Explain stylization with an example.
 7. What is the resist principle in batik?
+~~~
 
-### Answers
-
-1. For example: the sun (life and warmth), the tree of life (life and family), the eternity sign (eternity). 2. For example: Gzhel (porcelain), Zhostovo (painted metal trays); Armenian coppersmithing (copper), needle lace (thread). 3. Field, medallion, border, motifs. 4. No metal on metal and no colour on colour. 5. An emblem is the sign of a group, such as a class or a club; a logo is a short sign of a company, shop or event. 6. Turning a natural form into a simple decorative one, for example a real turkey into a Dymkovo toy with a fan-like tail. 7. Wax or a reserve does not let dye through, so the covered lines stay light.`,
+~~~art
+hints
+1. For example: the sun (life and warmth), the tree of life (life and family), the eternity sign (eternity). 2. For example: Gzhel (porcelain), Zhostovo (painted metal trays); Armenian coppersmithing (copper), needle lace (thread). 3. Field, medallion, border, motifs. 4. No metal on metal and no colour on colour. 5. An emblem is the sign of a group, such as a class or a club; a logo is a short sign of a company, shop or event. 6. Turning a natural form into a simple decorative one, for example a real turkey into a Dymkovo toy with a fan-like tail. 7. Wax or a reserve does not let dye through, so the covered lines stay light.
+~~~`,
         hy: `## Ինչ սովորեցինք այս տարի
 
 | Բաժին | Հիմնական գաղափարներ |
@@ -868,6 +1098,10 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 
 Դեկորատիվ արվեստը **կյանքի համար արվեստ է**։ Այն գեղեցկացնում է օգտակար իրերը, պատմում է, թե ով ենք մենք, պահում է նախնիների հիշատակը և օգնում է միասին ապրել։ Գորգի նախշը, զինանշանը և ժամանակակից լոգոն խոսում են **նշանների, ռիթմի և գույնի** նույն լեզվով։
 
+~~~art
+pic carpet khachkar gzhel-plate palekh-box egypt-collar shield
+~~~
+
 ## Հիմնական բառեր
 
 * **զարդ (օրնամենտ)**՝ կրկնվող նախշ, **ռիթմ**՝ կանոնավոր կրկնություն,
@@ -875,6 +1109,11 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 * **ոճավորում**՝ բնական ձևը պարզ դեկորատիվ ձևի վերածելը,
 * **կոմպոզիցիա**՝ մասերի դասավորությունն ամբողջի մեջ,
 * **շեշտ**՝ վառ բիծ, որ գրավում է աչքը։
+
+~~~art
+pic mode=silhouette dymkovo matryoshka karas ankh
+Արագ ստուգում․ գուշակի՛ր առարկան ըստ ուրվագծի և անվանի՛ր այն արհեստը, որից է այն։
+~~~
 
 ## Պատրաստիր ցուցահանդես
 
@@ -884,8 +1123,8 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 4. Դասընկերներիդ հետ դասավորեք դրանք շարքով՝ հավասար ռիթմով։
 5. Մեկ րոպե պատմիր այն աշխատանքի մասին, որն ամենաշատն է քեզ դուր գալիս։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Անվանիր երեք հնագույն խորհրդանիշ և դրանց իմաստները։
 2. Անվանիր ռուսական երկու ժողովրդական արհեստ և երկու հայկական արհեստ։ Ինչից են դրանք պատրաստվում։
 3. Անվանիր գորգի կոմպոզիցիայի չորս մասը։
@@ -893,10 +1132,12 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 5. Ինչով է տարբերվում խորհրդանշանը լոգոյից։
 6. Բացատրիր ոճավորումն օրինակով։
 7. Որն է բատիկի պահպանող շերտի սկզբունքը։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ արև (կյանք և ջերմություն), կենաց ծառ (կյանք և ընտանիք), հավերժության նշան (հավերժություն)։ 2. Օրինակ՝ Գժել (ճենապակի), Ժոստովո (նկարազարդ մետաղե սկուտեղներ), հայկական պղնձագործություն (պղինձ), ասեղնագործ ժանյակ (թել)։ 3. Դաշտ, մեդալիոն, եզրազարդ, մոտիվներ։ 4. Մետաղը մետաղի վրա և գույնը գույնի վրա չի կարելի դնել։ 5. Խորհրդանշանը խմբի նշան է, օրինակ՝ դասարանի կամ ակումբի, լոգոն ընկերության, խանութի կամ միջոցառման կարճ նշան է։ 6. Բնական ձևը պարզ դեկորատիվ ձևի վերածելը, օրինակ՝ իսկական հնդկահավը՝ հովհարաձև պոչով դիմկովյան խաղալիքի։ 7. Մոմը կամ ռեզերվը ներկը չի թողնում անցնել, ուստի ծածկված գծերը մնում են բաց։`,
+~~~art
+hints
+1. Օրինակ՝ արև (կյանք և ջերմություն), կենաց ծառ (կյանք և ընտանիք), հավերժության նշան (հավերժություն)։ 2. Օրինակ՝ Գժել (ճենապակի), Ժոստովո (նկարազարդ մետաղե սկուտեղներ), հայկական պղնձագործություն (պղինձ), ասեղնագործ ժանյակ (թել)։ 3. Դաշտ, մեդալիոն, եզրազարդ, մոտիվներ։ 4. Մետաղը մետաղի վրա և գույնը գույնի վրա չի կարելի դնել։ 5. Խորհրդանշանը խմբի նշան է, օրինակ՝ դասարանի կամ ակումբի, լոգոն ընկերության, խանութի կամ միջոցառման կարճ նշան է։ 6. Բնական ձևը պարզ դեկորատիվ ձևի վերածելը, օրինակ՝ իսկական հնդկահավը՝ հովհարաձև պոչով դիմկովյան խաղալիքի։ 7. Մոմը կամ ռեզերվը ներկը չի թողնում անցնել, ուստի ծածկված գծերը մնում են բաց։
+~~~`,
         ru: `## Что мы узнали в этом году
 
 | Раздел | Главные идеи |
@@ -911,6 +1152,10 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 
 Декоративное искусство — **искусство для жизни**. Оно делает полезные вещи красивыми, рассказывает, кто мы, хранит память о предках и помогает жить вместе. Узор ковра, герб и современный логотип говорят на одном языке **знаков, ритма и цвета**.
 
+~~~art
+pic carpet khachkar gzhel-plate palekh-box egypt-collar shield
+~~~
+
 ## Ключевые слова
 
 * **орнамент**: повторяющийся узор; **ритм**: равномерное повторение;
@@ -918,6 +1163,11 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 * **стилизация**: превращение природной формы в простую декоративную;
 * **композиция**: расположение частей в целое;
 * **акцент**: яркое пятно, которое притягивает взгляд.
+
+~~~art
+pic mode=silhouette dymkovo matryoshka karas ankh
+Быстрая проверка: угадай предмет по силуэту и назови промысел, откуда он.
+~~~
 
 ## Подготовь выставку
 
@@ -927,8 +1177,8 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 4. Вместе с одноклассниками развесьте их в ряд с ровным ритмом.
 5. Расскажи за минуту о работе, которая нравится тебе больше всего.
 
-### Упражнения
-
+~~~art
+tasks
 1. Назови три древних символа и их значения.
 2. Назови два русских народных промысла и два армянских ремесла. Из чего делают их изделия?
 3. Назови четыре части композиции ковра.
@@ -936,10 +1186,12 @@ Decorative art is **art for life**. It makes useful things beautiful, tells who 
 5. Чем эмблема отличается от логотипа?
 6. Объясни стилизацию на примере.
 7. В чём принцип резерва в батике?
+~~~
 
-### Ответы
-
-1. Например: солнце (жизнь и тепло), древо жизни (жизнь и семья), знак вечности (вечность). 2. Например: гжель (фарфор), Жостово (расписные металлические подносы); армянская чеканка (медь), игольное кружево (нить). 3. Поле, медальон, кайма, мотивы. 4. Не класть металл на металл и цвет на цвет. 5. Эмблема — знак группы, например класса или клуба; логотип — короткий знак компании, магазина или события. 6. Превращение природной формы в простую декоративную, например настоящий индюк — в дымковскую игрушку с хвостом-веером. 7. Воск или резерв не пропускает краску, и закрытые линии остаются светлыми.`,
+~~~art
+hints
+1. Например: солнце (жизнь и тепло), древо жизни (жизнь и семья), знак вечности (вечность). 2. Например: гжель (фарфор), Жостово (расписные металлические подносы); армянская чеканка (медь), игольное кружево (нить). 3. Поле, медальон, кайма, мотивы. 4. Не класть металл на металл и цвет на цвет. 5. Эмблема — знак группы, например класса или клуба; логотип — короткий знак компании, магазина или события. 6. Превращение природной формы в простую декоративную, например настоящий индюк — в дымковскую игрушку с хвостом-веером. 7. Воск или резерв не пропускает краску, и закрытые линии остаются светлыми.
+~~~`,
       },
       [
         q(t("Decorative art is above all art…", "Դեկորատիվ արվեստը նախևառաջ արվեստ է…", "Декоративное искусство — прежде всего искусство…"), [t("for life", "կյանքի համար", "для жизни"), t("only for museums", "միայն թանգարանների համար", "только для музеев"), t("without any meaning", "առանց որևէ իմաստի", "без всякого смысла")], 0),

@@ -25,9 +25,17 @@ Long ago a city had to protect itself from enemies. So people built it on a hill
 
 **Amberd** stands high on the slope of Mount Aragats, on a cape between two deep gorges. Its name means «fortress in the clouds». It has thick stone walls with round towers, a palace, a church and baths. The gorges protected it from three sides, so walls were built mainly on the open side.
 
+~~~art
+pic fortress
+~~~
+
 ## The Novgorod kremlin
 
 The **Novgorod kremlin** stands on the bank of the Volkhov river. Its red brick walls have tall towers with pointed roofs. Inside is the old **St Sophia Cathedral** with golden and silver domes.
+
+~~~art
+pic kremlin
+~~~
 
 ## Parts of a fortress
 
@@ -48,8 +56,13 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 3. Join the walls and towers in a ring on a base.
 4. Add a gate, a church or palace inside, and paint the stones.
 
-### Exercises
+~~~art
+net
+A tower starts as a flat net. Fold it on screen, then cut a real one from paper and add battlements.
+~~~
 
+~~~art
+tasks
 1. Why were ancient cities surrounded by walls?
 2. What is a kremlin?
 3. Where is Amberd and what does its name mean?
@@ -57,10 +70,12 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 5. What are battlements?
 6. Why does a fortress look heavy and calm?
 7. Draw or build a fortress with walls, towers and a gate.
+~~~
 
-### Answers
-
-1. To protect them from enemies. 2. The strong inner part of a Russian city surrounded by walls. 3. On the slope of Mount Aragats; «fortress in the clouds». 4. They protected it from three sides. 5. The «teeth» on top of the wall. 6. Its walls are thick, windows narrow, towers stand like guards. 7. Your work.`,
+~~~art
+hints
+1. To protect them from enemies. 2. The strong inner part of a Russian city surrounded by walls. 3. On the slope of Mount Aragats; «fortress in the clouds». 4. They protected it from three sides. 5. The «teeth» on top of the wall. 6. Its walls are thick, windows narrow, towers stand like guards. 7. Your work.
+~~~`,
         hy: `## Քաղաք պարիսպների հետևում
 
 Վաղուց քաղաքը պետք է պաշտպաներ իրեն թշնամիներից։ Ուստի մարդիկ այն կառուցում էին բլրի, ժայռի կամ գետի ոլորանի վրա և շրջապատում էին **պարիսպներով**։ Ռուսական քաղաքի ամուր ներքին մասը կոչվում էր **կրեմլ**։
@@ -69,9 +84,17 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 
 **Ամբերդը** կանգնած է Արագած լեռան լանջին բարձր, երկու խոր կիրճերի միջև գտնվող հրվանդանի վրա։ Նրա անունը նշանակում է «ամպերի բերդ»։ Այն ունի կլոր աշտարակներով հաստ քարե պարիսպներ, պալատ, եկեղեցի և բաղնիք։ Կիրճերը պաշտպանում էին այն երեք կողմից, ուստի պարիսպները կառուցվել են հիմնականում բաց կողմում։
 
+~~~art
+pic fortress
+~~~
+
 ## Նովգորոդի կրեմլ
 
 **Նովգորոդի կրեմլը** կանգնած է Վոլխով գետի ափին։ Նրա կարմիր աղյուսե պարիսպներն ունեն սրածայր տանիքներով բարձր աշտարակներ։ Ներսում հին **Սուրբ Սոֆիայի տաճարն** է՝ ոսկե և արծաթե գմբեթներով։
+
+~~~art
+pic kremlin
+~~~
 
 ## Ամրոցի մասերը
 
@@ -92,8 +115,13 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 3. Հիմքի վրա պարիսպներն ու աշտարակները միացրու՛ օղակով։
 4. Ավելացրու՛ դարպաս, ներսում՝ եկեղեցի կամ պալատ և ներկի՛ր քարերը։
 
-### Վարժություններ
+~~~art
+net
+Աշտարակը սկսվում է հարթ բացվածքից։ Ծալի՛ր այն էկրանին, հետո կտրի՛ր իսկականը թղթից և ավելացրու ատամնավոր պարիսպ։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ էին հին քաղաքները շրջապատում պարիսպներով։
 2. Ի՞նչ է կրեմլը։
 3. Որտե՞ղ է Ամբերդը, և ի՞նչ է նշանակում նրա անունը։
@@ -101,10 +129,12 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 5. Ի՞նչ է ատամնավոր եզրը։
 6. Ինչո՞ւ է ամրոցը թվում ծանր և հանդարտ։
 7. Նկարի՛ր կամ կառուցի՛ր ամրոց՝ պարիսպներով, աշտարակներով և դարպասով։
+~~~
 
-### Պատասխաններ
-
-1. Թշնամիներից պաշտպանելու համար։ 2. Ռուսական քաղաքի ամուր ներքին մասը՝ պարիսպներով շրջապատված։ 3. Արագած լեռան լանջին, «ամպերի բերդ»։ 4. Պաշտպանում էին այն երեք կողմից։ 5. Պարսպի վրայի «ատամները»։ 6. Պատերը հաստ են, պատուհանները՝ նեղ, աշտարակները կանգնած են պահակների պես։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Թշնամիներից պաշտպանելու համար։ 2. Ռուսական քաղաքի ամուր ներքին մասը՝ պարիսպներով շրջապատված։ 3. Արագած լեռան լանջին, «ամպերի բերդ»։ 4. Պաշտպանում էին այն երեք կողմից։ 5. Պարսպի վրայի «ատամները»։ 6. Պատերը հաստ են, պատուհանները՝ նեղ, աշտարակները կանգնած են պահակների պես։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Город за стенами
 
 Давно городу приходилось защищаться от врагов. Поэтому его строили на холме, скале или излучине реки и окружали **стенами**. Крепкая внутренняя часть русского города называлась **кремлём**.
@@ -113,9 +143,17 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 
 **Амберд** стоит высоко на склоне горы Арагац, на мысу между двумя глубокими ущельями. Его название значит «крепость в облаках». У него толстые каменные стены с круглыми башнями, дворец, церковь и баня. Ущелья защищали его с трёх сторон, поэтому стены строили в основном с открытой стороны.
 
+~~~art
+pic fortress
+~~~
+
 ## Новгородский кремль
 
 **Новгородский кремль** стоит на берегу реки Волхов. Его красные кирпичные стены имеют высокие башни с острыми крышами. Внутри — древний **Софийский собор** с золотыми и серебряными куполами.
+
+~~~art
+pic kremlin
+~~~
 
 ## Части крепости
 
@@ -136,8 +174,13 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 3. Соедини стены и башни кольцом на основе.
 4. Добавь ворота, внутри — храм или дворец, раскрась камни.
 
-### Упражнения
+~~~art
+net
+Башня начинается с плоской развёртки. Сложи её на экране, потом вырежи настоящую из бумаги и добавь зубцы.
+~~~
 
+~~~art
+tasks
 1. Зачем древние города окружали стенами?
 2. Что такое кремль?
 3. Где находится Амберд и что значит его название?
@@ -145,10 +188,12 @@ Notice: a fortress looks **heavy, strong and calm**. The walls are thick, window
 5. Что такое зубцы?
 6. Почему крепость выглядит тяжёлой и спокойной?
 7. Нарисуй или построй крепость со стенами, башнями и воротами.
+~~~
 
-### Ответы
-
-1. Чтобы защитить их от врагов. 2. Крепкая внутренняя часть русского города, окружённая стенами. 3. На склоне горы Арагац; «крепость в облаках». 4. Защищали его с трёх сторон. 5. «Зубы» наверху стены. 6. Стены толстые, окна узкие, башни стоят, как стражи. 7. Твоя работа.`,
+~~~art
+hints
+1. Чтобы защитить их от врагов. 2. Крепкая внутренняя часть русского города, окружённая стенами. 3. На склоне горы Арагац; «крепость в облаках». 4. Защищали его с трёх сторон. 5. «Зубы» наверху стены. 6. Стены толстые, окна узкие, башни стоят, как стражи. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Amberd stands on the slope of…", "Ամբերդը կանգնած է … լանջին։", "Амберд стоит на склоне…"), [t("Mount Aragats", "Արագած լեռան", "горы Арагац"), t("Mount Elbrus", "Էլբրուս լեռան", "горы Эльбрус"), t("a sand dune", "ավազաբլրի", "песчаного бархана")], 0),
@@ -174,6 +219,10 @@ In **782 BC** King **Argishti I** of Urartu built the fortress **Erebuni** on th
 
 We know the date because a **cuneiform inscription** was found on a stone. It tells that Argishti built this fortress for the greatness of the land. Cuneiform is writing made of small wedge-shaped marks pressed or cut into clay or stone.
 
+~~~art
+pic erebuni
+~~~
+
 ## What was inside
 
 | Part | What we know |
@@ -192,6 +241,15 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 - Figures were shown **flat**, in profile, in strict rows.
 - Borders of repeated shapes framed the scenes: squares, zigzags, rosettes.
 
+~~~art
+palette earth
+~~~
+
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt,armenian motifs=rhombus,triangle,circle,sun
+Urartian painters used only a few earthy colours and strict geometric friezes. Build one.
+~~~
+
 ## Draw Erebuni
 
 1. Draw the hill with a low horizon: the fortress must look high and strong.
@@ -199,8 +257,12 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 3. Add the palace with columns inside.
 4. Make a border under your picture in the Urartian style: red, blue, black and white.
 
-### Exercises
+~~~art
+sketch paper=cream guide=horizon
+~~~
 
+~~~art
+tasks
 1. Who founded Erebuni and when?
 2. Why is Yerevan called older than Rome?
 3. What is cuneiform?
@@ -208,15 +270,21 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 5. How did they show figures?
 6. What is on the hill of Arin Berd today?
 7. Draw Erebuni on its hill with an Urartian border.
+~~~
 
-### Answers
-
-1. King Argishti I, in 782 BC. 2. Its birthday is counted from 782 BC, and Rome was founded later. 3. Writing made of small wedge-shaped marks. 4. Red, blue, black and white. 5. Flat, in profile, in strict rows. 6. The Erebuni Museum and restored walls. 7. Your work.`,
+~~~art
+hints
+1. King Argishti I, in 782 BC. 2. Its birthday is counted from 782 BC, and Rome was founded later. 3. Writing made of small wedge-shaped marks. 4. Red, blue, black and white. 5. Flat, in profile, in strict rows. 6. The Erebuni Museum and restored walls. 7. Your work.
+~~~`,
         hy: `## Հռոմից հին քաղաք
 
 **Ք․ ա․ 782** թվականին Ուրարտուի **Արգիշտի Առաջին** թագավորն Արին բերդ բլրի վրա կառուցեց **Էրեբունի** ամրոցը։ Այս տարին համարվում է **Երևանի** ծննդյան տարին, ուստի Երևանը Հռոմից հին է։
 
 Մենք գիտենք թվականը, որովհետև քարի վրա գտնվել է **սեպագիր արձանագրություն**։ Այն պատմում է, որ Արգիշտին կառուցել է այս ամրոցն երկրի մեծության համար։ Սեպագիրը կավի կամ քարի վրա սեղմված կամ փորված փոքր սեպաձև նշաններից կազմված գիր է։
+
+~~~art
+pic erebuni
+~~~
 
 ## Ինչ կար ներսում
 
@@ -236,6 +304,15 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 - Պատկերները ցույց էին տալիս **հարթ**, պրոֆիլով, խիստ շարքերով։
 - Տեսարանները շրջանակում էին կրկնվող ձևերի եզրագծեր՝ քառակուսիներ, զիգզագներ, վարդյակներ։
 
+~~~art
+palette earth
+~~~
+
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt,armenian motifs=rhombus,triangle,circle,sun
+Ուրարտական նկարիչները օգտագործում էին միայն մի քանի հողագույն ներկ և խիստ երկրաչափական զարդագոտիներ։ Կառուցի՛ր մեկը։
+~~~
+
 ## Նկարի՛ր Էրեբունին
 
 1. Նկարի՛ր բլուրը ցածր հորիզոնով՝ ամրոցը պետք է բարձր և ամուր երևա։
@@ -243,8 +320,12 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 3. Ներսում ավելացրու՛ սյուներով պալատը։
 4. Նկարիդ տակ ուրարտական ոճով եզրագիծ արա՛՝ կարմիր, կապույտ, սև և սպիտակ։
 
-### Վարժություններ
+~~~art
+sketch paper=cream guide=horizon
+~~~
 
+~~~art
+tasks
 1. Ո՞վ և ե՞րբ է հիմնադրել Էրեբունին։
 2. Ինչո՞ւ են ասում, որ Երևանը Հռոմից հին է։
 3. Ի՞նչ է սեպագիրը։
@@ -252,15 +333,21 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 5. Ինչպե՞ս էին նրանք ցույց տալիս պատկերները։
 6. Ի՞նչ կա այսօր Արին բերդ բլրի վրա։
 7. Նկարի՛ր Էրեբունին իր բլրի վրա՝ ուրարտական եզրագծով։
+~~~
 
-### Պատասխաններ
-
-1. Արգիշտի Առաջին թագավորը, ք․ ա․ 782 թվականին։ 2. Նրա ծննդյան տարին համարվում է ք․ ա․ 782-ը, իսկ Հռոմը հիմնադրվել է ավելի ուշ։ 3. Փոքր սեպաձև նշաններից կազմված գիր։ 4. Կարմիր, կապույտ, սև և սպիտակ։ 5. Հարթ, պրոֆիլով, խիստ շարքերով։ 6. Էրեբունի թանգարանը և վերականգնված պարիսպները։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Արգիշտի Առաջին թագավորը, ք․ ա․ 782 թվականին։ 2. Նրա ծննդյան տարին համարվում է ք․ ա․ 782-ը, իսկ Հռոմը հիմնադրվել է ավելի ուշ։ 3. Փոքր սեպաձև նշաններից կազմված գիր։ 4. Կարմիր, կապույտ, սև և սպիտակ։ 5. Հարթ, պրոֆիլով, խիստ շարքերով։ 6. Էրեբունի թանգարանը և վերականգնված պարիսպները։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Город старше Рима
 
 В **782 году до н. э.** царь Урарту **Аргишти I** построил на холме Арин-Берд крепость **Эребуни**. Этот год считается днём рождения **Еревана**, поэтому Ереван старше Рима.
 
 Мы знаем дату, потому что на камне нашли **клинописную надпись**. Она рассказывает, что Аргишти построил эту крепость для величия страны. Клинопись — это письмо из маленьких клиновидных знаков, выдавленных или высеченных на глине или камне.
+
+~~~art
+pic erebuni
+~~~
 
 ## Что было внутри
 
@@ -280,6 +367,15 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 - Фигуры изображали **плоскими**, в профиль, строгими рядами.
 - Сцены обрамляли бордюры из повторяющихся форм: квадратов, зигзагов, розеток.
 
+~~~art
+palette earth
+~~~
+
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt,armenian motifs=rhombus,triangle,circle,sun
+Урартские художники брали всего несколько земляных красок и строгие геометрические фризы. Собери такой фриз.
+~~~
+
 ## Нарисуй Эребуни
 
 1. Нарисуй холм с низким горизонтом: крепость должна казаться высокой и сильной.
@@ -287,8 +383,12 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 3. Внутри добавь дворец с колоннами.
 4. Под рисунком сделай бордюр в урартском стиле: красный, синий, чёрный и белый.
 
-### Упражнения
+~~~art
+sketch paper=cream guide=horizon
+~~~
 
+~~~art
+tasks
 1. Кто и когда основал Эребуни?
 2. Почему говорят, что Ереван старше Рима?
 3. Что такое клинопись?
@@ -296,10 +396,12 @@ Today on the hill there is the **Erebuni Museum**, and part of the walls and pai
 5. Как они изображали фигуры?
 6. Что сегодня находится на холме Арин-Берд?
 7. Нарисуй Эребуни на холме с урартским бордюром.
+~~~
 
-### Ответы
-
-1. Царь Аргишти I, в 782 году до н. э. 2. Его днём рождения считается 782 год до н. э., а Рим основан позже. 3. Письмо из маленьких клиновидных знаков. 4. Красный, синий, чёрный и белый. 5. Плоскими, в профиль, строгими рядами. 6. Музей «Эребуни» и восстановленные стены. 7. Твоя работа.`,
+~~~art
+hints
+1. Царь Аргишти I, в 782 году до н. э. 2. Его днём рождения считается 782 год до н. э., а Рим основан позже. 3. Письмо из маленьких клиновидных знаков. 4. Красный, синий, чёрный и белый. 5. Плоскими, в профиль, строгими рядами. 6. Музей «Эребуни» и восстановленные стены. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Erebuni was founded in…", "Էրեբունին հիմնադրվել է…", "Эребуни основан в…"), [t("782 BC", "ք․ ա․ 782 թվականին", "782 году до н. э."), t("1967", "1967 թվականին", "1967 году"), t("451", "451 թվականին", "451 году")], 0),
@@ -332,12 +434,20 @@ Monasteries were not only places of prayer. They were also schools, libraries an
 
 Both monasteries are on the **UNESCO World Heritage** list.
 
+~~~art
+pic armenian-church khachkar
+~~~
+
 ## Churches of Russia
 
 | Church | What is special |
 |---|---|
 | **Kizhi** | on an island in Lake Onega; the wooden Church of the Transfiguration has 22 domes covered with wooden «scales» |
 | **Trinity Lavra of St Sergius** | a big monastery in Sergiev Posad with white walls and blue and golden domes |
+
+~~~art
+pic st-basil
+~~~
 
 ## Two silhouettes
 
@@ -348,6 +458,11 @@ Both monasteries are on the **UNESCO World Heritage** list.
 | **decoration** | stone carving: crosses, plants, birds | carved wood, painted tiles, gilded domes |
 | **mood** | strict and strong, like the mountains | bright and festive, rising like a flame |
 
+~~~art
+pic mode=silhouette armenian-church st-basil gothic pagoda
+Two silhouettes, and more: a cone dome or an onion dome? Guess the building, then tap to check.
+~~~
+
 ## Draw a monastery
 
 1. Choose the monastery and its place: a gorge, a plateau or an island.
@@ -355,8 +470,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 3. Show the silhouette clearly against the sky.
 4. Paint the stone or wood colour, and the landscape around.
 
-### Exercises
+~~~art
+steps armenian-church
+~~~
 
+~~~art
+tasks
 1. What else were monasteries besides places of prayer?
 2. What is special about Geghard?
 3. Where is Haghpat?
@@ -364,10 +483,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 5. Compare the domes of Armenian and Russian churches.
 6. Which list are Geghard and Haghpat on?
 7. Draw a monastery in its landscape.
+~~~
 
-### Answers
-
-1. Schools, libraries and workshops. 2. It is partly carved into the rock, with a spring inside. 3. In the Lori region, above the Debed gorge. 4. 22. 5. Armenian: a cone on a drum; Russian: onion domes, often many. 6. The UNESCO World Heritage list. 7. Your work.`,
+~~~art
+hints
+1. Schools, libraries and workshops. 2. It is partly carved into the rock, with a spring inside. 3. In the Lori region, above the Debed gorge. 4. 22. 5. Armenian: a cone on a drum; Russian: onion domes, often many. 6. The UNESCO World Heritage list. 7. Your work.
+~~~`,
         hy: `## Աղոթող քար և փայտ
 
 Վանքերը միայն աղոթքի վայրեր չէին։ Դրանք նաև դպրոցներ, գրադարաններ և արհեստանոցներ էին, որտեղ գրքեր էին ընդօրինակում և նկարազարդում։
@@ -381,12 +502,20 @@ Both monasteries are on the **UNESCO World Heritage** list.
 
 Երկու վանքերն էլ ընդգրկված են **ՅՈՒՆԵՍԿՕ-ի Համաշխարհային ժառանգության** ցանկում։
 
+~~~art
+pic armenian-church khachkar
+~~~
+
 ## Ռուսաստանի եկեղեցիները
 
 | Եկեղեցի | Ինչն է յուրահատուկ |
 |---|---|
 | **Կիժի** | Օնեգա լճի կղզում, փայտե Պայծառակերպության եկեղեցին ունի 22 գմբեթ՝ ծածկված փայտե «թեփուկներով» |
 | **Սուրբ Սերգիի Երրորդություն լավրա** | մեծ վանք Սերգիև Պոսադում՝ սպիտակ պատերով և կապույտ ու ոսկե գմբեթներով |
+
+~~~art
+pic st-basil
+~~~
 
 ## Երկու ուրվագիծ
 
@@ -397,6 +526,11 @@ Both monasteries are on the **UNESCO World Heritage** list.
 | **զարդարանք** | քարի քանդակ՝ խաչեր, բույսեր, թռչուններ | փորագրված փայտ, ներկված սալիկներ, ոսկեզօծ գմբեթներ |
 | **տրամադրություն** | խիստ և ամուր, ինչպես լեռները | վառ և տոնական, բոցի պես վեր խոյացող |
 
+~~~art
+pic mode=silhouette armenian-church st-basil gothic pagoda
+Երկու ուրվագիծ և ավելին․ կոնաձև գմբե՞թ, թե՞ սոխաձև։ Գուշակի՛ր շենքը, հետո հպի՛ր՝ ստուգելու համար։
+~~~
+
 ## Նկարի՛ր վանք
 
 1. Ընտրի՛ր վանքը և նրա տեղը՝ կիրճ, սարահարթ կամ կղզի։
@@ -404,8 +538,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 3. Ուրվագիծը հստակ ցույց տուր երկնքի ֆոնին։
 4. Ներկի՛ր քարի կամ փայտի գույնը և շրջակա բնապատկերը։
 
-### Վարժություններ
+~~~art
+steps armenian-church
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ էին նաև վանքերը, բացի աղոթքի վայր լինելուց։
 2. Ինչո՞վ է յուրահատուկ Գեղարդը։
 3. Որտե՞ղ է Հաղպատը։
@@ -413,10 +551,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 5. Համեմատի՛ր հայկական և ռուսական եկեղեցիների գմբեթները։
 6. Ո՞ր ցանկում են ընդգրկված Գեղարդը և Հաղպատը։
 7. Նկարի՛ր վանք իր բնապատկերում։
+~~~
 
-### Պատասխաններ
-
-1. Դպրոցներ, գրադարաններ և արհեստանոցներ։ 2. Այն մասամբ փորված է ժայռի մեջ, ներսում աղբյուր կա։ 3. Լոռու մարզում՝ Դեբեդի կիրճի վերևում։ 4. 22։ 5. Հայկականը՝ կոն թմբուկի վրա, ռուսականը՝ սոխաձև, հաճախ շատ գմբեթներ։ 6. ՅՈՒՆԵՍԿՕ-ի Համաշխարհային ժառանգության ցանկում։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Դպրոցներ, գրադարաններ և արհեստանոցներ։ 2. Այն մասամբ փորված է ժայռի մեջ, ներսում աղբյուր կա։ 3. Լոռու մարզում՝ Դեբեդի կիրճի վերևում։ 4. 22։ 5. Հայկականը՝ կոն թմբուկի վրա, ռուսականը՝ սոխաձև, հաճախ շատ գմբեթներ։ 6. ՅՈՒՆԵՍԿՕ-ի Համաշխարհային ժառանգության ցանկում։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Камень и дерево, которые молятся
 
 Монастыри были не только местами молитвы. Это были также школы, библиотеки и мастерские, где переписывали и украшали книги.
@@ -430,12 +570,20 @@ Both monasteries are on the **UNESCO World Heritage** list.
 
 Оба монастыря входят в список **Всемирного наследия ЮНЕСКО**.
 
+~~~art
+pic armenian-church khachkar
+~~~
+
 ## Храмы России
 
 | Храм | Чем особенный |
 |---|---|
 | **Кижи** | на острове в Онежском озере; деревянная Преображенская церковь имеет 22 главы, покрытые деревянной «чешуёй» |
 | **Троице-Сергиева лавра** | большой монастырь в Сергиевом Посаде с белыми стенами и синими и золотыми куполами |
+
+~~~art
+pic st-basil
+~~~
 
 ## Два силуэта
 
@@ -446,6 +594,11 @@ Both monasteries are on the **UNESCO World Heritage** list.
 | **украшение** | резьба по камню: кресты, растения, птицы | резное дерево, расписные изразцы, золочёные купола |
 | **настроение** | строгое и мощное, как горы | яркое и праздничное, устремлённое вверх, как пламя |
 
+~~~art
+pic mode=silhouette armenian-church st-basil gothic pagoda
+Два силуэта и не только: шатровый купол или луковица? Угадай здание и нажми, чтобы проверить.
+~~~
+
 ## Нарисуй монастырь
 
 1. Выбери монастырь и его место: ущелье, плато или остров.
@@ -453,8 +606,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 3. Чётко покажи силуэт на фоне неба.
 4. Напиши цвет камня или дерева и окружающий пейзаж.
 
-### Упражнения
+~~~art
+steps armenian-church
+~~~
 
+~~~art
+tasks
 1. Чем ещё были монастыри, кроме мест молитвы?
 2. Чем особенный Гегард?
 3. Где находится Ахпат?
@@ -462,10 +619,12 @@ Both monasteries are on the **UNESCO World Heritage** list.
 5. Сравни купола армянских и русских храмов.
 6. В какой список входят Гегард и Ахпат?
 7. Нарисуй монастырь в его пейзаже.
+~~~
 
-### Ответы
-
-1. Школами, библиотеками и мастерскими. 2. Он частично высечен в скале, внутри есть родник. 3. В Лори, над ущельем Дебеда. 4. 22. 5. Армянский — конус на барабане; русский — луковичные главы, часто много. 6. В список Всемирного наследия ЮНЕСКО. 7. Твоя работа.`,
+~~~art
+hints
+1. Школами, библиотеками и мастерскими. 2. Он частично высечен в скале, внутри есть родник. 3. В Лори, над ущельем Дебеда. 4. 22. 5. Армянский — конус на барабане; русский — луковичные главы, часто много. 6. В список Всемирного наследия ЮНЕСКО. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Geghard is partly…", "Գեղարդը մասամբ…", "Гегард частично…"), [t("carved into the rock", "փորված է ժայռի մեջ", "высечен в скале"), t("made of glass", "ապակուց է", "из стекла"), t("under water", "ջրի տակ է", "под водой")], 0),
@@ -491,6 +650,10 @@ The **Moscow Kremlin** stands on a hill above the Moscow river. Its red brick wa
 
 Next to the Kremlin lies **Red Square**. In old Russian the word «red» also meant «beautiful», so the name means «beautiful square».
 
+~~~art
+pic kremlin
+~~~
+
 ## St Basil's Cathedral
 
 At the edge of Red Square stands the **Cathedral of the Intercession**, known as **St Basil's**. It was built in 1555–1561. It is really several churches standing together on one base, each with its own dome.
@@ -501,6 +664,10 @@ At the edge of Red Square stands the **Cathedral of the Intercession**, known as
 | **colours** | red, green, yellow, blue, white and gold |
 | **rhythm** | towers of different height rise around the tallest central tower |
 | **mood** | festive, like a fairy-tale city or a bunch of flowers |
+
+~~~art
+pic st-basil
+~~~
 
 ## Rhythm and variety
 
@@ -513,8 +680,16 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 3. Decorate each dome with a different pattern: stripes, spirals, checks, scales.
 4. Use bright colours, but repeat some of them so the picture stays one whole.
 
-### Exercises
+~~~art
+steps onion-dome
+~~~
 
+~~~art
+palette loud
+~~~
+
+~~~art
+tasks
 1. Where does the Moscow Kremlin stand?
 2. When were its red brick walls built?
 3. What did «red» mean in old Russian?
@@ -522,15 +697,21 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 5. How are its domes different from each other?
 6. What do rhythm and variety give a building?
 7. Draw a fairy-tale cathedral with domes of different patterns.
+~~~
 
-### Answers
-
-1. On a hill above the Moscow river. 2. At the end of the 15th century. 3. «Beautiful». 4. In 1555–1561. 5. They have different shapes, patterns and colours. 6. Liveliness and order. 7. Your work.`,
+~~~art
+hints
+1. On a hill above the Moscow river. 2. At the end of the 15th century. 3. «Beautiful». 4. In 1555–1561. 5. They have different shapes, patterns and colours. 6. Liveliness and order. 7. Your work.
+~~~`,
         hy: `## Մոսկվայի սիրտը
 
 **Մոսկվայի Կրեմլը** կանգնած է Մոսկվա գետի վերևում գտնվող բլրի վրա։ Նրա կարմիր աղյուսե պարիսպներն ու աշտարակները կառուցվել են 15-րդ դարի վերջին, կառուցմանն օգնել են իտալացի վարպետներ։ Ամենահայտնի աշտարակը՝ **Սպասսկայա աշտարակը**, ունի զնգացող մեծ ժամացույց։
 
 Կրեմլի կողքին **Կարմիր հրապարակն** է։ Հին ռուսերենում «կարմիր» բառը նշանակում էր նաև «գեղեցիկ», ուստի անունը նշանակում է «գեղեցիկ հրապարակ»։
+
+~~~art
+pic kremlin
+~~~
 
 ## Վասիլի Երանելու տաճարը
 
@@ -543,6 +724,10 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 | **ռիթմ** | տարբեր բարձրության աշտարակները բարձրանում են ամենաբարձր կենտրոնական աշտարակի շուրջը |
 | **տրամադրություն** | տոնական, ինչպես հեքիաթային քաղաք կամ ծաղկեփունջ |
 
+~~~art
+pic st-basil
+~~~
+
 ## Ռիթմ և բազմազանություն
 
 Ճարտարապետը կարող է կրկնել նույն ձևը (աշտարակներ, կամարներ, պատուհաններ)՝ **ռիթմ** ստեղծելու համար, և փոխել չափն ու գույնը՝ **բազմազանություն** ստեղծելու համար։ Միասին դրանք շենքը դարձնում են կենդանի, բայց ոչ խառնաշփոթ։
@@ -554,8 +739,16 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 3. Յուրաքանչյուր գմբեթ զարդարի՛ր տարբեր նախշով՝ շերտեր, պարույրներ, վանդակներ, թեփուկներ։
 4. Օգտագործի՛ր վառ գույներ, բայց դրանցից մի քանիսը կրկնի՛ր, որպեսզի նկարը մնա ամբողջական։
 
-### Վարժություններ
+~~~art
+steps onion-dome
+~~~
 
+~~~art
+palette loud
+~~~
+
+~~~art
+tasks
 1. Որտե՞ղ է կանգնած Մոսկվայի Կրեմլը։
 2. Ե՞րբ են կառուցվել նրա կարմիր աղյուսե պարիսպները։
 3. Ի՞նչ էր նշանակում «կարմիր» բառը հին ռուսերենում։
@@ -563,15 +756,21 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 5. Ինչո՞վ են նրա գմբեթները տարբերվում իրարից։
 6. Ի՞նչ են տալիս ռիթմն ու բազմազանությունը շենքին։
 7. Նկարի՛ր հեքիաթային տաճար տարբեր նախշերով գմբեթներով։
+~~~
 
-### Պատասխաններ
-
-1. Մոսկվա գետի վերևում գտնվող բլրի վրա։ 2. 15-րդ դարի վերջին։ 3. «Գեղեցիկ»։ 4. 1555–1561 թվականներին։ 5. Նրանք ունեն տարբեր ձևեր, նախշեր և գույներ։ 6. Կենդանություն և կարգ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Մոսկվա գետի վերևում գտնվող բլրի վրա։ 2. 15-րդ դարի վերջին։ 3. «Գեղեցիկ»։ 4. 1555–1561 թվականներին։ 5. Նրանք ունեն տարբեր ձևեր, նախշեր և գույներ։ 6. Կենդանություն և կարգ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Сердце Москвы
 
 **Московский Кремль** стоит на холме над Москвой-рекой. Его красные кирпичные стены и башни построены в конце XV века; строить их помогали итальянские мастера. Самая известная башня — **Спасская** — имеет большие часы с курантами.
 
 Рядом с Кремлём лежит **Красная площадь**. В древнерусском языке слово «красный» значило также «красивый», поэтому название значит «красивая площадь».
+
+~~~art
+pic kremlin
+~~~
 
 ## Собор Василия Блаженного
 
@@ -584,6 +783,10 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 | **ритм** | башни разной высоты поднимаются вокруг самой высокой центральной |
 | **настроение** | праздничное, как сказочный город или букет цветов |
 
+~~~art
+pic st-basil
+~~~
+
 ## Ритм и разнообразие
 
 Архитектор может повторять одну форму (башни, арки, окна), чтобы создать **ритм**, и менять размер и цвет, чтобы создать **разнообразие**. Вместе они делают здание живым, но не хаотичным.
@@ -595,8 +798,16 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 3. Укрась каждую главу своим узором: полосы, спирали, клетки, чешуя.
 4. Используй яркие цвета, но повторяй некоторые из них, чтобы рисунок остался цельным.
 
-### Упражнения
+~~~art
+steps onion-dome
+~~~
 
+~~~art
+palette loud
+~~~
+
+~~~art
+tasks
 1. Где стоит Московский Кремль?
 2. Когда построены его красные кирпичные стены?
 3. Что значило слово «красный» в древнерусском языке?
@@ -604,10 +815,12 @@ An architect can repeat the same shape (towers, arches, windows) to make **rhyth
 5. Чем отличаются друг от друга его главы?
 6. Что дают зданию ритм и разнообразие?
 7. Нарисуй сказочный собор с главами разных узоров.
+~~~
 
-### Ответы
-
-1. На холме над Москвой-рекой. 2. В конце XV века. 3. «Красивый». 4. В 1555–1561 годах. 5. У них разные формы, узоры и цвета. 6. Живость и порядок. 7. Твоя работа.`,
+~~~art
+hints
+1. На холме над Москвой-рекой. 2. В конце XV века. 3. «Красивый». 4. В 1555–1561 годах. 5. У них разные формы, узоры и цвета. 6. Живость и порядок. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("In old Russian «red» also meant…", "Հին ռուսերենում «կարմիր»-ը նշանակում էր նաև…", "В древнерусском «красный» значило также…"), [t("beautiful", "գեղեցիկ", "красивый"), t("old", "հին", "старый"), t("big", "մեծ", "большой")], 0),
@@ -635,6 +848,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 
 **Toros Roslin** lived in the **13th century** in the Armenian kingdom of Cilicia. He is the most famous Armenian miniaturist. His figures are graceful and alive, their faces are gentle, the colours are bright and clear: deep blue, red, green and a lot of **gold**.
 
+~~~art
+pic letter-initial bird-motif
+~~~
+
 ## Parts of a decorated manuscript
 
 | Part | What it is |
@@ -651,6 +868,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Gold was put on in very thin leaves and polished until it shone.
 4. The master worked with a very fine brush, sometimes of only a few hairs.
 
+~~~art
+palette palekh
+~~~
+
 ## Make your own page
 
 1. Draw a frame or a khoran arch at the top of the page.
@@ -658,8 +879,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Add a margin ornament: a branch, a bird, a flower.
 4. Paint with pure bright colours; use gold or yellow for shine.
 
-### Exercises
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. What is a miniature?
 2. Where are old Armenian manuscripts kept?
 3. When and where did Toros Roslin live?
@@ -667,10 +892,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 5. What is a bird-letter?
 6. What was parchment?
 7. Create a page with a bird-letter of your name and a margin ornament.
+~~~
 
-### Answers
-
-1. A small, very fine painting in a handwritten book. 2. In the Matenadaran in Yerevan. 3. In the 13th century, in Cilicia. 4. A decorated arch over the text, like a gate. 5. A capital letter made of birds, animals or plants. 6. Thin, specially treated animal skin. 7. Your work.`,
+~~~art
+hints
+1. A small, very fine painting in a handwritten book. 2. In the Matenadaran in Yerevan. 3. In the 13th century, in Cilicia. 4. A decorated arch over the text, like a gate. 5. A capital letter made of birds, animals or plants. 6. Thin, specially treated animal skin. 7. Your work.
+~~~`,
         hy: `## Փոքր նկարներ մեծ գրքերում
 
 Մինչև տպագրությունը գրքերը գրվում էին ձեռքով։ Վարպետները դրանք զարդարում էին փոքր, շատ նուրբ նկարներով, որոնք կոչվում են **մանրանկարներ**։ Հայաստանն ունի մանրանկարչության աշխարհի ամենահարուստ ավանդույթներից մեկը։ Հազարավոր հին հայկական ձեռագրեր պահվում են Երևանի **Մատենադարանում**։
@@ -678,6 +905,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 ## Թորոս Ռոսլին
 
 **Թորոս Ռոսլինն** ապրել է **13-րդ դարում** Կիլիկիայի հայկական թագավորությունում։ Նա ամենահայտնի հայ մանրանկարիչն է։ Նրա պատկերները նրբագեղ են և կենդանի, դեմքերը՝ մեղմ, գույները՝ վառ և մաքուր՝ խոր կապույտ, կարմիր, կանաչ և շատ **ոսկի**։
+
+~~~art
+pic letter-initial bird-motif
+~~~
 
 ## Զարդարված ձեռագրի մասերը
 
@@ -695,6 +926,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Ոսկին դնում էին շատ բարակ թերթիկներով և փայլեցնում, մինչև շողար։
 4. Վարպետն աշխատում էր շատ նուրբ վրձնով, երբեմն ընդամենը մի քանի մազից։
 
+~~~art
+palette palekh
+~~~
+
 ## Ստեղծի՛ր քո էջը
 
 1. Էջի վերևում նկարի՛ր շրջանակ կամ խորանի կամար։
@@ -702,8 +937,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Ավելացրու՛ լուսանցազարդ՝ ճյուղ, թռչուն, ծաղիկ։
 4. Ներկի՛ր մաքուր վառ գույներով, փայլի համար օգտագործի՛ր ոսկեգույն կամ դեղին։
 
-### Վարժություններ
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է մանրանկարը։
 2. Որտե՞ղ են պահվում հին հայկական ձեռագրերը։
 3. Ե՞րբ և որտե՞ղ է ապրել Թորոս Ռոսլինը։
@@ -711,10 +950,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 5. Ի՞նչ է թռչնագիրը։
 6. Ի՞նչ էր մագաղաթը։
 7. Ստեղծի՛ր էջ քո անվան թռչնագրով և լուսանցազարդով։
+~~~
 
-### Պատասխաններ
-
-1. Փոքր, շատ նուրբ նկար ձեռագիր գրքում։ 2. Երևանի Մատենադարանում։ 3. 13-րդ դարում, Կիլիկիայում։ 4. Զարդարված կամար տեքստի վերևում՝ դարպասի պես։ 5. Թռչուններից, կենդանիներից կամ բույսերից կազմված գլխատառ։ 6. Բարակ, հատուկ մշակված կենդանու մորթի։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Փոքր, շատ նուրբ նկար ձեռագիր գրքում։ 2. Երևանի Մատենադարանում։ 3. 13-րդ դարում, Կիլիկիայում։ 4. Զարդարված կամար տեքստի վերևում՝ դարպասի պես։ 5. Թռչուններից, կենդանիներից կամ բույսերից կազմված գլխատառ։ 6. Բարակ, հատուկ մշակված կենդանու մորթի։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Маленькие картины в больших книгах
 
 До книгопечатания книги писали от руки. Мастера украшали их маленькими, очень тонкими рисунками — **миниатюрами**. У Армении одна из самых богатых традиций миниатюры в мире. Тысячи старинных армянских рукописей хранятся в ереванском **Матенадаране**.
@@ -722,6 +963,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 ## Торос Рослин
 
 **Торос Рослин** жил в **XIII веке** в армянском Киликийском царстве. Это самый знаменитый армянский миниатюрист. Его фигуры изящны и живы, лица мягкие, цвета яркие и чистые: глубокий синий, красный, зелёный и много **золота**.
+
+~~~art
+pic letter-initial bird-motif
+~~~
 
 ## Части украшенной рукописи
 
@@ -739,6 +984,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Золото наносили тончайшими листочками и полировали до блеска.
 4. Мастер работал очень тонкой кистью, иногда всего из нескольких волосков.
 
+~~~art
+palette palekh
+~~~
+
 ## Создай свою страницу
 
 1. Наверху страницы нарисуй рамку или арку-хоран.
@@ -746,8 +995,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 3. Добавь орнамент на полях: веточку, птицу, цветок.
 4. Раскрась чистыми яркими цветами; для блеска используй золотую или жёлтую краску.
 
-### Упражнения
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. Что такое миниатюра?
 2. Где хранятся старинные армянские рукописи?
 3. Когда и где жил Торос Рослин?
@@ -755,10 +1008,12 @@ Before printing, books were written by hand. Masters decorated them with small, 
 5. Что такое буква-птица?
 6. Что такое пергамент?
 7. Создай страницу с буквой-птицей своего имени и орнаментом на полях.
+~~~
 
-### Ответы
-
-1. Маленький, очень тонкий рисунок в рукописной книге. 2. В Матенадаране в Ереване. 3. В XIII веке, в Киликии. 4. Украшенная арка над текстом, похожая на ворота. 5. Заглавная буква из птиц, зверей или растений. 6. Тонкая, особым образом обработанная кожа животного. 7. Твоя работа.`,
+~~~art
+hints
+1. Маленький, очень тонкий рисунок в рукописной книге. 2. В Матенадаране в Ереване. 3. В XIII веке, в Киликии. 4. Украшенная арка над текстом, похожая на ворота. 5. Заглавная буква из птиц, зверей или растений. 6. Тонкая, особым образом обработанная кожа животного. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Toros Roslin lived in the…", "Թորոս Ռոսլինն ապրել է…", "Торос Рослин жил в…"), [t("13th century", "13-րդ դարում", "XIII веке"), t("19th century", "19-րդ դարում", "XIX веке"), t("1st century BC", "ք․ ա․ 1-ին դարում", "I веке до н. э.")], 0),
@@ -789,6 +1044,10 @@ Before printing, books were written by hand. Masters decorated them with small, 
 
 The fresco painter has to work fast: only the part of the wall that was plastered today can be painted today.
 
+~~~art
+pic genre-icon
+~~~
+
 ## Andrei Rublev's «Trinity»
 
 In the early 15th century the monk **Andrei Rublev** painted the icon «Trinity». It is now in the **Tretyakov Gallery**. Three angels sit around a table. Their figures and heads lean towards each other and form a **circle**. Soft blue, gold and green colours make the icon quiet and peaceful.
@@ -807,8 +1066,13 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 3. Put a simple object in the centre: a table, a bowl, a tree.
 4. Use a limited palette: two or three main colours and gold or yellow.
 
-### Exercises
+~~~art
+sketch guide=circle
+Build a composition in a circle: figures lean towards the centre and their outlines follow the round edge.
+~~~
 
+~~~art
+tasks
 1. What is an icon painted on?
 2. What is egg tempera?
 3. Why must a fresco painter work fast?
@@ -816,10 +1080,12 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 5. Describe the composition of Rublev's «Trinity».
 6. Who painted the frescoes of the Ferapontov monastery and when?
 7. Make a composition of two or three figures in a circle.
+~~~
 
-### Answers
-
-1. On a wooden board. 2. Paint made of pigments mixed with egg yolk. 3. Paint must go on wet plaster before it dries. 4. «Fresh». 5. Three angels around a table, leaning towards each other in a circle. 6. Dionysius and his sons, in 1502. 7. Your work.`,
+~~~art
+hints
+1. On a wooden board. 2. Paint made of pigments mixed with egg yolk. 3. Paint must go on wet plaster before it dries. 4. «Fresh». 5. Three angels around a table, leaning towards each other in a circle. 6. Dionysius and his sons, in 1502. 7. Your work.
+~~~`,
         hy: `## Նկար տախտակի և պատի վրա
 
 | | Սրբապատկեր | Որմնանկար |
@@ -830,6 +1096,10 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 | **անուն** | հունարեն «պատկեր» բառից | իտալերեն «fresco»՝ «թարմ» բառից |
 
 Որմնանկարիչը պետք է արագ աշխատի․ այսօր կարելի է նկարել միայն պատի այն մասը, որն այսօր է սվաղվել։
+
+~~~art
+pic genre-icon
+~~~
 
 ## Անդրեյ Ռուբլյովի «Երրորդությունը»
 
@@ -849,8 +1119,13 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 3. Կենտրոնում դի՛ր պարզ առարկա՝ սեղան, աման, ծառ։
 4. Օգտագործի՛ր սահմանափակ գունապնակ՝ երկու կամ երեք հիմնական գույն և ոսկեգույն կամ դեղին։
 
-### Վարժություններ
+~~~art
+sketch guide=circle
+Կառուցի՛ր շրջանաձև կոմպոզիցիա․ կերպարները թեքվում են դեպի կենտրոն, իսկ ուրվագծերը կրկնում են կլոր եզրը։
+~~~
 
+~~~art
+tasks
 1. Ինչի՞ վրա է նկարվում սրբապատկերը։
 2. Ի՞նչ է ձվային տեմպերան։
 3. Ինչո՞ւ պետք է որմնանկարիչն արագ աշխատի։
@@ -858,10 +1133,12 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 5. Նկարագրի՛ր Ռուբլյովի «Երրորդության» կոմպոզիցիան։
 6. Ո՞վ և ե՞րբ է նկարել Ֆերապոնտովյան վանքի որմնանկարները։
 7. Կազմի՛ր երկու կամ երեք պատկերի կոմպոզիցիա շրջանի մեջ։
+~~~
 
-### Պատասխաններ
-
-1. Փայտե տախտակի վրա։ 2. Ձվի դեղնուցի հետ խառնված ներկանյութերից ներկ։ 3. Ներկը պետք է դրվի թաց սվաղի վրա, մինչև այն կչորանա։ 4. «Թարմ»։ 5. Երեք հրեշտակ սեղանի շուրջը՝ իրար կողմ թեքված, շրջանով։ 6. Դիոնիսիոսը և նրա որդիները, 1502 թվականին։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Փայտե տախտակի վրա։ 2. Ձվի դեղնուցի հետ խառնված ներկանյութերից ներկ։ 3. Ներկը պետք է դրվի թաց սվաղի վրա, մինչև այն կչորանա։ 4. «Թարմ»։ 5. Երեք հրեշտակ սեղանի շուրջը՝ իրար կողմ թեքված, շրջանով։ 6. Դիոնիսիոսը և նրա որդիները, 1502 թվականին։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Живопись на доске и на стене
 
 | | Икона | Фреска |
@@ -872,6 +1149,10 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 | **название** | от греческого слова «образ» | от итальянского «fresco» — «свежий» |
 
 Мастер фрески должен работать быстро: сегодня можно расписать только ту часть стены, которую сегодня оштукатурили.
+
+~~~art
+pic genre-icon
+~~~
 
 ## «Троица» Андрея Рублёва
 
@@ -891,8 +1172,13 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 3. В центр поставь простой предмет: стол, чашу, дерево.
 4. Используй ограниченную палитру: два-три основных цвета и золото или жёлтый.
 
-### Упражнения
+~~~art
+sketch guide=circle
+Построй композицию в круге: фигуры склоняются к центру, а их контуры повторяют край круга.
+~~~
 
+~~~art
+tasks
 1. На чём пишут икону?
 2. Что такое яичная темпера?
 3. Почему мастер фрески должен работать быстро?
@@ -900,10 +1186,12 @@ A circle is a calm, closed shape. Figures placed along a circle «talk» to each
 5. Опиши композицию «Троицы» Рублёва.
 6. Кто и когда расписал Ферапонтов монастырь?
 7. Составь композицию из двух-трёх фигур в круге.
+~~~
 
-### Ответы
-
-1. На деревянной доске. 2. Краска из пигментов, смешанных с яичным желтком. 3. Краску нужно нанести на сырую штукатурку, пока она не высохла. 4. «Свежий». 5. Три ангела вокруг стола склоняются друг к другу, образуя круг. 6. Дионисий с сыновьями, в 1502 году. 7. Твоя работа.`,
+~~~art
+hints
+1. На деревянной доске. 2. Краска из пигментов, смешанных с яичным желтком. 3. Краску нужно нанести на сырую штукатурку, пока она не высохла. 4. «Свежий». 5. Три ангела вокруг стола склоняются друг к другу, образуя круг. 6. Дионисий с сыновьями, в 1502 году. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("An icon is painted on…", "Սրբապատկերը նկարում են…", "Икону пишут на…"), [t("a wooden board", "փայտե տախտակի վրա", "деревянной доске"), t("wet plaster", "թաց սվաղի վրա", "сырой штукатурке"), t("glass", "ապակու վրա", "стекле")], 0),

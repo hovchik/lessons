@@ -29,6 +29,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **Zvartnots** | 7th century | a huge round cathedral; today we see its ruins and tall columns near Vagharshapat |
 | **Yerevan** city centre | 20th century | architect **Alexander Tamanyan** planned it; buildings of pink **tuff** stone around Republic Square |
 
+~~~art
+pic garni zvartnots armenian-church
+~~~
+
 ## Parts of a building
 
 | Part | Job |
@@ -38,6 +42,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **roof** | protects from rain and snow |
 | **decoration** | carvings, arches, ornaments |
 
+~~~art
+pic orders
+~~~
+
 ## Draw Garni
 
 1. Draw a wide **rectangle** for the base with steps in front.
@@ -45,8 +53,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 3. Put a **triangle** on top — this is the pediment.
 4. Add mountains behind the temple.
 
-### Exercises
+~~~art
+steps garni
+~~~
 
+~~~art
+tasks
 1. Who designs buildings?
 2. When was the temple of Garni built?
 3. What can we see today at Zvartnots?
@@ -54,10 +66,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 5. Of what stone are many Yerevan buildings made?
 6. Name four parts of a building.
 7. Draw the temple of Garni with mountains behind it.
+~~~
 
-### Answers
-
-1. An architect. 2. In the 1st century AD. 3. Ruins and tall columns of a round cathedral. 4. Alexander Tamanyan. 5. Pink tuff. 6. Base, walls, columns, roof. 7. Your drawing.`,
+~~~art
+hints
+1. An architect. 2. In the 1st century AD. 3. Ruins and tall columns of a round cathedral. 4. Alexander Tamanyan. 5. Pink tuff. 6. Base, walls, columns, roof. 7. Your drawing.
+~~~`,
         hy: `## Ճարտարապետությունն արվեստ է
 
 **Ճարտարապետը** նախագծում է շենքեր՝ ինչ տեսք ունեն, որքան ամուր են, ինչպես են մարդիկ օգտագործում դրանք։ Շենքերը պատմում են այն ժամանակի մասին, երբ կառուցվել են։
@@ -70,6 +84,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **Զվարթնոց** | 7-րդ դար | հսկայական կլոր տաճար, այսօր Վաղարշապատի մոտ տեսնում ենք նրա ավերակները և բարձր սյուները |
 | **Երևանի** կենտրոն | 20-րդ դար | նախագծել է ճարտարապետ **Ալեքսանդր Թամանյանը**, Հանրապետության հրապարակի շուրջ վարդագույն **տուֆից** շենքեր |
 
+~~~art
+pic garni zvartnots armenian-church
+~~~
+
 ## Շենքի մասերը
 
 | Մաս | Գործը |
@@ -79,6 +97,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **տանիք** | պաշտպանում է անձրևից և ձյունից |
 | **զարդարանք** | քանդակներ, կամարներ, զարդանախշեր |
 
+~~~art
+pic orders
+~~~
+
 ## Նկարի՛ր Գառնին
 
 1. Նկարի՛ր լայն **ուղղանկյուն**՝ հիմքը, առջևում՝ աստիճաններ։
@@ -86,8 +108,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 3. Վրան դի՛ր **եռանկյուն**՝ սա ճակտոնն է։
 4. Տաճարի հետևում լեռներ ավելացրու՛։
 
-### Վարժություններ
+~~~art
+steps garni
+~~~
 
+~~~art
+tasks
 1. Ո՞վ է նախագծում շենքերը։
 2. Ե՞րբ է կառուցվել Գառնու տաճարը։
 3. Ի՞նչ ենք այսօր տեսնում Զվարթնոցում։
@@ -95,10 +121,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 5. Ի՞նչ քարից են կառուցված Երևանի շատ շենքեր։
 6. Անվանի՛ր շենքի չորս մաս։
 7. Նկարի՛ր Գառնու տաճարը՝ հետևում լեռներով։
+~~~
 
-### Պատասխաններ
-
-1. Ճարտարապետը։ 2. Մ․թ․ 1-ին դարում։ 3. Կլոր տաճարի ավերակներ և բարձր սյուներ։ 4. Ալեքսանդր Թամանյանը։ 5. Վարդագույն տուֆից։ 6. Հիմք, պատեր, սյուներ, տանիք։ 7. Քո նկարը։`,
+~~~art
+hints
+1. Ճարտարապետը։ 2. Մ․թ․ 1-ին դարում։ 3. Կլոր տաճարի ավերակներ և բարձր սյուներ։ 4. Ալեքսանդր Թամանյանը։ 5. Վարդագույն տուֆից։ 6. Հիմք, պատեր, սյուներ, տանիք։ 7. Քո նկարը։
+~~~`,
         ru: `## Архитектура — это искусство
 
 **Архитектор** проектирует здания: как они выглядят, насколько прочны, как ими пользуются люди. Здания рассказывают о времени, когда их построили.
@@ -111,6 +139,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **Звартноц** | VII век | огромный круглый собор; сегодня мы видим его руины и высокие колонны около Вагаршапата |
 | **Центр Еревана** | XX век | спланировал архитектор **Александр Таманян**; здания из розового **туфа** вокруг площади Республики |
 
+~~~art
+pic garni zvartnots armenian-church
+~~~
+
 ## Части здания
 
 | Часть | Назначение |
@@ -120,6 +152,10 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 | **крыша** | защищает от дождя и снега |
 | **украшения** | резьба, арки, орнаменты |
 
+~~~art
+pic orders
+~~~
+
 ## Рисуем Гарни
 
 1. Нарисуй широкий **прямоугольник** — основание, впереди ступени.
@@ -127,8 +163,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 3. Сверху помести **треугольник** — это фронтон.
 4. Добавь горы за храмом.
 
-### Упражнения
+~~~art
+steps garni
+~~~
 
+~~~art
+tasks
 1. Кто проектирует здания?
 2. Когда построен храм Гарни?
 3. Что мы видим сегодня в Звартноце?
@@ -136,10 +176,12 @@ An **architect** designs buildings: how they look, how strong they are, how peop
 5. Из какого камня построены многие здания Еревана?
 6. Назови четыре части здания.
 7. Нарисуй храм Гарни с горами позади.
+~~~
 
-### Ответы
-
-1. Архитектор. 2. В I веке н. э. 3. Руины и высокие колонны круглого собора. 4. Александр Таманян. 5. Из розового туфа. 6. Основание, стены, колонны, крыша. 7. Твой рисунок.`,
+~~~art
+hints
+1. Архитектор. 2. В I веке н. э. 3. Руины и высокие колонны круглого собора. 4. Александр Таманян. 5. Из розового туфа. 6. Основание, стены, колонны, крыша. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("Who designs buildings?", "Ո՞վ է նախագծում շենքերը։", "Кто проектирует здания?"), [t("An architect", "Ճարտարապետը", "Архитектор"), t("A pilot", "Օդաչուն", "Лётчик"), t("A cook", "Խոհարարը", "Повар")], 0),
@@ -170,6 +212,10 @@ A **monument** keeps the memory of a person or an event. Sculptors and architect
 | Moscow | Minin and Pozharsky on Red Square | Ivan Martos, 1818 |
 | Saint Petersburg | the Bronze Horseman, Peter I | Étienne Falconet, 1782 |
 
+~~~art
+pic tamanyan stork
+~~~
+
 ## A park is designed too
 
 | Element | Why |
@@ -184,8 +230,17 @@ A **monument** keeps the memory of a person or an event. Sculptors and architect
 
 A **plan** is a drawing **from above**. On it trees are circles, paths are lines, flowerbeds are coloured shapes.
 
-### Exercises
+~~~art
+pic park-plan
+~~~
 
+~~~art
+sketch guide=grid
+Draw the plan of a park as a bird sees it: paths, a fountain, trees as circles, benches as small rectangles.
+~~~
+
+~~~art
+tasks
 1. What is a monument for?
 2. What does a statue stand on?
 3. Who made the monument «David of Sasun» in Yerevan, and when?
@@ -193,10 +248,12 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 5. Name four elements of a park.
 6. How are trees shown on a plan?
 7. Draw a plan of a small park with paths, a fountain and a monument in the centre.
+~~~
 
-### Answers
-
-1. To keep the memory of a person or an event. 2. On a pedestal. 3. Yervand Kochar, in 1959. 4. On Red Square in Moscow. 5. Paths, flowerbeds, fountains, benches. 6. As circles. 7. Your plan.`,
+~~~art
+hints
+1. To keep the memory of a person or an event. 2. On a pedestal. 3. Yervand Kochar, in 1959. 4. On Red Square in Moscow. 5. Paths, flowerbeds, fountains, benches. 6. As circles. 7. Your plan.
+~~~`,
         hy: `## Ինչու՞ են պետք հուշարձանները
 
 **Հուշարձանը** պահում է մարդու կամ իրադարձության հիշատակը։ Քանդակագործներն ու ճարտարապետները միասին են ստեղծում հուշարձաններ․ **արձանը** կանգնած է **պատվանդանի** վրա։
@@ -207,6 +264,10 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 | Երևան | «Մայր Հայաստան»՝ Հաղթանակի զբոսայգում | 1967 |
 | Մոսկվա | Մինին և Պոժարսկի՝ Կարմիր հրապարակում | Իվան Մարտոս, 1818 |
 | Սանկտ Պետերբուրգ | Պղնձե ձիավոր՝ Պետրոս I | Էտյեն Ֆալկոնե, 1782 |
+
+~~~art
+pic tamanyan stork
+~~~
 
 ## Պուրակն էլ է նախագծվում
 
@@ -222,8 +283,17 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 
 **Հատակագիծը** նկար է **վերևից**։ Դրանում ծառերը շրջաններ են, արահետները՝ գծեր, ծաղկաթմբերը՝ գունավոր ձևեր։
 
-### Վարժություններ
+~~~art
+pic park-plan
+~~~
 
+~~~art
+sketch guide=grid
+Նկարի՛ր այգու հատակագիծը թռչնի աչքով․ արահետներ, շատրվան, ծառերը՝ շրջաններով, նստարանները՝ փոքր ուղղանկյուններով։
+~~~
+
+~~~art
+tasks
 1. Ինչի՞ համար է հուշարձանը։
 2. Ինչի՞ վրա է կանգնած արձանը։
 3. Ո՞վ և ե՞րբ է ստեղծել Երևանի «Սասունցի Դավիթ» հուշարձանը։
@@ -231,10 +301,12 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 5. Անվանի՛ր պուրակի չորս տարր։
 6. Ինչպե՞ս են ծառերը պատկերվում հատակագծում։
 7. Նկարի՛ր փոքր պուրակի հատակագիծ՝ արահետներով, շատրվանով և կենտրոնում հուշարձանով։
+~~~
 
-### Պատասխաններ
-
-1. Մարդու կամ իրադարձության հիշատակը պահելու համար։ 2. Պատվանդանի վրա։ 3. Երվանդ Քոչարը, 1959 թվականին։ 4. Մոսկվայի Կարմիր հրապարակում։ 5. Արահետներ, ծաղկաթմբեր, շատրվաններ, նստարաններ։ 6. Շրջաններով։ 7. Քո հատակագիծը։`,
+~~~art
+hints
+1. Մարդու կամ իրադարձության հիշատակը պահելու համար։ 2. Պատվանդանի վրա։ 3. Երվանդ Քոչարը, 1959 թվականին։ 4. Մոսկվայի Կարմիր հրապարակում։ 5. Արահետներ, ծաղկաթմբեր, շատրվաններ, նստարաններ։ 6. Շրջաններով։ 7. Քո հատակագիծը։
+~~~`,
         ru: `## Зачем нужны памятники?
 
 **Памятник** хранит память о человеке или событии. Скульпторы и архитекторы создают памятники вместе: **статуя** стоит на **постаменте**.
@@ -245,6 +317,10 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 | Ереван | «Мать Армения» в парке Победы | 1967 |
 | Москва | Минину и Пожарскому на Красной площади | Иван Мартос, 1818 |
 | Санкт-Петербург | Медный всадник, Пётр I | Этьен Фальконе, 1782 |
+
+~~~art
+pic tamanyan stork
+~~~
 
 ## Парк тоже проектируют
 
@@ -260,8 +336,17 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 
 **План** — это рисунок **сверху**. На нём деревья — кружки, дорожки — линии, клумбы — цветные фигуры.
 
-### Упражнения
+~~~art
+pic park-plan
+~~~
 
+~~~art
+sketch guide=grid
+Нарисуй план парка с высоты птичьего полёта: дорожки, фонтан, деревья кружками, скамейки прямоугольниками.
+~~~
+
+~~~art
+tasks
 1. Зачем нужен памятник?
 2. На чём стоит статуя?
 3. Кто и когда создал памятник «Давид Сасунский» в Ереване?
@@ -269,10 +354,12 @@ A **plan** is a drawing **from above**. On it trees are circles, paths are lines
 5. Назови четыре элемента парка.
 6. Как изображают деревья на плане?
 7. Нарисуй план небольшого парка с дорожками, фонтаном и памятником в центре.
+~~~
 
-### Ответы
-
-1. Чтобы хранить память о человеке или событии. 2. На постаменте. 3. Ерванд Кочар, в 1959 году. 4. На Красной площади в Москве. 5. Дорожки, клумбы, фонтаны, скамейки. 6. Кружками. 7. Твой план.`,
+~~~art
+hints
+1. Чтобы хранить память о человеке или событии. 2. На постаменте. 3. Ерванд Кочар, в 1959 году. 4. На Красной площади в Москве. 5. Дорожки, клумбы, фонтаны, скамейки. 6. Кружками. 7. Твой план.
+~~~`,
       },
       [
         q(t("A statue stands on a…", "Արձանը կանգնած է…", "Статуя стоит на…"), [t("pedestal", "պատվանդանի վրա", "постаменте"), t("roof", "տանիքի վրա", "крыше"), t("bench", "նստարանի վրա", "скамейке")], 0),
@@ -307,6 +394,10 @@ An **openwork** (*ажурный*) pattern has **holes** between its lines, so y
 
 The railing of the **Summer Garden** in Saint Petersburg (18th century) is one of the most famous fences in the world: tall bars, granite columns and gilded decorations. Yerevan has many old balconies and gates with iron curls too.
 
+~~~art
+pic lace street-furniture
+~~~
+
 ## Building a fence pattern
 
 1. Draw two horizontal lines: the top and the bottom.
@@ -314,12 +405,22 @@ The railing of the **Summer Garden** in Saint Petersburg (18th century) is one o
 3. Between the bars, repeat one **element**: a spiral, a circle, a heart, a leaf.
 4. Decorate the tops of the bars with spikes or balls.
 
+~~~art
+pattern layout=strip rhythm=mirror motifs=spiral,rhombus,circle,leaf palettes=mono
+A fence is a pattern made of metal. Build one from curls and rhombuses and try the mirror rhythm.
+~~~
+
 ## Lanterns
 
 A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple or curly and festive.
 
-### Exercises
+~~~art
+sketch paper=dark
+Draw a lantern on a dark evening street: the metal frame, the glass and the warm circle of light.
+~~~
 
+~~~art
+tasks
 1. Name four decorative details of a city.
 2. What does «openwork» mean?
 3. How is forged iron different from cast iron?
@@ -327,10 +428,12 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 5. Name the three parts of a lantern.
 6. Draw one section of an openwork fence with spirals.
 7. Draw a festive lantern for a fairy-tale city.
+~~~
 
-### Answers
-
-1. Lanterns, gates, fences, balconies. 2. A pattern with holes, so you can see through it. 3. Forged iron is bent by hand when hot; cast iron is poured into a mould. 4. The railing of the Summer Garden. 5. Post, lamp, top. 6–7. Your drawings.`,
+~~~art
+hints
+1. Lanterns, gates, fences, balconies. 2. A pattern with holes, so you can see through it. 3. Forged iron is bent by hand when hot; cast iron is poured into a mould. 4. The railing of the Summer Garden. 5. Post, lamp, top. 6–7. Your drawings.
+~~~`,
         hy: `## Մանր մանրամասները քաղաքը գեղեցիկ են դարձնում
 
 Քաղաքը միայն շենքեր չէ։ **Լապտերները**, **դարպասները**, **ցանկապատերը**, **պատշգամբները** և **նստարանները** նույնպես նկարիչներն են ձևավորում։
@@ -346,6 +449,10 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 
 Սանկտ Պետերբուրգի **Ամառային այգու** ցանկապատը (18-րդ դար) աշխարհի ամենահայտնի ցանկապատերից է՝ բարձր ձողեր, գրանիտե սյուներ և ոսկեզօծ զարդեր։ Երևանում նույնպես կան երկաթե գանգուրներով շատ հին պատշգամբներ և դարպասներ։
 
+~~~art
+pic lace street-furniture
+~~~
+
 ## Ցանկապատի նախշի կառուցում
 
 1. Գծի՛ր երկու հորիզոնական գիծ՝ վերինը և ներքինը։
@@ -353,12 +460,22 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 3. Ձողերի միջև կրկնի՛ր մեկ **տարր**՝ պարույր, շրջան, սիրտ, տերև։
 4. Ձողերի ծայրերը զարդարի՛ր սուր ծայրերով կամ գնդիկներով։
 
+~~~art
+pattern layout=strip rhythm=mirror motifs=spiral,rhombus,circle,leaf palettes=mono
+Ցանկապատը մետաղից նախշ է։ Կառուցի՛ր այն գանգուրներից և շեղանկյուններից, փորձի՛ր հայելային ռիթմը։
+~~~
+
 ## Լապտերներ
 
 Լապտերն ունի **սյուն**, **լամպ** և **գագաթ**։ Այն կարող է լինել խիստ ու պարզ կամ գանգուր ու տոնական։
 
-### Վարժություններ
+~~~art
+sketch paper=dark
+Նկարի՛ր լապտեր մութ երեկոյան փողոցում․ մետաղե շրջանակը, ապակին և լույսի տաք շրջանը։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր քաղաքի չորս զարդային մանրամասն։
 2. Ի՞նչ է նշանակում «ցանցկեն»։
 3. Ինչո՞վ է կռած երկաթը տարբերվում ձուլված չուգունից։
@@ -366,10 +483,12 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 5. Անվանի՛ր լապտերի երեք մասը։
 6. Նկարի՛ր ցանցկեն ցանկապատի մի հատված՝ պարույրներով։
 7. Նկարի՛ր տոնական լապտեր հեքիաթային քաղաքի համար։
+~~~
 
-### Պատասխաններ
-
-1. Լապտերներ, դարպասներ, ցանկապատեր, պատշգամբներ։ 2. Բացվածքներով նախշ, որի միջով կարելի է տեսնել։ 3. Կռած երկաթը ձեռքով են ծռում տաք վիճակում, չուգունը լցնում են կաղապարի մեջ։ 4. Ամառային այգու ցանկապատը։ 5. Սյուն, լամպ, գագաթ։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Լապտերներ, դարպասներ, ցանկապատեր, պատշգամբներ։ 2. Բացվածքներով նախշ, որի միջով կարելի է տեսնել։ 3. Կռած երկաթը ձեռքով են ծռում տաք վիճակում, չուգունը լցնում են կաղապարի մեջ։ 4. Ամառային այգու ցանկապատը։ 5. Սյուն, լամպ, գագաթ։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Мелочи делают город красивым
 
 Город — это не только дома. **Фонари**, **ворота**, **ограды**, **балконы** и **скамейки** тоже придумывают художники.
@@ -385,6 +504,10 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 
 Ограда **Летнего сада** в Санкт-Петербурге (XVIII век) — одна из самых знаменитых в мире: высокие прутья, гранитные колонны и позолоченные украшения. В Ереване тоже много старых балконов и ворот с железными завитками.
 
+~~~art
+pic lace street-furniture
+~~~
+
 ## Строим узор ограды
 
 1. Проведи две горизонтальные линии: верх и низ.
@@ -392,12 +515,22 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 3. Между прутьями повтори один **элемент**: спираль, круг, сердечко, лист.
 4. Укрась верхушки прутьев пиками или шариками.
 
+~~~art
+pattern layout=strip rhythm=mirror motifs=spiral,rhombus,circle,leaf palettes=mono
+Ограда — это узор из металла. Собери её из завитков и ромбов, попробуй зеркальный ритм.
+~~~
+
 ## Фонари
 
 У фонаря есть **столб**, **светильник** и **навершие**. Он может быть строгим и простым или витым и праздничным.
 
-### Упражнения
+~~~art
+sketch paper=dark
+Нарисуй фонарь на тёмной вечерней улице: металлическая рамка, стекло и тёплый круг света.
+~~~
 
+~~~art
+tasks
 1. Назови четыре декоративные детали города.
 2. Что значит «ажурный»?
 3. Чем кованое железо отличается от литого чугуна?
@@ -405,10 +538,12 @@ A lantern has a **post**, a **lamp** and a **top**. It can be strict and simple 
 5. Назови три части фонаря.
 6. Нарисуй звено ажурной ограды со спиралями.
 7. Нарисуй праздничный фонарь для сказочного города.
+~~~
 
-### Ответы
-
-1. Фонари, ворота, ограды, балконы. 2. Узор с просветами, сквозь который видно. 3. Кованое гнут вручную в горячем виде, чугун заливают в форму. 4. Ограда Летнего сада. 5. Столб, светильник, навершие. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Фонари, ворота, ограды, балконы. 2. Узор с просветами, сквозь который видно. 3. Кованое гнут вручную в горячем виде, чугун заливают в форму. 4. Ограда Летнего сада. 5. Столб, светильник, навершие. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("An openwork pattern…", "Ցանցկեն նախշը…", "Ажурный узор…"), [t("has holes you can see through", "ունի բացվածքներ, որոնց միջով տեսնում ես", "имеет просветы, сквозь которые видно"), t("is painted black", "սև է ներկված", "закрашен чёрным"), t("has no lines", "գծեր չունի", "не имеет линий")], 0),
@@ -441,6 +576,11 @@ A **sign** (*вывеска*) and a **shop window** (*витрина*) are the f
 | **few colours**, strong contrast | dark letters on a light background |
 | letters that **match** the shop | round and cheerful for toys, warm and soft for bread |
 
+~~~art
+letters
+A sign must be read from across the street. Try styles and weights: which is easiest to read from far away?
+~~~
+
 ## A shop window
 
 1. Choose the **main object** and put it in the centre, big.
@@ -450,8 +590,12 @@ A **sign** (*вывеска*) and a **shop window** (*витрина*) are the f
 
 Old signs were often **pictures without words**, because not everyone could read: a boot for a shoemaker, a pretzel for a baker.
 
-### Exercises
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Why must a sign be understood at a glance?
 2. Name four rules of a good sign.
 3. Which symbol would you choose for a bakery?
@@ -459,10 +603,12 @@ Old signs were often **pictures without words**, because not everyone could read
 5. Where do we put the main object in a shop window?
 6. Draw a sign for a toy shop.
 7. Design a New Year window for a bookshop.
+~~~
 
-### Answers
-
-1. People walk by quickly. 2. A short name, a symbol, few colours with contrast, matching letters. 3. For example a loaf or a pretzel. 4. Not everyone could read. 5. In the centre, big. 6–7. Your drawings.`,
+~~~art
+hints
+1. People walk by quickly. 2. A short name, a symbol, few colours with contrast, matching letters. 3. For example a loaf or a pretzel. 4. Not everyone could read. 5. In the centre, big. 6–7. Your drawings.
+~~~`,
         hy: `## Խանութի դեմքը
 
 **Ցուցանակը** և **ցուցափեղկը** խանութի դեմքն են։ Մարդիկ արագ են անցնում, ուստի պետք է **միանգամից** հասկանան, թե ինչ կա ներսում։
@@ -476,6 +622,11 @@ Old signs were often **pictures without words**, because not everyone could read
 | **քիչ գույներ**, ուժեղ հակադրություն | մուգ տառեր բաց ֆոնի վրա |
 | տառեր, որոնք **համապատասխանում** են խանութին | կլոր և ուրախ՝ խաղալիքների համար, տաք և փափուկ՝ հացի համար |
 
+~~~art
+letters
+Ցուցանակը պետք է կարդացվի փողոցի մյուս կողմից։ Փորձի՛ր ոճերն ու հաստությունը․ ո՞րն է ամենահեշտը կարդալ հեռվից։
+~~~
+
 ## Ցուցափեղկ
 
 1. Ընտրի՛ր **գլխավոր առարկան** և դի՛ր կենտրոնում՝ մեծ։
@@ -485,8 +636,12 @@ Old signs were often **pictures without words**, because not everyone could read
 
 Հին ցուցանակները հաճախ **առանց բառերի նկարներ** էին, որովհետև ոչ բոլորը կարդալ գիտեին՝ կոշիկ՝ կոշկակարի համար, քաղցր կրենդել՝ հացթուխի համար։
 
-### Վարժություններ
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ պետք է ցուցանակը միանգամից հասկանալի լինի։
 2. Անվանի՛ր լավ ցուցանակի չորս կանոն։
 3. Ո՞ր խորհրդանիշը կընտրեիր հացատան համար։
@@ -494,10 +649,12 @@ Old signs were often **pictures without words**, because not everyone could read
 5. Որտե՞ղ ենք դնում գլխավոր առարկան ցուցափեղկում։
 6. Նկարի՛ր ցուցանակ խաղալիքների խանութի համար։
 7. Ձևավորի՛ր գրքի խանութի ամանորյա ցուցափեղկ։
+~~~
 
-### Պատասխաններ
-
-1. Մարդիկ արագ են անցնում։ 2. Կարճ անվանում, խորհրդանիշ, քիչ գույներ՝ հակադրությամբ, համապատասխան տառեր։ 3. Օրինակ՝ բոքոն կամ կրենդել։ 4. Ոչ բոլորը կարդալ գիտեին։ 5. Կենտրոնում՝ մեծ։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Մարդիկ արագ են անցնում։ 2. Կարճ անվանում, խորհրդանիշ, քիչ գույներ՝ հակադրությամբ, համապատասխան տառեր։ 3. Օրինակ՝ բոքոն կամ կրենդել։ 4. Ոչ բոլորը կարդալ գիտեին։ 5. Կենտրոնում՝ մեծ։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Лицо магазина
 
 **Вывеска** и **витрина** — лицо магазина. Люди проходят быстро, поэтому должны **с первого взгляда** понять, что внутри.
@@ -511,6 +668,11 @@ Old signs were often **pictures without words**, because not everyone could read
 | **мало цветов**, сильный контраст | тёмные буквы на светлом фоне |
 | буквы **подходят** магазину | круглые и весёлые для игрушек, тёплые и мягкие для хлеба |
 
+~~~art
+letters
+Вывеску должно быть видно с другой стороны улицы. Попробуй шрифты и толщину: какой легче прочитать издалека?
+~~~
+
 ## Витрина
 
 1. Выбери **главный предмет** и помести его в центр, крупно.
@@ -520,8 +682,12 @@ Old signs were often **pictures without words**, because not everyone could read
 
 Старинные вывески часто были **картинками без слов**, потому что не все умели читать: сапог у сапожника, крендель у булочника.
 
-### Упражнения
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Почему вывеску нужно понимать с первого взгляда?
 2. Назови четыре правила хорошей вывески.
 3. Какой символ ты выберешь для пекарни?
@@ -529,10 +695,12 @@ Old signs were often **pictures without words**, because not everyone could read
 5. Куда ставим главный предмет в витрине?
 6. Нарисуй вывеску для магазина игрушек.
 7. Придумай новогоднюю витрину книжного магазина.
+~~~
 
-### Ответы
-
-1. Люди проходят быстро. 2. Короткое название, символ, мало цветов с контрастом, подходящие буквы. 3. Например, батон или крендель. 4. Не все умели читать. 5. В центр, крупно. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Люди проходят быстро. 2. Короткое название, символ, мало цветов с контрастом, подходящие буквы. 3. Например, батон или крендель. 4. Не все умели читать. 5. В центр, крупно. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("A good sign must be understood…", "Լավ ցուցանակը պետք է հասկանալի լինի…", "Хорошую вывеску должны понимать…"), [t("at a glance", "միանգամից", "с первого взгляда"), t("after a long time", "երկար ժամանակ անց", "через долгое время"), t("only by adults", "միայն մեծահասակների համար", "только взрослые")], 0),
@@ -567,6 +735,11 @@ Before a car is built, a **designer** draws many sketches. The car must be **bea
 
 Smooth, **streamlined** shapes cut through air and water easily.
 
+~~~art
+pic feather bird-motif shell
+Designers borrow from nature: smooth feathers, birds and shells cut through air and water.
+~~~
+
 ## City transport
 
 | Transport | Where | Shape |
@@ -584,8 +757,13 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 3. Add windows, doors and lights.
 4. Paint it in bright colours of your city.
 
-### Exercises
+~~~art
+sketch guide=horizon
+Draw the transport of the future: does it fly, float or roll? Give it a streamlined shape and big windows.
+~~~
 
+~~~art
+tasks
 1. Who draws a car before it is built?
 2. Name four qualities a car must have.
 3. Which animal looks like a fast train?
@@ -593,10 +771,12 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 5. Which two cities in the lesson have a metro?
 6. Draw a bus inspired by a caterpillar.
 7. Invent and draw a flying tram for your city.
+~~~
 
-### Answers
-
-1. A designer. 2. Beautiful, safe, comfortable, fast. 3. A fish or a dolphin. 4. Smooth and shaped to cut through air or water easily. 5. Yerevan and Moscow. 6–7. Your drawings.`,
+~~~art
+hints
+1. A designer. 2. Beautiful, safe, comfortable, fast. 3. A fish or a dolphin. 4. Smooth and shaped to cut through air or water easily. 5. Yerevan and Moscow. 6–7. Your drawings.
+~~~`,
         hy: `## Ո՞վ է ձևավորում մեքենան
 
 Մինչև մեքենան կառուցելը **դիզայները** բազմաթիվ էսքիզներ է նկարում։ Մեքենան պետք է լինի **գեղեցիկ**, **անվտանգ**, **հարմարավետ** և **արագ**։ **Ինժեները** հոգ է տանում, որ այն աշխատի։
@@ -611,6 +791,11 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 | երկար պոչով ճպուռ | ուղղաթիռ |
 
 Ողորկ, **հոսքաձև** ձևերը հեշտությամբ ճեղքում են օդը և ջուրը։
+
+~~~art
+pic feather bird-motif shell
+Դիզայներները սովորում են բնությունից․ փետուրի, թռչնի և խեցու սահուն ձևերը հեշտությամբ ճեղքում են օդն ու ջուրը։
+~~~
 
 ## Քաղաքային տրանսպորտ
 
@@ -629,8 +814,13 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 3. Ավելացրու՛ պատուհաններ, դռներ և լույսեր։
 4. Ներկի՛ր քո քաղաքի վառ գույներով։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Նկարի՛ր ապագայի տրանսպորտը․ թռչո՞ւմ է, լողո՞ւմ, թե՞ գլորվում։ Տո՛ւր նրան սահուն ձև և մեծ պատուհաններ։
+~~~
 
+~~~art
+tasks
 1. Ո՞վ է նկարում մեքենան մինչև կառուցելը։
 2. Անվանի՛ր չորս որակ, որ պետք է ունենա մեքենան։
 3. Ո՞ր կենդանին է նման արագընթաց գնացքի։
@@ -638,10 +828,12 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 5. Դասի ո՞ր երկու քաղաքներն ունեն մետրո։
 6. Նկարի՛ր թրթուրից ոգեշնչված ավտոբուս։
 7. Հորինի՛ր և նկարի՛ր թռչող տրամվայ քո քաղաքի համար։
+~~~
 
-### Պատասխաններ
-
-1. Դիզայները։ 2. Գեղեցիկ, անվտանգ, հարմարավետ, արագ։ 3. Ձուկը կամ դելֆինը։ 4. Ողորկ և այնպիսի ձևի, որ հեշտությամբ ճեղքի օդը կամ ջուրը։ 5. Երևանը և Մոսկվան։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Դիզայները։ 2. Գեղեցիկ, անվտանգ, հարմարավետ, արագ։ 3. Ձուկը կամ դելֆինը։ 4. Ողորկ և այնպիսի ձևի, որ հեշտությամբ ճեղքի օդը կամ ջուրը։ 5. Երևանը և Մոսկվան։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Кто придумывает машину?
 
 Прежде чем построить машину, **дизайнер** рисует много эскизов. Машина должна быть **красивой**, **безопасной**, **удобной** и **быстрой**. **Инженер** следит, чтобы она работала.
@@ -656,6 +848,11 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 | стрекоза с длинным хвостом | вертолёт |
 
 Гладкие, **обтекаемые** формы легко рассекают воздух и воду.
+
+~~~art
+pic feather bird-motif shell
+Дизайнеры учатся у природы: обтекаемые перья, птицы и раковины легко рассекают воздух и воду.
+~~~
 
 ## Городской транспорт
 
@@ -674,8 +871,13 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 3. Добавь окна, двери и фары.
 4. Раскрась яркими цветами своего города.
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Нарисуй транспорт будущего: он летает, плавает или катится? Дай ему обтекаемую форму и большие окна.
+~~~
 
+~~~art
+tasks
 1. Кто рисует машину до её постройки?
 2. Назови четыре качества, которые нужны машине.
 3. На какое животное похож скоростной поезд?
@@ -683,10 +885,12 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 5. В каких двух городах из урока есть метро?
 6. Нарисуй автобус, похожий на гусеницу.
 7. Придумай и нарисуй летающий трамвай для своего города.
+~~~
 
-### Ответы
-
-1. Дизайнер. 2. Красивая, безопасная, удобная, быстрая. 3. На рыбу или дельфина. 4. Гладкий, такой формы, чтобы легко рассекать воздух или воду. 5. В Ереване и Москве. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Дизайнер. 2. Красивая, безопасная, удобная, быстрая. 3. На рыбу или дельфина. 4. Гладкий, такой формы, чтобы легко рассекать воздух или воду. 5. В Ереване и Москве. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("Who draws sketches of a new car?", "Ո՞վ է նկարում նոր մեքենայի էսքիզները։", "Кто рисует эскизы новой машины?"), [t("A designer", "Դիզայները", "Дизайнер"), t("A passenger", "Ուղևորը", "Пассажир"), t("A conductor", "Ուղեկցողը", "Кондуктор")], 0),
@@ -710,6 +914,10 @@ Yerevan and Moscow both have a **metro**; the Moscow metro is famous for its sta
 
 A **panorama** is a long, wide picture that shows a whole view: a street, a city, mountains. You look at it from left to right, as if you were walking.
 
+~~~art
+pic genre-city
+~~~
+
 ## Near and far
 
 | Near (foreground) | Far (background) |
@@ -718,6 +926,10 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 | bright colours | pale, bluish colours |
 | many details: windows, doors, signs | few details, simple shapes |
 | low on the page | higher on the page, near the horizon |
+
+~~~art
+perspective modes=one
+~~~
 
 ## What a street has
 
@@ -733,8 +945,13 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 3. Glue the buildings in a row; add trees, lamps and people between them.
 4. Paint a common sky over the whole street.
 
-### Exercises
+~~~art
+sketch mode=frames cells=4
+A class panorama: each pupil draws one house in their own frame. Together they make one long street.
+~~~
 
+~~~art
+tasks
 1. What is a panorama?
 2. How do things look far away?
 3. Where on the page do we put things that are near?
@@ -742,13 +959,19 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 5. Why are far mountains pale and bluish?
 6. Draw your own house as a part of a panorama.
 7. Add three people and a tree in front of your house.
+~~~
 
-### Answers
-
-1. A long picture showing a whole view. 2. Small, pale, with few details. 3. Low on the page. 4. For example buildings, trees, lamps, cars, people. 5. Because air between us and them makes them look lighter and bluer. 6–7. Your drawing.`,
+~~~art
+hints
+1. A long picture showing a whole view. 2. Small, pale, with few details. 3. Low on the page. 4. For example buildings, trees, lamps, cars, people. 5. Because air between us and them makes them look lighter and bluer. 6–7. Your drawing.
+~~~`,
         hy: `## Ի՞նչ է համայնապատկերը
 
 **Համայնապատկերը** երկար, լայն նկար է, որը ցույց է տալիս ամբողջ տեսարանը՝ փողոց, քաղաք, լեռներ։ Այն դիտում ես ձախից աջ, կարծես քայլում ես։
+
+~~~art
+pic genre-city
+~~~
 
 ## Մոտը և հեռուն
 
@@ -758,6 +981,10 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 | վառ գույներ | գունատ, կապտավուն գույներ |
 | շատ մանրամասներ՝ պատուհաններ, դռներ, ցուցանակներ | քիչ մանրամասներ, պարզ ձևեր |
 | էջի ներքևում | էջի ավելի վերևում, հորիզոնի մոտ |
+
+~~~art
+perspective modes=one
+~~~
 
 ## Ինչ կա փողոցում
 
@@ -773,8 +1000,13 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 3. Շենքերը սոսնձի՛ր շարքով, դրանց միջև ավելացրու՛ ծառեր, լապտերներ և մարդիկ։
 4. Ամբողջ փողոցի վրա ընդհանուր երկինք ներկի՛ր։
 
-### Վարժություններ
+~~~art
+sketch mode=frames cells=4
+Դասարանի համայնապատկեր․ յուրաքանչյուր աշակերտ իր շրջանակում նկարում է մեկ տուն։ Միասին դրանք մեկ երկար փողոց են։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է համայնապատկերը։
 2. Ինչպե՞ս են երևում հեռվում գտնվող առարկաները։
 3. Էջի որ մասում ենք դնում մոտիկ առարկաները։
@@ -782,13 +1014,19 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 5. Ինչո՞ւ են հեռավոր լեռները գունատ և կապտավուն։
 6. Նկարի՛ր քո տունն որպես համայնապատկերի մաս։
 7. Տանդ առջև ավելացրու՛ երեք մարդ և մեկ ծառ։
+~~~
 
-### Պատասխաններ
-
-1. Ամբողջ տեսարանը ցույց տվող երկար նկար։ 2. Փոքր, գունատ, քիչ մանրամասներով։ 3. Էջի ներքևում։ 4. Օրինակ՝ շենքեր, ծառեր, լապտերներ, մեքենաներ, մարդիկ։ 5. Որովհետև մեր և նրանց միջև եղած օդը դրանք ավելի բաց և կապույտ է դարձնում։ 6–7. Քո նկարը։`,
+~~~art
+hints
+1. Ամբողջ տեսարանը ցույց տվող երկար նկար։ 2. Փոքր, գունատ, քիչ մանրամասներով։ 3. Էջի ներքևում։ 4. Օրինակ՝ շենքեր, ծառեր, լապտերներ, մեքենաներ, մարդիկ։ 5. Որովհետև մեր և նրանց միջև եղած օդը դրանք ավելի բաց և կապույտ է դարձնում։ 6–7. Քո նկարը։
+~~~`,
         ru: `## Что такое панорама?
 
 **Панорама** — длинное широкое изображение, на котором виден весь вид: улица, город, горы. Её рассматривают слева направо, будто идёшь по улице.
+
+~~~art
+pic genre-city
+~~~
 
 ## Близко и далеко
 
@@ -798,6 +1036,10 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 | яркие цвета | бледные, голубоватые цвета |
 | много деталей: окна, двери, вывески | мало деталей, простые формы |
 | внизу листа | выше, ближе к линии горизонта |
+
+~~~art
+perspective modes=one
+~~~
 
 ## Что есть на улице
 
@@ -813,8 +1055,13 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 3. Наклейте дома в ряд; между ними добавьте деревья, фонари и людей.
 4. Нарисуйте общее небо над всей улицей.
 
-### Упражнения
+~~~art
+sketch mode=frames cells=4
+Классная панорама: каждый рисует один дом в своей рамке. Вместе получается одна длинная улица.
+~~~
 
+~~~art
+tasks
 1. Что такое панорама?
 2. Как выглядят предметы вдали?
 3. В какой части листа рисуем близкие предметы?
@@ -822,10 +1069,12 @@ A **panorama** is a long, wide picture that shows a whole view: a street, a city
 5. Почему далёкие горы бледные и голубоватые?
 6. Нарисуй свой дом как часть панорамы.
 7. Добавь перед домом трёх человек и дерево.
+~~~
 
-### Ответы
-
-1. Длинное изображение, показывающее весь вид. 2. Мелкими, бледными, с малым числом деталей. 3. Внизу листа. 4. Например, дома, деревья, фонари, машины, люди. 5. Воздух между нами и ними делает их светлее и голубее. 6–7. Твой рисунок.`,
+~~~art
+hints
+1. Длинное изображение, показывающее весь вид. 2. Мелкими, бледными, с малым числом деталей. 3. Внизу листа. 4. Например, дома, деревья, фонари, машины, люди. 5. Воздух между нами и ними делает их светлее и голубее. 6–7. Твой рисунок.
+~~~`,
       },
       [
         q(t("A panorama is…", "Համայնապատկերը…", "Панорама —"), [t("a long picture of a whole view", "ամբողջ տեսարանի երկար նկար է", "длинное изображение всего вида"), t("a tiny stamp", "փոքրիկ նամականիշ է", "маленькая марка"), t("a portrait", "դիմանկար է", "портрет")], 0),

@@ -28,6 +28,10 @@ In **ancient Greece**, actors wore masks so that people far away could see the c
 
 Masks are also worn at **carnivals** (Venice), and at Russian **Maslenitsa** people dressed up as bears and goats.
 
+~~~art
+pic masks
+~~~
+
 ## How a mask shows a character
 
 | Character | Features | Colours |
@@ -38,6 +42,11 @@ Masks are also worn at **carnivals** (Venice), and at Russian **Maslenitsa** peo
 
 Artists **exaggerate**: they make the features bigger and brighter than in life.
 
+~~~art
+lines only=straight,wavy,zigzag,broken
+Lines give a mask its mood: brows and mouth drawn with these lines turn it kind, angry or worried.
+~~~
+
 ## Make a paper mask
 
 1. Fold a sheet of card in half and draw half of the face along the fold.
@@ -46,8 +55,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 4. Paint the features, add ears, horns, feathers or a beard.
 5. Fix an elastic band.
 
-### Exercises
+~~~art
+steps mask
+~~~
 
+~~~art
+tasks
 1. Why did Greek actors wear masks?
 2. Describe the masks of comedy and tragedy.
 3. Which shapes and colours show a kind character?
@@ -55,10 +68,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 5. Why do we fold the paper before cutting the mask?
 6. Draw two sketches: a kind and an evil mask of the same animal.
 7. Make a paper mask for a fairy-tale character.
+~~~
 
-### Answers
-
-1. So people far away could see the character. 2. Comedy smiles; tragedy has the corners of the mouth down. 3. Round shapes and warm colours. 4. To make features bigger and brighter than in life. 5. So the mask is symmetrical. 6–7. Your work.`,
+~~~art
+hints
+1. So people far away could see the character. 2. Comedy smiles; tragedy has the corners of the mouth down. 3. Round shapes and warm colours. 4. To make features bigger and brighter than in life. 5. So the mask is symmetrical. 6–7. Your work.
+~~~`,
         hy: `## Դիմակները վաղուց
 
 **Հին Հունաստանում** դերասանները դիմակներ էին կրում, որպեսզի հեռվում նստած մարդիկ տեսնեն կերպարը։ Երկու դիմակ դարձան թատրոնի խորհրդանիշ․
@@ -70,6 +85,10 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 
 Դիմակներ կրում են նաև **կառնավալներին** (Վենետիկ), իսկ ռուսական **Մասլենիցային** մարդիկ արջի և այծի զգեստներ էին հագնում։
 
+~~~art
+pic masks
+~~~
+
 ## Ինչպես է դիմակը ցույց տալիս բնավորությունը
 
 | Կերպար | Գծեր | Գույներ |
@@ -80,6 +99,11 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 
 Նկարիչները **չափազանցնում** են՝ գծերը դարձնում են ավելի մեծ և վառ, քան կյանքում։
 
+~~~art
+lines only=straight,wavy,zigzag,broken
+Գծերը դիմակին տալիս են տրամադրություն․ այս գծերով նկարած հոնքերն ու բերանը այն դարձնում են բարի, բարկացած կամ անհանգիստ։
+~~~
+
 ## Պատրաստի՛ր թղթե դիմակ
 
 1. Ստվարաթուղթը ծալի՛ր կիսով չափ և ծալքի երկայնքով նկարի՛ր դեմքի կեսը։
@@ -88,8 +112,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 4. Ներկի՛ր գծերը, ավելացրու՛ ականջներ, եղջյուրներ, փետուրներ կամ մորուք։
 5. Ամրացրու՛ ռետինե ժապավեն։
 
-### Վարժություններ
+~~~art
+steps mask
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ էին հույն դերասանները դիմակներ կրում։
 2. Նկարագրի՛ր կատակերգության և ողբերգության դիմակները։
 3. Ո՞ր ձևերն ու գույներն են ցույց տալիս բարի կերպարը։
@@ -97,10 +125,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 5. Ինչո՞ւ ենք թուղթը ծալում դիմակը կտրելուց առաջ։
 6. Նկարի՛ր երկու էսքիզ՝ նույն կենդանու բարի և չար դիմակը։
 7. Պատրաստի՛ր հեքիաթային կերպարի թղթե դիմակ։
+~~~
 
-### Պատասխաններ
-
-1. Որպեսզի հեռվում նստածները տեսնեն կերպարը։ 2. Կատակերգությունը ժպտում է, ողբերգության բերանի անկյունները ներքև են։ 3. Կլոր ձևեր և տաք գույներ։ 4. Գծերը դարձնել ավելի մեծ և վառ, քան կյանքում։ 5. Որպեսզի դիմակը համաչափ լինի։ 6–7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Որպեսզի հեռվում նստածները տեսնեն կերպարը։ 2. Կատակերգությունը ժպտում է, ողբերգության բերանի անկյունները ներքև են։ 3. Կլոր ձևեր և տաք գույներ։ 4. Գծերը դարձնել ավելի մեծ և վառ, քան կյանքում։ 5. Որպեսզի դիմակը համաչափ լինի։ 6–7. Քո աշխատանքը։
+~~~`,
         ru: `## Маски в древности
 
 В **Древней Греции** актёры носили маски, чтобы даже далеко сидящие зрители видели персонажа. Две маски стали символом театра:
@@ -112,6 +142,10 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 
 Маски надевают и на **карнавалах** (Венеция), а на русской **Масленице** ряженые наряжались медведями и козами.
 
+~~~art
+pic masks
+~~~
+
 ## Как маска показывает характер
 
 | Персонаж | Черты | Цвета |
@@ -122,6 +156,11 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 
 Художники **преувеличивают**: делают черты крупнее и ярче, чем в жизни.
 
+~~~art
+lines only=straight,wavy,zigzag,broken
+Линии задают маске настроение: брови и рот, нарисованные такими линиями, делают её доброй, злой или тревожной.
+~~~
+
 ## Сделай бумажную маску
 
 1. Сложи картон пополам и нарисуй половину лица вдоль сгиба.
@@ -130,8 +169,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 4. Раскрась черты, добавь уши, рога, перья или бороду.
 5. Прикрепи резинку.
 
-### Упражнения
+~~~art
+steps mask
+~~~
 
+~~~art
+tasks
 1. Зачем греческие актёры носили маски?
 2. Опиши маски комедии и трагедии.
 3. Какие формы и цвета показывают доброго персонажа?
@@ -139,10 +182,12 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 5. Зачем складывать лист перед вырезанием маски?
 6. Нарисуй два эскиза: добрую и злую маску одного и того же зверя.
 7. Сделай бумажную маску сказочного персонажа.
+~~~
 
-### Ответы
-
-1. Чтобы далеко сидящие зрители видели персонажа. 2. Комедия улыбается; у трагедии уголки рта опущены. 3. Круглые формы и тёплые цвета. 4. Делать черты крупнее и ярче, чем в жизни. 5. Чтобы маска получилась симметричной. 6–7. Твоя работа.`,
+~~~art
+hints
+1. Чтобы далеко сидящие зрители видели персонажа. 2. Комедия улыбается; у трагедии уголки рта опущены. 3. Круглые формы и тёплые цвета. 4. Делать черты крупнее и ярче, чем в жизни. 5. Чтобы маска получилась симметричной. 6–7. Твоя работа.
+~~~`,
       },
       [
         q(t("Masks of comedy and tragedy come from…", "Կատակերգության և ողբերգության դիմակները ծագել են…", "Маски комедии и трагедии пришли из…"), [t("ancient Greece", "Հին Հունաստանից", "Древней Греции"), t("Japan", "Ճապոնիայից", "Японии"), t("the cinema", "կինոյից", "кино")], 0),
@@ -171,6 +216,10 @@ Artists **exaggerate**: they make the features bigger and brighter than in life.
 | **rod puppet** | sticks from below |
 | **shadow puppet** | a flat figure behind a lit screen |
 
+~~~art
+pic puppets
+~~~
+
 ## Famous puppet theatres
 
 - The **Obraztsov Puppet Theatre** in Moscow, founded by Sergey Obraztsov.
@@ -190,14 +239,24 @@ The audience sits far away, so the character must be **clear at once**:
 2. Glue on button eyes, a felt tongue and wool hair.
 3. Give your puppet a name and a voice.
 
+~~~art
+pic mode=silhouette horse dove bird-motif stork
+A shadow puppet is just a silhouette. Can you tell who it is by the outline?
+~~~
+
 ## Make a shadow puppet
 
 1. Draw an animal on card **in profile** and cut it out.
 2. Tape it to a stick.
 3. Hold it between a lamp and a white sheet.
 
-### Exercises
+~~~art
+sketch paper=black
+Shadow-theatre test: draw a character in solid white and check that it is still clear without any inner lines.
+~~~
 
+~~~art
+tasks
 1. Name four kinds of puppets.
 2. How does a marionette move?
 3. Which puppet theatre is in Yerevan?
@@ -205,10 +264,12 @@ The audience sits far away, so the character must be **clear at once**:
 5. Which typical detail would you give to a king, a gnome and a fox?
 6. Draw a sketch of a puppet head for a fairy-tale hero.
 7. Make a sock puppet or a shadow puppet.
+~~~
 
-### Answers
-
-1. Glove, marionette, rod, shadow. 2. On strings from above. 3. The Hovhannes Tumanyan Puppet Theatre. 4. So the audience can see the character from far away. 5. A crown, a red hat, a long tail. 6–7. Your work.`,
+~~~art
+hints
+1. Glove, marionette, rod, shadow. 2. On strings from above. 3. The Hovhannes Tumanyan Puppet Theatre. 4. So the audience can see the character from far away. 5. A crown, a red hat, a long tail. 6–7. Your work.
+~~~`,
         hy: `## Տիկնիկների տեսակներ
 
 | Տիկնիկ | Ինչպես է շարժվում |
@@ -217,6 +278,10 @@ The audience sits far away, so the character must be **clear at once**:
 | **մարիոնետ** | վերևից՝ լարերով |
 | **ձողային** | ներքևից՝ ձողերով |
 | **ստվերային** | հարթ պատկեր՝ լուսավորված էկրանի հետևում |
+
+~~~art
+pic puppets
+~~~
 
 ## Հայտնի տիկնիկային թատրոններ
 
@@ -237,14 +302,24 @@ The audience sits far away, so the character must be **clear at once**:
 2. Սոսնձի՛ր կոճակ-աչքեր, թաղիքե լեզու և բրդե մազեր։
 3. Տիկնիկիդ անուն և ձայն տուր։
 
+~~~art
+pic mode=silhouette horse dove bird-motif stork
+Ստվերային տիկնիկը պարզապես ուրվագիծ է։ Կարո՞ղ ես ճանաչել ով է այն ըստ ուրվագծի։
+~~~
+
 ## Պատրաստի՛ր ստվերային տիկնիկ
 
 1. Ստվարաթղթի վրա **կողքից** նկարի՛ր կենդանի և կտրի՛ր։
 2. Կպցրու՛ ձողիկին։
 3. Պահի՛ր լամպի և սպիտակ սավանի միջև։
 
-### Վարժություններ
+~~~art
+sketch paper=black
+Ստվերային թատրոնի փորձ․ նկարի՛ր կերպար ամբողջովին սպիտակ գույնով և ստուգի՛ր, որ առանց ներքին գծերի էլ հասկանալի է։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր տիկնիկների չորս տեսակ։
 2. Ինչպե՞ս է շարժվում մարիոնետը։
 3. Ո՞ր տիկնիկային թատրոնն է Երևանում։
@@ -252,10 +327,12 @@ The audience sits far away, so the character must be **clear at once**:
 5. Ի՞նչ բնորոշ մանրամասն կտայիր թագավորին, թզուկին և աղվեսին։
 6. Նկարի՛ր հեքիաթային հերոսի տիկնիկի գլխի էսքիզ։
 7. Պատրաստի՛ր գուլպայից կամ ստվերային տիկնիկ։
+~~~
 
-### Պատասխաններ
-
-1. Ձեռնոցային, մարիոնետ, ձողային, ստվերային։ 2. Վերևից՝ լարերով։ 3. Հովհաննես Թումանյանի անվան տիկնիկային թատրոնը։ 4. Որպեսզի հանդիսատեսը հեռվից տեսնի կերպարը։ 5. Թագ, կարմիր գլխարկ, երկար պոչ։ 6–7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ձեռնոցային, մարիոնետ, ձողային, ստվերային։ 2. Վերևից՝ լարերով։ 3. Հովհաննես Թումանյանի անվան տիկնիկային թատրոնը։ 4. Որպեսզի հանդիսատեսը հեռվից տեսնի կերպարը։ 5. Թագ, կարմիր գլխարկ, երկար պոչ։ 6–7. Քո աշխատանքը։
+~~~`,
         ru: `## Виды кукол
 
 | Кукла | Как двигается |
@@ -264,6 +341,10 @@ The audience sits far away, so the character must be **clear at once**:
 | **марионетка** | на нитях сверху |
 | **тростевая** | на палочках снизу |
 | **теневая** | плоская фигура за освещённым экраном |
+
+~~~art
+pic puppets
+~~~
 
 ## Знаменитые театры кукол
 
@@ -284,14 +365,24 @@ The audience sits far away, so the character must be **clear at once**:
 2. Приклей глаза-пуговицы, язык из фетра и волосы из пряжи.
 3. Дай кукле имя и голос.
 
+~~~art
+pic mode=silhouette horse dove bird-motif stork
+Теневая кукла — это только силуэт. Узнаешь, кто это, по контуру?
+~~~
+
 ## Сделай теневую куклу
 
 1. Нарисуй на картоне зверя **в профиль** и вырежи.
 2. Прикрепи его к палочке.
 3. Держи между лампой и белой простынёй.
 
-### Упражнения
+~~~art
+sketch paper=black
+Проверка для театра теней: нарисуй героя сплошным белым и убедись, что он понятен без внутренних линий.
+~~~
 
+~~~art
+tasks
 1. Назови четыре вида кукол.
 2. Как двигается марионетка?
 3. Какой театр кукол есть в Ереване?
@@ -299,10 +390,12 @@ The audience sits far away, so the character must be **clear at once**:
 5. Какую характерную деталь ты дашь королю, гному и лисе?
 6. Нарисуй эскиз головы куклы для сказочного героя.
 7. Сделай куклу из носка или теневую куклу.
+~~~
 
-### Ответы
-
-1. Перчаточная, марионетка, тростевая, теневая. 2. На нитях сверху. 3. Театр кукол имени Ованеса Туманяна. 4. Чтобы зрители издалека видели персонажа. 5. Корона, красный колпак, длинный хвост. 6–7. Твоя работа.`,
+~~~art
+hints
+1. Перчаточная, марионетка, тростевая, теневая. 2. На нитях сверху. 3. Театр кукол имени Ованеса Туманяна. 4. Чтобы зрители издалека видели персонажа. 5. Корона, красный колпак, длинный хвост. 6–7. Твоя работа.
+~~~`,
       },
       [
         q(t("A marionette moves on…", "Մարիոնետը շարժվում է…", "Марионетка двигается на…"), [t("strings from above", "վերևից՝ լարերով", "нитях сверху"), t("wheels", "անիվներով", "колёсах"), t("a hand inside", "ներսի ձեռքով", "руке внутри")], 0),
@@ -326,6 +419,10 @@ The audience sits far away, so the character must be **clear at once**:
 
 Before the actor says a word, the **costume** has already told us a lot: rich or poor, kind or evil, young or old, a king or a peasant.
 
+~~~art
+pic taraz sarafan
+~~~
+
 ## Three tools of a costume artist
 
 | Tool | Example |
@@ -333,6 +430,10 @@ Before the actor says a word, the **costume** has already told us a lot: rich or
 | **silhouette** — the outline of the figure | a long wide cloak for a wizard, a short jacket for a messenger |
 | **colour** | white and light blue for a snow princess, black and red for a villain |
 | **details** | a crown, a staff, a belt with a sword, patches on a poor man's coat |
+
+~~~art
+palette loud
+~~~
 
 ## National costumes on stage
 
@@ -345,8 +446,17 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 3. Choose **two or three main colours**.
 4. Add **details** and write the name of the hero.
 
-### Exercises
+~~~art
+proportions
+~~~
 
+~~~art
+sketch guide=figure
+Sketch a costume over the figure guide: first the silhouette, then colour, then decoration.
+~~~
+
+~~~art
+tasks
 1. What can a costume tell before the actor speaks?
 2. Name the three tools of a costume artist.
 3. What is a silhouette?
@@ -354,13 +464,19 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 5. Name parts of the Armenian and Russian folk costumes.
 6. Draw silhouettes of a king and a beggar side by side.
 7. Draw a full costume sketch for a fairy-tale hero.
+~~~
 
-### Answers
-
-1. Whether the hero is rich or poor, kind or evil, young or old. 2. Silhouette, colour, details. 3. The outline of the figure. 4. White and light blue. 5. For example taraz with an embroidered dress and headdress, chokha; sarafan, kokoshnik, kosovorotka. 6–7. Your drawings.`,
+~~~art
+hints
+1. Whether the hero is rich or poor, kind or evil, young or old. 2. Silhouette, colour, details. 3. The outline of the figure. 4. White and light blue. 5. For example taraz with an embroidered dress and headdress, chokha; sarafan, kokoshnik, kosovorotka. 6–7. Your drawings.
+~~~`,
         hy: `## Զգեստը խոսում է
 
 Մինչ դերասանը մի բառ կասի, **զգեստն** արդեն շատ բան է ասել մեզ՝ հարուստ է, թե աղքատ, բարի, թե չար, երիտասարդ, թե ծեր, թագավոր, թե գյուղացի։
+
+~~~art
+pic taraz sarafan
+~~~
 
 ## Զգեստի նկարչի երեք գործիքը
 
@@ -369,6 +485,10 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 | **ուրվագիծ**՝ կերպարի եզրագիծը | երկար, լայն թիկնոց՝ կախարդի համար, կարճ բաճկոն՝ սուրհանդակի համար |
 | **գույն** | սպիտակ և երկնագույն՝ ձյունե արքայադստեր համար, սև և կարմիր՝ չարագործի համար |
 | **մանրամասներ** | թագ, գավազան, սրով գոտի, կարկատաններ՝ աղքատի վերարկուի վրա |
+
+~~~art
+palette loud
+~~~
 
 ## Ազգային տարազը բեմում
 
@@ -381,8 +501,17 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 3. Ընտրի՛ր **երկու-երեք հիմնական գույն**։
 4. Ավելացրու՛ **մանրամասներ** և գրի՛ր հերոսի անունը։
 
-### Վարժություններ
+~~~art
+proportions
+~~~
 
+~~~art
+sketch guide=figure
+Ուրվագծի՛ր զգեստ կերպարի ուղեցույցի վրա․ սկզբում ուրվագիծը, հետո գույնը, հետո զարդարանքը։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ կարող է ասել զգեստը, մինչ դերասանը կխոսի։
 2. Անվանի՛ր զգեստի նկարչի երեք գործիքը։
 3. Ի՞նչ է ուրվագիծը։
@@ -390,13 +519,19 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 5. Անվանի՛ր հայկական և ռուսական ժողովրդական տարազի մասեր։
 6. Կողք կողքի նկարի՛ր թագավորի և մուրացկանի ուրվագծերը։
 7. Նկարի՛ր հեքիաթային հերոսի զգեստի ամբողջական էսքիզ։
+~~~
 
-### Պատասխաններ
-
-1. Հերոսը հարուստ է, թե աղքատ, բարի, թե չար, երիտասարդ, թե ծեր։ 2. Ուրվագիծ, գույն, մանրամասներ։ 3. Կերպարի եզրագիծը։ 4. Սպիտակ և երկնագույն։ 5. Օրինակ՝ ասեղնագործված զգեստ և գլխանոց, չուխա, սարաֆան, կոկոշնիկ, կոսովորոտկա։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Հերոսը հարուստ է, թե աղքատ, բարի, թե չար, երիտասարդ, թե ծեր։ 2. Ուրվագիծ, գույն, մանրամասներ։ 3. Կերպարի եզրագիծը։ 4. Սպիտակ և երկնագույն։ 5. Օրինակ՝ ասեղնագործված զգեստ և գլխանոց, չուխա, սարաֆան, կոկոշնիկ, կոսովորոտկա։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Костюм говорит
 
 Ещё до того, как актёр скажет слово, **костюм** уже многое рассказал: богатый герой или бедный, добрый или злой, молодой или старый, царь или крестьянин.
+
+~~~art
+pic taraz sarafan
+~~~
 
 ## Три инструмента художника по костюмам
 
@@ -405,6 +540,10 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 | **силуэт** — очертание фигуры | длинный широкий плащ волшебника, короткий кафтан гонца |
 | **цвет** | белый и голубой для Снегурочки, чёрный и красный для злодея |
 | **детали** | корона, посох, пояс с мечом, заплатки на кафтане бедняка |
+
+~~~art
+palette loud
+~~~
 
 ## Народный костюм на сцене
 
@@ -417,8 +556,17 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 3. Выбери **два-три главных цвета**.
 4. Добавь **детали** и подпиши имя героя.
 
-### Упражнения
+~~~art
+proportions
+~~~
 
+~~~art
+sketch guide=figure
+Нарисуй эскиз костюма поверх фигуры: сначала силуэт, потом цвет, потом украшения.
+~~~
+
+~~~art
+tasks
 1. Что может рассказать костюм, пока актёр ещё молчит?
 2. Назови три инструмента художника по костюмам.
 3. Что такое силуэт?
@@ -426,10 +574,12 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 5. Назови части армянского и русского народного костюма.
 6. Нарисуй рядом силуэты царя и нищего.
 7. Нарисуй полный эскиз костюма сказочного героя.
+~~~
 
-### Ответы
-
-1. Богат он или беден, добр или зол, молод или стар. 2. Силуэт, цвет, детали. 3. Очертание фигуры. 4. Белый и голубой. 5. Например, вышитое платье и головной убор, чуха; сарафан, кокошник, косоворотка. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Богат он или беден, добр или зол, молод или стар. 2. Силуэт, цвет, детали. 3. Очертание фигуры. 4. Белый и голубой. 5. Например, вышитое платье и головной убор, чуха; сарафан, кокошник, косоворотка. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The outline of a figure is called…", "Կերպարի եզրագիծը կոչվում է…", "Очертание фигуры называется…"), [t("silhouette", "ուրվագիծ", "силуэт"), t("palette", "գունապնակ", "палитра"), t("rapport", "ռապորտ", "раппорт")], 0),
@@ -458,6 +608,10 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 | **front stage** | the part closest to the audience |
 | **curtain** | opens at the start and closes at the end |
 
+~~~art
+pic stage
+~~~
+
 ## What a set tells
 
 1. **Where**: a forest, a hut, a palace, the sea.
@@ -468,6 +622,11 @@ Theatre artists study **folk costumes**. The Armenian **taraz** has long dresses
 
 In one play the place can change many times. Artists use **light**, turning panels and curtains so the set can change quickly.
 
+~~~art
+mood scene=landscape moods=morning,night,storm
+One set, three scenes: lighting changes the same place from a happy morning to a scary night.
+~~~
+
 ## A shoebox theatre
 
 1. Stand a shoebox on its side: the open side is the stage.
@@ -477,8 +636,13 @@ In one play the place can change many times. Artists use **light**, turning pane
 
 The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Maiden» with fairy-tale Russian huts and forests.
 
-### Exercises
+~~~art
+aerial
+In a shoebox theatre, layers are planes: the back wall is pale and far, the front cut-outs are dark and bold.
+~~~
 
+~~~art
+tasks
 1. What is a backdrop?
 2. Where do actors enter the stage from?
 3. Name three things a set tells us.
@@ -486,10 +650,12 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 5. How can a set change quickly?
 6. Draw a backdrop for a winter forest.
 7. Make a shoebox model of a stage set for your favourite tale.
+~~~
 
-### Answers
-
-1. A large painted cloth at the back of the stage. 2. From behind the wings. 3. Where, when, the mood. 4. Warm colours. 5. With light, turning panels and curtains. 6–7. Your work.`,
+~~~art
+hints
+1. A large painted cloth at the back of the stage. 2. From behind the wings. 3. Where, when, the mood. 4. Warm colours. 5. With light, turning panels and curtains. 6–7. Your work.
+~~~`,
         hy: `## Բեմը
 
 | Մաս | Ինչ է |
@@ -498,6 +664,10 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 | **կուլիսներ** | կողքերի հարթ, նկարված վահանակներ, դերասանները դուրս են գալիս դրանց հետևից |
 | **առաջնաբեմ** | հանդիսատեսին ամենամոտ մասը |
 | **վարագույր** | բացվում է սկզբում և փակվում վերջում |
+
+~~~art
+pic stage
+~~~
 
 ## Ինչ է պատմում դեկորը
 
@@ -509,6 +679,11 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 
 Մեկ ներկայացման ընթացքում վայրը կարող է շատ անգամ փոխվել։ Նկարիչներն օգտագործում են **լույսը**, պտտվող վահանակներ և վարագույրներ, որպեսզի դեկորն արագ փոխվի։
 
+~~~art
+mood scene=landscape moods=morning,night,storm
+Մեկ դեկորացիա, երեք տեսարան․ լուսավորությունը նույն տեղը ուրախ առավոտից դարձնում է սարսափելի գիշեր։
+~~~
+
 ## Թատրոն կոշիկի տուփում
 
 1. Կոշիկի տուփը դի՛ր կողքի վրա՝ բաց կողմը բեմն է։
@@ -518,8 +693,13 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 
 Հայտնի նկարիչ **Վիկտոր Վասնեցովը** «Ձյունանուշիկ» օպերայի համար դեկորներ է ստեղծել՝ ռուսական հեքիաթային խրճիթներով և անտառներով։
 
-### Վարժություններ
+~~~art
+aerial
+Կոշիկի տուփի թատրոնում շերտերը պլաններ են․ հետևի պատը գունատ է և հեռու, առջևի կտրվածքները՝ մուգ ու վառ։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է հետնաշղարշը։
 2. Որտեղի՞ց են դերասանները դուրս գալիս բեմ։
 3. Անվանի՛ր երեք բան, որ պատմում է դեկորը։
@@ -527,10 +707,12 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 5. Ինչպե՞ս կարող է դեկորն արագ փոխվել։
 6. Նկարի՛ր ձմեռային անտառի հետնաշղարշ։
 7. Կոշիկի տուփում պատրաստի՛ր սիրելի հեքիաթիդ դեկորի մակետ։
+~~~
 
-### Պատասխաններ
-
-1. Բեմի հետևի մեծ, նկարված կտորը։ 2. Կուլիսների հետևից։ 3. Որտեղ, երբ, տրամադրությունը։ 4. Տաք գույները։ 5. Լույսով, պտտվող վահանակներով և վարագույրներով։ 6–7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Բեմի հետևի մեծ, նկարված կտորը։ 2. Կուլիսների հետևից։ 3. Որտեղ, երբ, տրամադրությունը։ 4. Տաք գույները։ 5. Լույսով, պտտվող վահանակներով և վարագույրներով։ 6–7. Քո աշխատանքը։
+~~~`,
         ru: `## Сцена
 
 | Часть | Что это |
@@ -539,6 +721,10 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 | **кулисы** | плоские расписанные щиты по бокам; из-за них выходят актёры |
 | **авансцена** | часть сцены ближе всего к зрителям |
 | **занавес** | открывается в начале и закрывается в конце |
+
+~~~art
+pic stage
+~~~
 
 ## О чём рассказывает декорация
 
@@ -550,6 +736,11 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 
 За один спектакль место действия может меняться много раз. Художники используют **свет**, поворотные щиты и занавесы, чтобы декорация менялась быстро.
 
+~~~art
+mood scene=landscape moods=morning,night,storm
+Одна декорация, три сцены: свет превращает то же место из весёлого утра в страшную ночь.
+~~~
+
 ## Театр в обувной коробке
 
 1. Поставь коробку на бок: открытая сторона — сцена.
@@ -559,8 +750,13 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 
 Знаменитый художник **Виктор Васнецов** создал декорации к опере «Снегурочка» со сказочными русскими избами и лесами.
 
-### Упражнения
+~~~art
+aerial
+В театре из коробки слои — это планы: задник бледный и далёкий, передние вырезки тёмные и яркие.
+~~~
 
+~~~art
+tasks
 1. Что такое задник?
 2. Откуда выходят на сцену актёры?
 3. Назови три вещи, о которых рассказывает декорация.
@@ -568,10 +764,12 @@ The famous artist **Viktor Vasnetsov** designed sets for the opera «The Snow Ma
 5. Как декорация может быстро меняться?
 6. Нарисуй задник для зимнего леса.
 7. Сделай в обувной коробке макет декорации к любимой сказке.
+~~~
 
-### Ответы
-
-1. Большое расписанное полотно в глубине сцены. 2. Из-за кулис. 3. Где, когда, настроение. 4. Тёплые цвета. 5. С помощью света, поворотных щитов и занавесов. 6–7. Твоя работа.`,
+~~~art
+hints
+1. Большое расписанное полотно в глубине сцены. 2. Из-за кулис. 3. Где, когда, настроение. 4. Тёплые цвета. 5. С помощью света, поворотных щитов и занавесов. 6–7. Твоя работа.
+~~~`,
       },
       [
         q(t("A large painted cloth at the back of the stage is the…", "Բեմի հետևի մեծ, նկարված կտորը…", "Большое расписанное полотно в глубине сцены — это…"), [t("backdrop", "հետնաշղարշն է", "задник"), t("curtain", "վարագույրն է", "занавес"), t("front stage", "առաջնաբեմն է", "авансцена")], 0),
@@ -602,6 +800,10 @@ The circus is a **holiday**: music, lights, a **round arena**, acrobats in shini
 | **clown** | makes people laugh | a big red nose, wide trousers, huge shoes |
 | **tightrope walker** | walks on a rope high above | a thin line, an umbrella or a pole |
 
+~~~art
+palette loud
+~~~
+
 ## What is a poster?
 
 A **poster** (*афиша*) invites people to a show. It hangs on the street, and people see it for a few seconds.
@@ -611,12 +813,24 @@ A **poster** (*афиша*) invites people to a show. It hangs on the street, an
 3. **Bright contrast**: red, yellow, blue on a dark or white background.
 4. **Big letters** that can be read from far away.
 
+~~~art
+pic poster
+~~~
+
+~~~art
+steps poster-layout
+~~~
+
 ## Lettering
 
 Circus letters can be **jumping**, **striped**, **with stars**, as if they were performing too.
 
-### Exercises
+~~~art
+letters
+~~~
 
+~~~art
+tasks
 1. Why is the circus called a holiday?
 2. What shape is a circus arena?
 3. How do you draw a juggler?
@@ -624,10 +838,12 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 5. Why must poster letters be big?
 6. Draw a clown in a funny pose.
 7. Design a circus poster with one big image and a short text.
+~~~
 
-### Answers
-
-1. Because of the music, lights, bright costumes and fun. 2. Round. 3. With many objects flying in an arc. 4. What, where, when. 5. So they can be read from far away. 6–7. Your drawings.`,
+~~~art
+hints
+1. Because of the music, lights, bright costumes and fun. 2. Round. 3. With many objects flying in an arc. 4. What, where, when. 5. So they can be read from far away. 6–7. Your drawings.
+~~~`,
         hy: `## Կրկեսը
 
 Կրկեսը **տոն** է՝ երաժշտություն, լույսեր, **կլոր մանեժ**, փայլուն զգեստներով ակրոբատներ, ձեռնածուներ, ծաղրածուներ։ Ամեն ինչ վառ է և շարժման մեջ։
@@ -639,6 +855,10 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 | **ծաղրածու** | ծիծաղեցնում է | մեծ կարմիր քիթ, լայն տաբատ, հսկա կոշիկներ |
 | **լարախաղաց** | քայլում է բարձրում ձգված պարանի վրայով | բարակ գիծ, հովանոց կամ ձող |
 
+~~~art
+palette loud
+~~~
+
 ## Ի՞նչ է ազդագիրը
 
 **Ազդագիրը** մարդկանց հրավիրում է ներկայացման։ Այն կախված է փողոցում, և մարդիկ այն տեսնում են մի քանի վայրկյան։
@@ -648,12 +868,24 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 3. **Վառ հակադրություն**՝ կարմիր, դեղին, կապույտ՝ մուգ կամ սպիտակ ֆոնի վրա։
 4. **Մեծ տառեր**, որոնք կարելի է կարդալ հեռվից։
 
+~~~art
+pic poster
+~~~
+
+~~~art
+steps poster-layout
+~~~
+
 ## Տառերը
 
 Կրկեսային տառերը կարող են լինել **ցատկոտող**, **շերտավոր**, **աստղերով**, կարծես նրանք էլ են ելույթ ունենում։
 
-### Վարժություններ
+~~~art
+letters
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ են կրկեսն անվանում տոն։
 2. Ի՞նչ ձև ունի կրկեսի մանեժը։
 3. Ինչպե՞ս նկարել ձեռնածուին։
@@ -661,10 +893,12 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 5. Ինչո՞ւ պետք է ազդագրի տառերը մեծ լինեն։
 6. Նկարի՛ր ծաղրածու զվարճալի դիրքով։
 7. Ձևավորի՛ր կրկեսի ազդագիր՝ մեկ մեծ պատկերով և կարճ տեքստով։
+~~~
 
-### Պատասխաններ
-
-1. Երաժշտության, լույսերի, վառ զգեստների և զվարճանքի պատճառով։ 2. Կլոր։ 3. Աղեղով թռչող շատ առարկաներով։ 4. Ինչ, որտեղ, երբ։ 5. Որպեսզի կարելի լինի կարդալ հեռվից։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Երաժշտության, լույսերի, վառ զգեստների և զվարճանքի պատճառով։ 2. Կլոր։ 3. Աղեղով թռչող շատ առարկաներով։ 4. Ինչ, որտեղ, երբ։ 5. Որպեսզի կարելի լինի կարդալ հեռվից։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Цирк
 
 Цирк — это **праздник**: музыка, огни, **круглая арена**, акробаты в блестящих костюмах, жонглёры, клоуны. Всё яркое и движется.
@@ -676,6 +910,10 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 | **клоун** | смешит | большой красный нос, широкие штаны, огромные ботинки |
 | **канатоходец** | идёт по канату высоко вверху | тонкая линия, зонтик или шест |
 
+~~~art
+palette loud
+~~~
+
 ## Что такое афиша?
 
 **Афиша** приглашает на представление. Она висит на улице, и люди видят её несколько секунд.
@@ -685,12 +923,24 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 3. **Яркий контраст**: красный, жёлтый, синий на тёмном или белом фоне.
 4. **Крупные буквы**, которые видно издалека.
 
+~~~art
+pic poster
+~~~
+
+~~~art
+steps poster-layout
+~~~
+
 ## Шрифт
 
 Цирковые буквы могут быть **прыгающими**, **полосатыми**, **со звёздами** — будто они тоже выступают.
 
-### Упражнения
+~~~art
+letters
+~~~
 
+~~~art
+tasks
 1. Почему цирк называют праздником?
 2. Какой формы цирковая арена?
 3. Как нарисовать жонглёра?
@@ -698,10 +948,12 @@ Circus letters can be **jumping**, **striped**, **with stars**, as if they were 
 5. Почему буквы на афише должны быть крупными?
 6. Нарисуй клоуна в смешной позе.
 7. Придумай цирковую афишу с одним крупным изображением и коротким текстом.
+~~~
 
-### Ответы
-
-1. Из-за музыки, огней, ярких костюмов и веселья. 2. Круглая. 3. С множеством предметов, летящих дугой. 4. Что, где, когда. 5. Чтобы их было видно издалека. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Из-за музыки, огней, ярких костюмов и веселья. 2. Круглая. 3. С множеством предметов, летящих дугой. 4. Что, где, когда. 5. Чтобы их было видно издалека. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("What shape is a circus arena?", "Ի՞նչ ձև ունի կրկեսի մանեժը։", "Какой формы цирковая арена?"), [t("round", "կլոր", "круглая"), t("square", "քառակուսի", "квадратная"), t("triangular", "եռանկյուն", "треугольная")], 0),
@@ -739,9 +991,18 @@ On holidays artists turn the city into a stage. They decorate **squares**, **str
 - In **Moscow**, the streets near **Red Square** are covered with lights for New Year.
 - In summer, Armenians celebrate **Vardavar** by splashing water — a holiday you can draw with drops and rainbows.
 
+~~~art
+pic st-basil genre-city
+~~~
+
 ## Rhythm and repetition
 
 Festive decorations are often **repeated**: a row of flags, a chain of lights, an arch of balloons. Repetition creates **rhythm** and a feeling of celebration.
+
+~~~art
+pattern layout=strip rhythm=alternate motifs=flower,star,triangle,circle palettes=spring,dymkovo
+Flags, garlands and lanterns work through rhythm. Build a garland for a festive street.
+~~~
 
 ## Your project
 
@@ -750,8 +1011,13 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 3. Add repeated decorations: flags, garlands, lights.
 4. Add people celebrating.
 
-### Exercises
+~~~art
+sketch paper=dark
+Decorate a night city for a holiday: fireworks, lit windows, garlands across the street.
+~~~
 
+~~~art
+tasks
 1. Name five kinds of festive decorations.
 2. What stands in the main square at New Year?
 3. What happens on Vardavar?
@@ -759,10 +1025,12 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 5. Choose colours for New Year and for a spring holiday.
 6. Draw a row of flags that creates rhythm.
 7. Design a festive street for your city's day.
+~~~
 
-### Answers
-
-1. Flags, garlands, a fir tree, balloons, fireworks. 2. A big fir tree. 3. People splash water on each other. 4. Repetition creates rhythm and a festive feeling. 5. For example New Year: green, gold, red, white; spring: pink, light green, yellow. 6–7. Your drawings.`,
+~~~art
+hints
+1. Flags, garlands, a fir tree, balloons, fireworks. 2. A big fir tree. 3. People splash water on each other. 4. Repetition creates rhythm and a festive feeling. 5. For example New Year: green, gold, red, white; spring: pink, light green, yellow. 6–7. Your drawings.
+~~~`,
         hy: `## Քաղաքը տոնական զգեստով
 
 Տոներին նկարիչները քաղաքը բեմի են վերածում։ Նրանք զարդարում են **հրապարակները**, **փողոցները**, **կամուրջները** և **շենքերը**։
@@ -781,9 +1049,18 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 - **Մոսկվայում** Ամանորին **Կարմիր հրապարակի** մոտակա փողոցները ծածկվում են լույսերով։
 - Ամռանը հայերը նշում են **Վարդավառը**՝ ջուր շաղ տալով․ սա տոն է, որը կարելի է նկարել կաթիլներով և ծիածաններով։
 
+~~~art
+pic st-basil genre-city
+~~~
+
 ## Ռիթմ և կրկնություն
 
 Տոնական զարդարանքները հաճախ **կրկնվում են**՝ դրոշների շարք, լույսերի շղթա, փուչիկների կամար։ Կրկնությունը ստեղծում է **ռիթմ** և տոնի զգացում։
+
+~~~art
+pattern layout=strip rhythm=alternate motifs=flower,star,triangle,circle palettes=spring,dymkovo
+Դրոշակները, ծաղկեպսակներն ու լապտերները աշխատում են ռիթմով։ Կառուցի՛ր ծաղկեշղթա տոնական փողոցի համար։
+~~~
 
 ## Քո նախագիծը
 
@@ -792,8 +1069,13 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 3. Ավելացրու՛ կրկնվող զարդարանքներ՝ դրոշներ, ծաղկեպսակներ, լույսեր։
 4. Ավելացրու՛ տոնող մարդկանց։
 
-### Վարժություններ
+~~~art
+sketch paper=dark
+Զարդարի՛ր գիշերային քաղաքը տոնի համար․ հրավառություն, լուսավոր պատուհաններ, ծաղկեշղթաներ փողոցի վրայով։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր տոնական զարդարանքի հինգ տեսակ։
 2. Ի՞նչ է կանգնած գլխավոր հրապարակում Ամանորին։
 3. Ի՞նչ է կատարվում Վարդավառին։
@@ -801,10 +1083,12 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 5. Ընտրի՛ր գույներ Ամանորի և գարնանային տոնի համար։
 6. Նկարի՛ր դրոշների շարք, որը ռիթմ է ստեղծում։
 7. Ձևավորի՛ր տոնական փողոց քո քաղաքի օրվա համար։
+~~~
 
-### Պատասխաններ
-
-1. Դրոշներ, ծաղկեպսակներ, եղևնի, փուչիկներ, հրավառություն։ 2. Մեծ եղևնի։ 3. Մարդիկ իրար վրա ջուր են շաղ տալիս։ 4. Կրկնությունը ստեղծում է ռիթմ և տոնի զգացում։ 5. Օրինակ՝ Ամանոր՝ կանաչ, ոսկեգույն, կարմիր, սպիտակ, գարուն՝ վարդագույն, բաց կանաչ, դեղին։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Դրոշներ, ծաղկեպսակներ, եղևնի, փուչիկներ, հրավառություն։ 2. Մեծ եղևնի։ 3. Մարդիկ իրար վրա ջուր են շաղ տալիս։ 4. Կրկնությունը ստեղծում է ռիթմ և տոնի զգացում։ 5. Օրինակ՝ Ամանոր՝ կանաչ, ոսկեգույն, կարմիր, սպիտակ, գարուն՝ վարդագույն, բաց կանաչ, դեղին։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Город в праздничном наряде
 
 К праздникам художники превращают город в сцену. Они украшают **площади**, **улицы**, **мосты** и **здания**.
@@ -823,9 +1107,18 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 - В **Москве** к Новому году улицы около **Красной площади** покрываются огнями.
 - Летом армяне празднуют **Вардавар**, обливаясь водой, — этот праздник можно нарисовать каплями и радугами.
 
+~~~art
+pic st-basil genre-city
+~~~
+
 ## Ритм и повтор
 
 Праздничные украшения часто **повторяются**: ряд флажков, цепочка огней, арка из шаров. Повтор создаёт **ритм** и ощущение праздника.
+
+~~~art
+pattern layout=strip rhythm=alternate motifs=flower,star,triangle,circle palettes=spring,dymkovo
+Флажки, гирлянды и фонарики работают через ритм. Собери гирлянду для праздничной улицы.
+~~~
 
 ## Твой проект
 
@@ -834,8 +1127,13 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 3. Добавь повторяющиеся украшения: флажки, гирлянды, огни.
 4. Добавь празднующих людей.
 
-### Упражнения
+~~~art
+sketch paper=dark
+Укрась ночной город к празднику: салют, светящиеся окна, гирлянды через улицу.
+~~~
 
+~~~art
+tasks
 1. Назови пять видов праздничных украшений.
 2. Что стоит на главной площади в Новый год?
 3. Что происходит на Вардавар?
@@ -843,10 +1141,12 @@ Festive decorations are often **repeated**: a row of flags, a chain of lights, a
 5. Подбери цвета для Нового года и весеннего праздника.
 6. Нарисуй ряд флажков, создающий ритм.
 7. Придумай праздничное оформление улицы ко Дню своего города.
+~~~
 
-### Ответы
-
-1. Флаги, гирлянды, ёлка, шары, салют. 2. Большая ёлка. 3. Люди обливают друг друга водой. 4. Повтор создаёт ритм и праздничное настроение. 5. Например, Новый год: зелёный, золотой, красный, белый; весна: розовый, светло-зелёный, жёлтый. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Флаги, гирлянды, ёлка, шары, салют. 2. Большая ёлка. 3. Люди обливают друг друга водой. 4. Повтор создаёт ритм и праздничное настроение. 5. Например, Новый год: зелёный, золотой, красный, белый; весна: розовый, светло-зелёный, жёлтый. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("What stands in the main square at New Year?", "Ի՞նչ է կանգնած գլխավոր հրապարակում Ամանորին։", "Что стоит на главной площади в Новый год?"), [t("a big fir tree", "մեծ եղևնի", "большая ёлка"), t("a circus tent", "կրկեսի վրան", "шатёр цирка"), t("a boat", "նավակ", "лодка")], 0),

@@ -21,6 +21,10 @@ export const unit4: UnitSeed = {
 
 People in every country speak different languages, but everyone understands a mother holding her child. That is why artists of all nations and times have shown **motherhood**.
 
+~~~art
+pic genre-portrait
+~~~
+
 ## Three famous images
 
 | Work | What we see |
@@ -40,6 +44,15 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 | **composition** | the two figures form one closed shape, like an oval or a triangle |
 | **colour** | warm and soft: pink, ochre, light blue, gold |
 
+~~~art
+lines only=wavy,loop,straight,broken
+Tenderness lives in soft, round lines. Compare them with sharp, broken ones.
+~~~
+
+~~~art
+palette pastel warm
+~~~
+
 ## Draw a mother and child
 
 1. Draw an oval or a triangle that will hold both figures.
@@ -47,8 +60,12 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 3. Show the arms: the mother holds, the child hugs or reaches.
 4. Paint with warm, soft colours; keep the background simple.
 
-### Exercises
+~~~art
+sketch guide=circle
+~~~
 
+~~~art
+tasks
 1. Why is motherhood understood by every nation?
 2. Describe the icon «Our Lady of Vladimir».
 3. Who painted the «Sistine Madonna»?
@@ -56,13 +73,19 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 5. Which lines help to show tenderness?
 6. Which shape can join two figures into one?
 7. Draw a mother and child, or your mother with you.
+~~~
 
-### Answers
-
-1. Everyone understands a mother holding her child, whatever language they speak. 2. The Mother presses her cheek to the Child's cheek, the Child hugs her neck. 3. Raphael. 4. A sword; she protects her land and children. 5. Soft, round lines. 6. An oval or a triangle. 7. Your work.`,
+~~~art
+hints
+1. Everyone understands a mother holding her child, whatever language they speak. 2. The Mother presses her cheek to the Child's cheek, the Child hugs her neck. 3. Raphael. 4. A sword; she protects her land and children. 5. Soft, round lines. 6. An oval or a triangle. 7. Your work.
+~~~`,
         hy: `## Թեմա, որը հասկանում է յուրաքանչյուր ժողովուրդ
 
 Տարբեր երկրների մարդիկ խոսում են տարբեր լեզուներով, բայց բոլորը հասկանում են երեխային գրկած մորը։ Ահա թե ինչու բոլոր ժողովուրդների և ժամանակների նկարիչները պատկերել են **մայրությունը**։
+
+~~~art
+pic genre-portrait
+~~~
 
 ## Երեք հայտնի պատկեր
 
@@ -83,6 +106,15 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 | **կոմպոզիցիա** | երկու պատկերը կազմում են մեկ փակ ձև՝ օվալի կամ եռանկյան պես |
 | **գույն** | տաք և մեղմ՝ վարդագույն, օխրա, բաց կապույտ, ոսկեգույն |
 
+~~~art
+lines only=wavy,loop,straight,broken
+Քնքշությունը ապրում է փափուկ, կլոր գծերում։ Համեմատի՛ր դրանք սուր, կոտրված գծերի հետ։
+~~~
+
+~~~art
+palette pastel warm
+~~~
+
 ## Նկարի՛ր մայր և երեխա
 
 1. Նկարի՛ր օվալ կամ եռանկյուն, որը կպարփակի երկու պատկերը։
@@ -90,8 +122,12 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 3. Ցույց տո՛ւր ձեռքերը՝ մայրը պահում է, երեխան գրկում է կամ ձգվում։
 4. Ներկի՛ր տաք, մեղմ գույներով, ֆոնը թո՛ղ պարզ։
 
-### Վարժություններ
+~~~art
+sketch guide=circle
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ է մայրությունը հասկանալի յուրաքանչյուր ժողովրդի։
 2. Նկարագրի՛ր «Վլադիմիրի Աստվածամայր» սրբապատկերը։
 3. Ո՞վ է նկարել «Սիքստինյան Մադոննան»։
@@ -99,13 +135,19 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 5. Ո՞ր գծերն են օգնում ցույց տալ քնքշությունը։
 6. Ո՞ր ձևը կարող է երկու պատկերը միավորել մեկի մեջ։
 7. Նկարի՛ր մայր և երեխա կամ քո մայրիկին քեզ հետ։
+~~~
 
-### Պատասխաններ
-
-1. Բոլորը, ինչ լեզվով էլ խոսեն, հասկանում են երեխային գրկած մորը։ 2. Մայրն իր այտը սեղմում է Մանկան այտին, Մանուկը գրկում է նրա վիզը։ 3. Ռաֆայելը։ 4. Սուր, նա պաշտպանում է իր հողն ու երեխաներին։ 5. Մեղմ, կլոր գծերը։ 6. Օվալը կամ եռանկյունը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Բոլորը, ինչ լեզվով էլ խոսեն, հասկանում են երեխային գրկած մորը։ 2. Մայրն իր այտը սեղմում է Մանկան այտին, Մանուկը գրկում է նրա վիզը։ 3. Ռաֆայելը։ 4. Սուր, նա պաշտպանում է իր հողն ու երեխաներին։ 5. Մեղմ, կլոր գծերը։ 6. Օվալը կամ եռանկյունը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Тема, понятная каждому народу
 
 Люди разных стран говорят на разных языках, но все понимают мать, держащую на руках ребёнка. Поэтому художники всех народов и времён изображали **материнство**.
+
+~~~art
+pic genre-portrait
+~~~
 
 ## Три известных образа
 
@@ -126,6 +168,15 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 | **композиция** | две фигуры образуют одну замкнутую форму — овал или треугольник |
 | **цвет** | тёплый и мягкий: розовый, охра, голубой, золотистый |
 
+~~~art
+lines only=wavy,loop,straight,broken
+Нежность живёт в мягких, круглых линиях. Сравни их с острыми, ломаными.
+~~~
+
+~~~art
+palette pastel warm
+~~~
+
 ## Нарисуй мать и ребёнка
 
 1. Нарисуй овал или треугольник, в который войдут обе фигуры.
@@ -133,8 +184,12 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 3. Покажи руки: мать держит, ребёнок обнимает или тянется.
 4. Пиши тёплыми мягкими цветами; фон оставь простым.
 
-### Упражнения
+~~~art
+sketch guide=circle
+~~~
 
+~~~art
+tasks
 1. Почему материнство понятно каждому народу?
 2. Опиши икону «Владимирская Богоматерь».
 3. Кто написал «Сикстинскую мадонну»?
@@ -142,10 +197,12 @@ The same theme can be **tender** (the icon), **calm and bright** (Raphael) or **
 5. Какие линии помогают передать нежность?
 6. Какая форма может объединить две фигуры в одну?
 7. Нарисуй мать с ребёнком или свою маму с тобой.
+~~~
 
-### Ответы
-
-1. Все, на каком бы языке ни говорили, понимают мать с ребёнком на руках. 2. Мать прижимается щекой к щеке Младенца, Младенец обнимает её за шею. 3. Рафаэль. 4. Меч; она защищает свою землю и детей. 5. Мягкие, округлые. 6. Овал или треугольник. 7. Твоя работа.`,
+~~~art
+hints
+1. Все, на каком бы языке ни говорили, понимают мать с ребёнком на руках. 2. Мать прижимается щекой к щеке Младенца, Младенец обнимает её за шею. 3. Рафаэль. 4. Меч; она защищает свою землю и детей. 5. Мягкие, округлые. 6. Овал или треугольник. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Motherhood is a theme of…", "Մայրությունը թեմա է…", "Материнство — тема…"), [t("all nations", "բոլոր ժողովուրդների", "всех народов"), t("only Japan", "միայն Ճապոնիայի", "только Японии"), t("only sculptors", "միայն քանդակագործների", "только скульпторов")], 0),
@@ -181,12 +238,21 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 | **hands** | tired working hands tell about a long life |
 | **eyes** | thoughtful, calm, kind |
 
+~~~art
+light
+Rembrandt's trick: one strong light out of the darkness. Move the lamp and see the form come out of the shadow.
+~~~
+
 ## How to show age in a portrait
 
 1. The face: the cheeks are a little hollow, the skin has folds; draw **wrinkles** with light, soft lines, not too many.
 2. The hair is grey or white: leave the paper light or paint it with pale blue and grey.
 3. The pose: the person sits calmly, the hands rest on the knees or hold a stick, a book, knitting.
 4. The colour: warm brown, ochre and gold in the light; dark brown in the background.
+
+~~~art
+tone
+~~~
 
 ## Draw a portrait of your grandparent
 
@@ -195,8 +261,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 - Add a thing he or she loves: glasses, a cup of tea, a flower pot, a newspaper.
 - Give the portrait a title: «My grandmother tells a tale», «Grandfather in the garden».
 
-### Exercises
+~~~art
+steps face
+~~~
 
+~~~art
+tasks
 1. Why are old people respected in many countries?
 2. Who often helps the hero in folk tales?
 3. When did Rembrandt live?
@@ -204,10 +274,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 5. What can hands tell in a portrait?
 6. How do you draw wrinkles?
 7. Draw a portrait of your grandmother or grandfather.
+~~~
 
-### Answers
-
-1. They keep the memory of the family, tell tales, teach crafts and give advice. 2. A wise old man or old woman. 3. In 1606–1669. 4. Warm light on the face and hands, a dark background. 5. They tell about a long life of work. 6. With light, soft lines, not too many. 7. Your work.`,
+~~~art
+hints
+1. They keep the memory of the family, tell tales, teach crafts and give advice. 2. A wise old man or old woman. 3. In 1606–1669. 4. Warm light on the face and hands, a dark background. 5. They tell about a long life of work. 6. With light, soft lines, not too many. 7. Your work.
+~~~`,
         hy: `## Հարգանք մեծերի հանդեպ
 
 Հայաստանում, Ռուսաստանում և շատ այլ երկրներում տարեցներին հարգում են։ Պապիկներն ու տատիկները պահում են ընտանիքի հիշողությունը, հեքիաթներ պատմում, արհեստներ սովորեցնում և խորհուրդներ տալիս։ Ժողովրդական հեքիաթներում իմաստուն ծերունին կամ իմաստուն պառավը հաճախ օգնում է հերոսին։
@@ -224,12 +296,21 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 | **ձեռքեր** | հոգնած աշխատավոր ձեռքերը պատմում են երկար կյանքի մասին |
 | **աչքեր** | մտախոհ, հանդարտ, բարի |
 
+~~~art
+light
+Ռեմբրանդտի հնարքը․ մեկ ուժեղ լույս մթության միջից։ Շարժի՛ր լամպը և տե՛ս, ինչպես է ձևը դուրս գալիս ստվերից։
+~~~
+
 ## Ինչպես ցույց տալ տարիքը դիմանկարում
 
 1. Դեմքը՝ այտերը մի փոքր ներս ընկած են, մաշկն ունի ծալքեր, **կնճիռները** նկարի՛ր թեթև, մեղմ գծերով, ոչ շատ։
 2. Մազերը մոխրագույն կամ սպիտակ են՝ թուղթը թո՛ղ բաց կամ ներկի՛ր գունատ կապույտով և մոխրագույնով։
 3. Դիրքը՝ մարդը հանգիստ նստած է, ձեռքերը դրված են ծնկներին կամ բռնել են ձեռնափայտ, գիրք, գործվածք։
 4. Գույնը՝ լույսում տաք շագանակագույն, օխրա և ոսկեգույն, ֆոնում՝ մուգ շագանակագույն։
+
+~~~art
+tone
+~~~
 
 ## Նկարի՛ր պապիկիդ կամ տատիկիդ դիմանկարը
 
@@ -238,8 +319,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 - Ավելացրու՛ մի բան, որը նա սիրում է՝ ակնոց, թեյի բաժակ, ծաղկաման, թերթ։
 - Դիմանկարին վերնագիր տուր՝ «Տատիկս հեքիաթ է պատմում», «Պապիկն այգում»։
 
-### Վարժություններ
+~~~art
+steps face
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ են շատ երկրներում հարգում տարեցներին։
 2. Ո՞վ է հաճախ օգնում հերոսին ժողովրդական հեքիաթներում։
 3. Ե՞րբ է ապրել Ռեմբրանդտը։
@@ -247,10 +332,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 5. Ի՞նչ կարող են պատմել ձեռքերը դիմանկարում։
 6. Ինչպե՞ս ես նկարում կնճիռները։
 7. Նկարի՛ր տատիկիդ կամ պապիկիդ դիմանկարը։
+~~~
 
-### Պատասխաններ
-
-1. Նրանք պահում են ընտանիքի հիշողությունը, հեքիաթներ պատմում, արհեստներ սովորեցնում և խորհուրդներ տալիս։ 2. Իմաստուն ծերունին կամ պառավը։ 3. 1606–1669 թվականներին։ 4. Տաք լույս դեմքին և ձեռքերին, մուգ ֆոն։ 5. Նրանք պատմում են աշխատանքով լի երկար կյանքի մասին։ 6. Թեթև, մեղմ գծերով, ոչ շատ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Նրանք պահում են ընտանիքի հիշողությունը, հեքիաթներ պատմում, արհեստներ սովորեցնում և խորհուրդներ տալիս։ 2. Իմաստուն ծերունին կամ պառավը։ 3. 1606–1669 թվականներին։ 4. Տաք լույս դեմքին և ձեռքերին, մուգ ֆոն։ 5. Նրանք պատմում են աշխատանքով լի երկար կյանքի մասին։ 6. Թեթև, մեղմ գծերով, ոչ շատ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Уважение к старшим
 
 В Армении, в России и во многих других странах стариков уважают. Бабушки и дедушки хранят память семьи, рассказывают сказки, учат ремёслам и дают советы. В народных сказках мудрый старик или мудрая старушка часто помогает герою.
@@ -267,12 +354,21 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 | **руки** | усталые натруженные руки рассказывают о долгой жизни |
 | **глаза** | задумчивые, спокойные, добрые |
 
+~~~art
+light
+Приём Рембрандта: один сильный свет из темноты. Двигай лампу и смотри, как форма выходит из тени.
+~~~
+
 ## Как передать возраст в портрете
 
 1. Лицо: щёки немного впалые, кожа в складках; **морщины** рисуй лёгкими мягкими линиями, не слишком много.
 2. Волосы седые или белые: оставь бумагу светлой или напиши бледно-голубым и серым.
 3. Поза: человек спокойно сидит, руки лежат на коленях или держат палку, книгу, вязание.
 4. Цвет: тёплые коричневый, охра и золото на свету; тёмно-коричневый фон.
+
+~~~art
+tone
+~~~
 
 ## Нарисуй портрет бабушки или дедушки
 
@@ -281,8 +377,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 - Добавь любимую вещь: очки, чашку чая, цветочный горшок, газету.
 - Дай портрету название: «Бабушка рассказывает сказку», «Дедушка в саду».
 
-### Упражнения
+~~~art
+steps face
+~~~
 
+~~~art
+tasks
 1. Почему во многих странах уважают стариков?
 2. Кто часто помогает герою в народных сказках?
 3. Когда жил Рембрандт?
@@ -290,10 +390,12 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 5. О чём могут рассказать руки на портрете?
 6. Как рисовать морщины?
 7. Нарисуй портрет бабушки или дедушки.
+~~~
 
-### Ответы
-
-1. Они хранят память семьи, рассказывают сказки, учат ремёслам и дают советы. 2. Мудрый старик или старушка. 3. В 1606–1669 годах. 4. Тёплый свет на лице и руках, тёмный фон. 5. О долгой трудовой жизни. 6. Лёгкими мягкими линиями, не слишком много. 7. Твоя работа.`,
+~~~art
+hints
+1. Они хранят память семьи, рассказывают сказки, учат ремёслам и дают советы. 2. Мудрый старик или старушка. 3. В 1606–1669 годах. 4. Тёплый свет на лице и руках, тёмный фон. 5. О долгой трудовой жизни. 6. Лёгкими мягкими линиями, не слишком много. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Rembrandt was a … painter.", "Ռեմբրանդտը … նկարիչ էր։", "Рембрандт был … художником."), [t("Dutch", "հոլանդացի", "голландским"), t("Japanese", "ճապոնացի", "японским"), t("Greek", "հույն", "греческим")], 0),
@@ -325,6 +427,10 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 | **Tomb of the Unknown Soldier** near the Moscow Kremlin (1967) | a granite slab with a soldier's helmet and a banner, and an **eternal flame** | memory of the soldiers who died in the Great Patriotic War |
 | **«Guernica»** by Pablo Picasso (1937) | a huge black, white and grey painting: broken figures, a crying mother, a horse, a lamp | a protest against war after a town was bombed |
 
+~~~art
+pic tree-of-life dove
+~~~
+
 ## How art shows sorrow and sympathy
 
 | Means | How |
@@ -334,14 +440,23 @@ The Dutch painter **Rembrandt** (1606–1669) painted many portraits of old peop
 | **symbols** | a flame, a candle, a flower laid down, a bird flying away |
 | **composition** | closed forms, like a circle of people around the flame |
 
+~~~art
+mood scene=landscape moods=sad,calm
+Sorrow in art is quiet: muted colours, soft light, empty space. Compare two moods of one place.
+~~~
+
 ## Draw
 
 Choose one theme:
 - **Help**: a child helps an old person cross the street, friends comfort someone who is sad, a family saves a lost kitten.
 - **Memory**: a composition with one symbol: a flame, a flower, a candle; use few, quiet colours.
 
-### Exercises
+~~~art
+palette greys
+~~~
 
+~~~art
+tasks
 1. What is compassion?
 2. Why does art keep the memory of people who suffered?
 3. Describe the memorial at Tsitsernakaberd.
@@ -349,10 +464,12 @@ Choose one theme:
 5. Which colours did Picasso use in «Guernica»?
 6. Name three symbols of memory.
 7. Draw a scene of help or a composition with a symbol of memory.
+~~~
 
-### Answers
-
-1. Feeling someone else's pain and wanting to help. 2. So that it never happens again. 3. Twelve basalt slabs bow in a circle over an eternal flame, next to them a split stele. 4. Near the Moscow Kremlin. 5. Black, white and grey. 6. A flame, a candle, a flower (also a bird flying away). 7. Your work.`,
+~~~art
+hints
+1. Feeling someone else's pain and wanting to help. 2. So that it never happens again. 3. Twelve basalt slabs bow in a circle over an eternal flame, next to them a split stele. 4. Near the Moscow Kremlin. 5. Black, white and grey. 6. A flame, a candle, a flower (also a bird flying away). 7. Your work.
+~~~`,
         hy: `## Զգալ ուրիշի ցավը
 
 **Կարեկցանքը** նշանակում է զգալ ուրիշի ցավը և ուզենալ օգնել։ Արվեստը սովորեցնում է կարեկցանք․ երբ նայում ենք տխուր նկարին, ավելի լավ ենք հասկանում ուրիշներին։ Արվեստը նաև պահում է տառապած մարդկանց **հիշողությունը**, որպեսզի այդ ամենն երբեք չկրկնվի։
@@ -365,6 +482,10 @@ Choose one theme:
 | **Անհայտ զինվորի գերեզմանը** Մոսկվայի Կրեմլի մոտ (1967) | գրանիտե սալ՝ զինվորի սաղավարտով և դրոշով, և **հավերժական կրակ** | Հայրենական մեծ պատերազմում զոհված զինվորների հիշատակը |
 | Պաբլո Պիկասոյի **«Գեռնիկան»** (1937) | հսկա սև, սպիտակ և մոխրագույն նկար՝ կոտրված պատկերներ, լացող մայր, ձի, լամպ | բողոք պատերազմի դեմ՝ մի քաղաքի ռմբակոծությունից հետո |
 
+~~~art
+pic tree-of-life dove
+~~~
+
 ## Ինչպես է արվեստը ցույց տալիս վիշտն ու կարեկցանքը
 
 | Միջոց | Ինչպես |
@@ -374,14 +495,23 @@ Choose one theme:
 | **խորհրդանիշներ** | կրակ, մոմ, դրված ծաղիկ, թռչող թռչուն |
 | **կոմպոզիցիա** | փակ ձևեր, ինչպես կրակի շուրջ մարդկանց շրջանը |
 
+~~~art
+mood scene=landscape moods=sad,calm
+Արվեստում վիշտը լուռ է․ խամրած գույներ, մեղմ լույս, դատարկ տարածություն։ Համեմատի՛ր նույն վայրի երկու տրամադրություն։
+~~~
+
 ## Նկարի՛ր
 
 Ընտրի՛ր մեկ թեմա․
 - **Օգնություն**՝ երեխան օգնում է տարեց մարդուն անցնել փողոցը, ընկերները մխիթարում են տխուր մեկին, ընտանիքը փրկում է մոլորված կատվի ձագին։
 - **Հիշողություն**՝ կոմպոզիցիա մեկ խորհրդանիշով՝ կրակ, ծաղիկ, մոմ, օգտագործի՛ր քիչ, լուռ գույներ։
 
-### Վարժություններ
+~~~art
+palette greys
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է կարեկցանքը։
 2. Ինչո՞ւ է արվեստը պահում տառապած մարդկանց հիշողությունը։
 3. Նկարագրի՛ր Ծիծեռնակաբերդի հուշահամալիրը։
@@ -389,10 +519,12 @@ Choose one theme:
 5. Ի՞նչ գույներ է օգտագործել Պիկասոն «Գեռնիկայում»։
 6. Անվանի՛ր հիշողության երեք խորհրդանիշ։
 7. Նկարի՛ր օգնության տեսարան կամ հիշողության խորհրդանիշով կոմպոզիցիա։
+~~~
 
-### Պատասխաններ
-
-1. Ուրիշի ցավը զգալը և օգնել ուզենալը։ 2. Որպեսզի այդ ամենն երբեք չկրկնվի։ 3. Տասներկու բազալտե սալեր շրջանով խոնարհվում են հավերժական կրակի վրա, կողքին՝ ճեղքված կոթող։ 4. Մոսկվայի Կրեմլի մոտ։ 5. Սև, սպիտակ և մոխրագույն։ 6. Կրակ, մոմ, ծաղիկ (նաև թռչող թռչուն)։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ուրիշի ցավը զգալը և օգնել ուզենալը։ 2. Որպեսզի այդ ամենն երբեք չկրկնվի։ 3. Տասներկու բազալտե սալեր շրջանով խոնարհվում են հավերժական կրակի վրա, կողքին՝ ճեղքված կոթող։ 4. Մոսկվայի Կրեմլի մոտ։ 5. Սև, սպիտակ և մոխրագույն։ 6. Կրակ, մոմ, ծաղիկ (նաև թռչող թռչուն)։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Почувствовать чужую боль
 
 **Сострадание** — это умение почувствовать чужую боль и желание помочь. Искусство учит состраданию: глядя на грустную картину, мы лучше понимаем других. Искусство хранит и **память** о людях, которые страдали, чтобы это никогда не повторилось.
@@ -405,6 +537,10 @@ Choose one theme:
 | **Могила Неизвестного Солдата** у Московского Кремля (1967) | гранитная плита с солдатской каской и знаменем и **вечный огонь** | память о солдатах, погибших в Великой Отечественной войне |
 | **«Герника»** Пабло Пикассо (1937) | огромная чёрно-бело-серая картина: разбитые фигуры, плачущая мать, конь, лампа | протест против войны после бомбёжки города |
 
+~~~art
+pic tree-of-life dove
+~~~
+
 ## Как искусство передаёт горе и сочувствие
 
 | Средство | Как |
@@ -414,14 +550,23 @@ Choose one theme:
 | **символы** | огонь, свеча, возложенный цветок, улетающая птица |
 | **композиция** | замкнутые формы, как круг людей вокруг огня |
 
+~~~art
+mood scene=landscape moods=sad,calm
+Горе в искусстве тихое: приглушённые цвета, мягкий свет, пустое пространство. Сравни два настроения одного места.
+~~~
+
 ## Нарисуй
 
 Выбери одну тему:
 - **Помощь**: ребёнок помогает пожилому человеку перейти улицу, друзья утешают грустного товарища, семья спасает потерявшегося котёнка.
 - **Память**: композиция с одним символом — огнём, цветком, свечой; используй мало тихих цветов.
 
-### Упражнения
+~~~art
+palette greys
+~~~
 
+~~~art
+tasks
 1. Что такое сострадание?
 2. Зачем искусство хранит память о людях, которые страдали?
 3. Опиши мемориал Цицернакаберд.
@@ -429,10 +574,12 @@ Choose one theme:
 5. Какие цвета использовал Пикассо в «Гернике»?
 6. Назови три символа памяти.
 7. Нарисуй сцену помощи или композицию с символом памяти.
+~~~
 
-### Ответы
-
-1. Умение почувствовать чужую боль и желание помочь. 2. Чтобы это никогда не повторилось. 3. Двенадцать базальтовых плит по кругу склоняются над вечным огнём, рядом расколотая стела. 4. У Московского Кремля. 5. Чёрный, белый и серый. 6. Огонь, свеча, цветок (а также улетающая птица). 7. Твоя работа.`,
+~~~art
+hints
+1. Умение почувствовать чужую боль и желание помочь. 2. Чтобы это никогда не повторилось. 3. Двенадцать базальтовых плит по кругу склоняются над вечным огнём, рядом расколотая стела. 4. У Московского Кремля. 5. Чёрный, белый и серый. 6. Огонь, свеча, цветок (а также улетающая птица). 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Compassion means…", "Կարեկցանքը նշանակում է…", "Сострадание — это…"), [t("feeling another's pain and wanting to help", "զգալ ուրիշի ցավը և ուզենալ օգնել", "чувствовать чужую боль и хотеть помочь"), t("laughing at others", "ծիծաղել ուրիշների վրա", "смеяться над другими"), t("winning a race", "մրցավազքում հաղթել", "выиграть забег")], 0),
@@ -463,12 +610,20 @@ Every nation has stories about strong and kind heroes who protect their land. Th
 | **weapon** | the **Lightning Sword** | a mace, a spear, a bow |
 | **story** | grows up as a shepherd, becomes the strongest defender of Sasun and frees it from an enemy | sat without moving for thirty-three years, then became the strongest bogatyr and defeated **Nightingale the Robber** |
 
+~~~art
+pic shield horse
+~~~
+
 ## Heroes in art
 
 - **Yervand Kochar** (1959): David on a rearing Jalali raises the Lightning Sword; the statue in Yerevan is full of motion, it seems to fly.
 - **Viktor Vasnetsov**: Ilya in the centre of «Bogatyrs» is calm and strong, like a mountain.
 
 Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength** (standing on guard).
+
+~~~art
+pic genre-battle
+~~~
 
 ## How to illustrate an epic
 
@@ -478,8 +633,16 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 4. Add details of the epic: the Lightning Sword, armour, mountains of Sasun or a Russian forest.
 5. Make a border in the style of the people: Armenian ornament or Russian patterns.
 
-### Exercises
+~~~art
+steps horse
+~~~
 
+~~~art
+compose
+~~~
+
+~~~art
+tasks
 1. What do epic heroes of all nations have in common?
 2. Name the four branches of «Daredevils of Sasun».
 3. What are David's horse and sword called?
@@ -487,10 +650,12 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 5. How is David shown in Kochar's statue?
 6. Which lines help to show motion and which show calm strength?
 7. Illustrate one episode of an epic with a border.
+~~~
 
-### Answers
-
-1. They are brave, fair and loyal to their people. 2. Sanasar and Baghdasar, Mher the Elder, David, Mher the Younger. 3. Kurkik Jalali and the Lightning Sword. 4. He sat without moving for thirty-three years. 5. On a rearing horse, raising the sword, full of motion. 6. Diagonal lines show motion, vertical lines show calm strength. 7. Your work.`,
+~~~art
+hints
+1. They are brave, fair and loyal to their people. 2. Sanasar and Baghdasar, Mher the Elder, David, Mher the Younger. 3. Kurkik Jalali and the Lightning Sword. 4. He sat without moving for thirty-three years. 5. On a rearing horse, raising the sword, full of motion. 6. Diagonal lines show motion, vertical lines show calm strength. 7. Your work.
+~~~`,
         hy: `## Յուրաքանչյուր ժողովուրդ ունի իր հերոսները
 
 Յուրաքանչյուր ժողովուրդ ունի պատմություններ ուժեղ և բարի հերոսների մասին, որոնք պաշտպանում են իրենց հողը։ Այդ հերոսները տարբեր են, բայց նման են գլխավորով՝ նրանք **քաջ են, արդար և հավատարիմ իրենց ժողովրդին**։
@@ -502,12 +667,20 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 | **զենք** | **Թուր Կեծակին** | լախտ, նիզակ, աղեղ |
 | **պատմություն** | մեծանում է որպես հովիվ, դառնում Սասունի ամենաուժեղ պաշտպանը և ազատում այն թշնամուց | երեսուներեք տարի նստել էր առանց շարժվելու, հետո դարձավ ամենաուժեղ դյուցազունը և հաղթեց **Սոխակ ավազակին** |
 
+~~~art
+pic shield horse
+~~~
+
 ## Հերոսներն արվեստում
 
 - **Երվանդ Քոչար** (1959)՝ Դավիթը ծառս եղած Ջալալիի վրա բարձրացնում է Թուր Կեծակին, Երևանի արձանը լի է շարժումով, կարծես թռչում է։
 - **Վիկտոր Վասնեցով**՝ «Դյուցազուններ»-ի կենտրոնի Իլյան հանդարտ է և ուժեղ, ինչպես լեռը։
 
 Հերոսին ցույց տալու երկու ձև կա՝ **շարժման մեջ** (հարձակում, ցատկ) կամ **հանդարտ ուժով** (կանգնած պահակության)։
+
+~~~art
+pic genre-battle
+~~~
 
 ## Ինչպես նկարազարդել էպոսը
 
@@ -517,8 +690,16 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 4. Ավելացրու՛ էպոսի մանրամասներ՝ Թուր Կեծակի, զրահ, Սասունի լեռներ կամ ռուսական անտառ։
 5. Արա՛ եզրագիծ ժողովրդի ոճով՝ հայկական զարդանախշ կամ ռուսական նախշեր։
 
-### Վարժություններ
+~~~art
+steps horse
+~~~
 
+~~~art
+compose
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ ընդհանուր բան ունեն բոլոր ժողովուրդների էպիկական հերոսները։
 2. Անվանի՛ր «Սասնա ծռեր»-ի չորս ճյուղերը։
 3. Ինչպե՞ս են կոչվում Դավթի ձին և թուրը։
@@ -526,10 +707,12 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 5. Ինչպե՞ս է Դավիթը պատկերված Քոչարի արձանում։
 6. Ո՞ր գծերն են օգնում ցույց տալ շարժումը, և որո՞նք՝ հանդարտ ուժը։
 7. Նկարազարդի՛ր էպոսի մեկ դրվագ՝ եզրագծով։
+~~~
 
-### Պատասխաններ
-
-1. Նրանք քաջ են, արդար և հավատարիմ իրենց ժողովրդին։ 2. Սանասար և Բաղդասար, Մեծ Մհեր, Դավիթ, Փոքր Մհեր։ 3. Քուռկիկ Ջալալի և Թուր Կեծակի։ 4. Նա երեսուներեք տարի նստել էր առանց շարժվելու։ 5. Ծառս եղած ձիու վրա, թուրը բարձրացրած, լի շարժումով։ 6. Անկյունագծային գծերը ցույց են տալիս շարժում, ուղղահայացները՝ հանդարտ ուժ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Նրանք քաջ են, արդար և հավատարիմ իրենց ժողովրդին։ 2. Սանասար և Բաղդասար, Մեծ Մհեր, Դավիթ, Փոքր Մհեր։ 3. Քուռկիկ Ջալալի և Թուր Կեծակի։ 4. Նա երեսուներեք տարի նստել էր առանց շարժվելու։ 5. Ծառս եղած ձիու վրա, թուրը բարձրացրած, լի շարժումով։ 6. Անկյունագծային գծերը ցույց են տալիս շարժում, ուղղահայացները՝ հանդարտ ուժ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## У каждого народа свои герои
 
 У каждого народа есть сказания о сильных и добрых героях, которые защищают свою землю. Эти герои разные, но похожи в главном: они **храбрые, справедливые и верные своему народу**.
@@ -541,12 +724,20 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 | **оружие** | **меч-молния** (Тур Кецаки) | палица, копьё, лук |
 | **история** | растёт пастухом, становится сильнейшим защитником Сасуна и освобождает его от врага | тридцать три года сидел без движения, затем стал сильнейшим богатырём и победил **Соловья-разбойника** |
 
+~~~art
+pic shield horse
+~~~
+
 ## Герои в искусстве
 
 - **Ерванд Кочар** (1959): Давид на вздыбленном Джалали поднимает меч-молнию; памятник в Ереване полон движения, он будто летит.
 - **Виктор Васнецов**: Илья в центре «Богатырей» спокоен и силён, как гора.
 
 Два способа показать героя: **в движении** (атака, прыжок) или **в спокойной силе** (стоит на страже).
+
+~~~art
+pic genre-battle
+~~~
 
 ## Как иллюстрировать эпос
 
@@ -556,8 +747,16 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 4. Добавь детали эпоса: меч-молнию, доспехи, горы Сасуна или русский лес.
 5. Сделай бордюр в стиле народа: армянский орнамент или русский узор.
 
-### Упражнения
+~~~art
+steps horse
+~~~
 
+~~~art
+compose
+~~~
+
+~~~art
+tasks
 1. Что общего у эпических героев всех народов?
 2. Назови четыре ветви «Сасна црер».
 3. Как зовут коня и меч Давида?
@@ -565,10 +764,12 @@ Two ways to show a hero: **in motion** (an attack, a jump) or **in calm strength
 5. Как изображён Давид в памятнике Кочара?
 6. Какие линии передают движение, а какие — спокойную силу?
 7. Проиллюстрируй один эпизод эпоса с бордюром.
+~~~
 
-### Ответы
-
-1. Они храбрые, справедливые и верные своему народу. 2. Санасар и Багдасар, Мгер Старший, Давид, Мгер Младший. 3. Куркик Джалали и меч-молния (Тур Кецаки). 4. Он тридцать три года сидел без движения. 5. На вздыбленном коне, с поднятым мечом, полный движения. 6. Диагональные — движение, вертикальные — спокойную силу. 7. Твоя работа.`,
+~~~art
+hints
+1. Они храбрые, справедливые и верные своему народу. 2. Санасар и Багдасар, Мгер Старший, Давид, Мгер Младший. 3. Куркик Джалали и меч-молния (Тур Кецаки). 4. Он тридцать три года сидел без движения. 5. На вздыбленном коне, с поднятым мечом, полный движения. 6. Диагональные — движение, вертикальные — спокойную силу. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("David's horse is called…", "Դավթի ձին կոչվում է…", "Коня Давида зовут…"), [t("Kurkik Jalali", "Քուռկիկ Ջալալի", "Куркик Джалали"), t("Pegasus", "Պեգաս", "Пегас"), t("Sivka-Burka", "Սիվկա-Բուրկա", "Сивка-Бурка")], 0),
@@ -602,10 +803,18 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 | **colour** | fresh and bright: light blue, yellow, light green, white |
 | **symbols** | a road leading far, an open door or window, a ship with sails, wings |
 
+~~~art
+mood scene=abstract moods=joy,morning
+~~~
+
 ## Ideas
 
 - **Who I will be**: show yourself grown up at work: a doctor, an architect who builds a new Yerevan, a pilot, a painter, a scientist on a mountain observatory.
 - **The world of my dream**: a city of the future with gardens on the roofs, clean rivers, flying trains, children of all nations playing together.
+
+~~~art
+palette pastel loud
+~~~
 
 ## Step by step
 
@@ -615,8 +824,13 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 4. Paint the background with morning colours; leave light around the main figure.
 5. Give your picture a title.
 
-### Exercises
+~~~art
+sketch
+Draw your dream: who do you want to be, where do you want to go? Use the colours of hope.
+~~~
 
+~~~art
+tasks
 1. What is youth a symbol of?
 2. In which direction should lines go in a picture about a dream?
 3. Why is a low horizon good for a picture about the future?
@@ -624,10 +838,12 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 5. Name four symbols of hope.
 6. Why make two small sketches before the picture?
 7. Paint «Who I will be» or «The world of my dream».
+~~~
 
-### Answers
-
-1. The future. 2. Up and forward. 3. There is a lot of sky, space for the future. 4. Morning, sunrise: the beginning of a new day. 5. A road leading far, an open window, a ship with sails, wings (also birds, kites). 6. To choose the better composition. 7. Your work.`,
+~~~art
+hints
+1. The future. 2. Up and forward. 3. There is a lot of sky, space for the future. 4. Morning, sunrise: the beginning of a new day. 5. A road leading far, an open window, a ship with sails, wings (also birds, kites). 6. To choose the better composition. 7. Your work.
+~~~`,
         hy: `## Հույսի տարիքը
 
 Երիտասարդությունն եռանդի, ընկերության և մեծ երազանքների ժամանակն է։ Բոլոր ժողովուրդների նկարիչները ցույց են տալիս երիտասարդների, որոնք նայում են հեռուն, վազում, կառուցում, թռչում, սովորում։ Երիտասարդությունը **ապագայի** խորհրդանիշն է։
@@ -642,10 +858,18 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 | **գույն** | թարմ և վառ՝ երկնագույն, դեղին, բաց կանաչ, սպիտակ |
 | **խորհրդանիշներ** | հեռուն տանող ճանապարհ, բաց դուռ կամ պատուհան, առագաստանավ, թևեր |
 
+~~~art
+mood scene=abstract moods=joy,morning
+~~~
+
 ## Գաղափարներ
 
 - **Ով կդառնամ ես**՝ ցույց տուր քեզ մեծացած աշխատանքի ժամանակ՝ բժիշկ, ճարտարապետ, որը կառուցում է նոր Երևան, օդաչու, նկարիչ, գիտնական լեռնային աստղադիտարանում։
 - **Իմ երազանքի աշխարհը**՝ ապագայի քաղաք՝ տանիքներին այգիներով, մաքուր գետերով, թռչող գնացքներով, բոլոր ժողովուրդների միասին խաղացող երեխաներով։
+
+~~~art
+palette pastel loud
+~~~
 
 ## Քայլ առ քայլ
 
@@ -655,8 +879,13 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 4. Ֆոնը ներկի՛ր առավոտյան գույներով, գլխավոր պատկերի շուրջը լույս թո՛ղ։
 5. Նկարիդ վերնագիր տուր։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր քո երազանքը․ ով ես ուզում դառնալ, ուր ես ուզում գնալ։ Օգտագործի՛ր հույսի գույները։
+~~~
 
+~~~art
+tasks
 1. Ինչի՞ խորհրդանիշն է երիտասարդությունը։
 2. Ո՞ր ուղղությամբ պետք է գնան գծերն երազանքի մասին նկարում։
 3. Ինչո՞ւ է ցածր հորիզոնը լավ ապագայի մասին նկարի համար։
@@ -664,10 +893,12 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 5. Անվանի՛ր հույսի չորս խորհրդանիշ։
 6. Ինչո՞ւ անել երկու փոքր էսքիզ նկարից առաջ։
 7. Նկարի՛ր «Ով կդառնամ ես» կամ «Իմ երազանքի աշխարհը»։
+~~~
 
-### Պատասխաններ
-
-1. Ապագայի։ 2. Վեր և առաջ։ 3. Շատ երկինք կա՝ ապագայի համար տեղ։ 4. Առավոտը, արևածագը՝ նոր օրվա սկիզբ։ 5. Հեռուն տանող ճանապարհ, բաց պատուհան, առագաստանավ, թևեր (նաև թռչուններ, օդապարուկներ)։ 6. Լավագույն կոմպոզիցիան ընտրելու համար։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ապագայի։ 2. Վեր և առաջ։ 3. Շատ երկինք կա՝ ապագայի համար տեղ։ 4. Առավոտը, արևածագը՝ նոր օրվա սկիզբ։ 5. Հեռուն տանող ճանապարհ, բաց պատուհան, առագաստանավ, թևեր (նաև թռչուններ, օդապարուկներ)։ 6. Լավագույն կոմպոզիցիան ընտրելու համար։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Возраст надежды
 
 Юность — время энергии, дружбы и больших мечтаний. Художники всех народов показывают молодых людей, которые смотрят вдаль, бегут, строят, летят, учатся. Юность — символ **будущего**.
@@ -682,10 +913,18 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 | **цвет** | свежий и яркий: голубой, жёлтый, светло-зелёный, белый |
 | **символы** | дорога вдаль, открытая дверь или окно, корабль под парусами, крылья |
 
+~~~art
+mood scene=abstract moods=joy,morning
+~~~
+
 ## Идеи
 
 - **Кем я стану**: покажи себя взрослым за работой — врач, архитектор, строящий новый Ереван, лётчик, художник, учёный в горной обсерватории.
 - **Мир моей мечты**: город будущего с садами на крышах, чистыми реками, летающими поездами, детьми всех народов, играющими вместе.
+
+~~~art
+palette pastel loud
+~~~
 
 ## Шаг за шагом
 
@@ -695,8 +934,13 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 4. Напиши фон утренними красками; вокруг главной фигуры оставь свет.
 5. Дай картине название.
 
-### Упражнения
+~~~art
+sketch
+Нарисуй свою мечту: кем ты хочешь стать, куда поехать? Возьми цвета надежды.
+~~~
 
+~~~art
+tasks
 1. Символом чего является юность?
 2. Куда должны быть направлены линии в картине о мечте?
 3. Почему низкий горизонт хорош для картины о будущем?
@@ -704,10 +948,12 @@ Youth is the time of energy, friendship and big dreams. Artists of all nations s
 5. Назови четыре символа надежды.
 6. Зачем делать два маленьких эскиза перед картиной?
 7. Напиши картину «Кем я стану» или «Мир моей мечты».
+~~~
 
-### Ответы
-
-1. Будущего. 2. Вверх и вперёд. 3. Много неба — есть место для будущего. 4. Утро, рассвет — начало нового дня. 5. Дорога вдаль, открытое окно, корабль под парусами, крылья (а также птицы, воздушные змеи). 6. Чтобы выбрать лучшую композицию. 7. Твоя работа.`,
+~~~art
+hints
+1. Будущего. 2. Вверх и вперёд. 3. Много неба — есть место для будущего. 4. Утро, рассвет — начало нового дня. 5. Дорога вдаль, открытое окно, корабль под парусами, крылья (а также птицы, воздушные змеи). 6. Чтобы выбрать лучшую композицию. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Youth is a symbol of…", "Երիտասարդությունը … խորհրդանիշն է։", "Юность — символ…"), [t("the future", "ապագայի", "будущего"), t("the past", "անցյալի", "прошлого"), t("night", "գիշերվա", "ночи")], 0),
@@ -735,6 +981,10 @@ Art is a language without words. A child in Yerevan, Moscow, Tokyo or Paris unde
 
 In 1949 **Pablo Picasso** drew a white **dove** for the poster of a World Peace Congress in Paris. Since then the white dove, often with an olive branch, has been a symbol of peace all over the world. The same artist who painted the sorrow of «Guernica» drew the hope of the dove.
 
+~~~art
+steps dove
+~~~
+
 ## The language of a poster
 
 A poster must be understood **in a few seconds**, even from far away.
@@ -747,12 +997,20 @@ A poster must be understood **in a few seconds**, even from far away.
 | **simple shapes** | clear silhouettes, no small details |
 | **large letters** | letters are big, thick and easy to read |
 
+~~~art
+pic poster
+~~~
+
 ## Symbols of peace and friendship
 
 - a white dove, an olive branch
 - the globe with children holding hands around it
 - hands of different colours together
 - a sun, a flower growing from a helmet
+
+~~~art
+pic dove sun-sign tree-of-life
+~~~
 
 ## Make the poster
 
@@ -762,8 +1020,12 @@ A poster must be understood **in a few seconds**, even from far away.
 4. Paint with 2–3 contrasting colours.
 5. Write the letters with a thick brush or marker; check from across the room that you can read them.
 
-### Exercises
+~~~art
+steps poster-layout
+~~~
 
+~~~art
+tasks
 1. Why can art unite nations?
 2. When and for what did Picasso draw the dove?
 3. What does a dove with an olive branch mean?
@@ -771,10 +1033,12 @@ A poster must be understood **in a few seconds**, even from far away.
 5. How many words should a slogan have?
 6. Name three symbols of peace and friendship.
 7. Make a poster «Peace to all nations».
+~~~
 
-### Answers
-
-1. It is a language without words that everyone understands. 2. In 1949, for the poster of a World Peace Congress. 3. Peace. 4. In a few seconds. 5. About 2–5. 6. A white dove, the globe with children holding hands, hands of different colours (also a sun, a flower). 7. Your work.`,
+~~~art
+hints
+1. It is a language without words that everyone understands. 2. In 1949, for the poster of a World Peace Congress. 3. Peace. 4. In a few seconds. 5. About 2–5. 6. A white dove, the globe with children holding hands, hands of different colours (also a sun, a flower). 7. Your work.
+~~~`,
         hy: `## Նկար, որը հասկանում են բոլորը
 
 Արվեստն առանց բառերի լեզու է։ Երևանում, Մոսկվայում, Տոկիոյում կամ Փարիզում ապրող երեխան հասկանում է ժպիտը, ծաղիկը, աղավնին։ Ահա թե ինչու արվեստը կարող է միավորել ժողովուրդներին և խոսել հանուն **խաղաղության**։
@@ -782,6 +1046,10 @@ A poster must be understood **in a few seconds**, even from far away.
 ## Խաղաղության աղավնին
 
 1949 թվականին **Պաբլո Պիկասոն** Փարիզում կայացած Խաղաղության համաշխարհային կոնգրեսի պաստառի համար նկարեց սպիտակ **աղավնի**։ Այդ ժամանակվանից սպիտակ աղավնին, հաճախ ձիթենու ճյուղով, ամբողջ աշխարհում խաղաղության խորհրդանիշ է։ Նույն նկարիչը, որը նկարել էր «Գեռնիկայի» վիշտը, նկարեց աղավնու հույսը։
+
+~~~art
+steps dove
+~~~
 
 ## Պաստառի լեզուն
 
@@ -795,12 +1063,20 @@ A poster must be understood **in a few seconds**, even from far away.
 | **պարզ ձևեր** | հստակ ուրվագծեր, առանց մանր մանրամասների |
 | **մեծ տառեր** | տառերը մեծ են, հաստ և հեշտ ընթեռնելի |
 
+~~~art
+pic poster
+~~~
+
 ## Խաղաղության և բարեկամության խորհրդանիշներ
 
 - սպիտակ աղավնի, ձիթենու ճյուղ
 - երկրագունդ՝ շուրջը ձեռք ձեռքի տված երեխաներով
 - տարբեր գույնի ձեռքեր միասին
 - արև, սաղավարտից աճող ծաղիկ
+
+~~~art
+pic dove sun-sign tree-of-life
+~~~
 
 ## Պատրաստի՛ր պաստառը
 
@@ -810,8 +1086,12 @@ A poster must be understood **in a few seconds**, even from far away.
 4. Ներկի՛ր 2–3 հակադիր գույնով։
 5. Տառերը գրի՛ր հաստ վրձնով կամ մարկերով, դասարանի մյուս ծայրից ստուգի՛ր, որ կարդացվում են։
 
-### Վարժություններ
+~~~art
+steps poster-layout
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ կարող է արվեստը միավորել ժողովուրդներին։
 2. Ե՞րբ և ինչի՞ համար է Պիկասոն նկարել աղավնին։
 3. Ի՞նչ է նշանակում ձիթենու ճյուղով աղավնին։
@@ -819,10 +1099,12 @@ A poster must be understood **in a few seconds**, even from far away.
 5. Քանի՞ բառ պետք է ունենա կարգախոսը։
 6. Անվանի՛ր խաղաղության և բարեկամության երեք խորհրդանիշ։
 7. Պատրաստի՛ր «Խաղաղություն բոլոր ժողովուրդներին» պաստառ։
+~~~
 
-### Պատասխաններ
-
-1. Այն առանց բառերի լեզու է, որը բոլորը հասկանում են։ 2. 1949 թվականին՝ Խաղաղության համաշխարհային կոնգրեսի պաստառի համար։ 3. Խաղաղություն։ 4. Մի քանի վայրկյանում։ 5. Մոտ 2–5։ 6. Սպիտակ աղավնի, երկրագունդ ձեռք ձեռքի տված երեխաներով, տարբեր գույնի ձեռքեր (նաև արև, ծաղիկ)։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Այն առանց բառերի լեզու է, որը բոլորը հասկանում են։ 2. 1949 թվականին՝ Խաղաղության համաշխարհային կոնգրեսի պաստառի համար։ 3. Խաղաղություն։ 4. Մի քանի վայրկյանում։ 5. Մոտ 2–5։ 6. Սպիտակ աղավնի, երկրագունդ ձեռք ձեռքի տված երեխաներով, տարբեր գույնի ձեռքեր (նաև արև, ծաղիկ)։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Картина, понятная всем
 
 Искусство — язык без слов. Ребёнок в Ереване, Москве, Токио или Париже понимает улыбку, цветок, голубя. Поэтому искусство может объединять народы и говорить за **мир**.
@@ -830,6 +1112,10 @@ A poster must be understood **in a few seconds**, even from far away.
 ## Голубь мира
 
 В 1949 году **Пабло Пикассо** нарисовал белого **голубя** для плаката Всемирного конгресса сторонников мира в Париже. С тех пор белый голубь, часто с оливковой ветвью, стал символом мира во всём мире. Тот же художник, который написал горе «Герники», нарисовал надежду голубя.
+
+~~~art
+steps dove
+~~~
 
 ## Язык плаката
 
@@ -843,12 +1129,20 @@ A poster must be understood **in a few seconds**, even from far away.
 | **простые формы** | чёткие силуэты, без мелких деталей |
 | **крупные буквы** | буквы большие, толстые и легко читаются |
 
+~~~art
+pic poster
+~~~
+
 ## Символы мира и дружбы
 
 - белый голубь, оливковая ветвь
 - земной шар, вокруг которого дети держатся за руки
 - руки разного цвета вместе
 - солнце, цветок, растущий из каски
+
+~~~art
+pic dove sun-sign tree-of-life
+~~~
 
 ## Сделай плакат
 
@@ -858,8 +1152,12 @@ A poster must be understood **in a few seconds**, even from far away.
 4. Раскрась 2–3 контрастными цветами.
 5. Напиши буквы толстой кистью или маркером; проверь с другого конца класса, что их можно прочитать.
 
-### Упражнения
+~~~art
+steps poster-layout
+~~~
 
+~~~art
+tasks
 1. Почему искусство может объединять народы?
 2. Когда и для чего Пикассо нарисовал голубя?
 3. Что означает голубь с оливковой ветвью?
@@ -867,10 +1165,12 @@ A poster must be understood **in a few seconds**, even from far away.
 5. Сколько слов должно быть в лозунге?
 6. Назови три символа мира и дружбы.
 7. Сделай плакат «Мир всем народам».
+~~~
 
-### Ответы
-
-1. Это язык без слов, понятный всем. 2. В 1949 году, для плаката Всемирного конгресса сторонников мира. 3. Мир. 4. За несколько секунд. 5. Примерно 2–5. 6. Белый голубь, земной шар с детьми, держащимися за руки, руки разного цвета (а также солнце, цветок). 7. Твоя работа.`,
+~~~art
+hints
+1. Это язык без слов, понятный всем. 2. В 1949 году, для плаката Всемирного конгресса сторонников мира. 3. Мир. 4. За несколько секунд. 5. Примерно 2–5. 6. Белый голубь, земной шар с детьми, держащимися за руки, руки разного цвета (а также солнце, цветок). 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Picasso drew the dove of peace in…", "Պիկասոն խաղաղության աղավնին նկարել է…", "Пикассо нарисовал голубя мира в…"), [t("1949", "1949 թվականին", "1949 году"), t("1555", "1555 թվականին", "1555 году"), t("782 BC", "ք․ ա․ 782 թվականին", "782 году до н. э.")], 0),
