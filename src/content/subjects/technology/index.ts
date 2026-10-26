@@ -11,6 +11,7 @@ import { ru as ru4 } from "./grade-4.ru";
 import { technologyGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
 import { technologyGrade6 } from "./grade-6";
+import { ru as ru6 } from "./grade-6.ru";
 import { technologyGrade7 } from "./grade-7";
 
-export const technology: CourseSeed[] = [withRu(technologyGrade1, ru1), withRu(technologyGrade2, ru2), withRu(technologyGrade3, ru3), withRu(technologyGrade4, ru4), withRu(technologyGrade5, ru5), technologyGrade6, technologyGrade7];
+export const technology: CourseSeed[] = [withRu(technologyGrade1, ru1), withRu(technologyGrade2, ru2), withRu(technologyGrade3, ru3), withRu(technologyGrade4, ru4), withRu(technologyGrade5, ru5), withRu(technologyGrade6, ru6), technologyGrade7];
