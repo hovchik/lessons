@@ -102,7 +102,10 @@ function tempAt(q: number) {
 function Heating({ spec, lang }: SimProps) {
   const [P, setP] = useState(2); // kW
   const clock = useClock();
-  const q = Math.min(QTOT, clock.t * P * 40); // kJ, fast-forwarded
+  // Heat supplied so far at earlier power settings, so changing the burner never takes heat back.
+  const [base, setBase] = useState({ q: 0, t: 0 });
+  if (clock.t < base.t) setBase({ q: 0, t: 0 }); // the clock was reset
+  const q = Math.min(QTOT, base.q + Math.max(0, clock.t - base.t) * P * 40); // kJ, fast-forwarded
   const { T, stage, part } = tempAt(q);
   const names = [W.ice, W.melting, W.water, W.boiling, W.steam];
   const pts: Array<[number, number]> = [];
@@ -135,7 +138,7 @@ function Heating({ spec, lang }: SimProps) {
         </div>
       </div>
       <Controls>
-        <Slider label={L(W.power, lang)} value={P} min={1} max={5} unit={L(U.kW, lang)} digits={0} lang={lang} onChange={setP} />
+        <Slider label={L(W.power, lang)} value={P} min={1} max={5} unit={L(U.kW, lang)} digits={0} lang={lang} onChange={(v) => { setBase({ q, t: clock.t }); setP(v); }} />
       </Controls>
       <PlayBar clock={clock} lang={lang} noSlow />
     </ArtFrame>

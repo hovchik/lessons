@@ -362,26 +362,27 @@ function Shadow({ spec, lang }: SimProps) {
   const L0 = { x: 40, y: 100 }, ob = { x: 160, y: 100, r: 22 }, sx = 300;
   const s1 = { x: L0.x, y: L0.y - size / 2 }, s2 = { x: L0.x, y: L0.y + size / 2 };
   const proj = (from: P, through: P) => ({ x: sx, y: from.y + ((through.y - from.y) * (sx - from.x)) / (through.x - from.x) });
-  // umbra: lines from the top of the lamp past the top of the ball, from the bottom past the bottom
-  const uTop = proj(s2, { x: ob.x, y: ob.y - ob.r });
-  const uBot = proj(s1, { x: ob.x, y: ob.y + ob.r });
-  const pTop = proj(s1, { x: ob.x, y: ob.y - ob.r });
-  const pBot = proj(s2, { x: ob.x, y: ob.y + ob.r });
+  // umbra: no part of the lamp is seen, bounded by the rays from the top of the lamp past the top
+  // of the ball and from the bottom past the bottom; the crossed rays bound the penumbra
+  const uTop = proj(s1, { x: ob.x, y: ob.y - ob.r });
+  const uBot = proj(s2, { x: ob.x, y: ob.y + ob.r });
+  const pTop = proj(s2, { x: ob.x, y: ob.y - ob.r });
+  const pBot = proj(s1, { x: ob.x, y: ob.y + ob.r });
   const umbra = uTop.y < uBot.y;
   return (
     <ArtFrame kind="experiment" title={L(W.shadow, lang)} body={spec.body || L(W.shadowHint, lang)}>
       <Stage w={320} h={200} label={L(W.shadow, lang)} bg="#1e293b">
         <polygon points={`${ob.x},${ob.y - ob.r} ${sx},${pTop.y} ${sx},${pBot.y} ${ob.x},${ob.y + ob.r}`} fill="#64748b" opacity="0.6" />
         {umbra ? <polygon points={`${ob.x},${ob.y - ob.r} ${sx},${uTop.y} ${sx},${uBot.y} ${ob.x},${ob.y + ob.r}`} fill="#020617" /> : null}
-        <line x1={s1.x} y1={s1.y} x2={pTop.x} y2={pTop.y} stroke="#fde68a" strokeWidth="1" opacity="0.6" />
-        <line x1={s2.x} y1={s2.y} x2={pBot.x} y2={pBot.y} stroke="#fde68a" strokeWidth="1" opacity="0.6" />
-        <line x1={s2.x} y1={s2.y} x2={uTop.x} y2={uTop.y} stroke="#fde68a" strokeWidth="1" strokeDasharray="3 3" />
-        <line x1={s1.x} y1={s1.y} x2={uBot.x} y2={uBot.y} stroke="#fde68a" strokeWidth="1" strokeDasharray="3 3" />
+        <line x1={s2.x} y1={s2.y} x2={pTop.x} y2={pTop.y} stroke="#fde68a" strokeWidth="1" opacity="0.6" />
+        <line x1={s1.x} y1={s1.y} x2={pBot.x} y2={pBot.y} stroke="#fde68a" strokeWidth="1" opacity="0.6" />
+        <line x1={s1.x} y1={s1.y} x2={uTop.x} y2={uTop.y} stroke="#fde68a" strokeWidth="1" strokeDasharray="3 3" />
+        <line x1={s2.x} y1={s2.y} x2={uBot.x} y2={uBot.y} stroke="#fde68a" strokeWidth="1" strokeDasharray="3 3" />
         <rect x={L0.x - 6} y={s1.y} width="12" height={Math.max(2, size)} rx="6" fill="#facc15" />
         <circle cx={ob.x} cy={ob.y} r={ob.r} fill="#3b82f6" />
         <rect x={sx} y="10" width="8" height="180" fill="#e2e8f0" />
-        <text x={sx - 4} y={(uTop.y + uBot.y) / 2 + 4} textAnchor="end" className="sim-tag" fill="#1e1b4b">{umbra ? L(W.umbra, lang) : ""}</text>
-        {size > 2 ? <text x={sx - 4} y={pTop.y - 4} textAnchor="end" className="sim-tag" fill="#1e1b4b">{L(W.penumbra, lang)}</text> : null}
+        <text x={sx - 4} y={(uTop.y + uBot.y) / 2 + 4} textAnchor="end" className="sim-small" fill="#e2e8f0">{umbra ? L(W.umbra, lang) : ""}</text>
+        {size > 2 ? <text x={sx - 4} y={pTop.y - 4} textAnchor="end" className="sim-small" fill="#e2e8f0">{L(W.penumbra, lang)}</text> : null}
       </Stage>
       <Controls>
         <Slider label={L(W.lampSize, lang)} value={size} min={0} max={80} step={5} digits={0} lang={lang} onChange={setSize} />

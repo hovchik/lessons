@@ -280,7 +280,7 @@ function Rheostat({ spec, lang }: SimProps) {
   const i = u / (rb + rr);
   const off = useFlow([i * 40]);
   const v = L(U.V, lang), a = L(U.A, lang), o = L(U.Ohm, lang);
-  const sx = 120 + 80 * k;
+  const sx = 200 - 80 * k; // the wire from the slider to the fixed end at x = 200 carries the current
   return (
     <ArtFrame kind="experiment" title={L(W.rheostat, lang)} body={spec.body || L(W.rheostatHint, lang)}>
       <Stage w={320} h={200} label={L(W.rheostat, lang)}>
