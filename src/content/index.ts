@@ -16,6 +16,7 @@ import { worldHistory } from "./subjects/world-history";
 import { informatics } from "./subjects/informatics";
 import { socialStudies } from "./subjects/social-studies";
 import { science } from "./subjects/science";
+import { churchHistory } from "./subjects/church-history";
 
 export { subjects };
 
@@ -36,6 +37,7 @@ export const courses: CourseSeed[] = [
   ...informatics,
   ...socialStudies,
   ...science,
+  ...churchHistory,
 ];
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;
