@@ -17,5 +17,6 @@ import { ru as ru11 } from "./grade-11.ru";
 import { en as en11 } from "./grade-11.en";
 import { biologyGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
+import { en as en12 } from "./grade-12.en";
 
-export const biology: CourseSeed[] = [withEn(withRu(biologyGrade7, ru7), en7), withEn(withRu(biologyGrade8, ru8), en8), withEn(withRu(biologyGrade9, ru9), en9), withEn(withRu(biologyGrade10, ru10), en10), withEn(withRu(biologyGrade11, ru11), en11), withRu(biologyGrade12, ru12)];
+export const biology: CourseSeed[] = [withEn(withRu(biologyGrade7, ru7), en7), withEn(withRu(biologyGrade8, ru8), en8), withEn(withRu(biologyGrade9, ru9), en9), withEn(withRu(biologyGrade10, ru10), en10), withEn(withRu(biologyGrade11, ru11), en11), withEn(withRu(biologyGrade12, ru12), en12)];
