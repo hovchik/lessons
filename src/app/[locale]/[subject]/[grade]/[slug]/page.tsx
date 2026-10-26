@@ -4,10 +4,13 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { Markdown } from "@/components/site/markdown";
+import { LessonProgressCard } from "@/components/site/lesson-progress";
 import { Quiz } from "@/components/site/quiz";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, hasContent, pick } from "@/lib/utils";
+import { getLessonProgress } from "@/server/progress";
 import { getLesson } from "@/server/queries";
+import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; subject: string; grade: string; slug: string }>;
 
@@ -24,9 +27,9 @@ export default async function LessonPage({ params }: { params: Params }) {
   const grade = Number(g);
   const data = await getLesson(subject, grade, slug);
   if (!data) notFound();
-  const t = await getTranslations();
-  const l = await getLocale();
+  const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { lesson, course, subject: subj, unit, unitIndex, prev, next } = data;
+  const progress = user ? await getLessonProgress(user.id, lesson.id) : undefined;
   const body = pick(lesson.content, l);
   const ready = lesson.status === "published" && hasContent(lesson.content);
   const objectives = lesson.objectives?.[l as "en" | "hy" | "ru"] ?? lesson.objectives?.en ?? [];
@@ -85,7 +88,17 @@ export default async function LessonPage({ params }: { params: Params }) {
         </div>
       )}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={lesson.quiz} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={lesson.quiz} save={user ? { lessonId: lesson.id } : null} />}
+
+      {ready && (
+        <LessonProgressCard
+          lessonId={lesson.id}
+          signedIn={!!user}
+          completed={!!progress?.completedAt}
+          best={progress?.bestTotal ? { score: progress.bestScore ?? 0, total: progress.bestTotal } : null}
+          returnTo={`/${subject}/${grade}/${slug}`}
+        />
+      )}
 
       <nav aria-label="Lesson navigation" className="grid gap-3 sm:grid-cols-2">
         {prev ? (

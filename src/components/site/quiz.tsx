@@ -1,27 +1,47 @@
 "use client";
 
-import { CheckCircle2, CircleHelp, RotateCcw, XCircle } from "lucide-react";
+import { CheckCircle2, CircleHelp, RotateCcw, Save, XCircle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { QuizQuestion } from "@/server/db/schema";
 import { Button } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 
-export function Quiz({ questions }: { questions: QuizQuestion[] }) {
+type Props = {
+  questions: QuizQuestion[];
+  /** When set (signed-in pupil), a finished quiz is saved to /api/progress/quiz. */
+  save?: { lessonId: string } | null;
+};
+
+export function Quiz({ questions, save }: Props) {
   const t = useTranslations("lesson");
   const locale = useLocale();
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [checked, setChecked] = useState<Record<number, boolean>>({});
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
+  const [saved, setSaved] = useState(false);
+  const savedRun = useRef(0);
 
   const total = questions.length;
   const score = questions.filter((qq, i) => checked[i] && answers[i] === qq.answer).length;
   const allChecked = questions.every((_, i) => checked[i]);
 
+  // Save once per completed run.
+  useEffect(() => {
+    if (!save || !allChecked || total === 0 || savedRun.current !== 0) return;
+    savedRun.current = 1;
+    const payload = { lessonId: save.lessonId, answers: questions.map((_, i) => answers[i] ?? 0) };
+    fetch("/api/progress/quiz", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
+      .then((r) => r.ok && setSaved(true))
+      .catch(() => {});
+  }, [save, allChecked, total, answers, questions]);
+
   const reset = () => {
     setAnswers({});
     setChecked({});
     setShowWhy({});
+    setSaved(false);
+    savedRun.current = 0;
   };
 
   return (
@@ -93,7 +113,15 @@ export function Quiz({ questions }: { questions: QuizQuestion[] }) {
       </ol>
       {allChecked && total > 0 && (
         <div className="mt-6 flex flex-col gap-3 rounded-[var(--radius)] bg-muted p-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-lg font-extrabold">{t("score", { score, total })}</p>
+          <div>
+            <p className="text-lg font-extrabold">{t("score", { score, total })}</p>
+            {saved && (
+              <p role="status" className="mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-success">
+                <Save className="size-4" aria-hidden="true" />
+                {t("saved")}
+              </p>
+            )}
+          </div>
           <Button variant="secondary" size="sm" onClick={reset} className="w-full sm:w-auto">
             <RotateCcw className="size-4" aria-hidden="true" />
             {t("retry")}
