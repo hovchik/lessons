@@ -9,5 +9,6 @@ import { ru as ru4 } from "./grade-4.ru";
 import { scienceGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
 import { scienceGrade6 } from "./grade-6";
+import { ru as ru6 } from "./grade-6.ru";
 
-export const science: CourseSeed[] = [withRu(scienceGrade2, ru2), withRu(scienceGrade3, ru3), withRu(scienceGrade4, ru4), withRu(scienceGrade5, ru5), scienceGrade6];
+export const science: CourseSeed[] = [withRu(scienceGrade2, ru2), withRu(scienceGrade3, ru3), withRu(scienceGrade4, ru4), withRu(scienceGrade5, ru5), withRu(scienceGrade6, ru6)];
