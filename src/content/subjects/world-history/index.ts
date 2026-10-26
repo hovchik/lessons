@@ -4,5 +4,6 @@ import { worldHistoryGrade7 } from "./grade-7";
 import { worldHistoryGrade8 } from "./grade-8";
 import { worldHistoryGrade9 } from "./grade-9";
 import { worldHistoryGrade10 } from "./grade-10";
+import { worldHistoryGrade11 } from "./grade-11";
 
-export const worldHistory: CourseSeed[] = [worldHistoryGrade6, worldHistoryGrade7, worldHistoryGrade8, worldHistoryGrade9, worldHistoryGrade10];
+export const worldHistory: CourseSeed[] = [worldHistoryGrade6, worldHistoryGrade7, worldHistoryGrade8, worldHistoryGrade9, worldHistoryGrade10, worldHistoryGrade11];
