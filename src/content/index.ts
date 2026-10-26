@@ -12,6 +12,7 @@ import { chemistry } from "./subjects/chemistry";
 import { biology } from "./subjects/biology";
 import { geography } from "./subjects/geography";
 import { armenianHistory } from "./subjects/armenian-history";
+import { worldHistory } from "./subjects/world-history";
 
 export { subjects };
 
@@ -28,6 +29,7 @@ export const courses: CourseSeed[] = [
   ...biology,
   ...geography,
   ...armenianHistory,
+  ...worldHistory,
 ];
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;
