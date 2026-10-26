@@ -9,6 +9,7 @@ import { armenianGrade6 } from "./grade-6";
 import { armenianGrade7 } from "./grade-7";
 import { armenianGrade8 } from "./grade-8";
 import { armenianGrade9 } from "./grade-9";
+import { armenianGrade10 } from "./grade-10";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -22,48 +23,7 @@ export const armenian: CourseSeed[] = [
 
   armenianGrade9,
 
-  course(
-    10,
-    ["High school: history of the Armenian language, phonetics and lexicology at an advanced level, stylistics; literature of the 5th–18th centuries.", "Ավագ դպրոց՝ հայոց լեզվի պատմություն, հնչյունաբանություն և բառագիտություն խորացված, ոճաբանություն, 5–18-րդ դարերի գրականություն։", "Старшая школа: история армянского языка, фонетика и лексикология на углублённом уровне, стилистика; литература V–XVIII веков."],
-    ["Armenia grade 10 («Հայոց լեզու» 2 h + «Հայ գրականություն» 2–3 h, humanities stream more): language as a system, Grabar–Middle Armenian–Modern Armenian, Eastern and Western Armenian, orthography reforms, phonetics and lexicology in depth, stylistics. Literature: 5th-century historians, Narekatsi, medieval lyric, Sayat-Nova, Armenian Enlightenment.", "Հայաստան, 10-րդ դասարան («Հայոց լեզու» 2 ժ + «Հայ գրականություն» 2–3 ժ)՝ լեզուն որպես համակարգ, գրաբար–միջին հայերեն–աշխարհաբար, արևելահայերեն և արևմտահայերեն, ուղղագրական բարեփոխումներ, հնչյունաբանություն և բառագիտություն խորությամբ, ոճաբանություն։ Գրականություն՝ 5-րդ դարի պատմիչներ, Նարեկացի, միջնադարյան քնարերգություն, Սայաթ-Նովա, հայ լուսավորականություն։", "Армения, 10 класс («Армянский язык» 2 ч + «Армянская литература» 2–3 ч): язык как система, грабар — среднеармянский — ашхарабар, восточно- и западноармянский, орфографические реформы, углублённая фонетика и лексикология, стилистика. Литература: историки V века, Нарекаци, средневековая лирика, Саят-Нова, армянское Просвещение."],
-    ruNote,
-    { armenia: 4, russia: null },
-    [
-      unit(t("History of the language", "Լեզվի պատմություն", "История языка"), t("Indo-European origins, Grabar, Middle Armenian, Modern Armenian, the two standards, orthography.", "Հնդեվրոպական ծագում, գրաբար, միջին հայերեն, աշխարհաբար, երկու գրական տարբերակ, ուղղագրություն։", "Индоевропейское происхождение, грабар, среднеармянский, ашхарабар, два литературных стандарта, орфография."), [
-        ["indo-european", "Armenian among the Indo-European languages", "Հայերենը հնդեվրոպական լեզուների շարքում", "Армянский среди индоевропейских языков"],
-        ["grabar", "Grabar: Classical Armenian", "Գրաբար․ դասական հայերեն", "Грабар: классический армянский"],
-        ["middle-modern", "Middle Armenian and the rise of Ashkharhabar", "Միջին հայերեն և աշխարհաբարի ձևավորում", "Среднеармянский и становление ашхарабара"],
-        ["eastern-western", "Eastern and Western Armenian", "Արևելահայերեն և արևմտահայերեն", "Восточноармянский и западноармянский"],
-        ["orthography-reforms", "Orthography: classical and reformed (1922, 1940)", "Ուղղագրություն․ դասական և բարեփոխված (1922, 1940)", "Орфография: классическая и реформированная (1922, 1940)"],
-      ]),
-      unit(t("Phonetics and lexicology: advanced", "Հնչյունաբանություն և բառագիտություն․ խորացված", "Фонетика и лексикология: углублённо"), t("Phonological system, sound alternations, lexical strata, etymology, dialects.", "Հնչյունաբանական համակարգ, հնչյունափոխություն, բառապաշարի շերտեր, ստուգաբանություն, բարբառներ։", "Фонологическая система, чередования, пласты лексики, этимология, диалекты."), [
-        ["sound-alternations", "Sound alternations: ե/ի, ո/ու, ույ/ու", "Հնչյունափոխություն․ ե/ի, ո/ու, ույ/ու", "Чередования звуков: ե/ի, ո/ու, ույ/ու"],
-        ["lexical-strata", "Lexical strata: native, Iranian, Greek, Arabic, Russian, European", "Բառապաշարի շերտեր․ բնիկ, իրանական, հունական, արաբական, ռուսական, եվրոպական", "Пласты лексики: исконная, иранская, греческая, арабская, русская, европейская"],
-        ["etymology", "Etymology: Acharyan's dictionary", "Ստուգաբանություն․ Աճառյանի բառարան", "Этимология: словарь Ачаряна"],
-        ["dialects", "Armenian dialects", "Հայերենի բարբառները", "Армянские диалекты"],
-        ["terminology", "Terminology and neologisms", "Տերմինաբանություն և նորաբանություններ", "Терминология и неологизмы"],
-      ]),
-      unit(t("Stylistics", "Ոճաբանություն", "Стилистика"), t("Expressive means, tropes and figures, style of the author, stylistic analysis.", "Արտահայտչամիջոցներ, պատկերավորման միջոցներ, հեղինակի ոճ, ոճական վերլուծություն։", "Выразительные средства, тропы и фигуры, авторский стиль, стилистический анализ."), [
-        ["tropes", "Tropes: metaphor, metonymy, epithet, hyperbole", "Պատկերավորման միջոցներ․ փոխաբերություն, փոխանունություն, մակդիր, չափազանցություն", "Тропы: метафора, метонимия, эпитет, гипербола"],
-        ["figures", "Figures of speech: anaphora, antithesis, inversion", "Ոճական պատկերներ․ նախաձայն, հակադրություն, շրջադասություն", "Фигуры речи: анафора, антитеза, инверсия"],
-        ["stylistic-analysis", "Stylistic analysis of a text", "Տեքստի ոճական վերլուծություն", "Стилистический анализ текста"],
-      ]),
-      unit(t("Literature: 5th–12th centuries", "Գրականություն․ 5–12-րդ դարեր", "Литература: V–XII века"), t("Koriun, Khorenatsi, Yeghishe, Parpetsi, Narekatsi, Shnorhali.", "Կորյուն, Խորենացի, Եղիշե, Փարպեցի, Նարեկացի, Շնորհալի։", "Корюн, Хоренаци, Егише, Парпеци, Нарекаци, Шнорали."), [
-        ["koriun", "Koriun: «Life of Mashtots»", "Կորյուն․ «Վարք Մաշտոցի»", "Корюн: «Житие Маштоца»"],
-        ["yeghishe", "Yeghishe: «On Vardan and the Armenian War»", "Եղիշե․ «Վասն Վարդանայ և Հայոց պատերազմին»", "Егише: «О Вардане и войне армянской»"],
-        ["khorenatsi-10", "Khorenatsi: legends and history", "Խորենացի․ առասպելներ և պատմություն", "Хоренаци: легенды и история"],
-        ["narekatsi-10", "Narekatsi: «Book of Lamentations» in depth", "Նարեկացի․ «Մատյան ողբերգության» խորությամբ", "Нарекаци: «Книга скорбных песнопений» углублённо"],
-        ["shnorhali", "Nerses Shnorhali", "Ներսես Շնորհալի", "Нерсес Шнорали"],
-      ]),
-      unit(t("Literature: 13th–18th centuries", "Գրականություն․ 13–18-րդ դարեր", "Литература: XIII–XVIII века"), t("Frik, Kostandin Yerznkatsi, Kuchak, Naghash Hovnatan, Sayat-Nova, Baghdasar Dpir.", "Ֆրիկ, Կոստանդին Երզնկացի, Քուչակ, Նաղաշ Հովնաթան, Սայաթ-Նովա, Բաղդասար Դպիր։", "Фрик, Костандин Ерзнкаци, Кучак, Нагаш Овнатан, Саят-Нова, Багдасар Дпир."), [
-        ["frik", "Frik: social poetry", "Ֆրիկ․ սոցիալական պոեզիա", "Фрик: социальная поэзия"],
-        ["yerznkatsi", "Kostandin Yerznkatsi: spring and love", "Կոստանդին Երզնկացի․ գարուն և սեր", "Костандин Ерзнкаци: весна и любовь"],
-        ["kuchak-10", "Kuchak: hayrens of love and exile", "Քուչակ․ սիրո և պանդխտության հայրեններ", "Кучак: айрены любви и изгнания"],
-        ["sayat-nova-10", "Sayat-Nova: the trilingual poet", "Սայաթ-Նովա․ եռալեզու բանաստեղծ", "Саят-Нова: трёхъязычный поэт"],
-        ["enlightenment", "The Armenian Enlightenment: Mkhitarists, Baghdasar Dpir", "Հայ լուսավորականություն․ Մխիթարյաններ, Բաղդասար Դպիր", "Армянское Просвещение: мхитаристы, Багдасар Дпир"],
-      ]),
-    ],
-  ),
+  armenianGrade10,
   course(
     11,
     ["Morphology and syntax at an advanced level, speech culture; literature of the 19th century and the first half of the 20th.", "Ձևաբանություն և շարահյուսություն խորացված, խոսքի մշակույթ, 19-րդ դարի և 20-րդ դարի առաջին կեսի գրականություն։", "Морфология и синтаксис на углублённом уровне, культура речи; литература XIX века и первой половины XX."],
