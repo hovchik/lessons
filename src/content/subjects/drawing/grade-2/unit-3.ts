@@ -23,6 +23,10 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 
 **Martiros Saryan** painted many still lifes with Armenian fruit and flowers: pomegranates, grapes, apricots, bright bouquets.
 
+~~~art
+pic genre-still-life apple pomegranate grapes apricot
+~~~
+
 ## Look carefully
 
 | Fruit | Basic shape |
@@ -42,6 +46,10 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 | **shadow** on the fruit | the side away from the light | darker colour |
 | **cast shadow** | on the plate or table | dark, next to the fruit |
 
+~~~art
+light
+~~~
+
 ## Steps
 
 1. Look at the fruit for a whole minute before drawing.
@@ -50,8 +58,12 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 4. Leave or add a small white highlight.
 5. Paint the cast shadows on the plate.
 
-### Exercises
+~~~art
+steps apple
+~~~
 
+~~~art
+tasks
 1. What is a still life?
 2. Which Armenian artist painted pomegranates and grapes?
 3. What basic shape is an apple? A pear?
@@ -59,15 +71,21 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 5. What is a cast shadow?
 6. Draw one apple with light, shadow, highlight and cast shadow.
 7. Arrange three fruits on a plate at home and paint them from life.
+~~~
 
-### Answers
-
-1. A picture of objects that don't move. 2. Martiros Saryan. 3. A slightly flattened ball; a big and a small circle joined. 4. On the side facing the light, the brightest spot. 5. The shadow that the object throws on the table or plate. 6. The apple should look round. 7. Your own still life.`,
+~~~art
+hints
+1. A picture of objects that don't move. 2. Martiros Saryan. 3. A slightly flattened ball; a big and a small circle joined. 4. On the side facing the light, the brightest spot. 5. The shadow that the object throws on the table or plate. 6. The apple should look round. 7. Your own still life.
+~~~`,
         hy: `## Ի՞նչ է նատյուրմորտը
 
 **Նատյուրմորտը** անշարժ առարկաների նկար է՝ մրգեր, ծաղիկներ, սպասք, գրքեր։ Նկարիչները դրանք դասավորում են սեղանին և նկարում բնօրինակից։
 
 **Մարտիրոս Սարյանը** նկարել է բազմաթիվ նատյուրմորտներ հայկական մրգերով և ծաղիկներով՝ նուռ, խաղող, ծիրան, վառ ծաղկեփնջեր։
+
+~~~art
+pic genre-still-life apple pomegranate grapes apricot
+~~~
 
 ## Ուշադիր նայի՛ր
 
@@ -88,6 +106,10 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 | **սեփական ստվեր** | լույսից հեռու կողմը | ավելի մուգ գույն |
 | **ընկնող ստվեր** | ափսեի կամ սեղանի վրա | մուգ՝ մրգի կողքին |
 
+~~~art
+light
+~~~
+
 ## Քայլեր
 
 1. Նկարելուց առաջ մի ամբողջ րոպե նայի՛ր մրգին։
@@ -96,8 +118,12 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 4. Թո՛ղ կամ ավելացրո՛ւ փոքրիկ սպիտակ փայլ։
 5. Ափսեի վրա նկարի՛ր ընկնող ստվերները։
 
-### Վարժություններ
+~~~art
+steps apple
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է նատյուրմորտը։
 2. Ո՞ր հայ նկարիչն է նկարել նուռ և խաղող։
 3. Ի՞նչ հիմնական ձև ունի խնձորը։ Տանձը։
@@ -105,15 +131,21 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 5. Ի՞նչ է ընկնող ստվերը։
 6. Նկարի՛ր մեկ խնձոր՝ լույսով, ստվերով, փայլով և ընկնող ստվերով։
 7. Տանը ափսեի մեջ դասավորի՛ր երեք միրգ և նկարի՛ր բնօրինակից։
+~~~
 
-### Պատասխաններ
-
-1. Անշարժ առարկաների նկար։ 2. Մարտիրոս Սարյանը։ 3. Մի քիչ տափակ գունդ, միացած մեծ և փոքր շրջաններ։ 4. Լույսին նայող կողմում՝ ամենապայծառ կետը։ 5. Ստվերը, որ առարկան գցում է սեղանին կամ ափսեին։ 6. Խնձորը պետք է կլոր թվա։ 7. Քո նատյուրմորտը։`,
+~~~art
+hints
+1. Անշարժ առարկաների նկար։ 2. Մարտիրոս Սարյանը։ 3. Մի քիչ տափակ գունդ, միացած մեծ և փոքր շրջաններ։ 4. Լույսին նայող կողմում՝ ամենապայծառ կետը։ 5. Ստվերը, որ առարկան գցում է սեղանին կամ ափսեին։ 6. Խնձորը պետք է կլոր թվա։ 7. Քո նատյուրմորտը։
+~~~`,
         ru: `## Что такое натюрморт?
 
 **Натюрморт** — картина с неподвижными предметами: фрукты, цветы, посуда, книги. Художники расставляют их на столе и пишут с натуры.
 
 **Мартирос Сарьян** написал много натюрмортов с армянскими фруктами и цветами: гранаты, виноград, абрикосы, яркие букеты.
+
+~~~art
+pic genre-still-life apple pomegranate grapes apricot
+~~~
 
 ## Смотри внимательно
 
@@ -134,6 +166,10 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 | **собственная тень** | сторона от света | темнее |
 | **падающая тень** | на тарелке или столе | тёмная, рядом с фруктом |
 
+~~~art
+light
+~~~
+
 ## Шаги
 
 1. Посмотри на фрукт целую минуту, прежде чем рисовать.
@@ -142,8 +178,12 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 4. Оставь или добавь маленький белый блик.
 5. Напиши падающие тени на тарелке.
 
-### Упражнения
+~~~art
+steps apple
+~~~
 
+~~~art
+tasks
 1. Что такое натюрморт?
 2. Какой армянский художник писал гранаты и виноград?
 3. Какая основная форма у яблока? У груши?
@@ -151,10 +191,12 @@ A **still life** is a picture of objects that don't move: fruit, flowers, dishes
 5. Что такое падающая тень?
 6. Нарисуй одно яблоко со светом, тенью, бликом и падающей тенью.
 7. Положи дома три фрукта на тарелку и напиши их с натуры.
+~~~
 
-### Ответы
-
-1. Картина с неподвижными предметами. 2. Мартирос Сарьян. 3. Слегка приплюснутый шар; большой и маленький круг вместе. 4. На стороне к свету, самая яркая точка. 5. Тень, которую предмет отбрасывает на стол или тарелку. 6. Яблоко должно выглядеть объёмным. 7. Твой натюрморт.`,
+~~~art
+hints
+1. Картина с неподвижными предметами. 2. Мартирос Сарьян. 3. Слегка приплюснутый шар; большой и маленький круг вместе. 4. На стороне к свету, самая яркая точка. 5. Тень, которую предмет отбрасывает на стол или тарелку. 6. Яблоко должно выглядеть объёмным. 7. Твой натюрморт.
+~~~`,
       },
       [
         q(t("A still life shows…", "Նատյուրմորտը պատկերում է…", "Натюрморт изображает…"), [t("objects that don't move", "անշարժ առարկաներ", "неподвижные предметы"), t("the sea", "ծովը", "море"), t("a person's face", "մարդու դեմք", "лицо человека")], 0),
@@ -189,6 +231,10 @@ A **study** (étude) is a quick, careful painting from life. Artists make studie
 | apricot | round with a sharp tip | small teeth |
 | walnut | made of several long leaflets | smooth |
 
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
+
 ## Veins
 
 Veins are the leaf's «roads». The main vein goes from the stalk to the tip; smaller veins grow from it like branches of a tree. Draw the main vein first.
@@ -196,6 +242,10 @@ Veins are the leaf's «roads». The main vein goes from the stalk to the tip; sm
 ## Autumn colours
 
 One leaf can have many colours: green near the veins, yellow at the edge, orange and red spots, brown dry tips. Look for them!
+
+~~~art
+palette autumn
+~~~
 
 ## Steps
 
@@ -205,8 +255,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 4. Paint with watercolour: light colours first, then spots and darker parts.
 5. Paint the veins last with a thin brush or leave them light.
 
-### Exercises
+~~~art
+steps leaf
+~~~
 
+~~~art
+tasks
 1. What is a study?
 2. Which leaf looks like a hand?
 3. What do we draw first: the outline or the main vein?
@@ -214,10 +268,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 5. Collect three different leaves and draw their outlines.
 6. Make a colour study of one autumn leaf.
 7. Make a «herbarium page»: draw three leaves and write the tree's name under each.
+~~~
 
-### Answers
-
-1. A quick, careful painting from life made to learn how things look. 2. The maple leaf. 3. The main vein. 4. For example, green, yellow, red, brown. 5. Each outline has its own shape. 6. The colours and veins should match the real leaf. 7. For example, oak, maple, walnut.`,
+~~~art
+hints
+1. A quick, careful painting from life made to learn how things look. 2. The maple leaf. 3. The main vein. 4. For example, green, yellow, red, brown. 5. Each outline has its own shape. 6. The colours and veins should match the real leaf. 7. For example, oak, maple, walnut.
+~~~`,
         hy: `## Ի՞նչ է էտյուդը
 
 **Էտյուդը** բնօրինակից արագ և ուշադիր արված նկար է։ Նկարիչներն էտյուդներ են անում, որ **սովորեն**, թե ինչպես են իրերը երևում։ Էտյուդը կարող է փոքր և անավարտ լինել. կարևորը ուշադիր նայելն է։
@@ -233,6 +289,10 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 | ծիրանենի | կլոր՝ սուր ծայրով | մանր ատամիկներ |
 | ընկուզենի | կազմված է մի քանի երկար տերևիկներից | հարթ |
 
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
+
 ## Ջղեր
 
 Ջղերը տերևի «ճանապարհներն» են։ Գլխավոր ջիղը գնում է կոթունից դեպի ծայրը, փոքր ջղերը նրանից ճյուղավորվում են ծառի ճյուղերի պես։ Սկզբում նկարի՛ր գլխավոր ջիղը։
@@ -240,6 +300,10 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 ## Աշնան գույներ
 
 Մեկ տերևը կարող է շատ գույներ ունենալ՝ կանաչ ջղերի մոտ, դեղին եզրին, նարնջագույն և կարմիր բծեր, դարչնագույն չոր ծայրեր։ Փնտրի՛ր դրանք։
+
+~~~art
+palette autumn
+~~~
 
 ## Քայլեր
 
@@ -249,8 +313,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 4. Ներկի՛ր ջրաներկով. սկզբում բաց գույները, հետո բծերը և մուգ մասերը։
 5. Ջղերը նկարի՛ր վերջում՝ բարակ վրձնով, կամ թո՛ղ բաց։
 
-### Վարժություններ
+~~~art
+steps leaf
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է էտյուդը։
 2. Ո՞ր տերևն է ձեռքի նման։
 3. Ի՞նչ ենք նկարում սկզբում՝ ուրվագի՞ծը, թե՞ գլխավոր ջիղը։
@@ -258,10 +326,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 5. Հավաքի՛ր երեք տարբեր տերև և նկարի՛ր դրանց ուրվագծերը։
 6. Մեկ աշնանային տերևի գունավոր էտյուդ արա՛։
 7. Պատրաստի՛ր «հերբարիումի էջ». նկարի՛ր երեք տերև և ամեն մեկի տակ գրի՛ր ծառի անունը։
+~~~
 
-### Պատասխաններ
-
-1. Բնօրինակից արագ, ուշադիր նկար՝ սովորելու համար։ 2. Թխկու տերևը։ 3. Գլխավոր ջիղը։ 4. Օրինակ՝ կանաչ, դեղին, կարմիր, դարչնագույն։ 5. Ամեն ուրվագիծ իր ձևն ունի։ 6. Գույներն ու ջղերը պետք է համապատասխանեն իրական տերևին։ 7. Օրինակ՝ կաղնի, թխկի, ընկուզենի։`,
+~~~art
+hints
+1. Բնօրինակից արագ, ուշադիր նկար՝ սովորելու համար։ 2. Թխկու տերևը։ 3. Գլխավոր ջիղը։ 4. Օրինակ՝ կանաչ, դեղին, կարմիր, դարչնագույն։ 5. Ամեն ուրվագիծ իր ձևն ունի։ 6. Գույներն ու ջղերը պետք է համապատասխանեն իրական տերևին։ 7. Օրինակ՝ կաղնի, թխկի, ընկուզենի։
+~~~`,
         ru: `## Что такое этюд?
 
 **Этюд** — быстрая внимательная работа с натуры. Художники делают этюды, чтобы **изучить**, как выглядят вещи. Этюд может быть маленьким и незаконченным: главное — внимательно смотреть.
@@ -277,6 +347,10 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 | абрикос | круглый, с острым кончиком | мелкие зубчики |
 | грецкий орех | из нескольких длинных листочков | гладкий |
 
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
+
 ## Прожилки
 
 Прожилки — «дороги» листа. Главная жилка идёт от черешка к кончику, от неё отходят мелкие, как ветви дерева. Начни с главной жилки.
@@ -284,6 +358,10 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 ## Цвета осени
 
 На одном листе может быть много цветов: зелёный у прожилок, жёлтый по краю, оранжевые и красные пятна, коричневые сухие кончики. Ищи их!
+
+~~~art
+palette autumn
+~~~
 
 ## Шаги
 
@@ -293,8 +371,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 4. Пиши акварелью: сначала светлые цвета, потом пятна и тёмные места.
 5. Прожилки напиши в конце тонкой кистью или оставь светлыми.
 
-### Упражнения
+~~~art
+steps leaf
+~~~
 
+~~~art
+tasks
 1. Что такое этюд?
 2. Какой лист похож на ладонь?
 3. Что рисуем сначала: контур или главную жилку?
@@ -302,10 +384,12 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 5. Собери три разных листа и нарисуй их контуры.
 6. Сделай цветной этюд одного осеннего листа.
 7. Сделай «страницу гербария»: нарисуй три листа и подпиши под каждым дерево.
+~~~
 
-### Ответы
-
-1. Быстрая внимательная работа с натуры, чтобы изучить предмет. 2. Кленовый. 3. Главную жилку. 4. Например, зелёный, жёлтый, красный, коричневый. 5. У каждого контура своя форма. 6. Цвета и прожилки должны соответствовать настоящему листу. 7. Например, дуб, клён, грецкий орех.`,
+~~~art
+hints
+1. Быстрая внимательная работа с натуры, чтобы изучить предмет. 2. Кленовый. 3. Главную жилку. 4. Например, зелёный, жёлтый, красный, коричневый. 5. У каждого контура своя форма. 6. Цвета и прожилки должны соответствовать настоящему листу. 7. Например, дуб, клён, грецкий орех.
+~~~`,
       },
       [
         q(t("A study (étude) is…", "Էտյուդը…", "Этюд — это…"), [t("a quick careful painting from life", "բնօրինակից արագ, ուշադիր նկար է", "быстрая внимательная работа с натуры"), t("a framed museum painting", "թանգարանային կտավ է շրջանակով", "картина в раме в музее"), t("a type of paper", "թղթի տեսակ է", "вид бумаги")], 0),
@@ -335,6 +419,10 @@ One leaf can have many colours: green near the veins, yellow at the edge, orange
 | a doll | an oval head, a rectangle or triangle dress, thin arms and legs |
 | a pyramid toy | rings getting smaller from the bottom to the top |
 
+~~~art
+pic matryoshka dymkovo filimonovo
+~~~
+
 ## Measure with your eyes
 
 Compare parts with each other:
@@ -357,8 +445,17 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 4. Add the face and details last.
 5. Paint: big areas first; fur can be shown with short strokes.
 
-### Exercises
+~~~art
+steps teddy
+~~~
 
+~~~art
+sketch
+Draw your own favourite toy from big simple shapes first, then add the details.
+~~~
+
+~~~art
+tasks
 1. What shapes make a teddy bear?
 2. How can you compare sizes without a ruler?
 3. What gives a toy its character?
@@ -366,10 +463,12 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 5. Draw a ball, a car and a pyramid using only simple shapes.
 6. Draw and paint your favourite toy from life.
 7. Draw the same toy twice: once happy, once sad. What did you change?
+~~~
 
-### Answers
-
-1. An oval body, a round head, circle ears, oval paws. 2. Hold a pencil at arm's length and compare parts. 3. Small details: tilt of the head, eyes, paws. 4. Tilted to one side. 5. A circle; rectangles and circles; rings getting smaller. 6. The proportions should match the real toy. 7. For example, the mouth, the eyebrows, the tilt of the head and ears.`,
+~~~art
+hints
+1. An oval body, a round head, circle ears, oval paws. 2. Hold a pencil at arm's length and compare parts. 3. Small details: tilt of the head, eyes, paws. 4. Tilted to one side. 5. A circle; rectangles and circles; rings getting smaller. 6. The proportions should match the real toy. 7. For example, the mouth, the eyebrows, the tilt of the head and ears.
+~~~`,
         hy: `## Ամեն խաղալիք կազմված է ձևերից
 
 | Խաղալիք | Ձևեր |
@@ -379,6 +478,10 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 | խաղալիք մեքենա 🚗 | ուղղանկյուններ և շրջաններ՝ անիվների համար |
 | տիկնիկ | օվալ գլուխ, ուղղանկյուն կամ եռանկյուն զգեստ, բարակ ձեռքեր և ոտքեր |
 | բուրգ-խաղալիք | օղակներ՝ ներքևից վեր փոքրացող |
+
+~~~art
+pic matryoshka dymkovo filimonovo
+~~~
 
 ## Չափի՛ր աչքով
 
@@ -402,8 +505,17 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 4. Դեմքն ու մանրուքներն ավելացրո՛ւ վերջում։
 5. Ներկի՛ր. սկզբում մեծ մասերը, մորթին կարելի է ցույց տալ կարճ շտրիխներով։
 
-### Վարժություններ
+~~~art
+steps teddy
+~~~
 
+~~~art
+sketch
+Նկարի՛ր քո սիրելի խաղալիքը․ նախ մեծ պարզ ձևերով, հետո ավելացրու մանրամասները։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ ձևերից է կազմված արջուկը։
 2. Ինչպե՞ս համեմատել չափերը առանց քանոնի։
 3. Ի՞նչն է խաղալիքին բնավորություն տալիս։
@@ -411,10 +523,12 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 5. Միայն պարզ ձևերով նկարի՛ր գնդակ, մեքենա և բուրգ։
 6. Բնօրինակից նկարի՛ր և ներկի՛ր քո սիրելի խաղալիքը։
 7. Նույն խաղալիքը նկարի՛ր երկու անգամ՝ ուրախ և տխուր։ Ի՞նչ փոխեցիր։
+~~~
 
-### Պատասխաններ
-
-1. Օվալ մարմին, կլոր գլուխ, շրջան ականջներ, օվալ թաթեր։ 2. Մատիտը բռնել ձգված ձեռքով և համեմատել մասերը։ 3. Մանրուքները՝ գլխի թեքություն, աչքեր, թաթեր։ 4. Մի կողմ թեքվածը։ 5. Շրջան, ուղղանկյուններ և շրջաններ, փոքրացող օղակներ։ 6. Համամասնությունները պետք է համապատասխանեն իրական խաղալիքին։ 7. Օրինակ՝ բերանը, հոնքերը, գլխի և ականջների թեքությունը։`,
+~~~art
+hints
+1. Օվալ մարմին, կլոր գլուխ, շրջան ականջներ, օվալ թաթեր։ 2. Մատիտը բռնել ձգված ձեռքով և համեմատել մասերը։ 3. Մանրուքները՝ գլխի թեքություն, աչքեր, թաթեր։ 4. Մի կողմ թեքվածը։ 5. Շրջան, ուղղանկյուններ և շրջաններ, փոքրացող օղակներ։ 6. Համամասնությունները պետք է համապատասխանեն իրական խաղալիքին։ 7. Օրինակ՝ բերանը, հոնքերը, գլխի և ականջների թեքությունը։
+~~~`,
         ru: `## Каждая игрушка состоит из форм
 
 | Игрушка | Формы |
@@ -424,6 +538,10 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 | машинка 🚗 | прямоугольники и круги-колёса |
 | кукла | овальная голова, платье-прямоугольник или треугольник, тонкие руки и ноги |
 | пирамидка | кольца, уменьшающиеся снизу вверх |
+
+~~~art
+pic matryoshka dymkovo filimonovo
+~~~
 
 ## Измеряй глазами
 
@@ -447,8 +565,17 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 4. Мордочку и детали — в конце.
 5. Пиши красками: сначала большие части; мех можно передать короткими мазками.
 
-### Упражнения
+~~~art
+steps teddy
+~~~
 
+~~~art
+sketch
+Нарисуй свою любимую игрушку: сначала крупными простыми формами, потом детали.
+~~~
+
+~~~art
+tasks
 1. Из каких форм состоит мишка?
 2. Как сравнить размеры без линейки?
 3. Что придаёт игрушке характер?
@@ -456,10 +583,12 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 5. Нарисуй мяч, машинку и пирамидку только простыми формами.
 6. Нарисуй и напиши красками свою любимую игрушку с натуры.
 7. Нарисуй одну и ту же игрушку дважды: весёлой и грустной. Что ты изменил?
+~~~
 
-### Ответы
-
-1. Овальное туловище, круглая голова, ушки-кружки, овальные лапы. 2. Держать карандаш в вытянутой руке и сравнивать части. 3. Мелочи: наклон головы, глаза, лапы. 4. Набок. 5. Круг; прямоугольники и круги; уменьшающиеся кольца. 6. Пропорции должны соответствовать настоящей игрушке. 7. Например, рот, брови, наклон головы и ушей.`,
+~~~art
+hints
+1. Овальное туловище, круглая голова, ушки-кружки, овальные лапы. 2. Держать карандаш в вытянутой руке и сравнивать части. 3. Мелочи: наклон головы, глаза, лапы. 4. Набок. 5. Круг; прямоугольники и круги; уменьшающиеся кольца. 6. Пропорции должны соответствовать настоящей игрушке. 7. Например, рот, брови, наклон головы и ушей.
+~~~`,
       },
       [
         q(t("A teddy bear's body is usually drawn as…", "Արջուկի մարմինը սովորաբար նկարում ենք…", "Туловище мишки обычно рисуют…"), [t("an oval", "օվալով", "овалом"), t("a triangle", "եռանկյունով", "треугольником"), t("a star", "աստղով", "звездой")], 0),
@@ -482,6 +611,10 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
         en: `## Composition
 
 **Composition** is how things are **placed** in a picture. A good composition makes the picture easy and pleasant to look at.
+
+~~~art
+compose
+~~~
 
 ## Vertical or horizontal?
 
@@ -510,12 +643,21 @@ A toy can look **funny**, **sad**, **brave** or **sleepy**. Character comes from
 | can cover things behind it | partly hidden |
 | bright, clear details | pale, fewer details |
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Task: «Houses on a hill»
 
 Draw three houses: one near (big, low on the page), one in the middle and one far (small, high up, pale). Add trees the same way. Your picture will look deep!
 
-### Exercises
+~~~art
+sketch guide=thirds
+Houses on a hill: big houses below in front, small ones higher up and far away.
+~~~
 
+~~~art
+tasks
 1. What is composition?
 2. Which sheet would you choose for a tall tower? For the sea?
 3. What is wrong if an object touches all the edges?
@@ -523,13 +665,19 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 5. Draw the same apple three times: too small, too big and just right.
 6. Draw «Houses on a hill».
 7. Look at a picture in a book and say: is it vertical or horizontal? What is the main object?
+~~~
 
-### Answers
-
-1. How things are placed in a picture. 2. Vertical; horizontal. 3. It looks squeezed, there is no air. 4. Higher up, and smaller. 5. The right one takes about two-thirds of the sheet. 6. Near houses big and low, far houses small and high. 7. Your own answer.`,
+~~~art
+hints
+1. How things are placed in a picture. 2. Vertical; horizontal. 3. It looks squeezed, there is no air. 4. Higher up, and smaller. 5. The right one takes about two-thirds of the sheet. 6. Near houses big and low, far houses small and high. 7. Your own answer.
+~~~`,
         hy: `## Կոմպոզիցիա
 
 **Կոմպոզիցիան** այն է, թե ինչպես են իրերը **տեղադրված** նկարում։ Լավ կոմպոզիցիան նկարը դարձնում է հեշտ և հաճելի դիտելու համար։
+
+~~~art
+compose
+~~~
 
 ## Ուղղահայա՞ց, թե՞ հորիզոնական
 
@@ -558,12 +706,21 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 | կարող է ծածկել հետևինը | մասամբ թաքնված |
 | վառ, պարզ մանրուքներ | գունատ, քիչ մանրուքներ |
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Առաջադրանք. «Տներ բլրի վրա»
 
 Նկարի՛ր երեք տուն. մեկը մոտ (մեծ, թերթի ներքևում), մեկը՝ մեջտեղում, մեկը՝ հեռու (փոքր, վերևում, գունատ)։ Նույն կերպ ավելացրո՛ւ ծառեր։ Նկարդ խոր կթվա։
 
-### Վարժություններ
+~~~art
+sketch guide=thirds
+Տներ բլրի վրա․ մեծ տները՝ ներքևում, առջևում, փոքրերը՝ վերևում և հեռվում։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է կոմպոզիցիան։
 2. Ո՞ր թերթը կընտրես բարձր աշտարակի համար։ Ծովի համար։
 3. Ի՞նչն է սխալ, եթե առարկան դիպչում է բոլոր եզրերին։
@@ -571,13 +728,19 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 5. Նույն խնձորը նկարի՛ր երեք անգամ՝ շատ փոքր, շատ մեծ և ճիշտ չափի։
 6. Նկարի՛ր «Տներ բլրի վրա»։
 7. Գրքում նայի՛ր մի նկարի և ասա՛. ուղղահայա՞ց է, թե՞ հորիզոնական։ Ո՞րն է գլխավոր առարկան։
+~~~
 
-### Պատասխաններ
-
-1. Թե ինչպես են իրերը տեղադրված նկարում։ 2. Ուղղահայաց, հորիզոնական։ 3. Սեղմված է թվում, օդ չկա։ 4. Վերևում և ավելի փոքր։ 5. Ճիշտը զբաղեցնում է թերթի մոտ երկու երրորդը։ 6. Մոտիկ տները մեծ են և ներքևում, հեռավորները՝ փոքր և վերևում։ 7. Քո պատասխանը։`,
+~~~art
+hints
+1. Թե ինչպես են իրերը տեղադրված նկարում։ 2. Ուղղահայաց, հորիզոնական։ 3. Սեղմված է թվում, օդ չկա։ 4. Վերևում և ավելի փոքր։ 5. Ճիշտը զբաղեցնում է թերթի մոտ երկու երրորդը։ 6. Մոտիկ տները մեծ են և ներքևում, հեռավորները՝ փոքր և վերևում։ 7. Քո պատասխանը։
+~~~`,
         ru: `## Композиция
 
 **Композиция** — то, как предметы **расположены** на картине. Хорошая композиция делает картину понятной и приятной.
+
+~~~art
+compose
+~~~
 
 ## Вертикально или горизонтально?
 
@@ -606,12 +769,21 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 | может закрывать то, что позади | частично скрыто |
 | яркие, чёткие детали | бледное, меньше деталей |
 
+~~~art
+steps landscape-planes
+~~~
+
 ## Задание: «Домики на холме»
 
 Нарисуй три дома: один близко (крупный, внизу листа), один посередине и один далеко (маленький, высоко, бледный). Так же добавь деревья. Картина станет глубокой!
 
-### Упражнения
+~~~art
+sketch guide=thirds
+Дома на холме: большие дома внизу впереди, маленькие выше и дальше.
+~~~
 
+~~~art
+tasks
 1. Что такое композиция?
 2. Какой лист выберешь для высокой башни? Для моря?
 3. Что не так, если предмет касается всех краёв?
@@ -619,10 +791,12 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 5. Нарисуй одно и то же яблоко трижды: слишком маленьким, слишком большим и в самый раз.
 6. Нарисуй «Домики на холме».
 7. Посмотри на картинку в книге и скажи: она вертикальная или горизонтальная? Что в ней главное?
+~~~
 
-### Ответы
-
-1. Расположение предметов на картине. 2. Вертикальный; горизонтальный. 3. Тесно, нет воздуха. 4. Выше, и мельче. 5. Правильное занимает около двух третей листа. 6. Ближние дома крупные и внизу, дальние — маленькие и вверху. 7. Твой ответ.`,
+~~~art
+hints
+1. Расположение предметов на картине. 2. Вертикальный; горизонтальный. 3. Тесно, нет воздуха. 4. Выше, и мельче. 5. Правильное занимает около двух третей листа. 6. Ближние дома крупные и внизу, дальние — маленькие и вверху. 7. Твой ответ.
+~~~`,
       },
       [
         q(t("Composition is…", "Կոմպոզիցիան…", "Композиция — это…"), [t("how things are placed in a picture", "նկարում իրերի տեղադրությունն է", "расположение предметов на картине"), t("a kind of paint", "ներկի տեսակ է", "вид краски"), t("the frame", "շրջանակն է", "рама")], 0),
@@ -646,6 +820,11 @@ Draw three houses: one near (big, low on the page), one in the middle and one fa
 
 **Proportions** tell us how big the parts are **compared to each other**: a long neck and a small head, short legs and a big body. If we change the proportions, we get a different animal!
 
+~~~art
+proportions
+Proportions are how big the parts are compared to the whole. A baby's head is a quarter of its height!
+~~~
+
 ## Same shapes, different birds
 
 Every bird can be built from an **oval body**, a **circle head**, a **triangle beak**, a **tail** and **legs**. Only the proportions change.
@@ -661,16 +840,30 @@ Every bird can be built from an **oval body**, a **circle head**, a **triangle b
 
 The **stork** is a symbol of spring in Armenia: storks build big nests on poles and roofs in the Ararat valley.
 
+~~~art
+pic stork dove bird-motif
+Same shapes, different proportions: a long-legged stork, a round dove.
+~~~
+
 ## Animals too
 
 A **giraffe** has a very long neck and legs; a **hedgehog** is almost all body; a **dachshund** has a long body and short legs. Proportions make each animal recognisable.
+
+~~~art
+steps horse
+~~~
 
 ## Task: a bird «family portrait»
 
 Draw five birds from the table in a row, all from ovals, circles and triangles. Then paint them. Can a friend recognise each bird only by its proportions?
 
-### Exercises
+~~~art
+sketch
+A bird family portrait: a big parent and little chicks, the same shapes in different sizes.
+~~~
 
+~~~art
+tasks
 1. What are proportions?
 2. Which bird has long legs and a long neck?
 3. Which bird has almost no neck and short legs?
@@ -678,13 +871,20 @@ Draw five birds from the table in a row, all from ovals, circles and triangles. 
 5. Which bird builds nests on poles in the Ararat valley?
 6. Draw a sparrow and a stork side by side from the same shapes.
 7. Invent a funny bird with strange proportions and give it a name.
+~~~
 
-### Answers
-
-1. The sizes of parts compared to each other. 2. The stork or the heron. 3. The sparrow. 4. An oval body, a circle head, a triangle beak, a tail and legs. 5. The stork. 6. The sparrow is round with short legs; the stork is slim with long legs and neck. 7. Your own bird.`,
+~~~art
+hints
+1. The sizes of parts compared to each other. 2. The stork or the heron. 3. The sparrow. 4. An oval body, a circle head, a triangle beak, a tail and legs. 5. The stork. 6. The sparrow is round with short legs; the stork is slim with long legs and neck. 7. Your own bird.
+~~~`,
         hy: `## Ի՞նչ են համամասնությունները
 
 **Համամասնությունները** ցույց են տալիս, թե որքան մեծ են մասերը **իրար համեմատ**՝ երկար վիզ և փոքր գլուխ, կարճ ոտքեր և մեծ մարմին։ Համամասնությունները փոխելով՝ ուրիշ կենդանի ենք ստանում։
+
+~~~art
+proportions
+Համաչափությունները ցույց են տալիս, թե որքան մեծ են մասերն ամբողջի համեմատ։ Մանկան գլուխը նրա հասակի քառորդն է։
+~~~
 
 ## Նույն ձևեր, տարբեր թռչուններ
 
@@ -701,16 +901,30 @@ Draw five birds from the table in a row, all from ovals, circles and triangles. 
 
 **Արագիլը** Հայաստանում գարնան խորհրդանիշ է. արագիլները մեծ բներ են հյուսում Արարատյան դաշտի սյուների և տանիքների վրա։
 
+~~~art
+pic stork dove bird-motif
+Նույն ձևերը, տարբեր համաչափություններ՝ երկարոտն արագիլ, կլորիկ աղավնի։
+~~~
+
 ## Կենդանիները նույնպես
 
 **Ընձուղտը** շատ երկար վիզ և ոտքեր ունի, **ոզնին** գրեթե ամբողջովին մարմին է, **տաքսան** ունի երկար մարմին և կարճ ոտքեր։ Համամասնություններն են ամեն կենդանուն ճանաչելի դարձնում։
+
+~~~art
+steps horse
+~~~
 
 ## Առաջադրանք. թռչունների «ընտանեկան դիմանկար»
 
 Աղյուսակից հինգ թռչուն նկարի՛ր մեկ շարքով՝ բոլորը օվալներից, շրջաններից և եռանկյուններից։ Հետո ներկի՛ր։ Ընկերդ կճանաչի՞ ամեն թռչունին միայն համամասնություններով։
 
-### Վարժություններ
+~~~art
+sketch
+Թռչունների ընտանեկան դիմանկար․ մեծ ծնող և փոքրիկ ճտեր՝ նույն ձևերը տարբեր չափերով։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ են համամասնությունները։
 2. Ո՞ր թռչունն ունի երկար ոտքեր և երկար վիզ։
 3. Ո՞ր թռչունը գրեթե վիզ չունի և ունի կարճ ոտքեր։
@@ -718,13 +932,20 @@ Draw five birds from the table in a row, all from ovals, circles and triangles. 
 5. Ո՞ր թռչունն է բույն դնում Արարատյան դաշտի սյուներին։
 6. Նույն ձևերից կողք կողքի նկարի՛ր ճնճղուկ և արագիլ։
 7. Հորինի՛ր տարօրինակ համամասնություններով զվարճալի թռչուն և անուն տուր նրան։
+~~~
 
-### Պատասխաններ
-
-1. Մասերի չափերը իրար համեմատ։ 2. Արագիլը կամ տառեղը։ 3. Ճնճղուկը։ 4. Օվալ մարմին, շրջան գլուխ, եռանկյուն կտուց, պոչ և ոտքեր։ 5. Արագիլը։ 6. Ճնճղուկը կլոր է՝ կարճ ոտքերով, արագիլը՝ բարակ, երկար ոտքերով և վզով։ 7. Քո թռչունը։`,
+~~~art
+hints
+1. Մասերի չափերը իրար համեմատ։ 2. Արագիլը կամ տառեղը։ 3. Ճնճղուկը։ 4. Օվալ մարմին, շրջան գլուխ, եռանկյուն կտուց, պոչ և ոտքեր։ 5. Արագիլը։ 6. Ճնճղուկը կլոր է՝ կարճ ոտքերով, արագիլը՝ բարակ, երկար ոտքերով և վզով։ 7. Քո թռչունը։
+~~~`,
         ru: `## Что такое пропорции?
 
 **Пропорции** показывают, насколько велики части **по сравнению друг с другом**: длинная шея и маленькая голова, короткие ноги и большое туловище. Изменим пропорции — получим другое животное!
+
+~~~art
+proportions
+Пропорции — это размер частей по сравнению с целым. Голова малыша — четверть его роста!
+~~~
 
 ## Одни формы — разные птицы
 
@@ -741,16 +962,30 @@ Draw five birds from the table in a row, all from ovals, circles and triangles. 
 
 **Аист** в Армении — символ весны: аисты вьют большие гнёзда на столбах и крышах в Араратской долине.
 
+~~~art
+pic stork dove bird-motif
+Те же формы, разные пропорции: длинноногий аист, круглый голубь.
+~~~
+
 ## И звери тоже
 
 У **жирафа** очень длинные шея и ноги; **ёжик** — почти одно туловище; у **таксы** длинное тело и короткие лапы. Пропорции делают каждое животное узнаваемым.
+
+~~~art
+steps horse
+~~~
 
 ## Задание: «семейный портрет» птиц
 
 Нарисуй в ряд пять птиц из таблицы — все из овалов, кругов и треугольников. Потом раскрась. Узнает ли друг каждую птицу только по пропорциям?
 
-### Упражнения
+~~~art
+sketch
+Семейный портрет птиц: большой родитель и маленькие птенцы — те же формы разного размера.
+~~~
 
+~~~art
+tasks
 1. Что такое пропорции?
 2. У какой птицы длинные ноги и длинная шея?
 3. У какой птицы почти нет шеи и короткие ноги?
@@ -758,10 +993,12 @@ Draw five birds from the table in a row, all from ovals, circles and triangles. 
 5. Какая птица вьёт гнёзда на столбах в Араратской долине?
 6. Нарисуй рядом воробья и аиста из одинаковых форм.
 7. Придумай смешную птицу со странными пропорциями и дай ей имя.
+~~~
 
-### Ответы
-
-1. Соотношение размеров частей. 2. Аист или цапля. 3. Воробей. 4. Овал-туловище, круг-голова, треугольник-клюв, хвост и лапы. 5. Аист. 6. Воробей круглый с короткими лапками, аист стройный, с длинными ногами и шеей. 7. Твоя птица.`,
+~~~art
+hints
+1. Соотношение размеров частей. 2. Аист или цапля. 3. Воробей. 4. Овал-туловище, круг-голова, треугольник-клюв, хвост и лапы. 5. Аист. 6. Воробей круглый с короткими лапками, аист стройный, с длинными ногами и шеей. 7. Твоя птица.
+~~~`,
       },
       [
         q(t("Proportions show…", "Համամասնությունները ցույց են տալիս…", "Пропорции показывают…"), [t("the sizes of parts compared to each other", "մասերի չափերը իրար համեմատ", "соотношение размеров частей"), t("the colour of an object", "առարկայի գույնը", "цвет предмета"), t("the price of a picture", "նկարի գինը", "цену картины")], 0),
@@ -794,6 +1031,10 @@ Look closely at small things: there are amazing shapes and patterns!
 | a feather | a central shaft and thin «hairs» on both sides |
 | a butterfly wing 🦋 | symmetrical patterns and eye-spots |
 
+~~~art
+pic shell cone pebbles feather
+~~~
+
 ## Big from small
 
 Artists often draw a small object **much bigger** than it is. Then we can see every detail. Put a shell or a cone under a **magnifying glass** 🔍, look for a minute and then draw it to fill the page.
@@ -807,12 +1048,22 @@ Use what you learned in graphics:
 - dots and speckles for a pebble,
 - many fine parallel lines for a feather.
 
+~~~art
+tone
+Lines, dots and spots make textures: rough bark, soft moss, a smooth pebble.
+~~~
+
 ## Task: «Under the magnifying glass»
 
 Choose one small natural object. Draw it so it fills almost the whole page. Use a black felt-tip pen or pencil for the lines and textures. Then add a little watercolour if you like.
 
-### Exercises
+~~~art
+sketch guide=circle
+Under the magnifying glass: draw a shell or a cone very big, with every tiny detail.
+~~~
 
+~~~art
+tasks
 1. What shape can you see in a snail shell?
 2. How are the scales on a pine cone arranged?
 3. Why do artists sometimes draw small things much bigger?
@@ -820,10 +1071,12 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 5. Draw three spirals: tight, loose and growing.
 6. Draw an enlarged feather with fine lines.
 7. Make the «Under the magnifying glass» drawing.
+~~~
 
-### Answers
-
-1. A spiral. 2. In spirals around the cone. 3. To show all the details. 4. Dots and speckles, maybe stripes. 5. Lines close together; far apart; getting wider. 6. A central shaft with many thin lines on both sides. 7. The object fills the page and has many details.`,
+~~~art
+hints
+1. A spiral. 2. In spirals around the cone. 3. To show all the details. 4. Dots and speckles, maybe stripes. 5. Lines close together; far apart; getting wider. 6. A central shaft with many thin lines on both sides. 7. The object fills the page and has many details.
+~~~`,
         hy: `## Բնությունը լավագույն դիզայներն է
 
 Ուշադիր նայի՛ր փոքր իրերին. զարմանալի ձևեր և նախշեր կան։
@@ -836,6 +1089,10 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 | քարուկ | հարթ ձև, գծեր և բծեր |
 | փետուր | կենտրոնական առանցք և երկու կողմում բարակ «մազիկներ» |
 | թիթեռի թև 🦋 | համաչափ նախշեր և «աչքեր» |
+
+~~~art
+pic shell cone pebbles feather
+~~~
 
 ## Մեծը՝ փոքրից
 
@@ -850,12 +1107,22 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 - կետեր և պտուկներ՝ քարուկի համար,
 - շատ նուրբ զուգահեռ գծեր՝ փետուրի համար։
 
+~~~art
+tone
+Գծերը, կետերն ու բծերը ստեղծում են մակերեսներ՝ կոպիտ կեղև, փափուկ մամուռ, հարթ խճաքար։
+~~~
+
 ## Առաջադրանք. «Խոշորացույցի տակ»
 
 Ընտրի՛ր բնության մեկ փոքր առարկա։ Նկարի՛ր այնպես, որ գրեթե ամբողջ էջը լցնի։ Գծերի և մակերեսների համար օգտագործի՛ր սև ֆլոմաստեր կամ մատիտ։ Ցանկության դեպքում մի քիչ ջրաներկ ավելացրո՛ւ։
 
-### Վարժություններ
+~~~art
+sketch guide=circle
+Խոշորացույցի տակ․ նկարի՛ր խեցին կամ կոնը շատ մեծ՝ ամեն փոքրիկ մանրամասնով։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ ձև ես տեսնում խխունջի խեցում։
 2. Ինչպե՞ս են դասավորված սոճու կոնի թեփուկները։
 3. Ինչո՞ւ են նկարիչները երբեմն փոքր իրերը նկարում շատ ավելի մեծ։
@@ -863,10 +1130,12 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 5. Նկարի՛ր երեք պարույր՝ խիտ, նոսր և լայնացող։
 6. Նուրբ գծերով նկարի՛ր խոշորացված փետուր։
 7. Պատրաստի՛ր «Խոշորացույցի տակ» նկարը։
+~~~
 
-### Պատասխաններ
-
-1. Պարույր։ 2. Կոնի շուրջ պարույրներով։ 3. Որ բոլոր մանրուքները երևան։ 4. Կետեր և պտուկներ, գուցե գծեր։ 5. Իրար մոտ գծեր, իրարից հեռու գծեր, լայնացող գծեր։ 6. Կենտրոնական առանցք և երկու կողմում շատ բարակ գծեր։ 7. Առարկան լցնում է էջը և շատ մանրուքներ ունի։`,
+~~~art
+hints
+1. Պարույր։ 2. Կոնի շուրջ պարույրներով։ 3. Որ բոլոր մանրուքները երևան։ 4. Կետեր և պտուկներ, գուցե գծեր։ 5. Իրար մոտ գծեր, իրարից հեռու գծեր, լայնացող գծեր։ 6. Կենտրոնական առանցք և երկու կողմում շատ բարակ գծեր։ 7. Առարկան լցնում է էջը և շատ մանրուքներ ունի։
+~~~`,
         ru: `## Природа — лучший дизайнер
 
 Присмотрись к мелочам: в них удивительные формы и узоры!
@@ -879,6 +1148,10 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 | камешек | гладкая форма, полоски и крапинки |
 | пёрышко | стержень посередине и тонкие «волоски» с двух сторон |
 | крыло бабочки 🦋 | симметричные узоры и «глазки» |
+
+~~~art
+pic shell cone pebbles feather
+~~~
 
 ## Большое из маленького
 
@@ -893,12 +1166,22 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 - точки и крапинки для камешка,
 - много тонких параллельных линий для пёрышка.
 
+~~~art
+tone
+Линии, точки и пятна создают фактуру: шершавая кора, мягкий мох, гладкий камешек.
+~~~
+
 ## Задание: «Под лупой»
 
 Выбери один маленький природный предмет. Нарисуй его почти на весь лист. Линии и фактуры рисуй чёрным фломастером или карандашом. Если хочешь, добавь немного акварели.
 
-### Упражнения
+~~~art
+sketch guide=circle
+Под лупой: нарисуй ракушку или шишку очень крупно, со всеми мелкими деталями.
+~~~
 
+~~~art
+tasks
 1. Какую форму видно в раковине улитки?
 2. Как расположены чешуйки у шишки?
 3. Зачем художники иногда рисуют маленькие вещи гораздо крупнее?
@@ -906,10 +1189,12 @@ Choose one small natural object. Draw it so it fills almost the whole page. Use 
 5. Нарисуй три спирали: плотную, свободную и расширяющуюся.
 6. Нарисуй увеличенное пёрышко тонкими линиями.
 7. Сделай рисунок «Под лупой».
+~~~
 
-### Ответы
-
-1. Спираль. 2. По спирали вокруг шишки. 3. Чтобы показать все детали. 4. Точки и крапинки, может быть полоски. 5. Линии близко; далеко; расходящиеся. 6. Стержень посередине и много тонких линий с двух сторон. 7. Предмет занимает весь лист и имеет много деталей.`,
+~~~art
+hints
+1. Спираль. 2. По спирали вокруг шишки. 3. Чтобы показать все детали. 4. Точки и крапинки, может быть полоски. 5. Линии близко; далеко; расходящиеся. 6. Стержень посередине и много тонких линий с двух сторон. 7. Предмет занимает весь лист и имеет много деталей.
+~~~`,
       },
       [
         q(t("A snail shell has the shape of a…", "Խխունջի խեցին ունի… ձև", "Раковина улитки имеет форму…"), [t("square", "քառակուսու", "квадрата"), t("spiral", "պարույրի", "спирали"), t("triangle", "եռանկյան", "треугольника")], 1),

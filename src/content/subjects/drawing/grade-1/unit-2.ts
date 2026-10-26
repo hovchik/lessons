@@ -27,6 +27,10 @@ In painting, **red**, **yellow** and **blue** are the **primary colours**. We ca
 | yellow | the sun, a lemon, a sunflower |
 | blue | the sky, the sea, a cornflower |
 
+~~~art
+palette primary
+~~~
+
 ## How to paint with gouache
 
 1. Dip the brush in water and wipe it on the edge of the jar.
@@ -34,12 +38,21 @@ In painting, **red**, **yellow** and **blue** are the **primary colours**. We ca
 3. Paint with smooth strokes in one direction.
 4. Before taking another colour, **wash** the brush and **wipe** it on the cloth.
 
+~~~art
+pic gouache brush palette
+~~~
+
 ## A picture in three colours
 
 Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use nothing else! See how bright and cheerful it is.
 
-### Exercises
+~~~art
+sketch
+Paint a picture with only three colours: red, yellow and blue.
+~~~
 
+~~~art
+tasks
 1. Name the three primary colours.
 2. Name two red, two yellow and two blue things in nature.
 3. What must you do before taking a new colour?
@@ -47,10 +60,12 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 5. Paint three circles: red, yellow, blue.
 6. Paint a picture with only the three primary colours.
 7. Look around: which primary colour do you see most in the classroom?
+~~~
 
-### Answers
-
-1. Red, yellow, blue. 2. Example: tomato, poppy; sun, lemon; sky, sea. 3. Wash the brush and wipe it. 4. No, red is a primary colour. 5. Keep the edges neat. 6. Check that no other colours are used. 7. Answers differ.`,
+~~~art
+hints
+1. Red, yellow, blue. 2. Example: tomato, poppy; sun, lemon; sky, sea. 3. Wash the brush and wipe it. 4. No, red is a primary colour. 5. Keep the edges neat. 6. Check that no other colours are used. 7. Answers differ.
+~~~`,
         hy: `## Երեք առանձնահատուկ գույն
 
 Գեղանկարչության մեջ **կարմիրը**, **դեղինը** և **կապույտը** **հիմնական գույներ** են։ Դրանք չենք կարող ստանալ այլ ներկեր խառնելով, բայց դրանցից կարող ենք ստանալ գրեթե բոլոր մյուս գույները։
@@ -61,6 +76,10 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 | դեղին | արև, կիտրոն, արևածաղիկ |
 | կապույտ | երկինք, ծով, տերեփուկ |
 
+~~~art
+palette primary
+~~~
+
 ## Ինչպես աշխատել գուաշով
 
 1. Վրձինը թաթախի՛ր ջրի մեջ և սրբի՛ր բաժակի եզրին։
@@ -68,12 +87,21 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 3. Ներկի՛ր սահուն շարժումներով, մեկ ուղղությամբ։
 4. Նոր գույն վերցնելուց առաջ վրձինը **լվա՛** և **սրբի՛ր** լաթով։
 
+~~~art
+pic gouache brush palette
+~~~
+
 ## Նկար երեք գույնով
 
 Նկարի՛ր **դեղին** արև, **կապույտ** երկինք կամ ծով և **կարմիր** նավակ կամ ծաղիկներ։ Ուրիշ ոչինչ։ Տես՝ որքան վառ ու ուրախ է։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր միայն երեք գույնով՝ կարմիր, դեղին և կապույտ։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր երեք հիմնական գույները։
 2. Անվանի՛ր երկուական կարմիր, դեղին և կապույտ բան բնության մեջ։
 3. Ի՞նչ պետք է անել նոր գույն վերցնելուց առաջ։
@@ -81,10 +109,12 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 5. Նկարի՛ր երեք շրջան՝ կարմիր, դեղին, կապույտ։
 6. Նկարի՛ր նկար միայն երեք հիմնական գույներով։
 7. Նայի՛ր շուրջդ. ո՞ր հիմնական գույնն է դասարանում ամենաշատը։
+~~~
 
-### Պատասխաններ
-
-1. Կարմիր, դեղին, կապույտ։ 2. Օրինակ՝ լոլիկ, կակաչ, արև, կիտրոն, երկինք, ծով։ 3. Լվանալ և սրբել վրձինը։ 4. Ոչ, կարմիրը հիմնական գույն է։ 5. Եզրերը կոկիկ պահի՛ր։ 6. Ստուգի՛ր, որ այլ գույն չկա։ 7. Պատասխանները տարբեր են։`,
+~~~art
+hints
+1. Կարմիր, դեղին, կապույտ։ 2. Օրինակ՝ լոլիկ, կակաչ, արև, կիտրոն, երկինք, ծով։ 3. Լվանալ և սրբել վրձինը։ 4. Ոչ, կարմիրը հիմնական գույն է։ 5. Եզրերը կոկիկ պահի՛ր։ 6. Ստուգի՛ր, որ այլ գույն չկա։ 7. Պատասխանները տարբեր են։
+~~~`,
         ru: `## Три особых цвета
 
 В живописи **красный**, **жёлтый** и **синий** — **основные цвета**. Их нельзя получить, смешивая другие краски, но из них можно смешать почти все остальные цвета.
@@ -95,6 +125,10 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 | жёлтый | солнце, лимон, подсолнух |
 | синий | небо, море, василёк |
 
+~~~art
+palette primary
+~~~
+
 ## Как работать гуашью
 
 1. Обмакни кисть в воду и отожми о край баночки.
@@ -102,12 +136,21 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 3. Крась плавными мазками в одном направлении.
 4. Перед новым цветом **промой** кисть и **промокни** тряпочкой.
 
+~~~art
+pic gouache brush palette
+~~~
+
 ## Картинка тремя цветами
 
 Нарисуй **жёлтое** солнце, **синее** небо или море и **красную** лодку или цветы. Больше ничего! Посмотри, как ярко и весело.
 
-### Упражнения
+~~~art
+sketch
+Нарисуй картинку только тремя цветами: красным, жёлтым и синим.
+~~~
 
+~~~art
+tasks
 1. Назови три основных цвета.
 2. Назови по две красные, жёлтые и синие вещи в природе.
 3. Что нужно сделать перед тем, как взять новый цвет?
@@ -115,10 +158,12 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 5. Нарисуй три круга: красный, жёлтый, синий.
 6. Нарисуй картинку только тремя основными цветами.
 7. Оглянись: какого основного цвета больше всего в классе?
+~~~
 
-### Ответы
-
-1. Красный, жёлтый, синий. 2. Например: помидор, мак; солнце, лимон; небо, море. 3. Промыть кисть и промокнуть. 4. Нет, красный — основной цвет. 5. Следи за аккуратными краями. 6. Проверь, что других цветов нет. 7. Ответы разные.`,
+~~~art
+hints
+1. Красный, жёлтый, синий. 2. Например: помидор, мак; солнце, лимон; небо, море. 3. Промыть кисть и промокнуть. 4. Нет, красный — основной цвет. 5. Следи за аккуратными краями. 6. Проверь, что других цветов нет. 7. Ответы разные.
+~~~`,
       },
       [
         q(t("Which are the three primary colours?", "Որո՞նք են երեք հիմնական գույները։", "Какие три основных цвета?"), [t("red, yellow, blue", "կարմիր, դեղին, կապույտ", "красный, жёлтый, синий"), t("green, orange, violet", "կանաչ, նարնջագույն, մանուշակագույն", "зелёный, оранжевый, фиолетовый"), t("black, white, grey", "սև, սպիտակ, մոխրագույն", "чёрный, белый, серый")], 0),
@@ -148,6 +193,11 @@ Paint a **yellow** sun, a **blue** sky or sea and a **red** boat or flowers. Use
 
 These are the **secondary colours**. Each one is made of two primary colours.
 
+~~~art
+mixer paints=red,yellow,blue
+Find orange, green and violet. Which two paints make each of them?
+~~~
+
 ## How to mix
 
 1. Use a **palette**: a plastic plate, a lid or a piece of white card.
@@ -161,8 +211,12 @@ More yellow gives a light, yellowish green; more blue gives a dark, bluish green
 
 Draw a circle and divide it into six parts like a cake. Paint: red, orange, yellow, green, blue, violet. Each mixed colour sits **between** the two colours it is made of.
 
-### Exercises
+~~~art
+wheel modes=primary,secondary
+~~~
 
+~~~art
+tasks
 1. Red + yellow = ?
 2. Blue + yellow = ?
 3. Which two colours make violet?
@@ -170,10 +224,12 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 5. Mix two greens: one with more yellow, one with more blue. Paint a leaf with each.
 6. Paint the colour wheel.
 7. Paint an orange, a cucumber and a plum using mixed colours.
+~~~
 
-### Answers
-
-1. Orange. 2. Green. 3. Blue and red. 4. So the paint in the jar stays clean. 5. The yellowish green is lighter, the bluish green is darker. 6. Order: red, orange, yellow, green, blue, violet. 7. Orange, green and violet.`,
+~~~art
+hints
+1. Orange. 2. Green. 3. Blue and red. 4. So the paint in the jar stays clean. 5. The yellowish green is lighter, the bluish green is darker. 6. Order: red, orange, yellow, green, blue, violet. 7. Orange, green and violet.
+~~~`,
         hy: `## Գույների կախարդանք
 
 | Խառնում | Արդյունք |
@@ -183,6 +239,11 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 | կապույտ + կարմիր | **մանուշակագույն** |
 
 Սրանք **լրացուցիչ (երկրորդային) գույներն** են։ Յուրաքանչյուրը կազմված է երկու հիմնական գույնից։
+
+~~~art
+mixer paints=red,yellow,blue
+Գտի՛ր նարնջագույնը, կանաչը և մանուշակագույնը։ Ո՞ր երկու ներկն է ստեղծում ամեն մեկը։
+~~~
 
 ## Ինչպես խառնել
 
@@ -197,8 +258,12 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 
 Գծի՛ր շրջան և բաժանի՛ր վեց մասի՝ տորթի պես։ Ներկի՛ր՝ կարմիր, նարնջագույն, դեղին, կանաչ, կապույտ, մանուշակագույն։ Ամեն խառը գույն գտնվում է իր երկու «ծնողների» **միջև**։
 
-### Վարժություններ
+~~~art
+wheel modes=primary,secondary
+~~~
 
+~~~art
+tasks
 1. Կարմիր + դեղին = ?
 2. Կապույտ + դեղին = ?
 3. Ո՞ր երկու գույնից է ստացվում մանուշակագույնը։
@@ -206,10 +271,12 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 5. Խառնի՛ր երկու կանաչ՝ մեկը շատ դեղինով, մյուսը՝ շատ կապույտով։ Ամեն մեկով մի տերև ներկի՛ր։
 6. Նկարի՛ր գունային շրջանը։
 7. Խառը գույներով նկարի՛ր նարինջ, վարունգ և սալոր։
+~~~
 
-### Պատասխաններ
-
-1. Նարնջագույն։ 2. Կանաչ։ 3. Կապույտից և կարմիրից։ 4. Որ տուփի ներկը մաքուր մնա։ 5. Դեղնավուն կանաչն ավելի բաց է, կապտավունը՝ մուգ։ 6. Կարգը՝ կարմիր, նարնջագույն, դեղին, կանաչ, կապույտ, մանուշակագույն։ 7. Նարնջագույն, կանաչ, մանուշակագույն։`,
+~~~art
+hints
+1. Նարնջագույն։ 2. Կանաչ։ 3. Կապույտից և կարմիրից։ 4. Որ տուփի ներկը մաքուր մնա։ 5. Դեղնավուն կանաչն ավելի բաց է, կապտավունը՝ մուգ։ 6. Կարգը՝ կարմիր, նարնջագույն, դեղին, կանաչ, կապույտ, մանուշակագույն։ 7. Նարնջագույն, կանաչ, մանուշակագույն։
+~~~`,
         ru: `## Волшебство цвета
 
 | Смешиваем | Получаем |
@@ -219,6 +286,11 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 | синий + красный | **фиолетовый** |
 
 Это **составные цвета**. Каждый состоит из двух основных.
+
+~~~art
+mixer paints=red,yellow,blue
+Найди оранжевый, зелёный и фиолетовый. Из каких двух красок получается каждый?
+~~~
 
 ## Как смешивать
 
@@ -233,8 +305,12 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 
 Нарисуй круг и раздели на шесть частей, как торт. Закрась: красный, оранжевый, жёлтый, зелёный, синий, фиолетовый. Каждый составной цвет стоит **между** двумя цветами, из которых он сделан.
 
-### Упражнения
+~~~art
+wheel modes=primary,secondary
+~~~
 
+~~~art
+tasks
 1. Красный + жёлтый = ?
 2. Синий + жёлтый = ?
 3. Из каких двух цветов получается фиолетовый?
@@ -242,10 +318,12 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 5. Смешай два зелёных: один с большим количеством жёлтого, другой — синего. Закрась каждым листик.
 6. Нарисуй цветовой круг.
 7. Нарисуй апельсин, огурец и сливу составными цветами.
+~~~
 
-### Ответы
-
-1. Оранжевый. 2. Зелёный. 3. Из синего и красного. 4. Чтобы краска в баночке осталась чистой. 5. Желтоватый зелёный светлее, синеватый — темнее. 6. Порядок: красный, оранжевый, жёлтый, зелёный, синий, фиолетовый. 7. Оранжевый, зелёный и фиолетовый.`,
+~~~art
+hints
+1. Оранжевый. 2. Зелёный. 3. Из синего и красного. 4. Чтобы краска в баночке осталась чистой. 5. Желтоватый зелёный светлее, синеватый — темнее. 6. Порядок: красный, оранжевый, жёлтый, зелёный, синий, фиолетовый. 7. Оранжевый, зелёный и фиолетовый.
+~~~`,
       },
       [
         q(t("Red + yellow = ?", "Կարմիր + դեղին = ?", "Красный + жёлтый = ?"), [t("green", "կանաչ", "зелёный"), t("orange", "նարնջագույն", "оранжевый"), t("violet", "մանուշակագույն", "фиолетовый")], 1),
@@ -275,9 +353,17 @@ Draw a circle and divide it into six parts like a cake. Paint: red, orange, yell
 
 **Green** can be warmer (with more yellow, like spring grass) or colder (with more blue, like a fir tree).
 
+~~~art
+wheel modes=warmcool
+~~~
+
 ## Artists and colour
 
 Armenian painter **Martiros Saryan** loved **warm**, sunny colours: orange mountains, yellow fields, bright fruit. Painter **Hovhannes Aivazovsky**, born in Feodosia to an Armenian family, painted the sea in many **cold** blues and greens.
+
+~~~art
+palette warm cold
+~~~
 
 ## Two pictures
 
@@ -286,8 +372,13 @@ Armenian painter **Martiros Saryan** loved **warm**, sunny colours: orange mount
 
 Put them side by side. Which one feels warmer?
 
-### Exercises
+~~~art
+mood scene=landscape moods=warm,cold
+The same village in warm and in cold colours. Which one feels like a summer day?
+~~~
 
+~~~art
+tasks
 1. Is orange warm or cold?
 2. Is light blue warm or cold?
 3. Name three warm things in nature.
@@ -295,10 +386,12 @@ Put them side by side. Which one feels warmer?
 5. Which colours would you use for a summer day? For a winter night?
 6. Paint the fire-bird and the ice castle.
 7. Find a picture by Saryan and name the warm colours in it.
+~~~
 
-### Answers
-
-1. Warm. 2. Cold. 3. Example: fire, the sun, autumn leaves. 4. Example: ice, the sea, snow in shadow. 5. Summer: warm colours; winter night: cold colours. 6. Check that each picture uses only its own colours. 7. Example: orange, yellow, red.`,
+~~~art
+hints
+1. Warm. 2. Cold. 3. Example: fire, the sun, autumn leaves. 4. Example: ice, the sea, snow in shadow. 5. Summer: warm colours; winter night: cold colours. 6. Check that each picture uses only its own colours. 7. Example: orange, yellow, red.
+~~~`,
         hy: `## Տաք և սառը
 
 | Տաք գույներ | Սառը գույներ |
@@ -309,9 +402,17 @@ Put them side by side. Which one feels warmer?
 
 **Կանաչը** կարող է լինել ավելի տաք (շատ դեղինով, ինչպես գարնան խոտը) կամ ավելի սառը (շատ կապույտով, ինչպես եղևնին)։
 
+~~~art
+wheel modes=warmcool
+~~~
+
 ## Նկարիչները և գույնը
 
 Հայ նկարիչ **Մարտիրոս Սարյանը** սիրում էր **տաք**, արևոտ գույներ՝ նարնջագույն սարեր, դեղին դաշտեր, վառ մրգեր։ Ֆեոդոսիայում հայ ընտանիքում ծնված նկարիչ **Հովհաննես Այվազովսկին** ծովը նկարում էր բազմաթիվ **սառը** կապույտներով և կանաչներով։
+
+~~~art
+palette warm cold
+~~~
 
 ## Երկու նկար
 
@@ -320,8 +421,13 @@ Put them side by side. Which one feels warmer?
 
 Դրանք դի՛ր կողք կողքի։ Ո՞րն է ավելի տաք թվում։
 
-### Վարժություններ
+~~~art
+mood scene=landscape moods=warm,cold
+Նույն գյուղը՝ տաք և սառը գույներով։ Ո՞րն է նման ամառային օրվա։
+~~~
 
+~~~art
+tasks
 1. Նարնջագույնը տա՞ք է, թե՞ սառը։
 2. Երկնագույնը տա՞ք է, թե՞ սառը։
 3. Անվանի՛ր բնության երեք տաք բան։
@@ -329,10 +435,12 @@ Put them side by side. Which one feels warmer?
 5. Ի՞նչ գույներ կօգտագործես ամառային օրվա համար։ Իսկ ձմեռային գիշերվա՞։
 6. Նկարի՛ր հրաշք-թռչունը և սառցե դղյակը։
 7. Գտի՛ր Սարյանի որևէ նկար և անվանի՛ր դրա տաք գույները։
+~~~
 
-### Պատասխաններ
-
-1. Տաք։ 2. Սառը։ 3. Օրինակ՝ կրակ, արև, աշնան տերևներ։ 4. Օրինակ՝ սառույց, ծով, ձյունը ստվերում։ 5. Ամառ՝ տաք գույներ, ձմեռային գիշեր՝ սառը։ 6. Ստուգի՛ր, որ յուրաքանչյուր նկարում միայն իր գույներն են։ 7. Օրինակ՝ նարնջագույն, դեղին, կարմիր։`,
+~~~art
+hints
+1. Տաք։ 2. Սառը։ 3. Օրինակ՝ կրակ, արև, աշնան տերևներ։ 4. Օրինակ՝ սառույց, ծով, ձյունը ստվերում։ 5. Ամառ՝ տաք գույներ, ձմեռային գիշեր՝ սառը։ 6. Ստուգի՛ր, որ յուրաքանչյուր նկարում միայն իր գույներն են։ 7. Օրինակ՝ նարնջագույն, դեղին, կարմիր։
+~~~`,
         ru: `## Тёплые и холодные
 
 | Тёплые цвета | Холодные цвета |
@@ -343,9 +451,17 @@ Put them side by side. Which one feels warmer?
 
 **Зелёный** бывает теплее (с жёлтым, как весенняя трава) или холоднее (с синим, как ель).
 
+~~~art
+wheel modes=warmcool
+~~~
+
 ## Художники и цвет
 
 Армянский художник **Мартирос Сарьян** любил **тёплые**, солнечные цвета: оранжевые горы, жёлтые поля, яркие фрукты. **Иван (Ованес) Айвазовский**, родившийся в Феодосии в армянской семье, писал море множеством **холодных** синих и зелёных оттенков.
+
+~~~art
+palette warm cold
+~~~
 
 ## Две картины
 
@@ -354,8 +470,13 @@ Put them side by side. Which one feels warmer?
 
 Положи их рядом. Какая кажется теплее?
 
-### Упражнения
+~~~art
+mood scene=landscape moods=warm,cold
+Одна и та же деревня в тёплых и холодных цветах. Какая похожа на летний день?
+~~~
 
+~~~art
+tasks
 1. Оранжевый — тёплый или холодный?
 2. Голубой — тёплый или холодный?
 3. Назови три тёплых предмета в природе.
@@ -363,10 +484,12 @@ Put them side by side. Which one feels warmer?
 5. Какие цвета ты возьмёшь для летнего дня? А для зимней ночи?
 6. Нарисуй жар-птицу и ледяной замок.
 7. Найди картину Сарьяна и назови тёплые цвета в ней.
+~~~
 
-### Ответы
-
-1. Тёплый. 2. Холодный. 3. Например: огонь, солнце, осенние листья. 4. Например: лёд, море, снег в тени. 5. Лето — тёплые цвета, зимняя ночь — холодные. 6. Проверь, что на каждой картине только свои цвета. 7. Например: оранжевый, жёлтый, красный.`,
+~~~art
+hints
+1. Тёплый. 2. Холодный. 3. Например: огонь, солнце, осенние листья. 4. Например: лёд, море, снег в тени. 5. Лето — тёплые цвета, зимняя ночь — холодные. 6. Проверь, что на каждой картине только свои цвета. 7. Например: оранжевый, жёлтый, красный.
+~~~`,
       },
       [
         q(t("Which colour is warm?", "Ո՞ր գույնն է տաք։", "Какой цвет тёплый?"), [t("blue", "կապույտ", "синий"), t("orange", "նարնջագույն", "оранжевый"), t("light blue", "երկնագույն", "голубой")], 1),
@@ -395,6 +518,11 @@ Put them side by side. Which one feels warmer?
 
 Black is very strong: add only a **tiny drop**, or the colour becomes almost black.
 
+~~~art
+mixer paints=blue,white,black
+Put one drop of blue, then add white drop by drop. Clean the palette and try blue with black.
+~~~
+
 ## A colour ladder
 
 1. Draw five squares in a row.
@@ -404,12 +532,20 @@ Black is very strong: add only a **tiny drop**, or the colour becomes almost bla
 
 Now you have five **shades** of one colour, from light to dark.
 
+~~~art
+tints
+~~~
+
 ## Morning, day and evening
 
 In the morning the sky is **light** and pale; in the evening it gets **darker**. Paint three strips of sky: light blue, blue and dark blue with a few stars.
 
-### Exercises
+~~~art
+mood scene=landscape moods=morning,noon,evening
+~~~
 
+~~~art
+tasks
 1. Red + white = ?
 2. What happens if you add black to green?
 3. Why do we add black only a drop at a time?
@@ -417,10 +553,12 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 5. Paint a pink flower using red and white.
 6. Paint three skies: morning, day, evening.
 7. Look at a tree: where are its leaves light and where are they dark?
+~~~
 
-### Answers
-
-1. Pink. 2. It becomes dark green. 3. Black is very strong and quickly makes the colour almost black. 4. From very light blue to very dark blue. 5. More white gives paler pink. 6. Morning light, day bright blue, evening dark blue. 7. Leaves in the sun are lighter, leaves in the shade are darker.`,
+~~~art
+hints
+1. Pink. 2. It becomes dark green. 3. Black is very strong and quickly makes the colour almost black. 4. From very light blue to very dark blue. 5. More white gives paler pink. 6. Morning light, day bright blue, evening dark blue. 7. Leaves in the sun are lighter, leaves in the shade are darker.
+~~~`,
         hy: `## Ավելի բաց և ավելի մուգ
 
 | Ավելացնում ենք | Ինչ է լինում | Օրինակ |
@@ -429,6 +567,11 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 | մի քիչ սև | գույնը **մգանում** է | կանաչ + սև = մուգ կանաչ |
 
 Սևը շատ ուժեղ է. ավելացրո՛ւ միայն **մի կաթիլ**, թե չէ գույնը գրեթե սև կդառնա։
+
+~~~art
+mixer paints=blue,white,black
+Դիր մեկ կաթիլ կապույտ, հետո կաթիլ առ կաթիլ ավելացրու սպիտակ։ Մաքրի՛ր գունապնակը և փորձի՛ր կապույտը սևի հետ։
+~~~
 
 ## Գույնի սանդուղք
 
@@ -439,12 +582,20 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 
 Այժմ ունես մեկ գույնի հինգ **երանգ**՝ բացից մուգ։
 
+~~~art
+tints
+~~~
+
 ## Առավոտ, ցերեկ և երեկո
 
 Առավոտյան երկինքը **բաց** է, գունատ, երեկոյան՝ **մգանում** է։ Նկարի՛ր երկնքի երեք շերտ՝ երկնագույն, կապույտ և մուգ կապույտ՝ մի քանի աստղով։
 
-### Վարժություններ
+~~~art
+mood scene=landscape moods=morning,noon,evening
+~~~
 
+~~~art
+tasks
 1. Կարմիր + սպիտակ = ?
 2. Ի՞նչ կլինի, եթե կանաչին սև ավելացնենք։
 3. Ինչո՞ւ ենք սևը ավելացնում կաթիլ-կաթիլ։
@@ -452,10 +603,12 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 5. Կարմիրով և սպիտակով նկարի՛ր վարդագույն ծաղիկ։
 6. Նկարի՛ր երեք երկինք՝ առավոտ, ցերեկ, երեկո։
 7. Նայի՛ր ծառին. որտե՞ղ են տերևները բաց, որտե՞ղ՝ մուգ։
+~~~
 
-### Պատասխաններ
-
-1. Վարդագույն։ 2. Կդառնա մուգ կանաչ։ 3. Սևը շատ ուժեղ է և արագ գույնը գրեթե սև է դարձնում։ 4. Շատ բաց կապույտից մինչև շատ մուգ կապույտ։ 5. Շատ սպիտակը տալիս է ավելի գունատ վարդագույն։ 6. Առավոտ՝ բաց, ցերեկ՝ վառ կապույտ, երեկո՝ մուգ կապույտ։ 7. Արևի տակ տերևներն ավելի բաց են, ստվերում՝ ավելի մուգ։`,
+~~~art
+hints
+1. Վարդագույն։ 2. Կդառնա մուգ կանաչ։ 3. Սևը շատ ուժեղ է և արագ գույնը գրեթե սև է դարձնում։ 4. Շատ բաց կապույտից մինչև շատ մուգ կապույտ։ 5. Շատ սպիտակը տալիս է ավելի գունատ վարդագույն։ 6. Առավոտ՝ բաց, ցերեկ՝ վառ կապույտ, երեկո՝ մուգ կապույտ։ 7. Արևի տակ տերևներն ավելի բաց են, ստվերում՝ ավելի մուգ։
+~~~`,
         ru: `## Светлее и темнее
 
 | Добавляем | Что происходит | Пример |
@@ -464,6 +617,11 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 | чуть-чуть чёрной | цвет становится **темнее** | зелёный + чёрный = тёмно-зелёный |
 
 Чёрная краска очень сильная: добавляй только **капельку**, иначе цвет станет почти чёрным.
+
+~~~art
+mixer paints=blue,white,black
+Капни синей краски, потом по капле добавляй белила. Очисти палитру и попробуй синюю с чёрной.
+~~~
 
 ## Цветовая лесенка (растяжка)
 
@@ -474,12 +632,20 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 
 Теперь у тебя пять **оттенков** одного цвета — от светлого к тёмному.
 
+~~~art
+tints
+~~~
+
 ## Утро, день и вечер
 
 Утром небо **светлое**, бледное, а вечером становится **темнее**. Нарисуй три полоски неба: голубую, синюю и тёмно-синюю с несколькими звёздами.
 
-### Упражнения
+~~~art
+mood scene=landscape moods=morning,noon,evening
+~~~
 
+~~~art
+tasks
 1. Красный + белый = ?
 2. Что будет, если добавить чёрную в зелёный?
 3. Почему чёрную добавляем по капле?
@@ -487,10 +653,12 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 5. Нарисуй розовый цветок красной и белой красками.
 6. Нарисуй три неба: утро, день, вечер.
 7. Посмотри на дерево: где листья светлые, а где тёмные?
+~~~
 
-### Ответы
-
-1. Розовый. 2. Получится тёмно-зелёный. 3. Чёрная очень сильная и быстро делает цвет почти чёрным. 4. От очень светлого синего до очень тёмного. 5. Больше белил — бледнее розовый. 6. Утро — светлое, день — ярко-синий, вечер — тёмно-синий. 7. На солнце листья светлее, в тени — темнее.`,
+~~~art
+hints
+1. Розовый. 2. Получится тёмно-зелёный. 3. Чёрная очень сильная и быстро делает цвет почти чёрным. 4. От очень светлого синего до очень тёмного. 5. Больше белил — бледнее розовый. 6. Утро — светлое, день — ярко-синий, вечер — тёмно-синий. 7. На солнце листья светлее, в тени — темнее.
+~~~`,
       },
       [
         q(t("Red + white = ?", "Կարմիր + սպիտակ = ?", "Красный + белый = ?"), [t("pink", "վարդագույն", "розовый"), t("orange", "նարնջագույն", "оранжевый"), t("brown", "շագանակագույն", "коричневый")], 0),
@@ -524,6 +692,10 @@ In the morning the sky is **light** and pale; in the evening it gets **darker**.
 
 **Red** is always on the outside of the arc, **violet** on the inside. In English a memory sentence helps: **R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain (red, orange, yellow, green, blue, indigo, violet).
 
+~~~art
+palette rainbow
+~~~
+
 ## When do we see a rainbow?
 
 When the **sun** shines and there are **raindrops** in the air. Stand with the sun **behind** you and look at the rain: sunlight splits into colours in the drops. You can also see a small rainbow in the spray of a garden hose.
@@ -537,8 +709,13 @@ When the **sun** shines and there are **raindrops** in the air. Stand with the s
 
 Notice: orange, green and violet sit between the colours they are mixed from!
 
-### Exercises
+~~~art
+sketch paper=blue
+Paint a rainbow: one arc for each colour, red on top and violet at the bottom.
+~~~
 
+~~~art
+tasks
 1. Name the seven rainbow colours in order.
 2. Which colour is on the outside of a rainbow?
 3. What two things do we need to see a rainbow?
@@ -546,10 +723,12 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 5. Which rainbow colours are mixed from two primary colours?
 6. Paint a rainbow over hills.
 7. Make a rainbow with a garden hose or a glass of water on a sunny day.
+~~~
 
-### Answers
-
-1. Red, orange, yellow, green, light blue, blue, violet. 2. Red. 3. Sunshine and raindrops. 4. Behind you. 5. Orange, green, violet. 6. Check the order and no gaps. 7. Look with the sun behind you.`,
+~~~art
+hints
+1. Red, orange, yellow, green, light blue, blue, violet. 2. Red. 3. Sunshine and raindrops. 4. Behind you. 5. Orange, green, violet. 6. Check the order and no gaps. 7. Look with the sun behind you.
+~~~`,
         hy: `## Յոթ գույն
 
 | № | Գույն |
@@ -564,6 +743,10 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 
 **Կարմիրը** միշտ աղեղի արտաքին կողմում է, **մանուշակագույնը**՝ ներսում։ Հիշելու համար կրկնի՛ր գույների առաջին վանկերը՝ «կար-նար-դեղ-կան-երկ-կապ-ման»։
 
+~~~art
+palette rainbow
+~~~
+
 ## Ե՞րբ ենք ծիածան տեսնում
 
 Երբ **արևը** շողում է, իսկ օդում **անձրևի կաթիլներ** կան։ Կանգնի՛ր մեջքով դեպի արևը և նայի՛ր անձրևին. կաթիլներում արևի լույսը բաժանվում է գույների։ Փոքր ծիածան կարելի է տեսնել նաև ջրցանի ցայտերում։
@@ -577,8 +760,13 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 
 Ուշադրություն դարձրո՛ւ. նարնջագույնը, կանաչը և մանուշակագույնը գտնվում են այն գույների միջև, որոնցից խառնված են։
 
-### Վարժություններ
+~~~art
+sketch paper=blue
+Նկարի՛ր ծիածան․ ամեն գույնի համար մեկ աղեղ, կարմիրը՝ վերևում, մանուշակագույնը՝ ներքևում։
+~~~
 
+~~~art
+tasks
 1. Հերթականությամբ անվանի՛ր ծիածանի յոթ գույները։
 2. Ո՞ր գույնն է ծիածանի արտաքին կողմում։
 3. Ի՞նչ երկու բան է պետք ծիածան տեսնելու համար։
@@ -586,10 +774,12 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 5. Ծիածանի ո՞ր գույներն են խառնված երկու հիմնական գույներից։
 6. Նկարի՛ր ծիածան բլուրների վրա։
 7. Արևոտ օրը ջրցանով կամ ջրով բաժակով ծիածա՛ն ստացիր։
+~~~
 
-### Պատասխաններ
-
-1. Կարմիր, նարնջագույն, դեղին, կանաչ, երկնագույն, կապույտ, մանուշակագույն։ 2. Կարմիրը։ 3. Արև և անձրևի կաթիլներ։ 4. Մեջքիդ հետևում։ 5. Նարնջագույնը, կանաչը, մանուշակագույնը։ 6. Ստուգի՛ր կարգը և բացատների բացակայությունը։ 7. Նայի՛ր մեջքով դեպի արևը։`,
+~~~art
+hints
+1. Կարմիր, նարնջագույն, դեղին, կանաչ, երկնագույն, կապույտ, մանուշակագույն։ 2. Կարմիրը։ 3. Արև և անձրևի կաթիլներ։ 4. Մեջքիդ հետևում։ 5. Նարնջագույնը, կանաչը, մանուշակագույնը։ 6. Ստուգի՛ր կարգը և բացատների բացակայությունը։ 7. Նայի՛ր մեջքով դեպի արևը։
+~~~`,
         ru: `## Семь цветов
 
 | № | Цвет |
@@ -604,6 +794,10 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 
 **Красный** всегда снаружи дуги, **фиолетовый** — внутри. Запомнить помогает фраза: **К**аждый **О**хотник **Ж**елает **З**нать, **Г**де **С**идит **Ф**азан.
 
+~~~art
+palette rainbow
+~~~
+
 ## Когда бывает радуга?
 
 Когда светит **солнце**, а в воздухе есть **капли дождя**. Встань **спиной** к солнцу и посмотри на дождь: в каплях солнечный свет разделяется на цвета. Маленькую радугу можно увидеть и в брызгах из садового шланга.
@@ -617,8 +811,13 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 
 Заметь: оранжевый, зелёный и фиолетовый стоят между цветами, из которых они смешаны!
 
-### Упражнения
+~~~art
+sketch paper=blue
+Нарисуй радугу: по дуге на каждый цвет, красный сверху, фиолетовый снизу.
+~~~
 
+~~~art
+tasks
 1. Назови семь цветов радуги по порядку.
 2. Какой цвет снаружи радуги?
 3. Какие две вещи нужны, чтобы увидеть радугу?
@@ -626,10 +825,12 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 5. Какие цвета радуги смешаны из двух основных?
 6. Нарисуй радугу над холмами.
 7. В солнечный день получи радугу с помощью шланга или стакана воды.
+~~~
 
-### Ответы
-
-1. Красный, оранжевый, жёлтый, зелёный, голубой, синий, фиолетовый. 2. Красный. 3. Солнце и капли дождя. 4. За спиной. 5. Оранжевый, зелёный, фиолетовый. 6. Проверь порядок и отсутствие просветов. 7. Смотри, стоя спиной к солнцу.`,
+~~~art
+hints
+1. Красный, оранжевый, жёлтый, зелёный, голубой, синий, фиолетовый. 2. Красный. 3. Солнце и капли дождя. 4. За спиной. 5. Оранжевый, зелёный, фиолетовый. 6. Проверь порядок и отсутствие просветов. 7. Смотри, стоя спиной к солнцу.
+~~~`,
       },
       [
         q(t("How many colours are in a rainbow?", "Քանի՞ գույն ունի ծիածանը։", "Сколько цветов в радуге?"), [t("5", "5", "5"), t("7", "7", "7"), t("3", "3", "3")], 1),
@@ -653,9 +854,17 @@ Notice: orange, green and violet sit between the colours they are mixed from!
 
 In autumn leaves change from green to **yellow**, **orange**, **red**, **brown** and even **purple**. One tree can have many colours at once! Russian painter **Isaac Levitan** painted a famous picture called «Golden Autumn» (1895), full of yellow birches.
 
+~~~art
+palette autumn
+~~~
+
 ## Collect leaves
 
 Collect leaves of different shapes: maple (with points), oak (with round waves), birch (small, like hearts), poplar. Choose leaves that are not too dry so they do not break.
+
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
 
 ## Leaf printing
 
@@ -669,8 +878,13 @@ Collect leaves of different shapes: maple (with points), oak (with round waves),
 
 Paint a brown trunk and branches. Print leaves around the branches and some falling to the ground.
 
-### Exercises
+~~~art
+mood scene=landscape moods=summer,autumn
+Autumn repaints the same place. What changed?
+~~~
 
+~~~art
+tasks
 1. Name four autumn leaf colours.
 2. Which side of the leaf do we paint? Why?
 3. Who painted «Golden Autumn»?
@@ -678,17 +892,27 @@ Paint a brown trunk and branches. Print leaves around the branches and some fall
 5. Make five leaf prints in different colours.
 6. Make an autumn tree from leaf prints.
 7. Are autumn colours mostly warm or cold?
+~~~
 
-### Answers
-
-1. Example: yellow, orange, red, brown. 2. The side with the veins, because they make a beautiful print. 3. Isaac Levitan. 4. Example: maple, oak, birch. 5. Use warm colours and press firmly. 6. Check the trunk, branches and falling leaves. 7. Mostly warm.`,
+~~~art
+hints
+1. Example: yellow, orange, red, brown. 2. The side with the veins, because they make a beautiful print. 3. Isaac Levitan. 4. Example: maple, oak, birch. 5. Use warm colours and press firmly. 6. Check the trunk, branches and falling leaves. 7. Mostly warm.
+~~~`,
         hy: `## Աշունը ներկում է տերևները
 
 Աշնանը տերևները կանաչից դառնում են **դեղին**, **նարնջագույն**, **կարմիր**, **շագանակագույն** և նույնիսկ **մանուշակագույն**։ Մեկ ծառը կարող է միաժամանակ շատ գույներ ունենալ։ Ռուս նկարիչ **Իսահակ Լևիտանը** նկարել է «Ոսկե աշուն» (1895) հայտնի կտավը՝ լի դեղին կեչիներով։
 
+~~~art
+palette autumn
+~~~
+
 ## Տերևներ ենք հավաքում
 
 Հավաքի՛ր տարբեր ձևերի տերևներ՝ թխկի (սուր ծայրերով), կաղնու (կլոր ալիքներով), կեչու (փոքր, սրտաձև), բարդու։ Ընտրի՛ր ոչ շատ չոր տերևներ, որ չկոտրվեն։
+
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
 
 ## Տպագրություն տերևներով
 
@@ -702,8 +926,13 @@ Paint a brown trunk and branches. Print leaves around the branches and some fall
 
 Նկարի՛ր շագանակագույն բուն և ճյուղեր։ Տերևներ տպի՛ր ճյուղերի շուրջ և մի քանիսը՝ գետնին ընկնող։
 
-### Վարժություններ
+~~~art
+mood scene=landscape moods=summer,autumn
+Աշունը վերանկարում է նույն վայրը։ Ի՞նչ փոխվեց։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր աշնան տերևների չորս գույն։
 2. Տերևի ո՞ր կողմն ենք ներկում։ Ինչո՞ւ։
 3. Ո՞վ է նկարել «Ոսկե աշուն»-ը։
@@ -711,17 +940,27 @@ Paint a brown trunk and branches. Print leaves around the branches and some fall
 5. Արա՛ հինգ տպվածք տարբեր գույներով։
 6. Տերևների տպվածքներից ստեղծի՛ր աշնանային ծառ։
 7. Աշնան գույները հիմնականում տա՞ք են, թե՞ սառը։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ դեղին, նարնջագույն, կարմիր, շագանակագույն։ 2. Ջղերով կողմը, որովհետև դրանք գեղեցիկ տպվածք են տալիս։ 3. Իսահակ Լևիտանը։ 4. Օրինակ՝ թխկի, կաղնու, կեչու։ 5. Օգտագործի՛ր տաք գույներ և ամուր սեղմի՛ր։ 6. Ստուգի՛ր բունը, ճյուղերը և ընկնող տերևները։ 7. Հիմնականում տաք։`,
+~~~art
+hints
+1. Օրինակ՝ դեղին, նարնջագույն, կարմիր, շագանակագույն։ 2. Ջղերով կողմը, որովհետև դրանք գեղեցիկ տպվածք են տալիս։ 3. Իսահակ Լևիտանը։ 4. Օրինակ՝ թխկի, կաղնու, կեչու։ 5. Օգտագործի՛ր տաք գույներ և ամուր սեղմի՛ր։ 6. Ստուգի՛ր բունը, ճյուղերը և ընկնող տերևները։ 7. Հիմնականում տաք։
+~~~`,
         ru: `## Осень раскрашивает листья
 
 Осенью листья из зелёных становятся **жёлтыми**, **оранжевыми**, **красными**, **коричневыми** и даже **фиолетовыми**. На одном дереве может быть сразу много цветов! Русский художник **Исаак Левитан** написал знаменитую картину «Золотая осень» (1895) с жёлтыми берёзами.
 
+~~~art
+palette autumn
+~~~
+
 ## Собираем листья
 
 Собери листья разной формы: клён (с острыми концами), дуб (с круглыми волнами), берёза (маленькие, как сердечки), тополь. Выбирай не слишком сухие, чтобы не ломались.
+
+~~~art
+pic leaf-oak leaf-maple leaf-birch leaf-plane
+~~~
 
 ## Печать листьями
 
@@ -735,8 +974,13 @@ Paint a brown trunk and branches. Print leaves around the branches and some fall
 
 Нарисуй коричневый ствол и ветки. Напечатай листья вокруг веток и несколько падающих на землю.
 
-### Упражнения
+~~~art
+mood scene=landscape moods=summer,autumn
+Осень перекрашивает то же место. Что изменилось?
+~~~
 
+~~~art
+tasks
 1. Назови четыре цвета осенних листьев.
 2. Какую сторону листа красим? Почему?
 3. Кто написал «Золотую осень»?
@@ -744,10 +988,12 @@ Paint a brown trunk and branches. Print leaves around the branches and some fall
 5. Сделай пять отпечатков разными цветами.
 6. Сделай осеннее дерево из отпечатков листьев.
 7. Осенние цвета в основном тёплые или холодные?
+~~~
 
-### Ответы
-
-1. Например: жёлтый, оранжевый, красный, коричневый. 2. Сторону с прожилками: они дают красивый отпечаток. 3. Исаак Левитан. 4. Например: клён, дуб, берёза. 5. Бери тёплые цвета и прижимай крепко. 6. Проверь ствол, ветки и падающие листья. 7. В основном тёплые.`,
+~~~art
+hints
+1. Например: жёлтый, оранжевый, красный, коричневый. 2. Сторону с прожилками: они дают красивый отпечаток. 3. Исаак Левитан. 4. Например: клён, дуб, берёза. 5. Бери тёплые цвета и прижимай крепко. 6. Проверь ствол, ветки и падающие листья. 7. В основном тёплые.
+~~~`,
       },
       [
         q(t("Which side of the leaf do we paint for printing?", "Տպագրելու համար տերևի ո՞ր կողմն ենք ներկում։", "Какую сторону листа красим для печати?"), [t("the smooth side", "հարթ կողմը", "гладкую"), t("the side with the veins", "ջղերով կողմը", "с прожилками"), t("only the stem", "միայն կոթունը", "только черешок")], 1),

@@ -26,6 +26,10 @@ export const unit5: UnitSeed = {
 
 Pavel Tretyakov bought paintings by young artists so that people could see Russian art. A gift of one person became a museum for everybody.
 
+~~~art
+pic genre-landscape genre-portrait genre-fairy genre-marine
+~~~
+
 ## How to look at a painting
 
 Stand in front of the painting and ask four questions:
@@ -37,12 +41,17 @@ Stand in front of the painting and ask four questions:
 
 Look first from far away to see the whole, then come closer to see the brushstrokes, then step back again.
 
+~~~art
+shots
+Look at a painting like a camera: first the whole, then the main hero, then small details.
+~~~
+
 ## A label tells a lot
 
 Next to every work there is a small **label**: the artist's name, the title, the year and the material (oil on canvas, watercolour on paper).
 
-### Exercises
-
+~~~art
+tasks
 1. Where is the National Gallery of Armenia?
 2. Who started the Tretyakov Gallery and when did he begin collecting?
 3. Name the four questions for looking at a painting.
@@ -50,10 +59,12 @@ Next to every work there is a small **label**: the artist's name, the title, the
 5. What is written on a museum label?
 6. What does «oil on canvas» mean?
 7. Choose a painting from this year's lessons and tell about it using the four questions.
+~~~
 
-### Answers
-
-1. In Yerevan, on Republic Square. 2. Pavel Tretyakov, in 1856. 3. What do I see? Which colours? What mood? What did the artist want to say? 4. To see the whole picture. 5. The artist, the title, the year and the material. 6. Painted with oil paints on fabric. 7. Your answer.`,
+~~~art
+hints
+1. In Yerevan, on Republic Square. 2. Pavel Tretyakov, in 1856. 3. What do I see? Which colours? What mood? What did the artist want to say? 4. To see the whole picture. 5. The artist, the title, the year and the material. 6. Painted with oil paints on fabric. 7. Your answer.
+~~~`,
         hy: `## Երկու մեծ պատկերասրահ
 
 | Պատկերասրահ | Որտեղ | Ինչ իմանալ |
@@ -62,6 +73,10 @@ Next to every work there is a small **label**: the artist's name, the title, the
 | **Տրետյակովյան պատկերասրահ** | Մոսկվա | վաճառական **Պավել Տրետյակովը** ռուսական նկարներ հավաքել է սկսել 1856 թվականին, իսկ հետո իր հավաքածուն նվիրել է Մոսկվային |
 
 Պավել Տրետյակովը գնում էր երիտասարդ նկարիչների գործերը, որպեսզի մարդիկ տեսնեն ռուսական արվեստը։ Մեկ մարդու նվերը դարձավ թանգարան բոլորի համար։
+
+~~~art
+pic genre-landscape genre-portrait genre-fairy genre-marine
+~~~
 
 ## Ինչպես դիտել նկարը
 
@@ -74,12 +89,17 @@ Next to every work there is a small **label**: the artist's name, the title, the
 
 Նախ նայի՛ր հեռվից՝ ամբողջը տեսնելու համար, հետո մոտեցի՛ր՝ վրձնահարվածները տեսնելու, հետո նորից հեռացի՛ր։
 
+~~~art
+shots
+Նայի՛ր նկարին տեսախցիկի պես․ նախ ամբողջը, հետո գլխավոր հերոսը, հետո մանրուքները։
+~~~
+
 ## Պիտակը շատ բան է պատմում
 
 Յուրաքանչյուր գործի կողքին կա փոքր **պիտակ**՝ նկարչի անունը, վերնագիրը, տարին և նյութը (յուղաներկ կտավի վրա, ջրաներկ թղթի վրա)։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Որտե՞ղ է Հայաստանի ազգային պատկերասրահը։
 2. Ո՞վ է հիմնել Տրետյակովյան պատկերասրահը, և ե՞րբ է նա սկսել հավաքել։
 3. Թվարկի՛ր նկարը դիտելու չորս հարցը։
@@ -87,10 +107,12 @@ Next to every work there is a small **label**: the artist's name, the title, the
 5. Ի՞նչ է գրված թանգարանային պիտակի վրա։
 6. Ի՞նչ է նշանակում «յուղաներկ կտավի վրա»։
 7. Ընտրի՛ր այս տարվա դասերից մի նկար և պատմի՛ր դրա մասին չորս հարցի օգնությամբ։
+~~~
 
-### Պատասխաններ
-
-1. Երևանում՝ Հանրապետության հրապարակում։ 2. Պավել Տրետյակովը, 1856 թվականին։ 3. Ի՞նչ եմ տեսնում։ Ի՞նչ գույներ։ Ի՞նչ տրամադրություն։ Ի՞նչ է ուզել ասել նկարիչը։ 4. Ամբողջ նկարը տեսնելու համար։ 5. Նկարիչը, վերնագիրը, տարին և նյութը։ 6. Նկարված է յուղաներկով կտորի վրա։ 7. Քո պատասխանը։`,
+~~~art
+hints
+1. Երևանում՝ Հանրապետության հրապարակում։ 2. Պավել Տրետյակովը, 1856 թվականին։ 3. Ի՞նչ եմ տեսնում։ Ի՞նչ գույներ։ Ի՞նչ տրամադրություն։ Ի՞նչ է ուզել ասել նկարիչը։ 4. Ամբողջ նկարը տեսնելու համար։ 5. Նկարիչը, վերնագիրը, տարին և նյութը։ 6. Նկարված է յուղաներկով կտորի վրա։ 7. Քո պատասխանը։
+~~~`,
         ru: `## Две великие галереи
 
 | Галерея | Где | Что знать |
@@ -99,6 +121,10 @@ Next to every work there is a small **label**: the artist's name, the title, the
 | **Третьяковская галерея** | Москва | купец **Павел Третьяков** начал собирать русские картины в 1856 году, а потом подарил своё собрание Москве |
 
 Павел Третьяков покупал картины молодых художников, чтобы люди могли увидеть русское искусство. Подарок одного человека стал музеем для всех.
+
+~~~art
+pic genre-landscape genre-portrait genre-fairy genre-marine
+~~~
 
 ## Как смотреть картину
 
@@ -111,12 +137,17 @@ Next to every work there is a small **label**: the artist's name, the title, the
 
 Сначала посмотри издалека, чтобы увидеть целое, потом подойди ближе и рассмотри мазки, потом снова отойди.
 
+~~~art
+shots
+Смотри на картину как камера: сначала целиком, потом главный герой, потом мелкие детали.
+~~~
+
 ## Этикетка рассказывает многое
 
 Рядом с каждой работой есть маленькая **этикетка**: имя художника, название, год и материал (холст, масло; бумага, акварель).
 
-### Упражнения
-
+~~~art
+tasks
 1. Где находится Национальная галерея Армении?
 2. Кто основал Третьяковскую галерею и когда начал собирать картины?
 3. Назови четыре вопроса для рассматривания картины.
@@ -124,10 +155,12 @@ Next to every work there is a small **label**: the artist's name, the title, the
 5. Что написано на музейной этикетке?
 6. Что значит «холст, масло»?
 7. Выбери картину из уроков этого года и расскажи о ней по четырём вопросам.
+~~~
 
-### Ответы
-
-1. В Ереване, на площади Республики. 2. Павел Третьяков, в 1856 году. 3. Что я вижу? Какие цвета? Какое настроение? Что хотел сказать художник? 4. Чтобы увидеть картину целиком. 5. Художник, название, год и материал. 6. Написано масляными красками на ткани. 7. Твой ответ.`,
+~~~art
+hints
+1. В Ереване, на площади Республики. 2. Павел Третьяков, в 1856 году. 3. Что я вижу? Какие цвета? Какое настроение? Что хотел сказать художник? 4. Чтобы увидеть картину целиком. 5. Художник, название, год и материал. 6. Написано масляными красками на ткани. 7. Твой ответ.
+~~~`,
       },
       [
         q(t("The National Gallery of Armenia is on…", "Հայաստանի ազգային պատկերասրահը գտնվում է…", "Национальная галерея Армении находится на…"), [t("Republic Square", "Հանրապետության հրապարակում", "площади Республики"), t("Lake Sevan", "Սևանա լճի ափին", "озере Севан"), t("Mount Aragats", "Արագած լեռան վրա", "горе Арагац")], 0),
@@ -151,6 +184,10 @@ Next to every work there is a small **label**: the artist's name, the title, the
 
 **Martiros Saryan** (1880–1972) is one of the most famous Armenian painters. He lived a long life and painted Armenian nature, people, flowers and fruit. In Yerevan you can visit his **house-museum**, where he worked for many years.
 
+~~~art
+palette saryan tuff
+~~~
+
 ## How Saryan paints the sun
 
 | Feature | What we see |
@@ -162,6 +199,11 @@ Next to every work there is a small **label**: the artist's name, the title, the
 
 Saryan said with his paintings: Armenia is a land of sun and bright colour. His mountains glow orange and pink, and Ararat stands white in the blue sky.
 
+~~~art
+mood scene=landscape moods=saryan,noon
+Saryan's sun is bright: pure orange, hot yellow and deep blue shadows. Compare it with an ordinary noon.
+~~~
+
 ## Paint in Saryan's manner
 
 1. Choose a simple subject: a mountain with a village, or a vase with flowers and pomegranates.
@@ -170,8 +212,12 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 4. Paint the shadows with blue and violet, not with black or grey.
 5. Put contrasting colours next to each other so that they «sing».
 
-### Exercises
+~~~art
+wheel mode=complementary
+~~~
 
+~~~art
+tasks
 1. In which years did Saryan live?
 2. What can you visit in Yerevan to learn about him?
 3. What colour are shadows in Saryan's paintings?
@@ -179,13 +225,19 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 5. How does Saryan paint mountains and fields?
 6. Which colours are not used for shadows in this lesson's task?
 7. Paint a sunny landscape with blue and violet shadows.
+~~~
 
-### Answers
-
-1. 1880–1972. 2. His house-museum. 3. Blue and violet. 4. Warm and cold colours make each other stronger. 5. With large flat areas of colour. 6. Black and grey. 7. Your work.`,
+~~~art
+hints
+1. 1880–1972. 2. His house-museum. 3. Blue and violet. 4. Warm and cold colours make each other stronger. 5. With large flat areas of colour. 6. Black and grey. 7. Your work.
+~~~`,
         hy: `## Հայաստանի նկարիչը
 
 **Մարտիրոս Սարյանը** (1880–1972) ամենահայտնի հայ նկարիչներից է։ Նա երկար կյանք է ապրել և նկարել է Հայաստանի բնությունը, մարդկանց, ծաղիկներ և մրգեր։ Երևանում կարող ես այցելել նրա **տուն-թանգարանը**, որտեղ նա աշխատել է երկար տարիներ։
+
+~~~art
+palette saryan tuff
+~~~
 
 ## Ինչպես է Սարյանը նկարում արևը
 
@@ -198,6 +250,11 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 
 Սարյանն իր նկարներով ասում էր՝ Հայաստանն արևի և վառ գույնի երկիր է։ Նրա լեռները փայլում են նարնջագույն և վարդագույն, իսկ Արարատը սպիտակ է կանգնած կապույտ երկնքում։
 
+~~~art
+mood scene=landscape moods=saryan,noon
+Սարյանի արևը վառ է․ մաքուր նարնջագույն, տաք դեղին և խորը կապույտ ստվերներ։ Համեմատի՛ր սովորական կեսօրի հետ։
+~~~
+
 ## Նկարի՛ր Սարյանի ոճով
 
 1. Ընտրի՛ր պարզ թեմա՝ լեռ գյուղով, կամ ծաղկաման ծաղիկներով և նռներով։
@@ -206,8 +263,12 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 4. Ստվերները ներկի՛ր կապույտով և մանուշակագույնով, ոչ թե սևով կամ մոխրագույնով։
 5. Հակադիր գույները դի՛ր կողք կողքի, որպեսզի դրանք «երգեն»։
 
-### Վարժություններ
+~~~art
+wheel mode=complementary
+~~~
 
+~~~art
+tasks
 1. Ո՞ր տարիներին է ապրել Սարյանը։
 2. Ի՞նչ կարող ես այցելել Երևանում՝ նրա մասին իմանալու համար։
 3. Ի՞նչ գույնի են ստվերները Սարյանի նկարներում։
@@ -215,13 +276,19 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 5. Ինչպե՞ս է Սարյանը նկարում լեռներն ու դաշտերը։
 6. Ո՞ր գույներն այս դասի առաջադրանքում չեն օգտագործվում ստվերների համար։
 7. Նկարի՛ր արևոտ բնանկար կապույտ և մանուշակագույն ստվերներով։
+~~~
 
-### Պատասխաններ
-
-1. 1880–1972։ 2. Նրա տուն-թանգարանը։ 3. Կապույտ և մանուշակագույն։ 4. Տաք և սառը գույներն ուժեղացնում են իրար։ 5. Գույնի մեծ հարթ մասերով։ 6. Սևը և մոխրագույնը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. 1880–1972։ 2. Նրա տուն-թանգարանը։ 3. Կապույտ և մանուշակագույն։ 4. Տաք և սառը գույներն ուժեղացնում են իրար։ 5. Գույնի մեծ հարթ մասերով։ 6. Սևը և մոխրագույնը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Художник Армении
 
 **Мартирос Сарьян** (1880–1972) — один из самых известных армянских художников. Он прожил долгую жизнь и писал армянскую природу, людей, цветы и фрукты. В Ереване можно побывать в его **доме-музее**, где он работал много лет.
+
+~~~art
+palette saryan tuff
+~~~
 
 ## Как Сарьян пишет солнце
 
@@ -234,6 +301,11 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 
 Сарьян говорил своими картинами: Армения — страна солнца и яркого цвета. Его горы горят оранжевым и розовым, а белый Арарат стоит в синем небе.
 
+~~~art
+mood scene=landscape moods=saryan,noon
+Солнце Сарьяна яркое: чистый оранжевый, горячий жёлтый и глубокие синие тени. Сравни с обычным полднем.
+~~~
+
 ## Напиши картину в манере Сарьяна
 
 1. Выбери простой сюжет: гора с деревней или ваза с цветами и гранатами.
@@ -242,8 +314,12 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 4. Тени пиши синим и фиолетовым, а не чёрным или серым.
 5. Клади контрастные цвета рядом, чтобы они «звучали».
 
-### Упражнения
+~~~art
+wheel mode=complementary
+~~~
 
+~~~art
+tasks
 1. В какие годы жил Сарьян?
 2. Что можно посетить в Ереване, чтобы узнать о нём?
 3. Какого цвета тени на картинах Сарьяна?
@@ -251,10 +327,12 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 5. Как Сарьян пишет горы и поля?
 6. Какие цвета в задании этого урока не используются для теней?
 7. Напиши солнечный пейзаж с синими и фиолетовыми тенями.
+~~~
 
-### Ответы
-
-1. 1880–1972. 2. Его дом-музей. 3. Синие и фиолетовые. 4. Тёплые и холодные цвета усиливают друг друга. 5. Крупными плоскими пятнами цвета. 6. Чёрный и серый. 7. Твоя работа.`,
+~~~art
+hints
+1. 1880–1972. 2. Его дом-музей. 3. Синие и фиолетовые. 4. Тёплые и холодные цвета усиливают друг друга. 5. Крупными плоскими пятнами цвета. 6. Чёрный и серый. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Martiros Saryan was…", "Մարտիրոս Սարյանը…", "Мартирос Сарьян был…"), [t("an Armenian painter", "հայ նկարիչ էր", "армянским художником"), t("a sea captain", "ծովային նավապետ էր", "морским капитаном"), t("a composer", "կոմպոզիտոր էր", "композитором")], 0),
@@ -280,6 +358,10 @@ Saryan said with his paintings: Armenia is a land of sun and bright colour. His 
 
 Aivazovsky did not paint the waves outdoors. He watched the sea for a long time, remembered it and then painted it in his studio **from memory**.
 
+~~~art
+pic genre-marine
+~~~
+
 ## «The Ninth Wave» (1850)
 
 The painting is in the **Russian Museum** in St Petersburg. After a terrible night storm, a few sailors hold on to a broken mast. A huge wave rises above them. But the sun is coming up, and the whole sky is golden: there is hope.
@@ -292,6 +374,10 @@ The painting is in the **Russian Museum** in St Petersburg. After a terrible nig
 
 In the **National Gallery of Armenia** there are many works by Aivazovsky, among them «Noah's Descent from Mount Ararat».
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## How to paint a wave
 
 1. Draw a low horizon and the curve of a wave.
@@ -300,8 +386,16 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 4. Add white foam on the crest with a dry brush.
 5. A small ship or bird shows how big the sea is.
 
-### Exercises
+~~~art
+steps wave
+~~~
 
+~~~art
+palette aivazovsky
+~~~
+
+~~~art
+tasks
 1. Where and when was Aivazovsky born?
 2. What is a marine painter?
 3. How did Aivazovsky paint the waves?
@@ -309,15 +403,21 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 5. What does the sunrise mean in this painting?
 6. Why do artists add a small ship to a big sea?
 7. Paint a calm sea at sunset or a stormy sea with a high wave.
+~~~
 
-### Answers
-
-1. In Feodosia, in 1817. 2. A painter of the sea. 3. From memory, in his studio. 4. Sailors on a broken mast, a huge wave, a golden sunrise. 5. Hope. 6. To show how big the sea is. 7. Your work.`,
+~~~art
+hints
+1. In Feodosia, in 1817. 2. A painter of the sea. 3. From memory, in his studio. 4. Sailors on a broken mast, a huge wave, a golden sunrise. 5. Hope. 6. To show how big the sea is. 7. Your work.
+~~~`,
         hy: `## Ծովի մեծ նկարիչը
 
 **Իվան Այվազովսկին** ծնվել է 1817 թվականին Սև ծովի ափին գտնվող **Ֆեոդոսիա** քաղաքում, հայ ընտանիքում․ նրա հայկական անունը Հովհաննես Այվազյան էր։ Նա ամբողջ կյանքում նկարել է ծովը՝ մոտ վեց հազար նկար։ Ծով նկարող արվեստագետին անվանում են **ծովանկարիչ**։
 
 Այվազովսկին ալիքները բացօթյա չէր նկարում։ Նա երկար դիտում էր ծովը, հիշում և հետո նկարում արվեստանոցում **հիշողությամբ**։
+
+~~~art
+pic genre-marine
+~~~
 
 ## «Իններորդ ալիքը» (1850)
 
@@ -331,6 +431,10 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 
 **Հայաստանի ազգային պատկերասրահում** կան Այվազովսկու շատ գործեր, դրանց թվում՝ «Նոյի իջնելն Արարատից»։
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## Ինչպես նկարել ալիքը
 
 1. Գծի՛ր ցածր հորիզոն և ալիքի կորությունը։
@@ -339,8 +443,16 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 4. Չոր վրձնով կատարին ավելացրու՛ սպիտակ փրփուր։
 5. Փոքր նավը կամ թռչունը ցույց է տալիս, թե որքան մեծ է ծովը։
 
-### Վարժություններ
+~~~art
+steps wave
+~~~
 
+~~~art
+palette aivazovsky
+~~~
+
+~~~art
+tasks
 1. Որտե՞ղ և ե՞րբ է ծնվել Այվազովսկին։
 2. Ո՞վ է ծովանկարիչը։
 3. Ինչպե՞ս էր Այվազովսկին նկարում ալիքները։
@@ -348,15 +460,21 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 5. Ի՞նչ է նշանակում արևածագն այս նկարում։
 6. Ինչո՞ւ են նկարիչները մեծ ծովին փոքր նավ ավելացնում։
 7. Նկարի՛ր հանդարտ ծով մայրամուտին կամ փոթորկոտ ծով բարձր ալիքով։
+~~~
 
-### Պատասխաններ
-
-1. Ֆեոդոսիայում, 1817 թվականին։ 2. Ծով նկարող արվեստագետը։ 3. Հիշողությամբ՝ արվեստանոցում։ 4. Նավաստիներ կոտրված կայմի վրա, հսկա ալիք, ոսկե արևածագ։ 5. Հույս։ 6. Որպեսզի ցույց տան, թե որքան մեծ է ծովը։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ֆեոդոսիայում, 1817 թվականին։ 2. Ծով նկարող արվեստագետը։ 3. Հիշողությամբ՝ արվեստանոցում։ 4. Նավաստիներ կոտրված կայմի վրա, հսկա ալիք, ոսկե արևածագ։ 5. Հույս։ 6. Որպեսզի ցույց տան, թե որքան մեծ է ծովը։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Великий художник моря
 
 **Иван Айвазовский** родился в 1817 году в **Феодосии**, городе на Чёрном море, в армянской семье; его армянское имя — Ованес Айвазян. Всю жизнь он писал море — около шести тысяч картин. Художника, который пишет море, называют **маринистом**.
 
 Айвазовский не писал волны с натуры. Он долго смотрел на море, запоминал его, а потом писал в мастерской **по памяти**.
+
+~~~art
+pic genre-marine
+~~~
 
 ## «Девятый вал» (1850)
 
@@ -370,6 +488,10 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 
 В **Национальной галерее Армении** много работ Айвазовского, среди них «Сошествие Ноя с Арарата».
 
+~~~art
+mood scene=sea moods=calm,storm,evening,night
+~~~
+
 ## Как написать волну
 
 1. Проведи низкий горизонт и изгиб волны.
@@ -378,8 +500,16 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 4. Сухой кистью добавь белую пену на гребне.
 5. Маленький корабль или птица покажут, как огромно море.
 
-### Упражнения
+~~~art
+steps wave
+~~~
 
+~~~art
+palette aivazovsky
+~~~
+
+~~~art
+tasks
 1. Где и когда родился Айвазовский?
 2. Кто такой маринист?
 3. Как Айвазовский писал волны?
@@ -387,10 +517,12 @@ In the **National Gallery of Armenia** there are many works by Aivazovsky, among
 5. Что означает рассвет на этой картине?
 6. Зачем художники добавляют маленький корабль в большое море?
 7. Напиши спокойное море на закате или бурное море с высокой волной.
+~~~
 
-### Ответы
-
-1. В Феодосии, в 1817 году. 2. Художник, который пишет море. 3. По памяти, в мастерской. 4. Моряки на обломке мачты, огромная волна, золотой рассвет. 5. Надежду. 6. Чтобы показать, как огромно море. 7. Твоя работа.`,
+~~~art
+hints
+1. В Феодосии, в 1817 году. 2. Художник, который пишет море. 3. По памяти, в мастерской. 4. Моряки на обломке мачты, огромная волна, золотой рассвет. 5. Надежду. 6. Чтобы показать, как огромно море. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Aivazovsky was born in…", "Այվազովսկին ծնվել է…", "Айвазовский родился в…"), [t("Feodosia", "Ֆեոդոսիայում", "Феодосии"), t("Moscow", "Մոսկվայում", "Москве"), t("Gyumri", "Գյումրիում", "Гюмри")], 0),
@@ -420,6 +552,10 @@ This painting in the **Tretyakov Gallery** is one of the most famous in Russia. 
 
 Another famous work is «Rye» (1878): a golden field, a road and tall pines under a big sky.
 
+~~~art
+palette shishkin
+~~~
+
 ## Every tree has its character
 
 | Tree | Trunk | Crown |
@@ -429,6 +565,11 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 | **birch** | white with black marks, thin | light, hanging branches |
 | **spruce** | straight, hidden by branches | a dark green triangle |
 
+~~~art
+pic leaf-oak leaf-birch cone
+Every tree has its own character: a mighty oak, a gentle birch, a straight pine with cones.
+~~~
+
 ## Draw a tree in pencil
 
 1. Look at the whole tree: tall or wide? Draw the main shape lightly.
@@ -437,8 +578,16 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 4. Show the crown with **hatching**: short strokes in the direction of the leaves or needles.
 5. Press harder in the shadows, lighter where the sun shines.
 
-### Exercises
+~~~art
+steps tree
+~~~
 
+~~~art
+tone
+~~~
+
+~~~art
+tasks
 1. In which years did Shishkin live?
 2. What did Shishkin do before painting a forest?
 3. Describe «Morning in a Pine Forest».
@@ -446,10 +595,12 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 5. How does a pine differ from an oak?
 6. Where do we press the pencil harder?
 7. Draw two different trees from life: show their character.
+~~~
 
-### Answers
-
-1. 1832–1898. 2. He made many pencil drawings outdoors. 3. Morning fog, tall pines, a fallen tree and four bears playing on it. 4. Konstantin Savitsky. 5. A pine is tall and straight with a crown high up; an oak is thick with twisted branches and a wide crown. 6. In the shadows. 7. Your work.`,
+~~~art
+hints
+1. 1832–1898. 2. He made many pencil drawings outdoors. 3. Morning fog, tall pines, a fallen tree and four bears playing on it. 4. Konstantin Savitsky. 5. A pine is tall and straight with a crown high up; an oak is thick with twisted branches and a wide crown. 6. In the shadows. 7. Your work.
+~~~`,
         hy: `## Անտառի նկարիչը
 
 **Իվան Շիշկինն** (1832–1898) ամեն ինչից շատ սիրում էր ռուսական անտառը։ Նա ճանաչում էր ամեն տեսակ ծառ և նկարում էր դրանք շատ ճշգրիտ՝ սոճիներ, կաղնիներ, կեչիներ, եղևնիներ։ Գեղանկարից առաջ նա բացօթյա արել է բազմաթիվ մատիտանկարներ։
@@ -460,6 +611,10 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 
 Մեկ այլ հայտնի գործ է «Աշորան» (1878)՝ ոսկե դաշտ, ճանապարհ և բարձր սոճիներ մեծ երկնքի տակ։
 
+~~~art
+palette shishkin
+~~~
+
 ## Ամեն ծառ ունի իր բնավորությունը
 
 | Ծառ | Բուն | Սաղարթ |
@@ -469,6 +624,11 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 | **կեչի** | սպիտակ՝ սև նշաններով, բարակ | թեթև, կախված ճյուղեր |
 | **եղևնի** | ուղիղ, ծածկված ճյուղերով | մուգ կանաչ եռանկյուն |
 
+~~~art
+pic leaf-oak leaf-birch cone
+Յուրաքանչյուր ծառ ունի իր բնավորությունը․ հզոր կաղնի, նուրբ կեչի, ուղիղ սոճի՝ կոներով։
+~~~
+
 ## Մատիտով նկարի՛ր ծառ
 
 1. Նայի՛ր ամբողջ ծառին՝ բա՞րձր է, թե՞ լայն։ Թեթև գծի՛ր հիմնական ձևը։
@@ -477,8 +637,16 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 4. Սաղարթը ցույց տուր **շտրիխներով**՝ կարճ գծիկներով տերևների կամ ասեղների ուղղությամբ։
 5. Ստվերում սեղմի՛ր ավելի ուժեղ, որտեղ արևն է՝ ավելի թեթև։
 
-### Վարժություններ
+~~~art
+steps tree
+~~~
 
+~~~art
+tone
+~~~
+
+~~~art
+tasks
 1. Ո՞ր տարիներին է ապրել Շիշկինը։
 2. Ի՞նչ էր անում Շիշկինն անտառ նկարելուց առաջ։
 3. Նկարագրի՛ր «Առավոտը սոճու անտառում»։
@@ -486,10 +654,12 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 5. Ինչո՞վ է սոճին տարբերվում կաղնուց։
 6. Որտե՞ղ ենք մատիտն ավելի ուժեղ սեղմում։
 7. Բնօրինակից նկարի՛ր երկու տարբեր ծառ՝ ցույց տալով նրանց բնավորությունը։
+~~~
 
-### Պատասխաններ
-
-1. 1832–1898։ 2. Բացօթյա բազմաթիվ մատիտանկարներ էր անում։ 3. Առավոտյան մառախուղ, բարձր սոճիներ, ընկած ծառ և դրա վրա խաղացող չորս արջ։ 4. Կոնստանտին Սավիցկին։ 5. Սոճին բարձր է և ուղիղ, սաղարթը՝ բարձրում, կաղնին հաստ է, ոլորված ճյուղերով և լայն սաղարթով։ 6. Ստվերում։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. 1832–1898։ 2. Բացօթյա բազմաթիվ մատիտանկարներ էր անում։ 3. Առավոտյան մառախուղ, բարձր սոճիներ, ընկած ծառ և դրա վրա խաղացող չորս արջ։ 4. Կոնստանտին Սավիցկին։ 5. Սոճին բարձր է և ուղիղ, սաղարթը՝ բարձրում, կաղնին հաստ է, ոլորված ճյուղերով և լայն սաղարթով։ 6. Ստվերում։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Художник леса
 
 **Иван Шишкин** (1832–1898) больше всего любил русский лес. Он знал каждое дерево и рисовал их очень точно: сосны, дубы, берёзы, ели. Прежде чем писать картину, он делал много рисунков карандашом на природе.
@@ -500,6 +670,10 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 
 Другая известная работа — «Рожь» (1878): золотое поле, дорога и высокие сосны под большим небом.
 
+~~~art
+palette shishkin
+~~~
+
 ## У каждого дерева свой характер
 
 | Дерево | Ствол | Крона |
@@ -509,6 +683,11 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 | **берёза** | белый с чёрными пятнами, тонкий | лёгкая, ветви свисают |
 | **ель** | прямой, скрыт ветвями | тёмно-зелёный треугольник |
 
+~~~art
+pic leaf-oak leaf-birch cone
+У каждого дерева свой характер: могучий дуб, нежная берёза, прямая сосна с шишками.
+~~~
+
 ## Нарисуй дерево карандашом
 
 1. Посмотри на всё дерево: высокое или широкое? Легко наметь общую форму.
@@ -517,8 +696,16 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 4. Крону передай **штриховкой**: короткими штрихами по направлению листьев или хвои.
 5. В тени нажимай сильнее, где светит солнце — легче.
 
-### Упражнения
+~~~art
+steps tree
+~~~
 
+~~~art
+tone
+~~~
+
+~~~art
+tasks
 1. В какие годы жил Шишкин?
 2. Что делал Шишкин, прежде чем писать лес?
 3. Опиши «Утро в сосновом лесу».
@@ -526,10 +713,12 @@ Another famous work is «Rye» (1878): a golden field, a road and tall pines und
 5. Чем сосна отличается от дуба?
 6. Где мы нажимаем на карандаш сильнее?
 7. Нарисуй с натуры два разных дерева, передай их характер.
+~~~
 
-### Ответы
-
-1. 1832–1898. 2. Делал много рисунков карандашом на природе. 3. Утренний туман, высокие сосны, поваленное дерево и четыре медведя, играющие на нём. 4. Константин Савицкий. 5. Сосна высокая и прямая, крона высоко; дуб толстый, с корявыми ветвями и широкой кроной. 6. В тени. 7. Твоя работа.`,
+~~~art
+hints
+1. 1832–1898. 2. Делал много рисунков карандашом на природе. 3. Утренний туман, высокие сосны, поваленное дерево и четыре медведя, играющие на нём. 4. Константин Савицкий. 5. Сосна высокая и прямая, крона высоко; дуб толстый, с корявыми ветвями и широкой кроной. 6. В тени. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Shishkin loved to paint…", "Շիշկինը սիրում էր նկարել…", "Шишкин любил писать…"), [t("the forest", "անտառը", "лес"), t("the sea", "ծովը", "море"), t("theatre masks", "թատերական դիմակներ", "театральные маски")], 0),
@@ -564,6 +753,10 @@ This year we learned how artists work in the home, in the street, in the theatre
 | 5. **hang** | hang the works at the eye level of a child, with equal spaces |
 | 6. **invite** | draw a poster and invitation cards for parents |
 
+~~~art
+pic easel genre-landscape genre-portrait
+~~~
+
 ## Example of a label
 
 > Ani Petrosyan, 3rd grade \\
@@ -580,8 +773,12 @@ Prepare a short talk about your work:
 
 Listen to your classmates and say one kind thing about each work.
 
-### Exercises
+~~~art
+shots
+~~~
 
+~~~art
+tasks
 1. How many works does each pupil choose?
 2. Name the four «halls» of our exhibition.
 3. What is a mat?
@@ -589,10 +786,12 @@ Listen to your classmates and say one kind thing about each work.
 5. At what height do we hang the works?
 6. Write the label for one of your works.
 7. Prepare a three-sentence talk about your best work.
+~~~
 
-### Answers
-
-1. Two. 2. Art in the home, Art on the street, Theatre, Museum. 3. Coloured card a little larger than the work. 4. The author, the title, the year and the material. 5. At the eye level of a child. 6–7. Your work.`,
+~~~art
+hints
+1. Two. 2. Art in the home, Art on the street, Theatre, Museum. 3. Coloured card a little larger than the work. 4. The author, the title, the year and the material. 5. At the eye level of a child. 6–7. Your work.
+~~~`,
         hy: `## Թանգարան դասարանում
 
 Այս տարի իմացանք, թե ինչպես են նկարիչներն աշխատում տանը, փողոցում, թատրոնում և թանգարանում։ Հիմա մեր դասարանը կդառնա փոքրիկ թանգարան։
@@ -607,6 +806,10 @@ Listen to your classmates and say one kind thing about each work.
 | 4. **պիտակել** | գրել հեղինակին, վերնագիրը, տարին և նյութը |
 | 5. **կախել** | աշխատանքները կախել երեխայի աչքերի բարձրությամբ, հավասար տարածություններով |
 | 6. **հրավիրել** | նկարել պաստառ և հրավիրատոմսեր ծնողների համար |
+
+~~~art
+pic easel genre-landscape genre-portrait
+~~~
 
 ## Պիտակի օրինակ
 
@@ -624,8 +827,12 @@ Listen to your classmates and say one kind thing about each work.
 
 Լսի՛ր դասընկերներիդ և յուրաքանչյուր աշխատանքի մասին մեկ բարի խոսք ասա։
 
-### Վարժություններ
+~~~art
+shots
+~~~
 
+~~~art
+tasks
 1. Քանի՞ աշխատանք է ընտրում յուրաքանչյուր աշակերտ։
 2. Անվանի՛ր մեր ցուցահանդեսի չորս «սրահները»։
 3. Ի՞նչ է պասպարտուն։
@@ -633,10 +840,12 @@ Listen to your classmates and say one kind thing about each work.
 5. Ի՞նչ բարձրության վրա ենք կախում աշխատանքները։
 6. Գրի՛ր պիտակ քո աշխատանքներից մեկի համար։
 7. Պատրաստի՛ր երեք նախադասությամբ պատմություն քո լավագույն աշխատանքի մասին։
+~~~
 
-### Պատասխաններ
-
-1. Երկու։ 2. Արվեստը տանը, Արվեստը փողոցում, Թատրոն, Թանգարան։ 3. Աշխատանքից մի փոքր մեծ գունավոր ստվարաթուղթ։ 4. Հեղինակը, վերնագիրը, տարին և նյութը։ 5. Երեխայի աչքերի բարձրությամբ։ 6–7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Երկու։ 2. Արվեստը տանը, Արվեստը փողոցում, Թատրոն, Թանգարան։ 3. Աշխատանքից մի փոքր մեծ գունավոր ստվարաթուղթ։ 4. Հեղինակը, վերնագիրը, տարին և նյութը։ 5. Երեխայի աչքերի բարձրությամբ։ 6–7. Քո աշխատանքը։
+~~~`,
         ru: `## Музей в классе
 
 В этом году мы узнали, как художники работают в доме, на улице, в театре и в музее. Теперь наш класс станет маленьким музеем.
@@ -651,6 +860,10 @@ Listen to your classmates and say one kind thing about each work.
 | 4. **подписать** | написать автора, название, год и материал |
 | 5. **развесить** | повесить работы на уровне глаз ребёнка, с равными промежутками |
 | 6. **пригласить** | нарисовать афишу и пригласительные открытки для родителей |
+
+~~~art
+pic easel genre-landscape genre-portrait
+~~~
 
 ## Пример этикетки
 
@@ -668,8 +881,12 @@ Listen to your classmates and say one kind thing about each work.
 
 Послушай одноклассников и скажи доброе слово о каждой работе.
 
-### Упражнения
+~~~art
+shots
+~~~
 
+~~~art
+tasks
 1. Сколько работ выбирает каждый ученик?
 2. Назови четыре «зала» нашей выставки.
 3. Что такое паспарту?
@@ -677,10 +894,12 @@ Listen to your classmates and say one kind thing about each work.
 5. На какой высоте вешают работы?
 6. Напиши этикетку для одной своей работы.
 7. Подготовь рассказ из трёх предложений о своей лучшей работе.
+~~~
 
-### Ответы
-
-1. Две. 2. Искусство в доме, Искусство на улице, Театр, Музей. 3. Цветной картон чуть больше работы. 4. Автор, название, год и материал. 5. На уровне глаз ребёнка. 6–7. Твоя работа.`,
+~~~art
+hints
+1. Две. 2. Искусство в доме, Искусство на улице, Театр, Музей. 3. Цветной картон чуть больше работы. 4. Автор, название, год и материал. 5. На уровне глаз ребёнка. 6–7. Твоя работа.
+~~~`,
       },
       [
         q(t("Each pupil chooses…", "Յուրաքանչյուր աշակերտ ընտրում է…", "Каждый ученик выбирает…"), [t("two best works", "երկու լավագույն աշխատանք", "две лучшие работы"), t("all works", "բոլոր աշխատանքները", "все работы"), t("no works", "ոչ մի աշխատանք", "ни одной работы")], 0),
@@ -719,6 +938,11 @@ Listen to your classmates and say one kind thing about each work.
 | **portrait** | a person | Serov «Girl with Peaches» |
 | **historical / epic** | events and heroes of the past | Vasnetsov «Bogatyrs» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-marine genre-battle genre-animal
+Genre quiz: cover the captions with your hand and name the genre of each picture.
+~~~
+
 ## Who did what
 
 - **Martiros Saryan**: bright Armenian sun, blue shadows.
@@ -726,12 +950,21 @@ Listen to your classmates and say one kind thing about each work.
 - **Ivan Shishkin**: the forest, «Morning in a Pine Forest».
 - **Yervand Kochar**: the statue «David of Sasun».
 
+~~~art
+palette saryan aivazovsky shishkin
+~~~
+
 ## Final work
 
 Choose a theme: «My street on a holiday», «A museum of my dreams» or «A hero of a fairy tale on stage». Use what you know: plans and horizon, warm and cold colours, a clear centre, details that tell a story.
 
-### Exercises
+~~~art
+sketch
+Final work: paint your favourite place in your favourite genre.
+~~~
 
+~~~art
+tasks
 1. Name the five units of this year.
 2. What is the difference between a landscape and a still life?
 3. Which genre is «Bogatyrs»?
@@ -739,10 +972,12 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 5. What is a relief?
 6. Which colours does Saryan use for shadows?
 7. Make your final work and give it a label.
+~~~
 
-### Answers
-
-1. Art in the home, Art on the street, Artist and spectacle, Artist and museum, Great artists. 2. A landscape shows nature; a still life shows objects. 3. Historical / epic painting. 4. Ivan Aivazovsky. 5. Figures standing out from a flat background. 6. Blue and violet. 7. Your work.`,
+~~~art
+hints
+1. Art in the home, Art on the street, Artist and spectacle, Artist and museum, Great artists. 2. A landscape shows nature; a still life shows objects. 3. Historical / epic painting. 4. Ivan Aivazovsky. 5. Figures standing out from a flat background. 6. Blue and violet. 7. Your work.
+~~~`,
         hy: `## Ինչ սովորեցինք այս տարի
 
 | Բաժին | Հիմնական գաղափարներ |
@@ -762,6 +997,11 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 | **դիմանկար** | մարդ | Սերով «Աղջիկը դեղձերով» |
 | **պատմական / էպիկական** | անցյալի իրադարձություններ և հերոսներ | Վասնեցով «Դյուցազուններ» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-marine genre-battle genre-animal
+Ժանրերի վիկտորինա․ ձեռքով փակի՛ր ստորագրությունները և անվանի՛ր յուրաքանչյուր նկարի ժանրը։
+~~~
+
 ## Ով ինչ է արել
 
 - **Մարտիրոս Սարյան**՝ հայկական վառ արև, կապույտ ստվերներ։
@@ -769,12 +1009,21 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 - **Իվան Շիշկին**՝ անտառ, «Առավոտը սոճու անտառում»։
 - **Երվանդ Քոչար**՝ «Սասունցի Դավիթ» արձանը։
 
+~~~art
+palette saryan aivazovsky shishkin
+~~~
+
 ## Ամփոփիչ աշխատանք
 
 Ընտրի՛ր թեմա՝ «Իմ փողոցը տոնին», «Իմ երազանքների թանգարանը» կամ «Հեքիաթի հերոսը բեմում»։ Օգտագործի՛ր այն, ինչ գիտես՝ պլաններ և հորիզոն, տաք և սառը գույներ, հստակ կենտրոն, պատմող մանրամասներ։
 
-### Վարժություններ
+~~~art
+sketch
+Ամփոփիչ աշխատանք․ նկարի՛ր քո սիրելի վայրը քո սիրելի ժանրով։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր այս տարվա հինգ բաժինները։
 2. Ինչո՞վ է բնանկարը տարբերվում նատյուրմորտից։
 3. Ո՞ր ժանրին է պատկանում «Դյուցազուններ»-ը։
@@ -782,10 +1031,12 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 5. Ի՞նչ է ռելիեֆը։
 6. Ո՞ր գույներն է Սարյանն օգտագործում ստվերների համար։
 7. Կատարի՛ր ամփոփիչ աշխատանքդ և պիտակ գրիր դրա համար։
+~~~
 
-### Պատասխաններ
-
-1. Արվեստը տանը, Արվեստը փողոցում, Նկարիչը և տեսարանը, Նկարիչը և թանգարանը, Մեծ նկարիչներ։ 2. Բնանկարը պատկերում է բնություն, նատյուրմորտը՝ առարկաներ։ 3. Պատմական / էպիկական նկար։ 4. Իվան Այվազովսկին։ 5. Հարթ ֆոնից դուրս ցցված պատկերներ։ 6. Կապույտ և մանուշակագույն։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Արվեստը տանը, Արվեստը փողոցում, Նկարիչը և տեսարանը, Նկարիչը և թանգարանը, Մեծ նկարիչներ։ 2. Բնանկարը պատկերում է բնություն, նատյուրմորտը՝ առարկաներ։ 3. Պատմական / էպիկական նկար։ 4. Իվան Այվազովսկին։ 5. Հարթ ֆոնից դուրս ցցված պատկերներ։ 6. Կապույտ և մանուշակագույն։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Что мы узнали в этом году
 
 | Раздел | Главное |
@@ -805,6 +1056,11 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 | **портрет** | человека | Серов «Девочка с персиками» |
 | **исторический / былинный** | события и героев прошлого | Васнецов «Богатыри» |
 
+~~~art
+pic genre-landscape genre-still-life genre-portrait genre-marine genre-battle genre-animal
+Викторина жанров: закрой подписи ладонью и назови жанр каждой картинки.
+~~~
+
 ## Кто что создал
 
 - **Мартирос Сарьян** — яркое армянское солнце, синие тени.
@@ -812,12 +1068,21 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 - **Иван Шишкин** — лес, «Утро в сосновом лесу».
 - **Ерванд Кочар** — памятник «Давид Сасунский».
 
+~~~art
+palette saryan aivazovsky shishkin
+~~~
+
 ## Итоговая работа
 
 Выбери тему: «Моя улица в праздник», «Музей моей мечты» или «Сказочный герой на сцене». Используй то, что знаешь: планы и горизонт, тёплые и холодные цвета, ясный центр, детали, которые рассказывают историю.
 
-### Упражнения
+~~~art
+sketch
+Итоговая работа: нарисуй любимое место в любимом жанре.
+~~~
 
+~~~art
+tasks
 1. Назови пять разделов этого года.
 2. Чем пейзаж отличается от натюрморта?
 3. К какому жанру относятся «Богатыри»?
@@ -825,10 +1090,12 @@ Choose a theme: «My street on a holiday», «A museum of my dreams» or «A her
 5. Что такое рельеф?
 6. Какими цветами Сарьян пишет тени?
 7. Выполни итоговую работу и сделай к ней этикетку.
+~~~
 
-### Ответы
-
-1. Искусство в доме, Искусство на улице, Художник и зрелище, Художник и музей, Великие художники. 2. Пейзаж изображает природу, натюрморт — предметы. 3. К историческому / былинному жанру. 4. Иван Айвазовский. 5. Фигуры, выступающие из плоского фона. 6. Синим и фиолетовым. 7. Твоя работа.`,
+~~~art
+hints
+1. Искусство в доме, Искусство на улице, Художник и зрелище, Художник и музей, Великие художники. 2. Пейзаж изображает природу, натюрморт — предметы. 3. К историческому / былинному жанру. 4. Иван Айвазовский. 5. Фигуры, выступающие из плоского фона. 6. Синим и фиолетовым. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A picture of a jug and apples is a…", "Սափորի և խնձորների պատկերը…", "Изображение кувшина и яблок — это…"), [t("still life", "նատյուրմորտ է", "натюрморт"), t("portrait", "դիմանկար է", "портрет"), t("seascape", "ծովանկար է", "морской пейзаж")], 0),

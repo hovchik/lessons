@@ -29,18 +29,32 @@ Before a toy is made in a workshop or a factory, an **artist** draws it: its **s
 | made by hand, every one is a little different | many identical copies |
 | Armenian clay whistles, rag dolls, Russian matryoshka and Dymkovo toys | construction sets, cars, robots, soft animals |
 
+~~~art
+pic dymkovo filimonovo matryoshka plasticine
+~~~
+
 ## Three questions of a toy designer
 
 1. **What is it?** An animal, a doll, a vehicle, a fantastic creature.
 2. **What shape?** Simple shapes are easy to read: a ball, a cone, a cylinder.
 3. **How to decorate it?** Dots, stripes, circles, flowers in 2–3 bright colours.
 
+~~~art
+pic mode=silhouette dymkovo filimonovo matryoshka horse
+A good toy is recognised by its shape alone. Guess each toy from its silhouette, then tap to check.
+~~~
+
 ## Practice
 
 Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one main colour and add a pattern of dots and stripes.
 
-### Exercises
+~~~art
+sketch guide=axis
+Invent a toy animal from simple shapes: a ball body, a cone neck, cylinder legs. Make both sides alike.
+~~~
 
+~~~art
+tasks
 1. Who designs a toy before it is made?
 2. Name three materials of folk toys.
 3. What is the difference between a folk and a factory toy?
@@ -48,10 +62,12 @@ Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one 
 5. Draw a toy animal from a ball and a cone.
 6. Decorate it with dots and stripes in two colours.
 7. Invent a name for your toy and tell who will play with it.
+~~~
 
-### Answers
-
-1. An artist. 2. For example clay, wood, straw. 3. A folk toy is made by hand and every one is unique; a factory toy has many identical copies. 4. A ball, a cone, a cylinder, a cube. 5–7. Your drawing and story.`,
+~~~art
+hints
+1. An artist. 2. For example clay, wood, straw. 3. A folk toy is made by hand and every one is unique; a factory toy has many identical copies. 4. A ball, a cone, a cylinder, a cube. 5–7. Your drawing and story.
+~~~`,
         hy: `## Ո՞վ է հորինում խաղալիքները
 
 Մինչև խաղալիքն արհեստանոցում կամ գործարանում պատրաստելը, **նկարիչը** նկարում է այն՝ նրա **ձևը**, **գույները** և **զարդարանքը**։ Նկարիչը մտածում է, թե ով և ինչպես է խաղալու դրանով։
@@ -64,18 +80,32 @@ Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one 
 | ձեռքով են պատրաստվում, յուրաքանչյուրը մի քիչ տարբեր է | շատ միանման օրինակներ |
 | հայկական կավե սուլիչներ, կտորե տիկնիկներ, ռուսական մատրյոշկա և դիմկովյան խաղալիքներ | կոնստրուկտորներ, մեքենաներ, ռոբոտներ, փափուկ կենդանիներ |
 
+~~~art
+pic dymkovo filimonovo matryoshka plasticine
+~~~
+
 ## Խաղալիքի նկարչի երեք հարցը
 
 1. **Ի՞նչ է այն։** Կենդանի, տիկնիկ, մեքենա, ֆանտաստիկ արարած։
 2. **Ի՞նչ ձև։** Պարզ ձևերը հեշտ են ընկալվում՝ գունդ, կոն, գլան։
 3. **Ինչպե՞ս զարդարել։** Կետեր, շերտեր, շրջանակներ, ծաղիկներ՝ 2–3 վառ գույնով։
 
+~~~art
+pic mode=silhouette dymkovo filimonovo matryoshka horse
+Լավ խաղալիքը ճանաչվում է հենց ձևով։ Գուշակի՛ր խաղալիքը ուրվագծով, հետո հպիր՝ ստուգելու համար։
+~~~
+
 ## Գործնական աշխատանք
 
 Նկարի՛ր պարզ ձևերից կազմված **սուլիչ-թռչուն** կամ **ձի**։ Ներկի՛ր մեկ հիմնական գույնով և ավելացրու՛ կետերի ու շերտերի նախշ։
 
-### Վարժություններ
+~~~art
+sketch guide=axis
+Պարզ ձևերից հորինի՛ր խաղալիք կենդանի․ գնդաձև մարմին, կոնաձև վիզ, գլանաձև ոտքեր։ Երկու կողմերը թող նման լինեն։
+~~~
 
+~~~art
+tasks
 1. Ո՞վ է հորինում խաղալիքը մինչև պատրաստելը։
 2. Թվի՛ր ժողովրդական խաղալիքների երեք նյութ։
 3. Ինչո՞վ է ժողովրդական խաղալիքը տարբերվում գործարանայինից։
@@ -83,10 +113,12 @@ Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one 
 5. Նկարի՛ր խաղալիք-կենդանի գնդից և կոնից։
 6. Զարդարի՛ր այն երկու գույնի կետերով և շերտերով։
 7. Անուն հորինի՛ր խաղալիքիդ և պատմի՛ր, թե ով է խաղալու դրանով։
+~~~
 
-### Պատասխաններ
-
-1. Նկարիչը։ 2. Օրինակ՝ կավ, փայտ, ծղոտ։ 3. Ժողովրդականը ձեռքով է պատրաստվում, և յուրաքանչյուրը յուրահատուկ է, գործարանայինն ունի շատ միանման օրինակներ։ 4. Գունդ, կոն, գլան, խորանարդ։ 5–7. Քո նկարը և պատմությունը։`,
+~~~art
+hints
+1. Նկարիչը։ 2. Օրինակ՝ կավ, փայտ, ծղոտ։ 3. Ժողովրդականը ձեռքով է պատրաստվում, և յուրաքանչյուրը յուրահատուկ է, գործարանայինն ունի շատ միանման օրինակներ։ 4. Գունդ, կոն, գլան, խորանարդ։ 5–7. Քո նկարը և պատմությունը։
+~~~`,
         ru: `## Кто придумывает игрушки?
 
 Прежде чем игрушку сделают в мастерской или на фабрике, её рисует **художник**: придумывает **форму**, **цвет** и **украшение**. Художник думает, кто и как будет с ней играть.
@@ -99,18 +131,32 @@ Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one 
 | сделаны руками, каждая немного другая | много одинаковых копий |
 | армянские глиняные свистульки, тряпичные куклы, русская матрёшка и дымковская игрушка | конструкторы, машинки, роботы, мягкие звери |
 
+~~~art
+pic dymkovo filimonovo matryoshka plasticine
+~~~
+
 ## Три вопроса художника игрушки
 
 1. **Что это?** Зверь, кукла, машина, сказочное существо.
 2. **Какая форма?** Простые формы легко узнать: шар, конус, цилиндр.
 3. **Как украсить?** Точки, полоски, круги, цветы в 2–3 ярких цветах.
 
+~~~art
+pic mode=silhouette dymkovo filimonovo matryoshka horse
+Хорошую игрушку узнают по одному силуэту. Угадай игрушку по силуэту, а потом нажми, чтобы проверить.
+~~~
+
 ## Практика
 
 Нарисуй **птичку-свистульку** или **лошадку** из простых форм. Раскрась её одним основным цветом и добавь узор из точек и полосок.
 
-### Упражнения
+~~~art
+sketch guide=axis
+Придумай игрушечного зверя из простых форм: тело-шар, шея-конус, ноги-цилиндры. Сделай обе стороны похожими.
+~~~
 
+~~~art
+tasks
 1. Кто придумывает игрушку до того, как её сделают?
 2. Назови три материала народных игрушек.
 3. Чем народная игрушка отличается от фабричной?
@@ -118,10 +164,12 @@ Draw a **whistle-bird** or a **horse** made of simple shapes. Paint it with one 
 5. Нарисуй игрушечного зверя из шара и конуса.
 6. Укрась его точками и полосками в двух цветах.
 7. Придумай название своей игрушке и расскажи, кто будет с ней играть.
+~~~
 
-### Ответы
-
-1. Художник. 2. Например, глина, дерево, солома. 3. Народную делают руками, и каждая неповторима; у фабричной много одинаковых копий. 4. Шар, конус, цилиндр, куб. 5–7. Твой рисунок и рассказ.`,
+~~~art
+hints
+1. Художник. 2. Например, глина, дерево, солома. 3. Народную делают руками, и каждая неповторима; у фабричной много одинаковых копий. 4. Шар, конус, цилиндр, куб. 5–7. Твой рисунок и рассказ.
+~~~`,
       },
       [
         q(t("Who designs a toy before it is made?", "Ո՞վ է հորինում խաղալիքը մինչև պատրաստելը։", "Кто придумывает игрушку до её изготовления?"), [t("An artist", "Նկարիչը", "Художник"), t("A driver", "Վարորդը", "Водитель"), t("A doctor", "Բժիշկը", "Врач")], 0),
@@ -152,6 +200,10 @@ Every dish has a **job**, and its **form** helps it do that job.
 | jug | pour water | a spout and a handle |
 | bowl | hold soup | deep and round |
 
+~~~art
+pic karas copper-jug ceramic-plate gzhel-plate
+~~~
+
 ## Decoration follows form
 
 A pattern is placed where it **suits the shape**:
@@ -159,6 +211,10 @@ A pattern is placed where it **suits the shape**:
 - on a **plate** — around the **rim** or in the **centre**;
 - on a **cup** — in a **band** around the side;
 - on a **jug** — on the **belly**, the widest part.
+
+~~~art
+steps jug
+~~~
 
 ## Everyday and festive
 
@@ -168,8 +224,13 @@ A pattern is placed where it **suits the shape**:
 
 Armenian potters made clay jugs and pots for water, wine and grain for thousands of years; many old ones are kept in museums. Russian **Gzhel** dishes are famous for their **blue** pattern on **white**.
 
-### Exercises
+~~~art
+pattern layout=rosette palettes=gzhel,khokhloma,armenian motifs=flower,leaf,pomegranate,wave
+A plate is round, so its pattern goes around the centre. Switch between a festive and an everyday palette.
+~~~
 
+~~~art
+tasks
 1. Why does a cup have a handle?
 2. Which part of a jug pours the water?
 3. Where can you place a pattern on a plate?
@@ -177,10 +238,12 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 5. Which colours are typical of Gzhel?
 6. Draw a jug and mark its spout, handle and belly.
 7. Design a festive plate: draw a pattern on the rim and a picture in the centre.
+~~~
 
-### Answers
-
-1. So that fingers do not burn. 2. The spout. 3. Around the rim or in the centre. 4. Brighter colours, gold and rich patterns. 5. Blue on white. 6–7. Your drawings.`,
+~~~art
+hints
+1. So that fingers do not burn. 2. The spout. 3. Around the rim or in the centre. 4. Brighter colours, gold and rich patterns. 5. Blue on white. 6–7. Your drawings.
+~~~`,
         hy: `## Ձևը հետևում է նշանակությանը
 
 Սպասքի յուրաքանչյուր առարկա ունի իր **գործը**, և նրա **ձևն** օգնում է կատարել այն։
@@ -192,6 +255,10 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 | սափոր | ջուր լցնել | ծորակ և կանթ |
 | թաս | ապուր պահել | խոր և կլոր |
 
+~~~art
+pic karas copper-jug ceramic-plate gzhel-plate
+~~~
+
 ## Զարդարանքը հետևում է ձևին
 
 Նախշը դրվում է այնտեղ, որտեղ **սազում է ձևին**․
@@ -199,6 +266,10 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 - **ափսեի** վրա՝ **եզրի** շուրջը կամ **կենտրոնում**,
 - **բաժակի** վրա՝ կողքի շուրջը **գոտիով**,
 - **սափորի** վրա՝ **փորի**, այսինքն ամենալայն մասի վրա։
+
+~~~art
+steps jug
+~~~
 
 ## Ամենօրյա և տոնական
 
@@ -208,8 +279,13 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 
 Հայ բրուտները հազարավոր տարիներ կավե սափորներ և կարասներ են պատրաստել ջրի, գինու և հացահատիկի համար, շատ հնագույն նմուշներ պահվում են թանգարաններում։ Ռուսական **Գժելի** սպասքը հայտնի է **սպիտակի** վրա **կապույտ** նախշով։
 
-### Վարժություններ
+~~~art
+pattern layout=rosette palettes=gzhel,khokhloma,armenian motifs=flower,leaf,pomegranate,wave
+Ափսեն կլոր է, ուստի նախշը պտտվում է կենտրոնի շուրջ։ Փոխի՛ր տոնական և առօրյա գունապնակները։
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ է բաժակն ունենում կանթ։
 2. Սափորի ո՞ր մասով է ջուրը լցվում։
 3. Որտե՞ղ կարելի է նախշ դնել ափսեի վրա։
@@ -217,10 +293,12 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 5. Ո՞ր գույներն են բնորոշ Գժելին։
 6. Նկարի՛ր սափոր և նշի՛ր ծորակը, կանթը և փորը։
 7. Ձևավորի՛ր տոնական ափսե՝ եզրին նախշ և կենտրոնում նկար։
+~~~
 
-### Պատասխաններ
-
-1. Որպեսզի մատները չայրվեն։ 2. Ծորակով։ 3. Եզրի շուրջը կամ կենտրոնում։ 4. Ավելի վառ գույներ, ոսկի և հարուստ նախշեր։ 5. Կապույտը սպիտակի վրա։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Որպեսզի մատները չայրվեն։ 2. Ծորակով։ 3. Եզրի շուրջը կամ կենտրոնում։ 4. Ավելի վառ գույներ, ոսկի և հարուստ նախշեր։ 5. Կապույտը սպիտակի վրա։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Форма зависит от назначения
 
 У каждого предмета посуды есть **работа**, и его **форма** помогает её выполнять.
@@ -232,6 +310,10 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 | кувшин | наливать воду | носик и ручка |
 | миска | для супа | глубокая и круглая |
 
+~~~art
+pic karas copper-jug ceramic-plate gzhel-plate
+~~~
+
 ## Украшение подчиняется форме
 
 Узор размещают там, где он **подходит к форме**:
@@ -239,6 +321,10 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 - на **тарелке** — по **краю** или в **центре**;
 - на **чашке** — **поясом** вокруг стенки;
 - на **кувшине** — на **тулове**, самой широкой части.
+
+~~~art
+steps jug
+~~~
 
 ## Повседневная и праздничная
 
@@ -248,8 +334,13 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 
 Армянские гончары тысячи лет делали глиняные кувшины и карасы для воды, вина и зерна; многие древние сосуды хранятся в музеях. Русская **гжель** знаменита **синим** узором на **белом**.
 
-### Упражнения
+~~~art
+pattern layout=rosette palettes=gzhel,khokhloma,armenian motifs=flower,leaf,pomegranate,wave
+Тарелка круглая, поэтому узор идёт вокруг центра. Переключай праздничную и будничную палитру.
+~~~
 
+~~~art
+tasks
 1. Зачем чашке ручка?
 2. Через какую часть кувшина наливают воду?
 3. Где можно разместить узор на тарелке?
@@ -257,10 +348,12 @@ Armenian potters made clay jugs and pots for water, wine and grain for thousands
 5. Какие цвета характерны для гжели?
 6. Нарисуй кувшин и отметь носик, ручку и тулово.
 7. Придумай праздничную тарелку: узор по краю и рисунок в центре.
+~~~
 
-### Ответы
-
-1. Чтобы не обжечь пальцы. 2. Через носик. 3. По краю или в центре. 4. Более яркие цвета, золото и богатые узоры. 5. Синий на белом. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Чтобы не обжечь пальцы. 2. Через носик. 3. По краю или в центре. 4. Более яркие цвета, золото и богатые узоры. 5. Синий на белом. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("Why does a cup have a handle?", "Ինչո՞ւ է բաժակն ունենում կանթ։", "Зачем чашке ручка?"), [t("So that fingers don't burn", "Որ մատները չայրվեն", "Чтобы не обжечь пальцы"), t("For beauty only", "Միայն գեղեցկության համար", "Только для красоты"), t("To make it heavier", "Որ ավելի ծանր լինի", "Чтобы была тяжелее")], 0),
@@ -294,6 +387,11 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 | in a grid | squares, like a chessboard |
 | scattered | flowers spread over the field |
 
+~~~art
+pattern layout=grid rhythm=repeat motifs=flower,leaf,drop,circle
+One motif repeated again and again becomes a fabric. Try different rhythms and see the cloth change.
+~~~
+
 ## Two kinds of patterns
 
 | Floral | Geometric |
@@ -306,14 +404,23 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 - **Pavlovo Posad shawls** from Russia: big bright flowers on a dark or red background, with a border.
 - **Armenian carpets and textiles**: geometric and floral motifs, often with deep red colours.
 
+~~~art
+pic embroidery batik lace carpet
+~~~
+
 ## Practice: a shawl
 
 1. Draw a square. Draw a **border** around the edge.
 2. Put a large **motif** in the centre and in each corner.
 3. Fill the field with small repeated flowers or dots.
 
-### Exercises
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Design a shawl: whatever you draw in one corner appears in all four. Start from the centre and grow outwards.
+~~~
 
+~~~art
+tasks
 1. Who invents patterns for fabrics?
 2. What is a rapport?
 3. Name three ways a motif can repeat.
@@ -321,10 +428,12 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 5. What are Pavlovo Posad shawls famous for?
 6. Draw a band pattern with one motif repeated five times.
 7. Design a square shawl with a border, a centre and corners.
+~~~
 
-### Answers
-
-1. Textile artists. 2. The piece of the pattern that repeats. 3. In a row, in a grid, scattered. 4. Floral uses plants and soft lines; geometric uses figures and straight lines. 5. Big bright flowers on a dark or red background. 6–7. Your drawings.`,
+~~~art
+hints
+1. Textile artists. 2. The piece of the pattern that repeats. 3. In a row, in a grid, scattered. 4. Floral uses plants and soft lines; geometric uses figures and straight lines. 5. Big bright flowers on a dark or red background. 6–7. Your drawings.
+~~~`,
         hy: `## Գործվածքները մեր շուրջ
 
 Վարագույրներ, սփռոցներ, զգեստներ, գլխաշորեր՝ դրանց բոլոր նախշերը հորինել են **գործվածքի նկարիչները**։
@@ -339,6 +448,11 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 | ցանցով | քառակուսիներ՝ շախմատի տախտակի պես |
 | ցրված | ծաղիկներ՝ ցրված ամբողջ դաշտով |
 
+~~~art
+pattern layout=grid rhythm=repeat motifs=flower,leaf,drop,circle
+Մեկ մոտիվը, կրկնվելով նորից ու նորից, դառնում է գործվածք։ Փորձի՛ր տարբեր ռիթմեր և տե՛ս, թե ինչպես է փոխվում կտորը։
+~~~
+
 ## Նախշի երկու տեսակ
 
 | Բուսական | Երկրաչափական |
@@ -351,14 +465,23 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 - **Պավլովո Պոսադի շալեր** Ռուսաստանից՝ մեծ վառ ծաղիկներ մուգ կամ կարմիր ֆոնի վրա, եզրագծով։
 - **Հայկական գորգեր և գործվածքներ**՝ երկրաչափական և բուսական մոտիվներ, հաճախ մուգ կարմիր գույներով։
 
+~~~art
+pic embroidery batik lace carpet
+~~~
+
 ## Գործնական աշխատանք․ շալ
 
 1. Նկարի՛ր քառակուսի։ Եզրի շուրջը **եզրագիծ** գծի՛ր։
 2. Կենտրոնում և յուրաքանչյուր անկյունում մեծ **մոտիվ** դի՛ր։
 3. Դաշտը լցրու՛ կրկնվող փոքրիկ ծաղիկներով կամ կետերով։
 
-### Վարժություններ
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Ձևավորի՛ր գլխաշոր․ մի անկյունում նկարածդ կհայտնվի բոլոր չորսում։ Սկսի՛ր կենտրոնից և աճի՛ր դեպի եզրերը։
+~~~
 
+~~~art
+tasks
 1. Ո՞վ է հորինում գործվածքների նախշերը։
 2. Ի՞նչ է ռապորտը։
 3. Թվի՛ր մոտիվի կրկնության երեք եղանակ։
@@ -366,10 +489,12 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 5. Ինչո՞վ են հայտնի Պավլովո Պոսադի շալերը։
 6. Նկարի՛ր ժապավենաձև նախշ՝ մեկ մոտիվ հինգ անգամ կրկնված։
 7. Ձևավորի՛ր քառակուսի շալ՝ եզրագծով, կենտրոնով և անկյուններով։
+~~~
 
-### Պատասխաններ
-
-1. Գործվածքի նկարիչները։ 2. Նախշի այն հատվածը, որը կրկնվում է։ 3. Շարքով, ցանցով, ցրված։ 4. Բուսականը բույսեր և փափուկ գծեր է օգտագործում, երկրաչափականը՝ պատկերներ և ուղիղ գծեր։ 5. Մեծ վառ ծաղիկներով մուգ կամ կարմիր ֆոնի վրա։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Գործվածքի նկարիչները։ 2. Նախշի այն հատվածը, որը կրկնվում է։ 3. Շարքով, ցանցով, ցրված։ 4. Բուսականը բույսեր և փափուկ գծեր է օգտագործում, երկրաչափականը՝ պատկերներ և ուղիղ գծեր։ 5. Մեծ վառ ծաղիկներով մուգ կամ կարմիր ֆոնի վրա։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Ткани вокруг нас
 
 Шторы, скатерти, платья, платки — все их узоры придумали **художники по ткани**.
@@ -384,6 +509,11 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 | сеткой | клетки, как шахматная доска |
 | вразброс | цветы рассыпаны по полю |
 
+~~~art
+pattern layout=grid rhythm=repeat motifs=flower,leaf,drop,circle
+Один мотив, повторённый много раз, становится тканью. Попробуй разные ритмы и посмотри, как меняется ткань.
+~~~
+
 ## Два вида узоров
 
 | Растительный | Геометрический |
@@ -396,14 +526,23 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 - **Павловопосадские платки** из России: крупные яркие цветы на тёмном или красном фоне, с каймой.
 - **Армянские ковры и ткани**: геометрические и растительные мотивы, часто в густых красных тонах.
 
+~~~art
+pic embroidery batik lace carpet
+~~~
+
 ## Практика: платок
 
 1. Нарисуй квадрат. Проведи **кайму** по краю.
 2. Помести крупный **мотив** в центр и в каждый угол.
 3. Заполни поле мелкими повторяющимися цветочками или точками.
 
-### Упражнения
+~~~art
+sketch mode=kaleido n=4 paper=cream
+Придумай платок: что рисуешь в одном углу, появляется во всех четырёх. Начни с центра и расти к краям.
+~~~
 
+~~~art
+tasks
 1. Кто придумывает узоры для тканей?
 2. Что такое раппорт?
 3. Назови три способа повторения мотива.
@@ -411,10 +550,12 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 5. Чем знамениты павловопосадские платки?
 6. Нарисуй ленточный узор, повторив один мотив пять раз.
 7. Придумай квадратный платок с каймой, центром и углами.
+~~~
 
-### Ответы
-
-1. Художники по ткани. 2. Повторяющаяся часть узора. 3. В ряд, сеткой, вразброс. 4. Растительный — растения и мягкие линии; геометрический — фигуры и прямые линии. 5. Крупными яркими цветами на тёмном или красном фоне. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Художники по ткани. 2. Повторяющаяся часть узора. 3. В ряд, сеткой, вразброс. 4. Растительный — растения и мягкие линии; геометрический — фигуры и прямые линии. 5. Крупными яркими цветами на тёмном или красном фоне. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The repeated part of a fabric pattern is called…", "Գործվածքի նախշի կրկնվող մասը կոչվում է…", "Повторяющаяся часть узора ткани называется…"), [t("a rapport", "ռապորտ", "раппорт"), t("a frame", "շրջանակ", "рама"), t("a sketch", "էսքիզ", "эскиз")], 0),
@@ -443,6 +584,10 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 | **title page** | the first page inside with the title and author |
 | **illustrations** | pictures inside the book |
 
+~~~art
+pic book-spread letter-initial
+~~~
+
 ## What a cover needs
 
 1. **The title** — big and easy to read.
@@ -453,14 +598,23 @@ A fabric pattern is made of one small picture, the **motif**, repeated again and
 
 The artist chooses the **lettering**: thin or thick, straight or curly, plain or decorated. For a fairy tale, letters can look like branches, ribbons or ice. Old Armenian manuscripts had beautiful **bird-letters** (թռչնագիր) — capital letters drawn as birds.
 
+~~~art
+letters
+Type a title and try different letter styles. Which one suits a fairy tale, and which a book about space?
+~~~
+
 ## Composition of a cover
 
 - The title is usually at the **top**, the author's name above or below it.
 - The picture fills the **middle**.
 - Colours should match the mood: warm and bright for a merry tale, cold and dark for a mysterious one.
 
-### Exercises
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Name four parts of a book.
 2. What is written on the spine?
 3. What three things should a cover have?
@@ -468,10 +622,12 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 5. Which colours suit a mysterious tale?
 6. Draw the title «Сказки» or «Հեքիաթներ» with decorated letters.
 7. Design a full cover for your favourite fairy tale.
+~~~
 
-### Answers
-
-1. Cover, spine, title page, illustrations. 2. The title (often with the author). 3. The title, the author's name, a picture. 4. Capital letters drawn in the shape of birds in old manuscripts. 5. Cold and dark colours. 6–7. Your drawings.`,
+~~~art
+hints
+1. Cover, spine, title page, illustrations. 2. The title (often with the author). 3. The title, the author's name, a picture. 4. Capital letters drawn in the shape of birds in old manuscripts. 5. Cold and dark colours. 6–7. Your drawings.
+~~~`,
         hy: `## Գրքի մասերը
 
 | Մաս | Ինչ է |
@@ -480,6 +636,10 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 | **կողք** | նեղ կողմը, որ երևում է դարակում, վրան գրված է վերնագիրը |
 | **տիտղոսաթերթ** | ներսի առաջին էջը՝ վերնագրով և հեղինակով |
 | **նկարազարդումներ** | գրքի ներսի նկարները |
+
+~~~art
+pic book-spread letter-initial
+~~~
 
 ## Ինչ է պետք կազմին
 
@@ -491,14 +651,23 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 
 Նկարիչն ընտրում է **տառատեսակը**՝ բարակ կամ հաստ, ուղիղ կամ գանգուր, պարզ կամ զարդարված։ Հեքիաթի համար տառերը կարող են նման լինել ճյուղերի, ժապավենների կամ սառույցի։ Հին հայկական ձեռագրերում կային գեղեցիկ **թռչնագրեր**՝ թռչունի տեսքով նկարված գլխատառեր։
 
+~~~art
+letters
+Գրի՛ր վերնագիր և փորձի՛ր տառերի տարբեր ոճեր։ Ո՞րն է սազում հեքիաթին, իսկ ո՞րը՝ տիեզերքի մասին գրքին։
+~~~
+
 ## Կազմի կոմպոզիցիան
 
 - Վերնագիրը սովորաբար **վերևում** է, հեղինակի անունը՝ նրանից վերև կամ ներքև։
 - Նկարը լցնում է **մեջտեղը**։
 - Գույները պետք է համապատասխանեն տրամադրությանը՝ տաք և վառ՝ ուրախ հեքիաթի համար, սառը և մուգ՝ խորհրդավորի համար։
 
-### Վարժություններ
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր գրքի չորս մաս։
 2. Ի՞նչ է գրված կողքին։
 3. Ի՞նչ երեք բան պետք է ունենա կազմը։
@@ -506,10 +675,12 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 5. Ո՞ր գույներն են սազում խորհրդավոր հեքիաթին։
 6. Զարդարված տառերով նկարի՛ր «Հեքիաթներ» կամ «Сказки» վերնագիրը։
 7. Ձևավորի՛ր սիրելի հեքիաթիդ ամբողջական կազմը։
+~~~
 
-### Պատասխաններ
-
-1. Կազմ, կողք, տիտղոսաթերթ, նկարազարդումներ։ 2. Վերնագիրը (հաճախ հեղինակի հետ)։ 3. Վերնագիր, հեղինակի անուն, նկար։ 4. Հին ձեռագրերում թռչունի տեսքով նկարված գլխատառեր։ 5. Սառը և մուգ գույներ։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Կազմ, կողք, տիտղոսաթերթ, նկարազարդումներ։ 2. Վերնագիրը (հաճախ հեղինակի հետ)։ 3. Վերնագիր, հեղինակի անուն, նկար։ 4. Հին ձեռագրերում թռչունի տեսքով նկարված գլխատառեր։ 5. Սառը և մուգ գույներ։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Части книги
 
 | Часть | Что это |
@@ -518,6 +689,10 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 | **корешок** | узкая сторона, которую видно на полке; на ней название |
 | **титульный лист** | первая страница внутри с названием и автором |
 | **иллюстрации** | рисунки внутри книги |
+
+~~~art
+pic book-spread letter-initial
+~~~
 
 ## Что нужно обложке
 
@@ -529,14 +704,23 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 
 Художник выбирает **шрифт**: тонкий или толстый, прямой или витиеватый, простой или украшенный. Для сказки буквы могут быть похожи на ветки, ленты или лёд. В старинных армянских рукописях были красивые **буквы-птицы** (թռչնագիր) — заглавные буквы, нарисованные в виде птиц.
 
+~~~art
+letters
+Напиши название и попробуй разные шрифты. Какой подходит сказке, а какой книге о космосе?
+~~~
+
 ## Композиция обложки
 
 - Название обычно **вверху**, имя автора — над ним или под ним.
 - Рисунок занимает **середину**.
 - Цвета передают настроение: тёплые и яркие для весёлой сказки, холодные и тёмные — для таинственной.
 
-### Упражнения
+~~~art
+compose
+~~~
 
+~~~art
+tasks
 1. Назови четыре части книги.
 2. Что пишут на корешке?
 3. Какие три вещи должны быть на обложке?
@@ -544,10 +728,12 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 5. Какие цвета подходят таинственной сказке?
 6. Нарисуй надпись «Сказки» или «Հեքիաթներ» украшенными буквами.
 7. Придумай обложку для любимой сказки.
+~~~
 
-### Ответы
-
-1. Обложка, корешок, титульный лист, иллюстрации. 2. Название (часто с автором). 3. Название, имя автора, рисунок. 4. Заглавные буквы в виде птиц в старинных рукописях. 5. Холодные и тёмные. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Обложка, корешок, титульный лист, иллюстрации. 2. Название (часто с автором). 3. Название, имя автора, рисунок. 4. Заглавные буквы в виде птиц в старинных рукописях. 5. Холодные и тёмные. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("The narrow side of a book on a shelf is the…", "Դարակում երևացող գրքի նեղ կողմը…", "Узкая сторона книги на полке — это…"), [t("spine", "կողքն է", "корешок"), t("cover", "կազմն է", "обложка"), t("title page", "տիտղոսաթերթն է", "титульный лист")], 0),
@@ -576,6 +762,10 @@ The artist chooses the **lettering**: thin or thick, straight or curly, plain or
 | **tailpiece** (*концовка*) | after the text, at the end of a chapter | a small picture or ornament |
 | **drop cap** (*буквица*) | the first letter of the text | a big decorated capital letter |
 
+~~~art
+pic book-spread genre-fairy
+~~~
+
 ## Text and picture together
 
 The page must be **easy to read**. Leave enough space for the text. The picture should be close to the words it shows.
@@ -586,12 +776,21 @@ The page must be **easy to read**. Leave enough space for the text. The picture 
 | text around a small picture | a detail in the middle |
 | picture on one page, text on the other | an important moment |
 
+~~~art
+shots
+An illustrator chooses how close to come: the whole scene, the hero, or one small detail.
+~~~
+
 ## Old manuscripts
 
 Armenian medieval masters such as **Toros Roslin** (13th century) decorated manuscripts with bright miniatures, ornate headpieces and drop caps. Thousands of old Armenian manuscripts are kept in the **Matenadaran** in Yerevan.
 
-### Exercises
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. What is a headpiece?
 2. What is a drop cap?
 3. Where is a tailpiece placed?
@@ -599,10 +798,12 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 5. Who was Toros Roslin?
 6. Draw a drop cap for the first letter of your name.
 7. Design a fairy-tale page with a headpiece, a drop cap and two lines of text.
+~~~
 
-### Answers
-
-1. A narrow decorative picture above the text at the start of a chapter. 2. A big decorated first letter. 3. After the text, at the end of a chapter. 4. So the reader can connect the picture with the words. 5. An Armenian master of manuscript painting of the 13th century. 6–7. Your drawings.`,
+~~~art
+hints
+1. A narrow decorative picture above the text at the start of a chapter. 2. A big decorated first letter. 3. After the text, at the end of a chapter. 4. So the reader can connect the picture with the words. 5. An Armenian master of manuscript painting of the 13th century. 6–7. Your drawings.
+~~~`,
         hy: `## Նկարները գրքում
 
 | Տեսակ | Որտեղ | Ինչ է |
@@ -611,6 +812,10 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 | **գլխազարդ** | տեքստից վերև, գլխի սկզբում | նեղ զարդանկար |
 | **վերջազարդ** | տեքստից հետո, գլխի վերջում | փոքրիկ նկար կամ զարդ |
 | **գլխատառ** | տեքստի առաջին տառը | մեծ, զարդարված գլխատառ |
+
+~~~art
+pic book-spread genre-fairy
+~~~
 
 ## Տեքստը և նկարը միասին
 
@@ -622,12 +827,21 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 | տեքստը փոքր նկարի շուրջը | մեջտեղի մանրամասնի համար |
 | նկարը մի էջում, տեքստը մյուսում | կարևոր պահի համար |
 
+~~~art
+shots
+Նկարազարդողը որոշում է, թե որքան մոտենա․ ամբողջ տեսարանը, հերոսը, թե մի փոքր մանրուք։
+~~~
+
 ## Հին ձեռագրեր
 
 Հայ միջնադարյան վարպետները, ինչպես **Թորոս Ռոսլինը** (13-րդ դար), ձեռագրերը զարդարում էին վառ մանրանկարներով, զարդարուն գլխազարդերով և գլխատառերով։ Հազարավոր հին հայկական ձեռագրեր պահվում են Երևանի **Մատենադարանում**։
 
-### Վարժություններ
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է գլխազարդը։
 2. Ի՞նչ է գլխատառը։
 3. Որտե՞ղ է դրվում վերջազարդը։
@@ -635,10 +849,12 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 5. Ո՞վ էր Թորոս Ռոսլինը։
 6. Նկարի՛ր քո անվան առաջին տառն որպես գլխատառ։
 7. Ձևավորի՛ր հեքիաթի էջ՝ գլխազարդով, գլխատառով և տեքստի երկու տողով։
+~~~
 
-### Պատասխաններ
-
-1. Տեքստից վերև, գլխի սկզբում դրվող նեղ զարդանկար։ 2. Մեծ, զարդարված առաջին տառ։ 3. Տեքստից հետո, գլխի վերջում։ 4. Որպեսզի ընթերցողը նկարը կապի բառերի հետ։ 5. 13-րդ դարի հայ մանրանկարիչ։ 6–7. Քո նկարները։`,
+~~~art
+hints
+1. Տեքստից վերև, գլխի սկզբում դրվող նեղ զարդանկար։ 2. Մեծ, զարդարված առաջին տառ։ 3. Տեքստից հետո, գլխի վերջում։ 4. Որպեսզի ընթերցողը նկարը կապի բառերի հետ։ 5. 13-րդ դարի հայ մանրանկարիչ։ 6–7. Քո նկարները։
+~~~`,
         ru: `## Рисунки в книге
 
 | Вид | Где | Что это |
@@ -647,6 +863,10 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 | **заставка** | над текстом, в начале главы | узкий декоративный рисунок |
 | **концовка** | после текста, в конце главы | небольшой рисунок или орнамент |
 | **буквица** | первая буква текста | крупная украшенная заглавная буква |
+
+~~~art
+pic book-spread genre-fairy
+~~~
 
 ## Текст и рисунок вместе
 
@@ -658,12 +878,21 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 | текст вокруг небольшого рисунка | деталь в середине |
 | рисунок на одной странице, текст на другой | важный момент |
 
+~~~art
+shots
+Иллюстратор выбирает, насколько приблизиться: вся сцена, герой или одна маленькая деталь.
+~~~
+
 ## Старинные рукописи
 
 Армянские средневековые мастера, например **Торос Рослин** (XIII век), украшали рукописи яркими миниатюрами, узорными заставками и буквицами. Тысячи древних армянских рукописей хранятся в **Матенадаране** в Ереване.
 
-### Упражнения
+~~~art
+steps initial
+~~~
 
+~~~art
+tasks
 1. Что такое заставка?
 2. Что такое буквица?
 3. Где помещают концовку?
@@ -671,10 +900,12 @@ Armenian medieval masters such as **Toros Roslin** (13th century) decorated manu
 5. Кто такой Торос Рослин?
 6. Нарисуй буквицу — первую букву своего имени.
 7. Оформи страницу сказки: заставка, буквица и две строки текста.
+~~~
 
-### Ответы
-
-1. Узкий декоративный рисунок над текстом в начале главы. 2. Крупная украшенная первая буква. 3. После текста, в конце главы. 4. Чтобы читатель связал рисунок со словами. 5. Армянский мастер книжной миниатюры XIII века. 6–7. Твои рисунки.`,
+~~~art
+hints
+1. Узкий декоративный рисунок над текстом в начале главы. 2. Крупная украшенная первая буква. 3. После текста, в конце главы. 4. Чтобы читатель связал рисунок со словами. 5. Армянский мастер книжной миниатюры XIII века. 6–7. Твои рисунки.
+~~~`,
       },
       [
         q(t("A big decorated first letter is a…", "Մեծ, զարդարված առաջին տառը…", "Крупная украшенная первая буква — это…"), [t("drop cap", "գլխատառ է", "буквица"), t("tailpiece", "վերջազարդ է", "концовка"), t("spine", "կողք է", "корешок")], 0),
@@ -712,11 +943,20 @@ A greeting card is a small piece of art. It has:
 | Vardavar (Armenia) | water drops, roses, summer sun |
 | Easter | painted eggs, spring branches |
 
+~~~art
+pic pomegranate snowflake dove sakura
+~~~
+
 ## Techniques
 
 - **Drawing** with felt-tips or gouache.
 - **Applique**: cut shapes from coloured paper and glue them.
 - **Pop-up**: a part of the picture stands up when you open the card.
+
+~~~art
+sketch mode=mirror paper=pink
+Draw half a heart, a tree or a butterfly and the other half appears, just like a card cut on the fold.
+~~~
 
 ## Making a folded card
 
@@ -725,8 +965,12 @@ A greeting card is a small piece of art. It has:
 3. Write the wish with decorated letters.
 4. Inside, write your own warm words and sign your name.
 
-### Exercises
+~~~art
+palette warm
+~~~
 
+~~~art
+tasks
 1. Name the three parts of a good card.
 2. Which symbols suit a birthday card?
 3. Which symbols suit Vardavar?
@@ -734,10 +978,12 @@ A greeting card is a small piece of art. It has:
 5. Where do you write your own words?
 6. Draw three small sketches for New Year, birthday and spring cards.
 7. Make a folded card for someone in your family.
+~~~
 
-### Answers
-
-1. A picture, a short wish, space for your own words. 2. A cake, candles, balloons, flowers. 3. Water drops, roses, summer sun. 4. A card where part of the picture stands up when it is opened. 5. Inside the card. 6–7. Your work.`,
+~~~art
+hints
+1. A picture, a short wish, space for your own words. 2. A cake, candles, balloons, flowers. 3. Water drops, roses, summer sun. 4. A card where part of the picture stands up when it is opened. 5. Inside the card. 6–7. Your work.
+~~~`,
         hy: `## Ինչն է լավ բացիկը դարձնում լավ
 
 Շնորհավորական բացիկն արվեստի փոքրիկ գործ է։ Այն ունի․
@@ -756,11 +1002,20 @@ A greeting card is a small piece of art. It has:
 | Վարդավառ | ջրի կաթիլներ, վարդեր, ամառային արև |
 | Զատիկ | ներկած ձվեր, գարնանային ճյուղեր |
 
+~~~art
+pic pomegranate snowflake dove sakura
+~~~
+
 ## Տեխնիկաներ
 
 - **Նկարչություն**՝ ֆլոմաստերներով կամ գուաշով։
 - **Ապլիկացիա**՝ գունավոր թղթից ձևեր կտրել և սոսնձել։
 - **Ծավալային բացիկ**՝ բացելիս նկարի մի մասը կանգնում է։
+
+~~~art
+sketch mode=mirror paper=pink
+Նկարի՛ր սրտի, ծառի կամ թիթեռի կեսը, և մյուս կեսը կհայտնվի, ինչպես ծալքով կտրած բացիկում։
+~~~
 
 ## Ծալովի բացիկի պատրաստում
 
@@ -769,8 +1024,12 @@ A greeting card is a small piece of art. It has:
 3. Մաղթանքը գրի՛ր զարդարված տառերով։
 4. Ներսում գրի՛ր քո ջերմ խոսքերը և ստորագրի՛ր։
 
-### Վարժություններ
+~~~art
+palette warm
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր լավ բացիկի երեք մասը։
 2. Ո՞ր խորհրդանիշներն են սազում ծննդյան բացիկին։
 3. Ո՞ր խորհրդանիշներն են սազում Վարդավառին։
@@ -778,10 +1037,12 @@ A greeting card is a small piece of art. It has:
 5. Որտե՞ղ ես գրում քո սեփական խոսքերը։
 6. Նկարի՛ր երեք փոքր էսքիզ՝ Ամանորի, ծննդյան և գարնանային բացիկների համար։
 7. Պատրաստի՛ր ծալովի բացիկ ընտանիքիդ անդամներից մեկի համար։
+~~~
 
-### Պատասխաններ
-
-1. Նկար, կարճ մաղթանք, տեղ սեփական խոսքերի համար։ 2. Տորթ, մոմեր, փուչիկներ, ծաղիկներ։ 3. Ջրի կաթիլներ, վարդեր, ամառային արև։ 4. Բացիկ, որի նկարի մի մասը բացելիս կանգնում է։ 5. Բացիկի ներսում։ 6–7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Նկար, կարճ մաղթանք, տեղ սեփական խոսքերի համար։ 2. Տորթ, մոմեր, փուչիկներ, ծաղիկներ։ 3. Ջրի կաթիլներ, վարդեր, ամառային արև։ 4. Բացիկ, որի նկարի մի մասը բացելիս կանգնում է։ 5. Բացիկի ներսում։ 6–7. Քո աշխատանքը։
+~~~`,
         ru: `## Какой должна быть открытка?
 
 Открытка — это маленькое произведение искусства. В ней есть:
@@ -800,11 +1061,20 @@ A greeting card is a small piece of art. It has:
 | Вардавар (Армения) | капли воды, розы, летнее солнце |
 | Пасха | крашеные яйца, весенние веточки |
 
+~~~art
+pic pomegranate snowflake dove sakura
+~~~
+
 ## Техники
 
 - **Рисунок** фломастерами или гуашью.
 - **Аппликация**: вырезать фигуры из цветной бумаги и наклеить.
 - **Объёмная открытка**: при открывании часть рисунка поднимается.
+
+~~~art
+sketch mode=mirror paper=pink
+Нарисуй половинку сердца, ёлки или бабочки, и вторая появится сама, как у открытки, вырезанной по сгибу.
+~~~
 
 ## Как сделать складную открытку
 
@@ -813,8 +1083,12 @@ A greeting card is a small piece of art. It has:
 3. Напиши пожелание украшенными буквами.
 4. Внутри напиши свои тёплые слова и подпишись.
 
-### Упражнения
+~~~art
+palette warm
+~~~
 
+~~~art
+tasks
 1. Назови три части хорошей открытки.
 2. Какие символы подходят для открытки ко дню рождения?
 3. Какие символы подходят к Вардавару?
@@ -822,10 +1096,12 @@ A greeting card is a small piece of art. It has:
 5. Где ты пишешь свои слова?
 6. Нарисуй три маленьких эскиза: новогодний, ко дню рождения и весенний.
 7. Сделай складную открытку для кого-то из своей семьи.
+~~~
 
-### Ответы
-
-1. Рисунок, короткое пожелание, место для своих слов. 2. Торт, свечи, шарики, цветы. 3. Капли воды, розы, летнее солнце. 4. Открытка, в которой часть рисунка поднимается при открывании. 5. Внутри открытки. 6–7. Твоя работа.`,
+~~~art
+hints
+1. Рисунок, короткое пожелание, место для своих слов. 2. Торт, свечи, шарики, цветы. 3. Капли воды, розы, летнее солнце. 4. Открытка, в которой часть рисунка поднимается при открывании. 5. Внутри открытки. 6–7. Твоя работа.
+~~~`,
       },
       [
         q(t("A greeting card joins a picture and…", "Շնորհավորական բացիկը միավորում է նկարը և…", "Открытка соединяет рисунок и…"), [t("a short wish", "կարճ մաղթանքը", "короткое пожелание"), t("a long story", "երկար պատմությունը", "длинный рассказ"), t("a map", "քարտեզը", "карту")], 0),

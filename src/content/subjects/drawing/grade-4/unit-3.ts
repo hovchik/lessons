@@ -29,15 +29,27 @@ Japan is an island country where people have long admired the beauty of nature: 
 | **rock garden** | stones on raked sand: the sand is like the sea, the stones like islands |
 | **pagoda** | a tower with several roofs, the corners turned up |
 
+~~~art
+pic pagoda
+~~~
+
 ## The cherry festival
 
 In spring people gather under blossoming **sakura** (cherry) trees to admire the flowers. This custom is called **hanami** – «looking at flowers». The pink blossom lasts only a few days, and that is why it is so precious.
+
+~~~art
+palette japan
+~~~
 
 ## Japanese prints
 
 Japanese artists made **woodblock prints**: a picture was cut into a wooden board, covered with paint and pressed onto paper, so many copies could be made. The most famous print is **«The Great Wave off Kanagawa»** by **Katsushika Hokusai**: a huge blue wave with claws of foam rises over small boats, and far away stands the snowy Mount Fuji.
 
 Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; here are clear outlines, flat colours and a pattern of foam.
+
+~~~art
+tone
+~~~
 
 ## Paint a sakura branch
 
@@ -46,8 +58,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 3. Leave a lot of empty space: in Japanese art emptiness is part of the picture.
 4. Sign your picture with a small red stamp-square, like a Japanese artist.
 
-### Exercises
+~~~art
+steps sakura
+~~~
 
+~~~art
+tasks
 1. What are Japanese houses made of?
 2. What do the sand and stones in a rock garden show?
 3. What is hanami?
@@ -55,10 +71,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 5. Describe «The Great Wave» by Hokusai.
 6. Why do Japanese artists leave empty space?
 7. Paint a blossoming sakura branch.
+~~~
 
-### Answers
-
-1. Wood and paper. 2. The sea and islands. 3. The custom of admiring blossoming cherry trees. 4. A picture was cut into a wooden board, covered with paint and pressed onto paper. 5. A huge blue wave with foam over small boats; Mount Fuji far away. 6. Emptiness is part of the picture. 7. Your work.`,
+~~~art
+hints
+1. Wood and paper. 2. The sea and islands. 3. The custom of admiring blossoming cherry trees. 4. A picture was cut into a wooden board, covered with paint and pressed onto paper. 5. A huge blue wave with foam over small boats; Mount Fuji far away. 6. Emptiness is part of the picture. 7. Your work.
+~~~`,
         hy: `## Սեր փոքր բաների հանդեպ
 
 Ճապոնիան կղզիային երկիր է, որտեղ մարդիկ վաղուց հիանում են բնության գեղեցկությամբ՝ մեկ ծաղիկ, մամուռով ծածկված քար, լուսինը ջրի վրա։ Ճապոնական արվեստը հաճախ շատ բան է ասում **շատ քիչով**։
@@ -71,15 +89,27 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 | **քարերի այգի** | քարեր փոցխված ավազի վրա՝ ավազը նման է ծովի, քարերը՝ կղզիների |
 | **պագոդա** | մի քանի տանիքով աշտարակ՝ վեր թեքված անկյուններով |
 
+~~~art
+pic pagoda
+~~~
+
 ## Բալենու տոնը
 
 Գարնանը մարդիկ հավաքվում են ծաղկած **սակուրաների** (բալենիների) տակ՝ ծաղիկներով հիանալու։ Այս սովորույթը կոչվում է **հանամի**՝ «ծաղիկներին նայել»։ Վարդագույն ծաղկունքը տևում է ընդամենը մի քանի օր, և հենց դրա համար է այդքան թանկ։
+
+~~~art
+palette japan
+~~~
 
 ## Ճապոնական փորագրանկարներ
 
 Ճապոնացի նկարիչները ստեղծում էին **փայտափորագրեր**՝ նկարը փորագրում էին փայտե տախտակի վրա, ծածկում ներկով և սեղմում թղթին, այնպես որ կարելի էր շատ օրինակներ անել։ Ամենահայտնի փորագրանկարը **Կացուսիկա Հոկուսայի** **«Կանագավայի մեծ ալիքն»** է՝ փրփուրի ճանկերով հսկա կապույտ ալիքը բարձրանում է փոքր նավակների վրա, իսկ հեռվում կանգնած է ձյունածածկ Ֆուջի լեռը։
 
 Համեմատի՛ր այն Այվազովսկու «Իններորդ ալիքի» հետ․ այնտեղ մեղմ գույներ և լույս են, այստեղ՝ հստակ եզրագծեր, հարթ գույներ և փրփուրի նախշ։
+
+~~~art
+tone
+~~~
 
 ## Նկարի՛ր սակուրայի ճյուղ
 
@@ -88,8 +118,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 3. Թո՛ղ շատ դատարկ տարածություն՝ ճապոնական արվեստում դատարկությունը նկարի մասն է։
 4. Ստորագրի՛ր նկարդ փոքր կարմիր կնիք-քառակուսիով, ինչպես ճապոնացի նկարիչը։
 
-### Վարժություններ
+~~~art
+steps sakura
+~~~
 
+~~~art
+tasks
 1. Ինչի՞ց են պատրաստված ճապոնական տները։
 2. Ի՞նչ են ցույց տալիս քարերի այգու ավազն ու քարերը։
 3. Ի՞նչ է հանամին։
@@ -97,10 +131,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 5. Նկարագրի՛ր Հոկուսայի «Մեծ ալիքը»։
 6. Ինչո՞ւ են ճապոնացի նկարիչները թողնում դատարկ տարածություն։
 7. Նկարի՛ր ծաղկած սակուրայի ճյուղ։
+~~~
 
-### Պատասխաններ
-
-1. Փայտից և թղթից։ 2. Ծովը և կղզիները։ 3. Ծաղկած բալենիներով հիանալու սովորույթը։ 4. Նկարը փորագրում էին փայտե տախտակի վրա, ծածկում ներկով և սեղմում թղթին։ 5. Հսկա կապույտ ալիք փրփուրով փոքր նավակների վրա, հեռվում՝ Ֆուջի լեռը։ 6. Դատարկությունը նկարի մասն է։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Փայտից և թղթից։ 2. Ծովը և կղզիները։ 3. Ծաղկած բալենիներով հիանալու սովորույթը։ 4. Նկարը փորագրում էին փայտե տախտակի վրա, ծածկում ներկով և սեղմում թղթին։ 5. Հսկա կապույտ ալիք փրփուրով փոքր նավակների վրա, հեռվում՝ Ֆուջի լեռը։ 6. Դատարկությունը նկարի մասն է։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Любовь к малому
 
 Япония — островная страна, где люди издавна любуются красотой природы: одним цветком, камнем, покрытым мхом, луной над водой. Японское искусство часто говорит многое **очень малым**.
@@ -113,15 +149,27 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 | **сад камней** | камни на расчёсанном песке: песок — как море, камни — как острова |
 | **пагода** | башня с несколькими крышами, углы которых загнуты вверх |
 
+~~~art
+pic pagoda
+~~~
+
 ## Праздник сакуры
 
 Весной люди собираются под цветущей **сакурой** (вишней), чтобы любоваться цветами. Этот обычай называется **ханами** — «любование цветами». Розовое цветение длится всего несколько дней, и поэтому оно так ценно.
+
+~~~art
+palette japan
+~~~
 
 ## Японская гравюра
 
 Японские художники делали **гравюры на дереве**: рисунок вырезали на деревянной доске, покрывали краской и прижимали к бумаге, так что можно было сделать много оттисков. Самая знаменитая гравюра — **«Большая волна в Канагаве»** **Кацусики Хокусая**: огромная синяя волна с «когтями» пены поднимается над маленькими лодками, а вдали стоит заснеженная гора Фудзи.
 
 Сравни её с «Девятым валом» Айвазовского: там мягкие цвета и свет, здесь — чёткие контуры, плоские цвета и узор пены.
+
+~~~art
+tone
+~~~
 
 ## Напиши ветку сакуры
 
@@ -130,8 +178,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 3. Оставь много пустого места: в японском искусстве пустота — часть картины.
 4. Подпиши работу маленькой красной печатью-квадратом, как японский художник.
 
-### Упражнения
+~~~art
+steps sakura
+~~~
 
+~~~art
+tasks
 1. Из чего сделаны японские дома?
 2. Что изображают песок и камни в саду камней?
 3. Что такое ханами?
@@ -139,10 +191,12 @@ Compare it with Aivazovsky's «Ninth Wave»: there are soft colours and light; h
 5. Опиши «Большую волну» Хокусая.
 6. Почему японские художники оставляют пустое место?
 7. Напиши цветущую ветку сакуры.
+~~~
 
-### Ответы
-
-1. Из дерева и бумаги. 2. Море и острова. 3. Обычай любоваться цветущей сакурой. 4. Рисунок вырезали на доске, покрывали краской и прижимали к бумаге. 5. Огромная синяя волна с пеной над лодками, вдали гора Фудзи. 6. Пустота — часть картины. 7. Твоя работа.`,
+~~~art
+hints
+1. Из дерева и бумаги. 2. Море и острова. 3. Обычай любоваться цветущей сакурой. 4. Рисунок вырезали на доске, покрывали краской и прижимали к бумаге. 5. Огромная синяя волна с пеной над лодками, вдали гора Фудзи. 6. Пустота — часть картины. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Hanami is the custom of…", "Հանամին սովորույթ է…", "Ханами — это обычай…"), [t("admiring cherry blossom", "ծաղկած բալենիներով հիանալու", "любоваться цветущей сакурой"), t("jumping over fire", "կրակի վրայով թռչելու", "прыгать через костёр"), t("splashing water", "ջուր լցնելու", "обливаться водой")], 0),
@@ -178,15 +232,28 @@ A yurt is a round house of nomads.
 - At the top there is a round opening for light and smoke, like the **yerdik** of an Armenian house.
 - Inside there are bright felt carpets, chests and embroidered cushions.
 
+~~~art
+pic yurt
+~~~
+
 ## A mountain village
 
 In the mountains of the Caucasus, for example in Dagestan, houses are built on the slope in **terraces**. The flat roof of a lower house can be the yard of the house above. From far away the village looks like a staircase of stone cubes.
 
 Mountain peoples are famous for crafts. The masters of the Dagestan village **Kubachi** have made silver and engraved jewellery and weapons for centuries.
 
+~~~art
+pic armenian-house
+~~~
+
 ## Ornament of nomads
 
 Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They are made of contrasting colours of felt, so they can be seen from far away.
+
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian,mono motifs=spiral,rhombus,triangle
+Felt patterns of the nomads are full of ram's horns. Try the mirror rhythm, like a felt rug cut in half.
+~~~
 
 ## Draw
 
@@ -194,8 +261,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 2. Mountains: a high horizon; stone cubes of houses climbing the slope; a path and a bridge over a gorge.
 3. Decorate the border with a ram's-horn ornament.
 
-### Exercises
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. What is the main difference between nomads and mountain villagers?
 2. What is the frame of a yurt made of?
 3. Why is felt good for a yurt?
@@ -203,10 +274,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 5. How are houses placed in a mountain village?
 6. What is the village of Kubachi famous for?
 7. Draw a yurt in the steppe or a mountain village.
+~~~
 
-### Answers
-
-1. Nomads move with their herds; mountain villagers stay and build stone villages. 2. A folding wooden lattice. 3. It is warm in winter and cool in summer. 4. The round opening at the top. 5. On the slope in terraces, one above another. 6. Silverwork and engraved jewellery and weapons. 7. Your work.`,
+~~~art
+hints
+1. Nomads move with their herds; mountain villagers stay and build stone villages. 2. A folding wooden lattice. 3. It is warm in winter and cool in summer. 4. The round opening at the top. 5. On the slope in terraces, one above another. 6. Silverwork and engraved jewellery and weapons. 7. Your work.
+~~~`,
         hy: `## Կյանքի երկու ձև
 
 | | Տափաստան | Լեռներ |
@@ -223,15 +296,28 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 - Գագաթին կլոր բացվածք կա լույսի և ծխի համար, ինչպես հայկական տան **երդիկը**։
 - Ներսում վառ թաղիքե գորգեր, սնդուկներ և ասեղնագործ բարձեր են։
 
+~~~art
+pic yurt
+~~~
+
 ## Լեռնային գյուղ
 
 Կովկասի լեռներում, օրինակ Դաղստանում, տները կառուցում են լանջին **դարավանդներով**։ Ներքևի տան հարթ տանիքը կարող է լինել վերևի տան բակը։ Հեռվից գյուղը նման է քարե խորանարդների սանդուղքի։
 
 Լեռնային ժողովուրդները հայտնի են իրենց արհեստներով։ Դաղստանի **Կուբաչի** գյուղի վարպետները դարեր շարունակ ստեղծում են արծաթե և փորագրված զարդեր ու զենքեր։
 
+~~~art
+pic armenian-house
+~~~
+
 ## Քոչվորների զարդանախշը
 
 Քոչվորների զարդանախշերը համարձակ են և մեծ՝ ոլորվող **խոյի եղջյուրներ**, ալիքներ, պարույրներ։ Դրանք պատրաստվում են հակադիր գույների թաղիքից, որպեսզի երևան հեռվից։
+
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian,mono motifs=spiral,rhombus,triangle
+Քոչվորների թաղիքի նախշերը լի են խոյի եղջյուրներով։ Փորձի՛ր հայելային ռիթմը, ինչպես կիսով կտրած թաղիքե գորգը։
+~~~
 
 ## Նկարի՛ր
 
@@ -239,8 +325,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 2. Լեռներ՝ բարձր հորիզոն, լանջով բարձրացող տների քարե խորանարդներ, արահետ և կամուրջ կիրճի վրայով։
 3. Եզրը զարդարի՛ր խոյի եղջյուրների զարդանախշով։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. Ո՞րն է քոչվորների և լեռնային գյուղացիների հիմնական տարբերությունը։
 2. Ինչի՞ց է պատրաստված յուրտայի կմախքը։
 3. Ինչո՞ւ է թաղիքը լավ յուրտայի համար։
@@ -248,10 +338,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 5. Ինչպե՞ս են դասավորված տները լեռնային գյուղում։
 6. Ինչո՞վ է հայտնի Կուբաչի գյուղը։
 7. Նկարի՛ր յուրտա տափաստանում կամ լեռնային գյուղ։
+~~~
 
-### Պատասխաններ
-
-1. Քոչվորները տեղափոխվում են հոտերով, լեռնային գյուղացիները մնում են և կառուցում քարե գյուղեր։ 2. Ծալովի փայտե ցանցից։ 3. Այն տաք է ձմռանը և զով ամռանը։ 4. Գագաթի կլոր բացվածքը։ 5. Լանջին՝ դարավանդներով, մեկը մյուսի վերևում։ 6. Արծաթագործությամբ, փորագրված զարդերով և զենքերով։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Քոչվորները տեղափոխվում են հոտերով, լեռնային գյուղացիները մնում են և կառուցում քարե գյուղեր։ 2. Ծալովի փայտե ցանցից։ 3. Այն տաք է ձմռանը և զով ամռանը։ 4. Գագաթի կլոր բացվածքը։ 5. Լանջին՝ դարավանդներով, մեկը մյուսի վերևում։ 6. Արծաթագործությամբ, փորագրված զարդերով և զենքերով։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Два уклада жизни
 
 | | Степь | Горы |
@@ -268,15 +360,28 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 - Наверху есть круглое отверстие для света и дыма, как **ердик** армянского дома.
 - Внутри — яркие войлочные ковры, сундуки и вышитые подушки.
 
+~~~art
+pic yurt
+~~~
+
 ## Горный аул
 
 В горах Кавказа, например в Дагестане, дома строят на склоне **террасами**. Плоская крыша нижнего дома может быть двором верхнего. Издалека аул похож на лестницу из каменных кубиков.
 
 Горные народы славятся ремёслами. Мастера дагестанского аула **Кубачи** веками делают серебряные украшения и оружие с гравировкой.
 
+~~~art
+pic armenian-house
+~~~
+
 ## Орнамент кочевников
 
 Орнаменты кочевников смелые и крупные: закрученные **бараньи рога**, волны, спирали. Их делают из войлока контрастных цветов, чтобы они были видны издалека.
+
+~~~art
+pattern layout=grid rhythm=mirror palettes=armenian,mono motifs=spiral,rhombus,triangle
+Войлочные узоры кочевников полны бараньих рогов. Попробуй зеркальный ритм, как у разрезанного пополам войлока.
+~~~
 
 ## Нарисуй
 
@@ -284,8 +389,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 2. Горы: высокий горизонт; каменные кубики домов поднимаются по склону; тропа и мост через ущелье.
 3. Укрась бордюр орнаментом «бараньи рога».
 
-### Упражнения
+~~~art
+sketch guide=horizon
+~~~
 
+~~~art
+tasks
 1. В чём главное отличие кочевников от жителей горных аулов?
 2. Из чего сделан каркас юрты?
 3. Почему войлок хорош для юрты?
@@ -293,10 +402,12 @@ Nomad ornaments are bold and big: curling **ram's horns**, waves, spirals. They 
 5. Как расположены дома в горном ауле?
 6. Чем славится аул Кубачи?
 7. Нарисуй юрту в степи или горный аул.
+~~~
 
-### Ответы
-
-1. Кочевники переходят со стадами, горцы живут на месте и строят каменные аулы. 2. Из складной деревянной решётки. 3. Он тёплый зимой и прохладный летом. 4. Круглое отверстие наверху. 5. На склоне террасами, один над другим. 6. Серебряными украшениями и оружием с гравировкой. 7. Твоя работа.`,
+~~~art
+hints
+1. Кочевники переходят со стадами, горцы живут на месте и строят каменные аулы. 2. Из складной деревянной решётки. 3. Он тёплый зимой и прохладный летом. 4. Круглое отверстие наверху. 5. На склоне террасами, один над другим. 6. Серебряными украшениями и оружием с гравировкой. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Nomads live in a…", "Քոչվորներն ապրում են…", "Кочевники живут в…"), [t("yurt", "յուրտայում", "юрте"), t("pagoda", "պագոդայում", "пагоде"), t("kremlin", "կրեմլում", "кремле")], 0),
@@ -331,6 +442,10 @@ The square **Registan** in **Samarkand** is surrounded by three large buildings 
 
 **Bukhara** is famous for its old streets, domed markets and the tall Kalyan minaret.
 
+~~~art
+pic registan
+~~~
+
 ## Geometric ornament
 
 Masters of Central Asia created very complex patterns from simple shapes: stars, polygons, interlacing lines. Every pattern is built with a ruler and compasses, repeating again and again like a carpet of light.
@@ -341,6 +456,11 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 | **hexagon** | like honeycomb |
 | **interlacing** | lines go over and under each other |
 
+~~~art
+sketch mode=kaleido n=8 paper=blue
+Eastern tile ornament is built of stars that repeat around a centre. Draw one ray and watch the star grow.
+~~~
+
 ## Create a portal
 
 1. Draw a tall rectangle with a pointed arch inside.
@@ -348,8 +468,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 3. In every square draw the same star or polygon with a ruler and compasses.
 4. Paint with a limited palette: deep blue, turquoise, white, a little yellow.
 
-### Exercises
+~~~art
+pattern layout=grid palettes=gzhel motifs=star,rhombus,flower
+~~~
 
+~~~art
+tasks
 1. Why did cities in Central Asia grow in oases?
 2. What did merchants of the Silk Road bring?
 3. Why were walls made of clay?
@@ -357,10 +481,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 5. What is a minaret?
 6. How can you build an 8-pointed star?
 7. Create a portal decorated with a geometric ornament.
+~~~
 
-### Answers
-
-1. Because there was water there. 2. Silk, spices and stories. 3. Clay is everywhere, and thick clay walls keep the heat out. 4. A square in Samarkand surrounded by three large buildings with portals. 5. A tall slender tower. 6. From two squares turned over each other. 7. Your work.`,
+~~~art
+hints
+1. Because there was water there. 2. Silk, spices and stories. 3. Clay is everywhere, and thick clay walls keep the heat out. 4. A square in Samarkand surrounded by three large buildings with portals. 5. A tall slender tower. 6. From two squares turned over each other. 7. Your work.
+~~~`,
         hy: `## Օազիս-քաղաք
 
 Միջին Ասիայում շոգ անապատներ կան։ Քաղաքներն աճում էին **օազիսներում**, որտեղ ջուր կար՝ գետերի և ջրանցքների երկայնքով։ **Մետաքսի ճանապարհի** վաճառականներն այս քաղաքներով մետաքս, համեմունքներ և պատմություններ էին բերում։
@@ -376,6 +502,10 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 
 **Բուխարան** հայտնի է իր հին փողոցներով, գմբեթավոր շուկաներով և բարձր Քալյան մինարեթով։
 
+~~~art
+pic registan
+~~~
+
 ## Երկրաչափական զարդանախշ
 
 Միջին Ասիայի վարպետները պարզ ձևերից շատ բարդ նախշեր էին ստեղծում՝ աստղեր, բազմանկյուններ, իրար միահյուսվող գծեր։ Յուրաքանչյուր նախշ կառուցվում է քանոնով և կարկինով և կրկնվում է նորից ու նորից, ինչպես լույսի գորգ։
@@ -386,6 +516,11 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 | **վեցանկյուն** | մեղրախորիսխի պես |
 | **միահյուսում** | գծերն անցնում են իրար վրայով և տակով |
 
+~~~art
+sketch mode=kaleido n=8 paper=blue
+Արևելյան սալիկների զարդանախշը կառուցված է կենտրոնի շուրջ կրկնվող աստղերից։ Նկարի՛ր մեկ ճառագայթ և տե՛ս, ինչպես է աստղը աճում։
+~~~
+
 ## Ստեղծի՛ր պորտալ
 
 1. Նկարի՛ր բարձր ուղղանկյուն՝ ներսում սրածայր կամար։
@@ -393,8 +528,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 3. Յուրաքանչյուր քառակուսում քանոնով և կարկինով նկարի՛ր նույն աստղը կամ բազմանկյունը։
 4. Ներկի՛ր սահմանափակ գունապնակով՝ մուգ կապույտ, փիրուզագույն, սպիտակ, մի քիչ դեղին։
 
-### Վարժություններ
+~~~art
+pattern layout=grid palettes=gzhel motifs=star,rhombus,flower
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ էին Միջին Ասիայի քաղաքներն աճում օազիսներում։
 2. Ի՞նչ էին բերում Մետաքսի ճանապարհի վաճառականները։
 3. Ինչո՞ւ էին պատերը կավից։
@@ -402,10 +541,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 5. Ի՞նչ է մինարեթը։
 6. Ինչպե՞ս կարելի է կառուցել 8-թևանի աստղ։
 7. Ստեղծի՛ր երկրաչափական զարդանախշով զարդարված պորտալ։
+~~~
 
-### Պատասխաններ
-
-1. Որովհետև այնտեղ ջուր կար։ 2. Մետաքս, համեմունքներ և պատմություններ։ 3. Կավն ամենուր է, և հաստ կավե պատերը շոգը ներս չեն թողնում։ 4. Սամարղանդի հրապարակ՝ պորտալներով երեք մեծ շենքերով շրջապատված։ 5. Բարձր, բարակ աշտարակ։ 6. Երկու քառակուսուց՝ իրար վրա շրջված։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Որովհետև այնտեղ ջուր կար։ 2. Մետաքս, համեմունքներ և պատմություններ։ 3. Կավն ամենուր է, և հաստ կավե պատերը շոգը ներս չեն թողնում։ 4. Սամարղանդի հրապարակ՝ պորտալներով երեք մեծ շենքերով շրջապատված։ 5. Բարձր, բարակ աշտարակ։ 6. Երկու քառակուսուց՝ իրար վրա շրջված։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Город-оазис
 
 В Средней Азии жаркие пустыни. Города вырастали в **оазисах**, где была вода: вдоль рек и каналов. Купцы **Великого шёлкового пути** везли через эти города шёлк, пряности и истории.
@@ -421,6 +562,10 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 
 **Бухара** славится старыми улочками, купольными базарами и высоким минаретом Калян.
 
+~~~art
+pic registan
+~~~
+
 ## Геометрический орнамент
 
 Мастера Средней Азии создавали очень сложные узоры из простых фигур: звёзд, многоугольников, переплетающихся линий. Каждый узор строится линейкой и циркулем и повторяется снова и снова, как ковёр из света.
@@ -431,6 +576,11 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 | **шестиугольник** | как пчелиные соты |
 | **плетёнка** | линии проходят друг над другом и под другом |
 
+~~~art
+sketch mode=kaleido n=8 paper=blue
+Восточный изразцовый орнамент строится из звёзд вокруг центра. Нарисуй один луч и смотри, как растёт звезда.
+~~~
+
 ## Создай портал
 
 1. Нарисуй высокий прямоугольник со стрельчатой аркой внутри.
@@ -438,8 +588,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 3. В каждом квадрате построй линейкой и циркулем одну и ту же звезду или многоугольник.
 4. Раскрась ограниченной палитрой: тёмно-синий, бирюзовый, белый, немного жёлтого.
 
-### Упражнения
+~~~art
+pattern layout=grid palettes=gzhel motifs=star,rhombus,flower
+~~~
 
+~~~art
+tasks
 1. Почему города Средней Азии вырастали в оазисах?
 2. Что везли купцы Великого шёлкового пути?
 3. Почему стены делали из глины?
@@ -447,10 +601,12 @@ Masters of Central Asia created very complex patterns from simple shapes: stars,
 5. Что такое минарет?
 6. Как построить 8-конечную звезду?
 7. Создай портал, украшенный геометрическим орнаментом.
+~~~
 
-### Ответы
-
-1. Потому что там была вода. 2. Шёлк, пряности и истории. 3. Глина есть везде, а толстые глиняные стены не пускают жару. 4. Площадь в Самарканде, окружённая тремя большими зданиями с порталами. 5. Высокая стройная башня. 6. Из двух квадратов, повёрнутых друг относительно друга. 7. Твоя работа.`,
+~~~art
+hints
+1. Потому что там была вода. 2. Шёлк, пряности и истории. 3. Глина есть везде, а толстые глиняные стены не пускают жару. 4. Площадь в Самарканде, окружённая тремя большими зданиями с порталами. 5. Высокая стройная башня. 6. Из двух квадратов, повёрнутых друг относительно друга. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Cities in the desert grew in…", "Անապատի քաղաքներն աճում էին…", "Города в пустыне вырастали в…"), [t("oases", "օազիսներում", "оазисах"), t("glaciers", "սառցադաշտերում", "ледниках"), t("forests", "անտառներում", "лесах")], 0),
@@ -478,6 +634,10 @@ The ancient Greeks believed that beauty is **harmony**: the right measure of eve
 
 On the hill of the **Acropolis** in Athens stands the **Parthenon**, a temple of the goddess Athena built of white marble in the 5th century BC. Rows of columns stand around it. Everything in it is calm, balanced and in proportion.
 
+~~~art
+pic greek-temple
+~~~
+
 ## Three orders of columns
 
 | Order | Capital (the top of the column) | Character |
@@ -487,6 +647,10 @@ On the hill of the **Acropolis** in Athens stands the **Parthenon**, a temple of
 | **Corinthian** | a basket of acanthus leaves | rich, festive |
 
 In Armenia there is a temple in the Greek style: **Garni** (1st century AD) with Ionic columns, standing over a deep gorge.
+
+~~~art
+pic orders
+~~~
 
 ## Painted vases
 
@@ -499,6 +663,10 @@ Greek vases had different shapes for different uses: the **amphora** for wine an
 
 Figures are shown **in profile**, in motion, with a clear outline. Around the scene there are borders of the **meander**: a line bent at right angles like a running wave.
 
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt motifs=wave,spiral,leaf
+~~~
+
 ## Draw a vase
 
 1. Fold a sheet in half and draw half of a vase along the fold; cut it out so it is symmetrical.
@@ -506,8 +674,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 3. Draw one scene in profile: a runner, a discus thrower, a hero with a shield.
 4. Add a meander border at the neck and bottom.
 
-### Exercises
+~~~art
+steps greek-vase
+~~~
 
+~~~art
+tasks
 1. What did the Greeks believe beauty was?
 2. Where does the Parthenon stand and whose temple is it?
 3. Name the three orders of columns.
@@ -515,10 +687,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 5. Which temple in Armenia is in the Greek style?
 6. How does a red-figure vase look?
 7. Draw a Greek vase with a scene in profile and a meander border.
+~~~
 
-### Answers
-
-1. Harmony, the right measure of every part. 2. On the Acropolis in Athens; the temple of Athena. 3. Doric, Ionic, Corinthian. 4. The Ionic. 5. Garni. 6. The figures stay red-orange, the background is black. 7. Your work.`,
+~~~art
+hints
+1. Harmony, the right measure of every part. 2. On the Acropolis in Athens; the temple of Athena. 3. Doric, Ionic, Corinthian. 4. The Ionic. 5. Garni. 6. The figures stay red-orange, the background is black. 7. Your work.
+~~~`,
         hy: `## Ներդաշնակություն և չափ
 
 Հին հույները հավատում էին, որ գեղեցկությունը **ներդաշնակությունն** է՝ յուրաքանչյուր մասի ճիշտ չափը։ Նրանք հիանում էին ուժեղ, առողջ մարդկային մարմնով և նրա պատվին անցկացնում էին **Օլիմպիական խաղերը**։
@@ -526,6 +700,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 ## Պարթենոն
 
 Աթենքի **Ակրոպոլիս** բլրի վրա կանգնած է **Պարթենոնը**՝ Աթենաս աստվածուհու տաճարը, որը կառուցվել է սպիտակ մարմարից ք․ ա․ 5-րդ դարում։ Նրա շուրջը սյուների շարքեր են կանգնած։ Նրանում ամեն ինչ հանդարտ է, հավասարակշռված և համաչափ։
+
+~~~art
+pic greek-temple
+~~~
 
 ## Սյուների երեք օրդերը
 
@@ -536,6 +714,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 | **կորնթոսյան** | ականթի տերևների զամբյուղ | հարուստ, տոնական |
 
 Հայաստանում կա հունական ոճի տաճար՝ **Գառնին** (մ․ թ․ 1-ին դար)՝ իոնիական սյուներով, կանգնած խոր կիրճի վերևում։
+
+~~~art
+pic orders
+~~~
 
 ## Նկարազարդ սափորներ
 
@@ -548,6 +730,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 
 Պատկերները ցույց են տրվում **պրոֆիլով**, շարժման մեջ, հստակ եզրագծով։ Տեսարանի շուրջը **մեանդրի** եզրագծեր են՝ ուղիղ անկյուններով ծռված գիծ, ինչպես վազող ալիք։
 
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt motifs=wave,spiral,leaf
+~~~
+
 ## Նկարի՛ր սափոր
 
 1. Ծալի՛ր թերթը կիսով չափ և ծալքի երկայնքով նկարի՛ր սափորի կեսը, կտրի՛ր, որպեսզի համաչափ լինի։
@@ -555,8 +741,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 3. Նկարի՛ր մեկ տեսարան պրոֆիլով՝ վազորդ, սկավառակ նետող, վահանով հերոս։
 4. Վզին և ներքևում ավելացրու՛ մեանդրի եզրագիծ։
 
-### Վարժություններ
+~~~art
+steps greek-vase
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ էին հույները համարում գեղեցկություն։
 2. Որտե՞ղ է կանգնած Պարթենոնը, և ո՞ւմ տաճարն է այն։
 3. Անվանի՛ր սյուների երեք օրդերը։
@@ -564,10 +754,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 5. Հայաստանի ո՞ր տաճարն է հունական ոճով։
 6. Ինչպե՞ս է երևում կարմրաֆիգուր սափորը։
 7. Նկարի՛ր հունական սափոր՝ պրոֆիլով տեսարանով և մեանդրի եզրագծով։
+~~~
 
-### Պատասխաններ
-
-1. Ներդաշնակությունը՝ յուրաքանչյուր մասի ճիշտ չափը։ 2. Աթենքի Ակրոպոլիսում, Աթենասի տաճարն է։ 3. Դորիական, իոնիական, կորնթոսյան։ 4. Իոնիականը։ 5. Գառնին։ 6. Պատկերները մնում են կարմրանարնջագույն, ֆոնը սև է։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Ներդաշնակությունը՝ յուրաքանչյուր մասի ճիշտ չափը։ 2. Աթենքի Ակրոպոլիսում, Աթենասի տաճարն է։ 3. Դորիական, իոնիական, կորնթոսյան։ 4. Իոնիականը։ 5. Գառնին։ 6. Պատկերները մնում են կարմրանարնջագույն, ֆոնը սև է։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Гармония и мера
 
 Древние греки считали, что красота — это **гармония**: правильная мера каждой части. Они восхищались сильным, здоровым телом человека и в его честь проводили **Олимпийские игры**.
@@ -575,6 +767,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 ## Парфенон
 
 На холме **Акрополь** в Афинах стоит **Парфенон** — храм богини Афины, построенный из белого мрамора в V веке до н. э. Вокруг него стоят ряды колонн. Всё в нём спокойно, уравновешенно и соразмерно.
+
+~~~art
+pic greek-temple
+~~~
 
 ## Три ордера колонн
 
@@ -585,6 +781,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 | **коринфский** | корзинка из листьев аканта | пышный, праздничный |
 
 В Армении есть храм в греческом стиле — **Гарни** (I век н. э.) с ионическими колоннами, стоящий над глубоким ущельем.
+
+~~~art
+pic orders
+~~~
 
 ## Расписные вазы
 
@@ -597,6 +797,10 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 
 Фигуры изображены **в профиль**, в движении, с чётким контуром. Вокруг сцены — бордюры из **меандра**: линии, изломанной под прямым углом, как бегущая волна.
 
+~~~art
+pattern layout=strip rhythm=repeat palettes=egypt motifs=wave,spiral,leaf
+~~~
+
 ## Нарисуй вазу
 
 1. Сложи лист пополам и нарисуй половину вазы по сгибу; вырежи — получится симметрично.
@@ -604,8 +808,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 3. Нарисуй одну сцену в профиль: бегун, метатель диска, герой со щитом.
 4. Добавь меандр на горлышке и внизу.
 
-### Упражнения
+~~~art
+steps greek-vase
+~~~
 
+~~~art
+tasks
 1. Что греки считали красотой?
 2. Где стоит Парфенон и чей это храм?
 3. Назови три ордера колонн.
@@ -613,10 +821,12 @@ Figures are shown **in profile**, in motion, with a clear outline. Around the sc
 5. Какой храм в Армении построен в греческом стиле?
 6. Как выглядит краснофигурная ваза?
 7. Нарисуй греческую вазу со сценой в профиль и меандром.
+~~~
 
-### Ответы
-
-1. Гармонию, правильную меру каждой части. 2. На Акрополе в Афинах; храм Афины. 3. Дорический, ионический, коринфский. 4. У ионического. 5. Гарни. 6. Фигуры красно-оранжевые, фон чёрный. 7. Твоя работа.`,
+~~~art
+hints
+1. Гармонию, правильную меру каждой части. 2. На Акрополе в Афинах; храм Афины. 3. Дорический, ионический, коринфский. 4. У ионического. 5. Гарни. 6. Фигуры красно-оранжевые, фон чёрный. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("The Parthenon is a temple of…", "Պարթենոնը … տաճարն է։", "Парфенон — храм…"), [t("Athena", "Աթենասի", "Афины"), t("Khaldi", "Խալդիի", "Халди"), t("Zeus only", "միայն Զևսի", "только Зевса")], 0),
@@ -650,6 +860,10 @@ In Western Europe in the 12th–15th centuries a new style appeared: **Gothic**.
 
 Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in Germany with its two huge spires.
 
+~~~art
+pic gothic
+~~~
+
 ## A medieval town
 
 - The town was surrounded by walls; its streets were **narrow and winding**.
@@ -666,8 +880,17 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 4. Glue coloured tissue or tracing paper behind the holes.
 5. Hang it on the window and look at the light coming through.
 
-### Exercises
+~~~art
+pic stained-glass
+~~~
 
+~~~art
+sketch paper=black guide=circle
+Stained glass on screen: draw thick dark lead lines first, then fill the pieces with bright colours.
+~~~
+
+~~~art
+tasks
 1. In which centuries did the Gothic style appear?
 2. What does a pointed arch do?
 3. What is stained glass?
@@ -675,10 +898,12 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 5. Describe the streets of a medieval town.
 6. What sign would a baker hang over his shop?
 7. Make a stained-glass window with a pointed arch.
+~~~
 
-### Answers
-
-1. In the 12th–15th centuries. 2. It lifts the eye upwards. 3. A window of coloured glass pieces joined with lead. 4. A big round stained-glass window like a flower. 5. Narrow and winding. 6. A pretzel. 7. Your work.`,
+~~~art
+hints
+1. In the 12th–15th centuries. 2. It lifts the eye upwards. 3. A window of coloured glass pieces joined with lead. 4. A big round stained-glass window like a flower. 5. Narrow and winding. 6. A pretzel. 7. Your work.
+~~~`,
         hy: `## Դեպի երկինք ձգվող քար
 
 Արևմտյան Եվրոպայում 12–15-րդ դարերում նոր ոճ հայտնվեց՝ **գոթիկա**։ Տաճարները դարձան շատ բարձր, լուսավոր և գունավոր լույսով լի։
@@ -692,6 +917,10 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 | **արտաքին հենարաններ** | դրսի քարե «ձեռքեր», որոնք պահում են բարձր պատերը |
 
 Հայտնի գոթական տաճարներ՝ **Նոտր Դամը** Փարիզում և Գերմանիայի **Քյոլնի տաճարը**՝ երկու հսկա սրածայր աշտարակներով։
+
+~~~art
+pic gothic
+~~~
 
 ## Միջնադարյան քաղաք
 
@@ -709,8 +938,17 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 4. Անցքերի հետևից սոսնձի՛ր գունավոր բարակ թուղթ կամ պատճենաթուղթ։
 5. Կախի՛ր այն պատուհանին և նայի՛ր միջով անցնող լույսին։
 
-### Վարժություններ
+~~~art
+pic stained-glass
+~~~
 
+~~~art
+sketch paper=black guide=circle
+Վիտրաժ էկրանին․ նախ նկարի՛ր հաստ մուգ կապարե գծերը, հետո լցրու մասերը վառ գույներով։
+~~~
+
+~~~art
+tasks
 1. Ո՞ր դարերում հայտնվեց գոթական ոճը։
 2. Ի՞նչ է անում սլաքաձև կամարը։
 3. Ի՞նչ է վիտրաժը։
@@ -718,10 +956,12 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 5. Նկարագրի՛ր միջնադարյան քաղաքի փողոցները։
 6. Ի՞նչ ցուցանակ կկախեր հացթուխն իր խանութի վերևում։
 7. Պատրաստի՛ր վիտրաժ սլաքաձև կամարով։
+~~~
 
-### Պատասխաններ
-
-1. 12–15-րդ դարերում։ 2. Հայացքը բարձրացնում է վեր։ 3. Կապարով միացված գունավոր ապակու կտորներից պատուհան։ 4. Ծաղկի նման մեծ կլոր վիտրաժ։ 5. Նեղ ու ոլորապտույտ։ 6. Գալարահաց։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. 12–15-րդ դարերում։ 2. Հայացքը բարձրացնում է վեր։ 3. Կապարով միացված գունավոր ապակու կտորներից պատուհան։ 4. Ծաղկի նման մեծ կլոր վիտրաժ։ 5. Նեղ ու ոլորապտույտ։ 6. Գալարահաց։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Камень, устремлённый в небо
 
 В Западной Европе в XII–XV веках появился новый стиль — **готика**. Соборы стали очень высокими, светлыми и полными цветного света.
@@ -735,6 +975,10 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 | **аркбутаны** | каменные «руки» снаружи, поддерживающие высокие стены |
 
 Знаменитые готические соборы — **Нотр-Дам** в Париже и **Кёльнский собор** в Германии с двумя огромными шпилями.
+
+~~~art
+pic gothic
+~~~
 
 ## Средневековый город
 
@@ -752,8 +996,17 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 4. Сзади приклей цветную папиросную бумагу или кальку.
 5. Повесь работу на окно и посмотри на свет, проходящий сквозь неё.
 
-### Упражнения
+~~~art
+pic stained-glass
+~~~
 
+~~~art
+sketch paper=black guide=circle
+Витраж на экране: сначала толстые тёмные свинцовые линии, потом заполни кусочки яркими цветами.
+~~~
+
+~~~art
+tasks
 1. В каких веках появилась готика?
 2. Что делает стрельчатая арка?
 3. Что такое витраж?
@@ -761,10 +1014,12 @@ Famous Gothic cathedrals: **Notre-Dame** in Paris and **Cologne Cathedral** in G
 5. Опиши улицы средневекового города.
 6. Какую вывеску повесил бы пекарь над лавкой?
 7. Сделай витраж со стрельчатой аркой.
+~~~
 
-### Ответы
-
-1. В XII–XV веках. 2. Поднимает взгляд вверх. 3. Окно из кусочков цветного стекла, соединённых свинцом. 4. Большое круглое витражное окно, похожее на цветок. 5. Узкие и извилистые. 6. Крендель. 7. Твоя работа.`,
+~~~art
+hints
+1. В XII–XV веках. 2. Поднимает взгляд вверх. 3. Окно из кусочков цветного стекла, соединённых свинцом. 4. Большое круглое витражное окно, похожее на цветок. 5. Узкие и извилистые. 6. Крендель. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A Gothic arch is…", "Գոթական կամարը…", "Готическая арка —"), [t("pointed", "սլաքաձև է", "стрельчатая"), t("flat", "հարթ է", "плоская"), t("square", "քառակուսի է", "квадратная")], 0),
@@ -805,11 +1060,19 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 | **tiles** | blue and turquoise domes and portals, like in Central Asia |
 | **Persian garden** | a garden divided into **four parts** by water channels, with a pool or pavilion in the centre |
 
+~~~art
+pattern layout=grid palettes=gzhel,armenian motifs=flower,star,leaf,bird
+~~~
+
 ## What is similar to Armenian art
 
 - Love for **ornament** and carpets.
 - Stone architecture with domes (Georgia).
 - Book miniature with bright colours and gold (Iran).
+
+~~~art
+pic carpet pomegranate grapevine
+~~~
 
 ## Draw
 
@@ -817,8 +1080,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 
 **Persian garden:** a square garden seen from above, two crossing channels of blue water, a pool in the centre, flowers and trees arranged symmetrically in four parts.
 
-### Exercises
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. Why do the arts of neighbouring peoples have much in common?
 2. What do Georgian and Armenian churches have in common?
 3. What were Svan towers for?
@@ -826,10 +1093,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 5. Describe a Persian garden.
 6. Name three features of a Persian miniature.
 7. Draw a Svan village with towers or a Persian garden.
+~~~
 
-### Answers
-
-1. Masters travelled, traded and learned from each other. 2. Stone walls and cone domes on drums. 3. For defence. 4. On black oilcloth. 5. A garden divided into four parts by water channels with a pool or pavilion in the centre. 6. Bright pure colours, flat figures, fine details (also gardens and golden skies). 7. Your work.`,
+~~~art
+hints
+1. Masters travelled, traded and learned from each other. 2. Stone walls and cone domes on drums. 3. For defence. 4. On black oilcloth. 5. A garden divided into four parts by water channels with a pool or pavilion in the centre. 6. Bright pure colours, flat figures, fine details (also gardens and golden skies). 7. Your work.
+~~~`,
         hy: `## Հարևանները սովորում են իրարից
 
 Հայաստանը հազարավոր տարիներ ապրել է Վրաստանի և Իրանի կողքին։ Վարպետները ճանապարհորդում էին, առևտուր անում և սովորում իրարից, ուստի նրանց արվեստը շատ ընդհանրություններ ունի, բայց յուրաքանչյուրը պահում է իր դեմքը։
@@ -851,11 +1120,19 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 | **սալիկներ** | կապույտ և փիրուզագույն գմբեթներ և պորտալներ, ինչպես Միջին Ասիայում |
 | **պարսկական այգի** | ջրանցքներով **չորս մասի** բաժանված այգի՝ կենտրոնում ավազան կամ տաղավար |
 
+~~~art
+pattern layout=grid palettes=gzhel,armenian motifs=flower,star,leaf,bird
+~~~
+
 ## Ինչն է նման հայկական արվեստին
 
 - Սերը **զարդանախշի** և գորգերի հանդեպ։
 - Գմբեթներով քարե ճարտարապետությունը (Վրաստան)։
 - Վառ գույներով և ոսկով գրքային մանրանկարը (Իրան)։
+
+~~~art
+pic carpet pomegranate grapevine
+~~~
 
 ## Նկարի՛ր
 
@@ -863,8 +1140,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 
 **Պարսկական այգի**՝ վերևից տեսած քառակուսի այգի, կապույտ ջրի երկու խաչվող ջրանցք, կենտրոնում ավազան, չորս մասերում համաչափ դասավորված ծաղիկներ և ծառեր։
 
-### Վարժություններ
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. Ինչո՞ւ է հարևան ժողովուրդների արվեստը շատ ընդհանրություններ ունենում։
 2. Ի՞նչ ընդհանուր բան ունեն վրացական և հայկական եկեղեցիները։
 3. Ինչի՞ համար էին սվանական աշտարակները։
@@ -872,10 +1153,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 5. Նկարագրի՛ր պարսկական այգին։
 6. Անվանի՛ր պարսկական մանրանկարի երեք առանձնահատկություն։
 7. Նկարի՛ր աշտարակներով սվանական գյուղ կամ պարսկական այգի։
+~~~
 
-### Պատասխաններ
-
-1. Վարպետները ճանապարհորդում էին, առևտուր անում և սովորում իրարից։ 2. Քարե պատեր և կոնաձև գմբեթներ թմբուկների վրա։ 3. Պաշտպանության համար։ 4. Սև մոմլաթի վրա։ 5. Ջրանցքներով չորս մասի բաժանված այգի՝ կենտրոնում ավազան կամ տաղավար։ 6. Վառ մաքուր գույներ, հարթ պատկերներ, նուրբ մանրամասներ (նաև այգիներ և ոսկե երկինք)։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Վարպետները ճանապարհորդում էին, առևտուր անում և սովորում իրարից։ 2. Քարե պատեր և կոնաձև գմբեթներ թմբուկների վրա։ 3. Պաշտպանության համար։ 4. Սև մոմլաթի վրա։ 5. Ջրանցքներով չորս մասի բաժանված այգի՝ կենտրոնում ավազան կամ տաղավար։ 6. Վառ մաքուր գույներ, հարթ պատկերներ, նուրբ մանրամասներ (նաև այգիներ և ոսկե երկինք)։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Соседи учатся друг у друга
 
 Армения тысячи лет живёт бок о бок с Грузией и Ираном. Мастера путешествовали, торговали и учились друг у друга, поэтому в их искусстве много общего, но каждое сохраняет своё лицо.
@@ -897,11 +1180,19 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 | **изразцы** | синие и бирюзовые купола и порталы, как в Средней Азии |
 | **персидский сад** | сад, разделённый каналами с водой на **четыре части**, с бассейном или павильоном в центре |
 
+~~~art
+pattern layout=grid palettes=gzhel,armenian motifs=flower,star,leaf,bird
+~~~
+
 ## Что похоже на армянское искусство
 
 - Любовь к **орнаменту** и коврам.
 - Каменная архитектура с куполами (Грузия).
 - Книжная миниатюра с яркими красками и золотом (Иран).
+
+~~~art
+pic carpet pomegranate grapevine
+~~~
 
 ## Нарисуй
 
@@ -909,8 +1200,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 
 **Персидский сад:** квадратный сад сверху, два пересекающихся канала голубой воды, бассейн в центре, цветы и деревья симметрично в четырёх частях.
 
-### Упражнения
+~~~art
+sketch mode=mirror paper=cream
+~~~
 
+~~~art
+tasks
 1. Почему в искусстве соседних народов много общего?
 2. Что общего у грузинских и армянских храмов?
 3. Для чего служили сванские башни?
@@ -918,10 +1213,12 @@ Armenia has lived side by side with Georgia and Iran for thousands of years. Mas
 5. Опиши персидский сад.
 6. Назови три черты персидской миниатюры.
 7. Нарисуй сванское селение с башнями или персидский сад.
+~~~
 
-### Ответы
-
-1. Мастера путешествовали, торговали и учились друг у друга. 2. Каменные стены и конусные купола на барабанах. 3. Для защиты. 4. На чёрной клеёнке. 5. Сад, разделённый каналами на четыре части, с бассейном или павильоном в центре. 6. Яркие чистые цвета, плоские фигуры, тонкие детали (а также сады и золотое небо). 7. Твоя работа.`,
+~~~art
+hints
+1. Мастера путешествовали, торговали и учились друг у друга. 2. Каменные стены и конусные купола на барабанах. 3. Для защиты. 4. На чёрной клеёнке. 5. Сад, разделённый каналами на четыре части, с бассейном или павильоном в центре. 6. Яркие чистые цвета, плоские фигуры, тонкие детали (а также сады и золотое небо). 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Svan towers were built for…", "Սվանական աշտարակները կառուցվում էին…", "Сванские башни строили для…"), [t("defence", "պաշտպանության համար", "защиты"), t("storing ice cream", "պաղպաղակ պահելու համար", "хранения мороженого"), t("watching the sea", "ծովին նայելու համար", "наблюдения за морем")], 0),

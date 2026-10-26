@@ -32,12 +32,20 @@ Architects and designers think in **volumes**. Before building a house or making
 
 The flat pattern of a volume is called a **net**. Remember to add **flaps** for gluing.
 
+~~~art
+pic shapes
+~~~
+
 ## Paper techniques
 
 1. **Scoring:** draw a line with a blunt point (a ruler and an empty pen) so the paper folds neatly.
 2. **Folding:** a fold toward you is a «valley», away from you a «mountain».
 3. **Cutting:** a sharp knife on a board, or scissors; adults help with the knife.
 4. **Gluing:** a thin layer of glue on the flaps, press and wait.
+
+~~~art
+net
+~~~
 
 ## Laws of volumetric composition
 
@@ -49,12 +57,16 @@ The flat pattern of a volume is called a **net**. Remember to add **flaps** for 
 
 In 1919–1920 the Russian artist **Vladimir Tatlin** made a model of a huge spiral tower, the «Monument to the Third International». It was never built, but its model became a symbol of a new art of volumes.
 
+~~~art
+light
+~~~
+
 ## Task
 
 Build a composition of three to five volumes on a base of cardboard: one dominant (a tall prism or cone) and smaller ones around it. Use white paper only, so that light and shadow show the form.
 
-### Exercises
-
+~~~art
+tasks
 1. Why do architects make models?
 2. What is the net of a volume?
 3. Which paper technique helps the paper fold neatly?
@@ -62,10 +74,12 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 5. Which volumes look stable, and which strive upward?
 6. Why should a model be viewed from all sides?
 7. Build a paper composition of three to five volumes with a dominant.
+~~~
 
-### Answers
-
-1. To see the volume and composition before building. 2. Its flat pattern. 3. Scoring. 4. A valley folds toward you, a mountain away from you. 5. Cube and prism look stable; pyramid and cone strive upward. 6. Because volumes are seen from every side, not only from the front. 7. Your model.`,
+~~~art
+hints
+1. To see the volume and composition before building. 2. Its flat pattern. 3. Scoring. 4. A valley folds toward you, a mountain away from you. 5. Cube and prism look stable; pyramid and cone strive upward. 6. Because volumes are seen from every side, not only from the front. 7. Your model.
+~~~`,
         hy: `## Թերթից՝ տարածություն
 
 Ճարտարապետներն ու դիզայներները մտածում են **ծավալներով**։ Նախքան տուն կառուցելը կամ աթոռ պատրաստելը, նրանք թղթից կամ ստվարաթղթից **մակետ** են պատրաստում։ Հարթ թերթը դառնում է ծավալ, երբ այն ծալում ենք։
@@ -81,12 +95,20 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 
 Ծավալի հարթ ձևանմուշը կոչվում է **փռվածք**։ Չմոռանաս ավելացնել **եզրեր**՝ սոսնձելու համար։
 
+~~~art
+pic shapes
+~~~
+
 ## Թղթի հետ աշխատելու հնարքներ
 
 1. **Ակոսում**՝ բութ ծայրով գիծ քաշիր (քանոն և դատարկ գրիչ), որպեսզի թուղթը կոկիկ ծալվի։
 2. **Ծալում**՝ դեպի քեզ ծալքը «հովիտ» է, քեզնից դեպի դուրս՝ «լեռ»։
 3. **Կտրում**՝ սուր դանակ տախտակի վրա կամ մկրատ, դանակով աշխատելիս մեծերն են օգնում։
 4. **Սոսնձում**՝ սոսնձի բարակ շերտ եզրերին, սեղմիր և սպասիր։
+
+~~~art
+net
+~~~
 
 ## Ծավալային կոմպոզիցիայի օրենքները
 
@@ -98,12 +120,16 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 
 1919–1920 թվականներին ռուս նկարիչ **Վլադիմիր Տատլինը** պատրաստեց հսկայական պարուրաձև աշտարակի մակետ՝ «Երրորդ Ինտերնացիոնալի հուշարձանը»։ Այն այդպես էլ չկառուցվեց, բայց նրա մակետը դարձավ ծավալների նոր արվեստի խորհրդանիշ։
 
+~~~art
+light
+~~~
+
 ## Առաջադրանք
 
 Ստվարաթղթե հիմքի վրա կառուցիր երեքից հինգ ծավալից կոմպոզիցիա՝ մեկ դոմինանտ (բարձր պրիզմա կամ կոն) և ավելի փոքրեր նրա շուրջը։ Օգտագործիր միայն սպիտակ թուղթ, որպեսզի լույսն ու ստվերը ցույց տան ձևը։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու են ճարտարապետները մակետներ պատրաստում։
 2. Ինչ է ծավալի փռվածքը։
 3. Թղթի հետ աշխատելու որ հնարքն է օգնում թղթին կոկիկ ծալվել։
@@ -111,10 +137,12 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 5. Որ ծավալներն են կայուն թվում, և որոնք են ձգտում դեպի վեր։
 6. Ինչու պետք է մակետը դիտել բոլոր կողմերից։
 7. Կառուցիր թղթե կոմպոզիցիա երեքից հինգ ծավալից՝ դոմինանտով։
+~~~
 
-### Պատասխաններ
-
-1. Որպեսզի կառուցելուց առաջ տեսնեն ծավալը և կոմպոզիցիան։ 2. Նրա հարթ ձևանմուշը։ 3. Ակոսումը։ 4. Հովիտը ծալվում է դեպի քեզ, լեռը՝ քեզնից դեպի դուրս։ 5. Խորանարդն ու պրիզման կայուն են թվում, բուրգն ու կոնը ձգտում են դեպի վեր։ 6. Որովհետև ծավալներն երևում են ամեն կողմից, ոչ միայն առջևից։ 7. Քո մակետը։`,
+~~~art
+hints
+1. Որպեսզի կառուցելուց առաջ տեսնեն ծավալը և կոմպոզիցիան։ 2. Նրա հարթ ձևանմուշը։ 3. Ակոսումը։ 4. Հովիտը ծալվում է դեպի քեզ, լեռը՝ քեզնից դեպի դուրս։ 5. Խորանարդն ու պրիզման կայուն են թվում, բուրգն ու կոնը ձգտում են դեպի վեր։ 6. Որովհետև ծավալներն երևում են ամեն կողմից, ոչ միայն առջևից։ 7. Քո մակետը։
+~~~`,
         ru: `## От листа к пространству
 
 Архитекторы и дизайнеры мыслят **объёмами**. Прежде чем построить дом или сделать стул, они создают **макет** из бумаги или картона. Плоский лист превращается в объём, когда мы его сгибаем.
@@ -130,12 +158,20 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 
 Плоская выкройка объёма называется **развёрткой**. Не забудь добавить **клапаны** для склейки.
 
+~~~art
+pic shapes
+~~~
+
 ## Приёмы работы с бумагой
 
 1. **Биговка:** проведи линию тупым концом (линейка и пустая ручка), чтобы бумага ровно согнулась.
 2. **Сгиб:** сгиб к себе — «долина», от себя — «гора».
 3. **Резание:** острый нож на доске или ножницы; с ножом помогают взрослые.
 4. **Склейка:** тонкий слой клея на клапаны, прижми и подожди.
+
+~~~art
+net
+~~~
 
 ## Законы объёмной композиции
 
@@ -147,12 +183,16 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 
 В 1919–1920 годах русский художник **Владимир Татлин** сделал модель огромной спиральной башни — «Памятника III Интернационалу». Её так и не построили, но модель стала символом нового искусства объёмов.
 
+~~~art
+light
+~~~
+
 ## Задание
 
 Построй на картонной основе композицию из трёх-пяти объёмов: одна доминанта (высокая призма или конус) и меньшие объёмы вокруг. Используй только белую бумагу, чтобы свет и тень выявили форму.
 
-### Упражнения
-
+~~~art
+tasks
 1. Зачем архитекторы делают макеты?
 2. Что такое развёртка объёма?
 3. Какой приём помогает бумаге ровно согнуться?
@@ -160,10 +200,12 @@ Build a composition of three to five volumes on a base of cardboard: one dominan
 5. Какие объёмы выглядят устойчивыми, а какие устремлены вверх?
 6. Почему макет нужно рассматривать со всех сторон?
 7. Построй бумажную композицию из трёх-пяти объёмов с доминантой.
+~~~
 
-### Ответы
-
-1. Чтобы увидеть объём и композицию до строительства. 2. Его плоская выкройка. 3. Биговка. 4. «Долина» сгибается к себе, «гора» — от себя. 5. Куб и призма устойчивы, пирамида и конус устремлены вверх. 6. Потому что объём видно со всех сторон, а не только спереди. 7. Твой макет.`,
+~~~art
+hints
+1. Чтобы увидеть объём и композицию до строительства. 2. Его плоская выкройка. 3. Биговка. 4. «Долина» сгибается к себе, «гора» — от себя. 5. Куб и призма устойчивы, пирамида и конус устремлены вверх. 6. Потому что объём видно со всех сторон, а не только спереди. 7. Твой макет.
+~~~`,
       },
       [
         q(t("The flat pattern of a volume is called a…", "Ծավալի հարթ ձևանմուշը կոչվում է…", "Плоская выкройка объёма называется…"), [t("net", "փռվածք", "развёрткой"), t("grid", "ցանց", "сеткой"), t("spread", "բացվածք", "разворотом")], 0),
@@ -195,6 +237,10 @@ A building is made of many repeated parts: bricks, stone blocks, panels, windows
 * The French architect **Le Corbusier** created the **Modulor**, a system of proportions based on the height of a human figure.
 * Modern houses are built from factory-made **panels** and **blocks**.
 
+~~~art
+pic lace khachkar stained-glass
+~~~
+
 ## Main structures
 
 | Structure | How it works | Example |
@@ -208,6 +254,11 @@ A building is made of many repeated parts: bricks, stone blocks, panels, windows
 
 Armenian builders were masters of the **dome**: a round dome rests on a square hall, and the transition is made with special corner structures. The dome usually stands on a high **drum** with a cone-shaped roof.
 
+~~~art
+pattern layout=grid rhythm=alternate palettes=mono,gzhel motifs=triangle,rhombus,circle
+One module, many structures: the same shape on a grid makes very different surfaces.
+~~~
+
 ## Structure and beauty
 
 A good structure is not hidden: its logic is beautiful. Columns show how the roof is carried; arches show how the weight flows to the ground. The engineer **Vladimir Shukhov** built light lattice towers of steel bars; his tower in Moscow (1922) looks like a woven basket.
@@ -216,8 +267,12 @@ A good structure is not hidden: its logic is beautiful. Columns show how the roo
 
 Make 10–20 identical modules from paper (for example, triangular tubes or folded strips) and build a tower, a bridge or a pavilion from them. Check how strong it is with a light book.
 
-### Exercises
+~~~art
+sketch mode=kaleido n=6 paper=white
+~~~
 
+~~~art
+tasks
 1. What is a module?
 2. What was the module in a Greek temple?
 3. How does an arch work?
@@ -225,10 +280,12 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 5. What does a frame do in a skyscraper?
 6. What does a typical Armenian dome stand on?
 7. Build a structure from identical paper modules and test its strength.
+~~~
 
-### Answers
-
-1. A repeated unit of size. 2. The diameter of a column. 3. Stones press on each other in a curve and carry the weight to the supports. 4. A dome is an arch rotated around its axis. 5. It carries the building; the walls only fill it. 6. On a high drum. 7. Your structure.`,
+~~~art
+hints
+1. A repeated unit of size. 2. The diameter of a column. 3. Stones press on each other in a curve and carry the weight to the supports. 4. A dome is an arch rotated around its axis. 5. It carries the building; the walls only fill it. 6. On a high drum. 7. Your structure.
+~~~`,
         hy: `## Մաս և ամբողջություն
 
 Շենքը կազմված է բազմաթիվ կրկնվող մասերից՝ աղյուսներ, քարե բլոկներ, պանելներ, պատուհաններ։ Չափի կրկնվող միավորը կոչվում է **մոդուլ**։ Երբ մասերը չափերով կապված են միմյանց հետ, շենքը ներդաշնակ է թվում։
@@ -240,6 +297,10 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 * Հայաստանում եկեղեցիները կառուցում էին **տաշված տուֆե քարերից**, դրանց ռիթմն երևում է պատերին։
 * Ֆրանսիացի ճարտարապետ **Լե Կորբյուզիեն** ստեղծեց **Մոդուլորը**՝ մարդու հասակի վրա հիմնված համամասնությունների համակարգ։
 * Ժամանակակից տները կառուցվում են գործարանային **պանելներից** և **բլոկներից**։
+
+~~~art
+pic lace khachkar stained-glass
+~~~
 
 ## Հիմնական կառուցվածքներ
 
@@ -254,6 +315,11 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 
 Հայ շինարարները **գմբեթի** վարպետներ էին. կլոր գմբեթը հենվում է քառակուսի դահլիճի վրա, և անցումն արվում է հատուկ անկյունային կառուցվածքներով։ Գմբեթը սովորաբար կանգնած է բարձր **թմբուկի** վրա՝ կոնաձև տանիքով։
 
+~~~art
+pattern layout=grid rhythm=alternate palettes=mono,gzhel motifs=triangle,rhombus,circle
+Մեկ մոդուլ, շատ կառուցվածքներ․ նույն ձևը ցանցի վրա ստեղծում է շատ տարբեր մակերեսներ։
+~~~
+
 ## Կառուցվածք և գեղեցկություն
 
 Լավ կառուցվածքը չի թաքցվում, նրա տրամաբանությունը գեղեցիկ է։ Սյուները ցույց են տալիս, թե ինչպես է կրվում տանիքը, կամարները՝ թե ինչպես է ծանրությունը հոսում դեպի գետին։ Ինժեներ **Վլադիմիր Շուխովը** պողպատե ձողերից թեթև ցանցավոր աշտարակներ էր կառուցում, նրա աշտարակը Մոսկվայում (1922) նման է հյուսված զամբյուղի։
@@ -262,8 +328,12 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 
 Թղթից պատրաստիր 10–20 միանման մոդուլ (օրինակ՝ եռանկյուն խողովակներ կամ ծալված շերտեր) և դրանցից կառուցիր աշտարակ, կամուրջ կամ տաղավար։ Թեթև գրքով ստուգիր, թե որքան ամուր է այն։
 
-### Վարժություններ
+~~~art
+sketch mode=kaleido n=6 paper=white
+~~~
 
+~~~art
+tasks
 1. Ինչ է մոդուլը։
 2. Ինչն էր մոդուլը հունական տաճարում։
 3. Ինչպես է աշխատում կամարը։
@@ -271,10 +341,12 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 5. Ինչ է անում կմախքն երկնաքերում։
 6. Ինչի վրա է կանգնած սովորական հայկական գմբեթը։
 7. Միանման թղթե մոդուլներից կառուցիր կառուցվածք և ստուգիր նրա ամրությունը։
+~~~
 
-### Պատասխաններ
-
-1. Չափի կրկնվող միավոր։ 2. Սյան տրամագիծը։ 3. Քարերը կորով սեղմում են միմյանց և ծանրությունը տանում հենարաններին։ 4. Գմբեթն իր առանցքի շուրջը պտտված կամար է։ 5. Կրում է շենքը, պատերը միայն լցնում են այն։ 6. Բարձր թմբուկի վրա։ 7. Քո կառուցվածքը։`,
+~~~art
+hints
+1. Չափի կրկնվող միավոր։ 2. Սյան տրամագիծը։ 3. Քարերը կորով սեղմում են միմյանց և ծանրությունը տանում հենարաններին։ 4. Գմբեթն իր առանցքի շուրջը պտտված կամար է։ 5. Կրում է շենքը, պատերը միայն լցնում են այն։ 6. Բարձր թմբուկի վրա։ 7. Քո կառուցվածքը։
+~~~`,
         ru: `## Часть и целое
 
 Здание состоит из множества повторяющихся частей: кирпичей, каменных блоков, панелей, окон. Повторяющаяся единица размера называется **модулем**. Когда части соразмерны друг другу, здание выглядит гармоничным.
@@ -286,6 +358,10 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 * В Армении церкви строили из **тёсаных туфовых блоков**; их ритм виден на стенах.
 * Французский архитектор **Ле Корбюзье** создал **Модулор** — систему пропорций, основанную на росте человека.
 * Современные дома собирают из заводских **панелей** и **блоков**.
+
+~~~art
+pic lace khachkar stained-glass
+~~~
 
 ## Основные конструкции
 
@@ -300,6 +376,11 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 
 Армянские зодчие были мастерами **купола**: круглый купол опирается на квадратный зал, а переход делают особыми угловыми конструкциями. Купол обычно стоит на высоком **барабане** с конической кровлей.
 
+~~~art
+pattern layout=grid rhythm=alternate palettes=mono,gzhel motifs=triangle,rhombus,circle
+Один модуль, много структур: одна и та же форма на сетке даёт совсем разные поверхности.
+~~~
+
 ## Конструкция и красота
 
 Хорошую конструкцию не прячут: её логика красива. Колонны показывают, как держится крыша, арки — как тяжесть стекает к земле. Инженер **Владимир Шухов** строил лёгкие сетчатые башни из стальных стержней; его башня в Москве (1922) похожа на плетёную корзину.
@@ -308,8 +389,12 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 
 Сделай из бумаги 10–20 одинаковых модулей (например, трёхгранные трубочки или сложенные полоски) и построй из них башню, мост или павильон. Проверь прочность лёгкой книгой.
 
-### Упражнения
+~~~art
+sketch mode=kaleido n=6 paper=white
+~~~
 
+~~~art
+tasks
 1. Что такое модуль?
 2. Что было модулем в греческом храме?
 3. Как работает арка?
@@ -317,10 +402,12 @@ Make 10–20 identical modules from paper (for example, triangular tubes or fold
 5. Что делает каркас в небоскрёбе?
 6. На чём стоит типичный армянский купол?
 7. Построй конструкцию из одинаковых бумажных модулей и проверь её прочность.
+~~~
 
-### Ответы
-
-1. Повторяющаяся единица размера. 2. Диаметр колонны. 3. Камни давят друг на друга по кривой и передают тяжесть на опоры. 4. Купол — арка, повёрнутая вокруг оси. 5. Несёт здание, а стены лишь заполняют его. 6. На высоком барабане. 7. Твоя конструкция.`,
+~~~art
+hints
+1. Повторяющаяся единица размера. 2. Диаметр колонны. 3. Камни давят друг на друга по кривой и передают тяжесть на опоры. 4. Купол — арка, повёрнутая вокруг оси. 5. Несёт здание, а стены лишь заполняют его. 6. На высоком барабане. 7. Твоя конструкция.
+~~~`,
       },
       [
         q(t("A repeated unit of size in a building is a…", "Շենքում չափի կրկնվող միավորը…", "Повторяющаяся единица размера в здании — это…"), [t("module", "մոդուլ է", "модуль"), t("dome", "գմբեթ է", "купол"), t("drum", "թմբուկ է", "барабан")], 0),
@@ -352,6 +439,10 @@ A building is drawn in several ways before it is built:
 | **Perspective** | a picture of how the building will look to a person |
 | **Model** | a small three-dimensional copy |
 
+~~~art
+pic model-building
+~~~
+
 ## Scale
 
 A model is smaller than the real building, but all parts are reduced **equally**. The scale **1:100** means that 1 cm on the model is 100 cm, that is 1 m, in reality. A room 4 m long becomes 4 cm; a house 9 m tall becomes 9 cm. A person in 1:100 scale is about 1.7 cm tall: put small paper figures next to your model to show the size.
@@ -367,16 +458,24 @@ A model is smaller than the real building, but all parts are reduced **equally**
 
 Architects often make **white models**: only white paper and cardboard. Without colour, the eye sees pure form, light and shadow.
 
+~~~art
+net
+~~~
+
 ## What makes a building good
 
 The Roman architect **Vitruvius** wrote that a building must be **strong**, **useful** and **beautiful**. Think about all three: Will it stand? Is it comfortable inside? Does it look good and fit its place?
+
+~~~art
+perspective modes=two
+~~~
 
 ## Task
 
 Design a small building: a library, a pavilion in a park, a bus stop or a summer house. Draw its plan and one facade on squared paper in scale 1:100, then make a white model on a site with paths and trees.
 
-### Exercises
-
+~~~art
+tasks
 1. What does a plan show?
 2. What is the difference between a facade and a section?
 3. What does the scale 1:100 mean?
@@ -384,10 +483,12 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 5. Why do architects make white models?
 6. Name the three qualities of a good building according to Vitruvius.
 7. Make a plan, a facade and a white model of a small building.
+~~~
 
-### Answers
-
-1. The building from above, cut horizontally: rooms, walls, doors, windows. 2. A facade is the outside wall seen from the front or side; a section shows the building cut vertically. 3. 1 cm on the model is 100 cm in reality. 4. 6 cm. 5. So that the eye sees pure form, light and shadow. 6. Strong, useful, beautiful. 7. Your work.`,
+~~~art
+hints
+1. The building from above, cut horizontally: rooms, walls, doors, windows. 2. A facade is the outside wall seen from the front or side; a section shows the building cut vertically. 3. 1 cm on the model is 100 cm in reality. 4. 6 cm. 5. So that the eye sees pure form, light and shadow. 6. Strong, useful, beautiful. 7. Your work.
+~~~`,
         hy: `## Ինչպես է ճարտարապետը ցույց տալիս շենքը
 
 Նախքան կառուցելը շենքը գծագրվում է մի քանի եղանակով.
@@ -399,6 +500,10 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 | **Կտրվածք** | ուղղահայաց կտրված շենքը՝ հարկեր, աստիճաններ, բարձրություններ |
 | **Հեռանկար** | նկար, թե ինչպես է շենքն երևալու մարդուն |
 | **Մակետ** | փոքր եռաչափ պատճեն |
+
+~~~art
+pic model-building
+~~~
 
 ## Մասշտաբ
 
@@ -415,16 +520,24 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 
 Ճարտարապետները հաճախ պատրաստում են **սպիտակ մակետներ**՝ միայն սպիտակ թղթից և ստվարաթղթից։ Առանց գույնի աչքը տեսնում է մաքուր ձևը, լույսը և ստվերը։
 
+~~~art
+net
+~~~
+
 ## Ինչն է շենքը լավը դարձնում
 
 Հռոմեացի ճարտարապետ **Վիտրուվիուսը** գրել է, որ շենքը պետք է լինի **ամուր**, **օգտակար** և **գեղեցիկ**։ Մտածիր երեքի մասին էլ. Կկանգնի՞ արդյոք։ Հարմա՞ր է ներսում։ Լա՞վ է երևում և համապատասխանո՞ւմ է իր տեղին։
+
+~~~art
+perspective modes=two
+~~~
 
 ## Առաջադրանք
 
 Նախագծիր փոքր շենք՝ գրադարան, տաղավար այգում, ավտոբուսի կանգառ կամ ամառանոց։ Վանդակավոր թղթի վրա 1:100 մասշտաբով գծիր նրա հատակագիծը և մեկ ճակատը, ապա պատրաստիր սպիտակ մակետ հողամասի վրա՝ արահետներով և ծառերով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է ցույց տալիս հատակագիծը։
 2. Ինչով է ճակատը տարբերվում կտրվածքից։
 3. Ինչ է նշանակում 1:100 մասշտաբը։
@@ -432,10 +545,12 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 5. Ինչու են ճարտարապետները սպիտակ մակետներ պատրաստում։
 6. Անվանիր լավ շենքի երեք որակները՝ ըստ Վիտրուվիուսի։
 7. Պատրաստիր փոքր շենքի հատակագիծ, ճակատ և սպիտակ մակետ։
+~~~
 
-### Պատասխաններ
-
-1. Շենքը վերևից, հորիզոնական կտրված՝ սենյակներ, պատեր, դռներ, պատուհաններ։ 2. Ճակատն արտաքին պատն է առջևից կամ կողքից, կտրվածքը ցույց է տալիս ուղղահայաց կտրված շենքը։ 3. Մակետի 1 սմ-ն իրականում 100 սմ է։ 4. 6 սմ։ 5. Որպեսզի աչքը տեսնի մաքուր ձևը, լույսը և ստվերը։ 6. Ամուր, օգտակար, գեղեցիկ։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Շենքը վերևից, հորիզոնական կտրված՝ սենյակներ, պատեր, դռներ, պատուհաններ։ 2. Ճակատն արտաքին պատն է առջևից կամ կողքից, կտրվածքը ցույց է տալիս ուղղահայաց կտրված շենքը։ 3. Մակետի 1 սմ-ն իրականում 100 սմ է։ 4. 6 սմ։ 5. Որպեսզի աչքը տեսնի մաքուր ձևը, լույսը և ստվերը։ 6. Ամուր, օգտակար, գեղեցիկ։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Как архитектор показывает здание
 
 Прежде чем построить здание, его изображают несколькими способами:
@@ -447,6 +562,10 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 | **Разрез** | здание, разрезанное вертикально: этажи, лестницы, высоты |
 | **Перспектива** | изображение того, как здание увидит человек |
 | **Макет** | маленькая объёмная копия |
+
+~~~art
+pic model-building
+~~~
 
 ## Масштаб
 
@@ -463,16 +582,24 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 
 Архитекторы часто делают **белые макеты** — только из белой бумаги и картона. Без цвета глаз видит чистую форму, свет и тень.
 
+~~~art
+net
+~~~
+
 ## Каким должно быть хорошее здание
 
 Римский архитектор **Витрувий** писал, что здание должно быть **прочным**, **полезным** и **красивым**. Подумай обо всём: устоит ли оно? Удобно ли внутри? Хорошо ли выглядит и подходит ли к своему месту?
+
+~~~art
+perspective modes=two
+~~~
 
 ## Задание
 
 Спроектируй небольшое здание: библиотеку, павильон в парке, остановку или летний домик. Начерти на клетчатой бумаге его план и один фасад в масштабе 1:100, затем сделай белый макет на участке с дорожками и деревьями.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что показывает план?
 2. Чем фасад отличается от разреза?
 3. Что означает масштаб 1:100?
@@ -480,10 +607,12 @@ Design a small building: a library, a pavilion in a park, a bus stop or a summer
 5. Зачем архитекторы делают белые макеты?
 6. Назови три качества хорошего здания по Витрувию.
 7. Сделай план, фасад и белый макет небольшого здания.
+~~~
 
-### Ответы
-
-1. Здание сверху в горизонтальном разрезе: комнаты, стены, двери, окна. 2. Фасад — наружная стена спереди или сбоку, разрез показывает здание, разрезанное вертикально. 3. 1 см на макете равен 100 см в действительности. 4. 6 см. 5. Чтобы глаз видел чистую форму, свет и тень. 6. Прочность, польза, красота. 7. Твоя работа.`,
+~~~art
+hints
+1. Здание сверху в горизонтальном разрезе: комнаты, стены, двери, окна. 2. Фасад — наружная стена спереди или сбоку, разрез показывает здание, разрезанное вертикально. 3. 1 см на макете равен 100 см в действительности. 4. 6 см. 5. Чтобы глаз видел чистую форму, свет и тень. 6. Прочность, польза, красота. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A building seen from above, cut horizontally, is a…", "Վերևից տեսանելի, հորիզոնական կտրված շենքը…", "Здание сверху в горизонтальном разрезе — это…"), [t("plan", "հատակագիծ է", "план"), t("facade", "ճակատ է", "фасад"), t("perspective", "հեռանկար է", "перспектива")], 0),
@@ -513,13 +642,25 @@ The American architect **Louis Sullivan** wrote in 1896 that **form follows func
 
 Look at the Armenian **jazzve**, the small coffee pot: a wide bottom heats quickly, a narrow neck keeps the foam, a long handle protects the hand, a lip helps to pour. Every part has a job.
 
+~~~art
+pic chair lamp
+~~~
+
 ## The Bauhaus
 
 In 1919 the architect **Walter Gropius** founded the **Bauhaus**, a school in Germany where artists, architects and craftsmen worked together. They designed simple chairs from steel tubes, lamps, teapots and fonts for factories, so that good design would be available to everyone. Their ideas still shape the things around us.
 
+~~~art
+palette bauhaus
+~~~
+
 ## Ergonomics
 
 **Ergonomics** studies how things fit the human body. A good chair supports the back; a handle fits the hand; buttons are big enough for a finger; a backpack spreads the weight over both shoulders. Designers measure people and test their prototypes.
+
+~~~art
+proportions
+~~~
 
 ## Stages of design
 
@@ -530,12 +671,17 @@ In 1919 the architect **Walter Gropius** founded the **Bauhaus**, a school in Ge
 5. **Prototype:** a model from paper, cardboard or clay.
 6. **Test:** let people use it; improve it.
 
+~~~art
+sketch guide=grid
+Sketch three ideas for one object, fast and rough. Then choose the best one and draw it clean.
+~~~
+
 ## Task
 
 Design one object: a pencil holder for a small desk, a lamp, a water bottle, a lunch box, or a chair for a school yard. Make at least five sketches, choose one, draw it from two sides and make a paper or clay prototype.
 
-### Exercises
-
+~~~art
+tasks
 1. What does a product designer do?
 2. Explain the words «form follows function».
 3. Why does a cup have a handle?
@@ -543,10 +689,12 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 5. What was the Bauhaus?
 6. What does ergonomics study?
 7. Design an everyday object through all six stages.
+~~~
 
-### Answers
-
-1. Makes things that are useful, comfortable and beautiful. 2. The shape of a thing should come from what it does. 3. Because the drink is hot. 4. For example: wide bottom heats quickly; narrow neck keeps the foam; long handle protects the hand; lip helps to pour. 5. A design school founded by Walter Gropius in Germany in 1919. 6. How things fit the human body. 7. Your project.`,
+~~~art
+hints
+1. Makes things that are useful, comfortable and beautiful. 2. The shape of a thing should come from what it does. 3. Because the drink is hot. 4. For example: wide bottom heats quickly; narrow neck keeps the foam; long handle protects the hand; lip helps to pour. 5. A design school founded by Walter Gropius in Germany in 1919. 6. How things fit the human body. 7. Your project.
+~~~`,
         hy: `## Յուրաքանչյուր իր նախագծված է
 
 Բաժակը, աթոռը, ուսապարկը, հեռախոսը, լամպը. ինչ-որ մեկը մտածել է դրանցից յուրաքանչյուրի մասին։ **Արտադրանքի դիզայները** ստեղծում է իրեր, որոնք միաժամանակ **օգտակար, հարմար և գեղեցիկ** են։
@@ -557,13 +705,25 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 
 Նայիր հայկական **ջեզվեին**՝ սուրճի փոքր ամանին. լայն հատակն արագ է տաքանում, նեղ վիզը պահում է փրփուրը, երկար կոթը պաշտպանում է ձեռքը, քիթն օգնում է լցնել։ Ամեն մաս ունի իր գործը։
 
+~~~art
+pic chair lamp
+~~~
+
 ## Բաուհաուս
 
 1919 թվականին ճարտարապետ **Վալտեր Գրոպիուսը** հիմնեց **Բաուհաուսը**՝ դպրոց Գերմանիայում, որտեղ նկարիչները, ճարտարապետներն ու արհեստավորները միասին էին աշխատում։ Նրանք նախագծում էին պողպատե խողովակներից պարզ աթոռներ, լամպեր, թեյնիկներ և տառատեսակներ գործարանների համար, որպեսզի լավ դիզայնը հասանելի լինի բոլորին։ Նրանց գաղափարները մինչ օրս ձևավորում են մեզ շրջապատող իրերը։
 
+~~~art
+palette bauhaus
+~~~
+
 ## Էրգոնոմիկա
 
 **Էրգոնոմիկան** ուսումնասիրում է, թե ինչպես են իրերը համապատասխանում մարդու մարմնին։ Լավ աթոռը հենարան է տալիս մեջքին, բռնակը տեղավորվում է ձեռքում, կոճակները բավական մեծ են մատի համար, ուսապարկը բաշխում է ծանրությունն երկու ուսերին։ Դիզայներները չափում են մարդկանց և փորձարկում իրենց նախատիպերը։
+
+~~~art
+proportions
+~~~
 
 ## Դիզայնի փուլերը
 
@@ -574,12 +734,17 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 5. **Նախատիպ**՝ մոդել թղթից, ստվարաթղթից կամ կավից։
 6. **Փորձարկում**՝ թող մարդիկ օգտագործեն այն, բարելավիր։
 
+~~~art
+sketch guide=grid
+Ուրվագծի՛ր մեկ առարկայի երեք գաղափար՝ արագ և կոպիտ։ Հետո ընտրի՛ր լավագույնը և նկարի՛ր մաքուր։
+~~~
+
 ## Առաջադրանք
 
 Նախագծիր մեկ առարկա՝ մատիտաման փոքր գրասեղանի համար, լամպ, ջրի շիշ, նախաճաշի տուփ կամ աթոռ դպրոցի բակի համար։ Արա առնվազն հինգ էսքիզ, ընտրիր մեկը, գծիր այն երկու կողմից և պատրաստիր թղթե կամ կավե նախատիպ։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է անում արտադրանքի դիզայները։
 2. Բացատրիր «ձևը հետևում է գործառույթին» խոսքերը։
 3. Ինչու բաժակն ունի բռնակ։
@@ -587,10 +752,12 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 5. Ինչ էր Բաուհաուսը։
 6. Ինչ է ուսումնասիրում էրգոնոմիկան։
 7. Նախագծիր առօրյա առարկա՝ անցնելով բոլոր վեց փուլերով։
+~~~
 
-### Պատասխաններ
-
-1. Ստեղծում է իրեր, որոնք օգտակար են, հարմար և գեղեցիկ։ 2. Իրի ձևը պետք է բխի այն բանից, ինչ իրն անում է։ 3. Որովհետև ըմպելիքը տաք է։ 4. Օրինակ՝ լայն հատակն արագ է տաքանում, նեղ վիզը պահում է փրփուրը, երկար կոթը պաշտպանում է ձեռքը, քիթն օգնում է լցնել։ 5. Դիզայնի դպրոց, որը Վալտեր Գրոպիուսը հիմնել է Գերմանիայում 1919 թվականին։ 6. Թե ինչպես են իրերը համապատասխանում մարդու մարմնին։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Ստեղծում է իրեր, որոնք օգտակար են, հարմար և գեղեցիկ։ 2. Իրի ձևը պետք է բխի այն բանից, ինչ իրն անում է։ 3. Որովհետև ըմպելիքը տաք է։ 4. Օրինակ՝ լայն հատակն արագ է տաքանում, նեղ վիզը պահում է փրփուրը, երկար կոթը պաշտպանում է ձեռքը, քիթն օգնում է լցնել։ 5. Դիզայնի դպրոց, որը Վալտեր Գրոպիուսը հիմնել է Գերմանիայում 1919 թվականին։ 6. Թե ինչպես են իրերը համապատասխանում մարդու մարմնին։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Каждую вещь придумали
 
 Чашка, стул, рюкзак, телефон, лампа — о каждой из них кто-то подумал. **Дизайнер** промышленных изделий создаёт вещи, которые одновременно **полезны, удобны и красивы**.
@@ -601,13 +768,25 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 
 Посмотри на армянскую **джезве** — маленькую турку для кофе: широкое дно быстро нагревается, узкое горлышко сохраняет пенку, длинная ручка защищает руку, носик помогает наливать. У каждой части своя работа.
 
+~~~art
+pic chair lamp
+~~~
+
 ## Баухаус
 
 В 1919 году архитектор **Вальтер Гропиус** основал **Баухаус** — школу в Германии, где вместе работали художники, архитекторы и ремесленники. Они проектировали простые стулья из стальных трубок, лампы, чайники и шрифты для фабрик, чтобы хороший дизайн был доступен всем. Их идеи до сих пор определяют вещи вокруг нас.
 
+~~~art
+palette bauhaus
+~~~
+
 ## Эргономика
 
 **Эргономика** изучает, как вещи подходят человеческому телу. Хороший стул поддерживает спину, ручка ложится в ладонь, кнопки достаточно большие для пальца, рюкзак распределяет вес на оба плеча. Дизайнеры измеряют людей и испытывают свои прототипы.
+
+~~~art
+proportions
+~~~
 
 ## Этапы проектирования
 
@@ -618,12 +797,17 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 5. **Прототип:** модель из бумаги, картона или глины.
 6. **Испытание:** дай людям попользоваться; доработай.
 
+~~~art
+sketch guide=grid
+Набросай три идеи одной вещи, быстро и грубо. Потом выбери лучшую и нарисуй её чисто.
+~~~
+
 ## Задание
 
 Спроектируй один предмет: подставку для карандашей на маленький стол, лампу, бутылку для воды, ланч-бокс или скамейку для школьного двора. Сделай не меньше пяти эскизов, выбери один, нарисуй его с двух сторон и сделай прототип из бумаги или глины.
 
-### Упражнения
-
+~~~art
+tasks
 1. Чем занимается дизайнер изделий?
 2. Объясни слова «форма следует за функцией».
 3. Почему у чашки есть ручка?
@@ -631,10 +815,12 @@ Design one object: a pencil holder for a small desk, a lamp, a water bottle, a l
 5. Что такое Баухаус?
 6. Что изучает эргономика?
 7. Спроектируй бытовой предмет, пройдя все шесть этапов.
+~~~
 
-### Ответы
-
-1. Создаёт вещи, которые полезны, удобны и красивы. 2. Облик вещи должен вытекать из её назначения. 3. Потому что напиток горячий. 4. Например: широкое дно быстро нагревается, узкое горлышко сохраняет пенку, длинная ручка защищает руку, носик помогает наливать. 5. Школа дизайна, основанная Вальтером Гропиусом в Германии в 1919 году. 6. Как вещи подходят человеческому телу. 7. Твой проект.`,
+~~~art
+hints
+1. Создаёт вещи, которые полезны, удобны и красивы. 2. Облик вещи должен вытекать из её назначения. 3. Потому что напиток горячий. 4. Например: широкое дно быстро нагревается, узкое горлышко сохраняет пенку, длинная ручка защищает руку, носик помогает наливать. 5. Школа дизайна, основанная Вальтером Гропиусом в Германии в 1919 году. 6. Как вещи подходят человеческому телу. 7. Твой проект.
+~~~`,
       },
       [
         q(t("«Form follows function» was written by…", "«Ձևը հետևում է գործառույթին» գրել է…", "«Форма следует за функцией» написал…"), [t("Louis Sullivan", "Լուիս Սալիվանը", "Луис Салливан"), t("Le Corbusier", "Լե Կորբյուզիեն", "Ле Корбюзье"), t("Vitruvius", "Վիտրուվիուսը", "Витрувий")], 0),
@@ -668,6 +854,10 @@ The same object, a chair for example, looks different in wood, steel or plastic.
 | **Textile** | soft, flexible, can be woven, knitted, sewn | clothes, bags, curtains |
 | **Stone** | heavy, durable, cut and carved | buildings, monuments, stairs |
 
+~~~art
+pic copper-jug karas lace pebbles
+~~~
+
 ## Material shapes the form
 
 * **Wood bent with steam:** in 1859 Michael Thonet produced his chair No. 14 from a few pieces of bent beech wood. It was light, cheap and was sold in millions.
@@ -680,16 +870,25 @@ The same object, a chair for example, looks different in wood, steel or plastic.
 
 Designers say: do not imitate one material with another. Plastic pretending to be wood looks cheap; plastic that shows its own bright colours and smooth curves looks honest and modern.
 
+~~~art
+tone
+~~~
+
 ## Materials and nature
 
 Today designers also ask: where does the material come from, and what will happen to it later? **Recycled** paper and plastic, local stone and wood, and things that can be repaired help to protect nature.
+
+~~~art
+pic shell leaf-plane web
+Nature is the best engineer: a shell, the veins of a leaf, a web. Find the structure in each.
+~~~
 
 ## Task
 
 Take the same idea, for example a lamp, and draw it in three materials: wood, metal and ceramics. Show how the form changes. Then choose the best and explain why.
 
-### Exercises
-
+~~~art
+tasks
 1. Why does the same chair look different in different materials?
 2. Which material is transparent and fragile?
 3. What was special about Thonet's chair No. 14?
@@ -697,10 +896,12 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 5. Which Armenian stone is soft and easy to carve, and which is hard?
 6. What does «truth to materials» mean?
 7. Draw one object in three materials and explain your choice.
+~~~
 
-### Answers
-
-1. Every material has its own properties and possible forms. 2. Glass. 3. It was made from a few pieces of bent wood; light, cheap, sold in millions. 4. A round form is natural for the potter's wheel. 5. Tuff is soft; basalt is hard. 6. Do not imitate one material with another; show the material's own nature. 7. Your drawings.`,
+~~~art
+hints
+1. Every material has its own properties and possible forms. 2. Glass. 3. It was made from a few pieces of bent wood; light, cheap, sold in millions. 4. A round form is natural for the potter's wheel. 5. Tuff is soft; basalt is hard. 6. Do not imitate one material with another; show the material's own nature. 7. Your drawings.
+~~~`,
         hy: `## Յուրաքանչյուր նյութ բնավորություն ունի
 
 Նույն առարկան, օրինակ՝ աթոռը, փայտից, պողպատից կամ պլաստիկից տարբեր տեսք ունի։ Յուրաքանչյուր նյութ որոշ բաներ կարող է, որոշները՝ ոչ։ Լավ դիզայները «լսում» է նյութին։
@@ -715,6 +916,10 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 | **Գործվածք** | փափուկ, ճկուն, կարելի է գործել, հյուսել, կարել | հագուստ, պայուսակներ, վարագույրներ |
 | **Քար** | ծանր, դիմացկուն, կտրում և փորագրում են | շենքեր, հուշարձաններ, աստիճաններ |
 
+~~~art
+pic copper-jug karas lace pebbles
+~~~
+
 ## Նյութը ձևավորում է ձևը
 
 * **Գոլորշով ծռված փայտ**՝ 1859 թվականին Միխայել Թոնետը ծռված հաճարենու մի քանի կտորից արտադրեց իր թիվ 14 աթոռը։ Այն թեթև էր, էժան և վաճառվեց միլիոններով։
@@ -727,16 +932,25 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 
 Դիզայներներն ասում են՝ մի նյութով մի նմանակիր մյուսը։ Փայտ ձևացող պլաստիկն էժան է երևում, իսկ պլաստիկը, որը ցույց է տալիս իր սեփական վառ գույներն ու սահուն կորերը, ազնիվ և ժամանակակից է երևում։
 
+~~~art
+tone
+~~~
+
 ## Նյութերը և բնությունը
 
 Այսօր դիզայներները հարցնում են նաև՝ որտեղից է գալիս նյութը, և ինչ կլինի դրա հետ հետո։ **Վերամշակված** թուղթն ու պլաստիկը, տեղական քարն ու փայտը և այն իրերը, որոնք կարելի է նորոգել, օգնում են պաշտպանել բնությունը։
+
+~~~art
+pic shell leaf-plane web
+Բնությունը լավագույն ինժեներն է․ խեցի, տերևի ջղեր, ոստայն։ Գտի՛ր յուրաքանչյուրի կառուցվածքը։
+~~~
 
 ## Առաջադրանք
 
 Վերցրու նույն գաղափարը, օրինակ՝ լամպը, և նկարիր այն երեք նյութով՝ փայտ, մետաղ և կերամիկա։ Ցույց տուր, թե ինչպես է փոխվում ձևը։ Հետո ընտրիր լավագույնը և բացատրիր՝ ինչու։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու է նույն աթոռը տարբեր նյութերից տարբեր տեսք ունենում։
 2. Որ նյութն է թափանցիկ և փխրուն։
 3. Ինչով էր առանձնահատուկ Թոնետի թիվ 14 աթոռը։
@@ -744,10 +958,12 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 5. Հայկական որ քարն է փափուկ և հեշտ փորագրվող, և որն է կոշտ։
 6. Ինչ է նշանակում «ճշմարտություն նյութի նկատմամբ»։
 7. Նկարիր մեկ առարկա երեք նյութով և բացատրիր քո ընտրությունը։
+~~~
 
-### Պատասխաններ
-
-1. Յուրաքանչյուր նյութ ունի իր հատկություններն ու հնարավոր ձևերը։ 2. Ապակին։ 3. Պատրաստված էր ծռված փայտի մի քանի կտորից՝ թեթև, էժան, վաճառվեց միլիոններով։ 4. Կլոր ձևը բնական է բրուտի անիվի համար։ 5. Տուֆը փափուկ է, բազալտը՝ կոշտ։ 6. Մի նյութով մի նմանակիր մյուսը, ցույց տուր նյութի սեփական բնույթը։ 7. Քո նկարները։`,
+~~~art
+hints
+1. Յուրաքանչյուր նյութ ունի իր հատկություններն ու հնարավոր ձևերը։ 2. Ապակին։ 3. Պատրաստված էր ծռված փայտի մի քանի կտորից՝ թեթև, էժան, վաճառվեց միլիոններով։ 4. Կլոր ձևը բնական է բրուտի անիվի համար։ 5. Տուֆը փափուկ է, բազալտը՝ կոշտ։ 6. Մի նյութով մի նմանակիր մյուսը, ցույց տուր նյութի սեփական բնույթը։ 7. Քո նկարները։
+~~~`,
         ru: `## У каждого материала свой характер
 
 Один и тот же предмет, например стул, выглядит по-разному из дерева, стали или пластика. Каждый материал что-то умеет, а чего-то не умеет. Хороший дизайнер «слушает» материал.
@@ -762,6 +978,10 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 | **Ткань** | мягкая, гибкая, её ткут, вяжут, шьют | одежда, сумки, шторы |
 | **Камень** | тяжёлый, долговечный, его режут и высекают | здания, памятники, лестницы |
 
+~~~art
+pic copper-jug karas lace pebbles
+~~~
+
 ## Материал создаёт форму
 
 * **Гнутое дерево:** в 1859 году Михаэль Тонет выпустил стул № 14 из нескольких деталей гнутого бука. Он был лёгким, дешёвым и разошёлся миллионами.
@@ -774,16 +994,25 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 
 Дизайнеры говорят: не подделывай один материал под другой. Пластик «под дерево» выглядит дёшево, а пластик, который показывает свои яркие цвета и плавные изгибы, — честно и современно.
 
+~~~art
+tone
+~~~
+
 ## Материалы и природа
 
 Сегодня дизайнеры спрашивают ещё: откуда берётся материал и что будет с ним потом? **Вторичные** бумага и пластик, местные камень и дерево и вещи, которые можно починить, помогают беречь природу.
+
+~~~art
+pic shell leaf-plane web
+Природа — лучший инженер: раковина, прожилки листа, паутина. Найди конструкцию в каждой.
+~~~
 
 ## Задание
 
 Возьми одну идею, например светильник, и нарисуй его в трёх материалах: дереве, металле и керамике. Покажи, как меняется форма. Затем выбери лучший вариант и объясни почему.
 
-### Упражнения
-
+~~~art
+tasks
 1. Почему один и тот же стул выглядит по-разному из разных материалов?
 2. Какой материал прозрачный и хрупкий?
 3. Чем был особенным стул № 14 Тонета?
@@ -791,10 +1020,12 @@ Take the same idea, for example a lamp, and draw it in three materials: wood, me
 5. Какой армянский камень мягкий и легко режется, а какой твёрдый?
 6. Что значит «правда материала»?
 7. Нарисуй один предмет в трёх материалах и объясни выбор.
+~~~
 
-### Ответы
-
-1. У каждого материала свои свойства и возможные формы. 2. Стекло. 3. Он сделан из нескольких деталей гнутого дерева; лёгкий, дешёвый, разошёлся миллионами. 4. Круглая форма естественна для гончарного круга. 5. Туф мягкий, базальт твёрдый. 6. Не подделывать один материал под другой, показывать его собственную природу. 7. Твои рисунки.`,
+~~~art
+hints
+1. У каждого материала свои свойства и возможные формы. 2. Стекло. 3. Он сделан из нескольких деталей гнутого дерева; лёгкий, дешёвый, разошёлся миллионами. 4. Круглая форма естественна для гончарного круга. 5. Туф мягкий, базальт твёрдый. 6. Не подделывать один материал под другой, показывать его собственную природу. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("Clay fired in a kiln is…", "Վառարանում թրծված կավը…", "Обожжённая в печи глина — это…"), [t("ceramics", "կերամիկա է", "керамика"), t("glass", "ապակի է", "стекло"), t("plastic", "պլաստիկ է", "пластик")], 0),
@@ -833,6 +1064,14 @@ A box starts as a flat **net** of cardboard. The classic net of a rectangular bo
 
 Some packs need no glue: a hexagonal pack, a pyramid, a pack with a handle, or a sliding box like a matchbox.
 
+~~~art
+net
+~~~
+
+~~~art
+steps box-net
+~~~
+
 ## Graphics on the pack
 
 * **Name** in a font that matches the character: strict for medicine, playful for sweets.
@@ -843,16 +1082,24 @@ Some packs need no glue: a hexagonal pack, a pyramid, a pack with a handle, or a
 
 Armenian products often use national motifs: carpet patterns, pomegranates, apricots, Mount Ararat and Armenian letters.
 
+~~~art
+pic box-net
+~~~
+
 ## Think about nature
 
 A lot of packaging becomes rubbish the same day. Designers try to use less material, choose paper instead of plastic where possible, mark the pack for recycling and sometimes make it reusable, for example a tin that becomes a pencil box.
+
+~~~art
+pic recycle
+~~~
 
 ## Task
 
 Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net of the box in centimetres, design the graphics for the front and the sides, then build the pack and put the product inside.
 
-### Exercises
-
+~~~art
+tasks
 1. Name the three jobs of packaging.
 2. What is the net of a box?
 3. Why are flaps added to a net?
@@ -860,10 +1107,12 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 5. Which information must be on a food pack?
 6. How can a designer make packaging kinder to nature?
 7. Design and build a pack for a product of your choice.
+~~~
 
-### Answers
-
-1. Protect, inform, attract. 2. The flat cardboard pattern it is folded from. 3. For gluing the faces together. 4. For example a pyramid, a hexagonal pack or a sliding box. 5. Weight, ingredients, date and maker. 6. Use less material, choose paper, mark for recycling, make it reusable. 7. Your pack.`,
+~~~art
+hints
+1. Protect, inform, attract. 2. The flat cardboard pattern it is folded from. 3. For gluing the faces together. 4. For example a pyramid, a hexagonal pack or a sliding box. 5. Weight, ingredients, date and maker. 6. Use less material, choose paper, mark for recycling, make it reusable. 7. Your pack.
+~~~`,
         hy: `## Փաթեթավորման երեք գործը
 
 1. **Պաշտպանել**՝ պահել իրն ամբողջական և մաքուր մեզ հասնելու ճանապարհին։
@@ -883,6 +1132,14 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 
 Որոշ փաթեթավորումներ սոսինձ չեն պահանջում՝ վեցանկյուն փաթեթ, բուրգ, բռնակով փաթեթ կամ դուրս քաշվող տուփ՝ լուցկու տուփի պես։
 
+~~~art
+net
+~~~
+
+~~~art
+steps box-net
+~~~
+
 ## Գրաֆիկան փաթեթի վրա
 
 * **Անվանում**՝ բնավորությանը համապատասխան տառատեսակով. խիստ՝ դեղի համար, խաղային՝ քաղցրավենիքի։
@@ -893,16 +1150,24 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 
 Հայկական ապրանքները հաճախ օգտագործում են ազգային մոտիվներ՝ գորգի նախշեր, նուռ, ծիրան, Արարատ լեռ և հայերեն տառեր։
 
+~~~art
+pic box-net
+~~~
+
 ## Մտածիր բնության մասին
 
 Շատ փաթեթավորում նույն օրն աղբ է դառնում։ Դիզայներները փորձում են պակաս նյութ օգտագործել, հնարավորության դեպքում պլաստիկի փոխարեն թուղթ ընտրել, փաթեթը նշել վերամշակման համար և երբեմն դարձնել կրկին օգտագործելի, օրինակ՝ թիթեղյա տուփ, որը դառնում է մատիտաման։
+
+~~~art
+pic recycle
+~~~
 
 ## Առաջադրանք
 
 Ընտրիր ապրանք՝ չիր, թեյ, օճառ, խաղալիք կամ դպրոցական կավիճ։ Գծիր տուփի փռվածքը սանտիմետրերով, նախագծիր գրաֆիկան առջևի և կողային նիստերի համար, ապա կառուցիր փաթեթը և ներսում դիր ապրանքը։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Անվանիր փաթեթավորման երեք գործը։
 2. Ինչ է տուփի փռվածքը։
 3. Ինչու են փռվածքին եզրեր ավելացնում։
@@ -910,10 +1175,12 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 5. Ինչ տեղեկություն պետք է լինի սննդի փաթեթի վրա։
 6. Ինչպես կարող է դիզայները փաթեթավորումը բնությանն ավելի բարյացակամ դարձնել։
 7. Նախագծիր և կառուցիր փաթեթ քո ընտրած ապրանքի համար։
+~~~
 
-### Պատասխաններ
-
-1. Պաշտպանել, տեղեկացնել, գրավել։ 2. Հարթ ստվարաթղթե ձևանմուշը, որից այն ծալվում է։ 3. Նիստերը միմյանց սոսնձելու համար։ 4. Օրինակ՝ բուրգին, վեցանկյուն փաթեթին կամ դուրս քաշվող տուփին։ 5. Քաշ, բաղադրություն, ամսաթիվ և արտադրող։ 6. Պակաս նյութ օգտագործել, թուղթ ընտրել, նշել վերամշակման համար, դարձնել կրկին օգտագործելի։ 7. Քո փաթեթը։`,
+~~~art
+hints
+1. Պաշտպանել, տեղեկացնել, գրավել։ 2. Հարթ ստվարաթղթե ձևանմուշը, որից այն ծալվում է։ 3. Նիստերը միմյանց սոսնձելու համար։ 4. Օրինակ՝ բուրգին, վեցանկյուն փաթեթին կամ դուրս քաշվող տուփին։ 5. Քաշ, բաղադրություն, ամսաթիվ և արտադրող։ 6. Պակաս նյութ օգտագործել, թուղթ ընտրել, նշել վերամշակման համար, դարձնել կրկին օգտագործելի։ 7. Քո փաթեթը։
+~~~`,
         ru: `## Три задачи упаковки
 
 1. **Защитить:** сохранить вещь целой и чистой на пути к нам.
@@ -933,6 +1200,14 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 
 Некоторым упаковкам клей не нужен: шестигранная коробочка, пирамидка, пакет с ручкой или выдвижная коробка вроде спичечной.
 
+~~~art
+net
+~~~
+
+~~~art
+steps box-net
+~~~
+
 ## Графика на упаковке
 
 * **Название** шрифтом, подходящим по характеру: строгим для лекарства, игривым для сладостей.
@@ -943,16 +1218,24 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 
 Армянские товары часто используют национальные мотивы: узоры ковров, гранат, абрикос, гору Арарат и армянские буквы.
 
+~~~art
+pic box-net
+~~~
+
 ## Подумай о природе
 
 Много упаковки в тот же день становится мусором. Дизайнеры стараются тратить меньше материала, выбирать бумагу вместо пластика, помечать упаковку знаком переработки, а иногда делать её многоразовой — например, жестяная коробка становится пеналом.
+
+~~~art
+pic recycle
+~~~
 
 ## Задание
 
 Выбери товар: курагу, чай, мыло, игрушку или школьный мел. Начерти развёртку коробки в сантиметрах, придумай графику для лицевой и боковых сторон, затем склей упаковку и положи товар внутрь.
 
-### Упражнения
-
+~~~art
+tasks
 1. Назови три задачи упаковки.
 2. Что такое развёртка коробки?
 3. Зачем к развёртке добавляют клапаны?
@@ -960,10 +1243,12 @@ Choose a product: dried apricots, tea, soap, a toy or school chalk. Draw the net
 5. Какие сведения должны быть на пищевой упаковке?
 6. Как дизайнер может сделать упаковку бережнее к природе?
 7. Спроектируй и склей упаковку для выбранного товара.
+~~~
 
-### Ответы
-
-1. Защитить, сообщить, привлечь. 2. Плоская картонная выкройка, из которой её складывают. 3. Чтобы склеить грани между собой. 4. Например, пирамидке, шестигранной коробочке или выдвижной коробке. 5. Вес, состав, дата и изготовитель. 6. Тратить меньше материала, выбирать бумагу, помечать знаком переработки, делать многоразовой. 7. Твоя упаковка.`,
+~~~art
+hints
+1. Защитить, сообщить, привлечь. 2. Плоская картонная выкройка, из которой её складывают. 3. Чтобы склеить грани между собой. 4. Например, пирамидке, шестигранной коробочке или выдвижной коробке. 5. Вес, состав, дата и изготовитель. 6. Тратить меньше материала, выбирать бумагу, помечать знаком переработки, делать многоразовой. 7. Твоя упаковка.
+~~~`,
       },
       [
         q(t("Which is NOT a job of packaging?", "Որը փաթեթավորման գործը ՉԷ։", "Что НЕ является задачей упаковки?"), [t("to cook the product", "ապրանքն եփելը", "готовить товар"), t("to protect the product", "ապրանքը պաշտպանելը", "защищать товар"), t("to inform the buyer", "գնորդին տեղեկացնելը", "сообщать покупателю")], 0),

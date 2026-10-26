@@ -83,7 +83,7 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       {ready ? (
         <div className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
-          <Markdown>{body}</Markdown>
+          <Markdown lang={l}>{body}</Markdown>
         </div>
       ) : (
         <div className="clay p-6 text-center sm:p-10">

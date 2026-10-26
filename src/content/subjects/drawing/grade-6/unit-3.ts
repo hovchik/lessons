@@ -32,6 +32,10 @@ The image of a person is the **main theme** of art. But each epoch saw a person 
 | **19th century, Armenia** | Hakob Hovnatanyan in Tbilisi | precise, dignified portraits of townspeople |
 | **19th–20th centuries** | Repin, Serov, Saryan | character, movement, mood |
 
+~~~art
+pic genre-portrait genre-self-portrait genre-icon
+~~~
+
 ## Kinds of portrait
 
 * **Ceremonial (formal) portrait:** a person in full height, in rich clothes, with symbols of power or position; it shows their **role** in society.
@@ -41,12 +45,17 @@ The image of a person is the **main theme** of art. But each epoch saw a person 
 
 By size: head, bust (to the chest), half-figure, full-length.
 
+~~~art
+shots
+Kinds of portrait are like shot sizes: full length, half length, a head, one detail.
+~~~
+
 ## A portrait tells
 
 Look at the **face** (expression, glance), the **pose** and **hands**, the **clothes**, the **background** and the **light**. Together they tell about the person's character, mood, profession and time.
 
-### Exercises
-
+~~~art
+tasks
 1. Why is the image of a person called the main theme of art?
 2. What are Fayum portraits?
 3. How did the Renaissance change the portrait?
@@ -54,10 +63,12 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 5. Name the four sizes of a portrait.
 6. Who painted the famous 1827 portrait of Pushkin?
 7. Choose a portrait in a museum or book and describe the person: character, mood, profession, time.
+~~~
 
-### Answers
-
-1. Because people have always painted people, in every epoch. 2. Realistic portraits painted on wood in Roman Egypt in the 1st–3rd centuries. 3. It showed a real, thinking person, often in a landscape. 4. A ceremonial portrait shows a person's role in society with rich clothes and symbols; an intimate one shows the inner world simply. 5. Head, bust, half-figure, full-length. 6. Orest Kiprensky. 7. Your description.`,
+~~~art
+hints
+1. Because people have always painted people, in every epoch. 2. Realistic portraits painted on wood in Roman Egypt in the 1st–3rd centuries. 3. It showed a real, thinking person, often in a landscape. 4. A ceremonial portrait shows a person's role in society with rich clothes and symbols; an intimate one shows the inner world simply. 5. Head, bust, half-figure, full-length. 6. Orest Kiprensky. 7. Your description.
+~~~`,
         hy: `## Մարդիկ միշտ նկարել են մարդկանց
 
 Մարդու կերպարն արվեստի **գլխավոր թեման** է։ Բայց ամեն դարաշրջան մարդուն տարբեր կերպ է տեսել։
@@ -73,6 +84,10 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 | **19-րդ դար, Հայաստան** | Հակոբ Հովնաթանյանը Թիֆլիսում | քաղաքացիների ճշգրիտ, արժանապատիվ դիմանկարներ |
 | **19–20-րդ դարեր** | Ռեպին, Սերով, Սարյան | բնավորություն, շարժում, տրամադրություն |
 
+~~~art
+pic genre-portrait genre-self-portrait genre-icon
+~~~
+
 ## Դիմանկարի տեսակներ
 
 * **Շքեղ (պարադային) դիմանկար**՝ մարդն ամբողջ հասակով, հարուստ հագուստով, իշխանության կամ դիրքի խորհրդանիշներով, ցույց է տալիս նրա **դերը** հասարակության մեջ։
@@ -82,12 +97,17 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 
 Ըստ չափի՝ գլուխ, կիսանդրի (մինչև կուրծքը), կիսաֆիգուր, ամբողջ հասակով։
 
+~~~art
+shots
+Դիմանկարի տեսակները նման են կադրի չափերին․ ամբողջ հասակով, կիսանդրի, գլուխ, մեկ մանրուք։
+~~~
+
 ## Դիմանկարը պատմում է
 
 Նայիր **դեմքին** (արտահայտություն, հայացք), **դիրքին** և **ձեռքերին**, **հագուստին**, **ֆոնին** և **լույսին**։ Միասին դրանք պատմում են մարդու բնավորության, տրամադրության, մասնագիտության և ժամանակի մասին։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչու է մարդու կերպարը կոչվում արվեստի գլխավոր թեմա։
 2. Ինչ են Ֆայումյան դիմանկարները։
 3. Ինչպես փոխեց Վերածնունդը դիմանկարը։
@@ -95,10 +115,12 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 5. Անվանիր դիմանկարի չորս չափը։
 6. Ով է նկարել Պուշկինի հայտնի դիմանկարը 1827 թվականին։
 7. Թանգարանում կամ գրքում ընտրիր դիմանկար և նկարագրիր մարդուն՝ բնավորություն, տրամադրություն, մասնագիտություն, ժամանակ։
+~~~
 
-### Պատասխաններ
-
-1. Որովհետև մարդիկ միշտ, ամեն դարաշրջանում, նկարել են մարդկանց։ 2. Հռոմեական Եգիպտոսում 1–3-րդ դարերում փայտի վրա նկարված իրատեսական դիմանկարներ։ 3. Այն ցույց տվեց իրական, մտածող մարդ, հաճախ բնանկարի ֆոնին։ 4. Շքեղ դիմանկարը հարուստ հագուստով և խորհրդանիշներով ցույց է տալիս մարդու դերը հասարակության մեջ, մտերմիկը պարզ ձևով ցույց է տալիս ներքին աշխարհը։ 5. Գլուխ, կիսանդրի, կիսաֆիգուր, ամբողջ հասակով։ 6. Օրեստ Կիպրենսկին։ 7. Քո նկարագրությունը։`,
+~~~art
+hints
+1. Որովհետև մարդիկ միշտ, ամեն դարաշրջանում, նկարել են մարդկանց։ 2. Հռոմեական Եգիպտոսում 1–3-րդ դարերում փայտի վրա նկարված իրատեսական դիմանկարներ։ 3. Այն ցույց տվեց իրական, մտածող մարդ, հաճախ բնանկարի ֆոնին։ 4. Շքեղ դիմանկարը հարուստ հագուստով և խորհրդանիշներով ցույց է տալիս մարդու դերը հասարակության մեջ, մտերմիկը պարզ ձևով ցույց է տալիս ներքին աշխարհը։ 5. Գլուխ, կիսանդրի, կիսաֆիգուր, ամբողջ հասակով։ 6. Օրեստ Կիպրենսկին։ 7. Քո նկարագրությունը։
+~~~`,
         ru: `## Люди всегда изображали людей
 
 Образ человека — **главная тема** искусства. Но каждая эпоха видела человека по-своему.
@@ -114,6 +136,10 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 | **XIX век, Армения** | Акоп Овнатанян в Тифлисе | точные, полные достоинства портреты горожан |
 | **XIX–XX века** | Репин, Серов, Сарьян | характер, движение, настроение |
 
+~~~art
+pic genre-portrait genre-self-portrait genre-icon
+~~~
+
 ## Виды портрета
 
 * **Парадный портрет:** человек в полный рост, в богатой одежде, с символами власти или положения; показывает его **роль** в обществе.
@@ -123,12 +149,17 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 
 По охвату: голова, погрудный, поясной, в полный рост.
 
+~~~art
+shots
+Виды портрета похожи на планы в кино: в полный рост, поясной, голова, одна деталь.
+~~~
+
 ## Портрет рассказывает
 
 Смотри на **лицо** (выражение, взгляд), **позу** и **руки**, **одежду**, **фон** и **свет**. Вместе они рассказывают о характере, настроении, профессии человека и его времени.
 
-### Упражнения
-
+~~~art
+tasks
 1. Почему образ человека называют главной темой искусства?
 2. Что такое фаюмские портреты?
 3. Как Возрождение изменило портрет?
@@ -136,10 +167,12 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 5. Назови четыре вида портрета по охвату фигуры.
 6. Кто написал знаменитый портрет Пушкина в 1827 году?
 7. Выбери портрет в музее или книге и опиши человека: характер, настроение, профессию, время.
+~~~
 
-### Ответы
-
-1. Потому что люди изображали людей всегда, в каждую эпоху. 2. Реалистичные портреты на дереве из Римского Египта I–III веков. 3. Он показал реального, думающего человека, часто на фоне пейзажа. 4. Парадный показывает роль человека в обществе через богатую одежду и символы, камерный просто показывает внутренний мир. 5. Голова, погрудный, поясной, в полный рост. 6. Орест Кипренский. 7. Твоё описание.`,
+~~~art
+hints
+1. Потому что люди изображали людей всегда, в каждую эпоху. 2. Реалистичные портреты на дереве из Римского Египта I–III веков. 3. Он показал реального, думающего человека, часто на фоне пейзажа. 4. Парадный показывает роль человека в обществе через богатую одежду и символы, камерный просто показывает внутренний мир. 5. Голова, погрудный, поясной, в полный рост. 6. Орест Кипренский. 7. Твоё описание.
+~~~`,
       },
       [
         q(t("Realistic portraits on wood from Roman Egypt are…", "Հռոմեական Եգիպտոսի փայտի վրա իրատեսական դիմանկարները…", "Реалистичные портреты на дереве из Римского Египта —…"), [t("Fayum portraits", "Ֆայումյան դիմանկարներն են", "фаюмские портреты"), t("icons", "սրբապատկերներն են", "иконы"), t("frescoes", "որմնանկարներն են", "фрески")], 0),
@@ -163,6 +196,10 @@ Look at the **face** (expression, glance), the **pose** and **hands**, the **clo
 
 Seen from the front, the head of an adult is close to an **egg** (oval), wider at the top. Seen from the side, it is wider: the skull goes back behind the ears.
 
+~~~art
+steps face
+~~~
+
 ## Main proportions (front view, adult)
 
 1. Draw the oval and a vertical **axis** through its middle.
@@ -177,13 +214,25 @@ Seen from the front, the head of an adult is close to an **egg** (oval), wider a
 7. The corners of the mouth are roughly under the pupils.
 8. The **neck** is almost as wide as the jaw, not thin like a stick.
 
+~~~art
+proportions mode=face
+~~~
+
 ## Children are different
 
 A child's head has a bigger forehead and skull; the eyes are **below** the middle; the nose and chin are small. That is why young faces look round and soft.
 
+~~~art
+proportions
+~~~
+
 ## Profile
 
 In profile, the head fits almost into a **square**. The ear is just behind the middle, the eye is set back from the bridge of the nose, and the forehead, nose, lips and chin make a lively line.
+
+~~~art
+steps profile
+~~~
 
 ## Turning the head
 
@@ -196,8 +245,12 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 3. Draw a head turned three-quarters, with curved guide lines.
 4. Look in a mirror and check: are your eyes really in the middle of your head?
 
-### Exercises
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. What shape is the head in front view?
 2. Where are the eyes on an adult's head?
 3. Into how many parts is the face divided from the hairline to the chin? Name them.
@@ -205,13 +258,19 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 5. Between which lines are the ears?
 6. How does a child's head differ from an adult's?
 7. Draw three heads: front, profile and three-quarters.
+~~~
 
-### Answers
-
-1. An egg shape, an oval wider at the top. 2. On the line in the middle of the head. 3. Three: hairline to eyebrows, eyebrows to nose bottom, nose bottom to chin. 4. About one eye width. 5. Between the eyebrow line and the nose-bottom line. 6. A bigger forehead and skull, eyes below the middle, a small nose and chin. 7. Your drawings.`,
+~~~art
+hints
+1. An egg shape, an oval wider at the top. 2. On the line in the middle of the head. 3. Three: hairline to eyebrows, eyebrows to nose bottom, nose bottom to chin. 4. About one eye width. 5. Between the eyebrow line and the nose-bottom line. 6. A bigger forehead and skull, eyes below the middle, a small nose and chin. 7. Your drawings.
+~~~`,
         hy: `## Գլուխը ձու է
 
 Դիմացից նայելիս մեծահասակի գլուխը մոտ է **ձվին** (ձվաձևին)՝ վերևում ավելի լայն։ Կողքից այն ավելի լայն է․ գանգն ականջներից ետ է գնում։
+
+~~~art
+steps face
+~~~
 
 ## Հիմնական համամասնություններ (դիմացից, մեծահասակ)
 
@@ -227,13 +286,25 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 7. Բերանի անկյունները մոտավորապես բիբերի տակ են։
 8. **Պարանոցը** գրեթե ծնոտի չափ լայն է, ոչ թե փայտիկի պես բարակ։
 
+~~~art
+proportions mode=face
+~~~
+
 ## Երեխաները տարբեր են
 
 Երեխայի գլուխն ունի ավելի մեծ ճակատ և գանգ, աչքերը մեջտեղից **ցածր** են, քիթն ու կզակը փոքր են։ Այդ պատճառով մանկական դեմքերը կլոր և փափուկ են թվում։
 
+~~~art
+proportions
+~~~
+
 ## Պրոֆիլ
 
 Պրոֆիլով գլուխը գրեթե տեղավորվում է **քառակուսու** մեջ։ Ականջը մեջտեղից անմիջապես ետ է, աչքը քթարմատից ներս է, իսկ ճակատը, քիթը, շուրթերն ու կզակը կենդանի գիծ են կազմում։
+
+~~~art
+steps profile
+~~~
 
 ## Գլխի շրջադարձը
 
@@ -246,8 +317,12 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 3. Նկարիր երեք քառորդով շրջված գլուխ՝ կոր օժանդակ գծերով։
 4. Նայիր հայելուն և ստուգիր․ իսկապես քո աչքերը գլխիդ մեջտեղում են։
 
-### Վարժություններ
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. Ինչ ձև ունի գլուխը դիմացից։
 2. Որտեղ են աչքերը մեծահասակի գլխի վրա։
 3. Քանի մասի է բաժանվում դեմքը մազերի սկզբից մինչև կզակը։ Անվանիր դրանք։
@@ -255,13 +330,19 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 5. Որ գծերի միջև են ականջները։
 6. Ինչով է երեխայի գլուխը տարբերվում մեծահասակինից։
 7. Նկարիր երեք գլուխ՝ դիմացից, պրոֆիլով և երեք քառորդով։
+~~~
 
-### Պատասխաններ
-
-1. Ձվաձև, վերևում ավելի լայն օվալ։ 2. Գլխի մեջտեղի գծի վրա։ 3. Երեք՝ մազերի սկզբից հոնքեր, հոնքերից քթի ստորին մաս, քթի ստորին մասից կզակ։ 4. Մոտավորապես մեկ աչքի լայնություն։ 5. Հոնքերի և քթի ստորին մասի գծերի միջև։ 6. Ավելի մեծ ճակատ և գանգ, աչքերը մեջտեղից ցածր, փոքր քիթ և կզակ։ 7. Քո գծանկարները։`,
+~~~art
+hints
+1. Ձվաձև, վերևում ավելի լայն օվալ։ 2. Գլխի մեջտեղի գծի վրա։ 3. Երեք՝ մազերի սկզբից հոնքեր, հոնքերից քթի ստորին մաս, քթի ստորին մասից կզակ։ 4. Մոտավորապես մեկ աչքի լայնություն։ 5. Հոնքերի և քթի ստորին մասի գծերի միջև։ 6. Ավելի մեծ ճակատ և գանգ, աչքերը մեջտեղից ցածր, փոքր քիթ և կզակ։ 7. Քո գծանկարները։
+~~~`,
         ru: `## Голова — это яйцо
 
 Спереди голова взрослого близка к **яйцу** (овалу), шире вверху. Сбоку она шире: череп уходит назад за ушами.
+
+~~~art
+steps face
+~~~
 
 ## Основные пропорции (анфас, взрослый)
 
@@ -277,13 +358,25 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 7. Уголки рта — примерно под зрачками.
 8. **Шея** почти так же широка, как челюсть, а не тонкая, как палочка.
 
+~~~art
+proportions mode=face
+~~~
+
 ## У детей иначе
 
 У ребёнка больше лоб и череп; глаза **ниже** середины; нос и подбородок маленькие. Поэтому детские лица кажутся круглыми и мягкими.
 
+~~~art
+proportions
+~~~
+
 ## Профиль
 
 В профиль голова почти вписывается в **квадрат**. Ухо чуть позади середины, глаз отступает от переносицы, а лоб, нос, губы и подбородок образуют живую линию.
+
+~~~art
+steps profile
+~~~
 
 ## Поворот головы
 
@@ -296,8 +389,12 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 3. Нарисуй голову в повороте три четверти с изогнутыми вспомогательными линиями.
 4. Посмотри в зеркало и проверь: правда ли глаза посередине головы?
 
-### Упражнения
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. Какую форму имеет голова анфас?
 2. Где находятся глаза на голове взрослого?
 3. На сколько частей делится лицо от волос до подбородка? Назови их.
@@ -305,10 +402,12 @@ When the head turns, the axis **curves** around the egg, and all the horizontal 
 5. Между какими линиями находятся уши?
 6. Чем голова ребёнка отличается от головы взрослого?
 7. Нарисуй три головы: анфас, в профиль и в три четверти.
+~~~
 
-### Ответы
-
-1. Яйцевидную, овал, шире вверху. 2. На линии посередине головы. 3. На три: от волос до бровей, от бровей до основания носа, от основания носа до подбородка. 4. Примерно ширина одного глаза. 5. Между линией бровей и линией основания носа. 6. Больше лоб и череп, глаза ниже середины, маленькие нос и подбородок. 7. Твои рисунки.`,
+~~~art
+hints
+1. Яйцевидную, овал, шире вверху. 2. На линии посередине головы. 3. На три: от волос до бровей, от бровей до основания носа, от основания носа до подбородка. 4. Примерно ширина одного глаза. 5. Между линией бровей и линией основания носа. 6. Больше лоб и череп, глаза ниже середины, маленькие нос и подбородок. 7. Твои рисунки.
+~~~`,
       },
       [
         q(t("On an adult's head the eyes are…", "Մեծահասակի գլխի վրա աչքերը…", "На голове взрослого глаза…"), [t("in the middle", "մեջտեղում են", "посередине"), t("near the top", "վերևի մոտ են", "у макушки"), t("near the chin", "կզակի մոտ են", "у подбородка")], 0),
@@ -343,12 +442,21 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 * A **tonal** portrait: modelled with light and shade, like a sculpture. Strong, deep.
 * A **mixed** portrait: a careful face and quick lines for the clothes and hair, so the face stands out.
 
+~~~art
+lines only=straight,thickthin,dotted,broken
+~~~
+
 ## Light creates mood
 
 * **Soft light from the front:** calm, open, gentle.
 * **Side light:** strong volume, character, seriousness.
 * **Light from below:** mysterious, frightening (used in theatre).
 * **Back light (contre-jour):** a dark silhouette with a bright edge, poetic.
+
+~~~art
+light
+Light from the side is dramatic, light from the front is flat, light from below is scary. Try it on the sphere.
+~~~
 
 ## Drawing a classmate
 
@@ -360,8 +468,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 6. Work on the eyes most carefully: they are the centre of the portrait.
 7. Draw hair and clothes more freely.
 
-### Exercises
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. What are the means of a graphic portrait?
 2. Whose charcoal portrait did Dürer draw in 1514?
 3. What is the difference between a linear and a tonal portrait?
@@ -369,10 +481,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 5. Why are the eyes the centre of a portrait?
 6. Why are the hair and clothes often drawn more freely than the face?
 7. Draw a classmate's portrait with side lighting.
+~~~
 
-### Answers
-
-1. Line, spot and tone. 2. His mother's. 3. A linear portrait uses a few lines and little shading; a tonal one is modelled with light and shade. 4. Mystery, fear. 5. They show the glance and inner life of the person. 6. So the face stands out. 7. Your drawing.`,
+~~~art
+hints
+1. Line, spot and tone. 2. His mother's. 3. A linear portrait uses a few lines and little shading; a tonal one is modelled with light and shade. 4. Mystery, fear. 5. They show the glance and inner life of the person. 6. So the face stands out. 7. Your drawing.
+~~~`,
         hy: `## Դիմանկար առանց գույնի
 
 Գրաֆիկական դիմանկարն օգտագործում է միայն **գիծ, բիծ և տոն**։ Առանց գույնի ամեն ինչ կախված է **գծանկարից**՝ նմանությունը, հայացքը, բնավորությունը։
@@ -388,12 +502,21 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 * **Տոնային** դիմանկար՝ մոդելավորված լույսով և ստվերով, ինչպես քանդակը։ Ուժեղ, խոր։
 * **Խառը** դիմանկար՝ խնամքով նկարված դեմք և արագ գծեր հագուստի ու մազերի համար, որ դեմքն աչքի ընկնի։
 
+~~~art
+lines only=straight,thickthin,dotted,broken
+~~~
+
 ## Լույսը ստեղծում է տրամադրություն
 
 * **Փափուկ լույս դիմացից**՝ հանդարտ, բաց, քնքուշ։
 * **Կողքի լույս**՝ ուժեղ ծավալ, բնավորություն, լրջություն։
 * **Ներքևից լույս**՝ խորհրդավոր, վախեցնող (օգտագործվում է թատրոնում)։
 * **Ետևից լույս (կոնտրաժուր)**՝ մուգ ուրվապատկեր լուսավոր եզրով, բանաստեղծական։
+
+~~~art
+light
+Կողքից լույսը դրամատիկ է, առջևից՝ հարթ, ներքևից՝ սարսափելի։ Փորձի՛ր գնդի վրա։
+~~~
 
 ## Դասընկերոջ դիմանկարը
 
@@ -405,8 +528,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 6. Ամենից խնամքով աշխատիր աչքերի վրա․ դրանք դիմանկարի կենտրոնն են։
 7. Մազերն ու հագուստն ավելի ազատ նկարիր։
 
-### Վարժություններ
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. Որոնք են գրաֆիկական դիմանկարի միջոցները։
 2. Ում դիմանկարն է Դյուրերը նկարել ածուխով 1514 թվականին։
 3. Ինչով է տարբերվում գծային դիմանկարը տոնայինից։
@@ -414,10 +541,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 5. Ինչու են աչքերը դիմանկարի կենտրոնը։
 6. Ինչու են մազերն ու հագուստը հաճախ դեմքից ավելի ազատ նկարում։
 7. Նկարիր դասընկերոջդ դիմանկարը կողքի լույսով։
+~~~
 
-### Պատասխաններ
-
-1. Գիծ, բիծ և տոն։ 2. Իր մոր։ 3. Գծայինն օգտագործում է մի քանի գիծ և քիչ ստվերագծում, տոնայինը մոդելավորված է լույսով և ստվերով։ 4. Խորհրդավորություն, վախ։ 5. Դրանք ցույց են տալիս մարդու հայացքը և ներքին կյանքը։ 6. Որ դեմքն աչքի ընկնի։ 7. Քո գծանկարը։`,
+~~~art
+hints
+1. Գիծ, բիծ և տոն։ 2. Իր մոր։ 3. Գծայինն օգտագործում է մի քանի գիծ և քիչ ստվերագծում, տոնայինը մոդելավորված է լույսով և ստվերով։ 4. Խորհրդավորություն, վախ։ 5. Դրանք ցույց են տալիս մարդու հայացքը և ներքին կյանքը։ 6. Որ դեմքն աչքի ընկնի։ 7. Քո գծանկարը։
+~~~`,
         ru: `## Портрет без цвета
 
 Графический портрет использует только **линию, пятно и тон**. Без цвета всё зависит от **рисунка**: сходство, взгляд, характер.
@@ -433,12 +562,21 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 * **Тональный** портрет: вылеплен светом и тенью, как скульптура. Сильный, глубокий.
 * **Смешанный** портрет: тщательно проработанное лицо и быстрые линии одежды и волос, чтобы лицо выделялось.
 
+~~~art
+lines only=straight,thickthin,dotted,broken
+~~~
+
 ## Свет создаёт настроение
 
 * **Мягкий свет спереди:** спокойствие, открытость, нежность.
 * **Боковой свет:** сильный объём, характер, серьёзность.
 * **Свет снизу:** таинственность, страх (используется в театре).
 * **Свет сзади (контражур):** тёмный силуэт со светлым краем, поэтичность.
+
+~~~art
+light
+Свет сбоку драматичный, спереди — плоский, снизу — страшный. Попробуй на шаре.
+~~~
 
 ## Рисуем одноклассника
 
@@ -450,8 +588,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 6. Тщательнее всего работай над глазами: они центр портрета.
 7. Волосы и одежду рисуй свободнее.
 
-### Упражнения
+~~~art
+sketch guide=face
+~~~
 
+~~~art
+tasks
 1. Каковы средства графического портрета?
 2. Чей портрет Дюрер нарисовал углём в 1514 году?
 3. Чем линейный портрет отличается от тонального?
@@ -459,10 +601,12 @@ A graphic portrait uses only **line, spot and tone**. Without colour, everything
 5. Почему глаза — центр портрета?
 6. Почему волосы и одежду часто рисуют свободнее, чем лицо?
 7. Нарисуй портрет одноклассника при боковом освещении.
+~~~
 
-### Ответы
-
-1. Линия, пятно и тон. 2. Своей матери. 3. Линейный — несколько линий и мало штриховки, тональный вылеплен светом и тенью. 4. Таинственность, страх. 5. Они передают взгляд и внутреннюю жизнь человека. 6. Чтобы выделялось лицо. 7. Твой рисунок.`,
+~~~art
+hints
+1. Линия, пятно и тон. 2. Своей матери. 3. Линейный — несколько линий и мало штриховки, тональный вылеплен светом и тенью. 4. Таинственность, страх. 5. Они передают взгляд и внутреннюю жизнь человека. 6. Чтобы выделялось лицо. 7. Твой рисунок.
+~~~`,
       },
       [
         q(t("A graphic portrait uses…", "Գրաֆիկական դիմանկարն օգտագործում է…", "Графический портрет использует…"), [t("line, spot and tone", "գիծ, բիծ և տոն", "линию, пятно и тон"), t("only bright colours", "միայն վառ գույներ", "только яркие цвета"), t("clay", "կավ", "глину")], 0),
@@ -490,6 +634,10 @@ In a painted portrait, colour does more than copy the skin and clothes. It creat
 * In Repin's portraits, the dark background makes the face stand out and look serious and thoughtful.
 * Saryan painted faces with bold, bright colour spots: blue shadows, orange light; the people look full of energy.
 
+~~~art
+mood scene=abstract moods=warm,cold
+~~~
+
 ## Skin is not one colour
 
 There is no paint called "skin colour". A face has many shades:
@@ -502,12 +650,25 @@ There is no paint called "skin colour". A face has many shades:
 
 **Basic mixture:** white + a little ochre + a little red. Make it warmer with red or orange, cooler with a little blue or green, darker with burnt umber.
 
+~~~art
+palette skin
+~~~
+
+~~~art
+mixer paints=red,yellow,blue,white
+Skin is never one colour. Mix a light skin tone, then a shadow tone with a drop of blue.
+~~~
+
 ## Background and clothes
 
 * A **warm** background brings warmth and closeness.
 * A **cool** background gives calm or seriousness.
 * A **complementary** background (for example green behind a pink face) makes the face glow.
 * Clothes should support the face, not compete with it.
+
+~~~art
+wheel mode=complementary
+~~~
 
 ## Paint a portrait
 
@@ -518,8 +679,8 @@ There is no paint called "skin colour". A face has many shades:
 5. Add warm and cool shades on the face.
 6. Finish with the eyes, the lips and a few highlights.
 
-### Exercises
-
+~~~art
+tasks
 1. What can colour express in a portrait?
 2. What feeling does the colour of «Girl with Peaches» create?
 3. Why is there no single "skin colour"?
@@ -527,10 +688,12 @@ There is no paint called "skin colour". A face has many shades:
 5. How do you make a skin tone cooler? Darker?
 6. Why does a complementary background make a face glow?
 7. Paint the same face twice: on a warm and on a cool background. Compare the moods.
+~~~
 
-### Answers
-
-1. Mood and character. 2. Youth and happiness. 3. A face has many shades: lighter, warmer, cooler places and reflections. 4. The cheeks, nose and ears. 5. With a little blue or green; with burnt umber. 6. Complementary colours make each other brighter. 7. Your work.`,
+~~~art
+hints
+1. Mood and character. 2. Youth and happiness. 3. A face has many shades: lighter, warmer, cooler places and reflections. 4. The cheeks, nose and ears. 5. With a little blue or green; with burnt umber. 6. Complementary colours make each other brighter. 7. Your work.
+~~~`,
         hy: `## Գույնը պատմում է մարդու մասին
 
 Գունային դիմանկարում գույնը պարզապես չի կրկնում մաշկն ու հագուստը։ Այն ստեղծում է **տրամադրություն** և ցույց է տալիս **բնավորությունը**։
@@ -538,6 +701,10 @@ There is no paint called "skin colour". A face has many shades:
 * Սերովի «Դեղձերով աղջիկը» (1887) կտավում տաք ցերեկային լույսը, վարդագույնն ու ոսկեգույնը ստեղծում են երիտասարդության և երջանկության զգացում։
 * Ռեպինի դիմանկարներում մուգ ֆոնը դեմքն առանձնացնում է, և այն լուրջ ու մտածկոտ է երևում։
 * Սարյանը դեմքերը նկարում էր համարձակ, վառ գունաբծերով՝ կապույտ ստվերներ, նարնջագույն լույս, մարդիկ եռանդով լի են թվում։
+
+~~~art
+mood scene=abstract moods=warm,cold
+~~~
 
 ## Մաշկը մեկ գույն չէ
 
@@ -551,12 +718,25 @@ There is no paint called "skin colour". A face has many shades:
 
 **Հիմնական խառնուրդ**՝ սպիտակ + մի քիչ օխրա + մի քիչ կարմիր։ Կարմիրով կամ նարնջագույնով դարձրու ավելի տաք, մի քիչ կապույտով կամ կանաչով՝ ավելի սառը, այրված ումբրայով՝ ավելի մուգ։
 
+~~~art
+palette skin
+~~~
+
+~~~art
+mixer paints=red,yellow,blue,white
+Մաշկը երբեք մեկ գույն չէ։ Խառնի՛ր մաշկի բաց երանգ, հետո ստվերի երանգ՝ մի կաթիլ կապույտով։
+~~~
+
 ## Ֆոն և հագուստ
 
 * **Տաք** ֆոնը ջերմություն և մտերմություն է բերում։
 * **Սառը** ֆոնը հանդարտություն կամ լրջություն է տալիս։
 * **Փոխլրացնող** ֆոնը (օրինակ՝ կանաչ վարդագույն դեմքի ետևում) դեմքը փայլեցնում է։
 * Հագուստը պետք է աջակցի դեմքին, ոչ թե մրցի նրա հետ։
+
+~~~art
+wheel mode=complementary
+~~~
 
 ## Նկարիր դիմանկար
 
@@ -567,8 +747,8 @@ There is no paint called "skin colour". A face has many shades:
 5. Դեմքին ավելացրու տաք և սառն երանգներ։
 6. Ավարտիր աչքերով, շուրթերով և մի քանի փայլով։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ կարող է արտահայտել գույնը դիմանկարում։
 2. Ինչ զգացում է ստեղծում «Դեղձերով աղջիկը» կտավի գույնը։
 3. Ինչու չկա մեկ «մաշկի գույն»։
@@ -576,10 +756,12 @@ There is no paint called "skin colour". A face has many shades:
 5. Ինչպես մաշկի երանգը դարձնել ավելի սառը։ Իսկ ավելի մուգ։
 6. Ինչու է փոխլրացնող ֆոնը դեմքը փայլեցնում։
 7. Նույն դեմքը նկարիր երկու անգամ՝ տաք և սառը ֆոնի վրա։ Համեմատիր տրամադրությունները։
+~~~
 
-### Պատասխաններ
-
-1. Տրամադրություն և բնավորություն։ 2. Երիտասարդության և երջանկության։ 3. Դեմքն ունի բազմաթիվ երանգներ՝ ավելի բաց, տաք, սառը տեղեր և ռեֆլեքսներ։ 4. Այտերը, քիթը և ականջները։ 5. Մի քիչ կապույտով կամ կանաչով, այրված ումբրայով։ 6. Փոխլրացնող գույներն իրար ավելի վառ են դարձնում։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Տրամադրություն և բնավորություն։ 2. Երիտասարդության և երջանկության։ 3. Դեմքն ունի բազմաթիվ երանգներ՝ ավելի բաց, տաք, սառը տեղեր և ռեֆլեքսներ։ 4. Այտերը, քիթը և ականջները։ 5. Մի քիչ կապույտով կամ կանաչով, այրված ումբրայով։ 6. Փոխլրացնող գույներն իրար ավելի վառ են դարձնում։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Цвет рассказывает о человеке
 
 В живописном портрете цвет не просто повторяет кожу и одежду. Он создаёт **настроение** и показывает **характер**.
@@ -587,6 +769,10 @@ There is no paint called "skin colour". A face has many shades:
 * В «Девочке с персиками» Серова (1887) тёплый дневной свет, розовый и золотистый создают ощущение юности и счастья.
 * В портретах Репина тёмный фон выделяет лицо, и оно кажется серьёзным и задумчивым.
 * Сарьян писал лица смелыми яркими пятнами цвета: синие тени, оранжевый свет; люди кажутся полными энергии.
+
+~~~art
+mood scene=abstract moods=warm,cold
+~~~
 
 ## Кожа — не один цвет
 
@@ -600,12 +786,25 @@ There is no paint called "skin colour". A face has many shades:
 
 **Основная смесь:** белила + немного охры + немного красной. Теплее — с красной или оранжевой, холоднее — с капелькой синей или зелёной, темнее — с умброй жжёной.
 
+~~~art
+palette skin
+~~~
+
+~~~art
+mixer paints=red,yellow,blue,white
+Кожа никогда не бывает одного цвета. Смешай светлый тон кожи, а потом тень с каплей синего.
+~~~
+
 ## Фон и одежда
 
 * **Тёплый** фон приносит тепло и близость.
 * **Холодный** фон даёт спокойствие или серьёзность.
 * **Дополнительный** фон (например, зелёный за розовым лицом) заставляет лицо светиться.
 * Одежда должна поддерживать лицо, а не спорить с ним.
+
+~~~art
+wheel mode=complementary
+~~~
 
 ## Напиши портрет
 
@@ -616,8 +815,8 @@ There is no paint called "skin colour". A face has many shades:
 5. Добавь на лицо тёплые и холодные оттенки.
 6. Закончи глазами, губами и несколькими бликами.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что может выразить цвет в портрете?
 2. Какое чувство создаёт колорит «Девочки с персиками»?
 3. Почему не существует одного «телесного цвета»?
@@ -625,10 +824,12 @@ There is no paint called "skin colour". A face has many shades:
 5. Как сделать цвет кожи холоднее? Темнее?
 6. Почему дополнительный фон заставляет лицо светиться?
 7. Напиши одно лицо дважды: на тёплом и на холодном фоне. Сравни настроения.
+~~~
 
-### Ответы
-
-1. Настроение и характер. 2. Юности и счастья. 3. В лице много оттенков: светлые, тёплые, холодные места и рефлексы. 4. Щёки, нос и уши. 5. Капелькой синей или зелёной; умброй жжёной. 6. Дополнительные цвета делают друг друга ярче. 7. Твоя работа.`,
+~~~art
+hints
+1. Настроение и характер. 2. Юности и счастья. 3. В лице много оттенков: светлые, тёплые, холодные места и рефлексы. 4. Щёки, нос и уши. 5. Капелькой синей или зелёной; умброй жжёной. 6. Дополнительные цвета делают друг друга ярче. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("Serov's «Girl with Peaches» was painted in…", "Սերովի «Դեղձերով աղջիկը» նկարվել է…", "«Девочка с персиками» Серова написана в…"), [t("1887", "1887 թվականին", "1887 году"), t("1514", "1514 թվականին", "1514 году"), t("1959", "1959 թվականին", "1959 году")], 0),
@@ -662,6 +863,10 @@ There is no paint called "skin colour". A face has many shades:
 * **Vincent van Gogh** made more than thirty-five self-portraits, often because he had no money to pay models.
 * **Martiros Saryan** painted himself several times; in his self-portraits the colour is as bright and confident as in his landscapes.
 
+~~~art
+pic genre-self-portrait
+~~~
+
 ## How to draw from a mirror
 
 1. Put the mirror at eye level, so you do not have to bend.
@@ -669,6 +874,10 @@ There is no paint called "skin colour". A face has many shades:
 3. Remember: in a mirror everything is **reversed**: your left is on the right.
 4. Look in the mirror more often than at the paper. Check proportions with the guide lines.
 5. Keep the same position of the head all the time.
+
+~~~art
+proportions mode=face
+~~~
 
 ## A self-portrait with meaning
 
@@ -684,8 +893,13 @@ Add something that tells about you:
 1. Make three quick sketches of yourself in a mirror: serious, smiling, surprised.
 2. Make one careful self-portrait with an object and background that tell about you.
 
-### Exercises
+~~~art
+sketch guide=face
+Look in a mirror and draw yourself over the guide: eyes on the middle line, nose and mouth below.
+~~~
 
+~~~art
+tasks
 1. Name three reasons why artists paint self-portraits.
 2. What did Dürer's self-portrait of 1500 show?
 3. Why do Rembrandt's self-portraits look like a diary?
@@ -693,10 +907,12 @@ Add something that tells about you:
 5. What must you remember when drawing from a mirror?
 6. Where should the mirror and the light be?
 7. Make a self-portrait with an object that tells about your hobby.
+~~~
 
-### Answers
-
-1. For example: the model is always at hand; to know yourself; to show the artist's role; to keep a diary of life. 2. The artist seen from the front, serious and solemn. 3. He painted himself from youth to old age, so we see his whole life. 4. Often he had no money to pay models. 5. Everything is reversed; look at the mirror more than at the paper. 6. The mirror at eye level, the light from the side. 7. Your work.`,
+~~~art
+hints
+1. For example: the model is always at hand; to know yourself; to show the artist's role; to keep a diary of life. 2. The artist seen from the front, serious and solemn. 3. He painted himself from youth to old age, so we see his whole life. 4. Often he had no money to pay models. 5. Everything is reversed; look at the mirror more than at the paper. 6. The mirror at eye level, the light from the side. 7. Your work.
+~~~`,
         hy: `## Ինչու են նկարիչներն իրենց նկարում
 
 * Բնորդը **միշտ ձեռքի տակ** է և անվճար։
@@ -711,6 +927,10 @@ Add something that tells about you:
 * **Վինսենթ Վան Գոգը** ստեղծել է երեսունհինգից ավելի ինքնանկար, հաճախ այն պատճառով, որ բնորդներին վճարելու փող չուներ։
 * **Մարտիրոս Սարյանը** մի քանի անգամ նկարել է ինքն իրեն, նրա ինքնանկարներում գույնը նույնքան վառ և վստահ է, որքան բնանկարներում։
 
+~~~art
+pic genre-self-portrait
+~~~
+
 ## Ինչպես նկարել հայելուց
 
 1. Հայելին դիր աչքերի մակարդակում, որ չկռանաս։
@@ -718,6 +938,10 @@ Add something that tells about you:
 3. Հիշիր․ հայելում ամեն ինչ **շրջված** է, քո ձախն աջում է։
 4. Հայելուն ավելի հաճախ նայիր, քան թղթին։ Համամասնությունները ստուգիր օժանդակ գծերով։
 5. Ամբողջ ժամանակ գլուխդ պահիր նույն դիրքում։
+
+~~~art
+proportions mode=face
+~~~
 
 ## Իմաստով ինքնանկար
 
@@ -733,8 +957,13 @@ Add something that tells about you:
 1. Հայելուց արա քո երեք արագ ուրվանկար՝ լուրջ, ժպտացող, զարմացած։
 2. Արա մեկ խնամքով ինքնանկար՝ առարկայով և ֆոնով, որոնք պատմում են քո մասին։
 
-### Վարժություններ
+~~~art
+sketch guide=face
+Նայի՛ր հայելուն և նկարի՛ր ինքդ քեզ ուղեցույցի վրա․ աչքերը միջին գծի վրա, քիթն ու բերանը՝ ներքևում։
+~~~
 
+~~~art
+tasks
 1. Անվանիր երեք պատճառ, թե ինչու են նկարիչներն ինքնանկարներ ստեղծում։
 2. Ինչ էր ցույց տալիս Դյուրերի 1500 թվականի ինքնանկարը։
 3. Ինչու են Ռեմբրանդտի ինքնանկարներն օրագրի նման։
@@ -742,10 +971,12 @@ Add something that tells about you:
 5. Ինչ պետք է հիշել հայելուց նկարելիս։
 6. Որտեղ պետք է լինեն հայելին և լույսը։
 7. Ստեղծիր ինքնանկար՝ առարկայով, որը պատմում է քո հետաքրքրության մասին։
+~~~
 
-### Պատասխաններ
-
-1. Օրինակ՝ բնորդը միշտ ձեռքի տակ է, ինքդ քեզ ճանաչելու համար, նկարչի դերը ցույց տալու համար, կյանքի օրագիր պահելու համար։ 2. Նկարչին դիմացից՝ լուրջ և հանդիսավոր։ 3. Նա ինքն իրեն նկարել է երիտասարդությունից մինչև ծերություն, և մենք տեսնում ենք նրա ամբողջ կյանքը։ 4. Հաճախ բնորդներին վճարելու փող չուներ։ 5. Ամեն ինչ շրջված է, հայելուն ավելի շատ նայիր, քան թղթին։ 6. Հայելին աչքերի մակարդակում, լույսը՝ կողքից։ 7. Քո աշխատանքը։`,
+~~~art
+hints
+1. Օրինակ՝ բնորդը միշտ ձեռքի տակ է, ինքդ քեզ ճանաչելու համար, նկարչի դերը ցույց տալու համար, կյանքի օրագիր պահելու համար։ 2. Նկարչին դիմացից՝ լուրջ և հանդիսավոր։ 3. Նա ինքն իրեն նկարել է երիտասարդությունից մինչև ծերություն, և մենք տեսնում ենք նրա ամբողջ կյանքը։ 4. Հաճախ բնորդներին վճարելու փող չուներ։ 5. Ամեն ինչ շրջված է, հայելուն ավելի շատ նայիր, քան թղթին։ 6. Հայելին աչքերի մակարդակում, լույսը՝ կողքից։ 7. Քո աշխատանքը։
+~~~`,
         ru: `## Зачем художники пишут самих себя?
 
 * Модель **всегда под рукой** и бесплатна.
@@ -760,6 +991,10 @@ Add something that tells about you:
 * **Винсент Ван Гог** создал более тридцати пяти автопортретов, часто потому, что ему нечем было платить натурщикам.
 * **Мартирос Сарьян** несколько раз писал себя; в его автопортретах цвет так же ярок и уверен, как в пейзажах.
 
+~~~art
+pic genre-self-portrait
+~~~
+
 ## Как рисовать по зеркалу
 
 1. Поставь зеркало на уровне глаз, чтобы не наклоняться.
@@ -767,6 +1002,10 @@ Add something that tells about you:
 3. Помни: в зеркале всё **наоборот**: твоё левое — справа.
 4. Смотри в зеркало чаще, чем на бумагу. Проверяй пропорции вспомогательными линиями.
 5. Всё время держи голову в одном положении.
+
+~~~art
+proportions mode=face
+~~~
 
 ## Автопортрет со смыслом
 
@@ -782,8 +1021,13 @@ Add something that tells about you:
 1. Сделай по зеркалу три быстрых наброска: серьёзный, улыбающийся, удивлённый.
 2. Сделай один тщательный автопортрет с предметом и фоном, которые рассказывают о тебе.
 
-### Упражнения
+~~~art
+sketch guide=face
+Посмотри в зеркало и нарисуй себя по разметке: глаза на средней линии, нос и рот ниже.
+~~~
 
+~~~art
+tasks
 1. Назови три причины, по которым художники пишут автопортреты.
 2. Каким показал себя Дюрер на автопортрете 1500 года?
 3. Почему автопортреты Рембрандта похожи на дневник?
@@ -791,10 +1035,12 @@ Add something that tells about you:
 5. Что нужно помнить, рисуя по зеркалу?
 6. Где должны быть зеркало и свет?
 7. Сделай автопортрет с предметом, который рассказывает о твоём увлечении.
+~~~
 
-### Ответы
-
-1. Например: модель всегда под рукой; чтобы познать себя; чтобы показать роль художника; чтобы вести дневник жизни. 2. Анфас, серьёзным и торжественным. 3. Он писал себя от юности до старости, и мы видим всю его жизнь. 4. Часто ему нечем было платить натурщикам. 5. Всё отражено наоборот; смотреть в зеркало чаще, чем на бумагу. 6. Зеркало на уровне глаз, свет сбоку. 7. Твоя работа.`,
+~~~art
+hints
+1. Например: модель всегда под рукой; чтобы познать себя; чтобы показать роль художника; чтобы вести дневник жизни. 2. Анфас, серьёзным и торжественным. 3. Он писал себя от юности до старости, и мы видим всю его жизнь. 4. Часто ему нечем было платить натурщикам. 5. Всё отражено наоборот; смотреть в зеркало чаще, чем на бумагу. 6. Зеркало на уровне глаз, свет сбоку. 7. Твоя работа.
+~~~`,
       },
       [
         q(t("A portrait of the artist by himself or herself is a…", "Նկարչի՝ ինքն իր դիմանկարը…", "Портрет художника, написанный им самим, —…"), [t("self-portrait", "ինքնանկար է", "автопортрет"), t("still life", "նատյուրմորտ է", "натюрморт"), t("group portrait", "խմբային դիմանկար է", "групповой портрет")], 0),
@@ -823,6 +1069,10 @@ Hakob Hovnatanyan came from a family of Armenian painters who worked for several
 * The people look calm and full of **dignity**; the dark background makes the face shine.
 * One of his best-known works is the portrait of **Natalia Teumyan**, kept in the National Gallery of Armenia.
 
+~~~art
+pic genre-portrait
+~~~
+
 ## Ilya Repin (1844–1930)
 
 Repin is one of the greatest Russian painters. He worked in many genres, but his portraits are especially powerful.
@@ -847,8 +1097,12 @@ Serov was Repin's student.
 | **background** | dark, plain | varied, often dark | light, air, interior |
 | **main feeling** | dignity | inner drama | life and freshness |
 
-### Exercises
+~~~art
+palette skin greys
+~~~
 
+~~~art
+tasks
 1. In which city did Hovnatanyan work?
 2. What is typical of his portraits?
 3. Whose portrait did Repin paint a few days before the sitter's death?
@@ -856,10 +1110,12 @@ Serov was Repin's student.
 5. Name two early paintings by Serov. What feeling do they share?
 6. Who was Serov's teacher?
 7. Choose a portrait by one of these masters and describe it: kind, size, pose, light, colour, mood.
+~~~
 
-### Answers
-
-1. In Tiflis (Tbilisi). 2. Precise faces, smooth surfaces, careful details, dignity and a dark background. 3. Modest Mussorgsky's. 4. A portrait that shows the inner world: thoughts and feelings. 5. «Girl with Peaches» and «Girl Lit by the Sun»; light, air and youth. 6. Ilya Repin. 7. Your description.`,
+~~~art
+hints
+1. In Tiflis (Tbilisi). 2. Precise faces, smooth surfaces, careful details, dignity and a dark background. 3. Modest Mussorgsky's. 4. A portrait that shows the inner world: thoughts and feelings. 5. «Girl with Peaches» and «Girl Lit by the Sun»; light, air and youth. 6. Ilya Repin. 7. Your description.
+~~~`,
         hy: `## Հակոբ Հովնաթանյան (1806–1881)
 
 Հակոբ Հովնաթանյանը սերում էր հայ նկարիչների ընտանիքից, որոնք աշխատել են մի քանի սերունդ։ Նա ապրում և ստեղծագործում էր **Թիֆլիսում**, որտեղ շատ հայեր էին ապրում, և դարձավ քաղաքի սիրված դիմանկարիչը։
@@ -868,6 +1124,10 @@ Serov was Repin's student.
 * Դեմքերը նկարված են **շատ ճշգրիտ**՝ հարթ մակերեսներով և խնամքով մանրամասներով՝ ժանյակ, զարդեր, կոճակներ։
 * Մարդիկ հանդարտ են և **արժանապատվությամբ** լի, մուգ ֆոնը դեմքը փայլեցնում է։
 * Նրա ամենահայտնի գործերից է **Նատալյա Թեումյանի** դիմանկարը, որը պահվում է Հայաստանի ազգային պատկերասրահում։
+
+~~~art
+pic genre-portrait
+~~~
 
 ## Իլյա Ռեպին (1844–1930)
 
@@ -893,8 +1153,12 @@ Serov was Repin's student.
 | **ֆոն** | մուգ, պարզ | բազմազան, հաճախ մուգ | լույս, օդ, ինտերիեր |
 | **գլխավոր զգացում** | արժանապատվություն | ներքին դրամա | կյանք և թարմություն |
 
-### Վարժություններ
+~~~art
+palette skin greys
+~~~
 
+~~~art
+tasks
 1. Որ քաղաքում էր աշխատում Հովնաթանյանը։
 2. Ինչն է բնորոշ նրա դիմանկարներին։
 3. Ում դիմանկարն է Ռեպինը նկարել բնորդի մահից մի քանի օր առաջ։
@@ -902,10 +1166,12 @@ Serov was Repin's student.
 5. Անվանիր Սերովի երկու վաղ կտավ։ Ինչ զգացում ունեն դրանք ընդհանուր։
 6. Ով էր Սերովի ուսուցիչը։
 7. Ընտրիր այս վարպետներից մեկի դիմանկարը և նկարագրիր այն՝ տեսակ, չափ, դիրք, լույս, գույն, տրամադրություն։
+~~~
 
-### Պատասխաններ
-
-1. Թիֆլիսում (Թբիլիսիում)։ 2. Ճշգրիտ դեմքեր, հարթ մակերեսներ, խնամքով մանրամասներ, արժանապատվություն և մուգ ֆոն։ 3. Մոդեստ Մուսորգսկու։ 4. Դիմանկար, որը ցույց է տալիս ներքին աշխարհը՝ մտքերն ու զգացմունքները։ 5. «Դեղձերով աղջիկը» և «Արևով լուսավորված աղջիկը»․ լույս, օդ և երիտասարդություն։ 6. Իլյա Ռեպինը։ 7. Քո նկարագրությունը։`,
+~~~art
+hints
+1. Թիֆլիսում (Թբիլիսիում)։ 2. Ճշգրիտ դեմքեր, հարթ մակերեսներ, խնամքով մանրամասներ, արժանապատվություն և մուգ ֆոն։ 3. Մոդեստ Մուսորգսկու։ 4. Դիմանկար, որը ցույց է տալիս ներքին աշխարհը՝ մտքերն ու զգացմունքները։ 5. «Դեղձերով աղջիկը» և «Արևով լուսավորված աղջիկը»․ լույս, օդ և երիտասարդություն։ 6. Իլյա Ռեպինը։ 7. Քո նկարագրությունը։
+~~~`,
         ru: `## Акоп Овнатанян (1806–1881)
 
 Акоп Овнатанян происходил из семьи армянских художников, работавших несколько поколений. Он жил и работал в **Тифлисе**, где жило много армян, и стал любимым портретистом города.
@@ -914,6 +1180,10 @@ Serov was Repin's student.
 * Лица написаны **очень точно**, с гладкой поверхностью и тщательными деталями: кружево, украшения, пуговицы.
 * Люди спокойны и полны **достоинства**; тёмный фон заставляет лицо светиться.
 * Одна из самых известных его работ — портрет **Натальи Теумян**, хранящийся в Национальной галерее Армении.
+
+~~~art
+pic genre-portrait
+~~~
 
 ## Илья Репин (1844–1930)
 
@@ -939,8 +1209,12 @@ Serov was Repin's student.
 | **фон** | тёмный, простой | разный, часто тёмный | свет, воздух, интерьер |
 | **главное чувство** | достоинство | внутренняя драма | жизнь и свежесть |
 
-### Упражнения
+~~~art
+palette skin greys
+~~~
 
+~~~art
+tasks
 1. В каком городе работал Овнатанян?
 2. Что характерно для его портретов?
 3. Чей портрет Репин написал за несколько дней до смерти модели?
@@ -948,10 +1222,12 @@ Serov was Repin's student.
 5. Назови две ранние картины Серова. Какое чувство их объединяет?
 6. Кто был учителем Серова?
 7. Выбери портрет одного из этих мастеров и опиши его: вид, охват, поза, свет, цвет, настроение.
+~~~
 
-### Ответы
-
-1. В Тифлисе (Тбилиси). 2. Точные лица, гладкая поверхность, тщательные детали, достоинство и тёмный фон. 3. Модеста Мусоргского. 4. Портрет, показывающий внутренний мир: мысли и чувства. 5. «Девочка с персиками» и «Девушка, освещённая солнцем»; свет, воздух и юность. 6. Илья Репин. 7. Твоё описание.`,
+~~~art
+hints
+1. В Тифлисе (Тбилиси). 2. Точные лица, гладкая поверхность, тщательные детали, достоинство и тёмный фон. 3. Модеста Мусоргского. 4. Портрет, показывающий внутренний мир: мысли и чувства. 5. «Девочка с персиками» и «Девушка, освещённая солнцем»; свет, воздух и юность. 6. Илья Репин. 7. Твоё описание.
+~~~`,
       },
       [
         q(t("Hakob Hovnatanyan was the favourite portraitist of…", "Հակոբ Հովնաթանյանը սիրված դիմանկարիչն էր…", "Акоп Овнатанян был любимым портретистом…"), [t("Tiflis", "Թիֆլիսի", "Тифлиса"), t("Rome", "Հռոմի", "Рима"), t("London", "Լոնդոնի", "Лондона")], 0),

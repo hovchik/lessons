@@ -31,6 +31,10 @@ A tree grows **from the ground up**. The **trunk** is thick at the bottom and th
 
 **Common mistake:** branches like sticks of the same thickness, stuck on like a fence. Real branches get **thinner** towards the end.
 
+~~~art
+steps tree
+~~~
+
 ## Different trees
 
 | Tree | How to show it |
@@ -42,8 +46,13 @@ A tree grows **from the ground up**. The **trunk** is thick at the bottom and th
 
 Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and firs.
 
-### Exercises
+~~~art
+sketch guide=horizon
+Draw two different trees on the ground line: a tall slim one and a wide round one.
+~~~
 
+~~~art
+tasks
 1. Name the three parts of a tree.
 2. Where is a trunk thickest?
 3. Which way do branches grow?
@@ -51,10 +60,12 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 5. Draw a tree in five steps.
 6. Draw a fir, a birch and an apple tree side by side.
 7. Look at a real tree outside and draw it from life.
+~~~
 
-### Answers
-
-1. Trunk, branches, crown. 2. At the bottom, near the ground. 3. Upwards and outwards. 4. A white trunk with black stripes and thin hanging branches. 5. Check: the trunk narrows, branches get thinner. 6. Fir: triangle layers; birch: white trunk; apple tree: round crown with apples. 7. Look carefully at the shape of the crown.`,
+~~~art
+hints
+1. Trunk, branches, crown. 2. At the bottom, near the ground. 3. Upwards and outwards. 4. A white trunk with black stripes and thin hanging branches. 5. Check: the trunk narrows, branches get thinner. 6. Fir: triangle layers; birch: white trunk; apple tree: round crown with apples. 7. Look carefully at the shape of the crown.
+~~~`,
         hy: `## Ինչպես է ծառն աճում
 
 Ծառն աճում է **ներքևից վերև**։ **Բունը** ներքևում հաստ է, վերևում՝ բարակ։ Բնից աճում են մեծ **ճյուղեր**, դրանցից՝ ավելի փոքր ճյուղեր, ինչպես ձեռքն ու մատները։ Տերևները միասին կազմում են **սաղարթը**։
@@ -69,6 +80,10 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 
 **Հաճախ հանդիպող սխալ.** նույն հաստության փայտիկներ, որոնք կպցված են ցանկապատի պես։ Իրական ճյուղերը դեպի ծայրը **բարականում** են։
 
+~~~art
+steps tree
+~~~
+
 ## Տարբեր ծառեր
 
 | Ծառ | Ինչպես ցույց տալ |
@@ -80,8 +95,13 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 
 Ռուս նկարիչ **Իվան Շիշկինը** սիրում էր անտառներ նկարել՝ բարձր սոճիներ, կաղնիներ և եղևնիներ։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Գետնի գծի վրա նկարի՛ր երկու տարբեր ծառ՝ բարձր ու բարակ և լայն ու կլոր։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր ծառի երեք մասերը։
 2. Որտե՞ղ է բունն ամենահաստը։
 3. Ո՞ր ուղղությամբ են աճում ճյուղերը։
@@ -89,10 +109,12 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 5. Նկարի՛ր ծառ հինգ քայլով։
 6. Կողք կողքի նկարի՛ր եղևնի, կեչի և խնձորենի։
 7. Նայի՛ր իսկական ծառին և նկարի՛ր այն բնությունից։
+~~~
 
-### Պատասխաններ
-
-1. Բուն, ճյուղեր, սաղարթ։ 2. Ներքևում, գետնի մոտ։ 3. Վերև և դեպի կողմեր։ 4. Սպիտակ բուն՝ սև գծերով, բարակ կախ ընկած ճյուղեր։ 5. Ստուգի՛ր՝ բունը նեղանում է, ճյուղերը բարականում են։ 6. Եղևնի՝ եռանկյուն շերտեր, կեչի՝ սպիտակ բուն, խնձորենի՝ կլոր սաղարթ խնձորներով։ 7. Ուշադիր նայի՛ր սաղարթի ձևին։`,
+~~~art
+hints
+1. Բուն, ճյուղեր, սաղարթ։ 2. Ներքևում, գետնի մոտ։ 3. Վերև և դեպի կողմեր։ 4. Սպիտակ բուն՝ սև գծերով, բարակ կախ ընկած ճյուղեր։ 5. Ստուգի՛ր՝ բունը նեղանում է, ճյուղերը բարականում են։ 6. Եղևնի՝ եռանկյուն շերտեր, կեչի՝ սպիտակ բուն, խնձորենի՝ կլոր սաղարթ խնձորներով։ 7. Ուշադիր նայի՛ր սաղարթի ձևին։
+~~~`,
         ru: `## Как растёт дерево
 
 Дерево растёт **снизу вверх**. **Ствол** внизу толстый, вверху тоньше. От ствола растут большие **ветки**, от них — ветки поменьше, как рука и пальцы. Листья вместе образуют **крону**.
@@ -107,6 +129,10 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 
 **Частая ошибка:** ветки-палочки одной толщины, прилепленные, как забор. Настоящие ветки к концу **становятся тоньше**.
 
+~~~art
+steps tree
+~~~
+
 ## Разные деревья
 
 | Дерево | Как показать |
@@ -118,8 +144,13 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 
 Русский художник **Иван Шишкин** любил писать лес: высокие сосны, дубы и ели.
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Нарисуй на линии земли два разных дерева: высокое стройное и широкое круглое.
+~~~
 
+~~~art
+tasks
 1. Назови три части дерева.
 2. Где ствол самый толстый?
 3. Куда растут ветки?
@@ -127,10 +158,12 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 5. Нарисуй дерево за пять шагов.
 6. Нарисуй рядом ель, берёзу и яблоню.
 7. Посмотри на настоящее дерево и нарисуй его с натуры.
+~~~
 
-### Ответы
-
-1. Ствол, ветки, крона. 2. Внизу, у земли. 3. Вверх и в стороны. 4. Белый ствол с чёрными полосками и тонкие свисающие ветки. 5. Проверь: ствол сужается, ветки становятся тоньше. 6. Ель — ярусы-треугольники, берёза — белый ствол, яблоня — круглая крона с яблоками. 7. Внимательно посмотри на форму кроны.`,
+~~~art
+hints
+1. Ствол, ветки, крона. 2. Внизу, у земли. 3. Вверх и в стороны. 4. Белый ствол с чёрными полосками и тонкие свисающие ветки. 5. Проверь: ствол сужается, ветки становятся тоньше. 6. Ель — ярусы-треугольники, берёза — белый ствол, яблоня — круглая крона с яблоками. 7. Внимательно посмотри на форму кроны.
+~~~`,
       },
       [
         q(t("A tree is drawn…", "Ծառը նկարում ենք…", "Дерево рисуем…"), [t("from the top down", "վերևից ներքև", "сверху вниз"), t("from the ground up", "ներքևից վերև", "снизу вверх"), t("from the leaves", "տերևներից", "с листьев")], 1),
@@ -175,12 +208,21 @@ Russian painter **Ivan Shishkin** loved painting forests: tall pines, oaks and f
 4. Draw the legs from the bottom of the body, bending at the knees.
 5. Add clothes, hair and a face. Rub out the extra lines.
 
+~~~art
+steps person
+~~~
+
 ## Movement
 
 A stick figure helps: draw a quick "matchstick person" first to find the pose, then add the shapes. Walking: one leg forward, the opposite arm forward. Jumping: knees bent, arms up.
 
-### Exercises
+~~~art
+flipbook walk
+A person walking: arms and legs swing in turns. Play it slowly, then fast.
+~~~
 
+~~~art
+tasks
 1. Which shape is the head?
 2. Where do the hands reach when the arms hang down?
 3. Where do the legs bend?
@@ -188,10 +230,12 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 5. Draw a matchstick person walking, then waving, then jumping.
 6. Draw your friend or a family member in their favourite clothes.
 7. Draw two people playing ball together.
+~~~
 
-### Answers
-
-1. An oval. 2. To the hips. 3. At the knees. 4. Check: arms reach the hips, legs are long enough. 5. Walking: opposite arm and leg forward; jumping: knees bent, arms up. 6. Add details: hair, clothes, a face. 7. Show the movement: arms stretched to the ball.`,
+~~~art
+hints
+1. An oval. 2. To the hips. 3. At the knees. 4. Check: arms reach the hips, legs are long enough. 5. Walking: opposite arm and leg forward; jumping: knees bent, arms up. 6. Add details: hair, clothes, a face. 7. Show the movement: arms stretched to the ball.
+~~~`,
         hy: `## Մարդը ձևերից
 
 | Մաս | Ձև |
@@ -217,12 +261,21 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 4. Իրանի ներքևից գծի՛ր ոտքերը՝ ծնկներում ծալված։
 5. Ավելացրո՛ւ հագուստ, մազեր և դեմք։ Ջնջի՛ր ավելորդ գծերը։
 
+~~~art
+steps person
+~~~
+
 ## Շարժում
 
 Օգնում է «լուցկե մարդուկը». նախ արագ գծի՛ր այն՝ դիրքը գտնելու համար, հետո ավելացրո՛ւ ձևերը։ Քայլելիս մի ոտքը առաջ է, իսկ հակառակ ձեռքը՝ առաջ։ Ցատկելիս ծնկները ծալված են, ձեռքերը՝ վեր։
 
-### Վարժություններ
+~~~art
+flipbook walk
+Քայլող մարդ․ ձեռքերն ու ոտքերը հերթով են շարժվում։ Միացրու՛ դանդաղ, հետո արագ։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ ձև ունի գլուխը։
 2. Կախված ձեռքերի ափերը մինչև ո՞ւր են հասնում։
 3. Որտե՞ղ են ծալվում ոտքերը։
@@ -230,10 +283,12 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 5. Նկարի՛ր լուցկե մարդուկ՝ քայլելիս, ձեռքով անելիս, ցատկելիս։
 6. Նկարի՛ր ընկերոջդ կամ ընտանիքի անդամին նրա սիրելի հագուստով։
 7. Նկարի՛ր երկու մարդ, որոնք գնդակ են խաղում։
+~~~
 
-### Պատասխաններ
-
-1. Օվալ։ 2. Ազդրերին։ 3. Ծնկներում։ 4. Ստուգի՛ր՝ ձեռքերը հասնում են ազդրերին, ոտքերը բավական երկար են։ 5. Քայլելիս՝ հակառակ ձեռքն ու ոտքը առաջ, ցատկելիս՝ ծնկները ծալված, ձեռքերը վեր։ 6. Ավելացրո՛ւ մանրամասներ՝ մազեր, հագուստ, դեմք։ 7. Ցույց տո՛ւր շարժումը՝ դեպի գնդակը մեկնված ձեռքեր։`,
+~~~art
+hints
+1. Օվալ։ 2. Ազդրերին։ 3. Ծնկներում։ 4. Ստուգի՛ր՝ ձեռքերը հասնում են ազդրերին, ոտքերը բավական երկար են։ 5. Քայլելիս՝ հակառակ ձեռքն ու ոտքը առաջ, ցատկելիս՝ ծնկները ծալված, ձեռքերը վեր։ 6. Ավելացրո՛ւ մանրամասներ՝ մազեր, հագուստ, դեմք։ 7. Ցույց տո՛ւր շարժումը՝ դեպի գնդակը մեկնված ձեռքեր։
+~~~`,
         ru: `## Человек из форм
 
 | Часть | Форма |
@@ -259,12 +314,21 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 4. От низа туловища — ноги, согнутые в коленях.
 5. Добавь одежду, волосы и лицо. Сотри лишние линии.
 
+~~~art
+steps person
+~~~
+
 ## Движение
 
 Помогает «человечек из палочек»: сначала быстро нарисуй его, чтобы найти позу, потом добавь формы. При ходьбе одна нога впереди и противоположная рука впереди. В прыжке колени согнуты, руки вверх.
 
-### Упражнения
+~~~art
+flipbook walk
+Человек идёт: руки и ноги двигаются по очереди. Запусти медленно, потом быстро.
+~~~
 
+~~~art
+tasks
 1. Какой формы голова?
 2. До куда доходят опущенные руки?
 3. Где сгибаются ноги?
@@ -272,10 +336,12 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 5. Нарисуй человечка из палочек: идёт, машет рукой, прыгает.
 6. Нарисуй друга или кого-то из семьи в любимой одежде.
 7. Нарисуй двух людей, играющих в мяч.
+~~~
 
-### Ответы
-
-1. Овал. 2. До бёдер. 3. В коленях. 4. Проверь: руки доходят до бёдер, ноги достаточно длинные. 5. Идёт — противоположные рука и нога впереди; прыгает — колени согнуты, руки вверх. 6. Добавь детали: волосы, одежду, лицо. 7. Покажи движение: руки тянутся к мячу.`,
+~~~art
+hints
+1. Овал. 2. До бёдер. 3. В коленях. 4. Проверь: руки доходят до бёдер, ноги достаточно длинные. 5. Идёт — противоположные рука и нога впереди; прыгает — колени согнуты, руки вверх. 6. Добавь детали: волосы, одежду, лицо. 7. Покажи движение: руки тянутся к мячу.
+~~~`,
       },
       [
         q(t("Hanging arms reach to the…", "Կախված ձեռքերը հասնում են…", "Опущенные руки доходят до…"), [t("knees", "ծնկներին", "колен"), t("hips", "ազդրերին", "бёдер"), t("shoulders", "ուսերին", "плеч")], 1),
@@ -307,9 +373,17 @@ A stick figure helps: draw a quick "matchstick person" first to find the pose, t
 
 **Common mistake:** a door floating in the air. The door always **touches the ground**.
 
+~~~art
+steps house
+~~~
+
 ## Houses in Armenia and Russia
 
 Many houses in Yerevan are built of pink **tuff** stone, so the city is sometimes called "the pink city". In Russian villages you can see wooden houses with carved window frames.
+
+~~~art
+pic armenian-house izba
+~~~
 
 ## Near and far
 
@@ -319,8 +393,13 @@ Things that are **near** look **bigger** and sit **lower** on the page; things t
 
 Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is your street busy or quiet?
 
-### Exercises
+~~~art
+sketch guide=horizon
+Draw your street: houses standing on one line, a tree, the sky and the sun.
+~~~
 
+~~~art
+tasks
 1. Name the parts of a house.
 2. Where must the door be?
 3. Why is Yerevan called "the pink city"?
@@ -328,10 +407,12 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 5. Draw a tall building with five floors and neat rows of windows.
 6. Draw a village house with a carved window.
 7. Draw your street: a near house big, far houses small.
+~~~
 
-### Answers
-
-1. Walls, roof, windows, door. 2. At the bottom, on the ground. 3. Many houses are built of pink tuff stone. 4. Smaller. 5. Check that the windows are in even rows. 6. Add patterns around the window. 7. Near house big and low, far houses small and higher.`,
+~~~art
+hints
+1. Walls, roof, windows, door. 2. At the bottom, on the ground. 3. Many houses are built of pink tuff stone. 4. Smaller. 5. Check that the windows are in even rows. 6. Add patterns around the window. 7. Near house big and low, far houses small and higher.
+~~~`,
         hy: `## Տան մասերը
 
 | Մաս | Խորհուրդ |
@@ -344,9 +425,17 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 
 **Հաճախ հանդիպող սխալ.** օդում կախված դուռ։ Դուռը միշտ **դիպչում է գետնին**։
 
+~~~art
+steps house
+~~~
+
 ## Տները Հայաստանում և Ռուսաստանում
 
 Երևանի շատ տներ կառուցված են վարդագույն **տուֆից**, դրա համար քաղաքը երբեմն անվանում են «վարդագույն քաղաք»։ Ռուսական գյուղերում կարելի է տեսնել փայտե տներ՝ փորագրված պատուհանաշրջանակներով։
+
+~~~art
+pic armenian-house izba
+~~~
 
 ## Մոտ և հեռու
 
@@ -356,8 +445,13 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 
 Նկարի՛ր ճանապարհը, երկու կողմերի տները, ծառերը, կանգառը, մարդկանց, մեքենաները։ Քո փողոցը աշխո՞ւյժ է, թե՞ հանգիստ։
 
-### Վարժություններ
+~~~art
+sketch guide=horizon
+Նկարի՛ր քո փողոցը՝ մեկ գծի վրա կանգնած տներ, ծառ, երկինք և արև։
+~~~
 
+~~~art
+tasks
 1. Անվանի՛ր տան մասերը։
 2. Որտե՞ղ պետք է լինի դուռը։
 3. Ինչո՞ւ են Երևանն անվանում «վարդագույն քաղաք»։
@@ -365,10 +459,12 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 5. Նկարի՛ր հինգհարկանի շենք՝ պատուհանների կոկիկ շարքերով։
 6. Նկարի՛ր գյուղական տուն՝ փորագրված պատուհանով։
 7. Նկարի՛ր քո փողոցը՝ մոտ տունը մեծ, հեռուները՝ փոքր։
+~~~
 
-### Պատասխաններ
-
-1. Պատեր, տանիք, պատուհաններ, դուռ։ 2. Ներքևում, գետնին։ 3. Շատ տներ կառուցված են վարդագույն տուֆից։ 4. Փոքր։ 5. Ստուգի՛ր, որ պատուհանները հավասար շարքերով են։ 6. Պատուհանի շուրջ նախշեր ավելացրո՛ւ։ 7. Մոտ տունը մեծ և ներքևում, հեռուները՝ փոքր և ավելի վերև։`,
+~~~art
+hints
+1. Պատեր, տանիք, պատուհաններ, դուռ։ 2. Ներքևում, գետնին։ 3. Շատ տներ կառուցված են վարդագույն տուֆից։ 4. Փոքր։ 5. Ստուգի՛ր, որ պատուհանները հավասար շարքերով են։ 6. Պատուհանի շուրջ նախշեր ավելացրո՛ւ։ 7. Մոտ տունը մեծ և ներքևում, հեռուները՝ փոքր և ավելի վերև։
+~~~`,
         ru: `## Части дома
 
 | Часть | Совет |
@@ -381,9 +477,17 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 
 **Частая ошибка:** дверь висит в воздухе. Дверь всегда **касается земли**.
 
+~~~art
+steps house
+~~~
+
 ## Дома в Армении и России
 
 Многие дома в Ереване построены из розового камня **туфа**, поэтому город иногда называют «розовым городом». В русских деревнях можно увидеть деревянные избы с резными наличниками.
+
+~~~art
+pic armenian-house izba
+~~~
 
 ## Близко и далеко
 
@@ -393,8 +497,13 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 
 Нарисуй дорогу, дома по обе стороны, деревья, остановку, людей, машины. Твоя улица шумная или тихая?
 
-### Упражнения
+~~~art
+sketch guide=horizon
+Нарисуй свою улицу: дома на одной линии, дерево, небо и солнце.
+~~~
 
+~~~art
+tasks
 1. Назови части дома.
 2. Где должна быть дверь?
 3. Почему Ереван называют «розовым городом»?
@@ -402,10 +511,12 @@ Draw the road, the houses on both sides, trees, a bus stop, people, cars. Is you
 5. Нарисуй пятиэтажный дом с ровными рядами окон.
 6. Нарисуй деревенский дом с резным наличником.
 7. Нарисуй свою улицу: близкий дом большой, дальние — маленькие.
+~~~
 
-### Ответы
-
-1. Стены, крыша, окна, дверь. 2. Внизу, на земле. 3. Многие дома построены из розового туфа. 4. Меньше. 5. Проверь, что окна стоят ровными рядами. 6. Добавь узоры вокруг окна. 7. Близкий дом большой и ниже, дальние — маленькие и выше.`,
+~~~art
+hints
+1. Стены, крыша, окна, дверь. 2. Внизу, на земле. 3. Многие дома построены из розового туфа. 4. Меньше. 5. Проверь, что окна стоят ровными рядами. 6. Добавь узоры вокруг окна. 7. Близкий дом большой и ниже, дальние — маленькие и выше.
+~~~`,
       },
       [
         q(t("The door of a house always…", "Տան դուռը միշտ…", "Дверь дома всегда…"), [t("hangs in the air", "կախված է օդում", "висит в воздухе"), t("is on the roof", "տանիքին է", "на крыше"), t("touches the ground", "դիպչում է գետնին", "касается земли")], 2),
@@ -444,6 +555,10 @@ Watch a cat, a dog or a bird for a minute. Ask yourself:
 | scales | small arcs or half-circles |
 | stripes | paint the main colour first, stripes on top when dry |
 
+~~~art
+steps hedgehog
+~~~
+
 ## Poses
 
 - **Sleeping cat:** a round "bun" with the tail wrapped around.
@@ -454,8 +569,17 @@ Watch a cat, a dog or a bird for a minute. Ask yourself:
 
 The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian gampr** (a big, strong guard dog) are animals proudly connected with Armenia. Try drawing one of them!
 
-### Exercises
+~~~art
+pic stork horse bird-motif
+~~~
 
+~~~art
+sketch
+Draw your favourite animal: a circle for the head, an oval for the body, then fur or feathers.
+~~~
+
+~~~art
+tasks
 1. What four things should you notice before drawing an animal?
 2. How do we show feathers?
 3. How do we show short fur?
@@ -463,10 +587,12 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 5. Draw a running dog.
 6. Draw a bird and cover it with feather arcs.
 7. Draw your favourite animal and tell the class three facts about it.
+~~~
 
-### Answers
-
-1. Its shapes, proportions, covering and colour or pattern. 2. With rows of small arcs. 3. With short strokes going the way the fur grows. 4. A round body with the tail wrapped around. 5. A stretched body with legs far apart. 6. Arcs in rows like roof tiles. 7. Answers differ.`,
+~~~art
+hints
+1. Its shapes, proportions, covering and colour or pattern. 2. With rows of small arcs. 3. With short strokes going the way the fur grows. 4. A round body with the tail wrapped around. 5. A stretched body with legs far apart. 6. Arcs in rows like roof tiles. 7. Answers differ.
+~~~`,
         hy: `## Նախ նայի՛ր, հետո նկարի՛ր
 
 Մեկ րոպե դիտի՛ր կատվին, շանը կամ թռչունին։ Ինքդ քեզ հարցրո՛ւ.
@@ -486,6 +612,10 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 | թեփուկներ | փոքր աղեղներ կամ կիսաշրջաններ |
 | գծեր | նախ հիմնական գույնը, չորանալուց հետո՝ գծերը |
 
+~~~art
+steps hedgehog
+~~~
+
 ## Դիրքեր
 
 - **Քնած կատու.** կլոր «բուլկի»՝ շուրջը փաթաթված պոչով։
@@ -496,8 +626,17 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 
 **Հայկական մուֆլոնը** (մեծ ոլորված եղջյուրներով վայրի ոչխար) և **հայկական գամփռը** (մեծ, ուժեղ պահակ շուն) կենդանիներ են, որոնք հպարտորեն կապված են Հայաստանի հետ։ Փորձի՛ր նկարել դրանցից մեկը։
 
-### Վարժություններ
+~~~art
+pic stork horse bird-motif
+~~~
 
+~~~art
+sketch
+Նկարի՛ր սիրելի կենդանուդ․ շրջան՝ գլխի, օվալ՝ մարմնի համար, հետո մորթի կամ փետուրներ։
+~~~
+
+~~~art
+tasks
 1. Ի՞նչ չորս բան պետք է նկատել կենդանուն նկարելուց առաջ։
 2. Ինչպե՞ս ենք ցույց տալիս փետուրները։
 3. Ինչպե՞ս ենք ցույց տալիս կարճ մորթին։
@@ -505,10 +644,12 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 5. Նկարի՛ր վազող շուն։
 6. Նկարի՛ր թռչուն և ծածկի՛ր փետուր-աղեղներով։
 7. Նկարի՛ր քո սիրելի կենդանուն և դասարանին պատմի՛ր երեք փաստ նրա մասին։
+~~~
 
-### Պատասխաններ
-
-1. Ձևերը, համամասնությունները, ծածկույթը և գույնը կամ նախշը։ 2. Փոքր աղեղների շարքերով։ 3. Մորթու աճի ուղղությամբ կարճ գծիկներով։ 4. Կլոր մարմին՝ շուրջը փաթաթված պոչով։ 5. Ձգված մարմին՝ իրարից հեռու ոտքերով։ 6. Աղեղներ՝ կղմինդրի պես շարքերով։ 7. Պատասխանները տարբեր են։`,
+~~~art
+hints
+1. Ձևերը, համամասնությունները, ծածկույթը և գույնը կամ նախշը։ 2. Փոքր աղեղների շարքերով։ 3. Մորթու աճի ուղղությամբ կարճ գծիկներով։ 4. Կլոր մարմին՝ շուրջը փաթաթված պոչով։ 5. Ձգված մարմին՝ իրարից հեռու ոտքերով։ 6. Աղեղներ՝ կղմինդրի պես շարքերով։ 7. Պատասխանները տարբեր են։
+~~~`,
         ru: `## Сначала смотри, потом рисуй
 
 Понаблюдай минуту за кошкой, собакой или птицей. Спроси себя:
@@ -528,6 +669,10 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 | чешуя | маленькие дуги или полукруги |
 | полоски | сначала основной цвет, полоски — когда высохнет |
 
+~~~art
+steps hedgehog
+~~~
+
 ## Позы
 
 - **Спящая кошка:** круглая «булочка» с хвостом вокруг.
@@ -538,8 +683,17 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 
 **Армянский муфлон** (дикий баран с большими закрученными рогами) и **армянский гампр** (большая сильная сторожевая собака) — животные, которыми гордится Армения. Попробуй нарисовать одно из них!
 
-### Упражнения
+~~~art
+pic stork horse bird-motif
+~~~
 
+~~~art
+sketch
+Нарисуй любимое животное: круг — голова, овал — тело, потом шерсть или перья.
+~~~
+
+~~~art
+tasks
 1. На какие четыре вещи нужно обратить внимание, прежде чем рисовать животное?
 2. Как показать перья?
 3. Как показать короткий мех?
@@ -547,10 +701,12 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 5. Нарисуй бегущую собаку.
 6. Нарисуй птицу и покрой её перьями-дугами.
 7. Нарисуй своё любимое животное и расскажи классу о нём три факта.
+~~~
 
-### Ответы
-
-1. На формы, пропорции, покров и окраску. 2. Рядами маленьких дуг. 3. Короткими штрихами по направлению роста шерсти. 4. Круглое тело с хвостом вокруг. 5. Вытянутое тело, лапы широко расставлены. 6. Дуги рядами, как черепица. 7. Ответы разные.`,
+~~~art
+hints
+1. На формы, пропорции, покров и окраску. 2. Рядами маленьких дуг. 3. Короткими штрихами по направлению роста шерсти. 4. Круглое тело с хвостом вокруг. 5. Вытянутое тело, лапы широко расставлены. 6. Дуги рядами, как черепица. 7. Ответы разные.
+~~~`,
       },
       [
         q(t("Feathers are drawn as…", "Փետուրները գծում ենք…", "Перья рисуем…"), [t("long straight lines", "երկար ուղիղ գծերով", "длинными прямыми линиями"), t("rows of small arcs", "փոքր աղեղների շարքերով", "рядами маленьких дуг"), t("big squares", "մեծ քառակուսիներով", "большими квадратами")], 1),
@@ -574,6 +730,10 @@ The **Armenian mouflon** (wild sheep with big curled horns) and the **Armenian g
 
 An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov** painted famous fairy-tale scenes, for example «Ivan Tsarevich Riding the Grey Wolf». Look at the pictures in your favourite book of tales: who drew them?
 
+~~~art
+pic genre-fairy
+~~~
+
 ## Kind or wicked?
 
 | | Kind hero | Wicked hero |
@@ -581,6 +741,11 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 | colours | light, warm, bright | dark, gloomy, sharp contrasts |
 | face | smile, round soft lines | frown, sharp angular lines |
 | shapes | round, soft | pointed, spiky |
+
+~~~art
+mood scene=landscape moods=joy,sad,night
+Colours tell us if a tale is kind or scary. Switch the colours and feel the difference.
+~~~
 
 ## Choose a hero
 
@@ -597,8 +762,13 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 3. Add the place: a forest, a palace, a village.
 4. Use colours that show the mood: bright for a happy moment, dark for a scary one.
 
-### Exercises
+~~~art
+sketch
+Draw your favourite hero in one moment of the tale. Is the hero kind or wicked? Choose the colours.
+~~~
 
+~~~art
+tasks
 1. What does an illustrator do?
 2. Who painted «Ivan Tsarevich Riding the Grey Wolf»?
 3. Which colours suit a kind hero?
@@ -606,13 +776,19 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 5. Draw a kind hero and a wicked hero from the same tale.
 6. Draw the most exciting moment of your favourite tale.
 7. Show your picture: can classmates guess the tale?
+~~~
 
-### Answers
-
-1. Draws pictures for books. 2. Viktor Vasnetsov. 3. Light, warm, bright colours. 4. Sharp, angular, spiky lines. 5. Compare the colours and lines of the two heroes. 6. The hero is big in the middle. 7. If they guess, your picture tells the story well.`,
+~~~art
+hints
+1. Draws pictures for books. 2. Viktor Vasnetsov. 3. Light, warm, bright colours. 4. Sharp, angular, spiky lines. 5. Compare the colours and lines of the two heroes. 6. The hero is big in the middle. 7. If they guess, your picture tells the story well.
+~~~`,
         hy: `## Նկարիչներ, որոնք նկարազարդում են հեքիաթներ
 
 **Նկարազարդողը** (իլյուստրատորը) նկարում է գրքերի համար։ Ռուս նկարիչ **Վիկտոր Վասնեցովը** նկարել է հեքիաթային հայտնի տեսարաններ, օրինակ՝ «Իվան արքայազնը գորշ գայլի վրա»։ Նայի՛ր քո սիրելի հեքիաթների գրքի նկարներին. ո՞վ է դրանք նկարել։
+
+~~~art
+pic genre-fairy
+~~~
 
 ## Բարի՞, թե՞ չար
 
@@ -621,6 +797,11 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 | գույներ | բաց, տաք, վառ | մուգ, մռայլ, կտրուկ հակադրություններ |
 | դեմք | ժպիտ, կլոր փափուկ գծեր | խոժոռ դեմք, սուր անկյունավոր գծեր |
 | ձևեր | կլոր, փափուկ | սրածայր, փշոտ |
+
+~~~art
+mood scene=landscape moods=joy,sad,night
+Գույները ասում են՝ հեքիաթը բարի՞ է, թե՞ վախենալու։ Փոխի՛ր գույները և զգա՛ տարբերությունը։
+~~~
 
 ## Ընտրի՛ր հերոս
 
@@ -637,8 +818,13 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 3. Ավելացրո՛ւ վայրը՝ անտառ, պալատ, գյուղ։
 4. Գույներով ցույց տո՛ւր տրամադրությունը՝ վառ՝ ուրախ պահի համար, մուգ՝ վախենալու։
 
-### Վարժություններ
+~~~art
+sketch
+Նկարի՛ր սիրելի հերոսիդ հեքիաթի մեկ պահին։ Բարի՞ է, թե՞ չար։ Ընտրի՛ր գույները։
+~~~
 
+~~~art
+tasks
 1. Ի՞նչ է անում նկարազարդողը։
 2. Ո՞վ է նկարել «Իվան արքայազնը գորշ գայլի վրա»։
 3. Ի՞նչ գույներ են սազում բարի հերոսին։
@@ -646,13 +832,19 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 5. Նույն հեքիաթից նկարի՛ր մեկ բարի և մեկ չար հերոս։
 6. Նկարի՛ր քո սիրելի հեքիաթի ամենահետաքրքիր պահը։
 7. Ցույց տո՛ւր նկարդ. դասընկերները կգուշակե՞ն հեքիաթը։
+~~~
 
-### Պատասխաններ
-
-1. Նկարում է գրքերի համար։ 2. Վիկտոր Վասնեցովը։ 3. Բաց, տաք, վառ գույներ։ 4. Սուր, անկյունավոր, փշոտ գծեր։ 5. Համեմատի՛ր երկու հերոսների գույներն ու գծերը։ 6. Հերոսը մեծ է և մեջտեղում։ 7. Եթե գուշակեն, նկարդ լավ է պատմում պատմությունը։`,
+~~~art
+hints
+1. Նկարում է գրքերի համար։ 2. Վիկտոր Վասնեցովը։ 3. Բաց, տաք, վառ գույներ։ 4. Սուր, անկյունավոր, փշոտ գծեր։ 5. Համեմատի՛ր երկու հերոսների գույներն ու գծերը։ 6. Հերոսը մեծ է և մեջտեղում։ 7. Եթե գուշակեն, նկարդ լավ է պատմում պատմությունը։
+~~~`,
         ru: `## Художники, которые иллюстрируют сказки
 
 **Иллюстратор** рисует картинки для книг. Русский художник **Виктор Васнецов** написал знаменитые сказочные картины, например «Иван-царевич на Сером волке». Посмотри на картинки в своей любимой книге сказок: кто их нарисовал?
+
+~~~art
+pic genre-fairy
+~~~
 
 ## Добрый или злой?
 
@@ -661,6 +853,11 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 | цвета | светлые, тёплые, яркие | тёмные, мрачные, резкие контрасты |
 | лицо | улыбка, круглые мягкие линии | хмурое, острые угловатые линии |
 | формы | круглые, мягкие | острые, колючие |
+
+~~~art
+mood scene=landscape moods=joy,sad,night
+Цвета подсказывают, добрая сказка или страшная. Переключи цвета и почувствуй разницу.
+~~~
 
 ## Выбери героя
 
@@ -677,8 +874,13 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 3. Добавь место: лес, дворец, деревню.
 4. Цветом покажи настроение: ярко — для радостного момента, темно — для страшного.
 
-### Упражнения
+~~~art
+sketch
+Нарисуй любимого героя в один момент сказки. Он добрый или злой? Подбери цвета.
+~~~
 
+~~~art
+tasks
 1. Что делает иллюстратор?
 2. Кто написал картину «Иван-царевич на Сером волке»?
 3. Какие цвета подходят доброму герою?
@@ -686,10 +888,12 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 5. Нарисуй доброго и злого героя из одной сказки.
 6. Нарисуй самый интересный момент любимой сказки.
 7. Покажи рисунок: угадают ли одноклассники сказку?
+~~~
 
-### Ответы
-
-1. Рисует картинки для книг. 2. Виктор Васнецов. 3. Светлые, тёплые, яркие. 4. Острые, угловатые, колючие. 5. Сравни цвета и линии двух героев. 6. Герой крупно в центре. 7. Если угадают — рисунок хорошо рассказывает историю.`,
+~~~art
+hints
+1. Рисует картинки для книг. 2. Виктор Васнецов. 3. Светлые, тёплые, яркие. 4. Острые, угловатые, колючие. 5. Сравни цвета и линии двух героев. 6. Герой крупно в центре. 7. Если угадают — рисунок хорошо рассказывает историю.
+~~~`,
       },
       [
         q(t("An illustrator…", "Նկարազարդողը…", "Иллюстратор…"), [t("draws pictures for books", "նկարում է գրքերի համար", "рисует картинки для книг"), t("writes tales", "հեքիաթներ է գրում", "пишет сказки"), t("prints books", "գրքեր է տպում", "печатает книги")], 0),
@@ -713,6 +917,10 @@ An **illustrator** draws pictures for books. Russian painter **Viktor Vasnetsov*
 
 On white paper we paint dark things. On **dark paper** it is the other way round: we paint the **light** things, and they seem to **glow**: snow, stars, lit windows, the moon.
 
+~~~art
+palette winter
+~~~
+
 ## Materials
 
 Dark blue, violet or black paper; white gouache; a little yellow and light blue; a thick and a thin brush; a dry sponge or a stiff brush for "snowfall".
@@ -729,8 +937,17 @@ Dark blue, violet or black paper; white gouache; a little yellow and light blue;
 
 A snowflake has **six** arms. Draw a star with six lines, then add small "branches" on each arm.
 
-### Exercises
+~~~art
+steps snowflake
+~~~
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+Draw one ray with white paint, and the whole snowflake appears!
+~~~
+
+~~~art
+tasks
 1. What do we paint first on dark paper: light or dark things?
 2. Why does a yellow window look cosy on dark paper?
 3. How many arms does a snowflake have?
@@ -738,13 +955,19 @@ A snowflake has **six** arms. Draw a star with six lines, then add small "branch
 5. Draw three different snowflakes.
 6. Paint a winter evening: snowdrifts, trees, a house, the moon, snowfall.
 7. Compare: is white more striking on dark paper or on white paper?
+~~~
 
-### Answers
-
-1. Light things. 2. It is a warm colour glowing on a cold dark background. 3. Six. 4. Run a finger over a stiff brush dipped in white paint. 5. Each must have six arms. 6. Check the order of the steps. 7. On dark paper.`,
+~~~art
+hints
+1. Light things. 2. It is a warm colour glowing on a cold dark background. 3. Six. 4. Run a finger over a stiff brush dipped in white paint. 5. Each must have six arms. 6. Check the order of the steps. 7. On dark paper.
+~~~`,
         hy: `## Լույսը մութի վրա
 
 Սպիտակ թղթի վրա նկարում ենք մուգ բաներ։ **Մուգ թղթի** վրա հակառակն է. նկարում ենք **բաց** բաները, և դրանք կարծես **փայլում** են՝ ձյուն, աստղեր, լուսավոր պատուհաններ, լուսին։
+
+~~~art
+palette winter
+~~~
 
 ## Պարագաներ
 
@@ -762,8 +985,17 @@ A snowflake has **six** arms. Draw a star with six lines, then add small "branch
 
 Փաթիլն ունի **վեց** թև։ Վեց գծով աստղ գծի՛ր, հետո յուրաքանչյուր թևին փոքր «ճյուղիկներ» ավելացրո՛ւ։
 
-### Վարժություններ
+~~~art
+steps snowflake
+~~~
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+Սպիտակով նկարի՛ր մեկ ճառագայթ, և ամբողջ փաթիլը կհայտնվի։
+~~~
+
+~~~art
+tasks
 1. Մուգ թղթի վրա ի՞նչ ենք նկարում՝ բա՞ց, թե՞ մուգ բաներ։
 2. Ինչո՞ւ է դեղին պատուհանը մուգ թղթի վրա հարմարավետ թվում։
 3. Քանի՞ թև ունի ձյան փաթիլը։
@@ -771,13 +1003,19 @@ A snowflake has **six** arms. Draw a star with six lines, then add small "branch
 5. Նկարի՛ր երեք տարբեր փաթիլ։
 6. Նկարի՛ր ձմեռային երեկո՝ ձնակույտեր, ծառեր, տուն, լուսին, ձյունատեղ։
 7. Համեմատի՛ր. սպիտակը որտե՞ղ է ավելի աչքի ընկնում՝ մուգ, թե՞ սպիտակ թղթի վրա։
+~~~
 
-### Պատասխաններ
-
-1. Բաց բաներ։ 2. Տաք գույնը փայլում է սառը մուգ ֆոնի վրա։ 3. Վեց։ 4. Մատը քսում ենք սպիտակի մեջ թաթախած կոշտ վրձնի մազիկներին։ 5. Յուրաքանչյուրը պետք է ունենա վեց թև։ 6. Ստուգի՛ր քայլերի հերթականությունը։ 7. Մուգ թղթի վրա։`,
+~~~art
+hints
+1. Բաց բաներ։ 2. Տաք գույնը փայլում է սառը մուգ ֆոնի վրա։ 3. Վեց։ 4. Մատը քսում ենք սպիտակի մեջ թաթախած կոշտ վրձնի մազիկներին։ 5. Յուրաքանչյուրը պետք է ունենա վեց թև։ 6. Ստուգի՛ր քայլերի հերթականությունը։ 7. Մուգ թղթի վրա։
+~~~`,
         ru: `## Светлое на тёмном
 
 На белой бумаге мы рисуем тёмное. На **тёмной бумаге** — наоборот: рисуем **светлое**, и оно будто **светится**: снег, звёзды, горящие окна, луна.
+
+~~~art
+palette winter
+~~~
 
 ## Материалы
 
@@ -795,8 +1033,17 @@ A snowflake has **six** arms. Draw a star with six lines, then add small "branch
 
 У снежинки **шесть** лучей. Нарисуй звёздочку из шести линий, потом добавь на каждый луч маленькие «веточки».
 
-### Упражнения
+~~~art
+steps snowflake
+~~~
 
+~~~art
+sketch mode=kaleido n=6 paper=dark
+Нарисуй белым один луч — и появится вся снежинка!
+~~~
+
+~~~art
+tasks
 1. Что мы рисуем на тёмной бумаге: светлое или тёмное?
 2. Почему жёлтое окно на тёмной бумаге выглядит уютным?
 3. Сколько лучей у снежинки?
@@ -804,10 +1051,12 @@ A snowflake has **six** arms. Draw a star with six lines, then add small "branch
 5. Нарисуй три разные снежинки.
 6. Нарисуй зимний вечер: сугробы, деревья, дом, луну, снегопад.
 7. Сравни: где белый заметнее — на тёмной или на белой бумаге?
+~~~
 
-### Ответы
-
-1. Светлое. 2. Тёплый цвет светится на холодном тёмном фоне. 3. Шесть. 4. Провести пальцем по жёсткой кисти с белилами (набрызг). 5. У каждой должно быть шесть лучей. 6. Проверь порядок шагов. 7. На тёмной.`,
+~~~art
+hints
+1. Светлое. 2. Тёплый цвет светится на холодном тёмном фоне. 3. Шесть. 4. Провести пальцем по жёсткой кисти с белилами (набрызг). 5. У каждой должно быть шесть лучей. 6. Проверь порядок шагов. 7. На тёмной.
+~~~`,
       },
       [
         q(t("On dark paper we paint…", "Մուգ թղթի վրա նկարում ենք…", "На тёмной бумаге рисуем…"), [t("dark things", "մուգ բաներ", "тёмное"), t("light things", "բաց բաներ", "светлое"), t("nothing", "ոչինչ", "ничего")], 1),

@@ -12,6 +12,7 @@ import { courses, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
 import { subjects } from "../src/content/subjects";
 import { checkTips } from "./check-tips";
+import { checkArtBlocks } from "../src/lib/art/validate";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -55,6 +56,7 @@ for (const c of courses) {
           }
         }
       }
+      for (const lang of LANGS) for (const e of checkArtBlocks(l.content[lang] ?? "")) errors.push(`${where} [${lang}]: ${e}`);
       if (!l.quiz?.length) errors.push(`${where}: no quiz`);
       for (const [i, qq] of (l.quiz ?? []).entries()) {
         questions++;

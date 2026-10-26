@@ -30,6 +30,10 @@ An exhibition is not just works hung on a wall. A designer builds a **route** fo
 5. **Rhythm:** alternate big and small works, leave empty wall between them.
 6. **Rest:** a bench or a quiet corner in a large exhibition.
 
+~~~art
+pic room-plan
+~~~
+
 ## Hanging the works
 
 * **The eye line:** the centre of a work is usually about 150 cm above the floor, the height of an adult's eyes. For a school of younger children, lower it.
@@ -38,18 +42,26 @@ An exhibition is not just works hung on a wall. A designer builds a **route** fo
 * **Light:** even light, no reflections on glass; lamps aimed at the works, not at the visitor's eyes.
 * **Safety:** firm fixings; nothing above a bench where a person sits.
 
+~~~art
+compose
+~~~
+
 ## Labels and texts
 
 Every work gets a **label**: the author, the title, the year, the materials, and for a school exhibition the class. Labels are placed at the same side of every work, usually at the right, at the same height.
 
 A short **introduction text** at the entrance tells what the exhibition is about, in a few sentences, in large readable letters.
 
+~~~art
+letters
+~~~
+
 ## Task
 
 Plan an exhibition of this year's works of your class. Draw the plan of the room with the route, mark where each group of works hangs, design the label and the title of the exhibition, and write the introduction text of 3–4 sentences.
 
-### Exercises
-
+~~~art
+tasks
 1. What does a designer plan in an exhibition besides the works?
 2. At what height is the centre of a work usually hung for adults?
 3. Why should labels be at the same side and height?
@@ -57,10 +69,12 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 5. How does a designer use accents?
 6. Why is light important in an exhibition?
 7. Plan an exhibition of the class works with a plan, labels and an introduction text.
+~~~
 
-### Answers
-
-1. The route, the order, the light, the wall colour, the texts. 2. About 150 cm. 3. So that the visitor finds them easily and the hanging looks calm. 4. Author, title, year, materials (and class at school). 5. The strongest work faces the entrance or ends the route. 6. It must be even, without reflections, aimed at the works. 7. Your plan.`,
+~~~art
+hints
+1. The route, the order, the light, the wall colour, the texts. 2. About 150 cm. 3. So that the visitor finds them easily and the hanging looks calm. 4. Author, title, year, materials (and class at school). 5. The strongest work faces the entrance or ends the route. 6. It must be even, without reflections, aimed at the works. 7. Your plan.
+~~~`,
         hy: `## Ցուցահանդեսը նույնպես դիզայն է
 
 Ցուցահանդեսը պարզապես պատին կախված գործեր չէ։ Դիզայները կառուցում է այցելուի **երթուղին**, որոշում գործերի հերթականությունը, լույսը, պատերի գույնը, տեքստերը և նույնիսկ հատակը։
@@ -74,6 +88,10 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 5. **Ռիթմ**՝ հերթափոխիր մեծ և փոքր գործերը, դրանց միջև թող դատարկ պատ։
 6. **Հանգիստ**՝ նստարան կամ հանգիստ անկյուն մեծ ցուցահանդեսում։
 
+~~~art
+pic room-plan
+~~~
+
 ## Գործերի կախում
 
 * **Աչքի գիծ**՝ գործի կենտրոնը սովորաբար հատակից մոտ 150 սմ է՝ մեծահասակի աչքերի բարձրությունը։ Կրտսեր դպրոցում իջեցրու այն։
@@ -82,18 +100,26 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 * **Լույս**՝ հավասար լույս, առանց ապակու արտացոլանքների, լամպերն ուղղված գործերին, ոչ թե այցելուի աչքերին։
 * **Անվտանգություն**՝ ամուր ամրակներ, ոչինչ նստարանի վերևում, որտեղ մարդ է նստում։
 
+~~~art
+compose
+~~~
+
 ## Պիտակներ և տեքստեր
 
 Յուրաքանչյուր գործ ստանում է **պիտակ**՝ հեղինակ, վերնագիր, տարեթիվ, նյութեր, իսկ դպրոցական ցուցահանդեսում՝ նաև դասարան։ Պիտակները տեղադրվում են յուրաքանչյուր գործի նույն կողմում, սովորաբար աջից, նույն բարձրության վրա։
 
 Մուտքի մոտ կարճ **ներածական տեքստը** մի քանի նախադասությամբ, մեծ ընթեռնելի տառերով ասում է, թե ինչի մասին է ցուցահանդեսը։
 
+~~~art
+letters
+~~~
+
 ## Առաջադրանք
 
 Պլանավորիր քո դասարանի այս տարվա աշխատանքների ցուցահանդեսը։ Գծիր սենյակի հատակագիծն երթուղով, նշիր, թե որտեղ է կախվում գործերի յուրաքանչյուր խումբ, ձևավորիր պիտակը և ցուցահանդեսի վերնագիրը և գրիր 3–4 նախադասությանոց ներածական տեքստ։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Գործերից բացի ինչ է պլանավորում դիզայները ցուցահանդեսում։
 2. Ինչ բարձրության վրա է սովորաբար կախվում գործի կենտրոնը մեծահասակների համար։
 3. Ինչու պետք է պիտակները լինեն նույն կողմում և բարձրության վրա։
@@ -101,10 +127,12 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 5. Ինչպես է դիզայներն օգտագործում շեշտերը։
 6. Ինչու է լույսը կարևոր ցուցահանդեսում։
 7. Պլանավորիր դասարանի աշխատանքների ցուցահանդես՝ հատակագծով, պիտակներով և ներածական տեքստով։
+~~~
 
-### Պատասխաններ
-
-1. Երթուղին, հերթականությունը, լույսը, պատերի գույնը, տեքստերը։ 2. Մոտ 150 սմ։ 3. Որպեսզի այցելուն հեշտ գտնի դրանք, և կախվածքը հանգիստ երևա։ 4. Հեղինակ, վերնագիր, տարեթիվ, նյութեր (դպրոցում՝ նաև դասարան)։ 5. Ամենաուժեղ գործը նայում է մուտքին կամ ավարտում երթուղին։ 6. Այն պետք է լինի հավասար, առանց արտացոլանքների, ուղղված գործերին։ 7. Քո պլանը։`,
+~~~art
+hints
+1. Երթուղին, հերթականությունը, լույսը, պատերի գույնը, տեքստերը։ 2. Մոտ 150 սմ։ 3. Որպեսզի այցելուն հեշտ գտնի դրանք, և կախվածքը հանգիստ երևա։ 4. Հեղինակ, վերնագիր, տարեթիվ, նյութեր (դպրոցում՝ նաև դասարան)։ 5. Ամենաուժեղ գործը նայում է մուտքին կամ ավարտում երթուղին։ 6. Այն պետք է լինի հավասար, առանց արտացոլանքների, ուղղված գործերին։ 7. Քո պլանը։
+~~~`,
         ru: `## Выставка — тоже дизайн
 
 Выставка — не просто работы на стене. Дизайнер строит **маршрут** посетителя, определяет порядок работ, свет, цвет стен, тексты и даже пол.
@@ -118,6 +146,10 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 5. **Ритм:** чередуй большие и маленькие работы, оставляй между ними пустую стену.
 6. **Отдых:** скамейка или тихий угол на большой выставке.
 
+~~~art
+pic room-plan
+~~~
+
 ## Развеска работ
 
 * **Линия глаз:** центр работы обычно на высоте около 150 см от пола — на уровне глаз взрослого. Для младших школьников ниже.
@@ -126,18 +158,26 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 * **Свет:** равномерный, без бликов на стекле; лампы направлены на работы, а не в глаза посетителю.
 * **Безопасность:** надёжное крепление; ничего над скамейкой, где сидят люди.
 
+~~~art
+compose
+~~~
+
 ## Этикетки и тексты
 
 У каждой работы есть **этикетка**: автор, название, год, материалы, а на школьной выставке ещё и класс. Этикетки вешают с одной и той же стороны каждой работы, обычно справа, на одной высоте.
 
 Короткий **вводный текст** у входа в нескольких предложениях крупными читаемыми буквами рассказывает, о чём выставка.
 
+~~~art
+letters
+~~~
+
 ## Задание
 
 Спланируй выставку работ своего класса за этот год. Начерти план помещения с маршрутом, отметь, где висит каждая группа работ, оформи этикетку и название выставки и напиши вводный текст в 3–4 предложения.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что, кроме самих работ, планирует дизайнер выставки?
 2. На какой высоте обычно вешают центр работы для взрослых?
 3. Почему этикетки должны быть с одной стороны и на одной высоте?
@@ -145,10 +185,12 @@ Plan an exhibition of this year's works of your class. Draw the plan of the room
 5. Как дизайнер использует акценты?
 6. Почему на выставке важен свет?
 7. Спланируй выставку класса: план, этикетки и вводный текст.
+~~~
 
-### Ответы
-
-1. Маршрут, порядок работ, свет, цвет стен, тексты. 2. Около 150 см. 3. Чтобы посетитель легко их находил, а развеска выглядела спокойно. 4. Автор, название, год, материалы (в школе — и класс). 5. Самая сильная работа смотрит на вход или завершает маршрут. 6. Он должен быть равномерным, без бликов, направленным на работы. 7. Твой план.`,
+~~~art
+hints
+1. Маршрут, порядок работ, свет, цвет стен, тексты. 2. Около 150 см. 3. Чтобы посетитель легко их находил, а развеска выглядела спокойно. 4. Автор, название, год, материалы (в школе — и класс). 5. Самая сильная работа смотрит на вход или завершает маршрут. 6. Он должен быть равномерным, без бликов, направленным на работы. 7. Твой план.
+~~~`,
       },
       [
         q(t("The centre of a work is usually hung about … above the floor.", "Գործի կենտրոնը սովորաբար կախվում է հատակից մոտ…", "Центр работы обычно вешают примерно на высоте…"), [t("150 cm", "150 սմ", "150 см"), t("80 cm", "80 սմ", "80 см"), t("240 cm", "240 սմ", "240 см")], 0),
@@ -183,6 +225,10 @@ Art in **public space** belongs to everybody; nobody buys a ticket for it. It ca
 
 The **Cascade** in Yerevan is both a huge stair and an open-air museum, with sculptures standing on its terraces and in the garden at its foot.
 
+~~~art
+pic stork tamanyan
+~~~
+
 ## Street art or vandalism?
 
 Painting on a wall is **street art** when it is made with permission, respects the building and adds something for the people who live there. It is **vandalism** when it damages someone's property, covers a monument or an old facade, or offends people. The difference is not in the technique but in permission and respect.
@@ -195,12 +241,21 @@ Painting on a wall is **street art** when it is made with permission, respects t
 * **Meaning:** it says something about this place or its history.
 * **Safety and care:** no sharp parts, and somebody will look after it.
 
+~~~art
+palette loud
+~~~
+
 ## Task
 
 Choose a real wall, yard or square near your school. Photograph or draw it. Then design a mural or a small object for it: sketch the idea, show it on the photograph or drawing of the place, and write three sentences about why this idea fits this place and who you would ask for permission.
 
-### Exercises
+~~~art
+sketch paper=grey
+Design a mural for a grey wall in your neighbourhood. Who will see it, and what should they feel?
+~~~
 
+~~~art
+tasks
 1. What makes art «public»?
 2. Name three kinds of art in public space.
 3. What is a mural?
@@ -208,10 +263,12 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 5. Why must scale be thought about in public art?
 6. What is the Cascade in Yerevan?
 7. Design a mural or an object for a real place near your school.
+~~~
 
-### Answers
-
-1. It belongs to everybody and needs no ticket. 2. Any three: monument, mural, mosaic, installation, light art, festival works. 3. A large painting on a wall of a building. 4. When it is made without permission, damages property or offends people. 5. Because the work must be seen from where people really stand. 6. A huge stair and an open-air museum with sculptures. 7. Your design.`,
+~~~art
+hints
+1. It belongs to everybody and needs no ticket. 2. Any three: monument, mural, mosaic, installation, light art, festival works. 3. A large painting on a wall of a building. 4. When it is made without permission, damages property or offends people. 5. Because the work must be seen from where people really stand. 6. A huge stair and an open-air museum with sculptures. 7. Your design.
+~~~`,
         hy: `## Արվեստը թանգարանից դուրս
 
 **Հանրային տարածքի** արվեստը պատկանում է բոլորին, դրա համար ոչ ոք տոմս չի գնում։ Այն կարող է փոխել փողոցի զգացողությունը։
@@ -227,6 +284,10 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 
 Երևանի **Կասկադը** և՛ հսկայական աստիճան է, և՛ բացօթյա թանգարան՝ իր պատշգամբներին և ստորոտի այգում կանգնած քանդակներով։
 
+~~~art
+pic stork tamanyan
+~~~
+
 ## Փողոցային արվեստ, թե վանդալիզմ
 
 Պատին նկարելը **փողոցային արվեստ** է, երբ արվում է թույլտվությամբ, հարգում է շենքը և ինչ-որ բան ավելացնում այնտեղ ապրողների համար։ Դա **վանդալիզմ** է, երբ վնասում է ուրիշի սեփականությունը, ծածկում հուշարձան կամ հին ճակատ կամ վիրավորում մարդկանց։ Տարբերությունն ոչ թե տեխնիկայի, այլ թույլտվության և հարգանքի մեջ է։
@@ -239,12 +300,21 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 * **Իմաստ**՝ ասում է ինչ-որ բան այս վայրի կամ նրա պատմության մասին։
 * **Անվտանգություն և խնամք**՝ ոչ մի սուր մաս, և որևէ մեկը կհոգա դրա մասին։
 
+~~~art
+palette loud
+~~~
+
 ## Առաջադրանք
 
 Ընտրիր իրական պատ, բակ կամ հրապարակ քո դպրոցի մոտ։ Լուսանկարիր կամ նկարիր այն։ Հետո նախագծիր դրա համար որմնանկար կամ փոքր առարկա՝ ուրվագծիր գաղափարը, ցույց տուր այն վայրի լուսանկարի կամ նկարի վրա և գրիր երեք նախադասություն այն մասին, թե ինչու է այս գաղափարը սազում այս վայրին և ումից թույլտվություն կխնդրեիր։
 
-### Վարժություններ
+~~~art
+sketch paper=grey
+Ձևավորի՛ր որմնանկար քո թաղամասի մոխրագույն պատի համար։ Ո՞վ կտեսնի այն, և ի՞նչ պետք է զգա։
+~~~
 
+~~~art
+tasks
 1. Ինչն է արվեստը դարձնում «հանրային»։
 2. Անվանիր հանրային տարածքի արվեստի երեք տեսակ։
 3. Ինչ է որմնանկարը։
@@ -252,10 +322,12 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 5. Ինչու պետք է հանրային արվեստում մտածել մասշտաբի մասին։
 6. Ինչ է Երևանի Կասկադը։
 7. Նախագծիր որմնանկար կամ առարկա քո դպրոցի մոտ իրական վայրի համար։
+~~~
 
-### Պատասխաններ
-
-1. Այն պատկանում է բոլորին և տոմս չի պահանջում։ 2. Ցանկացած երեքը՝ հուշարձան, որմնանկար, խճանկար, ինստալացիա, լույսի արվեստ, փառատոնային գործեր։ 3. Մեծ նկար շենքի պատին։ 4. Երբ արվում է առանց թույլտվության, վնասում է սեփականությունը կամ վիրավորում մարդկանց։ 5. Որովհետև գործը պետք է երևա այնտեղից, որտեղ մարդիկ իրականում կանգնում են։ 6. Հսկայական աստիճան և բացօթյա թանգարան քանդակներով։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Այն պատկանում է բոլորին և տոմս չի պահանջում։ 2. Ցանկացած երեքը՝ հուշարձան, որմնանկար, խճանկար, ինստալացիա, լույսի արվեստ, փառատոնային գործեր։ 3. Մեծ նկար շենքի պատին։ 4. Երբ արվում է առանց թույլտվության, վնասում է սեփականությունը կամ վիրավորում մարդկանց։ 5. Որովհետև գործը պետք է երևա այնտեղից, որտեղ մարդիկ իրականում կանգնում են։ 6. Հսկայական աստիճան և բացօթյա թանգարան քանդակներով։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Искусство вне музея
 
 Искусство в **общественном пространстве** принадлежит всем; за него никто не покупает билет. Оно способно изменить ощущение от улицы.
@@ -271,6 +343,10 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 
 **Каскад** в Ереване — одновременно огромная лестница и музей под открытым небом: скульптуры стоят на его террасах и в саду у подножия.
 
+~~~art
+pic stork tamanyan
+~~~
+
 ## Уличное искусство или вандализм?
 
 Роспись на стене — **уличное искусство**, когда она сделана с разрешения, уважает здание и что-то даёт живущим рядом людям. Это **вандализм**, когда она портит чужую собственность, закрывает памятник или старый фасад либо оскорбляет людей. Разница не в технике, а в разрешении и уважении.
@@ -283,12 +359,21 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 * **Смысл:** она говорит что-то об этом месте или его истории.
 * **Безопасность и уход:** никаких острых деталей, и кто-то будет за ней следить.
 
+~~~art
+palette loud
+~~~
+
 ## Задание
 
 Выбери реальную стену, двор или площадь рядом со школой. Сфотографируй или нарисуй их. Затем спроектируй для этого места мурал или небольшой объект: сделай эскиз идеи, покажи её на фотографии или рисунке места и напиши три предложения о том, почему идея подходит этому месту и у кого ты бы попросил разрешение.
 
-### Упражнения
+~~~art
+sketch paper=grey
+Придумай роспись для серой стены в своём районе. Кто её увидит и что должен почувствовать?
+~~~
 
+~~~art
+tasks
 1. Что делает искусство «общественным»?
 2. Назови три вида искусства в общественном пространстве.
 3. Что такое мурал?
@@ -296,10 +381,12 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 5. Почему в публичном искусстве нужно думать о масштабе?
 6. Что такое Каскад в Ереване?
 7. Спроектируй мурал или объект для реального места у школы.
+~~~
 
-### Ответы
-
-1. Оно принадлежит всем и не требует билета. 2. Любые три: памятник, мурал, мозаика, инсталляция, световое искусство, фестивальные работы. 3. Большая роспись на стене здания. 4. Когда она сделана без разрешения, портит собственность или оскорбляет людей. 5. Потому что работу должно быть видно оттуда, где люди действительно стоят. 6. Огромная лестница и музей скульптуры под открытым небом. 7. Твой проект.`,
+~~~art
+hints
+1. Оно принадлежит всем и не требует билета. 2. Любые три: памятник, мурал, мозаика, инсталляция, световое искусство, фестивальные работы. 3. Большая роспись на стене здания. 4. Когда она сделана без разрешения, портит собственность или оскорбляет людей. 5. Потому что работу должно быть видно оттуда, где люди действительно стоят. 6. Огромная лестница и музей скульптуры под открытым небом. 7. Твой проект.
+~~~`,
       },
       [
         q(t("A large painting on the wall of a building is a…", "Շենքի պատին մեծ նկարը…", "Большая роспись на стене здания — это…"), [t("mural", "որմնանկար է", "мурал"), t("installation", "ինստալացիա է", "инсталляция"), t("label", "պիտակ է", "этикетка")], 0),
@@ -323,6 +410,10 @@ Choose a real wall, yard or square near your school. Photograph or draw it. Then
 
 Every object has a **life cycle**: materials are taken from nature, the thing is made, transported, sold, used, and then it becomes rubbish or returns as a new material. A designer decides, at the drawing stage, how long this life will be.
 
+~~~art
+pic recycle
+~~~
+
 ## The three R rule
 
 * **Reduce:** use less material, less packaging, less energy.
@@ -342,16 +433,24 @@ Two more words are often added: **repair** and **refuse**, that is, not buying w
 | **Less packaging** | or packaging that becomes part of the product |
 | **Energy** | lamps and devices that use little power |
 
+~~~art
+palette eco
+~~~
+
 ## Upcycling
 
 **Upcycling** means making something better out of something old: a bench from pallets, a bag from an old banner, a lamp from a jar, a stool from a tyre. The result should look like a designed object, not like rubbish.
+
+~~~art
+pic box-net
+~~~
 
 ## Task
 
 Find three objects at home that would be thrown away: a plastic bottle, a tin, cardboard, an old T-shirt. Choose one and design a new useful thing from it. Draw the idea from two sides, write the materials and tools, and then make it. Think about the three R rule and explain which R your project follows.
 
-### Exercises
-
+~~~art
+tasks
 1. What is the life cycle of a thing?
 2. Name the three R rule.
 3. Give an example of reuse.
@@ -359,13 +458,19 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 5. How does repairability change the way a thing is made?
 6. What is upcycling?
 7. Design and make an object from reused materials.
+~~~
 
-### Answers
-
-1. Materials are taken, the thing is made, transported, sold, used, then thrown away or recycled. 2. Reduce, reuse, recycle. 3. For example a jar becoming a pencil holder. 4. A mix is harder to separate into pure materials. 5. The parts are joined with screws, not glue, and spare parts exist. 6. Making something better and useful out of an old thing. 7. Your object.`,
+~~~art
+hints
+1. Materials are taken, the thing is made, transported, sold, used, then thrown away or recycled. 2. Reduce, reuse, recycle. 3. For example a jar becoming a pencil holder. 4. A mix is harder to separate into pure materials. 5. The parts are joined with screws, not glue, and spare parts exist. 6. Making something better and useful out of an old thing. 7. Your object.
+~~~`,
         hy: `## Իրի կյանքը
 
 Յուրաքանչյուր առարկա ունի **կյանքի ցիկլ**՝ նյութերը վերցվում են բնությունից, իրը պատրաստվում է, տեղափոխվում, վաճառվում, օգտագործվում, ապա դառնում աղբ կամ վերադառնում որպես նոր նյութ։ Դիզայները դեռ գծագրի փուլում է որոշում, թե որքան երկար կլինի այդ կյանքը։
+
+~~~art
+pic recycle
+~~~
 
 ## Երեք R կանոնը
 
@@ -386,16 +491,24 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 | **Պակաս փաթեթավորում** | կամ փաթեթավորում, որը դառնում է ապրանքի մաս |
 | **Էներգիա** | լամպեր և սարքեր, որոնք քիչ էներգիա են ծախսում |
 
+~~~art
+palette eco
+~~~
+
 ## Ապսայքլինգ
 
 **Ապսայքլինգը** նշանակում է հինից ավելի լավ բան ստեղծել՝ նստարան՝ ներքնատախտակներից, պայուսակ՝ հին պաստառից, լամպ՝ բանկայից, աթոռակ՝ անվադողից։ Արդյունքը պետք է նման լինի նախագծված առարկայի, ոչ թե աղբի։
+
+~~~art
+pic box-net
+~~~
 
 ## Առաջադրանք
 
 Տանը գտիր երեք առարկա, որոնք դեն կնետվեին՝ պլաստիկե շիշ, թիթեղյա տուփ, ստվարաթուղթ, հին շապիկ։ Ընտրիր մեկը և նախագծիր դրանից նոր օգտակար իր։ Նկարիր գաղափարն երկու կողմից, գրիր նյութերն ու գործիքները, ապա պատրաստիր այն։ Մտածիր երեք R կանոնի մասին և բացատրիր, թե որ R-ին է հետևում քո նախագիծը։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է իրի կյանքի ցիկլը։
 2. Անվանիր երեք R կանոնը։
 3. Բեր կրկին օգտագործման օրինակ։
@@ -403,13 +516,19 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 5. Ինչպես է նորոգելիությունը փոխում իրի պատրաստման ձևը։
 6. Ինչ է ապսայքլինգը։
 7. Նախագծիր և պատրաստիր առարկա կրկին օգտագործված նյութերից։
+~~~
 
-### Պատասխաններ
-
-1. Նյութերը վերցվում են, իրը պատրաստվում, տեղափոխվում, վաճառվում, օգտագործվում, ապա դեն նետվում կամ վերամշակվում։ 2. Պակասեցնել, կրկին օգտագործել, վերամշակել։ 3. Օրինակ՝ բանկան դառնում է մատիտաման։ 4. Խառնուրդն ավելի դժվար է բաժանել մաքուր նյութերի։ 5. Մասերը միացվում են պտուտակներով, ոչ թե սոսնձով, և կան պահեստամասեր։ 6. Հին իրից ավելի լավ և օգտակար բան ստեղծելը։ 7. Քո առարկան։`,
+~~~art
+hints
+1. Նյութերը վերցվում են, իրը պատրաստվում, տեղափոխվում, վաճառվում, օգտագործվում, ապա դեն նետվում կամ վերամշակվում։ 2. Պակասեցնել, կրկին օգտագործել, վերամշակել։ 3. Օրինակ՝ բանկան դառնում է մատիտաման։ 4. Խառնուրդն ավելի դժվար է բաժանել մաքուր նյութերի։ 5. Մասերը միացվում են պտուտակներով, ոչ թե սոսնձով, և կան պահեստամասեր։ 6. Հին իրից ավելի լավ և օգտակար բան ստեղծելը։ 7. Քո առարկան։
+~~~`,
         ru: `## Жизнь вещи
 
 У каждого предмета есть **жизненный цикл**: материалы берут из природы, вещь производят, перевозят, продают, используют, а потом она становится мусором или возвращается новым материалом. Дизайнер решает ещё на стадии эскиза, насколько долгой будет эта жизнь.
+
+~~~art
+pic recycle
+~~~
 
 ## Правило трёх R
 
@@ -430,16 +549,24 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 | **Меньше упаковки** | или упаковка, которая становится частью изделия |
 | **Энергия** | лампы и приборы, потребляющие мало энергии |
 
+~~~art
+palette eco
+~~~
+
 ## Апсайклинг
 
 **Апсайклинг** — сделать из старого что-то лучшее: скамейку из паллет, сумку из старого баннера, светильник из банки, табурет из покрышки. Результат должен выглядеть как спроектированная вещь, а не как мусор.
+
+~~~art
+pic box-net
+~~~
 
 ## Задание
 
 Найди дома три предмета, которые выбросили бы: пластиковую бутылку, жестянку, картон, старую футболку. Выбери один и спроектируй из него новую полезную вещь. Нарисуй идею с двух сторон, запиши материалы и инструменты, затем сделай её. Подумай о правиле трёх R и объясни, какому R следует твой проект.
 
-### Упражнения
-
+~~~art
+tasks
 1. Что такое жизненный цикл вещи?
 2. Назови правило трёх R.
 3. Приведи пример повторного использования.
@@ -447,10 +574,12 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 5. Как ремонтопригодность меняет устройство вещи?
 6. Что такое апсайклинг?
 7. Спроектируй и сделай предмет из повторно использованных материалов.
+~~~
 
-### Ответы
-
-1. Материалы добывают, вещь производят, перевозят, продают, используют, затем выбрасывают или перерабатывают. 2. Сокращать, использовать повторно, перерабатывать. 3. Например, банка становится подставкой для карандашей. 4. Смесь труднее разделить на чистые материалы. 5. Детали соединяют винтами, а не клеем, и есть запасные части. 6. Создание из старой вещи чего-то лучшего и полезного. 7. Твой предмет.`,
+~~~art
+hints
+1. Материалы добывают, вещь производят, перевозят, продают, используют, затем выбрасывают или перерабатывают. 2. Сокращать, использовать повторно, перерабатывать. 3. Например, банка становится подставкой для карандашей. 4. Смесь труднее разделить на чистые материалы. 5. Детали соединяют винтами, а не клеем, и есть запасные части. 6. Создание из старой вещи чего-то лучшего и полезного. 7. Твой предмет.
+~~~`,
       },
       [
         q(t("Making a pencil holder from a jar is an example of…", "Բանկայից մատիտաման պատրաստելն օրինակ է…", "Подставка для карандашей из банки — пример…"), [t("reuse", "կրկին օգտագործման", "повторного использования"), t("recycling", "վերամշակման", "переработки"), t("packaging", "փաթեթավորման", "упаковки")], 0),
@@ -486,6 +615,11 @@ Find three objects at home that would be thrown away: a plastic bottle, a tin, c
 | **Animator, photographer, set designer** | moving images, photographs, theatre and film spaces |
 | **Craftsman and restorer** | makes and repairs things by hand, saves old works |
 
+~~~art
+pic poster logo-kinds app-screen chair room-plan park-plan
+Graphic, brand, digital, product, interior and landscape designers: who made which?
+~~~
+
 ## What all of them need
 
 * **Drawing and visual thinking:** to show ideas quickly.
@@ -503,12 +637,16 @@ In Armenia there are art schools, the Yerevan State Academy of Fine Arts, and ar
 
 A **portfolio** is a collection of your best works. Rules: show only the best, start and end with a strong work, give each work a short note (task, materials, what you did), and keep the pages in one style.
 
+~~~art
+pic book-spread
+~~~
+
 ## Task
 
 Choose five or six of your works from this year, photograph or scan them, and make one portfolio page: a title with your name, images in a grid, and a short note for each. Add one sentence about which profession interests you most and why.
 
-### Exercises
-
+~~~art
+tasks
 1. What does an urban planner do?
 2. Which designer works on apps and websites?
 3. Name three skills needed by every designer.
@@ -516,10 +654,12 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 5. What is a portfolio?
 6. Name two rules of a good portfolio.
 7. Make a portfolio page with five or six of your works.
+~~~
 
-### Answers
-
-1. Plans districts, streets and cities. 2. The interface (UX/UI) designer. 3. Any three: drawing, knowledge of materials, attention to people, explaining ideas, teamwork, curiosity. 4. In art schools, the Academy of Fine Arts and university departments. 5. A collection of your best works. 6. For example: show only the best; give each work a short note; keep one style. 7. Your page.`,
+~~~art
+hints
+1. Plans districts, streets and cities. 2. The interface (UX/UI) designer. 3. Any three: drawing, knowledge of materials, attention to people, explaining ideas, teamwork, curiosity. 4. In art schools, the Academy of Fine Arts and university departments. 5. A collection of your best works. 6. For example: show only the best; give each work a short note; keep one style. 7. Your page.
+~~~`,
         hy: `## Ով է աշխատում դիզայնի հետ
 
 | Մասնագիտություն | Ինչ են անում |
@@ -535,6 +675,11 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 | **Նկարազարդող** | նկարներ գրքերի, մամուլի, խաղերի, անիմացիայի համար |
 | **Անիմատոր, լուսանկարիչ, բեմանկարիչ** | շարժուն պատկերներ, լուսանկարներ, թատրոնի և կինոյի տարածքներ |
 | **Արհեստավոր և վերականգնող** | ձեռքով պատրաստում և նորոգում է իրեր, փրկում հին գործերը |
+
+~~~art
+pic poster logo-kinds app-screen chair room-plan park-plan
+Գրաֆիկական, բրենդի, թվային, արտադրանքի, ինտերիերի և լանդշաֆտային դիզայներներ․ ո՞վ ինչ է ստեղծել։
+~~~
 
 ## Ինչ է պետք բոլորին
 
@@ -553,12 +698,16 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 
 **Պորտֆոլիոն** քո լավագույն աշխատանքների հավաքածուն է։ Կանոններ՝ ցույց տուր միայն լավագույնը, սկսիր և ավարտիր ուժեղ գործով, յուրաքանչյուր գործին տուր կարճ նշում (խնդիր, նյութեր, ինչ ես արել) և էջերը պահիր մեկ ոճով։
 
+~~~art
+pic book-spread
+~~~
+
 ## Առաջադրանք
 
 Ընտրիր այս տարվա քո հինգ-վեց աշխատանքը, լուսանկարիր կամ սկանավորիր դրանք և պատրաստիր պորտֆոլիոյի մեկ էջ՝ վերնագիր քո անունով, պատկերները ցանցով և կարճ նշում յուրաքանչյուրի համար։ Ավելացրու մեկ նախադասություն այն մասին, թե որ մասնագիտությունն է քեզ ամենաշատը հետաքրքրում և ինչու։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչ է անում քաղաքաշինարարը։
 2. Որ դիզայներն է աշխատում հավելվածների և կայքերի վրա։
 3. Անվանիր երեք հմտություն, որ պետք է յուրաքանչյուր դիզայների։
@@ -566,10 +715,12 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 5. Ինչ է պորտֆոլիոն։
 6. Անվանիր լավ պորտֆոլիոյի երկու կանոն։
 7. Պատրաստիր պորտֆոլիոյի էջ քո հինգ-վեց աշխատանքով։
+~~~
 
-### Պատասխաններ
-
-1. Պլանավորում է թաղամասեր, փողոցներ և քաղաքներ։ 2. Ինտերֆեյսի (UX/UI) դիզայները։ 3. Ցանկացած երեքը՝ նկարչություն, նյութերի իմացություն, ուշադրություն մարդկանց, գաղափարը բացատրել, թիմային աշխատանք, հետաքրքրասիրություն։ 4. Գեղարվեստի դպրոցներում, Գեղարվեստի ակադեմիայում և բուհերի բաժիններում։ 5. Քո լավագույն աշխատանքների հավաքածուն։ 6. Օրինակ՝ ցույց տալ միայն լավագույնը, յուրաքանչյուր գործին տալ կարճ նշում, պահել մեկ ոճ։ 7. Քո էջը։`,
+~~~art
+hints
+1. Պլանավորում է թաղամասեր, փողոցներ և քաղաքներ։ 2. Ինտերֆեյսի (UX/UI) դիզայները։ 3. Ցանկացած երեքը՝ նկարչություն, նյութերի իմացություն, ուշադրություն մարդկանց, գաղափարը բացատրել, թիմային աշխատանք, հետաքրքրասիրություն։ 4. Գեղարվեստի դպրոցներում, Գեղարվեստի ակադեմիայում և բուհերի բաժիններում։ 5. Քո լավագույն աշխատանքների հավաքածուն։ 6. Օրինակ՝ ցույց տալ միայն լավագույնը, յուրաքանչյուր գործին տալ կարճ նշում, պահել մեկ ոճ։ 7. Քո էջը։
+~~~`,
         ru: `## Кто работает с дизайном
 
 | Профессия | Чем занимается |
@@ -585,6 +736,11 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 | **Иллюстратор** | рисунки для книг, прессы, игр, анимации |
 | **Аниматор, фотограф, художник-постановщик** | движущееся изображение, фотографии, пространство театра и кино |
 | **Мастер-ремесленник и реставратор** | делает и чинит вещи руками, спасает старые произведения |
+
+~~~art
+pic poster logo-kinds app-screen chair room-plan park-plan
+Графический, бренд-, цифровой, предметный, интерьерный и ландшафтный дизайнеры: кто что сделал?
+~~~
 
 ## Что нужно всем
 
@@ -603,12 +759,16 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 
 **Портфолио** — собрание твоих лучших работ. Правила: показывай только лучшее, начинай и заканчивай сильной работой, давай к каждой работе короткую подпись (задача, материалы, что сделано) и держи страницы в одном стиле.
 
+~~~art
+pic book-spread
+~~~
+
 ## Задание
 
 Выбери пять-шесть своих работ этого года, сфотографируй или отсканируй их и сделай одну страницу портфолио: заголовок с твоим именем, изображения по сетке и короткая подпись к каждой. Добавь одно предложение о том, какая профессия тебе интереснее всего и почему.
 
-### Упражнения
-
+~~~art
+tasks
 1. Чем занимается градостроитель?
 2. Какой дизайнер работает над приложениями и сайтами?
 3. Назови три навыка, нужных каждому дизайнеру.
@@ -616,10 +776,12 @@ Choose five or six of your works from this year, photograph or scan them, and ma
 5. Что такое портфолио?
 6. Назови два правила хорошего портфолио.
 7. Сделай страницу портфолио с пятью-шестью своими работами.
+~~~
 
-### Ответы
-
-1. Планирует кварталы, улицы и города. 2. Дизайнер интерфейсов (UX/UI). 3. Любые три: рисунок, знание материалов, внимание к людям, умение объяснить идею, работа в команде, любознательность. 4. В художественных школах, Академии художеств и на факультетах вузов. 5. Собрание лучших работ. 6. Например: показывать только лучшее, давать короткие подписи, держать единый стиль. 7. Твоя страница.`,
+~~~art
+hints
+1. Планирует кварталы, улицы и города. 2. Дизайнер интерфейсов (UX/UI). 3. Любые три: рисунок, знание материалов, внимание к людям, умение объяснить идею, работа в команде, любознательность. 4. В художественных школах, Академии художеств и на факультетах вузов. 5. Собрание лучших работ. 6. Например: показывать только лучшее, давать короткие подписи, держать единый стиль. 7. Твоя страница.
+~~~`,
       },
       [
         q(t("Who plans districts, streets and whole cities?", "Ով է պլանավորում թաղամասերը, փողոցները և ամբողջ քաղաքները։", "Кто планирует кварталы, улицы и целые города?"), [t("the urban planner", "քաղաքաշինարարը", "градостроитель"), t("the illustrator", "նկարազարդողը", "иллюстратор"), t("the restorer", "վերականգնողը", "реставратор")], 0),
@@ -660,6 +822,10 @@ The final project brings together everything of this year. Choose one theme:
 6. **Model or prototype:** paper, cardboard, clay, or a finished graphic file.
 7. **Presentation:** board, speech, answers.
 
+~~~art
+pic storyboard
+~~~
+
 ## The presentation board
 
 On one sheet (A2 or A3) place:
@@ -672,6 +838,14 @@ On one sheet (A2 or A3) place:
 * **materials and colours**.
 
 Keep a grid, leave free space and use one or two fonts.
+
+~~~art
+steps poster-layout
+~~~
+
+~~~art
+compose
+~~~
 
 ## Speaking about your work
 
@@ -689,8 +863,8 @@ Look at the audience, speak calmly, answer questions without arguing. «I do not
 
 Carry out the project through all seven stages, prepare the board and present it to the class.
 
-### Exercises
-
+~~~art
+tasks
 1. How do you begin a design project?
 2. Why make at least ten sketches?
 3. What goes on a presentation board?
@@ -698,10 +872,12 @@ Carry out the project through all seven stages, prepare the board and present it
 5. How long should a presentation be?
 6. What is a good answer to a question you cannot answer?
 7. Complete your project, make the board and present it.
+~~~
 
-### Answers
-
-1. By writing in one sentence what problem you solve and for whom. 2. To avoid stopping at the first idea and find a better one. 3. Title, name, short text, main image, drawings with scale, sketches, materials and colours. 4. What problem you solved and for whom. 5. Two or three minutes. 6. «I do not know yet, I would check it.» 7. Your project.`,
+~~~art
+hints
+1. By writing in one sentence what problem you solve and for whom. 2. To avoid stopping at the first idea and find a better one. 3. Title, name, short text, main image, drawings with scale, sketches, materials and colours. 4. What problem you solved and for whom. 5. Two or three minutes. 6. «I do not know yet, I would check it.» 7. Your project.
+~~~`,
         hy: `## Թեմայի ընտրություն
 
 Ավարտական նախագիծը միավորում է այս տարվա ամեն ինչ։ Ընտրիր մեկ թեմա.
@@ -723,6 +899,10 @@ Carry out the project through all seven stages, prepare the board and present it
 6. **Մակետ կամ նախատիպ**՝ թուղթ, ստվարաթուղթ, կավ կամ պատրաստի գրաֆիկական ֆայլ։
 7. **Ներկայացում**՝ տախտակ, ելույթ, պատասխաններ։
 
+~~~art
+pic storyboard
+~~~
+
 ## Ներկայացման տախտակը
 
 Մեկ թերթի վրա (A2 կամ A3) տեղադրիր՝
@@ -735,6 +915,14 @@ Carry out the project through all seven stages, prepare the board and present it
 * **նյութեր և գույներ**։
 
 Պահիր ցանց, թող ազատ տարածություն և օգտագործիր մեկ-երկու տառատեսակ։
+
+~~~art
+steps poster-layout
+~~~
+
+~~~art
+compose
+~~~
 
 ## Խոսել քո աշխատանքի մասին
 
@@ -752,8 +940,8 @@ Carry out the project through all seven stages, prepare the board and present it
 
 Իրականացրու նախագիծը բոլոր յոթ փուլով, պատրաստիր տախտակը և ներկայացրու դասարանին։
 
-### Վարժություններ
-
+~~~art
+tasks
 1. Ինչպես է սկսվում դիզայն-նախագիծը։
 2. Ինչու անել առնվազն տասն էսքիզ։
 3. Ինչ է տեղադրվում ներկայացման տախտակի վրա։
@@ -761,10 +949,12 @@ Carry out the project through all seven stages, prepare the board and present it
 5. Որքան պետք է տևի ներկայացումը։
 6. Ինչ է լավ պատասխանն այն հարցին, որին չես կարող պատասխանել։
 7. Ավարտիր նախագիծը, պատրաստիր տախտակը և ներկայացրու։
+~~~
 
-### Պատասխաններ
-
-1. Մեկ նախադասությամբ գրելով, թե ինչ խնդիր ես լուծում և ում համար։ 2. Որպեսզի չկանգնես առաջին գաղափարի վրա և գտնես ավելի լավը։ 3. Վերնագիր, անուն, կարճ տեքստ, գլխավոր պատկեր, գծագրեր մասշտաբով, էսքիզներ, նյութեր և գույներ։ 4. Ինչ խնդիր լուծեցիր և ում համար։ 5. Երկու-երեք րոպե։ 6. «Դեռ չգիտեմ, կստուգեի»։ 7. Քո նախագիծը։`,
+~~~art
+hints
+1. Մեկ նախադասությամբ գրելով, թե ինչ խնդիր ես լուծում և ում համար։ 2. Որպեսզի չկանգնես առաջին գաղափարի վրա և գտնես ավելի լավը։ 3. Վերնագիր, անուն, կարճ տեքստ, գլխավոր պատկեր, գծագրեր մասշտաբով, էսքիզներ, նյութեր և գույներ։ 4. Ինչ խնդիր լուծեցիր և ում համար։ 5. Երկու-երեք րոպե։ 6. «Դեռ չգիտեմ, կստուգեի»։ 7. Քո նախագիծը։
+~~~`,
         ru: `## Выбор темы
 
 Итоговый проект собирает всё, чему научились за год. Выбери одну тему:
@@ -786,6 +976,10 @@ Carry out the project through all seven stages, prepare the board and present it
 6. **Макет или прототип:** бумага, картон, глина или готовый графический файл.
 7. **Защита:** планшет, выступление, ответы.
 
+~~~art
+pic storyboard
+~~~
+
 ## Презентационный планшет
 
 На одном листе (А2 или А3) размести:
@@ -798,6 +992,14 @@ Carry out the project through all seven stages, prepare the board and present it
 * **материалы и цвета**.
 
 Держи сетку, оставляй свободное место и используй один-два шрифта.
+
+~~~art
+steps poster-layout
+~~~
+
+~~~art
+compose
+~~~
 
 ## Как рассказывать о работе
 
@@ -815,8 +1017,8 @@ Carry out the project through all seven stages, prepare the board and present it
 
 Выполни проект по всем семи этапам, подготовь планшет и защити его перед классом.
 
-### Упражнения
-
+~~~art
+tasks
 1. С чего начинается дизайн-проект?
 2. Зачем делать не меньше десяти эскизов?
 3. Что размещают на презентационном планшете?
@@ -824,10 +1026,12 @@ Carry out the project through all seven stages, prepare the board and present it
 5. Сколько должна длиться защита?
 6. Какой ответ хорош, если ты не знаешь ответа на вопрос?
 7. Заверши проект, сделай планшет и защити его.
+~~~
 
-### Ответы
-
-1. С записи одним предложением, какую задачу и для кого ты решаешь. 2. Чтобы не остановиться на первой идее и найти лучшую. 3. Название, имя, короткий текст, главное изображение, чертежи с масштабом, эскизы, материалы и цвета. 4. Какую задачу ты решал и для кого. 5. Две-три минуты. 6. «Я пока не знаю, я бы это проверил». 7. Твой проект.`,
+~~~art
+hints
+1. С записи одним предложением, какую задачу и для кого ты решаешь. 2. Чтобы не остановиться на первой идее и найти лучшую. 3. Название, имя, короткий текст, главное изображение, чертежи с масштабом, эскизы, материалы и цвета. 4. Какую задачу ты решал и для кого. 5. Две-три минуты. 6. «Я пока не знаю, я бы это проверил». 7. Твой проект.
+~~~`,
       },
       [
         q(t("A design project begins with…", "Դիզայն-նախագիծը սկսվում է…", "Дизайн-проект начинается с…"), [t("stating the problem", "խնդրի ձևակերպումից", "формулировки задачи"), t("the model", "մակետից", "макета"), t("the presentation", "ներկայացումից", "защиты")], 0),
@@ -863,6 +1067,10 @@ Carry out the project through all seven stages, prepare the board and present it
 
 **Project work.** Problem, research, ideas, choice, development, model, presentation.
 
+~~~art
+pic poster logo-kinds pictograms infographic app-screen model-building
+~~~
+
 ## The main idea of the year
 
 Design and architecture are not decoration. They are a way to solve people's problems with form. A good object or building is **strong, useful and beautiful** at once, fits its place, respects the people who will use it, and does not waste the world's materials.
@@ -874,8 +1082,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 3. Choose one you would redo and say what you would change.
 4. Write what you want to learn next: drawing, modelling, computer graphics, photography, crafts.
 
-### Exercises
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Name five laws of composition.
 2. What is the 60–30–10 rule?
 3. Which structures carry a roof? Name three.
@@ -883,10 +1095,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 5. Name three elements of a brand identity.
 6. What are the three qualities of a good building according to Vitruvius?
 7. Review your year: three best works, one to redo, and a plan for next year.
+~~~
 
-### Answers
-
-1. Balance, symmetry (or asymmetry), rhythm, contrast, dominant. 2. About 60% main colour, 30% second colour, 10% accent. 3. Any three: post and beam, arch, vault, dome, frame. 4. 1 cm on the drawing is 100 cm in reality. 5. Any three: logo, colours, fonts, pattern, carriers. 6. Strong, useful, beautiful. 7. Your review.`,
+~~~art
+hints
+1. Balance, symmetry (or asymmetry), rhythm, contrast, dominant. 2. About 60% main colour, 30% second colour, 10% accent. 3. Any three: post and beam, arch, vault, dome, frame. 4. 1 cm on the drawing is 100 cm in reality. 5. Any three: logo, colours, fonts, pattern, carriers. 6. Strong, useful, beautiful. 7. Your review.
+~~~`,
         hy: `## Ինչ սովորեցինք այս տարի
 
 **Կոմպոզիցիա։** Հավասարակշռություն, համաչափություն և անհամաչափություն, ռիթմ, կոնտրաստ, դոմինանտ։ Տեսողական ծանրություն՝ մուգ, մեծ և վառ ձևերն ավելի ծանր են։ Ստատիկ և դինամիկ կոմպոզիցիաներ։
@@ -903,6 +1117,10 @@ Design and architecture are not decoration. They are a way to solve people's pro
 
 **Նախագծային աշխատանք։** Խնդիր, հետազոտություն, գաղափարներ, ընտրություն, մշակում, մակետ, ներկայացում։
 
+~~~art
+pic poster logo-kinds pictograms infographic app-screen model-building
+~~~
+
 ## Տարվա գլխավոր գաղափարը
 
 Դիզայնն ու ճարտարապետությունը զարդ չեն։ Դրանք մարդկանց խնդիրները ձևով լուծելու եղանակ են։ Լավ առարկան կամ շենքը միաժամանակ **ամուր, օգտակար և գեղեցիկ** է, համապատասխանում է իր վայրին, հարգում է այն մարդկանց, ովքեր կօգտվեն դրանից, և չի վատնում աշխարհի նյութերը։
@@ -914,8 +1132,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 3. Ընտրիր մեկը, որը նորից կանեիր, և ասա՝ ինչ կփոխեիր։
 4. Գրիր, թե ինչ ես ուզում սովորել հետո՝ գծանկար, մակետավորում, համակարգչային գրաֆիկա, լուսանկարչություն, արհեստներ։
 
-### Վարժություններ
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Անվանիր կոմպոզիցիայի հինգ օրենք։
 2. Ինչ է 60–30–10 կանոնը։
 3. Որ կառուցվածքներն են կրում տանիքը։ Անվանիր երեքը։
@@ -923,10 +1145,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 5. Անվանիր բրենդի ինքնության երեք տարր։
 6. Որոնք են լավ շենքի երեք որակները՝ ըստ Վիտրուվիուսի։
 7. Ամփոփիր տարին՝ երեք լավագույն աշխատանք, մեկը նորից անելու և պլան հաջորդ տարվա համար։
+~~~
 
-### Պատասխաններ
-
-1. Հավասարակշռություն, համաչափություն (կամ անհամաչափություն), ռիթմ, կոնտրաստ, դոմինանտ։ 2. Մոտ 60%՝ հիմնական գույն, 30%՝ երկրորդ գույն, 10%՝ շեշտ։ 3. Ցանկացած երեքը՝ սյուն և հեծան, կամար, թաղ, գմբեթ, կմախք։ 4. Գծագրի 1 սմ-ն իրականում 100 սմ է։ 5. Ցանկացած երեքը՝ լոգո, գույներ, տառատեսակներ, նախշ, կրիչներ։ 6. Ամուր, օգտակար, գեղեցիկ։ 7. Քո ամփոփումը։`,
+~~~art
+hints
+1. Հավասարակշռություն, համաչափություն (կամ անհամաչափություն), ռիթմ, կոնտրաստ, դոմինանտ։ 2. Մոտ 60%՝ հիմնական գույն, 30%՝ երկրորդ գույն, 10%՝ շեշտ։ 3. Ցանկացած երեքը՝ սյուն և հեծան, կամար, թաղ, գմբեթ, կմախք։ 4. Գծագրի 1 սմ-ն իրականում 100 սմ է։ 5. Ցանկացած երեքը՝ լոգո, գույներ, տառատեսակներ, նախշ, կրիչներ։ 6. Ամուր, օգտակար, գեղեցիկ։ 7. Քո ամփոփումը։
+~~~`,
         ru: `## Чему мы научились в этом году
 
 **Композиция.** Равновесие, симметрия и асимметрия, ритм, контраст, доминанта. Зрительный вес: тёмные, крупные и яркие формы тяжелее. Статичные и динамичные композиции.
@@ -943,6 +1167,10 @@ Design and architecture are not decoration. They are a way to solve people's pro
 
 **Проектная работа.** Задача, исследование, идеи, выбор, разработка, макет, защита.
 
+~~~art
+pic poster logo-kinds pictograms infographic app-screen model-building
+~~~
+
 ## Главная мысль года
 
 Дизайн и архитектура — не украшение. Это способ решать задачи людей формой. Хорошая вещь или здание одновременно **прочны, полезны и красивы**, подходят своему месту, уважают людей, которые ими пользуются, и не расходуют впустую материалы мира.
@@ -954,8 +1182,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 3. Выбери одну, которую переделал бы, и скажи, что изменил бы.
 4. Запиши, чему хочешь учиться дальше: рисунку, макетированию, компьютерной графике, фотографии, ремёслам.
 
-### Упражнения
+~~~art
+sketch
+~~~
 
+~~~art
+tasks
 1. Назови пять законов композиции.
 2. Что такое правило 60–30–10?
 3. Какие конструкции несут крышу? Назови три.
@@ -963,10 +1195,12 @@ Design and architecture are not decoration. They are a way to solve people's pro
 5. Назови три элемента фирменного стиля.
 6. Каковы три качества хорошего здания по Витрувию?
 7. Подведи итоги года: три лучшие работы, одна на переделку и план на будущее.
+~~~
 
-### Ответы
-
-1. Равновесие, симметрия (или асимметрия), ритм, контраст, доминанта. 2. Около 60% основного цвета, 30% второго, 10% акцента. 3. Любые три: стойка и балка, арка, свод, купол, каркас. 4. 1 см на чертеже равен 100 см в действительности. 5. Любые три: логотип, цвета, шрифты, паттерн, носители. 6. Прочность, польза, красота. 7. Твои итоги.`,
+~~~art
+hints
+1. Равновесие, симметрия (или асимметрия), ритм, контраст, доминанта. 2. Около 60% основного цвета, 30% второго, 10% акцента. 3. Любые три: стойка и балка, арка, свод, купол, каркас. 4. 1 см на чертеже равен 100 см в действительности. 5. Любые три: логотип, цвета, шрифты, паттерн, носители. 6. Прочность, польза, красота. 7. Твои итоги.
+~~~`,
       },
       [
         q(t("Which is NOT a law of composition?", "Որը կոմպոզիցիայի օրենք ՉԷ։", "Что НЕ является законом композиции?"), [t("resolution", "լուծաչափը", "разрешение"), t("rhythm", "ռիթմը", "ритм"), t("dominant", "դոմինանտը", "доминанта")], 0),
