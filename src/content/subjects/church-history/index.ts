@@ -17,7 +17,8 @@ import { ru as ru9 } from "./grade-9.ru";
 import { en as en9 } from "./grade-9.en";
 import { churchHistoryGrade10 } from "./grade-10";
 import { ru as ru10 } from "./grade-10.ru";
+import { en as en10 } from "./grade-10.en";
 import { churchHistoryGrade11 } from "./grade-11";
 import { ru as ru11 } from "./grade-11.ru";
 
-export const churchHistory: CourseSeed[] = [withEn(withRu(churchHistoryGrade5, ru5), en5), withEn(withRu(churchHistoryGrade6, ru6), en6), withEn(withRu(churchHistoryGrade7, ru7), en7), withEn(withRu(churchHistoryGrade8, ru8), en8), withEn(withRu(churchHistoryGrade9, ru9), en9), withRu(churchHistoryGrade10, ru10), withRu(churchHistoryGrade11, ru11)];
+export const churchHistory: CourseSeed[] = [withEn(withRu(churchHistoryGrade5, ru5), en5), withEn(withRu(churchHistoryGrade6, ru6), en6), withEn(withRu(churchHistoryGrade7, ru7), en7), withEn(withRu(churchHistoryGrade8, ru8), en8), withEn(withRu(churchHistoryGrade9, ru9), en9), withEn(withRu(churchHistoryGrade10, ru10), en10), withRu(churchHistoryGrade11, ru11)];
