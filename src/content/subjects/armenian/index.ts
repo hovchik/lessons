@@ -10,6 +10,7 @@ import { armenianGrade7 } from "./grade-7";
 import { armenianGrade8 } from "./grade-8";
 import { armenianGrade9 } from "./grade-9";
 import { armenianGrade10 } from "./grade-10";
+import { armenianGrade11 } from "./grade-11";
 
 export const armenian: CourseSeed[] = [
   armenianGrade1,
@@ -24,44 +25,7 @@ export const armenian: CourseSeed[] = [
   armenianGrade9,
 
   armenianGrade10,
-  course(
-    11,
-    ["Morphology and syntax at an advanced level, speech culture; literature of the 19th century and the first half of the 20th.", "Ձևաբանություն և շարահյուսություն խորացված, խոսքի մշակույթ, 19-րդ դարի և 20-րդ դարի առաջին կեսի գրականություն։", "Морфология и синтаксис на углублённом уровне, культура речи; литература XIX века и первой половины XX."],
-    ["Armenia grade 11 («Հայոց լեզու» 2 h + «Հայ գրականություն» 2–3 h): grammatical system review, difficult cases of morphology, syntax of the complex sentence and text, speech culture and norms, public speaking. Literature: Abovyan, Nalbandian, Raffi, Proshyan, Shirvanzade, Sundukyan, Tumanyan, Isahakyan, Teryan, Varuzhan, Siamanto, Metsarents, Charents, Bakunts, Totovents, Zoryan.", "Հայաստան, 11-րդ դասարան («Հայոց լեզու» 2 ժ + «Հայ գրականություն» 2–3 ժ)՝ քերականական համակարգի ամփոփում, ձևաբանության բարդ դեպքեր, բարդ նախադասության և տեքստի շարահյուսություն, խոսքի մշակույթ և նորմեր, հրապարակային խոսք։ Գրականություն՝ Աբովյան, Նալբանդյան, Րաֆֆի, Պռոշյան, Շիրվանզադե, Սունդուկյան, Թումանյան, Իսահակյան, Տերյան, Վարուժան, Սիամանթո, Մեծարենց, Չարենց, Բակունց, Թոթովենց, Զորյան։", "Армения, 11 класс («Армянский язык» 2 ч + «Армянская литература» 2–3 ч): обзор грамматической системы, трудные случаи морфологии, синтаксис сложного предложения и текста, культура речи и нормы, публичная речь. Литература: Абовян, Налбандян, Раффи, Прошян, Ширванзаде, Сундукян, Туманян, Исаакян, Терьян, Варужан, Сиаманто, Мецаренц, Чаренц, Бакунц, Тотовенц, Зорян."],
-    ruNote,
-    { armenia: 4, russia: null },
-    [
-      unit(t("Morphology: difficult cases", "Ձևաբանություն․ բարդ դեպքեր", "Морфология: трудные случаи"), t("Declension and conjugation exceptions, participles in use, norm and variation.", "Հոլովման և խոնարհման բացառություններ, դերբայների գործածություն, նորմ և տարբերակայնություն։", "Исключения склонения и спряжения, употребление причастий, норма и вариативность."), [
-        ["declension-difficult", "Difficult declensions and plural forms", "Բարդ հոլովումներ և հոգնակի ձևեր", "Трудные склонения и формы множественного числа"],
-        ["participle-usage", "Participles and converbs in text", "Դերբայները տեքստում", "Причастия и деепричастные формы в тексте"],
-        ["verb-norms", "Norms of verb usage; common errors", "Բայի գործածության նորմեր, տարածված սխալներ", "Нормы употребления глагола; типичные ошибки"],
-      ]),
-      unit(t("Syntax: advanced", "Շարահյուսություն․ խորացված", "Синтаксис: углублённо"), t("Complex syntactic wholes, period, paragraph, text syntax, punctuation mastery.", "Բարդ շարահյուսական ամբողջություններ, պարբերույթ, պարբերություն, տեքստի շարահյուսություն, կետադրության տիրապետում։", "Сложные синтаксические целые, период, абзац, синтаксис текста, владение пунктуацией."), [
-        ["complex-syntactic-whole", "Complex syntactic whole and paragraph", "Բարդ շարահյուսական ամբողջություն և պարբերություն", "Сложное синтаксическое целое и абзац"],
-        ["period", "The period; rhetorical syntax", "Պարբերույթ, հռետորական շարահյուսություն", "Период; риторический синтаксис"],
-        ["punctuation-mastery", "Punctuation mastery: author's punctuation", "Կետադրության տիրապետում, հեղինակային կետադրություն", "Мастерство пунктуации: авторская пунктуация"],
-      ]),
-      unit(t("Speech culture", "Խոսքի մշակույթ", "Культура речи"), t("Norms, correctness, purity, expressiveness, public speaking, debate.", "Նորմեր, ճշտություն, մաքրություն, արտահայտչականություն, հրապարակային խոսք, բանավեճ։", "Нормы, правильность, чистота, выразительность, публичная речь, дебаты."), [
-        ["speech-norms", "Literary norm and common errors", "Գրական նորմ և տարածված սխալներ", "Литературная норма и типичные ошибки"],
-        ["public-speaking", "Public speaking: structure of a speech", "Հրապարակային խոսք․ ելույթի կառուցվածք", "Публичная речь: структура выступления"],
-        ["debate", "Debate and argumentation", "Բանավեճ և փաստարկում", "Дебаты и аргументация"],
-      ]),
-      unit(t("Literature: the 19th century", "Գրականություն․ 19-րդ դար", "Литература: XIX век"), t("Abovyan, Nalbandian, Raffi, Sundukyan, Shirvanzade, Paronyan, Durian, Patkanian.", "Աբովյան, Նալբանդյան, Րաֆֆի, Սունդուկյան, Շիրվանզադե, Պարոնյան, Դուրյան, Պատկանյան։", "Абовян, Налбандян, Раффи, Сундукян, Ширванзаде, Паронян, Дурян, Патканян."), [
-        ["abovyan-11", "Abovyan: «Վերք Հայաստանի» as a novel", "Աբովյան․ «Վերք Հայաստանի»՝ որպես վեպ", "Абовян: «Раны Армении» как роман"],
-        ["sundukyan", "Gabriel Sundukyan: «Պեպո»", "Գաբրիել Սունդուկյան․ «Պեպո»", "Габриэл Сундукян: «Пэпо»"],
-        ["paronyan", "Hakob Paronyan: satire", "Հակոբ Պարոնյան․ երգիծանք", "Акоп Паронян: сатира"],
-        ["durian", "Petros Durian: lyrics", "Պետրոս Դուրյան․ քնարերգություն", "Петрос Дурян: лирика"],
-        ["raffi-shirvanzade-11", "Raffi and Shirvanzade: the novel", "Րաֆֆի և Շիրվանզադե․ վեպ", "Раффи и Ширванзаде: роман"],
-      ]),
-      unit(t("Literature: early 20th century", "Գրականություն․ 20-րդ դարի սկիզբ", "Литература: начало XX века"), t("Tumanyan, Isahakyan, Teryan, Varuzhan, Siamanto, Metsarents, Charents, Bakunts, Totovents, Zoryan.", "Թումանյան, Իսահակյան, Տերյան, Վարուժան, Սիամանթո, Մեծարենց, Չարենց, Բակունց, Թոթովենց, Զորյան։", "Туманян, Исаакян, Терьян, Варужан, Сиаманто, Мецаренц, Чаренц, Бакунц, Тотовенц, Зорян."), [
-        ["tumanyan-11", "Tumanyan: the whole world", "Թումանյան․ ամբողջ աշխարհը", "Туманян: целый мир"],
-        ["isahakyan-teryan-11", "Isahakyan and Teryan", "Իսահակյան և Տերյան", "Исаакян и Терьян"],
-        ["western-armenian-poets", "Western Armenian poets: Varuzhan, Siamanto, Metsarents", "Արևմտահայ բանաստեղծներ․ Վարուժան, Սիամանթո, Մեծարենց", "Западноармянские поэты: Варужан, Сиаманто, Мецаренц"],
-        ["charents-11", "Charents: from «Ես իմ անուշ» to «Գիրք ճանապարհի»", "Չարենց․ «Ես իմ անուշ»-ից «Գիրք ճանապարհի»", "Чаренц: от «Ес им ануш» до «Книги пути»"],
-        ["bakunts-totovents", "Bakunts, Totovents, Zoryan: prose of the 1920s–30s", "Բակունց, Թոթովենց, Զորյան․ 1920–30-ականների արձակ", "Бакунц, Тотовенц, Зорян: проза 1920–30-х"],
-      ]),
-    ],
-  ),
+  armenianGrade11,
   course(
     12,
     ["Review of the language course for the unified exam; literature of the second half of the 20th century and today; essay writing.", "Լեզվի դասընթացի ամփոփում միասնական քննության համար, 20-րդ դարի երկրորդ կեսի և մեր օրերի գրականություն, շարադրություն։", "Повторение курса языка к единому экзамену; литература второй половины XX века и современность; написание эссе."],
