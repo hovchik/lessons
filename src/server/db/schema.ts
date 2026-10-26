@@ -185,6 +185,35 @@ export const attempts = sqliteTable(
 export type User = typeof users.$inferSelect;
 export type LessonProgress = typeof lessonProgress.$inferSelect;
 export type Attempt = typeof attempts.$inferSelect;
+/** Tips, tricks and shortcuts that go beyond the standard course for one grade of a subject. */
+export const TIP_CATEGORIES = ["mentalMath", "memory", "problemSolving", "language", "exam", "study"] as const;
+export type TipCategory = (typeof TIP_CATEGORIES)[number];
+
+export const tips = sqliteTable(
+  "tips",
+  {
+    id: text("id").primaryKey(), // `${courseId}-${slug}`
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    position: integer("position").notNull(),
+    slug: text("slug").notNull(),
+    category: text("category").$type<TipCategory>().notNull().default("study"),
+    title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
+    /** Markdown (GFM + KaTeX math) body per language. */
+    body: text("body", { mode: "json" }).$type<I18nText>().notNull(),
+    /** draft | published | deleted (soft-deleted in the admin panel; kept so reseeding does not revive it) */
+    status: text("status").notNull().default("published"),
+    /** seed | admin — who last wrote the text */
+    source: text("source").notNull().default("seed"),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("tips_course").on(t.courseId)],
+);
+
+export type Tip = typeof tips.$inferSelect;
 
 /** One exam question: a multiple-choice item worth `points` (default 1), optionally tagged with a topic. */
 export type ExamQuestion = QuizQuestion & {

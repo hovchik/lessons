@@ -7,8 +7,9 @@ import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { ExamCard } from "@/components/site/exam-card";
+import { TipsSection } from "@/components/site/tips-section";
 import { getCourseProgress } from "@/server/progress";
-import { getCourse, getCourses, getExams } from "@/server/queries";
+import { getCourse, getCourses, getCourseTips, getExams } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
@@ -32,6 +33,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const completedCount = [...progress.values()].filter((p) => p.completedAt).length;
   const siblings = await getCourses({ subjectId: subject });
   const exams = await getExams({ subjectId: subject, grade });
+  const tips = await getCourseTips(course.id);
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -149,6 +151,7 @@ export default async function CoursePage({ params }: { params: Params }) {
         </ol>
       </section>
 
+      <TipsSection tips={tips} />
       {exams.length > 0 && (
         <section aria-labelledby="exams-title" className="space-y-4">
           <div className="flex flex-wrap items-end justify-between gap-3">

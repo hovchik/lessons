@@ -10,6 +10,7 @@ import { and, eq, notInArray } from "drizzle-orm";
 import { getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
+import { seedTips } from "./seed-tips";
 
 const slugify = (s: string) =>
   s
@@ -182,6 +183,8 @@ async function run() {
   console.log(
     `Seeded ${exams.length} exams (${exams.filter((e) => e.kind === "state").length} state, ${exams.filter((e) => e.kind === "trial").length} trials, ${examQuestions} questions).`,
   );
+  const tipStats = await seedTips();
+  console.log(`Seeded ${tipStats.tips} tips across ${tipStats.courses} courses.`);
   console.log(
     `Seeded ${subjects.length} subjects, ${courses.length} courses, ${unitsCount} units, ${lessonsCount} lessons (${withContent} with full content, ${lessonsCount - withContent} outlines).`,
   );

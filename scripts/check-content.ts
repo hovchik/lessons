@@ -11,6 +11,7 @@ import katex from "katex";
 import { courses, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
 import { subjects } from "../src/content/subjects";
+import { checkTips } from "./check-tips";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -117,7 +118,9 @@ const missingTrials = courses.map((c) => courseId(c.subject, c.grade)).filter((i
 console.log(`\n${exams.length} exams (${exams.filter((e) => e.kind === "state").length} state, ${trialsFor.size} trials), ${examQuestions} exam questions.`);
 if (missingTrials.length) console.log(`Courses without a year-end trial: ${missingTrials.join(", ")}`);
 
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions.`);
+const tipCheck = checkTips();
+errors.push(...tipCheck.errors);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);
