@@ -1,18 +1,25 @@
 import type { CourseSeed } from "../../types";
-import { withRu } from "../../ru-overlay";
+import { withEn, withRu } from "../../ru-overlay";
 import { musicGrade1 } from "./grade-1";
 import { ru as ru1 } from "./grade-1.ru";
+import { en as en1 } from "./grade-1.en";
 import { musicGrade2 } from "./grade-2";
 import { ru as ru2 } from "./grade-2.ru";
+import { en as en2 } from "./grade-2.en";
 import { musicGrade3 } from "./grade-3";
 import { ru as ru3 } from "./grade-3.ru";
+import { en as en3 } from "./grade-3.en";
 import { musicGrade4 } from "./grade-4";
 import { ru as ru4 } from "./grade-4.ru";
+import { en as en4 } from "./grade-4.en";
 import { musicGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
+import { en as en5 } from "./grade-5.en";
 import { musicGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
+import { en as en6 } from "./grade-6.en";
 import { musicGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
+import { en as en7 } from "./grade-7.en";
 
-export const music: CourseSeed[] = [withRu(musicGrade1, ru1), withRu(musicGrade2, ru2), withRu(musicGrade3, ru3), withRu(musicGrade4, ru4), withRu(musicGrade5, ru5), withRu(musicGrade6, ru6), withRu(musicGrade7, ru7)];
+export const music: CourseSeed[] = [withEn(withRu(musicGrade1, ru1), en1), withEn(withRu(musicGrade2, ru2), en2), withEn(withRu(musicGrade3, ru3), en3), withEn(withRu(musicGrade4, ru4), en4), withEn(withRu(musicGrade5, ru5), en5), withEn(withRu(musicGrade6, ru6), en6), withEn(withRu(musicGrade7, ru7), en7)];
