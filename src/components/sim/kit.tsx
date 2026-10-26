@@ -189,11 +189,13 @@ export function Arrow({ x1, y1, x2, y2, color = "#e11d48", width = 3, label, lab
   const lx = labelPos === "mid" ? (x1 + x2) / 2 - uy * 10 : x2 + ux * 5;
   const ly = labelPos === "mid" ? (y1 + y2) / 2 + ux * 10 : y2 + uy * 11;
   const anchor = labelPos === "mid" || Math.abs(ux) < 0.4 ? "middle" : ux > 0 ? "start" : "end";
+  // Rounded so the server and the browser print the same numbers (no hydration mismatch).
+  const q = (v: number) => Math.round(v * 100) / 100;
   return (
     <g className="sim-arrow">
-      <line x1={x1} y1={y1} x2={bx} y2={by} stroke={color} strokeWidth={width} strokeLinecap="round" strokeDasharray={dash} />
-      <polygon points={`${x2},${y2} ${bx - uy * hw},${by + ux * hw} ${bx + uy * hw},${by - ux * hw}`} fill={color} />
-      {label ? <text x={lx} y={ly + 3.5} textAnchor={anchor} className="sim-tag" fill={color}>{label}</text> : null}
+      <line x1={q(x1)} y1={q(y1)} x2={q(bx)} y2={q(by)} stroke={color} strokeWidth={width} strokeLinecap="round" strokeDasharray={dash} />
+      <polygon points={`${q(x2)},${q(y2)} ${q(bx - uy * hw)},${q(by + ux * hw)} ${q(bx + uy * hw)},${q(by - ux * hw)}`} fill={color} />
+      {label ? <text x={q(lx)} y={q(ly + 3.5)} textAnchor={anchor} className="sim-tag" fill={color}>{label}</text> : null}
     </g>
   );
 }

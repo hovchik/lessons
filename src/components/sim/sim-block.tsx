@@ -1,6 +1,6 @@
 "use client";
 
-import { lazy, Suspense, type ComponentType } from "react";
+import { lazy, Suspense, useEffect, useState, type ComponentType } from "react";
 import { parseArtSpec, type ArtLang, type ArtSpec } from "@/lib/art/spec";
 
 export type SimProps = { spec: ArtSpec; lang: ArtLang };
@@ -50,11 +50,17 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
 export function SimBlock({ source, lang }: { source: string; lang: ArtLang }) {
+  // Widgets draw with floating-point geometry that can differ in the last digit between the
+  // server and the browser, so they render only in the browser (no hydration mismatches).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const spec = parseArtSpec(source);
   const Widget = WIDGETS[spec.widget];
   if (!Widget) return <pre className="art-unknown">{source}</pre>;
+  const placeholder = <div className="art-frame art-loading" aria-hidden="true" />;
+  if (!mounted) return placeholder;
   return (
-    <Suspense fallback={<div className="art-frame art-loading" aria-hidden="true" />}>
+    <Suspense fallback={placeholder}>
       <Widget spec={spec} lang={lang} />
     </Suspense>
   );

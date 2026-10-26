@@ -19,7 +19,7 @@ const W = {
   why: t("This is how chemists find a metal in a sample, and how fireworks get their colours.", "Այսպես են քիմիկոսները հայտնաբերում մետաղը նմուշում, և այսպես են հրավառությունները գույն ստանում։", "Так химики находят металл в образце, и так фейерверки получают свои цвета."),
 };
 
-const SALTS: Record<string, { color: string; name: ReturnType<typeof t> }> = {
+export const SALTS: Record<string, { color: string; name: ReturnType<typeof t> }> = {
   Li: { color: "#e11d48", name: t("crimson", "մուգ կարմիր", "карминово-красный") },
   Na: { color: "#facc15", name: t("bright yellow", "վառ դեղին", "ярко-жёлтый") },
   K: { color: "#c084fc", name: t("lilac", "մանուշակագույն", "фиолетовый") },

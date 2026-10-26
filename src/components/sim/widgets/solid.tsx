@@ -26,7 +26,7 @@ const W = {
   Sside: t("Lateral surface", "Կողմնային մակերևույթ", "Боковая поверхность"),
 };
 
-const NAMES: Record<string, Tr> = {
+export const NAMES: Record<string, Tr> = {
   cube: t("Cube", "Խորանարդ", "Куб"),
   box: t("Rectangular box", "Ուղղանկյունանիստ", "Прямоугольный параллелепипед"),
   prism: t("Regular prism", "Կանոնավոր պրիզմա", "Правильная призма"),

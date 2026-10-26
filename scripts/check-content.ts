@@ -4,8 +4,8 @@
  *   npm run content:check
  *
  * Checks: unique, URL-safe lesson slugs per course, every written lesson has a body,
- * objectives and quiz in all three languages, and every quiz answer points
- * at an existing option. Prints a per-course summary of written vs outline lessons.
+ * objectives and quiz in all three languages, every quiz answer points
+ * at an existing option, and art and sim blocks name things their widgets know. Prints a per-course summary of written vs outline lessons.
  */
 import katex from "katex";
 import { courses, courseId } from "../src/content";
@@ -13,6 +13,8 @@ import { exams } from "../src/content/exams";
 import { subjects } from "../src/content/subjects";
 import { checkTips } from "./check-tips";
 import { checkArtBlocks } from "../src/lib/art/validate";
+import { checkSimBlocks } from "../src/components/sim/validate";
+import { VISUALS } from "../src/content/visuals";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -57,6 +59,7 @@ for (const c of courses) {
         }
       }
       for (const lang of LANGS) for (const e of checkArtBlocks(l.content[lang] ?? "")) errors.push(`${where} [${lang}]: ${e}`);
+      for (const lang of langs) for (const e of checkSimBlocks(l.content[lang] ?? "")) errors.push(`${where} [${lang}]: ${e}`);
       if (!l.quiz?.length) errors.push(`${where}: no quiz`);
       for (const [i, qq] of (l.quiz ?? []).entries()) {
         questions++;
@@ -75,6 +78,20 @@ for (const c of courses) {
   written += cWritten;
   const only = c.languages ? ` (${c.languages.join(", ")} only)` : "";
   if (process.argv.includes("--verbose") || cWritten > 0) console.log(`${id.padEnd(22)} ${String(cWritten).padStart(3)}/${cTotal} written${only}`);
+}
+
+// Visual blocks: every lesson in a visuals map must exist, and science lessons should all have one.
+let visualLessons = 0;
+for (const [subject, byGrade] of Object.entries(VISUALS)) {
+  for (const [grade, bySlug] of Object.entries(byGrade)) {
+    const c = courses.find((x) => x.subject === subject && x.grade === Number(grade));
+    if (!c) { errors.push(`visuals ${subject}-${grade}: no such course`); continue; }
+    const lessons = c.units.flatMap((u) => u.lessons);
+    for (const slug of Object.keys(bySlug)) if (!lessons.some((l) => l.slug === slug)) errors.push(`visuals ${subject}-${grade}: no lesson "${slug}"`);
+    const bare = lessons.filter((l) => l.content && !bySlug[l.slug]?.length).map((l) => l.slug);
+    if (bare.length) console.log(`${subject}-${grade}: no visuals in ${bare.join(", ")}`);
+    visualLessons += Object.keys(bySlug).length;
+  }
 }
 
 // Exams: unique ids, every text in three languages, answers in range, one trial per written course.
@@ -130,7 +147,7 @@ if (missingTrials.length) console.log(`Courses without a year-end trial: ${missi
 
 const tipCheck = checkTips();
 errors.push(...tipCheck.errors);
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses.`);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

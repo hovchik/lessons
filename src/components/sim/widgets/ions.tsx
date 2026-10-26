@@ -197,7 +197,7 @@ function Exchange({ spec, lang }: SimProps) {
 }
 
 type Sol = { f: string; type: "strong" | "weak" | "non"; ions: Array<[string, string]>; eq: string; color?: string };
-const SOLUTES: Record<string, Sol> = {
+export const SOLUTES: Record<string, Sol> = {
   NaCl: { f: "NaCl", type: "strong", ions: [["Na⁺", C.Na], ["Cl⁻", C.Cl]], eq: "NaCl → Na⁺ + Cl⁻" },
   HCl: { f: "HCl", type: "strong", ions: [["H⁺", C.H], ["Cl⁻", C.Cl]], eq: "HCl → H⁺ + Cl⁻" },
   NaOH: { f: "NaOH", type: "strong", ions: [["Na⁺", C.Na], ["OH⁻", C.OH]], eq: "NaOH → Na⁺ + OH⁻" },

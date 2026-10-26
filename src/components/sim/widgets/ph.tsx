@@ -42,7 +42,7 @@ const W = {
 type Ind = "universal" | "litmus" | "phph" | "mo";
 type Sub = { ph: number; name: Tr; kind?: "saSb" | "waSb" | "saWb" };
 
-const SETS: Record<string, Record<string, Sub>> = {
+export const SETS: Record<string, Record<string, Sub>> = {
   home: {
     stomach: { ph: 1.5, name: t("gastric juice", "ստամոքսահյութ", "желудочный сок") },
     lemon: { ph: 2.4, name: t("lemon juice", "կիտրոնի հյութ", "лимонный сок") },
