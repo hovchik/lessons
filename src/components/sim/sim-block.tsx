@@ -44,6 +44,8 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   rate: lazy(() => import("./widgets/rate")),
   lattice: lazy(() => import("./widgets/lattice")),
   flame: lazy(() => import("./widgets/flame")),
+  geo: lazy(() => import("./widgets/geo")),
+  solid: lazy(() => import("./widgets/solid")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
