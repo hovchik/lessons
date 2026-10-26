@@ -15,6 +15,6 @@ export async function POST(req: Request) {
   if (user.disabled) return NextResponse.json({ error: "disabled" }, { status: 403 });
   await touchLastSeen(user.id);
   const res = NextResponse.json({ user: toPublicUser(user) });
-  res.cookies.set(USER_COOKIE, createUserToken(user.id), userCookieOptions);
+  res.cookies.set(USER_COOKIE, createUserToken(user.id), userCookieOptions(req));
   return res;
 }

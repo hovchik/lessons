@@ -2,6 +2,7 @@ import { createHmac, randomBytes, scryptSync, timingSafeEqual } from "node:crypt
 import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { cache } from "react";
+import { isHttps } from "./auth";
 import { getDb, schema } from "./db/client";
 import type { User } from "./db/schema";
 
@@ -72,13 +73,10 @@ export function verifyUserToken(token: string | undefined): string | null {
   return parts[1];
 }
 
-export const userCookieOptions = {
-  httpOnly: true,
-  sameSite: "lax" as const,
-  secure: process.env.NODE_ENV === "production",
-  path: "/",
-  maxAge: TTL_SECONDS,
-};
+/** Secure only over HTTPS; see isHttps in ./auth for why. */
+export function userCookieOptions(req: Request) {
+  return { httpOnly: true, sameSite: "lax" as const, secure: isHttps(req), path: "/", maxAge: TTL_SECONDS };
+}
 
 /* ------------------------------------------------------------------- users */
 

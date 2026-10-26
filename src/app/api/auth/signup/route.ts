@@ -17,9 +17,9 @@ import {
 } from "@/server/user-auth";
 
 const Body = z.object({
-  username: z.string().min(1).max(64),
-  password: z.string().min(MIN_PASSWORD).max(200),
-  displayName: z.string().trim().min(1).max(60),
+  username: z.string().max(64),
+  password: z.string().max(200),
+  displayName: z.string().trim().max(60),
   grade: z.number().int().min(1).max(12).nullable().optional(),
   locale: z.enum(["en", "hy", "ru"]).optional(),
 });
@@ -30,7 +30,9 @@ export async function POST(req: Request) {
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
   const { password, displayName, grade, locale } = parsed.data;
   const username = normalizeUsername(parsed.data.username);
+  if (!displayName) return NextResponse.json({ error: "name_required" }, { status: 400 });
   if (!USERNAME_RE.test(username)) return NextResponse.json({ error: "bad_username" }, { status: 400 });
+  if (password.length < MIN_PASSWORD) return NextResponse.json({ error: "password_short" }, { status: 400 });
   if (await findUserByUsername(username)) return NextResponse.json({ error: "taken" }, { status: 409 });
 
   const db = await getDb();
@@ -41,6 +43,6 @@ export async function POST(req: Request) {
     .run();
   const user = (await db.select().from(schema.users).where(eq(schema.users.id, id)).get())!;
   const res = NextResponse.json({ user: toPublicUser(user) });
-  res.cookies.set(USER_COOKIE, createUserToken(id), userCookieOptions);
+  res.cookies.set(USER_COOKIE, createUserToken(id), userCookieOptions(req));
   return res;
 }

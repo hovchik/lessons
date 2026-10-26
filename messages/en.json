@@ -66,7 +66,6 @@
     "published": "Ready",
     "progress": "{done} of {total} lessons ready",
     "otherGrades": "Other grades in {subject}",
-    "otherGrades": "Other grades in {subject}",
     "completedCount": "{done} of {total} completed",
     "done": "Done"
   },
@@ -86,7 +85,6 @@
     "retry": "Try again",
     "showExplanation": "Why?",
     "question": "Question {n} of {total}",
-    "inUnit": "Unit {n}: {title}",
     "inUnit": "Unit {n}: {title}",
     "markDone": "Mark as done",
     "done": "Completed",
@@ -201,7 +199,9 @@
       "bad_username": "Use 3–24 Latin letters, numbers, dots, dashes or underscores.",
       "disabled": "This account is disabled. Ask your teacher or parent.",
       "not_configured": "Accounts are not set up on this server yet.",
-      "generic": "Something went wrong. Try again."
+      "generic": "Something went wrong. Try again.",
+      "password_short": "The password is too short: use at least 4 characters.",
+      "name_required": "Please enter your name."
     }
   },
   "progress": {
