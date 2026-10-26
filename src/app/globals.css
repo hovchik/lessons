@@ -131,6 +131,8 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
 }
 
 /* ---- Subject colour tokens ---- */
+/* Default for a subject whose colour has no class below, so its icon chip never turns invisible */
+:root            { --s: #4f46e5; --s-soft: #e0e7ff; --s-text: #3730a3; }
 .subject-indigo  { --s: #4f46e5; --s-soft: #e0e7ff; --s-text: #3730a3; }
 .subject-violet  { --s: #7c3aed; --s-soft: #ede9fe; --s-text: #5b21b6; }
 .subject-sky     { --s: #0284c7; --s-soft: #e0f2fe; --s-text: #075985; }

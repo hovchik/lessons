@@ -41,12 +41,42 @@ function run(cmd, cmdArgs, opts = {}) {
 const major = Number(process.versions.node.split(".")[0]);
 if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versions.node}). Download it from https://nodejs.org`);
 
+// Newest modification time of the given files and folders (folders are walked), 0 if none exist.
+// After a `git pull` or a fresh download the changed files are newer than the last build
+// and the last seed, which is how the steps below know they have to run again.
+function newest(...entries) {
+  let max = 0;
+  const visit = (p) => {
+    let st;
+    try {
+      st = fs.statSync(p);
+    } catch {
+      return;
+    }
+    if (st.isDirectory()) {
+      for (const name of fs.readdirSync(p)) visit(path.join(p, name));
+    } else if (st.mtimeMs > max) max = st.mtimeMs;
+  };
+  entries.forEach(visit);
+  return max;
+}
+const mtime = (p) => (fs.existsSync(p) ? fs.statSync(p).mtimeMs : 0);
+
 // 2. Dependencies (dev dependencies included: the build and the seed script need them,
 //    even when NODE_ENV=production or npm's "omit=dev" is set on this machine)
 const needed = ["next", "tsx", "typescript", "tailwindcss", "@libsql/client", "drizzle-orm"];
 const missing = needed.filter((m) => !fs.existsSync(path.join("node_modules", m)));
-if (missing.length) {
-  log(`Installing dependencies${fs.existsSync("node_modules") ? ` (missing: ${missing.join(", ")})` : " (first run only, this takes a minute)"}…`);
+const depsChanged = fs.existsSync("node_modules") && mtime("package-lock.json") > mtime(path.join("node_modules", ".package-lock.json"));
+if (missing.length || depsChanged) {
+  log(
+    `Installing dependencies${
+      missing.length && fs.existsSync("node_modules")
+        ? ` (missing: ${missing.join(", ")})`
+        : depsChanged
+          ? " (package-lock.json changed)"
+          : " (first run only, this takes a minute)"
+    }…`,
+  );
   run(npm, ["install", "--include=dev", "--no-audit", "--no-fund"], { env: { ...process.env, NODE_ENV: "development" } });
 }
 
@@ -77,16 +107,24 @@ if (!fs.existsSync(".env.local")) {
   console.log(`\n  Saved .env.local. Admin password: ${password}\n  (edit .env.local to change it or to add ANTHROPIC_API_KEY)`);
 }
 
-// 4. Database
+// 4. Database: seed on the first run, and again whenever the course content changed
+//    (re-seeding is safe: it upserts, keeps pupils and their progress, and never
+//    overwrites lessons edited in the admin panel)
 const dbPath = process.env.DATABASE_PATH || path.join("data", "lessons.db");
-if (!fs.existsSync(dbPath)) {
-  log("Seeding the database with all courses…");
+const seedStamp = path.join(path.dirname(dbPath), ".seeded");
+const firstSeed = !fs.existsSync(dbPath);
+if (firstSeed || newest("src/content", "scripts") > mtime(seedStamp)) {
+  log(firstSeed ? "Seeding the database with all courses…" : "Course content changed; updating the database…");
   run(npm, ["run", "db:seed"]);
+  fs.writeFileSync(seedStamp, new Date().toISOString() + "\n");
 }
 
-// 5. Build (production only)
-if (!DEV && (REBUILD || !fs.existsSync(path.join(".next", "BUILD_ID")))) {
-  log("Building the app (first run only, 1–3 minutes)…");
+// 5. Build (production only): on the first run, and again whenever the code changed,
+//    so new subjects, icons and lesson widgets appear after an update
+const buildId = path.join(".next", "BUILD_ID");
+const codeChanged = newest("src", "messages", "public", "package-lock.json", "next.config.ts", "postcss.config.mjs") > mtime(buildId);
+if (!DEV && (REBUILD || !fs.existsSync(buildId) || codeChanged)) {
+  log(fs.existsSync(buildId) ? "The app was updated; rebuilding (1–3 minutes)…" : "Building the app (first run only, 1–3 minutes)…");
   run(npm, ["run", "build"]);
 }
 
