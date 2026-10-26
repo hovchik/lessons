@@ -23,5 +23,6 @@ import { ru as ru11 } from "./grade-11.ru";
 import { en as en11 } from "./grade-11.en";
 import { armenianHistoryGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
+import { en as en12 } from "./grade-12.en";
 
-export const armenianHistory: CourseSeed[] = [withEn(withRu(armenianHistoryGrade5, ru5), en5), withEn(withRu(armenianHistoryGrade6, ru6), en6), withEn(withRu(armenianHistoryGrade7, ru7), en7), withEn(withRu(armenianHistoryGrade8, ru8), en8), withEn(withRu(armenianHistoryGrade9, ru9), en9), withEn(withRu(armenianHistoryGrade10, ru10), en10), withEn(withRu(armenianHistoryGrade11, ru11), en11), withRu(armenianHistoryGrade12, ru12)];
+export const armenianHistory: CourseSeed[] = [withEn(withRu(armenianHistoryGrade5, ru5), en5), withEn(withRu(armenianHistoryGrade6, ru6), en6), withEn(withRu(armenianHistoryGrade7, ru7), en7), withEn(withRu(armenianHistoryGrade8, ru8), en8), withEn(withRu(armenianHistoryGrade9, ru9), en9), withEn(withRu(armenianHistoryGrade10, ru10), en10), withEn(withRu(armenianHistoryGrade11, ru11), en11), withEn(withRu(armenianHistoryGrade12, ru12), en12)];
