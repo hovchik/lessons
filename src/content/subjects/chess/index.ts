@@ -5,5 +5,6 @@ import { ru as ru2 } from "./grade-2.ru";
 import { chessGrade3 } from "./grade-3";
 import { ru as ru3 } from "./grade-3.ru";
 import { chessGrade4 } from "./grade-4";
+import { ru as ru4 } from "./grade-4.ru";
 
-export const chess: CourseSeed[] = [withRu(chessGrade2, ru2), withRu(chessGrade3, ru3), chessGrade4];
+export const chess: CourseSeed[] = [withRu(chessGrade2, ru2), withRu(chessGrade3, ru3), withRu(chessGrade4, ru4)];
