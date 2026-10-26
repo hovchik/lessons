@@ -46,10 +46,18 @@ export async function isAdmin() {
   return verifySessionToken(store.get(SESSION_COOKIE)?.value);
 }
 
-export const sessionCookieOptions = {
-  httpOnly: true,
-  sameSite: "lax" as const,
-  secure: process.env.NODE_ENV === "production",
-  path: "/",
-  maxAge: TTL_SECONDS,
-};
+/**
+ * Mark cookies Secure only when the request actually came over HTTPS. A
+ * production build is often opened over plain http (http://192.168.x.x:3000
+ * from a phone or another computer on the home network), and browsers drop
+ * Secure cookies there, so the user would be logged out right after logging in.
+ */
+export function isHttps(req: Request) {
+  const forwarded = req.headers.get("x-forwarded-proto");
+  if (forwarded) return forwarded.split(",")[0].trim() === "https";
+  return new URL(req.url).protocol === "https:";
+}
+
+export function sessionCookieOptions(req: Request) {
+  return { httpOnly: true, sameSite: "lax" as const, secure: isHttps(req), path: "/", maxAge: TTL_SECONDS };
+}

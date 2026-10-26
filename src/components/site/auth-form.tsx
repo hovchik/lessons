@@ -8,7 +8,9 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { GRADES } from "@/lib/utils";
 
-const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "disabled", "not_configured", "generic"] as const;
+const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "password_short", "name_required", "disabled", "not_configured", "generic"] as const;
+const USERNAME_RE = /^[a-z0-9_.-]{3,24}$/;
+const MIN_PASSWORD = 4;
 type ErrorKey = (typeof ERROR_KEYS)[number];
 
 const inputClass = "mt-1 h-12 w-full rounded-[12px] border border-border bg-card px-3 text-base focus-visible:outline-primary";
@@ -31,8 +33,14 @@ export function AuthForm({ mode, configured }: { mode: "login" | "signup"; confi
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    setBusy(true);
     setError(null);
+    if (isSignup) {
+      // Check here first so the pupil sees exactly what to fix.
+      if (!displayName.trim()) return setError("name_required");
+      if (!USERNAME_RE.test(username.trim().toLowerCase())) return setError("bad_username");
+      if (password.length < MIN_PASSWORD) return setError("password_short");
+    }
+    setBusy(true);
     try {
       const body = isSignup
         ? { username, password, displayName, grade: grade ? Number(grade) : null, locale }
@@ -97,7 +105,7 @@ export function AuthForm({ mode, configured }: { mode: "login" | "signup"; confi
           id="password"
           type="password"
           required
-          minLength={isSignup ? 4 : 1}
+          minLength={isSignup ? MIN_PASSWORD : 1}
           autoComplete={isSignup ? "new-password" : "current-password"}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
