@@ -8,6 +8,7 @@ import { ru as ru6 } from "./grade-6.ru";
 import { en as en6 } from "./grade-6.en";
 import { informaticsGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
+import { en as en7 } from "./grade-7.en";
 import { informaticsGrade8 } from "./grade-8";
 import { ru as ru8 } from "./grade-8.ru";
 import { informaticsGrade9 } from "./grade-9";
@@ -19,4 +20,4 @@ import { ru as ru11 } from "./grade-11.ru";
 import { informaticsGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 
-export const informatics: CourseSeed[] = [withEn(withRu(informaticsGrade5, ru5), en5), withEn(withRu(informaticsGrade6, ru6), en6), withRu(informaticsGrade7, ru7), withRu(informaticsGrade8, ru8), withRu(informaticsGrade9, ru9), withRu(informaticsGrade10, ru10), withRu(informaticsGrade11, ru11), withRu(informaticsGrade12, ru12)];
+export const informatics: CourseSeed[] = [withEn(withRu(informaticsGrade5, ru5), en5), withEn(withRu(informaticsGrade6, ru6), en6), withEn(withRu(informaticsGrade7, ru7), en7), withRu(informaticsGrade8, ru8), withRu(informaticsGrade9, ru9), withRu(informaticsGrade10, ru10), withRu(informaticsGrade11, ru11), withRu(informaticsGrade12, ru12)];
