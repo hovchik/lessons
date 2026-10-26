@@ -1,5 +1,7 @@
 import type { CourseSeed } from "../../types";
+import { withRu } from "../../ru-overlay";
 import { churchHistoryGrade5 } from "./grade-5";
+import { ru as ru5 } from "./grade-5.ru";
 import { churchHistoryGrade6 } from "./grade-6";
 import { churchHistoryGrade7 } from "./grade-7";
 import { churchHistoryGrade8 } from "./grade-8";
@@ -7,4 +9,4 @@ import { churchHistoryGrade9 } from "./grade-9";
 import { churchHistoryGrade10 } from "./grade-10";
 import { churchHistoryGrade11 } from "./grade-11";
 
-export const churchHistory: CourseSeed[] = [churchHistoryGrade5, churchHistoryGrade6, churchHistoryGrade7, churchHistoryGrade8, churchHistoryGrade9, churchHistoryGrade10, churchHistoryGrade11];
+export const churchHistory: CourseSeed[] = [withRu(churchHistoryGrade5, ru5), churchHistoryGrade6, churchHistoryGrade7, churchHistoryGrade8, churchHistoryGrade9, churchHistoryGrade10, churchHistoryGrade11];
