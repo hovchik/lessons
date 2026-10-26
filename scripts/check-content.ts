@@ -9,6 +9,7 @@
  */
 import katex from "katex";
 import { courses, courseId } from "../src/content";
+import { checkTips } from "./check-tips";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -64,7 +65,9 @@ for (const c of courses) {
   if (process.argv.includes("--verbose") || cWritten > 0) console.log(`${id.padEnd(14)} ${String(cWritten).padStart(3)}/${cTotal} written`);
 }
 
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions.`);
+const tipCheck = checkTips();
+errors.push(...tipCheck.errors);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

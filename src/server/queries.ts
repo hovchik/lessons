@@ -1,4 +1,4 @@
-import { and, asc, count, eq, sql } from "drizzle-orm";
+import { and, asc, count, eq, ne, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 
 export type Locale = "en" | "hy" | "ru";
@@ -131,4 +131,38 @@ export async function getAdminCourses() {
     .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .orderBy(asc(schema.subjects.sortOrder), asc(schema.courses.grade))
     .all();
+}
+
+/** Published tips for a course, in seed order. */
+export async function getCourseTips(courseId: string) {
+  const db = await getDb();
+  return db
+    .select()
+    .from(schema.tips)
+    .where(and(eq(schema.tips.courseId, courseId), eq(schema.tips.status, "published")))
+    .orderBy(asc(schema.tips.position))
+    .all();
+}
+
+/** All tips for a course (admin). */
+export async function getAdminCourseTips(courseId: string) {
+  const db = await getDb();
+  return db.select().from(schema.tips).where(eq(schema.tips.courseId, courseId)).orderBy(asc(schema.tips.position)).all();
+}
+
+export async function getTipById(id: string) {
+  const db = await getDb();
+  return db.select().from(schema.tips).where(eq(schema.tips.id, id)).get();
+}
+
+/** Tip counts per course (admin dashboards). */
+export async function getTipCounts() {
+  const db = await getDb();
+  const rows = await db
+    .select({ courseId: schema.tips.courseId, n: count() })
+    .from(schema.tips)
+    .where(ne(schema.tips.status, "deleted"))
+    .groupBy(schema.tips.courseId)
+    .all();
+  return new Map(rows.map((r) => [r.courseId, r.n]));
 }

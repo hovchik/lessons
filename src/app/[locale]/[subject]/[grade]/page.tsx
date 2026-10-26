@@ -6,8 +6,9 @@ import { Link } from "@/i18n/navigation";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
+import { TipsSection } from "@/components/site/tips-section";
 import { getCourseProgress } from "@/server/progress";
-import { getCourse, getCourses } from "@/server/queries";
+import { getCourse, getCourses, getCourseTips } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
 
 type Params = Promise<{ locale: string; subject: string; grade: string }>;
@@ -30,6 +31,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const progress = user ? await getCourseProgress(user.id, course.id) : new Map<string, { completedAt: string | null }>();
   const completedCount = [...progress.values()].filter((p) => p.completedAt).length;
   const siblings = await getCourses({ subjectId: subject });
+  const tips = await getCourseTips(course.id);
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -146,6 +148,8 @@ export default async function CoursePage({ params }: { params: Params }) {
           ))}
         </ol>
       </section>
+
+      <TipsSection tips={tips} />
 
       {siblings.length > 1 && (
         <section aria-labelledby="other-grades">
