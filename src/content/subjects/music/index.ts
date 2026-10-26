@@ -17,7 +17,8 @@ import { ru as ru5 } from "./grade-5.ru";
 import { en as en5 } from "./grade-5.en";
 import { musicGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
+import { en as en6 } from "./grade-6.en";
 import { musicGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
 
-export const music: CourseSeed[] = [withEn(withRu(musicGrade1, ru1), en1), withEn(withRu(musicGrade2, ru2), en2), withEn(withRu(musicGrade3, ru3), en3), withEn(withRu(musicGrade4, ru4), en4), withEn(withRu(musicGrade5, ru5), en5), withRu(musicGrade6, ru6), withRu(musicGrade7, ru7)];
+export const music: CourseSeed[] = [withEn(withRu(musicGrade1, ru1), en1), withEn(withRu(musicGrade2, ru2), en2), withEn(withRu(musicGrade3, ru3), en3), withEn(withRu(musicGrade4, ru4), en4), withEn(withRu(musicGrade5, ru5), en5), withEn(withRu(musicGrade6, ru6), en6), withRu(musicGrade7, ru7)];
