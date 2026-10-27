@@ -1455,4 +1455,159 @@ const lavash: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom, board, lockstitch, wallplug, lavash };
+/* ---------------- grade 7: from a CAD model to a 3D print ---------------- */
+
+const PLA = "#f97316", PLA_D = "#c2410c";
+const PH = 6;
+
+const printer3d: Mech = {
+  title: t("From a computer model to a 3D print", "Համակարգչային մոդելից մինչև 3D տպում", "От компьютерной модели к 3D-печати"),
+  caps: [
+    t("In a CAD program build the model from simple shapes: a box, and a cylinder set as a \"hole\" that cuts through it.", "CAD ծրագրում մոդելը կառուցի՛ր պարզ պատկերներից՝ արկղ և գլան, որը նշված է որպես «անցք» և կտրում է այն։", "В CAD-программе собери модель из простых фигур: брусок и цилиндр, заданный как «отверстие», который его прорезает."),
+    t("The slicer cuts the model into thin layers, about 0.2 mm each, and writes G-code: the commands for every movement of the nozzle.", "Սլայսերը մոդելը կտրում է բարակ շերտերի՝ ամեն մեկը մոտ 0,2 մմ, և գրում G-կոդ՝ գլխիկի յուրաքանչյուր շարժման հրամանները։", "Слайсер нарезает модель на тонкие слои, примерно по 0,2 мм, и пишет G-код — команды для каждого движения сопла."),
+    t("Plastic filament melts in the hot nozzle, about 200 °C. The nozzle draws the first layer on the bed.", "Պլաստմասե թելը հալվում է տաք գլխիկում՝ մոտ 200 °C։ Գլխիկը սեղանի վրա գծում է առաջին շերտը։", "Пластиковая нить плавится в горячем сопле, около 200 °C. Сопло рисует на столе первый слой."),
+    t("Layer by layer the model grows. Inside it is not solid: a light grid called infill, usually 15–20 %, saves plastic and time.", "Շերտ առ շերտ մոդելն աճում է։ Ներսում այն հոծ չէ․ թեթև ցանցը՝ լցումը, սովորաբար 15–20 %, պլաստմասա և ժամանակ է խնայում։", "Слой за слоем модель растёт. Внутри она не сплошная: лёгкая сетка — заполнение, обычно 15–20 %, — экономит пластик и время."),
+    t("A part that sticks out over empty air needs supports underneath. When the print is cool, the supports are snapped off.", "Օդում կախված մասին տակից հենարաններ են պետք։ Երբ տպվածքը սառչում է, հենարանները կոտրելով հեռացնում են։", "Части, нависающей над пустотой, нужны поддержки снизу. Когда отпечаток остынет, поддержки отламывают."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 0) {
+      const hx = lerp(270, 180, k);
+      return (
+        <g>
+          <rect x="0" y="0" width="320" height="220" fill="#eef2ff" />
+          {Array.from({ length: 16 }, (_, j) => <line key={j} x1={j * 20} x2={j * 20} y1="0" y2="220" stroke="#c7d2fe" strokeWidth="0.6" />)}
+          {Array.from({ length: 11 }, (_, j) => <line key={j} x1="0" x2="320" y1={j * 20} y2={j * 20} stroke="#c7d2fe" strokeWidth="0.6" />)}
+          <path d="M80,90 h120 l30,-24 h-120 Z" fill="#93c5fd" stroke="#1e40af" />
+          <path d="M200,90 v50 l30,-24 v-50 Z" fill="#3b82f6" stroke="#1e40af" />
+          <rect x="80" y="90" width="120" height="50" fill="#60a5fa" stroke="#1e40af" />
+          <ellipse cx={hx} cy="78" rx="12" ry="6" fill={k > 0.98 ? "#1e3a8a" : "none"} stroke="#334155" strokeWidth="1.5" strokeDasharray={k > 0.98 ? "0" : "4 3"} />
+          {k < 0.98 ? <path d={`M${hx - 12},78 v34 M${hx + 12},78 v34`} stroke="#334155" strokeWidth="1.5" strokeDasharray="4 3" /> : null}
+          <Tx x={60} y={30} s={t("box 60 × 25 × 12 mm", "արկղ 60 × 25 × 12 մմ", "брусок 60 × 25 × 12 мм")} lang={lang} size={9} fill="#1e3a8a" anchor="start" />
+          <Tx x={290} y={180} s={k > 0.98 ? t("grouped: a key tag", "խմբավորված՝ բանալու կախազարդ", "сгруппировано: брелок") : t("cylinder = \"hole\"", "գլան = «անցք»", "цилиндр = «отверстие»")} lang={lang} size={9} fill="#334155" anchor="end" />
+        </g>
+      );
+    }
+    if (i === 1) {
+      const n = Math.floor(k * 9);
+      return (
+        <g>
+          <rect x="40" y="90" width="120" height="54" fill="#93c5fd" stroke="#1e40af" />
+          {Array.from({ length: n }, (_, j) => <line key={j} x1="36" x2="164" y1={144 - (j + 1) * PH} y2={144 - (j + 1) * PH} stroke="#dc2626" strokeWidth="1" />)}
+          <rect x="190" y="40" width="114" height="140" rx="6" fill="#0f172a" />
+          {["G28", "M104 S205", "G1 Z0.2", "G1 X40 Y20 E1.2", "G1 X160 Y20 E5.1", "G1 X160 Y90 E8.0", "G1 Z0.4", "..."].slice(0, 1 + Math.floor(k * 8)).map((c, j) => (
+            <text key={j} x="200" y={60 + j * 15} fontSize="9" fontFamily="monospace" fill="#4ade80">{c}</text>
+          ))}
+          <Tx x={100} y={170} s={t("layers of 0.2 mm", "0,2 մմ շերտեր", "слои по 0,2 мм")} lang={lang} size={9} fill="#dc2626" />
+        </g>
+      );
+    }
+    const layers = i === 2 ? 1 + Math.floor(k * 2.99) : i === 3 ? 3 + Math.floor(k * 6.99) : 10;
+    const top = 190 - layers * PH;
+    const nx = i === 4 ? 160 : 70 + 160 * (0.5 + 0.5 * Math.sin(p * Math.PI * 6));
+    const arm = i === 4;
+    const sup = arm ? Math.max(0, 1 - Math.max(0, (k - 0.55) / 0.4)) : 0;
+    return (
+      <g>
+        {/* frame and bed */}
+        <rect x="30" y="20" width="8" height="180" fill="#475569" />
+        <rect x="282" y="20" width="8" height="180" fill="#475569" />
+        <rect x="30" y="16" width="260" height="8" fill="#475569" />
+        <rect x="50" y="190" width="220" height="8" fill="#94a3b8" />
+        <circle cx="304" cy="40" r="14" fill={PLA} stroke={PLA_D} />
+        <circle cx="304" cy="40" r="4" fill="#fff" />
+        {/* printed layers */}
+        {Array.from({ length: layers }, (_, j) => {
+          const y = 190 - (j + 1) * PH;
+          const partial = i === 2 && j === layers - 1 ? (nx - 70) / 160 : 1;
+          return <rect key={j} x="70" y={y} width={Math.max(0, 160 * partial)} height={PH - 0.6} rx="2" fill={PLA} stroke={PLA_D} strokeWidth="0.5" />;
+        })}
+        {i >= 3 ? (
+          <g>
+            <rect x="80" y={190 - (layers - 1) * PH} width="70" height={(layers - 2) * PH} fill="#fff7ed" />
+            <defs><clipPath id="p3d-infill"><rect x="80" y={190 - (layers - 1) * PH} width="70" height={(layers - 2) * PH} /></clipPath></defs>
+            <g clipPath="url(#p3d-infill)">
+              {Array.from({ length: 12 }, (_, j) => <line key={j} x1={80 + j * 10} x2={80 + j * 10 - 60} y1={190 - (layers - 1) * PH} y2={190 - PH} stroke={PLA} strokeWidth="1.5" />)}
+              {Array.from({ length: 12 }, (_, j) => <line key={`b${j}`} x1={30 + j * 10} x2={90 + j * 10} y1={190 - (layers - 1) * PH} y2={190 - PH} stroke={PLA} strokeWidth="1.5" />)}
+            </g>
+            <rect x="80" y={190 - (layers - 1) * PH} width="70" height={(layers - 2) * PH} fill="none" stroke={PLA_D} strokeDasharray="3 2" />
+          </g>
+        ) : null}
+        {arm ? (
+          <g>
+            <rect x="230" y={top} width="40" height={2 * PH} rx="2" fill={PLA} stroke={PLA_D} strokeWidth="0.5" />
+            <g opacity={sup}>{Array.from({ length: 4 }, (_, j) => <path key={j} d={`M${234 + j * 10},${top + 2 * PH} V190`} stroke="#fdba74" strokeWidth="3" strokeDasharray="2 1" />)}</g>
+          </g>
+        ) : null}
+        {/* gantry and nozzle */}
+        <rect x="38" y={top - 26} width="244" height="6" fill="#64748b" />
+        <g transform={`translate(${nx} ${top})`}>
+          <rect x="-12" y="-30" width="24" height="18" rx="3" fill="#1e293b" />
+          <path d="M-5,-12 h10 l-3,10 h-4 Z" fill="#dc2626" />
+          <circle cx="0" cy="-1" r="2" fill={PLA} />
+        </g>
+        <path d={`M304,54 Q${(304 + nx) / 2},${top - 70} ${nx},${top - 30}`} fill="none" stroke={PLA} strokeWidth="1.5" />
+        {i === 3 ? <Tx x={115} y={top - 40} s={t("infill", "լցում", "заполнение")} lang={lang} size={9} fill={PLA_D} /> : null}
+        {arm ? <Tx x={250} y={top - 40} s={sup > 0.5 ? t("supports", "հենարաններ", "поддержки") : t("snapped off", "հեռացված", "отломаны")} lang={lang} size={9} fill={PLA_D} /> : null}
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 7: a line-following robot ---------------- */
+
+const Robot = ({ l, r, sl, sr }: { l: number; r: number; sl: boolean; sr: boolean }) => (
+  <g>
+    <rect x="-30" y="-36" width="60" height="70" rx="10" fill="#7c3aed" />
+    <rect x="-40" y="-10" width="10" height="34" rx="3" fill="#1e293b" />
+    <rect x="30" y="-10" width="10" height="34" rx="3" fill="#1e293b" />
+    <rect x="-18" y="-20" width="36" height="24" rx="4" fill="#ede9fe" />
+    <circle cx="-12" cy="-40" r="5" fill={sl ? "#ef4444" : "#e5e7eb"} stroke="#1e293b" />
+    <circle cx="12" cy="-40" r="5" fill={sr ? "#ef4444" : "#e5e7eb"} stroke="#1e293b" />
+    <path d={`M-35,30 v${10 + l * 26} M-39,${34 + l * 26} l4,6 l4,-6`} transform="rotate(180 -35 30)" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+    <path d={`M35,30 v${10 + r * 26} M31,${34 + r * 26} l4,6 l4,-6`} transform="rotate(180 35 30)" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+  </g>
+);
+
+const linefollower: Mech = {
+  title: t("How a line-following robot steers", "Ինչպես է գծին հետևող ռոբոտը ղեկավարվում", "Как робот едет по линии"),
+  hint: t("Seen from above. The red dot is a sensor that sees black; the green arrows show how fast each wheel turns.", "Վերևից տեսք։ Կարմիր կետը սև գույն տեսնող սենսորն է, իսկ կանաչ սլաքները ցույց են տալիս, թե որքան արագ է պտտվում ամեն անիվը։", "Вид сверху. Красная точка — датчик, видящий чёрное; зелёные стрелки показывают, как быстро крутится каждое колесо."),
+  caps: [
+    t("Both sensors see white: the line is between them. Both wheels turn at the same speed, so the robot drives straight on.", "Երկու սենսորն էլ սպիտակ են տեսնում․ գիծը նրանց միջև է։ Երկու անիվները պտտվում են նույն արագությամբ, և ռոբոտը գնում է ուղիղ։", "Оба датчика видят белое: линия между ними. Оба колеса крутятся одинаково, и робот едет прямо."),
+    t("The line bends to the left, so the left sensor sees black. The program slows the left wheel and the robot turns left.", "Գիծը թեքվում է ձախ, և ձախ սենսորը սև է տեսնում։ Ծրագիրը դանդաղեցնում է ձախ անիվը, և ռոբոտը թեքվում է ձախ։", "Линия уходит влево, и левый датчик видит чёрное. Программа замедляет левое колесо, и робот поворачивает налево."),
+    t("Now the right sensor sees black: the right wheel slows and the robot turns right.", "Այժմ աջ սենսորն է սև տեսնում․ աջ անիվը դանդաղում է, և ռոբոտը թեքվում է աջ։", "Теперь чёрное видит правый датчик: правое колесо замедляется, и робот поворачивает направо."),
+    t("The robot checks its sensors many times a second and keeps correcting, so it can follow the whole track.", "Ռոբոտը վայրկյանում բազմաթիվ անգամ ստուգում է սենսորները և անընդհատ ուղղում ընթացքը, ուստի կարող է հետևել ամբողջ ուղուն։", "Робот проверяет датчики много раз в секунду и всё время поправляет курс, поэтому может проехать всю трассу."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 3) {
+      const a = p * Math.PI * 2;
+      const x = 160 + 120 * Math.cos(a), y = 110 + 70 * Math.sin(a);
+      const ang = (Math.atan2(70 * Math.cos(a), -120 * Math.sin(a)) * 180) / Math.PI + 90;
+      return (
+        <g>
+          <rect x="0" y="0" width="320" height="220" fill="#fff" />
+          <ellipse cx="160" cy="110" rx="120" ry="70" fill="none" stroke="#111827" strokeWidth="8" />
+          <g transform={`translate(${x} ${y}) rotate(${ang}) scale(0.35)`}><Robot l={0.6} r={0.9} sl={false} sr={false} /></g>
+        </g>
+      );
+    }
+    const bend = i === 0 ? 0 : i === 1 ? -1 : 1;
+    const turn = bend * 10 * k;
+    const sl = i === 1, sr = i === 2;
+    const scroll = (p * 80) % 40;
+    return (
+      <g>
+        <rect x="0" y="0" width="320" height="220" fill="#fff" />
+        <path d={i === 0 ? "M160,230 V-10" : `M160,230 V150 Q160,110 ${160 + bend * 20},92 T${160 + bend * 100},-10`} fill="none" stroke="#111827" strokeWidth="12" />
+        {i === 0 ? Array.from({ length: 7 }, (_, j) => <circle key={j} cx="40" cy={j * 40 - 20 + scroll} r="2" fill="#cbd5e1" />) : null}
+        <g transform={`translate(160 ${i === 0 ? 140 : 132}) rotate(${turn})`}>
+          <Robot l={sl ? 0.2 : 1} r={sr ? 0.2 : 1} sl={sl} sr={sr} />
+        </g>
+        <Tx x={i === 2 ? 60 : 260} y={200} s={i === 0 ? t("straight on", "ուղիղ", "прямо") : i === 1 ? t("turn left", "թեքվել ձախ", "налево") : t("turn right", "թեքվել աջ", "направо")} lang={lang} size={11} fill="#7c3aed" />
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom, board, lockstitch, wallplug, lavash, printer3d, linefollower };

@@ -1318,4 +1318,310 @@ const foodtemp: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog, workbench, wiretools, views, weaves3, sewmachine, plate, carelabel, joints, ergochair, apronpattern, foodtemp };
+/* ---------------- grade 7: a circuit on a breadboard ---------------- */
+
+const BBX = (c: number) => 34 + c * 10;
+const BB_ROWS = [78, 86, 94, 102, 110, 132, 140, 148, 156, 164];
+
+const breadboard: Diagram = {
+  title: t("An LED circuit on a breadboard", "Լուսադիոդային շղթա մակետային տախտակի վրա", "Схема со светодиодом на макетной плате"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {/* battery pack */}
+      <rect x="20" y="6" width="70" height="26" rx="4" fill="#1e293b" />
+      <rect x="26" y="11" width="28" height="16" rx="3" fill="#16a34a" /><rect x="56" y="11" width="28" height="16" rx="3" fill="#16a34a" />
+      <text x="96" y="18" fontSize="10" fontWeight="800" fill="#dc2626">+</text>
+      <text x="96" y="31" fontSize="10" fontWeight="800" fill="#2563eb">−</text>
+      {/* the board */}
+      <rect x="22" y="44" width="286" height="156" rx="6" fill="#fff" stroke="#cbd5e1" />
+      <line x1="30" x2="300" y1="50" y2="50" stroke="#dc2626" strokeWidth="1" /><line x1="30" x2="300" y1="68" y2="68" stroke="#2563eb" strokeWidth="1" />
+      <line x1="30" x2="300" y1="176" y2="176" stroke="#dc2626" strokeWidth="1" /><line x1="30" x2="300" y1="194" y2="194" stroke="#2563eb" strokeWidth="1" />
+      <rect x="24" y="116" width="282" height="8" fill="#e2e8f0" />
+      <rect x={BBX(6) - 4} y="74" width="8" height="40" rx="3" fill="#bbf7d0" opacity="0.8" />
+      {Array.from({ length: 27 }, (_, c) => (
+        <g key={c}>
+          {[55, 63, 181, 189].map((y) => <rect key={y} x={BBX(c) - 1.5} y={y - 1.5} width="3" height="3" fill="#94a3b8" />)}
+          {BB_ROWS.map((y) => <rect key={y} x={BBX(c) - 1.5} y={y - 1.5} width="3" height="3" fill="#94a3b8" />)}
+        </g>
+      ))}
+      {/* wires from the battery */}
+      <path d={`M90,13 Q118,14 ${BBX(8)},55`} fill="none" stroke="#dc2626" strokeWidth="2.5" />
+      <path d={`M90,26 Q130,30 ${BBX(10)},63`} fill="none" stroke="#2563eb" strokeWidth="2.5" />
+      {/* red wire from + rail to column 6 */}
+      <path d={`M${BBX(5)},55 Q${BBX(5)},70 ${BBX(6)},78`} fill="none" stroke="#dc2626" strokeWidth="2.5" />
+      {/* resistor from column 6 to column 11 */}
+      <path d={`M${BBX(6)},86 h8 M${BBX(11)},86 h-8`} stroke="#64748b" strokeWidth="1.5" />
+      <rect x={BBX(6) + 8} y="81" width={BBX(11) - BBX(6) - 16} height="10" rx="4" fill="#e7d3b0" />
+      {["#78350f", "#111827", "#b45309", "#ca8a04"].map((c, j) => <rect key={j} x={BBX(6) + 13 + j * 7} y="81" width="3" height="10" fill={c} />)}
+      {/* LED: long leg in column 11, short leg in column 13 */}
+      <path d={`M${BBX(11)},94 V70 M${BBX(13)},94 V74`} stroke="#64748b" strokeWidth="1.5" />
+      <path d={`M${BBX(10)},70 h24 v-6 a12,12 0 0 0 -24,0 Z`} fill="#ef4444" opacity="0.9" />
+      <circle cx={BBX(12)} cy="58" r="16" fill="#fecaca" opacity="0.5" />
+      {/* push button across the gap, columns 16–18 */}
+      <rect x={BBX(15) - 2} y="106" width="34" height="34" rx="3" fill="#334155" />
+      <circle cx={BBX(16) + 7} cy="123" r="9" fill="#111827" />
+      {/* jumper wires */}
+      <path d={`M${BBX(13)},102 Q${BBX(14)},96 ${BBX(16)},102`} fill="none" stroke="#f59e0b" strokeWidth="2.5" />
+      <path d={`M${BBX(18)},148 Q${BBX(20)},160 ${BBX(20)},189`} fill="none" stroke="#2563eb" strokeWidth="2.5" />
+      <path d={`M${BBX(24)},63 Q${BBX(26) + 4},120 ${BBX(24)},189`} fill="none" stroke="#2563eb" strokeWidth="2.5" />
+      <Tx x={250} y={36} s={t("long leg = +", "երկար ոտիկ = +", "длинная ножка = +")} lang={lang} size={8} fill="#b91c1c" />
+    </g>
+  ),
+  parts: [
+    P(60, 20, t("Battery", "Մարտկոց", "Батарейки"), t("Two AA batteries give 3 volts. Red wire to +, blue or black wire to −.", "Երկու AA մարտկոց տալիս են 3 վոլտ։ Կարմիր լարը՝ +, կապույտ կամ սև լարը՝ −։", "Две батарейки AA дают 3 вольта. Красный провод к «+», синий или чёрный к «−».")),
+    P(286, 59, t("Power rails", "Սնման գծեր", "Шины питания"), t("The long rows along the edges are joined all the way along: one for +, one for −, so every part can reach the battery.", "Եզրերի երկայնքով երկար շարքերը միացված են ամբողջ երկարությամբ՝ մեկը +-ի, մյուսը −-ի համար, որ ամեն մաս հասնի մարտկոցին։", "Длинные ряды по краям соединены по всей длине: один для «+», другой для «−», чтобы любая деталь дотянулась до батарейки.")),
+    P(BBX(6), 112, t("Connected columns", "Միացված սյունակներ", "Соединённые столбцы"), t("Under the plastic, each short column of five holes is joined by a metal strip (shown in green). Legs in the same column are connected.", "Պլաստմասի տակ հինգ անցքից բաղկացած ամեն կարճ սյունակ միացված է մետաղե շերտով (կանաչով)։ Նույն սյունակում գտնվող ոտիկները միացված են։", "Под пластиком каждый короткий столбец из пяти отверстий соединён металлической полоской (показана зелёным). Ножки в одном столбце соединены.")),
+    P(BBX(8) + 4, 98, t("Resistor", "Ռեզիստոր", "Резистор"), t("Limits the current so the LED does not burn out. The coloured bands give its resistance in ohms.", "Սահմանափակում է հոսանքը, որ լուսադիոդը չայրվի։ Գունավոր գոտիները ցույց են տալիս դիմադրությունն օհմերով։", "Ограничивает ток, чтобы светодиод не сгорел. Цветные полоски показывают сопротивление в омах.")),
+    P(BBX(12), 40, t("LED", "Լուսադիոդ", "Светодиод"), t("Lets current through one way only. The long leg (anode) goes towards +; put it in backwards and it simply stays dark.", "Հոսանքն անցկացնում է միայն մեկ ուղղությամբ։ Երկար ոտիկը (անոդը) միացվում է +-ին կողմից․ եթե հակառակ դնես, պարզապես չի վառվի։", "Пропускает ток только в одну сторону. Длинная ножка (анод) идёт к «+»; если вставить наоборот, он просто не загорится.")),
+    P(BBX(16) + 7, 150, t("Push button", "Սեղմակոճակ", "Кнопка"), t("Sits across the centre gap. Pressing it closes the circuit and the LED lights; let go and the circuit opens.", "Դրված է կենտրոնական ակոսի վրայով։ Սեղմելիս շղթան փակվում է, և լուսադիոդը վառվում է, իսկ բաց թողնելիս շղթան բացվում է։", "Стоит поперёк центральной канавки. Нажмёшь — цепь замкнётся и светодиод загорится; отпустишь — цепь разомкнётся.")),
+    P(40, 120, t("Centre gap", "Կենտրոնական ակոս", "Центральная канавка"), t("The two halves of the board are not connected across the gap, so chips and buttons can sit over it without short-circuiting.", "Տախտակի երկու կեսերն ակոսի վրայով միացված չեն, ուստի միկրոսխեմաները և կոճակները կարող են տեղադրվել դրա վրա՝ առանց կարճ միացման։", "Половины платы через канавку не соединены, поэтому микросхемы и кнопки можно ставить над ней без короткого замыкания.")),
+    P(BBX(14), 92, t("Jumper wires", "Միացման լարեր", "Перемычки"), t("Short wires carry the current from one column to another. No soldering: you can change the circuit in seconds.", "Կարճ լարերը հոսանքը տանում են մի սյունակից մյուսը։ Առանց զոդման․ շղթան կարելի է փոխել վայրկյանների ընթացքում։", "Короткие провода переносят ток из столбца в столбец. Без пайки: схему можно переделать за секунды.")),
+  ],
+};
+
+/* ---------------- grade 7: a solar house ---------------- */
+
+const solarhouse: Diagram = {
+  title: t("Electricity from the Sun", "Էլեկտրաէներգիա Արևից", "Электричество от Солнца"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#e0f2fe" />
+      <rect x="0" y="182" width="320" height="32" fill="#86efac" />
+      <circle cx="40" cy="38" r="20" fill="#fde047" />
+      {Array.from({ length: 8 }, (_, j) => <line key={j} x1={40 + 25 * Math.cos(j * 0.785)} y1={38 + 25 * Math.sin(j * 0.785)} x2={40 + 32 * Math.cos(j * 0.785)} y2={38 + 32 * Math.sin(j * 0.785)} stroke="#facc15" strokeWidth="2.5" />)}
+      {[0, 1, 2].map((j) => <line key={j} x1={58 + j * 6} y1={52 + j * 8} x2={110 + j * 10} y2={92 + j * 6} stroke="#facc15" strokeWidth="1.5" strokeDasharray="4 3" />)}
+      {/* house */}
+      <path d="M90,182 V120 L160,70 L230,120 V182 Z" fill="#fef3c7" stroke="#92400e" strokeWidth="1.5" />
+      <path d="M80,124 L160,64 L240,124" fill="none" stroke="#92400e" strokeWidth="5" />
+      {/* panel on the south roof */}
+      <g transform="rotate(-36.9 100 118)">
+        <rect x="100" y="104" width="64" height="12" fill="#1e3a8a" stroke="#cbd5e1" />
+        {Array.from({ length: 8 }, (_, j) => <line key={j} x1={100 + j * 8} x2={100 + j * 8} y1="104" y2="116" stroke="#93c5fd" strokeWidth="0.6" />)}
+      </g>
+      {/* solar water heater */}
+      <g transform="rotate(36.9 220 118)">
+        <rect x="170" y="104" width="38" height="10" fill="#334155" />
+      </g>
+      <rect x="160" y="80" width="26" height="12" rx="6" fill="#cbd5e1" stroke="#64748b" />
+      {/* tilt angle */}
+      <path d="M100,124 H140" stroke="#dc2626" strokeWidth="1" strokeDasharray="3 2" />
+      <path d="M126,124 A26,26 0 0 0 121,108" fill="none" stroke="#dc2626" strokeWidth="1.2" />
+      <Tx x={156} y={138} s={t("30–40°", "30–40°", "30–40°")} lang={lang} size={8} fill="#dc2626" />
+      {/* inverter, socket, meter, grid */}
+      <rect x="118" y="150" width="22" height="26" rx="3" fill="#e2e8f0" stroke="#475569" />
+      <path d="M123,158 q3,-4 6,0 t6,0 M123,168 h12" fill="none" stroke="#475569" strokeWidth="1" />
+      <rect x="178" y="152" width="18" height="22" rx="3" fill="#fff" stroke="#475569" />
+      <circle cx="184" cy="163" r="1.6" fill="#475569" /><circle cx="190" cy="163" r="1.6" fill="#475569" />
+      <rect x="240" y="146" width="20" height="26" rx="3" fill="#fff" stroke="#475569" />
+      <text x="250" y="163" textAnchor="middle" fontSize="8" fontWeight="800" fill="#16a34a">kWh</text>
+      <path d="M110,110 L129,150 M140,163 H178 M196,163 H240 M260,159 H292 V60" fill="none" stroke="#f59e0b" strokeWidth="1.8" />
+      <rect x="288" y="56" width="8" height="126" fill="#78350f" /><path d="M276,64 h32" stroke="#78350f" strokeWidth="4" />
+      <path d="M296,64 Q312,90 320,96" fill="none" stroke="#334155" strokeWidth="1" />
+      <Tx x={24} y={176} s={t("← south", "← հարավ", "← юг")} lang={lang} size={9} fill="#166534" anchor="start" />
+    </g>
+  ),
+  parts: [
+    P(118, 86, t("Solar panel", "Արևային վահանակ", "Солнечная панель"), t("Made of silicon cells that turn light directly into electricity, with no moving parts and no noise.", "Կազմված է սիլիցիումային բջիջներից, որոնք լույսն անմիջապես վերածում են էլեկտրաէներգիայի՝ առանց շարժվող մասերի և առանց աղմուկի։", "Состоит из кремниевых элементов, которые превращают свет прямо в электричество, без движущихся частей и без шума.")),
+    P(30, 160, t("Facing south", "Հարավ նայող", "На юг"), t("In Armenia, north of the equator, the Sun crosses the southern sky, so panels face south to catch the most light.", "Հայաստանում, հասարակածից հյուսիս, Արևն անցնում է երկնքի հարավային մասով, ուստի վահանակներն ուղղում են դեպի հարավ, որ ամենաշատ լույսը որսան։", "В Армении, к северу от экватора, Солнце проходит по южной части неба, поэтому панели ставят на юг, чтобы ловить больше света.")),
+    P(150, 124, t("Tilt", "Թեքություն", "Наклон"), t("Tilted at roughly the latitude of the place, about 30–40° in Armenia, the panel faces the Sun more directly over the year.", "Մոտավորապես տվյալ վայրի լայնության չափով թեքված՝ Հայաստանում մոտ 30–40°, վահանակը տարվա ընթացքում ավելի ուղիղ է նայում Արևին։", "Если наклонить панель примерно на широту места, в Армении около 30–40°, за год она будет смотреть на Солнце прямее.")),
+    P(129, 186, t("Inverter", "Ինվերտոր", "Инвертор"), t("Panels make direct current; the inverter turns it into the alternating current used by sockets at home.", "Վահանակներն արտադրում են հաստատուն հոսանք, իսկ ինվերտորն այն վերածում է տան վարդակներում օգտագործվող փոփոխական հոսանքի։", "Панели дают постоянный ток; инвертор превращает его в переменный, который нужен домашним розеткам.")),
+    P(250, 136, t("Two-way meter", "Երկկողմանի հաշվիչ", "Двунаправленный счётчик"), t("On a sunny day the house may make more than it uses and send the extra to the grid; at night it takes electricity back.", "Արևոտ օրը տունը կարող է ավելին արտադրել, քան ծախսում է, և ավելցուկն ուղարկել ցանց, իսկ գիշերն էլեկտրաէներգիա հետ վերցնել։", "В солнечный день дом может производить больше, чем тратит, и отдавать излишек в сеть, а ночью брать электричество обратно.")),
+    P(173, 72, t("Solar water heater", "Արևային ջրատաքացուցիչ", "Солнечный водонагреватель"), t("A dark collector absorbs sunlight and heats water in the tank: it uses the Sun's heat, not electricity.", "Մուգ կոլեկտորը կլանում է արևի լույսը և տաքացնում բաքի ջուրը․ այն օգտագործում է Արևի ջերմությունը, ոչ թե էլեկտրաէներգիան։", "Тёмный коллектор поглощает солнечный свет и греет воду в баке: он использует тепло Солнца, а не электричество.")),
+    P(40, 70, t("Free fuel", "Անվճար վառելիք", "Бесплатное топливо"), t("Sunlight costs nothing and gives off no smoke. Armenia has well over 2,000 hours of sunshine a year, which is why solar power is growing fast there.", "Արևի լույսն անվճար է և ծուխ չի արտանետում։ Հայաստանում տարեկան 2000 ժամից զգալիորեն ավելի արևային ժամ կա, ուստի այնտեղ արևային էներգետիկան արագ է զարգանում։", "Солнечный свет бесплатен и не даёт дыма. В Армении больше 2000 солнечных часов в год, поэтому солнечная энергетика там быстро растёт.")),
+  ],
+};
+
+/* ---------------- grade 7: metal chasing ---------------- */
+
+const CU = "#c2410c", CU_L = "#fb923c";
+
+const chasing: Diagram = {
+  title: t("Metal chasing: raising a pattern on copper", "Դրվագում․ նախշի բարձրացում պղնձի վրա", "Чеканка: выпуклый узор на меди"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {/* bowl of pitch with the sheet */}
+      <path d="M20,150 Q20,200 90,200 Q160,200 160,150 Z" fill="#334155" />
+      <ellipse cx="90" cy="150" rx="70" ry="10" fill="#1f2937" />
+      <path d={`M28,146 H70 Q80,146 82,138 Q90,128 98,138 Q100,146 110,146 H152`} fill="none" stroke={CU} strokeWidth="3" />
+      {/* punch and hammer */}
+      <rect x="86" y="68" width="8" height="58" fill="#94a3b8" stroke="#475569" />
+      <path d="M86,126 h8 l-2,8 h-4 Z" fill="#64748b" />
+      <g transform="rotate(-20 120 40)">
+        <rect x="104" y="30" width="34" height="14" rx="5" fill="#475569" />
+        <rect x="132" y="40" width="70" height="7" rx="3" fill={WOOD} />
+      </g>
+      <path d="M88,60 l-4,-6 M96,60 l4,-6 M92,58 v-8" stroke="#f59e0b" strokeWidth="1.5" />
+      {/* tools */}
+      {[0, 1, 2, 3].map((j) => (
+        <g key={j}>
+          <rect x={186 + j * 14} y="96" width="8" height="46" fill="#94a3b8" stroke="#475569" strokeWidth="0.6" />
+          <path d={j === 0 ? `M${186 + j * 14},142 l4,6 l4,-6` : j === 1 ? `M${186 + j * 14},142 h8 v3 h-8 Z` : j === 2 ? `M${186 + j * 14},142 q4,8 8,0` : `M${186 + j * 14},142 l2,5 h4 l2,-5`} fill="#475569" />
+        </g>
+      ))}
+      {/* finished tray */}
+      <circle cx="262" cy="56" r="44" fill={CU} />
+      <circle cx="262" cy="56" r="38" fill={CU_L} />
+      <circle cx="262" cy="56" r="38" fill="none" stroke={CU} strokeWidth="1" strokeDasharray="2 3" />
+      <Eternity x={262} y={56} r={20} c={CU} />
+      <Tx x={90} y={210} s={t("pitch: firm but gives under the punch", "խեժ՝ պինդ, բայց զիջում է դրոշմիչի տակ", "смола: твёрдая, но поддаётся чекану")} lang={lang} size={7} fill="#334155" />
+    </g>
+  ),
+  parts: [
+    P(40, 140, t("Copper sheet", "Պղնձե թիթեղ", "Медный лист"), t("Copper is soft and does not crack when stretched. Before work it is heated red-hot and cooled, which makes it softer still.", "Պղինձը փափուկ է և ձգելիս չի ճաքում։ Աշխատելուց առաջ այն շիկացնում և սառեցնում են, ինչն այն ավելի փափուկ է դարձնում։", "Медь мягкая и не трескается при растяжении. Перед работой её нагревают докрасна и остужают, отчего она становится ещё мягче.")),
+    P(56, 176, t("Pitch bowl", "Խեժով աման", "Чаша со смолой"), t("The sheet is pressed onto warm pitch. It holds the metal firmly but lets it sink a little where it is struck.", "Թիթեղը սեղմում են տաք խեժի վրա։ Այն ամուր պահում է մետաղը, բայց թույլ է տալիս, որ հարվածի տեղում մի փոքր իջնի։", "Лист прижимают к тёплой смоле. Она крепко держит металл, но даёт ему чуть продавиться там, куда бьют.")),
+    P(76, 96, t("Punch", "Դրոշմիչ", "Чекан"), t("A short steel rod with a shaped tip. Tapped along the drawn lines, it pushes the metal down bit by bit.", "Ձևավոր ծայրով կարճ պողպատե ձող։ Գծված գծերով թեթև խփելիս այն մետաղն աստիճանաբար ներս է սեղմում։", "Короткий стальной стержень с фигурным концом. Постукивая по нарисованным линиям, им понемногу вдавливают металл.")),
+    P(176, 40, t("Chasing hammer", "Դրվագման մուրճ", "Чеканочный молоток"), t("A light hammer with a wide flat face and a springy handle, for thousands of small, even taps.", "Թեթև մուրճ՝ լայն, հարթ գլխով և ճկուն կոթով, հազարավոր փոքր, հավասար հարվածների համար։", "Лёгкий молоток с широким плоским бойком и пружинящей ручкой — для тысяч мелких ровных ударов.")),
+    P(208, 160, t("A set of punches", "Դրոշմիչների հավաքածու", "Набор чеканов"), t("Sharp tracers for outlines, flat ones for smoothing, round ones for domes, textured ones for backgrounds.", "Սուր դրոշմիչներ՝ ուրվագծերի, հարթ՝ հարթեցնելու, կլոր՝ ուռուցիկ մասերի, նախշավոր՝ ֆոնի համար։", "Острые — для контуров, плоские — для разглаживания, круглые — для выпуклостей, фактурные — для фона.")),
+    P(90, 124, t("Raised from behind", "Բարձրացված հետևից", "Выбито с обратной стороны"), t("Pushing the metal from the back makes the pattern stand out on the front. This is called repoussé.", "Մետաղը հետևից սեղմելով՝ նախշը դուրս է ցցվում առջևից։ Սա կոչվում է ռեպուսե։", "Если выдавливать металл с обратной стороны, узор выступает спереди. Это называется выколоткой.")),
+    P(306, 56, t("Finished tray", "Պատրաստի սկուտեղ", "Готовый поднос"), t("Armenian masters decorate trays, jugs and church vessels with ornaments such as the eternity sign.", "Հայ վարպետները սկուտեղները, սափորները և եկեղեցական անոթները զարդարում են այնպիսի զարդանախշերով, ինչպիսին հավերժության նշանն է։", "Армянские мастера украшают подносы, кувшины и церковную утварь орнаментами, например знаком вечности.")),
+  ],
+};
+
+/* ---------------- grade 7: school subjects and careers ---------------- */
+
+const SUBJ: Tr[] = [t("Maths", "Մաթեմատիկա", "Математика"), t("Physics", "Ֆիզիկա", "Физика"), t("Drawing", "Գծագրություն", "Черчение"), t("Informatics", "Ինֆորմատիկա", "Информатика"), t("English", "Անգլերեն", "Английский"), t("Art", "Կերպարվեստ", "ИЗО")];
+const JOBS: Array<[Tr, string, number[]]> = [
+  [t("Engineer", "Ինժեներ", "Инженер"), "#2563eb", [0, 1, 2]],
+  [t("Programmer", "Ծրագրավորող", "Программист"), "#16a34a", [0, 3, 4]],
+  [t("Designer", "Դիզայներ", "Дизайнер"), "#db2777", [5, 2, 3]],
+  [t("Electrician", "Էլեկտրիկ", "Электрик"), "#f59e0b", [1, 0]],
+  [t("Architect", "Ճարտարապետ", "Архитектор"), "#7c3aed", [2, 0, 5]],
+  [t("Robotics", "Ռոբոտաշինություն", "Робототехник"), "#dc2626", [1, 3, 0]],
+];
+const RY = (j: number) => 26 + j * 30;
+
+const careers: Diagram = {
+  title: t("Which subjects lead where", "Որ առարկաները ուր են տանում", "Куда ведут школьные предметы"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {JOBS.map(([, c, from], j) => from.map((s) => <path key={`${j}-${s}`} d={`M112,${RY(s) + 11} C160,${RY(s) + 11} 160,${RY(j) + 11} 208,${RY(j) + 11}`} fill="none" stroke={c} strokeWidth="1.6" opacity="0.7" />))}
+      {SUBJ.map((s, j) => (
+        <g key={j}><rect x="12" y={RY(j)} width="100" height="22" rx="11" fill="#fff" stroke="#94a3b8" /><Tx x={62} y={RY(j) + 15} s={s} lang={lang} size={8} fill="#334155" /></g>
+      ))}
+      {JOBS.map(([s, c], j) => (
+        <g key={j}><rect x="208" y={RY(j)} width="100" height="22" rx="5" fill={c} /><Tx x={258} y={RY(j) + 15} s={s} lang={lang} size={8} fill="#fff" /></g>
+      ))}
+    </g>
+  ),
+  parts: [
+    ...JOBS.map(([s, , ], j) => P(304, RY(j) + 2, s, [
+      t("Designs machines, bridges and devices, and works out whether they will be strong and safe.", "Նախագծում է մեքենաներ, կամուրջներ և սարքեր և հաշվում, թե արդյոք դրանք ամուր և անվտանգ կլինեն։", "Проектирует машины, мосты и приборы и рассчитывает, будут ли они прочными и безопасными."),
+      t("Writes programs and apps. Most programming languages and guides are in English.", "Գրում է ծրագրեր և հավելվածներ։ Ծրագրավորման լեզուների և ձեռնարկների մեծ մասն անգլերեն է։", "Пишет программы и приложения. Большинство языков программирования и справочников — на английском."),
+      t("Creates how things look and feel: clothes, furniture, posters, websites and apps.", "Ստեղծում է իրերի տեսքն ու զգացողությունը՝ հագուստ, կահույք, պաստառներ, կայքեր և հավելվածներ։", "Создаёт, как выглядят и ощущаются вещи: одежда, мебель, плакаты, сайты и приложения."),
+      t("Installs and repairs wiring, sockets and machines. Precision and safety rules are a matter of life and death.", "Տեղադրում և նորոգում է հաղորդալարեր, վարդակներ և մեքենաներ։ Ճշգրտությունն ու անվտանգության կանոնները կյանքի և մահվան հարց են։", "Устанавливает и чинит проводку, розетки и машины. Точность и техника безопасности — вопрос жизни и смерти."),
+      t("Designs buildings that are beautiful, comfortable and strong, and that fit the city around them.", "Նախագծում է շենքեր, որոնք գեղեցիկ են, հարմար և ամուր, և համապատասխանում են շրջապատող քաղաքին։", "Проектирует здания — красивые, удобные и прочные, вписанные в окружающий город."),
+      t("Builds and programs robots: mechanics, electronics and code all at once.", "Կառուցում և ծրագրավորում է ռոբոտներ՝ մեխանիկա, էլեկտրոնիկա և կոդ միաժամանակ։", "Строит и программирует роботов: механика, электроника и код сразу."),
+    ][j])),
+    P(160, 206, t("Skills for every job", "Հմտություններ ամեն աշխատանքի համար", "Навыки для любой работы"), t("Whatever you choose, critical thinking, creativity, teamwork and communication will be needed, and you can practise them in every subject.", "Ինչ էլ ընտրես, պետք կգան քննադատական մտածողություն, ստեղծագործականություն, թիմային աշխատանք և հաղորդակցություն, և դրանք կարելի է մարզել ամեն առարկայում։", "Что бы ты ни выбрал, понадобятся критическое мышление, творчество, командная работа и общение, а тренировать их можно на любом предмете.")),
+  ],
+};
+
+/* ---------------- grade 7: cost, price and break-even ---------------- */
+
+const PX = (n: number) => 54 + n * 12;
+const PYV = (d: number) => 186 - d * 0.0152;
+
+const profit: Diagram = {
+  title: t("When does the fair start making money?", "Երբ է տոնավաճառը սկսում շահույթ բերել", "Когда ярмарка начинает приносить прибыль"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      <path d={`M${PX(0)},${PYV(0)} L${PX(12)},${PYV(6000)} L${PX(0)},${PYV(6000)} Z`} fill="#fecaca" />
+      <path d={`M${PX(12)},${PYV(6000)} L${PX(20)},${PYV(10000)} L${PX(20)},${PYV(6000)} Z`} fill="#bbf7d0" />
+      <line x1={PX(0)} x2={PX(0)} y1="20" y2="186" stroke="#334155" /><line x1={PX(0)} x2="300" y1="186" y2="186" stroke="#334155" />
+      {[0, 5, 10, 15, 20].map((n) => <text key={n} x={PX(n)} y="198" textAnchor="middle" fontSize="8" fill="#334155">{n}</text>)}
+      {[0, 2000, 4000, 6000, 8000, 10000].map((d) => <g key={d}><line x1={PX(0) - 3} x2={PX(0)} y1={PYV(d)} y2={PYV(d)} stroke="#334155" /><text x={PX(0) - 5} y={PYV(d) + 3} textAnchor="end" fontSize="7" fill="#334155">{d.toLocaleString("en").replace(",", " ")}</text></g>)}
+      <line x1={PX(0)} x2={PX(20)} y1={PYV(6000)} y2={PYV(6000)} stroke="#dc2626" strokeWidth="2.5" />
+      <line x1={PX(0)} x2={PX(20)} y1={PYV(0)} y2={PYV(10000)} stroke="#16a34a" strokeWidth="2.5" />
+      <circle cx={PX(12)} cy={PYV(6000)} r="5" fill="#fff" stroke="#0f172a" strokeWidth="2" />
+      <line x1={PX(12)} x2={PX(12)} y1={PYV(6000)} y2="186" stroke="#0f172a" strokeDasharray="3 2" />
+      <path d={`M${PX(20) + 6},${PYV(10000)} h4 V${PYV(6000)} h-4`} fill="none" stroke="#15803d" strokeWidth="1.5" />
+      <Tx x={PX(20) + 2} y={PYV(8000) + 3} s={t("+4 000", "+4 000", "+4 000")} lang={lang} size={8} fill="#15803d" anchor="end" />
+      <Tx x={PX(20)} y={PYV(6000) + 12} s={t("costs", "ծախսեր", "затраты")} lang={lang} size={8} fill="#dc2626" anchor="end" />
+      <Tx x={PX(8)} y={PYV(5600) - 26} s={t("sales", "վաճառք", "выручка")} lang={lang} size={8} fill="#16a34a" anchor="end" />
+      <Tx x={176} y={210} s={t("keyrings sold", "վաճառված կախազարդեր", "продано брелоков")} lang={lang} size={8} fill="#334155" />
+      <Tx x={70} y={30} s={t("1 keyring: 500 = 300 cost + 200 profit", "1 կախազարդ՝ 500 = 300 ինքնարժեք + 200 շահույթ", "1 брелок: 500 = 300 себестоимость + 200 прибыль")} lang={lang} size={7.5} fill="#334155" anchor="start" w={600} />
+    </g>
+  ),
+  parts: [
+    P(PX(3), PYV(6000) - 8, t("Costs", "Ծախսեր", "Затраты"), t("Materials for 20 keyrings cost 6,000 drams, and they must be bought before anything is sold.", "20 կախազարդի նյութերն արժեն 6000 դրամ, և դրանք պետք է գնել նախքան որևէ բան վաճառելը։", "Материалы на 20 брелоков стоят 6000 драмов, и купить их нужно до того, как что-то продано.")),
+    P(PX(4), PYV(2000) - 10, t("Money from sales", "Վաճառքից եկամուտ", "Выручка"), t("Each keyring sold at 500 drams adds 500 to the money coming in, so the green line climbs steadily.", "Ամեն 500 դրամով վաճառված կախազարդն եկամտին ավելացնում է 500, ուստի կանաչ գիծը հավասարաչափ բարձրանում է։", "Каждый брелок, проданный за 500 драмов, добавляет 500 к выручке, поэтому зелёная линия ровно растёт.")),
+    P(PX(5), PYV(4200), t("Loss", "Վնաս", "Убыток"), t("While fewer than 12 are sold, the money from sales has not yet covered the costs.", "Քանի դեռ 12-ից քիչ է վաճառված, վաճառքից եկամուտը դեռ չի ծածկել ծախսերը։", "Пока продано меньше 12, выручка ещё не покрыла затраты.")),
+    P(PX(12), PYV(6000) - 14, t("Break-even point", "Անվնասաբերության կետ", "Точка безубыточности"), t("At 12 keyrings, 12 × 500 = 6,000: sales exactly cover the costs. Every keyring after this is profit.", "12 կախազարդի դեպքում 12 × 500 = 6000․ վաճառքը ճիշտ ծածկում է ծախսերը։ Սրանից հետո ամեն կախազարդը շահույթ է։", "На 12 брелоках 12 × 500 = 6000: выручка ровно покрывает затраты. Каждый следующий брелок — прибыль.")),
+    P(PX(18), PYV(7000), t("Profit", "Շահույթ", "Прибыль"), t("If all 20 are sold: 10,000 − 6,000 = 4,000 drams, the same as 20 × 200.", "Եթե բոլոր 20-ը վաճառվեն՝ 10 000 − 6000 = 4000 դրամ, նույնը, ինչ 20 × 200-ը։", "Если продать все 20: 10 000 − 6000 = 4000 драмов, столько же, сколько 20 × 200.")),
+    P(60, 42, t("Unit cost and price", "Ինքնարժեք և գին", "Себестоимость и цена"), t("Unit cost = 6,000 ÷ 20 = 300 drams. The price must be higher than this, but not more than customers are willing to pay.", "Ինքնարժեքը = 6000 ÷ 20 = 300 դրամ։ Գինը պետք է դրանից բարձր լինի, բայց ոչ ավելի, քան գնորդները պատրաստ են վճարել։", "Себестоимость = 6000 ÷ 20 = 300 драмов. Цена должна быть выше, но не больше, чем готовы заплатить покупатели.")),
+  ],
+};
+
+/* ---------------- grade 7: the project portfolio ---------------- */
+
+const Card = ({ x, y, c, children }: { x: number; y: number; c: string; children?: React.ReactNode }) => (
+  <g><rect x={x} y={y} width="66" height="76" rx="4" fill="#fff" stroke={c} strokeWidth="1.5" /><rect x={x} y={y} width="66" height="8" rx="3" fill={c} />{children}</g>
+);
+const lines = (x: number, y: number, n: number, w = 50) => Array.from({ length: n }, (_, j) => <line key={j} x1={x} x2={x + w - (j % 2) * 12} y1={y + j * 7} y2={y + j * 7} stroke="#cbd5e1" strokeWidth="2" />);
+
+const portfolio: Diagram = {
+  title: t("What goes into a project portfolio", "Ինչ է ներառում նախագծի պորտֆոլիոն", "Что входит в портфолио проекта"),
+  h: 214,
+  draw: () => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      <path d="M8,20 h90 l10,10 h204 v176 h-304 Z" fill="#fde68a" stroke="#d97706" />
+      <Card x={18} y={36} c="#2563eb">{lines(26, 54, 6)}</Card>
+      <Card x={94} y={36} c="#db2777">
+        <path d="M104,70 q10,-20 22,-4 q8,10 -6,14 Z" fill="none" stroke="#475569" />
+        <circle cx="140" cy="84" r="8" fill="none" stroke="#475569" />
+        <path d="M100,96 l14,-8 l10,10" fill="none" stroke="#475569" />
+      </Card>
+      <Card x={170} y={36} c="#0f172a">
+        <rect x="180" y="58" width="40" height="26" fill="none" stroke="#0f172a" strokeWidth="1.5" />
+        <circle cx="200" cy="71" r="6" fill="none" stroke="#0f172a" />
+        <path d="M180,94 h40 M180,91 v6 M220,91 v6" stroke="#0f172a" strokeWidth="0.8" />
+      </Card>
+      <Card x={246} y={36} c="#16a34a">
+        <rect x="254" y="52" width="24" height="18" fill="#bbf7d0" stroke="#16a34a" /><rect x="282" y="56" width="22" height="18" fill="#bbf7d0" stroke="#16a34a" />
+        <rect x="258" y="78" width="40" height="24" fill="#bbf7d0" stroke="#16a34a" />
+        <path d="M262,98 l10,-12 l8,8 l6,-6 l8,10 Z" fill="#16a34a" />
+      </Card>
+      <Card x={18} y={122} c="#f59e0b">
+        {[0, 1, 2, 3].map((j) => <line key={j} x1="24" x2="80" y1={140 + j * 12} y2={140 + j * 12} stroke="#fcd34d" />)}
+        <line x1="50" x2="50" y1="134" y2="184" stroke="#fcd34d" />
+        <text x="62" y="192" fontSize="8" fontWeight="800" fill="#b45309" textAnchor="middle">Σ</text>
+      </Card>
+      <Card x={94} y={122} c="#7c3aed">
+        {[0, 1, 2].map((j) => <g key={j}><rect x="102" y={140 + j * 16} width="9" height="9" fill="none" stroke="#7c3aed" /><path d={`M103,${144 + j * 16} l3,3 l5,-6`} fill="none" stroke="#16a34a" strokeWidth="1.8" />{lines(116, 145 + j * 16, 1, 34)}</g>)}
+      </Card>
+      <Card x={170} y={122} c="#dc2626">
+        {[0, 1, 2, 3, 4].map((j) => <path key={j} d={`M${182 + j * 10},150 l2,5 h5 l-4,3 l2,5 l-5,-3 l-5,3 l2,-5 l-4,-3 h5 Z`} fill={j < 4 ? "#facc15" : "#e5e7eb"} />)}
+        {lines(178, 176, 2)}
+      </Card>
+      <g>
+        <rect x="248" y="130" width="62" height="40" rx="3" fill="#1e293b" />
+        <rect x="252" y="134" width="54" height="30" fill="#bfdbfe" />
+        <path d="M279,170 v14 M266,190 l13,-6 l13,6" fill="none" stroke="#1e293b" strokeWidth="2" />
+        <circle cx="300" cy="190" r="10" fill="#fff" stroke="#475569" strokeWidth="1.5" />
+        <path d="M300,183 V190 L305,193" fill="none" stroke="#475569" strokeWidth="1.5" />
+      </g>
+    </g>
+  ),
+  parts: [
+    P(51, 30, t("Problem and requirements", "Խնդիր և պահանջներ", "Проблема и требования"), t("What need does the product meet, who is it for, and what must it be like? Every later decision is checked against this page.", "Ի՞նչ կարիք է բավարարում արտադրանքը, ու՞մ համար է և ինչպիսի՞ն պետք է լինի։ Հետագա ամեն որոշում ստուգվում է այս էջով։", "Какую потребность закрывает изделие, для кого оно и каким должно быть? Каждое следующее решение сверяют с этой страницей.")),
+    P(127, 30, t("Sketches", "Էսքիզներ", "Эскизы"), t("At least three different ideas drawn quickly by hand, with notes on what is good and bad about each.", "Առնվազն երեք տարբեր գաղափար՝ արագ ձեռքով գծված, յուրաքանչյուրի լավ և վատ կողմերի նշումներով։", "Минимум три разные идеи, быстро нарисованные от руки, с пометками о плюсах и минусах каждой.")),
+    P(203, 30, t("Drawing", "Գծագիր", "Чертёж"), t("The chosen idea as an exact technical drawing with dimensions, so that anyone could make it.", "Ընտրված գաղափարը՝ որպես չափերով ճշգրիտ տեխնիկական գծագիր, որ ցանկացած մարդ կարողանա պատրաստել։", "Выбранная идея в виде точного технического чертежа с размерами, чтобы по нему мог работать любой.")),
+    P(279, 30, t("Photos of the work", "Աշխատանքի լուսանկարներ", "Фото работы"), t("Pictures of each stage show how you worked, including the mistakes you fixed.", "Ամեն փուլի նկարները ցույց են տալիս, թե ինչպես ես աշխատել, ներառյալ ուղղված սխալները։", "Снимки каждого этапа показывают, как ты работал, включая исправленные ошибки.")),
+    P(51, 116, t("Plan and costs", "Պլան և ծախսեր", "План и затраты"), t("The process plan, the list of materials and tools, the timetable and how much it all cost.", "Տեխնոլոգիական պլանը, նյութերի և գործիքների ցանկը, ժամանակացույցը և թե որքան արժեցավ ամեն ինչ։", "Технологическая карта, список материалов и инструментов, график и сколько всё стоило.")),
+    P(127, 116, t("Testing", "Փորձարկում", "Испытание"), t("Go through the requirements one by one and check whether the finished product meets each of them.", "Մեկ առ մեկ անցի՛ր պահանջներով և ստուգի՛ր, թե պատրաստի արտադրանքը համապատասխանում է արդյոք դրանցից յուրաքանչյուրին։", "Пройди по требованиям одно за другим и проверь, выполняет ли готовое изделие каждое из них.")),
+    P(203, 116, t("Self-assessment", "Ինքնագնահատում", "Самооценка"), t("Honestly: what went well, what was hard, and what you would do differently next time.", "Անկեղծ՝ ի՞նչը ստացվեց լավ, ի՞նչն էր դժվար, և ի՞նչ կանեիր այլ կերպ հաջորդ անգամ։", "Честно: что получилось, что было трудно и что бы ты сделал иначе в следующий раз.")),
+    P(279, 124, t("Presentation", "Ներկայացում", "Презентация"), t("3–5 minutes: the problem, how you chose the solution, the difficulties, the result and what you learnt.", "3–5 րոպե՝ խնդիրը, ինչպես ընտրեցիր լուծումը, դժվարությունները, արդյունքը և ինչ սովորեցիր։", "3–5 минут: проблема, как ты выбрал решение, трудности, результат и чему научился.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog, workbench, wiretools, views, weaves3, sewmachine, plate, carelabel, joints, ergochair, apronpattern, foodtemp, breadboard, solarhouse, chasing, careers, profit, portfolio };
