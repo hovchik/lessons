@@ -575,6 +575,15 @@ button.art-card:active { transform: scale(0.97); }
 .sim-bars ~ .sim-readouts dd { font-size: 0.9rem; line-height: 1.25; }
 .sim-bars-track { display: block; height: 12px; border-radius: 6px; background: #eef0f6; overflow: hidden; }
 .sim-bars-track span { display: block; height: 100%; border-radius: 6px; transition: width 400ms ease; }
+.sim-tl { display: grid; gap: 2px; margin-top: 0.5rem; }
+.sim-tl-row { display: grid; grid-template-columns: minmax(4.6rem, auto) 1fr; gap: 0.6rem; align-items: baseline; padding: 5px 8px; border: 0; border-radius: 10px; background: transparent; text-align: left; cursor: pointer; font-size: 0.88rem; line-height: 1.3; }
+.sim-tl-row b { font-weight: 900; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sim-tl-row span { font-weight: 700; }
+.sim-tl-row.is-active { background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.sim-tl ~ .sim-readouts dd { font-size: 0.9rem; line-height: 1.25; }
+.sim-tl-eras { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; }
+.sim-tl-eras span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.sim-tl-eras i { display: inline-block; width: 0.8rem; height: 0.55rem; border-radius: 3px; opacity: 0.5; }
 .sim-pyramid { display: grid; gap: 4px; justify-items: center; }
 .sim-pyramid-level { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-height: 2.5rem; padding: 0 0.7rem; border-radius: 12px; font-weight: 900; color: #fff; border: 0; transition: width 400ms ease; }
 .sim-pyramid-level span:first-child { font-size: 1.25rem; }
