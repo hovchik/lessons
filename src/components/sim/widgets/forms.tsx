@@ -170,6 +170,10 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   phrasal: [t("Phrasal verb", "Դարձվածային բայ", "Фразовый глагол"), t("Meaning", "Իմաստ", "Значение")],
   heritage: [t("Monument", "Հուշարձան", "Памятник"), t("Where", "Որտեղ", "Где"), t("When built", "Երբ է կառուցվել", "Когда построен")],
   who3: [t("Name", "Անուն", "Имя"), t("Who", "Ով", "Кто"), t("Famous for", "Հայտնի է", "Знаменит")],
+  deduce: [t("must: I'm sure it's true", "must՝ վստահ եմ, որ այո", "must — уверен, что да"), t("might / could: maybe", "might / could՝ գուցե", "might / could — возможно"), t("can't: I'm sure it's false", "can't՝ վստահ եմ, որ ոչ", "can't — уверен, что нет")],
+  realunreal: [t("1st: real, possible", "1-ին՝ իրական, հնարավոր", "1-й: реально, возможно"), t("2nd: imagined, unlikely", "2-րդ՝ երևակայական, քիչ հավանական", "2-й: воображаемо, маловероятно")],
+  gerinf: [t("verb + -ing", "բայ + -ing", "глагол + -ing"), t("verb + to …", "բայ + to …", "глагол + to …")],
+  lakes: [t("Feature", "Հատկանիշ", "Признак"), t("Sevan", "Սևան", "Севан"), t("Baikal", "Բայկալ", "Байкал")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
