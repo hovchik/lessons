@@ -1,6 +1,9 @@
-import { and, asc, desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import { newId } from "./user-auth";
+import { recordAnswers } from "./learner";
+import { examItemId, quizItemId } from "@/lib/memory";
+import { scoreExam } from "@/lib/exam-score";
 
 /**
  * Progress tracking. Two layers:
@@ -10,7 +13,7 @@ import { newId } from "./user-auth";
  *    page and the lesson page read.
  */
 
-export type ActivityKind = "quiz" | "exam";
+export type ActivityKind = "quiz" | "exam" | "unit";
 
 export async function recordAttempt(input: {
   userId: string;
@@ -36,7 +39,15 @@ export async function recordAttempt(input: {
  * lesson is marked completed. Returns null when the lesson or its quiz does not
  * exist, or the number of answers does not match the quiz.
  */
-export async function recordQuizResult(input: { userId: string; lessonId: string; answers: number[] }) {
+export async function recordQuizResult(input: {
+  userId: string;
+  lessonId: string;
+  answers: number[];
+  /** Per question, how sure the pupil was before checking: 0 guessing, 2 sure. */
+  confidence?: (number | null)[];
+  /** Per question, the option picked on the second try after a wrong first one (null when none). */
+  retries?: (number | null)[];
+}) {
   const db = await getDb();
   const lesson = await db
     .select({ id: schema.lessons.id, courseId: schema.lessons.courseId, quiz: schema.lessons.quiz, status: schema.lessons.status })
@@ -44,9 +55,27 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
     .where(eq(schema.lessons.id, input.lessonId))
     .get();
   if (!lesson || lesson.status !== "published" || lesson.quiz.length === 0 || input.answers.length !== lesson.quiz.length) return null;
+  if (input.confidence && input.confidence.length !== lesson.quiz.length) return null;
+  if (input.retries && input.retries.length !== lesson.quiz.length) return null;
   const total = lesson.quiz.length;
+  // The score counts first tries; a second try after a hint is logged but does not count.
   const score = lesson.quiz.filter((q, i) => input.answers[i] === q.answer).length;
   await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score, total, answers: input.answers });
+  const base = { source: "quiz" as const, refId: lesson.id, courseId: lesson.courseId };
+  const firsts = lesson.quiz.map((q, i) => ({
+    ...base,
+    itemId: quizItemId(lesson.id, i),
+    correct: input.answers[i] === q.answer,
+    choice: input.answers[i],
+    confidence: input.confidence?.[i] ?? null,
+  }));
+  const seconds = lesson.quiz.flatMap((q, i) => {
+    const r = input.retries?.[i];
+    // Only a wrong first answer gets a second try, and it must be a different option.
+    if (r == null || r >= q.options.length || input.answers[i] === q.answer || r === input.answers[i]) return [];
+    return [{ ...base, itemId: quizItemId(lesson.id, i), correct: r === q.answer, choice: r, hintUsed: true, schedule: false }];
+  });
+  await recordAnswers(input.userId, [...firsts, ...seconds]);
   const now = new Date().toISOString();
   const lp = schema.lessonProgress;
   // Best-score comparison happens inside the upsert so two overlapping
@@ -80,6 +109,39 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
     })
     .run();
   return getLessonProgress(input.userId, lesson.id);
+}
+
+/**
+ * Record a finished exam or trial. The score is computed on the server; each
+ * answered question goes into the learner model, unanswered ones are skipped
+ * (the pupil may have stopped early). Returns null when the exam does not exist
+ * or the answers do not match it.
+ */
+export async function recordExamResult(input: { userId: string; examId: string; answers: Array<number | null> }) {
+  const db = await getDb();
+  const exam = await db
+    .select({ id: schema.exams.id, subjectId: schema.exams.subjectId, grade: schema.exams.grade, questions: schema.exams.questions, passPercent: schema.exams.passPercent, status: schema.exams.status })
+    .from(schema.exams)
+    .where(eq(schema.exams.id, input.examId))
+    .get();
+  if (!exam || exam.status !== "published" || exam.questions.length === 0 || input.answers.length !== exam.questions.length) return null;
+  // Exams of a subject and grade that has a course count towards that course.
+  const course = exam.subjectId
+    ? await db.select({ id: schema.courses.id }).from(schema.courses).where(and(eq(schema.courses.subjectId, exam.subjectId), eq(schema.courses.grade, exam.grade))).get()
+    : undefined;
+  const courseId = course?.id ?? null;
+  const chosen = Object.fromEntries(input.answers.map((a, i) => [i, a ?? undefined]));
+  const result = scoreExam(exam.questions, chosen, exam.passPercent);
+  await recordAttempt({ userId: input.userId, kind: "exam", refId: exam.id, courseId, score: result.score, total: result.total, answers: input.answers });
+  await recordAnswers(
+    input.userId,
+    exam.questions.flatMap((q, i) => {
+      const a = input.answers[i];
+      if (a === null || a === undefined) return [];
+      return [{ itemId: examItemId(exam.id, i), source: "exam" as const, refId: exam.id, courseId, correct: a === q.answer, choice: a }];
+    }),
+  );
+  return result;
 }
 
 /** Mark a lesson as done (or not) without a quiz, e.g. drawing lessons. */
@@ -136,12 +198,17 @@ export type CourseSummary = {
   lastActivity: string | null;
 };
 
-/** Per-course summary for the progress page, only courses the user touched. */
+/**
+ * Per-course summary for the progress page, only courses the user touched:
+ * through lessons, or only through questions met elsewhere (a warm-up, a unit
+ * check or an exam), which still show their mastery.
+ */
 export async function getUserCourseSummaries(userId: string): Promise<CourseSummary[]> {
   const db = await getDb();
   const lp = schema.lessonProgress;
   const rows = await db
     .select({
+      sortOrder: schema.subjects.sortOrder,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -162,9 +229,38 @@ export async function getUserCourseSummaries(userId: string): Promise<CourseSumm
     .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(lp.userId, userId))
     .groupBy(schema.courses.id)
-    .orderBy(asc(schema.subjects.sortOrder), asc(schema.courses.grade))
     .all();
-  return rows.map((r) => ({
+  const seen = new Set(rows.map((r) => r.courseId));
+  const rc = schema.reviewCards;
+  const other = (await db.selectDistinct({ courseId: rc.courseId }).from(rc).where(eq(rc.userId, userId)).all())
+    .map((r) => r.courseId)
+    .filter((c): c is string => !!c && !seen.has(c));
+  const extra = other.length
+    ? await db
+        .select({
+          sortOrder: schema.subjects.sortOrder,
+          courseId: schema.courses.id,
+          subjectId: schema.courses.subjectId,
+          grade: schema.courses.grade,
+          courseTitle: schema.courses.title,
+          subjectName: schema.subjects.name,
+          subjectColor: schema.subjects.color,
+          subjectIcon: schema.subjects.icon,
+          totalLessons: sql<number>`(select count(*) from lessons l where l.course_id = ${schema.courses.id} and l.status = 'published')`,
+          completed: sql<number>`0`,
+          bestScore: sql<number>`0`,
+          bestTotal: sql<number>`0`,
+          quizzesTaken: sql<number>`0`,
+          lastActivity: sql<string | null>`null`,
+        })
+        .from(schema.courses)
+        .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
+        .where(inArray(schema.courses.id, other))
+        .all()
+    : [];
+  return [...rows, ...extra]
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.grade - b.grade)
+    .map((r) => ({
     courseId: r.courseId,
     subjectId: r.subjectId,
     grade: r.grade,
@@ -216,6 +312,8 @@ export async function getRecentAttempts(userId: string, limit = 10) {
       createdAt: schema.attempts.createdAt,
       lessonTitle: schema.lessons.title,
       lessonSlug: schema.lessons.slug,
+      examTitle: schema.exams.title,
+      skillTitle: schema.skills.title,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -223,6 +321,8 @@ export async function getRecentAttempts(userId: string, limit = 10) {
     })
     .from(schema.attempts)
     .leftJoin(schema.lessons, and(eq(schema.attempts.kind, "quiz"), eq(schema.attempts.refId, schema.lessons.id)))
+    .leftJoin(schema.exams, and(eq(schema.attempts.kind, "exam"), eq(schema.attempts.refId, schema.exams.id)))
+    .leftJoin(schema.skills, and(eq(schema.attempts.kind, "unit"), eq(schema.attempts.refId, schema.skills.id)))
     .leftJoin(schema.courses, eq(schema.attempts.courseId, schema.courses.id))
     .leftJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(schema.attempts.userId, userId))

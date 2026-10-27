@@ -261,3 +261,131 @@ export const exams = sqliteTable(
 );
 
 export type Exam = typeof exams.$inferSelect;
+
+/* ------------------------------------------------------------------------- */
+/* Learner model: skills, answer events and spaced-repetition memory          */
+/* ------------------------------------------------------------------------- */
+
+/**
+ * A skill a pupil can master. Seeded from src/content/skills: by default one
+ * skill per unit (`<courseId>.u<n>`), with prerequisite links between them.
+ */
+export const skills = sqliteTable(
+  "skills",
+  {
+    id: text("id").primaryKey(), // e.g. "algebra-7.u2"
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    unitId: text("unit_id").references(() => units.id, { onDelete: "set null" }),
+    position: integer("position").notNull(),
+    title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
+  },
+  (t) => [index("skills_course").on(t.courseId, t.position)],
+);
+
+/** `skillId` needs `prereqId` first. */
+export const skillPrereqs = sqliteTable(
+  "skill_prereqs",
+  {
+    skillId: text("skill_id")
+      .notNull()
+      .references(() => skills.id, { onDelete: "cascade" }),
+    prereqId: text("prereq_id")
+      .notNull()
+      .references(() => skills.id, { onDelete: "cascade" }),
+  },
+  (t) => [primaryKey({ columns: [t.skillId, t.prereqId] }), index("skill_prereqs_prereq").on(t.prereqId)],
+);
+
+/** Which skills a lesson (and so every question of its quiz) practises. */
+export const lessonSkills = sqliteTable(
+  "lesson_skills",
+  {
+    lessonId: text("lesson_id")
+      .notNull()
+      .references(() => lessons.id, { onDelete: "cascade" }),
+    skillId: text("skill_id")
+      .notNull()
+      .references(() => skills.id, { onDelete: "cascade" }),
+  },
+  (t) => [primaryKey({ columns: [t.lessonId, t.skillId] }), index("lesson_skills_skill").on(t.skillId)],
+);
+
+/** Where an answer was given. `warmup`: the questions from earlier lessons at the top of a lesson; `unit`: a unit check. */
+export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "unit" | "check";
+
+/**
+ * One row per question a pupil answers, anywhere in the app. `itemId` names the
+ * question (see src/lib/memory.ts: `quiz:<lessonId>#<index>`, `exam:<examId>#<index>`).
+ */
+export const answerEvents = sqliteTable(
+  "answer_events",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    itemId: text("item_id").notNull(),
+    source: text("source").$type<AnswerSource>().notNull(),
+    /** The lesson or exam the question belongs to. */
+    refId: text("ref_id").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "set null" }),
+    correct: integer("correct", { mode: "boolean" }).notNull(),
+    /** Chosen option index, when the question is multiple choice. */
+    choice: integer("choice"),
+    /** Pupil's confidence before seeing the answer: 0 guessing, 1 unsure, 2 sure. */
+    confidence: integer("confidence"),
+    /** Time from showing the question to answering, in milliseconds. */
+    ms: integer("ms"),
+    hintUsed: integer("hint_used", { mode: "boolean" }).notNull().default(false),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("answer_events_user_item").on(t.userId, t.itemId, t.createdAt), index("answer_events_user_time").on(t.userId, t.createdAt)],
+);
+
+/** FSRS card as stored: dates are ISO strings. */
+export type StoredCard = {
+  due: string;
+  stability: number;
+  difficulty: number;
+  elapsed_days: number;
+  scheduled_days: number;
+  learning_steps: number;
+  reps: number;
+  lapses: number;
+  state: number;
+  last_review?: string | null;
+};
+
+/**
+ * Spaced-repetition memory: one FSRS card per (pupil, question) they have met.
+ * `due` is copied out of the card so "what is due today" is one indexed query.
+ */
+export const reviewCards = sqliteTable(
+  "review_cards",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    itemId: text("item_id").notNull(),
+    source: text("source").$type<AnswerSource>().notNull(),
+    refId: text("ref_id").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "set null" }),
+    due: text("due").notNull(),
+    card: text("card", { mode: "json" }).$type<StoredCard>().notNull(),
+    reps: integer("reps").notNull().default(0),
+    lapses: integer("lapses").notNull().default(0),
+    lastCorrect: integer("last_correct", { mode: "boolean" }).notNull(),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.itemId] }), index("review_cards_user_due").on(t.userId, t.due), index("review_cards_user_course").on(t.userId, t.courseId)],
+);
+
+export type Skill = typeof skills.$inferSelect;
+export type AnswerEvent = typeof answerEvents.$inferSelect;
+export type ReviewCard = typeof reviewCards.$inferSelect;

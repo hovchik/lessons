@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, Flag, Play, RotateCcw, Timer, XCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Flag, Play, RotateCcw, Save, Timer, XCircle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ExamQuestion, ExamScale } from "@/server/db/schema";
@@ -15,13 +15,27 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "
 /**
  * Exam mode: all questions at once, no feedback until the pupil presses Finish,
  * a soft countdown, then a results card with the marks and a per-question review.
+ * For a signed-in pupil (`save` set) the finished paper is sent to /api/progress/exam.
  */
-export function ExamRunner({ questions, durationMin, scale, passPercent }: { questions: ExamQuestion[]; durationMin: number; scale: ExamScale; passPercent: number }) {
+export function ExamRunner({
+  questions,
+  durationMin,
+  scale,
+  passPercent,
+  save,
+}: {
+  questions: ExamQuestion[];
+  durationMin: number;
+  scale: ExamScale;
+  passPercent: number;
+  save?: { examId: string } | null;
+}) {
   const t = useTranslations("exam");
   const locale = useLocale();
   const [phase, setPhase] = useState<Phase>("intro");
   const [answers, setAnswers] = useState<Record<number, number | undefined>>({});
   const [left, setLeft] = useState(durationMin * 60);
+  const [saved, setSaved] = useState(false);
   const topRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,12 +51,19 @@ export function ExamRunner({ questions, durationMin, scale, passPercent }: { que
   const start = () => {
     setAnswers({});
     setLeft(durationMin * 60);
+    setSaved(false);
     setPhase("running");
   };
   const finish = () => {
     if (answered < questions.length && !confirm(t("unansweredConfirm", { n: questions.length - answered }))) return;
     setPhase("done");
     topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (save) {
+      const payload = { examId: save.examId, answers: questions.map((_, i) => answers[i] ?? null) };
+      fetch("/api/progress/exam", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
+        .then((r) => r.ok && setSaved(true))
+        .catch(() => {});
+    }
   };
 
   return (
@@ -87,6 +108,12 @@ export function ExamRunner({ questions, durationMin, scale, passPercent }: { que
             </dl>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">{t("scaleNote")}</p>
+          {saved && (
+            <p className="mt-2 flex items-center gap-1.5 text-sm font-bold text-success">
+              <Save className="size-4" aria-hidden="true" />
+              {t("saved")}
+            </p>
+          )}
           <Button variant="secondary" size="sm" onClick={start} className="mt-4 w-full sm:w-auto">
             <RotateCcw className="size-4" aria-hidden="true" />
             {t("retake")}

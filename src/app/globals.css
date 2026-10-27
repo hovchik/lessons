@@ -843,3 +843,15 @@ button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
 .lang-table.is-three td { padding: 0.35rem 0.3rem; } .lang-table.is-three th { padding: 0.2rem 0.3rem; }
 .lang-table.is-three .lang-form { font-size: 0.86rem; }
 .lang-cover { min-width: 3.5rem; min-height: 1.9rem; border-radius: 8px; background: var(--art-soft, #e0e7ff); color: var(--art, #4f46e5); font-weight: 900; }
+
+/* "Close the book" (recall-prompt.tsx): the lesson text is hidden while the pupil recalls it. */
+.recall-hidden {
+  filter: blur(9px);
+  user-select: none;
+  transition: filter 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .recall-hidden {
+    transition: none;
+  }
+}

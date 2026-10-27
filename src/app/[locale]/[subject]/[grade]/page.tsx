@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Award, CheckCircle2, Clock, Flag, Lock, PlayCircle } from "lucide-react";
+import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -7,7 +7,9 @@ import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { ExamCard } from "@/components/site/exam-card";
+import { MasteryBadge } from "@/components/site/mastery-badge";
 import { TipsSection } from "@/components/site/tips-section";
+import { getMastery } from "@/server/mastery";
 import { getCourseProgress } from "@/server/progress";
 import { getCourse, getCourses, getCourseTips, getExams } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
@@ -34,6 +36,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const siblings = await getCourses({ subjectId: subject });
   const exams = await getExams({ subjectId: subject, grade });
   const tips = await getCourseTips(course.id);
+  const mastery = new Map((user ? await getMastery(user.id, [course.id]) : []).map((m) => [m.unitId, m]));
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -102,7 +105,7 @@ export default async function CoursePage({ params }: { params: Params }) {
         <h2 id="units-title" className="text-xl font-extrabold sm:text-2xl">{t("course.units")}</h2>
         <ol className="space-y-5 stagger">
           {units.map((u, ui) => (
-            <li key={u.id} className="clay overflow-hidden">
+            <li key={u.id} id={`unit-${ui + 1}`} className="clay scroll-mt-20 overflow-hidden">
               <div className="flex items-start gap-3 p-4 sm:gap-4 sm:p-6">
                 <span className="grid size-10 shrink-0 sm:size-11 place-items-center rounded-[14px] text-lg font-black text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
                   {ui + 1}
@@ -111,6 +114,7 @@ export default async function CoursePage({ params }: { params: Params }) {
                   <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{t("course.unit", { n: ui + 1 })}</p>
                   <h3 className="text-lg font-extrabold text-balance sm:text-xl">{pick(u.title, l)}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{pick(u.summary, l)}</p>
+                  {mastery.get(u.id) && <MasteryBadge level={mastery.get(u.id)!.level} className="mt-2" />}
                 </div>
               </div>
               <ol className="divide-y divide-border/70 border-t border-border/70">
@@ -146,6 +150,16 @@ export default async function CoursePage({ params }: { params: Params }) {
                   );
                 })}
               </ol>
+              {(user ? (mastery.get(u.id)?.evidence.lessons ?? 0) > 0 : u.lessons.some((x) => x.status === "published")) && (
+                <Link
+                  href={`/${subject}/${grade}/check/${mastery.get(u.id)?.position ?? ui + 1}`}
+                  className="flex min-h-14 items-center gap-3 border-t border-border/70 px-4 py-3 font-bold text-primary transition-colors active:bg-muted sm:gap-4 sm:px-6 sm:hover:bg-muted"
+                >
+                  <ClipboardCheck className="size-5 shrink-0" aria-hidden="true" />
+                  <span className="flex-1">{t("mastery.unitCheck")}</span>
+                  <span className="text-xs font-semibold text-muted-foreground">{t("mastery.unitCheckHint")}</span>
+                </Link>
+              )}
             </li>
           ))}
         </ol>

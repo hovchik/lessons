@@ -4,14 +4,19 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { Markdown } from "@/components/site/markdown";
+import { LessonChecks } from "@/components/site/lesson-checks";
 import { LessonProgressCard } from "@/components/site/lesson-progress";
 import { Quiz } from "@/components/site/quiz";
-import { localQuiz } from "@/lib/quiz";
+import { RecallPrompt } from "@/components/site/recall-prompt";
+import { Warmup } from "@/components/site/warmup";
 import { buttonClasses } from "@/components/ui/button";
+import { numberChecks } from "@/lib/checks";
+import { localQuiz } from "@/lib/quiz";
 import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
 import { getLesson } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
+import { getWarmup } from "@/server/warmup";
 
 type Params = Promise<{ locale: string; subject: string; grade: string; slug: string }>;
 
@@ -30,9 +35,10 @@ export default async function LessonPage({ params }: { params: Params }) {
   if (!data) notFound();
   const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { lesson, course, subject: subj, unit, unitIndex, prev, next } = data;
-  const progress = user ? await getLessonProgress(user.id, lesson.id) : undefined;
-  const body = pick(lesson.content, l);
   const ready = lesson.status === "published" && hasContent(lesson.content);
+  const [progress, warmup] = await Promise.all([user ? getLessonProgress(user.id, lesson.id) : undefined, ready ? getWarmup(lesson.id, user?.id ?? null) : []]);
+  // Quick checks are numbered so a pupil's first pick can be saved (src/lib/checks.ts).
+  const body = numberChecks(pick(lesson.content, l));
   const own = lesson.objectives?.[l as "en" | "hy" | "ru"];
   const objectives = own?.length ? own : lesson.objectives?.en?.length ? lesson.objectives.en : (lesson.objectives?.hy ?? []);
   // Some courses are written in Armenian first; show that text with a notice in the other locales.
@@ -82,9 +88,13 @@ export default async function LessonPage({ params }: { params: Params }) {
         </p>
       )}
 
+      {ready && warmup.length > 0 && <Warmup items={warmup} signedIn={!!user} />}
+
       {ready ? (
-        <div className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
-          <Markdown lang={l}>{body}</Markdown>
+        <div id="lesson-body" className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
+          <LessonChecks lessonId={user ? lesson.id : null}>
+            <Markdown lang={l}>{body}</Markdown>
+          </LessonChecks>
         </div>
       ) : (
         <div className="clay p-6 text-center sm:p-10">
@@ -98,6 +108,8 @@ export default async function LessonPage({ params }: { params: Params }) {
           </Link>
         </div>
       )}
+
+      {ready && <RecallPrompt bodyId="lesson-body" objectives={objectives} hasQuiz={lesson.quiz.length > 0} />}
 
       {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l)} save={user ? { lessonId: lesson.id } : null} />}
 

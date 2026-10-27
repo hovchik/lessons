@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { ArtFrame, ArtText } from "@/components/art/frame";
+import { useRecordCheck } from "@/components/site/lesson-checks";
 import { cn } from "@/lib/utils";
 import type { SimProps } from "../sim-block";
 import { Note } from "../kit";
@@ -40,6 +41,12 @@ export default function Check({ spec, lang }: SimProps) {
   const { question, options, why } = parseCheck(spec.body);
   const right = Number(spec.opts.answer ?? 1) - 1;
   const [picked, setPicked] = useState<number[]>([]);
+  // In a lesson, a signed-in pupil's first pick is saved (`n` is added by numberChecks).
+  const record = useRecordCheck(spec.opts.n);
+  const choose = (k: number) => {
+    record(k);
+    setPicked((p) => [...p, k]);
+  };
   const done = picked.includes(right);
   const letters = lang === "hy" ? "ԱԲԳԴԵԶ" : lang === "ru" ? "АБВГДЕ" : "ABCDEF";
   return (
@@ -49,7 +56,7 @@ export default function Check({ spec, lang }: SimProps) {
         {options.map((o, k) => {
           const state = picked.includes(k) ? (k === right ? "is-right" : "is-wrong") : done && k === right ? "is-right" : "";
           return (
-            <button key={k} type="button" className={cn("sim-option", state)} disabled={done || picked.includes(k)} onClick={() => setPicked((p) => [...p, k])}>
+            <button key={k} type="button" className={cn("sim-option", state)} disabled={done || picked.includes(k)} onClick={() => choose(k)}>
               <span className="sim-letter">{letters[k]}</span>
               <ArtText className="sim-option-text">{o}</ArtText>
             </button>
