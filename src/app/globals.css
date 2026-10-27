@@ -659,9 +659,11 @@ button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
 .lang-order { margin: 0.6rem 0 0; padding-left: 1.4rem; font-weight: 800; }
 .lang-order span { color: var(--muted-foreground); font-weight: 700; font-size: 0.85rem; }
 .lang-morph { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; padding: 1.4rem 0.5rem 0.9rem; font: 900 2.2rem/1.1 Nunito, "Noto Sans Armenian", sans-serif; color: #1e1b4b; }
+.lang-morph.is-long { font-size: 1.7rem; }
+.lang-morph.is-xlong { font-size: 1.35rem; }
 .lm-base { display: inline-flex; position: relative; padding-bottom: 0.3rem; }
 .lm-base.is-on::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.3rem; border: 3px solid #0d9488; border-top: 0; }
-.lm-part { position: relative; padding: 0 0.04em; }
+.lm-part { position: relative; padding: 0 0.04em; white-space: nowrap; }
 .lm-part.is-on::before { content: ""; position: absolute; pointer-events: none; }
 .lm-p.is-on { color: #7c3aed; } .lm-p.is-on::before { left: 0; right: 0; top: -0.35rem; height: 0.4rem; border-top: 3px solid #7c3aed; border-right: 3px solid #7c3aed; }
 .lm-r.is-on { color: #e11d48; } .lm-r.is-on::before { left: 0; right: 0; top: -0.5rem; height: 0.7rem; border-top: 3px solid #e11d48; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }

@@ -70,6 +70,7 @@ function Morph({ parts, family, lang, body }: { parts: Part[]; family: string[];
   const stemEnd = parts.findIndex((p) => p.role === "e" || p.role === "a");
   const stem = stemEnd < 0 ? parts : parts.slice(0, stemEnd);
   const rest = stemEnd < 0 ? [] : parts.slice(stemEnd);
+  const len = parts.reduce((n, p) => n + [...p.text].length, 0);
   const piece = (p: Part, i: number) => (
     <span key={i} className={`lm-part lm-${p.role} ${shown.has(p.role) ? "is-on" : ""} ${p.text === "0" ? "is-zero" : ""}`}>
       {p.text === "0" ? " " : p.text}
@@ -77,7 +78,7 @@ function Morph({ parts, family, lang, body }: { parts: Part[]; family: string[];
   );
   return (
     <ArtFrame kind="steps" title={L(W.morph, lang)} body={body || L(W.morphHint, lang)}>
-      <div className="lang-morph">
+      <div className={`lang-morph ${len > 15 ? "is-xlong" : len > 11 ? "is-long" : ""}`}>
         <span className={`lm-base ${shown.has("base") ? "is-on" : ""}`}>{stem.map(piece)}</span>
         {rest.map((p, i) => piece(p, stem.length + i))}
       </div>

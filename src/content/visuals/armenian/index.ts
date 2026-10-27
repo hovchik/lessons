@@ -10,6 +10,7 @@ import { grade8 } from "./grade-8";
 import { grade9 } from "./grade-9";
 import { grade10 } from "./grade-10";
 import { grade11 } from "./grade-11";
+import { grade12 } from "./grade-12";
 
 /**
  * Armenian language 1–12: the alphabet board and letter cards, syllables, word parts, sentence
@@ -27,4 +28,5 @@ export const armenianVisuals: VisualMap = {
   9: grade9,
   10: grade10,
   11: grade11,
+  12: grade12,
 };

@@ -53,7 +53,8 @@ const parse = (args: string[]): Tok[] =>
     const i = a.lastIndexOf(":");
     const role = i > 0 ? (a.slice(i + 1) as Role) : undefined;
     const ok = role && ROLES.includes(role);
-    const text = (ok ? a.slice(0, i) : a).replace(/_/g, " ");
+    // ":none" marks a word that is tappable but not a part of the sentence
+    const text = (ok || (i > 0 && a.slice(i + 1) === "none") ? a.slice(0, i) : a).replace(/_/g, " ");
     return { text, role: ok ? role : undefined, punct: PUNCT.test(text) };
   });
 
