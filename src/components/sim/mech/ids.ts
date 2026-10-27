@@ -40,7 +40,7 @@ export const DIAGRAM_GROUPS = {
   inf: ["computer", "network", "flowchart", "memory", "layers", "url", "tag", "box", "os", "phish", "db", "oop", "dom", "http", "git", "kanban", "arch"],
   soc: ["socialisation", "maslow", "eduarm", "roles", "tki", "govforms", "powers", "ages", "selfgov", "labour", "spheres", "mobility", "fakenews", "chain", "cave", "method", "un", "circular", "lifepath"],
   ch: ["bible", "sixdays", "patriarchs", "tablets", "evangelists", "sower", "holyweek", "fifty", "apostles", "gregorids", "churchtypes", "monastery", "sees", "trinity", "sacraments", "churchplan", "calendar", "khachkar", "ladle", "virtues", "wedding", "jericho"],
-  mus: ["singer", "instgroups", "folkinst", "forms", "varia", "orchestra", "voices", "dances", "peterwolf", "folkwheel", "manuscript", "positions", "hall", "marks", "fugue"],
+  mus: ["singer", "instgroups", "folkinst", "forms", "varia", "orchestra", "voices", "dances", "peterwolf", "folkwheel", "manuscript", "positions", "hall", "marks", "fugue", "harpsi", "sonata"],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;

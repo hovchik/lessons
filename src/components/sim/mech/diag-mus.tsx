@@ -823,4 +823,98 @@ const fugue: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall, marks, fugue };
+/* ---------------- grade 6: pluck or strike ---------------- */
+
+const harpsi: Diagram = {
+  title: t("Harpsichord and piano: pluck or strike", "Կլավեսին և դաշնամուր․ պոկել, թե հարվածել", "Клавесин и фортепиано: щипок или удар"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      <rect x="4" y="4" width="152" height="192" rx="8" fill="#fef3c7" />
+      <rect x="164" y="4" width="152" height="192" rx="8" fill="#e0f2fe" />
+      <Tx x={80} y={18} s={t("harpsichord: plucks", "կլավեսին՝ պոկում է", "клавесин: щиплет")} lang={lang} size={8} fill="#92400e" />
+      <Tx x={240} y={18} s={t("piano: strikes", "դաշնամուր՝ հարվածում է", "фортепиано: ударяет")} lang={lang} size={8} fill="#075985" />
+      {/* harpsichord: key, jack with quill, string end-on, damper */}
+      <rect x="14" y="152" width="120" height="9" rx="2" fill="#fff" stroke="#334155" />
+      <path d="M78,161 l-7,12 h14 Z" fill="#94a3b8" />
+      <path d="M24,132 v14 m-4,-4 l4,4 l4,-4" stroke="#dc2626" strokeWidth="1.8" fill="none" />
+      <rect x="118" y="66" width="10" height="86" rx="2" fill="#d6b26e" stroke="#92400e" />
+      <path d="M118,98 l-14,-3 l0,3 Z" fill="#1e293b" />
+      <circle cx="108" cy="90" r="3.2" fill="#64748b" stroke="#1e293b" />
+      <rect x="104" y="62" width="24" height="8" rx="2" fill="#1f2937" />
+      <path d="M138,150 v-40 m-4,4 l4,-4 l4,4" stroke="#16a34a" strokeWidth="1.6" fill="none" />
+      {/* piano: key, hammer, string, damper */}
+      <rect x="172" y="152" width="120" height="9" rx="2" fill="#fff" stroke="#334155" />
+      <path d="M236,161 l-7,12 h14 Z" fill="#94a3b8" />
+      <path d="M182,132 v14 m-4,-4 l4,4 l4,-4" stroke="#dc2626" strokeWidth="1.8" fill="none" />
+      <line x1="176" x2="308" y1="80" y2="80" stroke="#64748b" strokeWidth="2" />
+      <rect x="282" y="70" width="18" height="9" rx="2" fill="#1f2937" />
+      <circle cx="298" cy="140" r="3" fill="#334155" />
+      <line x1="298" y1="140" x2="252" y2="100" stroke="#78350f" strokeWidth="3" strokeLinecap="round" />
+      <ellipse cx="248" cy="94" rx="8" ry="6" fill="#f8fafc" stroke="#475569" strokeWidth="1.5" />
+      <path d="M288,150 L292,143" stroke="#475569" strokeWidth="3" strokeLinecap="round" />
+      <path d="M232,112 q-8,-14 4,-24" fill="none" stroke="#16a34a" strokeWidth="1.6" markerEnd="url(#mus-arr4)" />
+      <defs>
+        <marker id="mus-arr4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#16a34a" />
+        </marker>
+      </defs>
+      <Tx x={80} y={186} s={t("always the same loudness", "միշտ նույն ուժգնությամբ", "всегда одной громкости")} lang={lang} size={6.5} fill="#92400e" />
+      <Tx x={240} y={186} s={t("soft or loud: piano-forte", "թույլ կամ ուժեղ՝ պիանո-ֆորտե", "тихо или громко: пиано-форте")} lang={lang} size={6.5} fill="#075985" />
+    </g>
+  ),
+  parts: [
+    P(40, 150, t("The key", "Ստեղնը", "Клавиша"), t("On both instruments the key is a lever: press the front down and the back end rises.", "Երկու գործիքում էլ ստեղնը լծակ է․ սեղմիր առջևի մասը, և հետևի ծայրը կբարձրանա։", "На обоих инструментах клавиша — рычаг: нажмёшь передний конец, и задний поднимется.")),
+    P(132, 56, t("The jack and quill", "Ցատկիչ և փետուր", "Прыгунок и перо"), t("The back of the key pushes up a wooden jack. A tiny plectrum, once cut from a bird's quill, catches the string and plucks it as it passes.", "Ստեղնի հետևի մասը վեր է հրում փայտե ցատկիչը։ Փոքրիկ մեդիատորը, որը ժամանակին կտրում էին թռչնի փետուրից, անցնելիս կառչում է լարից և պոկում այն։", "Задний конец клавиши толкает вверх деревянный прыгунок. Крошечный плектр, когда-то вырезанный из птичьего пера, цепляет струну и щиплет её.")),
+    P(96, 84, t("A string seen end-on", "Լարը՝ ծայրից", "Струна с торца"), t("However hard you press, the quill plucks the string the same way, so the harpsichord cannot play louder or softer by touch.", "Ինչքան էլ ուժեղ սեղմես, փետուրը լարը պոկում է նույն կերպ, ուստի կլավեսինը հպումով չի կարող ավելի ուժեղ կամ թույլ նվագել։", "Как сильно ни нажимай, перо щиплет струну одинаково, поэтому клавесин не может играть громче или тише от силы нажатия.")),
+    P(226, 110, t("The hammer", "Մուրճիկը", "Молоточек"), t("A felt-covered hammer flies up, strikes the string and falls straight back. Strike harder and the sound is louder.", "Թաղիքով պատված մուրճիկը թռչում է վեր, հարվածում լարին և անմիջապես հետ ընկնում։ Ավելի ուժեղ հարվածիր, և ձայնն ավելի ուժեղ կլինի։", "Обтянутый войлоком молоточек взлетает, ударяет по струне и сразу отскакивает. Ударишь сильнее — звук громче.")),
+    P(292, 62, t("The damper", "Մեղմիչը", "Демпфер"), t("A felt pad rests on the string. It lifts while you hold the key and drops when you let go, stopping the sound.", "Թաղիքե բարձիկը հենված է լարին։ Այն բարձրանում է, քանի դեռ պահում ես ստեղնը, և իջնում, երբ բաց ես թողնում՝ դադարեցնելով ձայնը։", "Войлочная подушечка лежит на струне. Пока держишь клавишу, она поднята, а когда отпускаешь — опускается и глушит звук.")),
+  ],
+};
+
+/* ---------------- grade 6: sonata form and the symphony ---------------- */
+
+const sonata: Diagram = {
+  title: t("Sonata form and the four movements", "Սոնատային ձև և չորս մասերը", "Сонатная форма и четыре части"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      {[[8, 118, t("exposition", "էքսպոզիցիա", "экспозиция"), "#eef2ff"], [120, 206, t("development", "մշակում", "разработка"), "#fef2f2"], [208, 312, t("recapitulation", "ռեպրիզ", "реприза"), "#ecfdf5"]].map(([x1, x2, s, c], k) => (
+        <g key={k}>
+          <rect x={x1 as number} y="8" width={(x2 as number) - (x1 as number)} height="84" rx="8" fill={c as string} />
+          <Tx x={((x1 as number) + (x2 as number)) / 2} y={22} s={s as Tr} lang={lang} size={7.5} fill="#334155" />
+        </g>
+      ))}
+      <rect x="14" y="34" width="46" height="26" rx="6" fill="#4f46e5" />
+      <rect x="66" y="34" width="46" height="26" rx="6" fill="#d97706" />
+      <text x="37" y="51" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff">1</text>
+      <text x="89" y="51" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff">2</text>
+      {[[126, 36, "#4f46e5"], [150, 52, "#d97706"], [170, 40, "#4f46e5"], [186, 58, "#d97706"], [140, 66, "#4f46e5"], [176, 72, "#d97706"]].map(([x, y, c], k) => <rect key={k} x={x as number} y={y as number} width="16" height="10" rx="3" fill={c as string} opacity="0.75" transform={`rotate(${k % 2 ? 12 : -10} ${(x as number) + 8} ${(y as number) + 5})`} />)}
+      <rect x="214" y="34" width="46" height="26" rx="6" fill="#4f46e5" />
+      <rect x="264" y="34" width="44" height="26" rx="6" fill="#d97706" stroke="#4f46e5" strokeWidth="3" />
+      <text x="237" y="51" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff">1</text>
+      <text x="286" y="51" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff">2</text>
+      <Tx x={63} y={76} s={t("home key → new key", "հիմնական → նոր տոնայնություն", "главная → новая тональность")} lang={lang} size={6} fill="#475569" />
+      <Tx x={163} y={88} s={t("many keys", "շատ տոնայնություններ", "много тональностей")} lang={lang} size={6} fill="#475569" />
+      <Tx x={260} y={76} s={t("both in the home key", "երկուսն էլ՝ հիմնականում", "обе в главной")} lang={lang} size={6} fill="#475569" />
+      {[[t("I. Fast", "I. Արագ", "I. Быстро"), t("sonata form", "սոնատային ձև", "сонатная форма"), "#4f46e5"], [t("II. Slow", "II. Դանդաղ", "II. Медленно"), t("songlike", "երգային", "певуче"), "#0d9488"], [t("III. Dance", "III. Պար", "III. Танец"), t("minuet, scherzo", "մենուետ, սկերցո", "менуэт, скерцо"), "#d97706"], [t("IV. Finale", "IV. Ֆինալ", "IV. Финал"), t("fast, joyful", "արագ, ուրախ", "быстро, радостно"), "#dc2626"]].map(([a, b, c], k) => (
+        <g key={k}>
+          <rect x={8 + k * 77} y="108" width="73" height="62" rx="8" fill={c as string} opacity="0.13" />
+          <Tx x={44 + k * 77} y={126} s={a as Tr} lang={lang} size={8} fill={c as string} />
+          <Tx x={44 + k * 77} y={142} s={b as Tr} lang={lang} size={6.5} fill="#334155" />
+          <path d={[`M22,160 ${Array.from({ length: 10 }, () => "l2.5,-5 l2.5,5").join(" ")}`, "M22,158 q12,-8 22,0 t22,0", "M22,160 l8,-6 l4,6 l4,-6 l4,6 l8,-6 l4,6 l4,-6 l4,6", `M22,160 ${Array.from({ length: 14 }, (_, i) => `l1.8,${i % 2 ? 6 : -6}`).join(" ")}`][k]} transform={`translate(${k * 77} 0)`} fill="none" stroke={c as string} strokeWidth="1.5" />
+        </g>
+      ))}
+      <Tx x={160} y={190} s={t("a symphony: four movements, usually fast, slow, dance, fast", "սիմֆոնիա՝ չորս մաս, սովորաբար արագ, դանդաղ, պար, արագ", "симфония: четыре части, обычно быстро, медленно, танец, быстро")} lang={lang} size={6.5} fill="#64748b" />
+    </g>
+  ),
+  parts: [
+    P(108, 16, t("Exposition", "Էքսպոզիցիա", "Экспозиция"), t("We meet the characters: a first theme in the home key, then a contrasting second theme in a new key. Often the whole section is played twice.", "Ծանոթանում ենք հերոսներին․ առաջին թեման՝ հիմնական տոնայնությամբ, ապա հակադիր երկրորդ թեման՝ նոր տոնայնությամբ։ Հաճախ ամբողջ բաժինը նվագվում է երկու անգամ։", "Знакомимся с героями: первая тема в главной тональности, затем контрастная вторая тема в новой. Часто весь раздел играют дважды.")),
+    P(198, 16, t("Development", "Մշակում", "Разработка"), t("The themes are broken into pieces, combined and chased through many keys. This is the struggle in the story.", "Թեմաները մասնատվում են, համադրվում և տարվում բազմաթիվ տոնայնություններով։ Սա պատմության պայքարն է։", "Темы дробятся, сталкиваются и проходят через множество тональностей. Это борьба в нашей истории.")),
+    P(304, 16, t("Recapitulation", "Ռեպրիզ", "Реприза"), t("Both themes return, and now the second one is in the home key too: the conflict is resolved.", "Երկու թեմաներն էլ վերադառնում են, և այժմ երկրորդն էլ է հիմնական տոնայնությամբ․ հակամարտությունը լուծված է։", "Обе темы возвращаются, и теперь вторая тоже в главной тональности: конфликт разрешён.")),
+    P(121, 108, t("Slow movement", "Դանդաղ մաս", "Медленная часть"), t("After the drama of the first movement comes a calm, singing one, often in a different key.", "Առաջին մասի դրամայից հետո գալիս է հանգիստ, երգային մաս, հաճախ այլ տոնայնությամբ։", "После драмы первой части идёт спокойная, певучая, часто в другой тональности.")),
+    P(198, 108, t("Minuet or scherzo", "Մենուետ կամ սկերցո", "Менуэт или скерцо"), t("Haydn and Mozart used a stately minuet in three; Beethoven sped it up into a playful scherzo, which means \"joke\".", "Հայդնն ու Մոցարտն օգտագործում էին եռաչափ վեհաշուք մենուետ, իսկ Բեթհովենն այն արագացրեց և դարձրեց խաղացկուն սկերցո, որը նշանակում է «կատակ»։", "Гайдн и Моцарт писали величавый менуэт на три, а Бетховен ускорил его в игривое скерцо, что значит «шутка».")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall, marks, fugue, harpsi, sonata };
