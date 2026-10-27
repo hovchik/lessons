@@ -76,6 +76,17 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   climate: lazy(() => import("./widgets/climate")),
   geocalc: lazy(() => import("./widgets/geocalc")),
   timeline: lazy(() => import("./widgets/timeline")),
+  bits: lazy(() => import("./widgets/bits")),
+  algo: lazy(() => import("./widgets/algo")),
+  logic: lazy(() => import("./widgets/logic")),
+  graph: lazy(() => import("./widgets/graph")),
+  cipher: lazy(() => import("./widgets/cipher")),
+  compress: lazy(() => import("./widgets/compress")),
+  trace: lazy(() => import("./widgets/trace")),
+  neuron: lazy(() => import("./widgets/neuron")),
+  password: lazy(() => import("./widgets/password")),
+  turtle: lazy(() => import("./widgets/turtle")),
+  sheet: lazy(() => import("./widgets/sheet")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */

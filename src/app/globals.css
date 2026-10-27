@@ -643,6 +643,68 @@ button.art-card:active { transform: scale(0.97); }
 .sim-eqlist > div { display: grid; grid-template-columns: minmax(6rem, auto) 1fr; gap: 0.6rem; align-items: baseline; }
 .sim-eqlist span { font-size: 0.75rem; font-weight: 800; color: var(--muted-foreground); }
 .sim-eqlist b { font-size: 1rem; font-weight: 800; }
+/* informatics widgets: character codes, truth tables, program traces */
+.sim-bits-list { display: grid; gap: 0.3rem; margin-top: 0.6rem; }
+.sim-bits-row { display: grid; grid-template-columns: 2.2rem 4.6rem 1fr; gap: 0.5rem; align-items: center; padding: 0.3rem 0.5rem; border-radius: 12px; background: #fff; border: 1px solid var(--border); }
+.sim-bits-ch { font-size: 1.25rem; text-align: center; }
+.sim-bits-code { font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.sim-bits-code small { display: block; font-size: 0.68rem; font-weight: 700; color: var(--muted-foreground); }
+.sim-bits-bytes { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.sim-bits-bytes code { font-size: 0.78rem; font-weight: 800; padding: 0.1rem 0.3rem; border-radius: 6px; letter-spacing: 0.04em; }
+.sim-truth { margin-top: 0.6rem; border-collapse: separate; border-spacing: 0; min-width: 12rem; background: #fff; border: 2px solid var(--border); border-radius: 14px; overflow: hidden; font-weight: 800; font-variant-numeric: tabular-nums; }
+.sim-truth caption { caption-side: top; text-align: left; font-size: 0.8rem; font-weight: 900; color: var(--muted-foreground); padding-bottom: 0.25rem; }
+.sim-truth th, .sim-truth td { padding: 0.25rem 0.8rem; text-align: center; border-bottom: 1px solid var(--border); }
+.sim-truth th { background: var(--art-soft, #eef2ff); color: var(--art); }
+.sim-truth tr:last-child td { border-bottom: 0; }
+.sim-truth tr.is-on td { background: #fef3c7; }
+.sim-crack ol { display: grid; gap: 0.15rem; margin-top: 0.5rem; max-height: 14rem; overflow-y: auto; padding: 0.4rem 0.6rem; border-radius: 14px; background: #fff; border: 1px solid var(--border); font-family: ui-monospace, monospace; font-size: 0.85rem; }
+.sim-crack li b { display: inline-block; min-width: 1.8rem; color: var(--muted-foreground); }
+.sim-crack li.is-on { color: #065f46; font-weight: 800; }
+.sim-trace { display: grid; gap: 0.7rem; }
+@media (min-width: 640px) { .sim-trace { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; } }
+.sim-code { margin: 0; padding: 0.55rem 0; border-radius: 14px; background: #0f172a; color: #e2e8f0; font: 600 0.84rem/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; }
+.sim-code-line { display: block; padding: 0 0.7rem 0 0; white-space: pre; }
+.sim-code-line i { display: inline-block; width: 2rem; padding-right: 0.5rem; text-align: right; font-style: normal; color: #64748b; user-select: none; }
+.sim-code-line.is-on { background: #334155; }
+.sim-code-line.is-on i { color: #fbbf24; }
+.sim-code-line.is-ret { background: #14532d; }
+.sim-code-line.is-ret i { color: #86efac; }
+.sim-trace-side { display: grid; gap: 0.4rem; }
+.sim-trace-h { font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted-foreground); }
+.sim-frame { padding: 0.35rem 0.55rem; border-radius: 12px; background: #fff; border: 2px solid var(--border); }
+.sim-frame.is-top { border-color: var(--art); }
+.sim-frame-name { display: block; font: 800 0.8rem ui-monospace, monospace; color: var(--art); margin-bottom: 0.15rem; }
+.sim-frame dl { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.sim-frame dl > div { display: flex; gap: 0.3rem; align-items: baseline; padding: 0.1rem 0.4rem; border-radius: 8px; background: #f1f5f9; font-family: ui-monospace, monospace; font-size: 0.82rem; }
+.sim-frame dl > div.is-new { background: #fef3c7; }
+.sim-frame dt { color: var(--muted-foreground); font-weight: 700; }
+.sim-frame dt::after { content: " ="; }
+.sim-frame dd { font-weight: 900; word-break: break-all; }
+.sim-frame-empty { color: var(--muted-foreground); }
+.sim-console { margin: 0; min-height: 2.2rem; padding: 0.45rem 0.6rem; border-radius: 12px; background: #f8fafc; border: 1px dashed #94a3b8; font: 700 0.82rem/1.45 ui-monospace, monospace; white-space: pre-wrap; }
+.sim-meter { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.3rem; margin-top: 0.6rem; }
+.sim-meter span { height: 0.6rem; border-radius: 999px; background: #e2e8f0; }
+.sim-blocks { display: grid; align-content: start; gap: 0.15rem; font-size: 0.85rem; font-weight: 800; color: #fff; }
+.sim-block { padding: 0.4rem 0.7rem; border-radius: 10px; line-height: 1.3; }
+.sim-block b { display: inline-block; min-width: 1.6rem; margin: 0 0.25rem; padding: 0 0.4rem; border-radius: 999px; background: #fff; color: #1e1b4b; text-align: center; }
+.sim-block.is-event { background: #eab308; border-radius: 18px 18px 10px 10px; }
+.sim-block.is-control { background: #f59e0b; padding-bottom: 0.7rem; }
+.sim-block.is-control > .sim-block { margin: 0.35rem 0 0 0.9rem; }
+.sim-block.is-motion { background: #4c97ff; }
+.sim-fx { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.4rem; padding: 0.3rem 0.6rem; border-radius: 10px; background: #fff; border: 1px solid var(--border); font-size: 0.85rem; }
+.sim-fx span { font-style: italic; font-weight: 800; color: var(--muted-foreground); }
+.sim-fx code { font-weight: 800; color: #15803d; }
+.sim-sheet-wrap { margin-top: 0.5rem; overflow-x: auto; }
+.sim-sheet { border-collapse: collapse; background: #fff; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.sim-sheet th { min-width: 1.8rem; padding: 0.2rem 0.4rem; background: #f1f5f9; color: #64748b; font-weight: 800; border: 1px solid #cbd5e1; }
+.sim-sheet td { min-width: 4.5rem; padding: 0.2rem 0.45rem; border: 1px solid #cbd5e1; font-weight: 700; }
+.sim-sheet td.is-label { font-weight: 900; background: #f8fafc; }
+.sim-sheet td.is-num { text-align: right; }
+.sim-sheet td.is-formula { cursor: pointer; color: #15803d; font-weight: 900; }
+.sim-sheet td.is-sel { outline: 3px solid #15803d; outline-offset: -2px; }
+.sim-sheet td.is-bad { color: #b91c1c; background: #fef2f2; }
+.sim-sheet td.is-hot { background: #fef3c7; }
+.sim-sheet input { width: 4rem; border: 0; background: transparent; text-align: right; font: inherit; color: #4f46e5; }
 @media (max-width: 30rem) { .sim-eqlist > div { grid-template-columns: 1fr; gap: 0; } }
 
 /* ---- Primary-school math blocks (```sim count, numline, place, fraction, array, column, ...) ---- */
