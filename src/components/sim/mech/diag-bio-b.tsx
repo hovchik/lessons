@@ -158,23 +158,23 @@ const bone: Diagram = {
   title: t("Inside a long bone", "Երկար ոսկորի ներսը", "Внутри длинной кости"),
   draw: () => (
     <g>
-      <path d="M60,40 C30,20 20,60 50,70 C40,90 60,110 80,90 L240,130 C260,150 290,140 280,120 C300,110 300,80 270,90 C260,70 230,70 240,100 L80,60 C80,40 70,40 60,40 Z" fill="#f1f5f9" stroke="#64748b" strokeWidth="2.5" />
-      <path d="M86,70 L236,108 L232,120 L82,82 Z" fill="#fde68a" />
-      <path d="M90,70 L236,107" stroke="#94a3b8" strokeWidth="4" opacity="0.5" />
-      {Array.from({ length: 14 }, (_, k) => <circle key={k} cx={52 + (k % 4) * 8} cy={52 + Math.floor(k / 4) * 9} r="2.6" fill="#fca5a5" stroke="#b91c1c" strokeWidth="0.6" />)}
-      {Array.from({ length: 12 }, (_, k) => <circle key={`r${k}`} cx={262 + (k % 3) * 8} cy={100 + Math.floor(k / 3) * 9} r="2.6" fill="#fca5a5" stroke="#b91c1c" strokeWidth="0.6" />)}
-      <path d="M36,58 C30,46 40,34 54,36" fill="none" stroke="#60a5fa" strokeWidth="5" />
-      <path d="M78,98 L240,138" stroke="#a78bfa" strokeWidth="2" strokeDasharray="5 3" />
-      <path d="M66,88 q-8,20 -30,22" fill="none" stroke="#475569" strokeWidth="2" />
+      <path d="M92,92 C70,60 30,64 30,96 C14,104 14,136 30,140 C34,170 76,172 92,138 L228,138 C244,172 286,170 290,140 C306,136 306,104 290,96 C290,64 250,60 228,92 Z" fill="#f1f5f9" stroke="#64748b" strokeWidth="3" />
+      <path d="M96,99 L224,99 L224,131 L96,131 Z" fill="#fde68a" />
+      <path d="M92,92 L228,92 M92,138 L228,138" stroke="#cbd5e1" strokeWidth="7" />
+      <path d="M86,148 L234,148" stroke="#a78bfa" strokeWidth="2" strokeDasharray="5 3" />
+      {Array.from({ length: 16 }, (_, k) => <circle key={k} cx={44 + (k % 4) * 11} cy={98 + Math.floor(k / 4) * 11} r="3.4" fill="#fca5a5" stroke="#b91c1c" strokeWidth="0.6" />)}
+      {Array.from({ length: 16 }, (_, k) => <circle key={`r${k}`} cx={244 + (k % 4) * 11} cy={98 + Math.floor(k / 4) * 11} r="3.4" fill="#fca5a5" stroke="#b91c1c" strokeWidth="0.6" />)}
+      <path d="M22,102 C14,116 14,124 22,136" fill="none" stroke="#60a5fa" strokeWidth="6" strokeLinecap="round" />
+      <path d="M298,102 C306,116 306,124 298,136" fill="none" stroke="#60a5fa" strokeWidth="6" strokeLinecap="round" />
     </g>
   ),
   parts: [
-    P(44, 46, t("Cartilage", "Աճառ", "Хрящ"), t("Smooth and slippery, it covers the ends of the bone in a joint. In children a cartilage plate near the end lets the bone grow longer.", "Հարթ և սահուն, այն ծածկում է ոսկորի ծայրերը հոդում։ Երեխաների մոտ ծայրի մոտ գտնվող աճառային թիթեղը թույլ է տալիս ոսկորին երկարել։", "Гладкий и скользкий, покрывает концы кости в суставе. У детей хрящевая пластинка у конца позволяет кости расти в длину.")),
-    P(64, 70, t("Spongy bone", "Սպունգանման նյութ", "Губчатое вещество"), t("A lattice of thin plates laid along the lines of pressure, like the beams of a bridge. Its spaces hold red marrow.", "Ճնշման գծերով դասավորված բարակ թիթեղների ցանց, ինչպես կամրջի հեծանները։ Դրա խոռոչներում կարմիր ծուծն է։", "Решётка тонких пластинок, уложенных по линиям нагрузки, как балки моста. В её ячейках — красный костный мозг.")),
-    P(160, 112, t("Compact bone", "Խիտ նյութ", "Компактное вещество"), t("The hard outer wall. A thigh bone can bear several times the body's weight.", "Կոշտ արտաքին պատը։ Ազդրոսկրը կարող է դիմանալ մարմնի քաշից մի քանի անգամ մեծ բեռի։", "Твёрдая наружная стенка. Бедренная кость выдерживает нагрузку в несколько раз больше веса тела.")),
-    P(150, 88, t("Marrow cavity", "Ծուծային խոռոչ", "Костномозговая полость"), t("Holds yellow marrow, mostly fat, in adults. A hollow tube is lighter yet almost as strong as a solid rod.", "Մեծահասակների մոտ պարունակում է դեղին ծուծ, հիմնականում ճարպ։ Խոռոչավոր խողովակն ավելի թեթև է, բայց գրեթե նույնքան ամուր, որքան հոծ ձողը։", "У взрослых содержит жёлтый костный мозг, в основном жир. Полая трубка легче, но почти так же прочна, как сплошной стержень.")),
-    P(272, 112, t("Red marrow", "Կարմիր ծուծ", "Красный костный мозг"), t("Makes blood cells: about two million red blood cells every second.", "Արտադրում է արյան բջիջներ՝ վայրկյանում մոտ երկու միլիոն կարմիր գնդիկ։", "Делает клетки крови: около двух миллионов эритроцитов каждую секунду.")),
-    P(200, 140, t("Periosteum", "Ոսկրաթաղանթ", "Надкостница"), t("A tough skin with nerves and blood vessels. It lets the bone grow thicker and heal after a fracture.", "Ամուր թաղանթ՝ նյարդերով և արյունատար անոթներով։ Այն թույլ է տալիս ոսկորին հաստանալ և կոտրվածքից հետո ապաքինվել։", "Прочная плёнка с нервами и сосудами. Благодаря ей кость растёт в толщину и срастается после перелома.")),
+    P(18, 119, t("Cartilage", "Աճառ", "Хрящ"), t("Smooth and slippery, it covers the ends of the bone in a joint. In children a cartilage plate near the end lets the bone grow longer.", "Հարթ և սահուն, այն ծածկում է ոսկորի ծայրերը հոդում։ Երեխաների մոտ ծայրի մոտ գտնվող աճառային թիթեղը թույլ է տալիս ոսկորին երկարել։", "Гладкий и скользкий, покрывает концы кости в суставе. У детей хрящевая пластинка у конца позволяет кости расти в длину.")),
+    P(60, 76, t("Spongy bone", "Սպունգանման նյութ", "Губчатое вещество"), t("A lattice of thin plates laid along the lines of pressure, like the beams of a bridge. Its spaces hold red marrow.", "Ճնշման գծերով դասավորված բարակ թիթեղների ցանց, ինչպես կամրջի հեծանները։ Դրա խոռոչներում կարմիր ծուծն է։", "Решётка тонких пластинок, уложенных по линиям нагрузки, как балки моста. В её ячейках — красный костный мозг.")),
+    P(160, 92, t("Compact bone", "Խիտ նյութ", "Компактное вещество"), t("The hard outer wall. A thigh bone can bear several times the body's weight.", "Կոշտ արտաքին պատը։ Ազդրոսկրը կարող է դիմանալ մարմնի քաշից մի քանի անգամ մեծ բեռի։", "Твёрдая наружная стенка. Бедренная кость выдерживает нагрузку в несколько раз больше веса тела.")),
+    P(160, 115, t("Marrow cavity", "Ծուծային խոռոչ", "Костномозговая полость"), t("Holds yellow marrow, mostly fat, in adults. A hollow tube is lighter yet almost as strong as a solid rod.", "Մեծահասակների մոտ պարունակում է դեղին ծուծ, հիմնականում ճարպ։ Խոռոչավոր խողովակն ավելի թեթև է, բայց գրեթե նույնքան ամուր, որքան հոծ ձողը։", "У взрослых содержит жёлтый костный мозг, в основном жир. Полая трубка легче, но почти так же прочна, как сплошной стержень.")),
+    P(266, 120, t("Red marrow", "Կարմիր ծուծ", "Красный костный мозг"), t("Makes blood cells: about two million red blood cells every second.", "Արտադրում է արյան բջիջներ՝ վայրկյանում մոտ երկու միլիոն կարմիր գնդիկ։", "Делает клетки крови: около двух миллионов эритроцитов каждую секунду.")),
+    P(200, 150, t("Periosteum", "Ոսկրաթաղանթ", "Надкостница"), t("A tough skin with nerves and blood vessels. It lets the bone grow thicker and heal after a fracture.", "Ամուր թաղանթ՝ նյարդերով և արյունատար անոթներով։ Այն թույլ է տալիս ոսկորին հաստանալ և կոտրվածքից հետո ապաքինվել։", "Прочная плёнка с нервами и сосудами. Благодаря ей кость растёт в толщину и срастается после перелома.")),
   ],
 };
 
@@ -192,15 +192,16 @@ const glands: Diagram = {
       <ellipse cx="186" cy="140" rx="10" ry="12" fill="#a16207" opacity="0.4" />
       <path d="M140,150 q20,-6 44,4 q-20,10 -44,-4 Z" fill="#10b981" />
       <circle cx="145" cy="194" r="5" fill="#3b82f6" />
+      <path d="M166,36 L208,30 M170,66 L208,66 M126,134 L92,124 M178,152 L236,152 M180,194 L232,198" stroke="#94a3b8" strokeWidth="1" />
       <circle cx="175" cy="194" r="5" fill="#3b82f6" />
     </g>
   ),
   parts: [
-    P(160, 36, t("Pituitary gland", "Հիպոֆիզ", "Гипофиз"), t("Pea-sized, under the brain. It makes growth hormone and the hormones that steer the other glands.", "Ոլոռի չափ է, գտնվում է գլխուղեղի տակ։ Արտադրում է աճի հորմոն և այլ գեղձերը ղեկավարող հորմոններ։", "Размером с горошину, под мозгом. Делает гормон роста и гормоны, управляющие другими железами.")),
-    P(160, 66, t("Thyroid gland", "Վահանաձև գեղձ", "Щитовидная железа"), t("Butterfly-shaped, in the neck. Its hormone thyroxine contains iodine and sets the speed of metabolism.", "Թիթեռնաձև է, գտնվում է պարանոցում։ Նրա հորմոնը՝ թիրօքսինը, պարունակում է յոդ և որոշում նյութափոխանակության արագությունը։", "В форме бабочки, на шее. Её гормон тироксин содержит йод и задаёт скорость обмена веществ.")),
-    P(134, 124, t("Adrenal glands", "Մակերիկամներ", "Надпочечники"), t("Caps on top of the kidneys. In fright they release adrenaline: the heart races and muscles get more sugar.", "Գլխարկներ երիկամների վրա։ Վախի պահին արտազատում են ադրենալին․ սիրտն արագանում է, մկանները ստանում են ավելի շատ շաքար։", "«Шапочки» на почках. При испуге выделяют адреналин: сердце бьётся чаще, мышцы получают больше сахара.")),
-    P(162, 152, t("Pancreas", "Ենթաստամոքսային գեղձ", "Поджелудочная железа"), t("Small islands of cells (the islets of Langerhans) make insulin, which lowers blood sugar.", "Բջիջների փոքր կղզյակները (Լանգերհանսի կղզյակներ) արտադրում են ինսուլին, որն իջեցնում է արյան շաքարը։", "Маленькие островки клеток (островки Лангерганса) делают инсулин, снижающий сахар в крови.")),
-    P(160, 196, t("Sex glands", "Սեռական գեղձեր", "Половые железы"), t("Ovaries or testes. Their hormones start the changes of puberty.", "Ձվարաններ կամ ամորձիներ։ Նրանց հորմոնները սկսում են սեռական հասունացման փոփոխությունները։", "Яичники или семенники. Их гормоны запускают перемены полового созревания.")),
+    P(214, 30, t("Pituitary gland", "Հիպոֆիզ", "Гипофиз"), t("Pea-sized, under the brain. It makes growth hormone and the hormones that steer the other glands.", "Ոլոռի չափ է, գտնվում է գլխուղեղի տակ։ Արտադրում է աճի հորմոն և այլ գեղձերը ղեկավարող հորմոններ։", "Размером с горошину, под мозгом. Делает гормон роста и гормоны, управляющие другими железами.")),
+    P(214, 66, t("Thyroid gland", "Վահանաձև գեղձ", "Щитовидная железа"), t("Butterfly-shaped, in the neck. Its hormone thyroxine contains iodine and sets the speed of metabolism.", "Թիթեռնաձև է, գտնվում է պարանոցում։ Նրա հորմոնը՝ թիրօքսինը, պարունակում է յոդ և որոշում նյութափոխանակության արագությունը։", "В форме бабочки, на шее. Её гормон тироксин содержит йод и задаёт скорость обмена веществ.")),
+    P(86, 124, t("Adrenal glands", "Մակերիկամներ", "Надпочечники"), t("Caps on top of the kidneys. In fright they release adrenaline: the heart races and muscles get more sugar.", "Գլխարկներ երիկամների վրա։ Վախի պահին արտազատում են ադրենալին․ սիրտն արագանում է, մկանները ստանում են ավելի շատ շաքար։", "«Шапочки» на почках. При испуге выделяют адреналин: сердце бьётся чаще, мышцы получают больше сахара.")),
+    P(242, 152, t("Pancreas", "Ենթաստամոքսային գեղձ", "Поджелудочная железа"), t("Small islands of cells (the islets of Langerhans) make insulin, which lowers blood sugar.", "Բջիջների փոքր կղզյակները (Լանգերհանսի կղզյակներ) արտադրում են ինսուլին, որն իջեցնում է արյան շաքարը։", "Маленькие островки клеток (островки Лангерганса) делают инсулин, снижающий сахар в крови.")),
+    P(238, 198, t("Sex glands", "Սեռական գեղձեր", "Половые железы"), t("Ovaries or testes. Their hormones start the changes of puberty.", "Ձվարաններ կամ ամորձիներ։ Նրանց հորմոնները սկսում են սեռական հասունացման փոփոխությունները։", "Яичники или семенники. Их гормоны запускают перемены полового созревания.")),
   ],
 };
 

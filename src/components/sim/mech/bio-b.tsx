@@ -338,27 +338,29 @@ const heartcycle: Mech = {
     const lab = (x: number, y: number, s: string) => <text x={x} y={y} textAnchor="middle" fontSize="8.5" fontWeight="900" fill="#fff">{s}</text>;
     return (
       <g>
-        <path d="M200,58 Q200,14 240,14 L270,14" stroke="#dc2626" strokeWidth="12" fill="none" />
-        <path d="M128,58 Q128,24 90,24 L56,24" stroke="#2563eb" strokeWidth="12" fill="none" />
-        {ch(120, 70, 70, 50, a, "#3b82f6")}
-        {ch(200, 70, 70, 50, a, "#ef4444")}
+        <path d="M10,62 L88,62" stroke="#2563eb" strokeWidth="12" />
+        <path d="M310,62 L232,62" stroke="#dc2626" strokeWidth="12" />
+        <path d="M155,104 L155,24 Q155,10 140,10 L100,10" stroke="#6366f1" strokeWidth="8" fill="none" />
+        <path d="M165,104 L165,22 Q165,8 182,8 L226,8" stroke="#dc2626" strokeWidth="8" fill="none" />
+        {ch(118, 70, 60, 50, a, "#3b82f6")}
+        {ch(202, 70, 60, 50, a, "#ef4444")}
         {ch(120, 140, 74, 80, v, "#1d4ed8")}
         {ch(200, 140, 74, 80, v, "#b91c1c")}
-        {lab(120, 73, T(lang, "RA", "ԱՆ", "ПП"))}
-        {lab(200, 73, T(lang, "LA", "ՁՆ", "ЛП"))}
+        {lab(118, 73, T(lang, "RA", "ԱՆ", "ПП"))}
+        {lab(202, 73, T(lang, "LA", "ՁՆ", "ЛП"))}
         {lab(120, 143, T(lang, "RV", "ԱՓ", "ПЖ"))}
         {lab(200, 143, T(lang, "LV", "ՁՓ", "ЛЖ"))}
-        {i === 0 ? [120, 200].map((x) => <Arrow key={x} x1={x} y1={82 + 6 * p} x2={x} y2={112 + 6 * p} color="#fde047" />) : null}
+        {i === 0 ? [118, 202].map((x) => <Arrow key={x} x1={x} y1={82 + 6 * p} x2={x} y2={112 + 6 * p} color="#fde047" />) : null}
         {i === 1 ? (
           <g>
-            <Arrow x1={200} y1={110 - 30 * p} x2={232} y2={20 - 4 * p} color="#fde047" />
-            <Arrow x1={120} y1={110 - 30 * p} x2={80} y2={30 - 4 * p} color="#fde047" />
+            <Arrow x1={155} y1={110 - 40 * p} x2={155} y2={60 - 40 * p} color="#fde047" width={2} />
+            <Arrow x1={165} y1={110 - 40 * p} x2={165} y2={60 - 40 * p} color="#fde047" width={2} />
           </g>
         ) : null}
         {i === 2 ? (
           <g>
-            <Arrow x1={20} y1={70} x2={78 + 6 * p} y2={70} color="#2563eb" />
-            <Arrow x1={300} y1={70} x2={242 - 6 * p} y2={70} color="#dc2626" />
+            <Arrow x1={14} y1={80} x2={78 + 6 * p} y2={80} color="#2563eb" />
+            <Arrow x1={306} y1={80} x2={242 - 6 * p} y2={80} color="#dc2626" />
           </g>
         ) : null}
         <Tag x={160} y={206}>{[
