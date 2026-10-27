@@ -65,6 +65,12 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   precise: [t("Plain", "Պարզ", "Просто"), t("Precise", "Ճշգրիտ", "Точно")],
   polite: [t("Friendly: ты", "Մտերմիկ՝ ты", "Дружески: ты"), t("Polite: Вы", "Քաղաքավարի՝ Вы", "Вежливо: Вы")],
   old: [t("Old word", "Հին բառ", "Старое слово"), t("Today", "Այսօր", "Сегодня")],
+  decl3: [t("1st declension", "1-ին հոլովում", "1-е склонение"), t("2nd declension", "2-րդ հոլովում", "2-е склонение"), t("3rd declension", "3-րդ հոլովում", "3-е склонение")],
+  iya: [t("Ordinary noun", "Սովորական գոյական", "Обычное слово"), t("Noun in -ия, -ий, -ие", "-ия, -ий, -ие գոյական", "Слово на -ия, -ий, -ие")],
+  animacc: [t("Inanimate: like nominative", "Անշունչ՝ ուղղականի պես", "Неодуш.: как именительный"), t("Animate: like genitive", "Շնչավոր՝ սեռականի պես", "Одуш.: как родительный")],
+  withprep: [t("No preposition", "Առանց նախդրի", "Без предлога"), t("With a preposition", "Նախդրով", "С предлогом")],
+  conj: [t("I conjugation", "I խոնարհում", "I спряжение"), t("II conjugation", "II խոնարհում", "II спряжение")],
+  tsya: [t("что делать? → -ться", "что делать? → -ться", "что делать? → -ться"), t("что делает? → -тся", "что делает? → -тся", "что делает? → -тся")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
