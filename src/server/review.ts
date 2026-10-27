@@ -38,14 +38,14 @@ export type ReviewItem = {
   lapses: number;
 };
 
-type CardRef = { itemId: string; courseId: string | null; lastCorrect: boolean; lapses: number };
+export type CardRef = { itemId: string; courseId: string | null; lastCorrect: boolean; lapses: number };
 
 /**
  * Looks up the question behind each card. Cards whose lesson or exam is gone,
  * or whose question no longer exists, are returned in `gone`; cards whose
  * lesson is only unpublished for now are skipped.
  */
-async function resolveItems(cards: CardRef[]): Promise<{ items: ReviewItem[]; gone: string[] }> {
+export async function resolveItems(cards: CardRef[]): Promise<{ items: ReviewItem[]; gone: string[] }> {
   const db = await getDb();
   const parsed = cards.map((c) => ({ card: c, id: parseItemId(c.itemId) }));
   const lessonIds = [...new Set(parsed.filter((p) => p.id?.source === "quiz").map((p) => p.id!.refId))];
@@ -172,7 +172,7 @@ export async function getReviewQueue(userId: string, opts: { mode?: "due" | "mis
   return interleave(items, (i) => i.courseId ?? i.itemId).slice(0, size);
 }
 
-/** Everything in the mistake notebook, with the option the pupil chose last time. */
+/** Everything in the mistake notebook, with the option the pupil chose last time and whether they were sure of it. */
 export async function getMistakes(userId: string, limit = 200) {
   const db = await getDb();
   const rc = schema.reviewCards;
@@ -188,15 +188,16 @@ export async function getMistakes(userId: string, limit = 200) {
   const ae = schema.answerEvents;
   const last = items.length
     ? await db
-        .select({ itemId: ae.itemId, choice: ae.choice, at: sql<string>`max(${ae.createdAt})` })
+        .select({ itemId: ae.itemId, choice: ae.choice, confidence: ae.confidence, at: sql<string>`max(${ae.createdAt})` })
         .from(ae)
-        .where(and(eq(ae.userId, userId), inArray(ae.itemId, items.map((i) => i.itemId))))
+        // A second try after a hint does not move the card, so it is not "the answer last time".
+        .where(and(eq(ae.userId, userId), eq(ae.hintUsed, false), inArray(ae.itemId, items.map((i) => i.itemId))))
         .groupBy(ae.itemId)
         .all()
     : [];
-  // SQLite returns the bare columns from the row that holds the max(), so `choice` is the latest one.
-  const lastChoice = new Map(last.map((r) => [r.itemId, r.choice]));
-  return items.map((i) => ({ ...i, lastChoice: lastChoice.get(i.itemId) ?? null }));
+  // SQLite returns the bare columns from the row that holds the max(), so these are from the latest answer.
+  const latest = new Map(last.map((r) => [r.itemId, r]));
+  return items.map((i) => ({ ...i, lastChoice: latest.get(i.itemId)?.choice ?? null, wasSure: latest.get(i.itemId)?.confidence === 2 }));
 }
 
 /**
@@ -235,11 +236,22 @@ export async function getReviewSummary(userId: string, now = new Date()) {
 export const getReviewSummaryCached = cache((userId: string) => getReviewSummary(userId));
 
 /**
- * Records one Daily Review answer. The question is looked up on the server,
- * so the client only says which option it chose. Returns null for an unknown
- * or retired question.
+ * Records one answer to a question met before: in Daily Review (only questions
+ * the pupil already has a card for) or in a lesson's warm-up (any published quiz
+ * question, so a card may be created). The question is looked up on the server,
+ * so the client only says which option it chose. Returns null for an unknown or
+ * retired question.
  */
-export async function answerReviewItem(input: { userId: string; itemId: string; choice: number; ms?: number | null; now?: Date }) {
+export async function answerItem(input: {
+  userId: string;
+  itemId: string;
+  choice: number;
+  source?: "review" | "warmup";
+  confidence?: number | null;
+  ms?: number | null;
+  now?: Date;
+}) {
+  const { source = "review" } = input;
   const now = input.now ?? new Date();
   const db = await getDb();
   const rc = schema.reviewCards;
@@ -248,18 +260,19 @@ export async function answerReviewItem(input: { userId: string; itemId: string; 
     .from(rc)
     .where(and(eq(rc.userId, input.userId), eq(rc.itemId, input.itemId)))
     .get();
-  // Only questions the pupil has met can be reviewed.
-  if (!known) return null;
-  const { items } = await resolveItems([known]);
-  const item = items[0];
+  // Daily Review only shows questions the pupil has met; a warm-up may be the first time.
+  if (!known && source === "review") return null;
   const ref = parseItemId(input.itemId);
+  if (!known && ref?.source !== "quiz") return null;
+  const { items } = await resolveItems([known ?? { itemId: input.itemId, courseId: null, lastCorrect: false, lapses: 0 }]);
+  const item = items[0];
   if (!item || !ref || input.choice >= item.question.options.length) return null;
   const correct = input.choice === item.question.answer;
   const [card] = await recordAnswers(
     input.userId,
-    [{ itemId: item.itemId, source: "review", refId: ref.refId, courseId: item.courseId, correct, choice: input.choice, ms: input.ms ?? null }],
+    [{ itemId: item.itemId, source, refId: ref.refId, courseId: item.courseId, correct, choice: input.choice, confidence: input.confidence ?? null, ms: input.ms ?? null }],
     now,
   );
-  const days = Math.max(1, Math.round((new Date(card.due).getTime() - now.getTime()) / (24 * 60 * 60 * 1000)));
+  const days = card ? Math.max(1, Math.round((new Date(card.due).getTime() - now.getTime()) / (24 * 60 * 60 * 1000))) : null;
   return { correct, answer: item.question.answer, nextInDays: days };
 }

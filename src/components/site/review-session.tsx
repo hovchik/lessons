@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
 
@@ -16,7 +17,6 @@ type Result = { correct: boolean; nextInDays: number | null; saved: boolean };
  */
 export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; more: boolean }) {
   const t = useTranslations("review");
-  const tl = useTranslations("lesson");
   const tg = useTranslations("grade");
   // The queue is fixed for the session, even if the page re-renders.
   const [items] = useState(initial);
@@ -35,7 +35,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
     shownAt.current = Date.now();
   }, [i]);
 
-  const check = async () => {
+  const check = async (confidence: Confidence) => {
     if (chosen === undefined || busy) return;
     setBusy(true);
     const local = chosen === item.question.answer;
@@ -44,7 +44,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
       const res = await fetch("/api/review/answer", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ itemId: item.itemId, choice: chosen, ms: Date.now() - shownAt.current }),
+        body: JSON.stringify({ itemId: item.itemId, choice: chosen, confidence, ms: Math.min(Date.now() - shownAt.current, 3_600_000) }),
       });
       if (res.ok) {
         const data = (await res.json()) as { correct: boolean; nextInDays: number };
@@ -163,9 +163,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
         </div>
 
         {!result ? (
-          <Button size="lg" className="w-full sm:w-auto" disabled={chosen === undefined || busy} onClick={check}>
-            {tl("check")}
-          </Button>
+          <ConfidenceCheck size="lg" disabled={chosen === undefined || busy} onCheck={check} />
         ) : (
           <div className="space-y-3">
             <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1">

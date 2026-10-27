@@ -7,6 +7,8 @@ import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 const Body = z.object({
   lessonId: z.string().min(1).max(200),
   answers: z.array(z.number().int().min(0).max(50)).min(1).max(500),
+  confidence: z.array(z.union([z.literal(0), z.literal(2)]).nullable()).max(500).optional(),
+  retries: z.array(z.number().int().min(0).max(50).nullable()).max(500).optional(),
 });
 
 export async function POST(req: Request) {
