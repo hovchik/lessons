@@ -54,7 +54,8 @@ export default async function ReviewPage({ params, searchParams }: { params: Pro
       </header>
 
       {items.length > 0 ? (
-        <ReviewSession key={mode} items={items} more={mode === "due" && summary.ready > items.length} />
+        // Keyed by its questions, so "Review more" (same URL, next batch) starts a fresh session.
+        <ReviewSession key={`${mode}:${items.map((i) => i.itemId).join(",")}`} items={items} more={mode === "due" && summary.ready > items.length} />
       ) : (
         <section className="clay p-6 text-center sm:p-10">
           <span className="mx-auto grid size-16 place-items-center rounded-[20px] bg-muted text-primary">
