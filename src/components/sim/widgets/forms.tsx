@@ -106,6 +106,16 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   personal: [t("Personal", "Դիմավոր", "Личное"), t("Impersonal", "Անդեմ", "Безличное")],
   homattr: [t("Homogeneous: commas", "Համասեռ՝ ստորակետով", "Однородные: с запятой"), t("Not homogeneous: no commas", "Ոչ համասեռ՝ առանց ստորակետի", "Неоднородные: без запятой")],
   vvod: [t("Parenthetical: commas", "Միջանկյալ՝ ստորակետով", "Вводное: с запятыми"), t("Member of the sentence", "Նախադասության անդամ", "Член предложения")],
+  coord3: [t("Copulative", "Միավորական", "Соединительные"), t("Adversative", "Հակադրական", "Противительные"), t("Disjunctive", "Տրոհական", "Разделительные")],
+  comma: [t("Comma", "Ստորակետ", "Запятая"), t("No comma", "Առանց ստորակետի", "Без запятой")],
+  conjword: [t("Conjunction", "Շաղկապ", "Союз"), t("Conjunctive word", "Շաղկապական բառ", "Союзное слово")],
+  attrexpl: [t("Attributive: какой?", "Որոշիչ՝ какой?", "Определительное: какой?"), t("Explanatory: что?", "Բացատրական՝ что?", "Изъяснительное: что?")],
+  advcl3: [t("Time", "Ժամանակ", "Времени"), t("Cause", "Պատճառ", "Причины"), t("Condition", "Պայման", "Условия")],
+  asyn: [t("No conjunction", "Առանց շաղկապի", "Без союза"), t("With a conjunction", "Շաղկապով", "С союзом")],
+  mark: [t("Two parts", "Երկու մաս", "Две части"), t("Mark", "Նշան", "Знак")],
+  cohesion3: [t("First mention", "Առաջին հիշատակում", "Первое упоминание"), t("Pronoun", "Դերանուն", "Местоимение"), t("Synonym", "Հոմանիշ", "Синоним")],
+  official: [t("Conversational", "Խոսակցական", "Разговорный"), t("Official", "Պաշտոնական", "Официально-деловой")],
+  compress: [t("Full", "Ամբողջական", "Полностью"), t("Compressed", "Սեղմված", "Сжато")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {

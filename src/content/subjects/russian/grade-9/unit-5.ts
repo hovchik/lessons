@@ -36,7 +36,7 @@ Because the only copy burned, the text we read is a copy of a copy, and several 
 | Part | Content |
 | --- | --- |
 | 1 | the campaign: the eclipse of the sun, the first victory, the second battle, the defeat and capture of Igor |
-| 2 | the author's digression: the quarrel of the princes, the appeal to eleven rulers of Rus to unite |
+| 2 | the author's digression: the quarrel of the princes, the appeal to the princes of Rus, named one by one, to unite |
 | 3 | the lament of Yaroslavna, Igor's wife, and his escape home |
 
 The middle part is the heart of the work. The defeat is not described in order to be mourned but in order to prove a thought: Rus is beaten because its princes fight each other.
@@ -63,7 +63,7 @@ The third part gives the word to a woman. Yaroslavna stands on the wall of Пу�
 
 > «О ветер, ветрило! Зачем, господин, веешь ты навстречу?»
 
-The lament is the oldest Russian poem of grief, and Russian poets from Zhukovsky to Akhmatova have rewritten it.
+The lament is the oldest Russian poem of grief, and Russian poets from Zhukovsky to Zabolotsky have retold it in verse.
 
 ## Why it still matters
 
@@ -81,7 +81,7 @@ The call to unity made the «Слово» a national book: it was translated by 
 
 ### Answers
 
-The campaign took place in 1185, and the «Слово» was written at the end of the twelfth century, about 1185–1187. The manuscript was found in 1795 and burned in the Moscow fire of 1812, so the text survives only in the printed edition of 1800. The three parts are the campaign and defeat, the author's digression about the quarrels of the princes, and the lament of Yaroslavna with Igor's escape. The appeal to the eleven princes of Rus stands in the second part, and it says that the princes must stop fighting each other and defend the land together. In the fifth sentence nature takes part in the action: the eclipse is a warning, and the sun itself blocks Igor's road. Yaroslavna addresses the wind, then the Dnieper, then the sun. The author describes a defeat because his aim is not glory but proof: disunity costs Rus its armies, and only one defeat makes that argument plain.`,
+The campaign took place in 1185, and the «Слово» was written at the end of the twelfth century, about 1185–1187. The manuscript was found in 1795 and burned in the Moscow fire of 1812, so the text survives only in the printed edition of 1800. The three parts are the campaign and defeat, the author's digression about the quarrels of the princes, and the lament of Yaroslavna with Igor's escape. The appeal to the princes of Rus, named one by one, stands in the second part, and it says that the princes must stop fighting each other and defend the land together. In the fifth sentence nature takes part in the action: the eclipse is a warning, and the sun itself blocks Igor's road. Yaroslavna addresses the wind, then the Dnieper, then the sun. The author describes a defeat because his aim is not glory but proof: disunity costs Rus its armies, and only one defeat makes that argument plain.`,
         hy: `## Գիրքը և նրա պատմությունը
 
 «Слово о полку Игореве»-ն հին ռուս գրականության ամենահայտնի գործն է։ Գրվել է 12-րդ դարի վերջին, իր նկարագրած դեպքերից քիչ անց, հեղինակի կողմից, որի անունը մեզ հայտնի չէ։
@@ -101,7 +101,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 | Մաս | Բովանդակություն |
 | --- | --- |
 | 1 | արշավանքը՝ արևի խավարումը, առաջին հաղթանակը, երկրորդ ճակատամարտը, պարտությունը և Իգորի գերությունը |
-| 2 | հեղինակի շեղումը՝ իշխանների կռիվը, կոչը Ռուսիայի տասնմեկ տիրակալներին՝ միավորվելու |
+| 2 | հեղինակի շեղումը՝ իշխանների կռիվը, կոչը Ռուսիայի իշխաններին՝ անուն առ անուն, միավորվելու |
 | 3 | Յարոսլավնայի՝ Իգորի կնոջ ողբը, և Իգորի փախուստը տուն |
 
 Միջին մասը գործի սիրտն է։ Պարտությունը նկարագրված է ոչ թե ողբալու, այլ մի միտք ապացուցելու համար․ Ռուսիան պարտվում է, որովհետև իշխանները կռվում են միմյանց դեմ։
@@ -128,7 +128,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 
 > «О ветер, ветрило! Зачем, господин, веешь ты навстречу?» *(Ո՜վ քամի, քամի՛ հզոր։ Ինչո՞ւ, տե՛ր, փչում ես ընդդեմ։)*
 
-Ողբը ռուսական վշտի ամենահին բանաստեղծությունն է, և ռուս բանաստեղծները Ժուկովսկուց մինչև Ախմատովա վերագրել են այն։
+Ողբը ռուսական վշտի ամենահին բանաստեղծությունն է, և ռուս բանաստեղծները Ժուկովսկուց մինչև Զաբոլոցկի այն վերապատմել են չափածո։
 
 ## Ինչու է այն դեռ կարևոր
 
@@ -146,7 +146,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 
 ### Պատասխաններ
 
-Արշավանքը տեղի է ունեցել 1185-ին, իսկ «Слово»-ն գրվել է 12-րդ դարի վերջին՝ մոտ 1185–1187 թթ.։ Ձեռագիրը գտնվել է 1795-ին և այրվել Մոսկվայի 1812-ի հրդեհում, ուստի տեքստը պահպանվել է միայն 1800-ի տպագիր հրատարակության մեջ։ Երեք մասերն են՝ արշավանքն ու պարտությունը, հեղինակի շեղումն իշխանների կռիվների մասին, և Յարոսլավնայի ողբն Իգորի փախուստի հետ։ Ռուսիայի տասնմեկ իշխաններին ուղղված կոչը կանգնած է երկրորդ մասում, և այն ասում է, որ իշխանները պետք է դադարեն կռվել միմյանց դեմ և միասին պաշտպանեն երկիրը։ Հինգերորդ նախադասությունում բնությունը մասնակցում է գործողությանը․ խավարումը նախազգուշացում է, և արևն ինքը փակում է Իգորի ճանապարհը։ Յարոսլավնան դիմում է քամուն, ապա Դնեպրին, ապա արևին։ Հեղինակը նկարագրում է պարտություն, որովհետև նրա նպատակը փառքը չէ, այլ ապացույցը․ պառակտումը Ռուսիային արժենում է նրա զորքերը, և միայն պարտությունն է այդ փաստարկը պարզ դարձնում։`,
+Արշավանքը տեղի է ունեցել 1185-ին, իսկ «Слово»-ն գրվել է 12-րդ դարի վերջին՝ մոտ 1185–1187 թթ.։ Ձեռագիրը գտնվել է 1795-ին և այրվել Մոսկվայի 1812-ի հրդեհում, ուստի տեքստը պահպանվել է միայն 1800-ի տպագիր հրատարակության մեջ։ Երեք մասերն են՝ արշավանքն ու պարտությունը, հեղինակի շեղումն իշխանների կռիվների մասին, և Յարոսլավնայի ողբն Իգորի փախուստի հետ։ Ռուսիայի իշխաններին անուն առ անուն ուղղված կոչը կանգնած է երկրորդ մասում, և այն ասում է, որ իշխանները պետք է դադարեն կռվել միմյանց դեմ և միասին պաշտպանեն երկիրը։ Հինգերորդ նախադասությունում բնությունը մասնակցում է գործողությանը․ խավարումը նախազգուշացում է, և արևն ինքը փակում է Իգորի ճանապարհը։ Յարոսլավնան դիմում է քամուն, ապա Դնեպրին, ապա արևին։ Հեղինակը նկարագրում է պարտություն, որովհետև նրա նպատակը փառքը չէ, այլ ապացույցը․ պառակտումը Ռուսիային արժենում է նրա զորքերը, և միայն պարտությունն է այդ փաստարկը պարզ դարձնում։`,
         ru: `## Книга и её история
 
 «Слово о полку Игореве» — самое известное произведение древнерусской литературы. Оно написано в конце XII века, вскоре после описанных в нём событий, автором, имя которого нам неизвестно.
@@ -166,7 +166,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 | Часть | Содержание |
 | --- | --- |
 | 1 | поход: солнечное затмение, первая победа, вторая битва, поражение и плен Игоря |
-| 2 | авторское отступление: усобицы князей, обращение к одиннадцати правителям Руси с призывом объединиться |
+| 2 | авторское отступление: усобицы князей, обращение к князьям Руси, названным поимённо, с призывом объединиться |
 | 3 | плач Ярославны, жены Игоря, и его побег домой |
 
 Средняя часть — сердце произведения. Поражение описано не для того, чтобы его оплакать, а чтобы доказать мысль: Русь терпит разгром потому, что князья воюют друг с другом.
@@ -193,7 +193,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 
 > «О ветер, ветрило! Зачем, господин, веешь ты навстречу?»
 
-Плач — древнейшее русское стихотворение горя, и русские поэты от Жуковского до Ахматовой переписывали его заново.
+Плач — древнейшее русское стихотворение горя, и русские поэты от Жуковского до Заболоцкого пересказывали его стихами.
 
 ## Почему оно важно до сих пор
 
@@ -211,7 +211,7 @@ The campaign took place in 1185, and the «Слово» was written at the end o
 
 ### Ответы
 
-Поход состоялся в 1185 году, а «Слово» написано в конце XII века, около 1185–1187 годов. Рукопись нашли в 1795 году, и она сгорела в московском пожаре 1812 года, поэтому текст сохранился только в печатном издании 1800 года. Три части — поход и поражение, авторское отступление об усобицах князей, плач Ярославны с побегом Игоря. Обращение к одиннадцати князьям Руси стоит во второй части, и оно говорит, что князья должны перестать воевать друг с другом и защищать землю вместе. В пятом предложении природа участвует в действии: затмение — предупреждение, и само солнце заступает Игорю дорогу. Ярославна обращается к ветру, потом к Днепру, потом к солнцу. Автор описывает поражение, потому что его цель не слава, а доказательство: разобщённость стоит Руси её войск, и только поражение делает этот довод очевидным.`,
+Поход состоялся в 1185 году, а «Слово» написано в конце XII века, около 1185–1187 годов. Рукопись нашли в 1795 году, и она сгорела в московском пожаре 1812 года, поэтому текст сохранился только в печатном издании 1800 года. Три части — поход и поражение, авторское отступление об усобицах князей, плач Ярославны с побегом Игоря. Обращение к князьям Руси, названным поимённо, стоит во второй части, и оно говорит, что князья должны перестать воевать друг с другом и защищать землю вместе. В пятом предложении природа участвует в действии: затмение — предупреждение, и само солнце заступает Игорю дорогу. Ярославна обращается к ветру, потом к Днепру, потом к солнцу. Автор описывает поражение, потому что его цель не слава, а доказательство: разобщённость стоит Руси её войск, и только поражение делает этот довод очевидным.`,
       },
       [
         q(
@@ -293,7 +293,7 @@ At the end of the century the centre moves from the state to the private person.
 
 That sentence is the whole revolution of the story: feeling does not depend on rank. Karamzin also reformed Russian prose, bringing the written sentence close to educated conversation, and later wrote «История государства Российского».
 
-**Жуковский** (1783–1852) carried sentimentalism into romanticism. His elegy «Вечер» and his ballad «Светлана» make landscape and dream carry the state of the soul; he translated Bürger, Schiller and Homer, and he taught the young Pushkin.
+**Жуковский** (1783–1852) carried sentimentalism into romanticism. His elegy «Вечер» and his ballad «Светлана» make landscape and dream carry the state of the soul; he translated Bürger, Schiller and Homer, and he was the young Pushkin's older friend and mentor.
 
 > «Невыразимое подвластно ль выраженью?»
 
@@ -357,7 +357,7 @@ The three unities are one action, one place and one day, and they apply to the d
 
 Այդ նախադասությունը պատմվածքի ամբողջ հեղափոխությունն է․ զգացմունքը դասից կախված չէ։ Կարամզինը նաև բարեփոխեց ռուս արձակը՝ գրավոր նախադասությունը մոտեցնելով կրթված խոսակցությանը, իսկ հետո գրեց «История государства Российского»-ն։
 
-**Ժուկովսկին** (1783–1852) սենտիմենտալիզմը տարավ ռոմանտիզմ։ Նրա «Вечер» էլեգիան և «Светлана» բալլադը բնանկարն ու երազը դարձնում են հոգու վիճակի կրողը, նա թարգմանել է Բյուրգերին, Շիլլերին և Հոմերոսին, և ուսուցանել է պատանի Պուշկինին։
+**Ժուկովսկին** (1783–1852) սենտիմենտալիզմը տարավ ռոմանտիզմ։ Նրա «Вечер» էլեգիան և «Светлана» բալլադը բնանկարն ու երազը դարձնում են հոգու վիճակի կրողը, նա թարգմանել է Բյուրգերին, Շիլլերին և Հոմերոսին, և եղել է պատանի Պուշկինի ավագ ընկերն ու խորհրդատուն։
 
 > «Невыразимое подвластно ль выраженью?» *(Անասելին ենթարկվո՞ւմ է արդյոք արտահայտությանը։)*
 
@@ -421,7 +421,7 @@ The three unities are one action, one place and one day, and they apply to the d
 
 В этом предложении — вся революция повести: чувство не зависит от звания. Карамзин реформировал и русскую прозу, приблизив письменную фразу к образованному разговору, а позже написал «Историю государства Российского».
 
-**Жуковский** (1783–1852) перевёл сентиментализм в романтизм. Его элегия «Вечер» и баллада «Светлана» заставляют пейзаж и сон выражать состояние души; он переводил Бюргера, Шиллера и Гомера и учил юного Пушкина.
+**Жуковский** (1783–1852) перевёл сентиментализм в романтизм. Его элегия «Вечер» и баллада «Светлана» заставляют пейзаж и сон выражать состояние души; он переводил Бюргера, Шиллера и Гомера и был старшим другом и наставником юного Пушкина.
 
 > «Невыразимое подвластно ль выраженью?»
 
@@ -492,7 +492,7 @@ The three unities are one action, one place and one day, and they apply to the d
       {
         en: `## The play
 
-«Горе от ума» was finished by Александр Грибоедов in 1824. The censor would not allow it on stage or in print; it circulated in hundreds of handwritten copies, was staged in full only in 1831 and printed without cuts only in 1862. Griboyedov himself died in 1829 in Tehran, where he was the Russian envoy.
+«Горе от ума» was finished by Александр Грибоедов in 1824. The censor would not allow it on stage or in print; it circulated in hundreds of handwritten copies, was first staged, with cuts, only in 1831 and printed without cuts only in 1862. Griboyedov himself died in 1829 in Tehran, where he was the Russian envoy.
 
 | Element | Fact |
 | --- | --- |
@@ -523,10 +523,10 @@ The two are tied together: the rumour of madness is born of jealousy and works a
 | Age and rank | young, no post, independent | old, an official, a Moscow dignitary |
 | Service | «Служить бы рад, прислуживаться тошно» | service is a way to rank and connections |
 | Education | books, travel, thought | «Ученье — вот чума» |
-| Measure of a man | mind and honour | «что скажет княгиня Марья Алексевна» |
+| Measure of a man | mind and honour | «что станет говорить княгиня Марья Алексевна» |
 | Model | himself | his uncle Максим Петрович, who got on by falling over at court |
 
-Famusov is not a villain. He is a kind, busy, frightened man who repeats what his world believes, and that is what makes him dangerous. Behind him stand Скалозуб the soldier who dreams of a general's rank, the old countesses, the ball guests, and the famous «тридцать пять»: the silent chorus of Moscow.
+Famusov is not a villain. He is a kind, busy, frightened man who repeats what his world believes, and that is what makes him dangerous. Behind him stand Скалозуб the soldier who dreams of a general's rank, the old countesses, the ball guests, and the guests whom Griboyedov himself counted as «25 глупцов на одного здравомыслящего человека».
 
 Молчалин is the third force, and the future: «умеренность и аккуратность» are his two talents, and his rule is to please everyone who can help him.
 
@@ -536,7 +536,7 @@ Famusov is not a villain. He is a kind, busy, frightened man who repeats what hi
 
 ## Why the lines became proverbs
 
-Pushkin predicted it: «половина войдёт в пословицы». Griboyedov writes in aphorisms, each fitting one line of free iambic and one speaker's character.
+Pushkin predicted it: «половина — должна войти в пословицу». Griboyedov writes in aphorisms, each fitting one line of free iambic and one speaker's character.
 
 | Line | Who says it |
 | --- | --- |
@@ -562,7 +562,7 @@ Pushkin predicted it: «половина войдёт в пословицы». G
 The comedy was finished in 1824 and printed without cuts only in 1862. Its two conflicts are the social one, Chatsky against Famusov's Moscow, and the personal one, Chatsky against Molchalin over Sofia; they are tied together because the rumour of madness is born of Sofia's jealous annoyance and then works as a political weapon against Chatsky's views. Chatsky states his view of service in the line «Служить бы рад, прислуживаться тошно.» Famusov measures a man by rank and connections, and the opinion he fears is that of «княгиня Марья Алексевна». Максим Петрович is a model because he won favour at court by falling over deliberately and making the empress laugh, which shows that in this world advancement comes from self-abasement, not merit. The rumour is started by Sofia, out of annoyance at Chatsky's mockery of Molchalin, and the ball guests repeat it gladly because it disposes of a man whose opinions frighten them. Molchalin's two talents are «умеренность и аккуратность», and they show that he has no convictions at all, only a method for pleasing those above him.`,
         hy: `## Պիեսը
 
-«Горе от ума»-ն Ալեքսանդր Գրիբոյեդովն ավարտել է 1824-ին։ Գրաքննիչը չթույլատրեց ոչ բեմում, ոչ տպագրությամբ. այն շրջանառվեց հարյուրավոր ձեռագիր օրինակներով, ամբողջությամբ բեմադրվեց միայն 1831-ին և առանց կրճատումների տպագրվեց միայն 1862-ին։ Գրիբոյեդովն ինքը մահացել է 1829-ին Թեհրանում, որտեղ Ռուսաստանի դեսպանն էր։
+«Горе от ума»-ն Ալեքսանդր Գրիբոյեդովն ավարտել է 1824-ին։ Գրաքննիչը չթույլատրեց ոչ բեմում, ոչ տպագրությամբ. այն շրջանառվեց հարյուրավոր ձեռագիր օրինակներով, առաջին անգամ բեմադրվեց, կրճատումներով, միայն 1831-ին և առանց կրճատումների տպագրվեց միայն 1862-ին։ Գրիբոյեդովն ինքը մահացել է 1829-ին Թեհրանում, որտեղ Ռուսաստանի դեսպանն էր։
 
 | Տարր | Փաստ |
 | --- | --- |
@@ -593,10 +593,10 @@ The comedy was finished in 1824 and printed without cuts only in 1862. Its two c
 | Տարիք և դիրք | երիտասարդ, պաշտոն չունի, անկախ | ծեր, պաշտոնյա, մոսկովյան երևելի |
 | Ծառայություն | «Служить бы рад, прислуживаться тошно» *(ուրախ կլինեի ծառայել, բայց սպասարկել՝ զզվելի է)* | ծառայությունն աստիճանի և կապերի միջոց է |
 | Կրթություն | գրքեր, ճամփորդություն, մտածողություն | «Ученье — вот чума» *(ուսումը, ահա՛ ժանտախտը)* |
-| Մարդու չափանիշ | միտք և պատիվ | «что скажет княгиня Марья Алексевна» *(ինչ կասի Մարյա Ալեքսեևնա իշխանուհին)* |
+| Մարդու չափանիշ | միտք և պատիվ | «что станет говорить княгиня Марья Алексевна» *(ինչ կխոսի Մարյա Ալեքսեևնա իշխանուհին)* |
 | Օրինակ | ինքն իրեն | հորեղբայր Մաքսիմ Պետրովիչը, որն առաջ ընկավ արքունիքում ընկնելով |
 
-Ֆամուսովը չարագործ չէ։ Նա բարի, զբաղված, վախեցած մարդ է, որը կրկնում է այն, ինչին հավատում է իր աշխարհը, և ահա այդ է նրան դարձնում վտանգավոր։ Նրա հետևում կանգնած են Սկալոզուբը՝ զինվորականը, որը գեներալություն է երազում, ծեր կոմսուհիները, պարահանդեսի հյուրերը և հայտնի «երեսունհինգը»՝ Մոսկվայի լուռ երգչախումբը։
+Ֆամուսովը չարագործ չէ։ Նա բարի, զբաղված, վախեցած մարդ է, որը կրկնում է այն, ինչին հավատում է իր աշխարհը, և ահա այդ է նրան դարձնում վտանգավոր։ Նրա հետևում կանգնած են Սկալոզուբը՝ զինվորականը, որը գեներալություն է երազում, ծեր կոմսուհիները, պարահանդեսի հյուրերը և այն հյուրերը, որոնց մասին Գրիբոյեդովն ինքն ասել է՝ «25 глупцов на одного здравомыслящего человека» *(25 հիմար՝ մեկ ողջամիտ մարդու դիմաց)*։
 
 Մոլչալինն երրորդ ուժն է և ապագան․ «умеренность и аккуратность» *(չափավորություն և կարգասիրություն)* են նրա երկու տաղանդը, և նրա կանոնն է դուր գալ բոլորին, ով կարող է օգնել։
 
@@ -606,7 +606,7 @@ The comedy was finished in 1824 and printed without cuts only in 1862. Its two c
 
 ## Ինչու տողերը դարձան առածներ
 
-Պուշկինը կանխատեսել էր․ «половина войдёт в пословицы» *(կեսը կմտնի առածների մեջ)*։ Գրիբոյեդովը գրում է աֆորիզմներով, որոնցից յուրաքանչյուրը տեղավորվում է ազատ յամբի մեկ տողում և մեկ խոսողի բնավորության մեջ։
+Պուշկինը կանխատեսել էր․ «половина — должна войти в пословицу» *(կեսը կմտնի առածների մեջ)*։ Գրիբոյեդովը գրում է աֆորիզմներով, որոնցից յուրաքանչյուրը տեղավորվում է ազատ յամբի մեկ տողում և մեկ խոսողի բնավորության մեջ։
 
 | Տող | Ով է ասում |
 | --- | --- |
@@ -632,7 +632,7 @@ The comedy was finished in 1824 and printed without cuts only in 1862. Its two c
 Կոմեդիան ավարտվել է 1824-ին և առանց կրճատումների տպագրվել միայն 1862-ին։ Նրա երկու բախումն են՝ հասարակականը՝ Չացկին Ֆամուսովի Մոսկվայի դեմ, և անձնականը՝ Չացկին Մոլչալինի դեմ Սոֆյայի համար. դրանք կապված են, որովհետև խելագարության լուրը ծնվում է Սոֆյայի խանդոտ զայրույթից և հետո գործում որպես քաղաքական զենք Չացկիի հայացքների դեմ։ Չացկին ծառայության մասին իր տեսակետն ասում է «Служить бы рад, прислуживаться тошно.» տողում։ Ֆամուսովը մարդուն չափում է աստիճանով և կապերով, և վախենում է «княгиня Марья Алексевна»-ի կարծիքից։ Մաքսիմ Պետրովիչն օրինակ է, որովհետև արքունիքում շնորհ նվաճեց դիտավորյալ ընկնելով և կայսրուհուն ծիծաղեցնելով, ինչը ցույց է տալիս, որ այդ աշխարհում առաջխաղացումը գալիս է ինքնանվաստացումից, ոչ թե արժանիքից։ Լուրը սկսում է Սոֆյան՝ զայրացած Չացկիի ծաղրից Մոլչալինի հասցեին, իսկ պարահանդեսի հյուրերը հոժարությամբ կրկնում են այն, որովհետև այն վերացնում է մարդուն, որի կարծիքները վախեցնում են իրենց։ Մոլչալինի երկու տաղանդն է «умеренность и аккуратность»-ը, և դրանք ցույց են տալիս, որ նա ընդհանրապես համոզմունք չունի, միայն վերևիններին դուր գալու եղանակ։`,
         ru: `## Пьеса
 
-«Горе от ума» закончено Александром Грибоедовым в 1824 году. Цензура не пропустила её ни на сцену, ни в печать: комедия ходила в сотнях рукописных списков, целиком была поставлена только в 1831 году и напечатана без купюр лишь в 1862-м. Сам Грибоедов погиб в 1829 году в Тегеране, где был русским послом.
+«Горе от ума» закончено Александром Грибоедовым в 1824 году. Цензура не пропустила её ни на сцену, ни в печать: комедия ходила в сотнях рукописных списков, впервые, с купюрами, была поставлена только в 1831 году и напечатана без купюр лишь в 1862-м. Сам Грибоедов погиб в 1829 году в Тегеране, где был русским послом.
 
 | Элемент | Факт |
 | --- | --- |
@@ -663,10 +663,10 @@ The comedy was finished in 1824 and printed without cuts only in 1862. Its two c
 | Возраст и положение | молод, без должности, независим | стар, чиновник, московский вельможа |
 | Служба | «Служить бы рад, прислуживаться тошно» | служба — путь к чину и связям |
 | Образование | книги, путешествие, мысль | «Ученье — вот чума» |
-| Мера человека | ум и честь | «что скажет княгиня Марья Алексевна» |
+| Мера человека | ум и честь | «что станет говорить княгиня Марья Алексевна» |
 | Образец | сам себе | дядя Максим Петрович, который пошёл в гору, упав при дворе |
 
-Фамусов не злодей. Это добрый, занятой, испуганный человек, повторяющий то, во что верит его мир, и именно это делает его опасным. За ним стоят Скалозуб, военный, мечтающий о генеральстве, старые графини, гости бала и знаменитые «тридцать пять»: безмолвный московский хор.
+Фамусов не злодей. Это добрый, занятой, испуганный человек, повторяющий то, во что верит его мир, и именно это делает его опасным. За ним стоят Скалозуб, военный, мечтающий о генеральстве, старые графини, гости бала и гости, о которых сам Грибоедов писал: «25 глупцов на одного здравомыслящего человека».
 
 Молчалин — третья сила и будущее: «умеренность и аккуратность» — два его таланта, а правило его в том, чтобы угождать всякому, кто может помочь.
 
@@ -676,7 +676,7 @@ The comedy was finished in 1824 and printed without cuts only in 1862. Its two c
 
 ## Почему строки стали пословицами
 
-Пушкин предсказал: «половина войдёт в пословицы». Грибоедов пишет афоризмами, и каждый укладывается в одну строку вольного ямба и в характер одного говорящего.
+Пушкин предсказал: «половина — должна войти в пословицу». Грибоедов пишет афоризмами, и каждый укладывается в одну строку вольного ямба и в характер одного говорящего.
 
 | Строка | Кто говорит |
 | --- | --- |
@@ -761,7 +761,7 @@ Belinsky called the novel «энциклопедия русской жизни»
 
 ## The plot through two letters
 
-**Chapter 1** gives Onegin: a Petersburg gentleman of twenty-six, educated «чему-нибудь и как-нибудь», tired of society, suffering from «русская хандра». He inherits an estate and moves to the country, where everything bores him within three days.
+**Chapter 1** gives Onegin: a young Petersburg gentleman, educated «чему-нибудь и как-нибудь», tired of society, suffering from «русская хандра». He inherits an estate and moves to the country, where everything bores him within three days.
 
 **Chapters 2–3.** He befriends the young poet Ленский, who is engaged to Ольга Ларина. Ольга's elder sister Татьяна, silent, bookish and in love with the novels of Richardson and Rousseau, sees in Onegin the hero of those books and writes him a letter.
 
@@ -797,7 +797,7 @@ Pushkin calls Tatyana «мой верный идеал» and does not condemn On
 
 ## The ending that refuses
 
-The novel ends without a resolution: Tatyana leaves, Onegin is left standing, the author shuts the book «на самом интересном месте». That refusal is deliberate. Pushkin breaks off life where life breaks off, and leaves the hero «в минуту, злую для него».
+The novel ends without a resolution: Tatyana leaves, Onegin is left standing, the author shuts the book in the middle of the scene. That refusal is deliberate. Pushkin breaks off life where life breaks off, and leaves the hero «в минуту, злую для него».
 
 > «Блажен, кто праздник жизни рано / Оставил, не допив до дна / Бокала полного вина…»
 
@@ -832,7 +832,7 @@ The Onegin stanza has fourteen lines of iambic tetrameter and rhymes AbAb CCdd E
 
 ## Սյուժեն երկու նամակի միջոցով
 
-**Առաջին գլուխը** տալիս է Օնեգինին․ քսանվեցամյա պետերբուրգցի պարոն, սովորած «чему-нибудь и как-нибудь» *(ինչ-որ բան և ինչ-որ կերպ)*, հոգնած հասարակությունից, տանջվող «русская хандра»-ից *(ռուսական ձանձրալի մելամաղձությունից)*։ Նա ժառանգում է կայք և տեղափոխվում գյուղ, որտեղ երեք օրում ամեն ինչ նրան ձանձրացնում է։
+**Առաջին գլուխը** տալիս է Օնեգինին․ երիտասարդ պետերբուրգցի պարոն, սովորած «чему-нибудь и как-нибудь» *(ինչ-որ բան և ինչ-որ կերպ)*, հոգնած հասարակությունից, տանջվող «русская хандра»-ից *(ռուսական ձանձրալի մելամաղձությունից)*։ Նա ժառանգում է կայք և տեղափոխվում գյուղ, որտեղ երեք օրում ամեն ինչ նրան ձանձրացնում է։
 
 **Երկրորդ և երրորդ գլուխները։** Նա ընկերանում է երիտասարդ բանաստեղծ Լենսկու հետ, որը նշանված է Օլգա Լարինայի հետ։ Օլգայի ավագ քույրը՝ Տատյանան՝ լռակյաց, գրքամոլ և սիրահարված Ռիչարդսոնի և Ռուսոյի վեպերին, Օնեգինում տեսնում է այդ գրքերի հերոսը և նրան նամակ է գրում։
 
@@ -868,7 +868,7 @@ The Onegin stanza has fourteen lines of iambic tetrameter and rhymes AbAb CCdd E
 
 ## Վերջաբանը, որը մերժում է
 
-Վեպն ավարտվում է առանց լուծման․ Տատյանան հեռանում է, Օնեգինը մնում է կանգնած, հեղինակը փակում է գիրքը «на самом интересном месте» *(ամենահետաքրքիր տեղում)*։ Այդ մերժումը դիտավորյալ է։ Պուշկինը կյանքը կտրում է այնտեղ, որտեղ կյանքն ինքը կտրվում է, և հերոսին թողնում «в минуту, злую для него» *(նրա համար չար պահին)*։
+Վեպն ավարտվում է առանց լուծման․ Տատյանան հեռանում է, Օնեգինը մնում է կանգնած, հեղինակը փակում է գիրքը տեսարանի կեսին։ Այդ մերժումը դիտավորյալ է։ Պուշկինը կյանքը կտրում է այնտեղ, որտեղ կյանքն ինքը կտրվում է, և հերոսին թողնում «в минуту, злую для него» *(նրա համար չար պահին)*։
 
 > «Блажен, кто праздник жизни рано / Оставил, не допив до дна / Бокала полного вина…» *(Երանի նրան, ով կյանքի տոնը վաղ թողեց՝ չխմելով մինչև հատակը գինով լի բաժակը։)*
 
@@ -903,7 +903,7 @@ The Onegin stanza has fourteen lines of iambic tetrameter and rhymes AbAb CCdd E
 
 ## Сюжет через два письма
 
-**Первая глава** даёт Онегина: петербургский барин двадцати шести лет, выученный «чему-нибудь и как-нибудь», уставший от света, страдающий «русской хандрой». Он получает наследство и переезжает в деревню, где через три дня ему всё наскучило.
+**Первая глава** даёт Онегина: молодой петербургский барин, выученный «чему-нибудь и как-нибудь», уставший от света, страдающий «русской хандрой». Он получает наследство и переезжает в деревню, где через три дня ему всё наскучило.
 
 **Вторая и третья главы.** Он сходится с молодым поэтом Ленским, женихом Ольги Лариной. Старшая сестра Ольги Татьяна — молчаливая, начитанная, влюблённая в романы Ричардсона и Руссо — видит в Онегине героя этих книг и пишет ему письмо.
 
@@ -939,7 +939,7 @@ The Onegin stanza has fourteen lines of iambic tetrameter and rhymes AbAb CCdd E
 
 ## Финал, который отказывает
 
-Роман кончается без развязки: Татьяна уходит, Онегин остаётся стоять, автор закрывает книгу «на самом интересном месте». Этот отказ намеренный. Пушкин обрывает жизнь там, где она обрывается сама, и оставляет героя «в минуту, злую для него».
+Роман кончается без развязки: Татьяна уходит, Онегин остаётся стоять, автор закрывает книгу посреди сцены. Этот отказ намеренный. Пушкин обрывает жизнь там, где она обрывается сама, и оставляет героя «в минуту, злую для него».
 
 > «Блажен, кто праздник жизни рано / Оставил, не допив до дна / Бокала полного вина…»
 
@@ -1263,7 +1263,7 @@ The novel was published in 1840, and the author's preface was added to the secon
       {
         en: `## The scheme
 
-The first volume of «Мёртвые души» appeared in 1842. Gogol took the subject from Pushkin, who gave him the anecdote and said afterwards, laughing and frightened: «Боже, как грустна наша Россия!»
+The first volume of «Мёртвые души» appeared in 1842. Gogol took the subject from Pushkin, who gave him the anecdote and, after hearing the first chapters read aloud, said in a voice of anguish: «Боже, как грустна наша Россия!»
 
 In Russia serfs were counted at a census and taxed until the next one, so a landowner paid for peasants who had died in between. On paper those dead peasants, «ревизские души», still existed. Чичиков travels from estate to estate buying them cheap or getting them free, in order to mortgage them to the state as living serfs and raise capital on them.
 
@@ -1281,7 +1281,7 @@ Chichikov's route is a descent, arranged so that each owner is worse than the la
 | Owner | Trait | Detail that fixes him |
 | --- | --- | --- |
 | Манилов | empty sweetness | the book open at page fourteen for two years |
-| Коробочка | petty hoarding | asks whether dead souls are sold by weight |
+| Коробочка | petty hoarding | is afraid of selling the dead souls too cheap |
 | Ноздрёв | reckless lying and brawling | gambles his dead souls away at draughts and cheats |
 | Собакевич | solid, heavy cunning | praises his dead peasants as if selling live workmen |
 | Плюшкин | the hole in humanity | hoards rubbish while his grain rots and his serfs starve |
@@ -1330,7 +1330,7 @@ The second volume was written twice and burned twice; Gogol burned the last vers
 Chichikov buys peasants who have died since the last census but are still listed as alive, paying almost nothing for them; the purchase is profitable because he can then mortgage them to the state as living serfs and receive real money for people who do not exist. A «ревизская душа» is a serf entered in the census list, and a landowner is glad to sell one because he pays tax on that name until the next census. The five owners are Manilov, Korobochka, Nozdryov, Sobakevich and Plyushkin. The book open at page fourteen belongs to Manilov, the game of draughts to Nozdryov, and the rotting grain beside hoarded rubbish to Plyushkin. The title means both the dead peasants on the lists and the living landowners who have ceased to be human. The town decides in turn that Chichikov is a millionaire, that he wants to carry off the governor's daughter, that he is captain Kopeikin and that he is Napoleon. Gogol called the book a poem because he planned three volumes after Dante, hell, purgatory and paradise, and because of its lyrical digressions; the second volume he burned, the last time ten days before his death in 1852, so that only fragments remain.`,
         hy: `## Խարդախությունը
 
-«Мёртвые души»-ի առաջին հատորը լույս է տեսել 1842-ին։ Գոգոլը նյութը վերցրել է Պուշկինից, որը նրան տվել է այդ դեպքը և հետո ասել՝ ծիծաղելով և վախեցած․ «Боже, как грустна наша Россия!» *(Աստվա՜ծ, որքան տխուր է մեր Ռուսիան։)*
+«Мёртвые души»-ի առաջին հատորը լույս է տեսել 1842-ին։ Գոգոլը նյութը վերցրել է Պուշկինից, որը նրան տվել է այդ դեպքը և առաջին գլուխները լսելուց հետո տագնապած ձայնով ասել․ «Боже, как грустна наша Россия!» *(Աստվա՜ծ, որքան տխուր է մեր Ռուսիան։)*
 
 Ռուսաստանում ճորտերը հաշվառվում էին մարդահամարով և հարկվում մինչև հետևյալը, ուստի կալվածատերը վճարում էր նաև նրանց համար, ովքեր մեջտեղում մահացել էին։ Թղթի վրա այդ մահացած գյուղացիները՝ «ревизские души» *(հաշվառման հոգիներ)*, դեռ գոյություն ունեին։ Չիչիկովը ճամփորդում է կայքից կայք՝ գնելով նրանց էժան կամ ստանալով ձրի, որպեսզի դրանք գրավադրի պետությանը որպես կենդանի ճորտեր և նրանց վրա կապիտալ հանի։
 
@@ -1348,7 +1348,7 @@ Chichikov buys peasants who have died since the last census but are still listed
 | Տեր | Գլխավոր գիծը | Մանրամասը, որը նրան ամրագրում է |
 | --- | --- | --- |
 | Մանիլով | դատարկ քաղցրություն | գիրքն երկու տարի բաց է տասնչորսերորդ էջին |
-| Կորոբոչկա | մանր կուտակչություն | հարցնում է՝ արդյոք մեռած հոգիները վաճառվում են կիլոգրամով |
+| Կորոբոչկա | մանր կուտակչություն | վախենում է մեռած հոգիները էժան վաճառել |
 | Նոզդրյով | անխոհեմ ստախոսություն և կռվարարություն | տախտակախաղում կորցնում է իր մեռած հոգիները և խաբում |
 | Սոբակևիչ | հաստատուն, ծանր խորամանկություն | գովում է իր մեռած գյուղացիներին, ասես վաճառում է կենդանի վարպետներ |
 | Պլյուշկին | անցքը մարդկության մեջ | կուտակում է աղբ, մինչ հացահատիկը փչանում է և ճորտերը սովամահ են լինում |
@@ -1397,7 +1397,7 @@ Chichikov buys peasants who have died since the last census but are still listed
 Չիչիկովը գնում է գյուղացիների, որոնք մահացել են վերջին մարդահամարից հետո, բայց ցուցակներում դեռ կենդանի են նշված՝ վճարելով նրանց համար գրեթե ոչինչ. գնումը շահավետ է, որովհետև այնուհետև նա կարող է դրանք գրավադնել պետությանը որպես կենդանի ճորտեր և իրական փող ստանալ չգոյություն ունեցող մարդկանց դիմաց։ «Ревизская душа»-ն մարդահամարի ցուցակում գրված ճորտն է, և կալվածատերն ուրախությամբ կվաճառի այն, որովհետև մինչև հետևյալ մարդահամարը հարկ է վճարում այդ անվան համար։ Հինգ տերերն են՝ Մանիլովը, Կորոբոչկան, Նոզդրյովը, Սոբակևիչը և Պլյուշկինը։ Տասնչորսերորդ էջին բաց գիրքը Մանիլովինն է, տախտակախաղը՝ Նոզդրյովինը, իսկ կուտակված աղբի կողքին փչացող հացահատիկը՝ Պլյուշկինինը։ Վերնագիրը նշանակում է և ցուցակների մեռած գյուղացիներին, և ողջ կալվածատերերին, որոնք դադարել են մարդ լինել։ Քաղաքը հերթով որոշում է, որ Չիչիկովը միլիոնատեր է, որ ուզում է փախցնել նահանգապետի դստերը, որ նա Կոպեյկին կապիտանն է և որ նա Նապոլեոնն է։ Գոգոլը գիրքն անվանեց պոեմ, որովհետև ծրագրել էր երեք հատոր Դանտեի օրինակով՝ դժոխք, քավարան և դրախտ, և քնարական շեղումների պատճառով. երկրորդ հատորը նա այրեց՝ վերջին անգամ իր մահից տասն օր առաջ՝ 1852-ին, այնպես որ մնացել են միայն հատվածներ։`,
         ru: `## Афера
 
-Первый том «Мёртвых душ» вышел в 1842 году. Сюжет Гоголь взял у Пушкина, который подарил ему этот анекдот, а потом сказал, смеясь и ужасаясь: «Боже, как грустна наша Россия!»
+Первый том «Мёртвых душ» вышел в 1842 году. Сюжет Гоголь взял у Пушкина, который подарил ему этот анекдот, а выслушав первые главы, сказал голосом тоски: «Боже, как грустна наша Россия!»
 
 В России крепостных считали по ревизии и облагали податью до следующей, так что помещик платил и за тех, кто умер в промежутке. На бумаге эти умершие крестьяне, «ревизские души», ещё существовали. Чичиков едет из имения в имение, покупая их дёшево или получая даром, чтобы заложить их казне как живых крепостных и поднять на них капитал.
 
@@ -1415,7 +1415,7 @@ Chichikov buys peasants who have died since the last census but are still listed
 | Владелец | Черта | Подробность, которая его закрепляет |
 | --- | --- | --- |
 | Манилов | пустая сладость | книга два года открыта на четырнадцатой странице |
-| Коробочка | мелкая запасливость | спрашивает, не продают ли мёртвые души на вес |
+| Коробочка | мелкая запасливость | боится продешевить с мёртвыми душами |
 | Ноздрёв | безрассудное вранье и буянство | проигрывает мёртвые души в шашки и мошенничает |
 | Собакевич | крепкая, тяжёлая хитрость | хвалит мёртвых мужиков, будто продаёт живых мастеров |
 | Плюшкин | полное опустошение человека | копит хлам, пока гниёт хлеб и голодают крепостные |
