@@ -174,6 +174,18 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   realunreal: [t("1st: real, possible", "1-ին՝ իրական, հնարավոր", "1-й: реально, возможно"), t("2nd: imagined, unlikely", "2-րդ՝ երևակայական, քիչ հավանական", "2-й: воображаемо, маловероятно")],
   gerinf: [t("verb + -ing", "բայ + -ing", "глагол + -ing"), t("verb + to …", "բայ + to …", "глагол + to …")],
   lakes: [t("Feature", "Հատկանիշ", "Признак"), t("Sevan", "Սևան", "Севан"), t("Baikal", "Բայկալ", "Байкал")],
+  fest3: [t("Festival", "Տոն", "Праздник"), t("Where", "Որտեղ", "Где"), t("When", "Երբ", "Когда")],
+  stative: [t("State: simple form", "Վիճակ՝ simple ձև", "Состояние: simple"), t("Action: continuous is fine", "Գործողություն՝ continuous-ը թույլատրելի է", "Действие: continuous возможен")],
+  wordform: [t("Word", "Բառ", "Слово"), t("Noun", "Գոյական", "Существительное")],
+  extreme: [t("very + ordinary adjective", "very + սովորական ածական", "very + обычное прилагательное"), t("absolutely + strong adjective", "absolutely + ուժեղ ածական", "absolutely + сильное прилагательное")],
+  cond23: [t("2nd: imagined now", "2-րդ՝ երևակայական հիմա", "2-й: воображаемое сейчас"), t("3rd: imagined past", "3-րդ՝ երևակայական անցյալ", "3-й: воображаемое прошлое")],
+  wishtime: [t("wish + past: about now", "wish + անցյալ՝ հիմայի մասին", "wish + прошедшее: о настоящем"), t("wish + past perfect: about the past", "wish + past perfect՝ անցյալի մասին", "wish + past perfect: о прошлом")],
+  unless: [t("if … not", "if … not", "if … not"), t("unless", "unless", "unless")],
+  condtypes: [t("Type", "Տեսակ", "Тип"), t("Example", "Օրինակ", "Пример")],
+  eduexam: [t("Country", "Երկիր", "Страна"), t("Exam at 15–16", "Քննություն 15–16 տարեկանում", "Экзамен в 15–16 лет"), t("Final exam", "Ավարտական քննություն", "Выпускной экзамен")],
+  quality: [t("Quality", "Հատկանիշ", "Качество"), t("Job", "Մասնագիտություն", "Профессия")],
+  causeeffect: [t("Cause", "Պատճառ", "Причина"), t("Effect", "Հետևանք", "Следствие")],
+  linkers: [t("Adding", "Ավելացում", "Добавление"), t("Contrast", "Հակադրություն", "Противопоставление"), t("Result", "Արդյունք", "Следствие")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
