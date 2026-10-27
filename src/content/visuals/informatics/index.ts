@@ -1,5 +1,6 @@
 import type { VisualMap } from "..";
 import { grade5 } from "./grade-5";
+import { grade6 } from "./grade-6";
 
 /**
  * Informatics 5–12: labelled pictures (the computer, a home network, a flowchart, the memory
@@ -12,4 +13,5 @@ import { grade5 } from "./grade-5";
  */
 export const informaticsVisuals: VisualMap = {
   5: grade5,
+  6: grade6,
 };
