@@ -1,0 +1,22 @@
+import type { VisualMap } from "..";
+import { grade6 } from "./grade-6";
+import { grade7 } from "./grade-7";
+import { grade8 } from "./grade-8";
+import { grade9 } from "./grade-9";
+import { grade10 } from "./grade-10";
+import { grade11 } from "./grade-11";
+import { grade12 } from "./grade-12";
+
+/**
+ * World history 6–12: tap-to-read timelines with BC/AD years, centuries and the years between
+ * events, plus a "Look closer" section for every lesson in English, Armenian and Russian.
+ */
+export const worldHistoryVisuals: VisualMap = {
+  6: grade6,
+  7: grade7,
+  8: grade8,
+  9: grade9,
+  10: grade10,
+  11: grade11,
+  12: grade12,
+};

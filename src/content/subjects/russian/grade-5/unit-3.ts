@@ -1080,7 +1080,7 @@ Say it once a day for a week and the exceptions are settled for life.
 > стан…ция → -ция, so и: станция\\
 > сестриц…н → suffix -ын, so ы: сестрицын
 
-## А note on о and е after ц
+## A note on о and е after ц
 
 The same stress rule as after the sibilants works after ц: under the stress **о**, without it **е**.
 

@@ -1,0 +1,69 @@
+import { t } from "../labels";
+import type { BarSet } from "./bars";
+
+const M = t("m", "մ", "м");
+const KM = t("km", "կմ", "км");
+const CH = t("chapters", "գլուխ", "глав");
+
+/* Church history data sets: the size of Noah's ark, the length of the prophets' books, world religions. */
+export const CH_BARS: Record<string, BarSet> = {
+  /* ---------------- grade 5 ---------------- */
+  arksize: {
+    title: t("How big was Noah's ark? (length, m)", "Որքա՞ն մեծ էր Նոյյան տապանը (երկարություն, մ)", "Насколько велик был Ноев ковчег? (длина, м)"),
+    unit: M,
+    source: t("Genesis 6:15 gives 300 × 50 × 30 cubits. A cubit, the length from elbow to fingertip, was about 45 cm, so the numbers are approximate.", "Ծննդոց 6։15-ը տալիս է 300 × 50 × 30 կանգուն։ Կանգունը՝ արմունկից մինչև մատների ծայրն եղած երկարությունը, մոտ 45 սմ էր, ուստի թվերը մոտավոր են։", "Бытие 6:15 даёт 300 × 50 × 30 локтей. Локоть — длина от локтя до кончиков пальцев — составлял около 45 см, поэтому числа приблизительны."),
+    rows: [
+      [t("Blue whale", "Կապույտ կետ", "Синий кит"), 30, t("The largest animal that has ever lived, up to about 30 m.", "Երբևէ ապրած ամենամեծ կենդանին՝ մինչև մոտ 30 մ։", "Самое большое животное из когда-либо живших, до 30 м.")],
+      [t("Jumbo jet", "Ջամբո ինքնաթիռ", "Аэробус «Джамбо»"), 71, t("A Boeing 747 airliner is about 70 m long.", "Boeing 747 ինքնաթիռի երկարությունը մոտ 70 մ է։", "Длина самолёта Boeing 747 — около 70 м.")],
+      [t("Football pitch", "Ֆուտբոլի դաշտ", "Футбольное поле"), 105, t("A standard pitch for international matches.", "Միջազգային խաղերի ստանդարտ դաշտ։", "Стандартное поле для международных матчей.")],
+      [t("Noah's ark", "Նոյյան տապան", "Ноев ковчег"), 135, t("300 cubits: longer than a football pitch, about 22 m wide and 13 m high, with three decks.", "300 կանգուն․ ավելի երկար, քան ֆուտբոլի դաշտը, մոտ 22 մ լայնությամբ և 13 մ բարձրությամբ, երեք հարկով։", "300 локтей: длиннее футбольного поля, около 22 м в ширину и 13 м в высоту, с тремя палубами.")],
+      [t("Titanic", "Տիտանիկ", "Титаник"), 269, t("The famous liner of 1912 was twice as long.", "1912 թվականի հայտնի շոգենավն երկու անգամ ավելի երկար էր։", "Знаменитый лайнер 1912 года был вдвое длиннее.")],
+    ],
+  },
+  prophets: {
+    title: t("Major and minor prophets: length of the book", "Մեծ և փոքր մարգարեներ՝ գրքի ծավալը", "Великие и малые пророки: объём книги"),
+    unit: CH,
+    source: t("Chapter counts as in most Bibles. \"Major\" and \"minor\" refer to the length of the books, not to how important the prophets were.", "Գլուխների թիվը՝ ինչպես Աստվածաշնչերի մեծ մասում։ «Մեծ» և «փոքր» բառերը վերաբերում են գրքերի ծավալին, այլ ոչ թե մարգարեների կարևորությանը։", "Число глав — как в большинстве Библий. «Великие» и «малые» относится к объёму книг, а не к важности пророков."),
+    colors: ["#be123c", "#be123c", "#be123c", "#be123c", "#0369a1", "#0369a1", "#0369a1", "#0369a1", "#0369a1"],
+    rows: [
+      [t("Isaiah", "Եսայի", "Исаия"), 66, t("The longest. Since St Jerome, Christian writers have called Isaiah the \"fifth evangelist\" because he speaks so much about the Saviour.", "Ամենածավալունը։ Սուրբ Հերոնիմոսից ի վեր քրիստոնյա հեղինակներն Եսայուն անվանում են «հինգերորդ ավետարանիչ», որովհետև նա այդքան շատ է խոսում Փրկչի մասին։", "Самая длинная. Со времён блаженного Иеронима христианские авторы называют Исаию «пятым евангелистом», потому что он так много говорит о Спасителе.")],
+      [t("Jeremiah", "Երեմիա", "Иеремия"), 52, t("He lived through the fall of Jerusalem to Babylon; the book of Lamentations is also attributed to him.", "Նա ապրեց Երուսաղեմի անկումը Բաբելոնի կողմից․ նրան է վերագրվում նաև Ողբերի գիրքը։", "Он пережил падение Иерусалима перед Вавилоном; ему приписывают и Плач Иеремии.")],
+      [t("Ezekiel", "Եզեկիել", "Иезекииль"), 48, t("A priest in exile in Babylon, famous for his vision of a valley of dry bones coming to life.", "Աքսորյալ քահանա Բաբելոնում, հայտնի իր տեսիլքով, որում չոր ոսկորների հովիտը կենդանանում է։", "Священник в вавилонском плену, известный видением долины сухих костей, которые оживают.")],
+      [t("Daniel", "Դանիել", "Даниил"), 14, t("14 chapters in the Greek and Armenian Bibles, 12 in the Hebrew one. It is counted among the major prophets by tradition, though it is about as long as Hosea.", "Հունական և հայկական Աստվածաշնչերում՝ 14 գլուխ, եբրայականում՝ 12։ Ավանդաբար այն դասվում է մեծ մարգարեների շարքին, թեև մոտավորապես Ովսեի չափ է։", "14 глав в греческой и армянской Библиях, 12 в еврейской. По традиции его относят к великим пророкам, хотя книга примерно такой же длины, как Осия.")],
+      [t("Hosea", "Ովսե", "Осия"), 14, t("The first of the twelve minor prophets.", "Տասներկու փոքր մարգարեներից առաջինը։", "Первый из двенадцати малых пророков.")],
+      [t("Amos", "Ամովս", "Амос"), 9, t("A shepherd who spoke out against the rich who cheated the poor.", "Հովիվ, որը բարձրաձայնեց աղքատներին խաբող հարուստների դեմ։", "Пастух, обличавший богачей, обманывавших бедных.")],
+      [t("Micah", "Միքիա", "Михей"), 7, t("He named Bethlehem as the town of the coming ruler (Micah 5:2).", "Նա Բեթղեհեմը նշեց որպես գալիք առաջնորդի քաղաք (Միքիա 5։2)։", "Он назвал Вифлеем городом грядущего владыки (Михей 5:2).")],
+      [t("Jonah", "Հովնան", "Иона"), 4, t("Only four chapters, yet one of the best-known stories in the Bible.", "Ընդամենը չորս գլուխ, բայց Աստվածաշնչի ամենահայտնի պատմություններից մեկը։", "Всего четыре главы, но одна из самых известных историй Библии.")],
+      [t("Obadiah", "Աբդիու", "Авдий"), 1, t("The shortest book of the Old Testament: 21 verses.", "Հին Կտակարանի ամենակարճ գիրքը՝ 21 համար։", "Самая короткая книга Ветхого Завета: 21 стих.")],
+    ],
+  },
+  /* ---------------- grade 7 ---------------- */
+  translators: {
+    title: t("How far the translators travelled (straight line from Vagharshapat, km)", "Որքա՞ն հեռու էին գնում թարգմանիչները (ուղիղ գծով Վաղարշապատից, կմ)", "Как далеко ездили переводчики (по прямой от Вагаршапата, км)"),
+    unit: KM,
+    source: t("Distances are measured on the map in a straight line; by road, on foot or on horseback, the journeys were much longer and took weeks or months.", "Հեռավորությունները չափված են քարտեզի վրա ուղիղ գծով․ ճանապարհով, ոտքով կամ ձիով, ուղևորությունները շատ ավելի երկար էին և տևում էին շաբաթներ կամ ամիսներ։", "Расстояния измерены по карте по прямой; по дорогам, пешком или верхом путь был гораздо длиннее и занимал недели или месяцы."),
+    rows: [
+      [t("Samosata", "Սամոսատ", "Самосата"), 580, t("Here, according to Koryun, Mashtots completed the alphabet and, with a Greek calligrapher named Rufanos, gave the letters their final shape.", "Ըստ Կորյունի՝ այստեղ Մաշտոցն ավարտեց այբուբենը և Ռոփանոս անունով հույն գեղագրի հետ տառերին տվեց վերջնական ձև։", "Здесь, по Корюну, Маштоц завершил алфавит и вместе с греческим каллиграфом Ропаном придал буквам окончательную форму.")],
+      [t("Edessa", "Եդեսիա", "Эдесса"), 582, t("A centre of Syriac learning; the first pupils were sent here to translate from Syriac.", "Ասորական գիտության կենտրոն․ առաջին աշակերտներն ուղարկվեցին այստեղ՝ ասորերենից թարգմանելու։", "Центр сирийской учёности; первых учеников отправили сюда переводить с сирийского.")],
+      [t("Constantinople", "Կոստանդնուպոլիս", "Константинополь"), 1295, t("The capital of the Eastern Roman Empire. Translators brought back from here accurate Greek copies of the Bible to check the first translation.", "Արևելյան Հռոմեական կայսրության մայրաքաղաքը։ Թարգմանիչներն այստեղից բերեցին Աստվածաշնչի ճշգրիտ հունարեն օրինակներ՝ առաջին թարգմանությունը ստուգելու համար։", "Столица Восточной Римской империи. Отсюда переводчики привезли точные греческие списки Библии, чтобы сверить первый перевод.")],
+      [t("Alexandria", "Ալեքսանդրիա", "Александрия"), 1633, t("Famous for its schools of philosophy, mathematics and medicine.", "Հայտնի էր փիլիսոփայության, մաթեմատիկայի և բժշկության իր դպրոցներով։", "Славилась школами философии, математики и медицины.")],
+      [t("Athens", "Աթենք", "Афины"), 1787, t("Still a city of philosophers in the 5th century; Movses Khorenatsi is said to have studied in Alexandria and Athens.", "V դարում դեռ փիլիսոփաների քաղաք էր․ ասում են, որ Մովսես Խորենացին սովորել է Ալեքսանդրիայում և Աթենքում։", "В V веке ещё город философов; говорят, Мовсес Хоренаци учился в Александрии и Афинах.")],
+    ],
+  },
+  /* ---------------- grade 11 ---------------- */
+  believers: {
+    title: t("Followers of the world's religions, 2020 (millions)", "Աշխարհի կրոնների հետևորդները, 2020 (միլիոն)", "Последователи мировых религий, 2020 (млн)"),
+    unit: t("million", "միլիոն", "млн"),
+    source: t("Pew Research Center estimates for 2020, rounded. Counting believers is hard: censuses ask different questions, and people describe their faith in different ways.", "Pew Research Center-ի 2020 թվականի գնահատականները՝ կլորացված։ Հավատացյալներին հաշվելը դժվար է․ մարդահամարները տարբեր հարցեր են տալիս, և մարդիկ իրենց հավատը տարբեր կերպ են նկարագրում։", "Оценки Pew Research Center на 2020 год, округлённо. Считать верующих трудно: переписи задают разные вопросы, а люди по-разному описывают свою веру."),
+    colors: ["#be123c", "#047857", "#94a3b8", "#c2410c", "#ca8a04", "#0369a1"],
+    rows: [
+      [t("Christians", "Քրիստոնյաներ", "Христиане"), 2300, t("About 29% of humanity: Catholics, Orthodox, Oriental Orthodox such as the Armenians, and Protestants.", "Մարդկության մոտ 29%-ը՝ կաթոլիկներ, ուղղափառներ, հայերի պես արևելյան ուղղափառներ և բողոքականներ։", "Около 29% человечества: католики, православные, древневосточные церкви, как армянская, и протестанты.")],
+      [t("Muslims", "Մուսուլմաններ", "Мусульмане"), 2000, t("About 26%, and the fastest-growing large group, mainly because Muslim populations are younger.", "Մոտ 26%՝ ամենաարագ աճող մեծ խումբը, հիմնականում որովհետև մուսուլման բնակչությունն ավելի երիտասարդ է։", "Около 26% и самая быстрорастущая крупная группа, в основном потому, что мусульманское население моложе.")],
+      [t("No religion", "Առանց կրոնի", "Без религии"), 1900, t("People who say they belong to no religion. Many of them still believe in God or a higher power; most live in China.", "Մարդիկ, ովքեր ասում են, որ ոչ մի կրոնի չեն պատկանում։ Նրանցից շատերը, այնուամենայնիվ, հավատում են Աստծուն կամ բարձրագույն ուժի․ մեծ մասն ապրում է Չինաստանում։", "Люди, которые говорят, что не принадлежат ни к какой религии. Многие из них всё же верят в Бога или высшую силу; большинство живёт в Китае.")],
+      [t("Hindus", "Հինդուներ", "Индуисты"), 1200, t("About 15%; almost all of them live in India and Nepal.", "Մոտ 15%․ գրեթե բոլորն ապրում են Հնդկաստանում և Նեպալում։", "Около 15%; почти все живут в Индии и Непале.")],
+      [t("Buddhists", "Բուդդայականներ", "Буддисты"), 324, t("About 4%, mostly in East and Southeast Asia, such as Thailand, Myanmar, Japan and China.", "Մոտ 4%՝ հիմնականում Արևելյան և Հարավարևելյան Ասիայում, օրինակ՝ Թաիլանդում, Մյանմայում, Ճապոնիայում և Չինաստանում։", "Около 4%, в основном в Восточной и Юго-Восточной Азии: Таиланде, Мьянме, Японии, Китае.")],
+      [t("Jews", "Հրեաներ", "Иудеи"), 15, t("About 15 million, mainly in Israel and the USA: a small number with a huge influence on the history of faith.", "Մոտ 15 միլիոն՝ հիմնականում Իսրայելում և ԱՄՆ-ում․ փոքր թիվ, բայց հսկայական ազդեցություն հավատի պատմության վրա։", "Около 15 миллионов, в основном в Израиле и США: небольшое число с огромным влиянием на историю веры.")],
+    ],
+  },
+};
+

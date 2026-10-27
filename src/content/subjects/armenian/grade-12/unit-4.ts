@@ -9,21 +9,21 @@ export const unit4: UnitSeed = {
       ["Vahagn Davtyan and Razmik Davoyan", "Վահագն Դավթյան և Ռազմիկ Դավոյան", "Ваагн Давтян и Размик Давоян"],
       {
         en: [
-          "Place Vahagn Davtyan (1922–1996) and Razmik Davoyan (born 1940) in Armenian poetry of the second half of the 20th century.",
+          "Place Vahagn Davtyan (1922–1996) and Razmik Davoyan (1940–2022) in Armenian poetry of the second half of the 20th century.",
           "Describe the main themes of Davtyan: the land and its history, nature, the generation of the war, the dignity of work.",
           "Describe the main themes of Davoyan: the inner world of the person, nature as philosophy, the fate of the nation in the late 20th century.",
           "Learn a method for analysing a modern lyric poem: situation, lyric hero, images, sound, idea.",
           "Apply the method to an unfamiliar poem and write a short analysis.",
         ],
         hy: [
-          "Վահագն Դավթյանին (1922–1996) և Ռազմիկ Դավոյանին (ծնվ․ 1940) տեղադրել 20-րդ դարի երկրորդ կեսի հայ պոեզիայում։",
+          "Վահագն Դավթյանին (1922–1996) և Ռազմիկ Դավոյանին (1940–2022) տեղադրել 20-րդ դարի երկրորդ կեսի հայ պոեզիայում։",
           "Նկարագրել Դավթյանի գլխավոր թեմաները․ երկիրը և նրա պատմությունը, բնությունը, պատերազմի սերունդը, աշխատանքի արժանապատվությունը։",
           "Նկարագրել Դավոյանի գլխավոր թեմաները․ մարդու ներաշխարհը, բնությունը որպես փիլիսոփայություն, ազգի ճակատագիրը 20-րդ դարի վերջին։",
           "Յուրացնել արդի քնարական բանաստեղծության վերլուծության մեթոդ․ իրավիճակ, քնարական հերոս, պատկերներ, հնչյուն, գաղափար։",
           "Կիրառել մեթոդն անծանոթ բանաստեղծության վրա և գրել կարճ վերլուծություն։",
         ],
         ru: [
-          "Поместить Ваагна Давтяна (1922–1996) и Размика Давояна (род. 1940) в армянскую поэзию второй половины XX века.",
+          "Поместить Ваагна Давтяна (1922–1996) и Размика Давояна (1940–2022) в армянскую поэзию второй половины XX века.",
           "Описать главные темы Давтяна: земля и её история, природа, поколение войны, достоинство труда.",
           "Описать главные темы Давояна: внутренний мир человека, природа как философия, судьба нации в конце XX века.",
           "Освоить метод анализа современного лирического стихотворения: ситуация, лирический герой, образы, звук, идея.",
@@ -53,7 +53,7 @@ Davtyan's verse is balanced and clear. He continues the classical line of Armeni
 
 ## Razmik Davoyan
 
-**Razmik Davoyan** (Ռազմիկ Դավոյան, born 1940) began publishing in the 1960s. He writes lyric poetry, narrative poems and prose.
+**Razmik Davoyan** (Ռազմիկ Դավոյան, 1940–2022) began publishing in the 1960s. He wrote lyric poetry, narrative poems and prose.
 
 | Theme | How it appears |
 | --- | --- |
@@ -131,7 +131,7 @@ This is the kind of short structured analysis that exam tasks expect.
 
 ## Ռազմիկ Դավոյան
 
-**Ռազմիկ Դավոյանը** (ծնվ․ 1940) սկսել է տպագրվել 1960-ականներին։ Նա գրում է քնարական բանաստեղծություններ, պոեմներ և արձակ։
+**Ռազմիկ Դավոյանը** (1940–2022) սկսել է տպագրվել 1960-ականներին։ Նա գրել է քնարական բանաստեղծություններ, պոեմներ և արձակ։
 
 | Թեմա | Ինչպես է հանդես գալիս |
 | --- | --- |
@@ -209,7 +209,7 @@ This is the kind of short structured analysis that exam tasks expect.
 
 ## Размик Давоян
 
-**Размик Давоян** (Ռազմիկ Դավոյան, род. 1940) начал печататься в 1960-х годах. Он пишет лирику, поэмы и прозу.
+**Размик Давоян** (Ռազմիկ Դավոյան, 1940–2022) начал печататься в 1960-х годах. Он писал лирику, поэмы и прозу.
 
 | Тема | Как проявляется |
 | --- | --- |

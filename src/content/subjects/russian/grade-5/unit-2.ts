@@ -437,13 +437,13 @@ In an unstressed syllable **о** is pronounced close to [а]: *вода* [вад
 | повтори́т | on the last | повто́рит |
 | догово́р, догово́ры | on the third | до́говор |
 | катало́г | on the last | ката́лог |
-| квартал | кварта́л | ква́ртал |
+| кварта́л | on the last | ква́ртал |
 | свёкла | on ё | свекла́ |
-| торты́? no — то́рты | on the first | торты́ |
-| ба́нты, ша́рфы, по́рты | on the first | банты́ |
+| то́рты | on the first | торты́ |
+| ба́нты, ша́рфы | on the first | банты́ |
 | ту́фля, ту́фель | on the first | туфля́ |
 | щаве́ль | on the last | ща́вель |
-| ср**е**́дства | on the first | средства́ |
+| сре́дства | on the first | средства́ |
 
 Learn these in pairs with a rhyme or a short sentence of your own; a list read once is forgotten by Friday.
 

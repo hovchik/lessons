@@ -620,7 +620,7 @@ Check three things in your answer: the focus is a noun phrase or a clause, *be* 
 
 ## A text
 
-> **Why the factory closed.** It was not the earthquake that closed the Gyumri textile works, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
+> **Why the factory closed.** It was not the earthquake that closed the old textile works in our town, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
 
 ### Exercises
 
@@ -700,7 +700,7 @@ Check three things in your answer: the focus is a noun phrase or a clause, *be* 
 
 ## Տեքստ
 
-> **Why the factory closed.** It was not the earthquake that closed the Gyumri textile works, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
+> **Why the factory closed.** It was not the earthquake that closed the old textile works in our town, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
 
 ### Վարժություններ
 
@@ -716,7 +716,7 @@ Check three things in your answer: the focus is a noun phrase or a clause, *be* 
 
 1. It was my sister who paid for the tickets։ 2. It is the noise that annoys me։ 3. What I need is a holiday։ 4. What he did was break the window։ 5. It was not until Friday that we realised the mistake։ 6. Այն ավելացնում է սահմանափակում․ *all* նշանակում է, որ սա միակ ուզածն է։ 7. Սեփական պատասխան․ ստուգիր, որ *be*-ն համաձայնում է *it*-ի հետ, և որ *do*-ով wh-cleft-ը վերցնում է մերկ անորոշ դերբայ։
 
-*(Տեքստի թարգմանություն․ «Ինչու փակվեց գործարանը։ Գյումրու մանածագործական ֆաբրիկան փակողն երկրաշարժը չէր, թեև ամենահաճախ պատմվող պատմությունն այդ է։ Շենքը դիմացավ։ Այն, ինչ վերջ դրեց նրան, շուկայի կորուստն էր․ ֆաբրիկաները գրեթե ամեն ինչ, ինչ արտադրում էին, վաճառում էին մեկ գնորդի, և երբ այդ գնորդը 1992-ին անհետացավ, ուրիշ ոչ ոք չկար։ Ամբողջը, ինչ տնօրենները կարող էին անել, շաբաթը, ապա ամիսը կարճացնելն էր։ Հենց 1997-ին՝ վերջին մեծ պատվերից հինգ տարի անց, դարպասները փակվեցին վերջնականապես։ Այն, ինչ քաղաքը կորցրեց, ոչ միայն երկու հազար աշխատատեղ էր, այլև այն պատճառը, որի համար նրա երիտասարդների կեսը մնացել էր»։)*`,
+*(Տեքստի թարգմանություն․ «Ինչու փակվեց գործարանը։ մեր քաղաքի հին մանածագործական ֆաբրիկան փակողը երկրաշարժը չէր, թեև ամենահաճախ պատմվող պատմությունն այդ է։ Շենքը դիմացավ։ Այն, ինչ վերջ դրեց նրան, շուկայի կորուստն էր․ ֆաբրիկաները գրեթե ամեն ինչ, ինչ արտադրում էին, վաճառում էին մեկ գնորդի, և երբ այդ գնորդը 1992-ին անհետացավ, ուրիշ ոչ ոք չկար։ Ամբողջը, ինչ տնօրենները կարող էին անել, շաբաթը, ապա ամիսը կարճացնելն էր։ Հենց 1997-ին՝ վերջին մեծ պատվերից հինգ տարի անց, դարպասները փակվեցին վերջնականապես։ Այն, ինչ քաղաքը կորցրեց, ոչ միայն երկու հազար աշխատատեղ էր, այլև այն պատճառը, որի համար նրա երիտասարդների կեսը մնացել էր»։)*`,
         ru: `## Зачем расщеплять предложение
 
 Простое предложение даёт каждой части одинаковый вес. Расщеплённое делит его надвое, чтобы одна часть встала в луч прожектора. Речь делает это ударением, письмо не может — и пользуется расщеплением.
@@ -782,7 +782,7 @@ Check three things in your answer: the focus is a noun phrase or a clause, *be* 
 
 ## Текст
 
-> **Why the factory closed.** It was not the earthquake that closed the Gyumri textile works, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
+> **Why the factory closed.** It was not the earthquake that closed the old textile works in our town, although that is the story most often told. The building survived. What finished it was the loss of the market: the mills had sold almost everything they made to one buyer, and when that buyer disappeared in 1992 there was nobody else. All the directors could do was shorten the week, then the month. It was in 1997, five years after the last large order, that the gates were locked for good. What the town lost was not only two thousand jobs but the reason why half of its young people had stayed.
 
 ### Упражнения
 
@@ -798,7 +798,7 @@ Check three things in your answer: the focus is a noun phrase or a clause, *be* 
 
 1. It was my sister who paid for the tickets. 2. It is the noise that annoys me. 3. What I need is a holiday. 4. What he did was break the window. 5. It was not until Friday that we realised the mistake. 6. Оно добавляет ограничение: *all* значит, что это единственное желаемое. 7. Свой ответ: проверь согласование *be* с *it* и голый инфинитив в wh-cleft с *do*.
 
-*(Перевод текста. «Почему закрылась фабрика. Гюмрийский текстильный комбинат закрыло не землетрясение, хотя чаще всего рассказывают именно эту историю. Здание уцелело. Доконала его потеря рынка: фабрики продавали почти всё произведённое одному покупателю, и когда в 1992 году этот покупатель исчез, других не оказалось. Всё, что могли сделать директора, — сократить неделю, затем месяц. Именно в 1997 году, через пять лет после последнего крупного заказа, ворота заперли окончательно. Город потерял не только две тысячи рабочих мест, но и причину, по которой половина его молодёжи оставалась».)*`,
+*(Перевод текста. «Почему закрылась фабрика. Старый текстильный комбинат нашего города закрыло не землетрясение, хотя чаще всего рассказывают именно эту историю. Здание уцелело. Доконала его потеря рынка: фабрики продавали почти всё произведённое одному покупателю, и когда в 1992 году этот покупатель исчез, других не оказалось. Всё, что могли сделать директора, — сократить неделю, затем месяц. Именно в 1997 году, через пять лет после последнего крупного заказа, ворота заперли окончательно. Город потерял не только две тысячи рабочих мест, но и причину, по которой половина его молодёжи оставалась».)*`,
       },
       [
         q(t("Make an it-cleft: My sister paid for the tickets.", "Կազմիր it-cleft․ My sister paid for the tickets.", "Сделай it-cleft: My sister paid for the tickets."), [t("It was my sister who paid for the tickets.", "It was my sister who paid for the tickets.", "It was my sister who paid for the tickets."), t("It my sister paid for the tickets.", "It my sister paid for the tickets.", "It my sister paid for the tickets."), t("What my sister is paid for the tickets.", "What my sister is paid for the tickets.", "What my sister is paid for the tickets.")], 0),

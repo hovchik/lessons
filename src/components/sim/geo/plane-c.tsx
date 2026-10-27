@@ -27,6 +27,9 @@ const W = {
   dotNote: t("a · b = x₁x₂ + y₁y₂ = |a|·|b|·cos φ. It is zero exactly when the vectors are perpendicular.", "a · b = x₁x₂ + y₁y₂ = |a|·|b|·cos φ։ Այն զրո է ճիշտ այն դեպքում, երբ վեկտորներն ուղղահայաց են։", "a · b = x₁x₂ + y₁y₂ = |a|·|b|·cos φ. Он равен нулю ровно тогда, когда векторы перпендикулярны."),
   coord: t("The coordinate plane", "Կոորդինատային հարթություն", "Координатная плоскость"),
   coordHint: t("Drag A and B to whole-number points and watch the formulas follow.", "Քաշի՛ր A-ն և B-ն ամբողջ կոորդինատներով կետեր և հետևի՛ր բանաձևերին։", "Двигай A и B по целым точкам и следи за формулами."),
+  pointsHint: t("Drag A and B to grid points. The first number says how far to go along x, the second how far up or down along y.", "Քաշի՛ր A-ն և B-ն ցանցի կետեր։ Առաջին թիվը ցույց է տալիս, թե որքան գնալ x-ի երկայնքով, երկրորդը՝ որքան վեր կամ վար y-ի երկայնքով։", "Двигай A и B по узлам сетки. Первое число говорит, сколько идти вдоль x, второе — сколько вверх или вниз вдоль y."),
+  quadrant: t("quadrant", "քառորդ", "четверть"),
+  onAxis: t("on an axis", "առանցքի վրա", "на оси"),
   midpoint: t("midpoint and distance", "միջնակետ և հեռավորություն", "середина и расстояние"),
   line: t("line", "ուղիղ", "прямая"),
   circle: t("circle", "շրջանագիծ", "окружность"),
@@ -104,6 +107,10 @@ export function VectorsPreset({ spec, lang }: SimProps) {
 type CMode = "midpoint" | "line" | "circle";
 
 export function CoordsPreset({ spec, lang }: SimProps) {
+  return spec.opts.mode === "points" ? <Points spec={spec} lang={lang} /> : <Coords spec={spec} lang={lang} />;
+}
+
+function Coords({ spec, lang }: SimProps) {
   const [mode, setMode] = useState<CMode>((["midpoint", "line", "circle"] as CMode[]).find((x) => x === spec.opts.mode) ?? "midpoint");
   const { pts, drag } = usePoints({ A: toS(-3, -1), B: toS(4, 3) }, BOX, (_, p) => add(O, snap(sub(p, O), U)));
   const A = pts.A, B = pts.B, a = toW(A), b = toW(B);
@@ -149,6 +156,39 @@ export function CoordsPreset({ spec, lang }: SimProps) {
         }
       />
       <Choice value={mode} options={(["midpoint", "line", "circle"] as CMode[]).map((x) => [x, L(W[x], lang)])} onChange={setMode} />
+    </ArtFrame>
+  );
+}
+
+/** `geo coords mode=points`: reading coordinates and quadrants, for the first lesson on the plane. */
+function Points({ spec, lang }: SimProps) {
+  const { pts, drag } = usePoints({ A: toS(-3, -2), B: toS(4, 3) }, BOX, (_, p) => add(O, snap(sub(p, O), U)));
+  const where = (p: P) => {
+    const w = toW(p);
+    if (!w.x || !w.y) return L(W.onAxis, lang);
+    return `${w.x > 0 ? (w.y > 0 ? "I" : "IV") : w.y > 0 ? "II" : "III"} ${L(W.quadrant, lang)}`;
+  };
+  const xy = (p: P) => `(${n1(toW(p).x, lang)}; ${n1(toW(p).y, lang)})`;
+  return (
+    <ArtFrame kind="experiment" title={L(W.coord, lang)} body={spec.body || L(W.pointsHint, lang)}>
+      <Stage w={BOX.w} h={BOX.h} label={L(W.coord, lang)} svgRef={drag.ref} onPointerDown={drag.onPointerDown}>
+        <Grid w={BOX.w} h={BOX.h} step={U} />
+        <Seg a={{ x: 0, y: O.y }} b={{ x: 320, y: O.y }} color={COL.line} w={1.2} />
+        <Seg a={{ x: O.x, y: 0 }} b={{ x: O.x, y: 220 }} color={COL.line} w={1.2} />
+        <text x="312" y={O.y - 4} className="sim-axis is-name">x</text>
+        <text x={O.x + 4} y="10" className="sim-axis is-name">y</text>
+        {[-7, -5, -3, -1, 1, 3, 5, 7].map((v) => <text key={v} x={O.x + v * U} y={O.y + 11} textAnchor="middle" className="sim-axis">{v}</text>)}
+        {[-5, -3, -1, 1, 3, 5].map((v) => <text key={v} x={O.x - 4} y={O.y - v * U + 3} textAnchor="end" className="sim-axis">{v}</text>)}
+        {[["I", 1, 1], ["II", -1, 1], ["III", -1, -1], ["IV", 1, -1]].map(([q, sx, sy]) => <text key={q} x={O.x + Number(sx) * 130} y={O.y - Number(sy) * 90 + 4} textAnchor="middle" className="sim-axis is-name" opacity="0.5">{q}</text>)}
+        {(["A", "B"] as const).map((k) => (
+          <g key={k}>
+            <Seg a={pts[k]} b={{ x: pts[k].x, y: O.y }} color={k === "A" ? COL.a : COL.b} dash="4 3" />
+            <Seg a={pts[k]} b={{ x: O.x, y: pts[k].y }} color={k === "A" ? COL.a : COL.b} dash="4 3" />
+          </g>
+        ))}
+        <Handles pts={pts} labels={{ A: `A${xy(pts.A)}`, B: `B${xy(pts.B)}` }} colors={{ B: COL.b }} />
+      </Stage>
+      <Readouts items={[[`A · ${where(pts.A)}`, xy(pts.A), COL.a], [`B · ${where(pts.B)}`, xy(pts.B), COL.b]]} />
     </ArtFrame>
   );
 }

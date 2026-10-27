@@ -696,7 +696,7 @@ Rule of thumb: use the active for what the person did, and the passive for what 
 
 ## A model biography
 
-> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. In 1910 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
+> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. Between 1910 and 1913 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
 
 ### Exercises
 
@@ -742,9 +742,9 @@ Rule of thumb: use the active for what the person did, and the passive for what 
 
 ## Օրինակելի կենսագրություն
 
-> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. In 1910 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
+> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. Between 1910 and 1913 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
 
-*(Մարտիրոս Սարյանը ծնվել է 1880-ին Դոնի Նախիջևանում, տասնչորս երեխա ունեցող մեծ ընտանիքում։ Սովորել է Մոսկվայի գեղանկարչության ուսումնարանում, որտեղ նրան դասավանդել է Վալենտին Սերովը։ 1910-ին ճամփորդել է Թուրքիա, Եգիպտոս և Պարսկաստան, և այդ երկրների տաք լույսը մնացել է նրա գույներում ամբողջ կյանքում։ 1921-ին տեղափոխվել է Հայաստան և նույն բլուրներից նկարել Արարատը կրկին ու կրկին։ Մահացել է 1972-ին Երևանում։ Նրա տունը վերածվել է թանգարանի, և քաղաքի փողոցներից մեկը նրա անունով է կոչվում։)*
+*(Մարտիրոս Սարյանը ծնվել է 1880-ին Դոնի Նախիջևանում, տասնչորս երեխա ունեցող մեծ ընտանիքում։ Սովորել է Մոսկվայի գեղանկարչության ուսումնարանում, որտեղ նրան դասավանդել է Վալենտին Սերովը։ 1910–1913 թվականներին ճամփորդել է Թուրքիա, Եգիպտոս և Պարսկաստան, և այդ երկրների տաք լույսը մնացել է նրա գույներում ամբողջ կյանքում։ 1921-ին տեղափոխվել է Հայաստան և նույն բլուրներից նկարել Արարատը կրկին ու կրկին։ Մահացել է 1972-ին Երևանում։ Նրա տունը վերածվել է թանգարանի, և քաղաքի փողոցներից մեկը նրա անունով է կոչվում։)*
 
 ### Վարժություններ
 
@@ -790,9 +790,9 @@ Rule of thumb: use the active for what the person did, and the passive for what 
 
 ## Образец биографии
 
-> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. In 1910 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
+> Martiros Saryan **was born** in 1880 in Nakhichevan-on-Don, in a large family of fourteen children. He **studied** at the Moscow School of Painting, where he **was taught** by Valentin Serov. Between 1910 and 1913 he **travelled** to Turkey, Egypt and Persia, and the hot light of those countries **stayed** in his colours for the rest of his life. He **moved** to Armenia in 1921 and **painted** Ararat again and again from the same hills. He **died** in 1972 in Yerevan. His house **was turned** into a museum, and one of the city's streets **is named** after him.
 
-*(Мартирос Сарьян родился в 1880 году в Нахичевани-на-Дону, в большой семье с четырнадцатью детьми. Он учился в Московском училище живописи, где его учил Валентин Серов. В 1910 году он съездил в Турцию, Египет и Персию, и горячий свет этих стран остался в его цветах на всю жизнь. В 1921 году он переехал в Армению и писал Арарат с одних и тех же холмов снова и снова. Он умер в 1972 году в Ереване. Его дом превратили в музей, и одна из улиц города названа его именем.)*
+*(Мартирос Сарьян родился в 1880 году в Нахичевани-на-Дону, в большой семье с четырнадцатью детьми. Он учился в Московском училище живописи, где его учил Валентин Серов. В 1910–1913 годах он съездил в Турцию, Египет и Персию, и горячий свет этих стран остался в его цветах на всю жизнь. В 1921 году он переехал в Армению и писал Арарат с одних и тех же холмов снова и снова. Он умер в 1972 году в Ереване. Его дом превратили в музей, и одна из улиц города названа его именем.)*
 
 ### Упражнения
 

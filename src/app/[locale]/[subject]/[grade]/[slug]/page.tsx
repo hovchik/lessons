@@ -11,6 +11,7 @@ import { RecallPrompt } from "@/components/site/recall-prompt";
 import { Warmup } from "@/components/site/warmup";
 import { buttonClasses } from "@/components/ui/button";
 import { numberChecks } from "@/lib/checks";
+import { localQuiz } from "@/lib/quiz";
 import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
 import { getLesson } from "@/server/queries";
@@ -110,7 +111,7 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       {ready && <RecallPrompt bodyId="lesson-body" objectives={objectives} hasQuiz={lesson.quiz.length > 0} />}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={lesson.quiz} save={user ? { lessonId: lesson.id } : null} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l)} save={user ? { lessonId: lesson.id } : null} />}
 
       {ready && (
         <LessonProgressCard

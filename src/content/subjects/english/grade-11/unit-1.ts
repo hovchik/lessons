@@ -836,7 +836,7 @@ The test: read the participle, then ask "who did that?" The answer must be the s
 
 ## A text
 
-> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, Amiryan Street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
+> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, the old main street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
 
 ### Exercises
 
@@ -910,7 +910,7 @@ The test: read the participle, then ask "who did that?" The answer must be the s
 
 ## Տեքստ
 
-> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, Amiryan Street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
+> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, the old main street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
 
 ### Վարժություններ
 
@@ -926,7 +926,7 @@ The test: read the participle, then ask "who did that?" The answer must be the s
 
 1. Waiting, she read the paper։ 2. Having locked the door, we left։ 3. Built in 1910, the bridge still stands։ 4. Not having read the report, I could not comment։ 5. Դերբայը կցվում է *the tower*-ին, ուստի նախադասությունն ասում է, որ աշտարակը քայլում էր․ գրիր *Walking along the river, we saw the tower*։ 6. Having failed the exam, he disappointed his parents։ 7. Սեփական պատասխան․ ստուգիր, որ ամեն դերբայի ենթական գլխավոր նախադասության ենթական է։
 
-*(Տեքստի թարգմանություն․ «Մի փողոցի կարճ պատմություն։ 1920-ականներին հատակագծված ճարտարապետի ձեռքով, որ այն ավարտված երբեք չտեսավ, Ամիրյան փողոցը նախատեսված էր տրամվայ տանելու։ Երկու անգամ լայնացված՝ այն այժմ տանում է մեքենաների չորս շարք և ոչ մի տրամվայ։ Այսօր նրանով քայլելով՝ դեռ կարող ես շենքերում կարդալ հատակագիծը․ առաջին հարկերը, նախագծված խանութների համար, պահում են իրենց բարձր պատուհանները, իսկ շենքերը, կառուցված նույն տուֆից, շարվում են մետրի ճշտությամբ։ Չռմբակոծված և չայրված՝ փողոցը պահեց իր առաջին ձևը, ինչի պատճառով այցելուները նրա համաչափությունները նկատում են նախքան նրա երթևեկը»։)*`,
+*(Տեքստի թարգմանություն․ «Մի փողոցի կարճ պատմություն։ 1920-ականներին հատակագծված ճարտարապետի ձեռքով, որ այն ավարտված երբեք չտեսավ, հին գլխավոր փողոցը նախատեսված էր տրամվայ տանելու։ Երկու անգամ լայնացված՝ այն այժմ տանում է մեքենաների չորս շարք և ոչ մի տրամվայ։ Այսօր նրանով քայլելով՝ դեռ կարող ես շենքերում կարդալ հատակագիծը․ առաջին հարկերը, նախագծված խանութների համար, պահում են իրենց բարձր պատուհանները, իսկ շենքերը, կառուցված նույն տուֆից, շարվում են մետրի ճշտությամբ։ Չռմբակոծված և չայրված՝ փողոցը պահեց իր առաջին ձևը, ինչի պատճառով այցելուները նրա համաչափությունները նկատում են նախքան նրա երթևեկը»։)*`,
         ru: `## Что делает причастный оборот
 
 Он укорачивает придаточное, убирая подлежащее и вспомогательный глагол. Принадлежит письменному английскому, где делает фразу плотнее.
@@ -986,7 +986,7 @@ The test: read the participle, then ask "who did that?" The answer must be the s
 
 ## Текст
 
-> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, Amiryan Street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
+> **A short history of a street.** Laid out in the 1920s by an architect who never saw it finished, the old main street was meant to carry trams. Having been widened twice, it now carries four lanes of cars and no trams at all. Walking down it today, you can still read the plan in the buildings: the ground floors, designed for shops, keep their tall windows, and the blocks, built of the same tufa, line up to the metre. Not having been bombed or burned, the street kept its first shape, which is why visitors notice its proportions before they notice its traffic.
 
 ### Упражнения
 
@@ -1002,7 +1002,7 @@ The test: read the participle, then ask "who did that?" The answer must be the s
 
 1. Waiting, she read the paper. 2. Having locked the door, we left. 3. Built in 1910, the bridge still stands. 4. Not having read the report, I could not comment. 5. Причастие относится к *the tower*, и фраза говорит, что шла башня; пиши *Walking along the river, we saw the tower*. 6. Having failed the exam, he disappointed his parents. 7. Свой ответ: проверь, что подлежащее каждого причастия — подлежащее главной части.
 
-*(Перевод текста. «Короткая история одной улицы. Проложенная в 1920-е архитектором, который так и не увидел её законченной, улица Амиряна задумывалась под трамвай. Дважды расширенная, она несёт теперь четыре ряда машин и ни одного трамвая. Идя по ней сегодня, ещё можно прочитать замысел в зданиях: первые этажи, спроектированные под магазины, сохраняют высокие окна, а корпуса, сложенные из одного и того же туфа, выстроены с точностью до метра. Не будучи ни разбомблённой, ни сожжённой, улица сохранила первоначальную форму, и поэтому приезжие замечают её пропорции раньше, чем её трафик».)*`,
+*(Перевод текста. «Короткая история одной улицы. Проложенная в 1920-е архитектором, который так и не увидел её законченной, старая главная улица задумывалась под трамвай. Дважды расширенная, она несёт теперь четыре ряда машин и ни одного трамвая. Идя по ней сегодня, ещё можно прочитать замысел в зданиях: первые этажи, спроектированные под магазины, сохраняют высокие окна, а корпуса, сложенные из одного и того же туфа, выстроены с точностью до метра. Не будучи ни разбомблённой, ни сожжённой, улица сохранила первоначальную форму, и поэтому приезжие замечают её пропорции раньше, чем её трафик».)*`,
       },
       [
         q(t("Rewrite: While she was waiting, she read the paper.", "Վերաշարադրիր․ While she was waiting, she read the paper.", "Перепиши: While she was waiting, she read the paper."), [t("Waiting, she read the paper.", "Waiting, she read the paper.", "Waiting, she read the paper."), t("Waited, she read the paper.", "Waited, she read the paper.", "Waited, she read the paper."), t("Having waiting, she read the paper.", "Having waiting, she read the paper.", "Having waiting, she read the paper.")], 0),

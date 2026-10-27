@@ -891,7 +891,7 @@ A good story usually opens with the background, moves to the events and uses the
 >
 > Nobody **had done** this before, and nobody **knew** exactly what would happen to a human body in space. Engineers **had argued** for months about it. The flight **was** so short because the programme **had not been** sure that a person could work up there at all.
 >
-> While Gagarin **was coming** down, a farmer and her daughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
+> While Gagarin **was coming** down, a farmer and her granddaughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
 >
 > By the evening the news **had reached** every country in the world. The whole flight **had lasted** less time than a school morning.
 
@@ -900,7 +900,7 @@ A good story usually opens with the background, moves to the events and uses the
 | Sentence from the text | Tense | Job |
 |---|---|---|
 | Vostok 1 took off in the morning. | past simple | an event |
-| A farmer and her daughter were working in a field. | past continuous | background |
+| A farmer and her granddaughter were working in a field. | past continuous | background |
 | Nobody had done this before. | past perfect | earlier than the story |
 
 ## Retelling in six sentences
@@ -911,7 +911,7 @@ A good story usually opens with the background, moves to the events and uses the
 | 2. Who | He was a Soviet pilot, twenty-seven years old. |
 | 3. How long | The flight lasted 108 minutes. |
 | 4. Why it mattered | Nobody had been in space before. |
-| 5. One detail | A farmer and her daughter saw him land near Saratov. |
+| 5. One detail | A farmer and her granddaughter saw him land near Saratov. |
 | 6. The result | By the evening the news had reached the whole world. |
 
 ### Exercises
@@ -926,7 +926,7 @@ A good story usually opens with the background, moves to the events and uses the
 
 ### Answers
 
-1. On 12 April 1961. 2. 108 minutes. 3. For example *Nobody had done this before* or *Engineers had argued for months*. 4. For example *A farmer and her daughter were working in a field*. 5. To make the best result so far. 6. had done. 7. Your own answer: six sentences, one past perfect, one past continuous.`,
+1. On 12 April 1961. 2. 108 minutes. 3. For example *Nobody had done this before* or *Engineers had argued for months*. 4. For example *A farmer and her granddaughter were working in a field*. 5. To make the best result so far. 6. had done. 7. Your own answer: six sentences, one past perfect, one past continuous.`,
         hy: `## Օգտակար բառեր
 
 | Բառ | Իմաստ |
@@ -946,18 +946,18 @@ A good story usually opens with the background, moves to the events and uses the
 >
 > Nobody **had done** this before, and nobody **knew** exactly what would happen to a human body in space. Engineers **had argued** for months about it. The flight **was** so short because the programme **had not been** sure that a person could work up there at all.
 >
-> While Gagarin **was coming** down, a farmer and her daughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
+> While Gagarin **was coming** down, a farmer and her granddaughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
 >
 > By the evening the news **had reached** every country in the world. The whole flight **had lasted** less time than a school morning.
 
-*(1961 թվականի ապրիլի 12-ին մարդն առաջին անգամ պտտվեց Երկրի շուրջը։ Յուրի Գագարինը քսանյոթ տարեկան էր։ «Վոստոկ-1» տիեզերանավն առավոտյան թռավ, մեկ անգամ պտտվեց մոլորակի շուրջը և 108 րոպե անց իջավ։ Ոչ ոք դա մինչ այդ չէր արել, և ոչ ոք ստույգ չգիտեր, թե ինչ կլինի մարդու մարմնի հետ տիեզերքում։ Երբ Գագարինն իջնում էր, մի գյուղացի կին և նրա դուստրը Սարատովի մոտ դաշտում աշխատում էին։ Նրանք տեսան նարնջագույն հագուստով մի մարդու, որ քայլում էր դեպի իրենց, և վախեցան․ ոչ ոք նրանց չէր ասել, որ այնտեղ ինչ-որ բան է վայրէջք կատարելու։ Մինչև երեկո լուրը հասել էր աշխարհի բոլոր երկրներին։)*
+*(1961 թվականի ապրիլի 12-ին մարդն առաջին անգամ պտտվեց Երկրի շուրջը։ Յուրի Գագարինը քսանյոթ տարեկան էր։ «Վոստոկ-1» տիեզերանավն առավոտյան թռավ, մեկ անգամ պտտվեց մոլորակի շուրջը և 108 րոպե անց իջավ։ Ոչ ոք դա մինչ այդ չէր արել, և ոչ ոք ստույգ չգիտեր, թե ինչ կլինի մարդու մարմնի հետ տիեզերքում։ Երբ Գագարինն իջնում էր, մի գյուղացի կին և նրա թոռնուհին Սարատովի մոտ դաշտում աշխատում էին։ Նրանք տեսան նարնջագույն հագուստով մի մարդու, որ քայլում էր դեպի իրենց, և վախեցան․ ոչ ոք նրանց չէր ասել, որ այնտեղ ինչ-որ բան է վայրէջք կատարելու։ Մինչև երեկո լուրը հասել էր աշխարհի բոլոր երկրներին։)*
 
 ## Ժամանակները գտնել
 
 | Նախադասություն տեքստից | Ժամանակ | Գործ |
 |---|---|---|
 | Vostok 1 took off in the morning. | past simple | դեպք |
-| A farmer and her daughter were working in a field. | past continuous | ֆոն |
+| A farmer and her granddaughter were working in a field. | past continuous | ֆոն |
 | Nobody had done this before. | past perfect | պատմությունից ավելի վաղ |
 
 ## Վեց նախադասությամբ վերապատմել
@@ -968,7 +968,7 @@ A good story usually opens with the background, moves to the events and uses the
 | 2. Ով | He was a Soviet pilot, twenty-seven years old. |
 | 3. Որքան տևեց | The flight lasted 108 minutes. |
 | 4. Ինչու էր կարևոր | Nobody had been in space before. |
-| 5. Մեկ մանրամասն | A farmer and her daughter saw him land near Saratov. |
+| 5. Մեկ մանրամասն | A farmer and her granddaughter saw him land near Saratov. |
 | 6. Արդյունքը | By the evening the news had reached the whole world. |
 
 ### Վարժություններ
@@ -983,7 +983,7 @@ A good story usually opens with the background, moves to the events and uses the
 
 ### Պատասխաններ
 
-1. 1961 թվականի ապրիլի 12-ին։ 2. 108 րոպե։ 3. Օրինակ՝ *Nobody had done this before* կամ *Engineers had argued for months*։ 4. Օրինակ՝ *A farmer and her daughter were working in a field*։ 5. Մինչ այդ լավագույն արդյունքը սահմանել։ 6. had done. 7. Քո պատասխանը՝ վեց նախադասություն, մեկ past perfect, մեկ past continuous։`,
+1. 1961 թվականի ապրիլի 12-ին։ 2. 108 րոպե։ 3. Օրինակ՝ *Nobody had done this before* կամ *Engineers had argued for months*։ 4. Օրինակ՝ *A farmer and her granddaughter were working in a field*։ 5. Մինչ այդ լավագույն արդյունքը սահմանել։ 6. had done. 7. Քո պատասխանը՝ վեց նախադասություն, մեկ past perfect, մեկ past continuous։`,
         ru: `## Полезные слова
 
 | Слово | Значение |
@@ -1003,18 +1003,18 @@ A good story usually opens with the background, moves to the events and uses the
 >
 > Nobody **had done** this before, and nobody **knew** exactly what would happen to a human body in space. Engineers **had argued** for months about it. The flight **was** so short because the programme **had not been** sure that a person could work up there at all.
 >
-> While Gagarin **was coming** down, a farmer and her daughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
+> While Gagarin **was coming** down, a farmer and her granddaughter **were working** in a field near Saratov. They **saw** a man in an orange suit walking towards them and **were frightened**: nobody **had told** them that anything would land there. He **said** that he was a Soviet man like them and **asked** for a telephone.
 >
 > By the evening the news **had reached** every country in the world. The whole flight **had lasted** less time than a school morning.
 
-*(12 апреля 1961 года человек впервые облетел Землю. Юрию Гагарину было двадцать семь лет. Корабль «Восток-1» стартовал утром, сделал один виток вокруг планеты и спустился через 108 минут. Никто не делал этого раньше, и никто точно не знал, что произойдёт с человеческим телом в космосе. Пока Гагарин спускался, женщина и её дочь работали в поле под Саратовом. Они увидели человека в оранжевом костюме, идущего к ним, и испугались: им никто не сказал, что там что-то приземлится. К вечеру новость дошла до всех стран мира.)*
+*(12 апреля 1961 года человек впервые облетел Землю. Юрию Гагарину было двадцать семь лет. Корабль «Восток-1» стартовал утром, сделал один виток вокруг планеты и спустился через 108 минут. Никто не делал этого раньше, и никто точно не знал, что произойдёт с человеческим телом в космосе. Пока Гагарин спускался, женщина и её внучка работали в поле под Саратовом. Они увидели человека в оранжевом костюме, идущего к ним, и испугались: им никто не сказал, что там что-то приземлится. К вечеру новость дошла до всех стран мира.)*
 
 ## Находим времена
 
 | Предложение из текста | Время | Роль |
 |---|---|---|
 | Vostok 1 took off in the morning. | past simple | событие |
-| A farmer and her daughter were working in a field. | past continuous | фон |
+| A farmer and her granddaughter were working in a field. | past continuous | фон |
 | Nobody had done this before. | past perfect | раньше рассказа |
 
 ## Пересказ шестью предложениями
@@ -1025,7 +1025,7 @@ A good story usually opens with the background, moves to the events and uses the
 | 2. Кто | He was a Soviet pilot, twenty-seven years old. |
 | 3. Сколько длилось | The flight lasted 108 minutes. |
 | 4. Почему важно | Nobody had been in space before. |
-| 5. Одна деталь | A farmer and her daughter saw him land near Saratov. |
+| 5. Одна деталь | A farmer and her granddaughter saw him land near Saratov. |
 | 6. Результат | By the evening the news had reached the whole world. |
 
 ### Упражнения
@@ -1040,7 +1040,7 @@ A good story usually opens with the background, moves to the events and uses the
 
 ### Ответы
 
-1. 12 апреля 1961 года. 2. 108 минут. 3. Например *Nobody had done this before* или *Engineers had argued for months*. 4. Например *A farmer and her daughter were working in a field*. 5. Установить лучший результат на тот момент. 6. had done. 7. Твой ответ: шесть предложений, один past perfect, один past continuous.`,
+1. 12 апреля 1961 года. 2. 108 минут. 3. Например *Nobody had done this before* или *Engineers had argued for months*. 4. Например *A farmer and her granddaughter were working in a field*. 5. Установить лучший результат на тот момент. 6. had done. 7. Твой ответ: шесть предложений, один past perfect, один past continuous.`,
       },
       [
         q(t("When did the first flight round the Earth take place?", "Ե՞րբ տեղի ունեցավ Երկրի շուրջ առաջին թռիչքը", "Когда состоялся первый полёт вокруг Земли?"), [
@@ -1065,7 +1065,7 @@ A good story usually opens with the background, moves to the events and uses the
         ], 0),
         q(t("Who saw the landing, according to the text?", "Ըստ տեքստի՝ ով տեսավ վայրէջքը", "Кто, по тексту, видел приземление?"), [
           t("a group of engineers", "ինժեներների խումբ", "группа инженеров"),
-          t("a farmer and her daughter", "մի գյուղացի կին և նրա դուստրը", "женщина и её дочь"),
+          t("a farmer and her granddaughter", "մի գյուղացի կին և նրա թոռնուհին", "женщина и её внучка"),
           t("a school class", "դպրոցական դասարան", "школьный класс"),
         ], 1),
         q(t("«To break a record» means", "«To break a record» նշանակում է", "«To break a record» значит"), [

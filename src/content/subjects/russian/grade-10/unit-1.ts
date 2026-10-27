@@ -290,10 +290,9 @@ Norms move, and the dictionaries record the movement with labels: **устар.*
 
 | Then | Now |
 | --- | --- |
-| ра́курс | раку́рс |
-| фольга́ | фо́льга |
+| музы́ка | му́зыка |
+| зала | зал |
 | кофе only masculine | кофе masculine, neuter admitted in speech |
-| дОговор only | дОговор, договорА marked colloquial |
 
 A norm that has changed in the dictionaries is correct; a norm the speaker has simply never learned is an error. The difference is the dictionary.
 
@@ -360,10 +359,9 @@ A language norm is the set of forms and usages that educated speakers of a perio
 
 | Այն ժամանակ | Հիմա |
 | --- | --- |
-| ра́курс | раку́рс |
-| фольга́ | фо́льга |
+| музы́ка | му́зыка |
+| зала | зал |
 | кофе միայն արական | кофе արական, խոսքում թույլատրվում է չեզոքը |
-| дОговор միայն | дОговор, договорА՝ նշված որպես խոսակցական |
 
 Բառարաններում փոխված նորմը ճիշտ է, իսկ նորմը, որ խոսողը պարզապես չի սովորել, սխալ է։ Տարբերությունը բառարանն է։
 
@@ -430,10 +428,9 @@ A language norm is the set of forms and usages that educated speakers of a perio
 
 | Было | Стало |
 | --- | --- |
-| ра́курс | раку́рс |
-| фольга́ | фо́льга |
+| музы́ка | му́зыка |
+| зала | зал |
 | кофе только мужского рода | кофе мужского рода, средний допускается в речи |
-| дОговор только | дОговор, договорА с пометой «разг.» |
 
 Норма, изменившаяся в словарях, правильна; норма, которой говорящий просто не выучил, — ошибка. Разница в словаре.
 

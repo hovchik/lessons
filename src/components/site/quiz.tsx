@@ -1,21 +1,21 @@
 "use client";
 
 import { CheckCircle2, CircleHelp, RotateCcw, Save, XCircle } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import type { QuizQuestion } from "@/server/db/schema";
 import { Button } from "@/components/ui/button";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
-import { cn, pick } from "@/lib/utils";
+import type { LocalQuestion } from "@/lib/quiz";
+import { cn } from "@/lib/utils";
 
 type Props = {
-  questions: QuizQuestion[];
+  questions: LocalQuestion[];
   /** When set (signed-in pupil), a finished quiz is saved to /api/progress/quiz. */
   save?: { lessonId: string } | null;
 };
 
 /** With four or more options, a wrong first try also crosses out one other wrong option as the hint. */
-function crossedOut(q: QuizQuestion, i: number, first: number): number | null {
+function crossedOut(q: LocalQuestion, i: number, first: number): number | null {
   if (q.options.length < 4) return null;
   const wrong = q.options.map((_, k) => k).filter((k) => k !== q.answer && k !== first);
   return wrong[(i + first) % wrong.length];
@@ -28,7 +28,6 @@ function crossedOut(q: QuizQuestion, i: number, first: number): number | null {
  */
 export function Quiz({ questions, save }: Props) {
   const t = useTranslations("lesson");
-  const locale = useLocale();
   // The option currently picked, the first checked answer with its confidence, and the second try.
   const [picked, setPicked] = useState<Record<number, number>>({});
   const [first, setFirst] = useState<Record<number, number>>({});
@@ -87,7 +86,7 @@ export function Quiz({ questions, save }: Props) {
           return (
             <li key={i} className="space-y-3 border-t border-border/60 pt-5 first:border-t-0 first:pt-0">
               <p className="text-xs font-extrabold uppercase tracking-wide text-muted-foreground">{t("question", { n: i + 1, total })}</p>
-              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{pick(qq.prompt, locale)}</p>
+              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{qq.prompt}</p>
               <div role="radiogroup" aria-labelledby={`q-${i}`} className="grid gap-2.5 md:grid-cols-3">
                 {qq.options.map((opt, oi) => {
                   const selected = chosen === oi;
@@ -113,7 +112,7 @@ export function Quiz({ questions, save }: Props) {
                       <span className="flex items-start gap-2 leading-snug">
                         {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
                         {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
-                        {pick(opt, locale)}
+                        {opt}
                       </span>
                     </button>
                   );
@@ -150,7 +149,7 @@ export function Quiz({ questions, save }: Props) {
                 </div>
               )}
               {done && showWhy[i] && qq.explanation && (
-                <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(qq.explanation, locale)}</p>
+                <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
             </li>
           );

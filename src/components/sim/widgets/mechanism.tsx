@@ -11,7 +11,12 @@ import type { Mech } from "../mech/types";
 const LOAD: Record<MechGroup, () => Promise<{ MECHS: Record<string, Mech> }>> = {
   phys: () => import("../mech/phys"),
   chem: () => import("../mech/chem"),
+  bio: () => import("../mech/bio"),
+  geog: () => import("../mech/geog"),
+  sci: () => import("../mech/sci"),
+  inf: () => import("../mech/inf"),
   geo: () => import("../mech/geo"),
+  tech: () => import("../mech/tech"),
 };
 
 /** ```sim mechanism engine4: a step-by-step animated mechanism from the library. */

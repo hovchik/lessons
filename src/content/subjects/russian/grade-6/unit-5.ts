@@ -60,7 +60,7 @@ Ivan Pushchin was Pushkin's school friend at the Lyceum. In January 1825, when P
 
 *My first friend, my priceless friend! I blessed my fate when my lonely yard, covered in sad snow, rang with your little bell.*
 
-The poem is short, eleven lines, and it is a letter in verse. Its subject is friendship that holds in misfortune; its mood is grateful and quiet; its address, *мой первый друг*, carries the whole feeling.
+The poem is short, ten lines, and it is a letter in verse. Its subject is friendship that holds in misfortune; its mood is grateful and quiet; its address, *мой первый друг*, carries the whole feeling.
 
 | Poem | Theme | Mood |
 |---|---|---|
@@ -123,7 +123,7 @@ The poem is short, eleven lines, and it is a letter in verse. Its subject is fri
 
 *Իմ առաջին ընկեր, իմ անգին ընկեր։ Ես օրհնեցի ճակատագիրը, երբ իմ միայնակ բակը, տխուր ձյունով ծածկված, հնչեց քո զանգակով։*
 
-Բանաստեղծությունը կարճ է՝ տասնմեկ տող, և նամակ է չափածո։ Նրա թեման դժբախտության մեջ պահվող բարեկամությունն է, տրամադրությունը՝ երախտապարտ և հանդարտ, իսկ կոչականը՝ *мой первый друг*՝ կրում է ամբողջ զգացումը։
+Բանաստեղծությունը կարճ է՝ տասը տող, և նամակ է չափածո։ Նրա թեման դժբախտության մեջ պահվող բարեկամությունն է, տրամադրությունը՝ երախտապարտ և հանդարտ, իսկ կոչականը՝ *мой первый друг*՝ կրում է ամբողջ զգացումը։
 
 | Բանաստեղծություն | Թեմա | Տրամադրություն |
 |---|---|---|
@@ -182,7 +182,7 @@ The poem is short, eleven lines, and it is a letter in verse. Its subject is fri
 > Печальным снегом занесенный,\\
 > Твой колокольчик огласил.
 
-Стихотворение короткое, одиннадцать строк, и это письмо в стихах. Его тема — дружба, которая держится в беде; настроение благодарное и тихое; обращение *мой первый друг* несёт в себе всё чувство.
+Стихотворение короткое, десять строк, и это письмо в стихах. Его тема — дружба, которая держится в беде; настроение благодарное и тихое; обращение *мой первый друг* несёт в себе всё чувство.
 
 | Стихотворение | Тема | Настроение |
 |---|---|---|

@@ -26,12 +26,12 @@ export async function getMastery(userId: string, courseIds: string[]): Promise<S
   const skills = await db.select().from(sk).where(inArray(sk.courseId, courseIds)).orderBy(asc(sk.courseId), asc(sk.position)).all();
   if (skills.length === 0) return [];
   const ids = skills.map((s) => s.id);
-  const lessons = await db
-    .select({ skillId: ls.skillId, n: sql<number>`count(*)` })
+  // The quiz column is compressed (see db/packed.ts), so lessons with a quiz are counted here, not in SQL.
+  const withQuiz = await db
+    .select({ skillId: ls.skillId, quiz: l.quiz })
     .from(ls)
     .innerJoin(l, eq(ls.lessonId, l.id))
-    .where(and(inArray(ls.skillId, ids), eq(l.status, "published"), sql`json_array_length(${l.quiz}) > 0`))
-    .groupBy(ls.skillId)
+    .where(and(inArray(ls.skillId, ids), eq(l.status, "published")))
     .all();
   const rc = schema.reviewCards;
   const cards = await db
@@ -51,7 +51,8 @@ export async function getMastery(userId: string, courseIds: string[]): Promise<S
     .where(and(eq(a.userId, userId), eq(a.kind, "unit"), inArray(a.refId, ids), sql`${a.total} > 0`))
     .groupBy(a.refId)
     .all();
-  const lessonsBy = new Map(lessons.map((r) => [r.skillId, Number(r.n)]));
+  const lessonsBy = new Map<string, number>();
+  for (const r of withQuiz) if (r.quiz.length > 0) lessonsBy.set(r.skillId, (lessonsBy.get(r.skillId) ?? 0) + 1);
   const cardsBy = new Map(cards.map((r) => [r.skillId, r]));
   const checkBy = new Map(checks.map((r) => [r.skillId, r.score / r.total]));
   return skills.map((s) => {

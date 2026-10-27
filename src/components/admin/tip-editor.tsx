@@ -3,7 +3,8 @@
 import { Eye, Loader2, Save, Trash2 } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { TIP_CATEGORIES, type Tip, type TipCategory } from "@/server/db/schema";
+import type { Tip } from "@/server/db/schema";
+import { TIP_CATEGORIES, type TipCategory } from "@/lib/tip-categories";
 import { Button } from "@/components/ui/button";
 import { Markdown } from "@/components/site/markdown";
 import { cn } from "@/lib/utils";
