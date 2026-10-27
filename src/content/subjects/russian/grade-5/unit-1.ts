@@ -79,7 +79,7 @@ A sentence with both main members is **двусоставное**; one with only
 
 ### Answers
 
-1. A main word and a word depending on it. 2. *белый снег* and *в снегу* is not a phrase, so only *белый снег*; *снег идёт* is a base and *снег и дождь* is joined by *и*. 3. река разливается. 4. определение — какой? чей?; дополнение — кого? чего? кому? чем?; обстоятельство — где? когда? как? почему? 5. With a dashed line. 6. Утром (обстоятельство), интересную (определение), книгу (дополнение). 7. For example: густой лес, расти за рекой; За рекой растёт густой лес.`,
+1. A main word and a word depending on it. 2. Only *белый снег*: *в снегу* is a preposition with a noun, *снег идёт* is a base and *снег и дождь* is joined by *и*. 3. река разливается. 4. определение — какой? чей?; дополнение — кого? чего? кому? чем?; обстоятельство — где? когда? как? почему? 5. With a dashed line. 6. Утром (обстоятельство), интересную (определение), книгу (дополнение). 7. For example: густой лес, расти за рекой; За рекой растёт густой лес.`,
         hy: `## Բառակապակցություն և նախադասություն
 
 **Словосочетание** (*բառակապակցություն*) երկու բառ է՝ կապված իմաստով և քերականորեն, որտեղ մեկը կախված է մյուսից։
@@ -655,7 +655,7 @@ Homogeneous members answer one question and depend on one word. The comma rule h
 A **обобщающее слово** names the whole group that the homogeneous members divide.
 
 - Before the list: a **colon**.\\
-  Везде: в поле, в лесу, на реке — было тихо… no, simply: *В саду росли разные деревья: яблони, груши, сливы.*
+  *В саду росли разные деревья: яблони, груши, сливы.*
 - After the list: a **dash**.\\
   *Яблони, груши, сливы — все эти деревья росли в саду.*
 - Both: colon then dash.\\

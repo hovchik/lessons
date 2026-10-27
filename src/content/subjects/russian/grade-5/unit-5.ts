@@ -453,7 +453,7 @@ The tales of grade 5 are «Сказка о мёртвой царевне и о �
 > И днём и ночью кот учёный\\
 > Всё ходит по цепи кругом…
 
-These lines are the most quoted in Russian poetry, and they are a list of folklore pictures: the learned cat, the wood goblin, the rusalka, the hut on chicken legs, the thirty knights, Baba Yaga, Koschei. Pushkin gathers in twenty lines the whole world of the tale he grew up in.
+These lines are the most quoted in Russian poetry, and they are a list of folklore pictures: the learned cat, the wood goblin, the rusalka, the hut on chicken legs, the thirty knights, Baba Yaga, Koschei. Pushkin gathers in a few dozen lines the whole world of the tale he grew up in.
 
 Notice the word **златая** instead of *золотая*: an old, lofty form, used because the prologue speaks of a world that is older than the reader.
 
@@ -509,7 +509,7 @@ Reading a verse aloud is the only way to hear the rhythm, and a poem that is onl
 > И днём и ночью кот учёный\\
 > Всё ходит по цепи кругом…
 
-Այս տողերը ռուսական պոեզիայի ամենաշատ մեջբերվողներն են, և դրանք բանահյուսական պատկերների ցանկ են՝ գիտուն կատուն, անտառի ոգին, ջրահարսը, հավի ոտքերի վրա խրճիթը, երեսուն ասպետը, Բաբա Յագան, Կոշչեյը։ Պուշկինը քսան տողում հավաքում է այն հեքիաթի ամբողջ աշխարհը, որում մեծացել է։
+Այս տողերը ռուսական պոեզիայի ամենաշատ մեջբերվողներն են, և դրանք բանահյուսական պատկերների ցանկ են՝ գիտուն կատուն, անտառի ոգին, ջրահարսը, հավի ոտքերի վրա խրճիթը, երեսուն ասպետը, Բաբա Յագան, Կոշչեյը։ Պուշկինը մի քանի տասնյակ տողում հավաքում է այն հեքիաթի ամբողջ աշխարհը, որում մեծացել է։
 
 Նկատի՛ր **златая** բառը *золотая*-ի փոխարեն․ հին, վեհ ձև է, գործածված, որովհետև նախերգանքը խոսում է ընթերցողից հին աշխարհի մասին։
 
@@ -565,7 +565,7 @@ Reading a verse aloud is the only way to hear the rhythm, and a poem that is onl
 > И днём и ночью кот учёный\\
 > Всё ходит по цепи кругом…
 
-Это самые цитируемые строки русской поэзии, и они представляют собой перечень фольклорных картин: учёный кот, леший, русалка, избушка на курьих ножках, тридцать витязей, Баба-яга, Кощей. Пушкин собирает в двадцати строках целый мир сказки, в которой вырос.
+Это самые цитируемые строки русской поэзии, и они представляют собой перечень фольклорных картин: учёный кот, леший, русалка, избушка на курьих ножках, тридцать витязей, Баба-яга, Кощей. Пушкин собирает в нескольких десятках строк целый мир сказки, в которой вырос.
 
 Обратите внимание на слово **златая** вместо *золотая*: старая, высокая форма, взятая потому, что пролог говорит о мире, который старше читателя.
 
@@ -1007,7 +1007,7 @@ Anton Pavlovich Chekhov (1860–1904) began by writing very short humorous piece
 | end at the moment the reader understands | add a moral |
 | name a profession and let it do the work | describe at length |
 
-In «Хирургия» the whole story is a village dental surgery: a deacon with toothache and a medical assistant who is sure he can pull the tooth. The humour comes from the gap between the assistant's confidence and his hands, and Chekhov never says the word *ignorance* once.
+In «Хирургия» the whole story is a village dental surgery: a church sexton with toothache and a medical assistant who is sure he can pull the tooth. The humour comes from the gap between the assistant's confidence and his hands, and Chekhov never says the word *ignorance* once.
 
 The famous rule attributed to him, that a gun hanging on the wall in the first act must fire in the last, is the same idea seen from the other side: in a short story nothing is there by accident.
 
@@ -1058,7 +1058,7 @@ None of them explains. Chekhov leaves the reader to draw the conclusion, Bazhov 
 | ավարտում է այն պահին, երբ ընթերցողը հասկանում է | բարոյախոսություն չի ավելացնում |
 | անվանում է մասնագիտությունը և թողնում, որ այն աշխատի | երկար չի նկարագրում |
 
-«Хирургия»-ում ամբողջ պատմվածքը գյուղական ատամնաբուժարան է․ ատամի ցավով սարկավագ և բուժակ, որ վստահ է, թե կքաշի ատամը։ Հումորը գալիս է բուժակի վստահության և նրա ձեռքերի միջև եղած բացվածքից, և Չեխովն ոչ մի անգամ չի արտասանում *տգիտություն* բառը։
+«Хирургия»-ում ամբողջ պատմվածքը գյուղական ատամնաբուժարան է․ ատամի ցավով տիրացու և բուժակ, որ վստահ է, թե կքաշի ատամը։ Հումորը գալիս է բուժակի վստահության և նրա ձեռքերի միջև եղած բացվածքից, և Չեխովն ոչ մի անգամ չի արտասանում *տգիտություն* բառը։
 
 Նրան վերագրվող հայտնի կանոնը՝ առաջին գործողությունում պատին կախված հրացանը պետք է կրակի վերջինում, նույն միտքն է մյուս կողմից․ կարճ պատմվածքում ոչինչ պատահական չէ։
 

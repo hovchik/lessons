@@ -71,6 +71,18 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   withprep: [t("No preposition", "Առանց նախդրի", "Без предлога"), t("With a preposition", "Նախդրով", "С предлогом")],
   conj: [t("I conjugation", "I խոնարհում", "I спряжение"), t("II conjugation", "II խոնարհում", "II спряжение")],
   tsya: [t("что делать? → -ться", "что делать? → -ться", "что делать? → -ться"), t("что делает? → -тся", "что делает? → -тся", "что делает? → -тся")],
+  dash: [t("With a dash", "Գծիկով", "С тире"), t("No dash", "Առանց գծիկի", "Без тире")],
+  reported: [t("Direct speech", "Ուղղակի խոսք", "Прямая речь"), t("Reported speech", "Անուղղակի խոսք", "Косвенная речь")],
+  stress: [t("Say it like this", "Ասա այսպես", "Говори так"), t("Not like this", "Ոչ այսպես", "Не так")],
+  figurative: [t("Direct meaning", "Ուղիղ իմաստ", "Прямое значение"), t("Figurative meaning", "Փոխաբերական իմաստ", "Переносное значение")],
+  homonym: [t("Meaning 1", "Իմաստ 1", "Значение 1"), t("Meaning 2", "Իմաստ 2", "Значение 2")],
+  ao: [t("Written with а", "Գրվում է а", "Пишется а"), t("Written with о", "Գրվում է о", "Пишется о")],
+  zs: [t("з before a voiced sound", "з՝ ձայնեղից առաջ", "з перед звонким"), t("с before a voiceless sound", "с՝ խուլից առաջ", "с перед глухим")],
+  oe: [t("Stressed: о", "Շեշտված՝ о", "Под ударением: о"), t("Unstressed: е", "Անշեշտ՝ е", "Без ударения: е")],
+  iy: [t("и: root or -ция", "и՝ արմատ կամ -ция", "и: корень или -ция"), t("ы: ending or -ын", "ы՝ վերջավորություն կամ -ын", "ы: окончание или -ын")],
+  short: [t("Full form", "Լրիվ ձև", "Полная форма"), t("Short form", "Կարճ ձև", "Краткая форма")],
+  softsign: [t("With ь", "ь-ով", "С ь"), t("Without ь", "Առանց ь-ի", "Без ь")],
+  proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
