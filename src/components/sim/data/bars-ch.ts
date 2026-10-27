@@ -2,6 +2,7 @@ import { t } from "../labels";
 import type { BarSet } from "./bars";
 
 const M = t("m", "մ", "м");
+const KM = t("km", "կմ", "км");
 const CH = t("chapters", "գլուխ", "глав");
 
 /* Church history data sets: the size of Noah's ark, the length of the prophets' books, world religions. */
@@ -10,7 +11,7 @@ export const CH_BARS: Record<string, BarSet> = {
   arksize: {
     title: t("How big was Noah's ark? (length, m)", "Որքա՞ն մեծ էր Նոյյան տապանը (երկարություն, մ)", "Насколько велик был Ноев ковчег? (длина, м)"),
     unit: M,
-    source: t("Genesis 6:15 gives 300 × 50 × 30 cubits. A cubit, the length from elbow to fingertip, was about 45 cm, so the numbers are approximate.", "Ծննդոց 6։15-ը տալիս է 300 × 50 × 30 կանգուն։ Կանգունը՝ արմունկից մինչև մատների ծայրը եղած երկարությունը, մոտ 45 սմ էր, ուստի թվերը մոտավոր են։", "Бытие 6:15 даёт 300 × 50 × 30 локтей. Локоть — длина от локтя до кончиков пальцев — составлял около 45 см, поэтому числа приблизительны."),
+    source: t("Genesis 6:15 gives 300 × 50 × 30 cubits. A cubit, the length from elbow to fingertip, was about 45 cm, so the numbers are approximate.", "Ծննդոց 6։15-ը տալիս է 300 × 50 × 30 կանգուն։ Կանգունը՝ արմունկից մինչև մատների ծայրն եղած երկարությունը, մոտ 45 սմ էր, ուստի թվերը մոտավոր են։", "Бытие 6:15 даёт 300 × 50 × 30 локтей. Локоть — длина от локтя до кончиков пальцев — составлял около 45 см, поэтому числа приблизительны."),
     rows: [
       [t("Blue whale", "Կապույտ կետ", "Синий кит"), 30, t("The largest animal that has ever lived, up to about 30 m.", "Երբևէ ապրած ամենամեծ կենդանին՝ մինչև մոտ 30 մ։", "Самое большое животное из когда-либо живших, до 30 м.")],
       [t("Jumbo jet", "Ջամբո ինքնաթիռ", "Аэробус «Джамбо»"), 71, t("A Boeing 747 airliner is about 70 m long.", "Boeing 747 ինքնաթիռի երկարությունը մոտ 70 մ է։", "Длина самолёта Boeing 747 — около 70 м.")],
@@ -34,6 +35,19 @@ export const CH_BARS: Record<string, BarSet> = {
       [t("Micah", "Միքիա", "Михей"), 7, t("He named Bethlehem as the town of the coming ruler (Micah 5:2).", "Նա Բեթղեհեմը նշեց որպես գալիք առաջնորդի քաղաք (Միքիա 5։2)։", "Он назвал Вифлеем городом грядущего владыки (Михей 5:2).")],
       [t("Jonah", "Հովնան", "Иона"), 4, t("Only four chapters, yet one of the best-known stories in the Bible.", "Ընդամենը չորս գլուխ, բայց Աստվածաշնչի ամենահայտնի պատմություններից մեկը։", "Всего четыре главы, но одна из самых известных историй Библии.")],
       [t("Obadiah", "Աբդիու", "Авдий"), 1, t("The shortest book of the Old Testament: 21 verses.", "Հին Կտակարանի ամենակարճ գիրքը՝ 21 համար։", "Самая короткая книга Ветхого Завета: 21 стих.")],
+    ],
+  },
+  /* ---------------- grade 7 ---------------- */
+  translators: {
+    title: t("How far the translators travelled (straight line from Vagharshapat, km)", "Որքա՞ն հեռու էին գնում թարգմանիչները (ուղիղ գծով Վաղարշապատից, կմ)", "Как далеко ездили переводчики (по прямой от Вагаршапата, км)"),
+    unit: KM,
+    source: t("Distances are measured on the map in a straight line; by road, on foot or on horseback, the journeys were much longer and took weeks or months.", "Հեռավորությունները չափված են քարտեզի վրա ուղիղ գծով․ ճանապարհով, ոտքով կամ ձիով, ուղևորությունները շատ ավելի երկար էին և տևում էին շաբաթներ կամ ամիսներ։", "Расстояния измерены по карте по прямой; по дорогам, пешком или верхом путь был гораздо длиннее и занимал недели или месяцы."),
+    rows: [
+      [t("Samosata", "Սամոսատ", "Самосата"), 580, t("Here, according to Koryun, Mashtots completed the alphabet and, with a Greek calligrapher named Rufanos, gave the letters their final shape.", "Ըստ Կորյունի՝ այստեղ Մաշտոցն ավարտեց այբուբենը և Ռոփանոս անունով հույն գեղագրի հետ տառերին տվեց վերջնական ձև։", "Здесь, по Корюну, Маштоц завершил алфавит и вместе с греческим каллиграфом Ропаном придал буквам окончательную форму.")],
+      [t("Edessa", "Եդեսիա", "Эдесса"), 582, t("A centre of Syriac learning; the first pupils were sent here to translate from Syriac.", "Ասորական գիտության կենտրոն․ առաջին աշակերտներն ուղարկվեցին այստեղ՝ ասորերենից թարգմանելու։", "Центр сирийской учёности; первых учеников отправили сюда переводить с сирийского.")],
+      [t("Constantinople", "Կոստանդնուպոլիս", "Константинополь"), 1295, t("The capital of the Eastern Roman Empire. Translators brought back from here accurate Greek copies of the Bible to check the first translation.", "Արևելյան Հռոմեական կայսրության մայրաքաղաքը։ Թարգմանիչներն այստեղից բերեցին Աստվածաշնչի ճշգրիտ հունարեն օրինակներ՝ առաջին թարգմանությունը ստուգելու համար։", "Столица Восточной Римской империи. Отсюда переводчики привезли точные греческие списки Библии, чтобы сверить первый перевод.")],
+      [t("Alexandria", "Ալեքսանդրիա", "Александрия"), 1633, t("Famous for its schools of philosophy, mathematics and medicine.", "Հայտնի էր փիլիսոփայության, մաթեմատիկայի և բժշկության իր դպրոցներով։", "Славилась школами философии, математики и медицины.")],
+      [t("Athens", "Աթենք", "Афины"), 1787, t("Still a city of philosophers in the 5th century; Movses Khorenatsi is said to have studied in Alexandria and Athens.", "V դարում դեռ փիլիսոփաների քաղաք էր․ ասում են, որ Մովսես Խորենացին սովորել է Ալեքսանդրիայում և Աթենքում։", "В V веке ещё город философов; говорят, Мовсес Хоренаци учился в Александрии и Афинах.")],
     ],
   },
 };

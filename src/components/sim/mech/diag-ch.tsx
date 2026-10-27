@@ -286,7 +286,7 @@ const evangelists: Diagram = {
     P(280, 26, t("Mark: a lion", "Մարկոս՝ առյուծ", "Марк: лев"), t("His Gospel opens with the voice of John the Baptist \"crying in the wilderness\", loud as a lion's roar. It is the shortest Gospel, only 16 chapters, and probably the oldest.", "Նրա Ավետարանը բացվում է Հովհաննես Մկրտչի «անապատում աղաղակողի» ձայնով, որը բարձր է առյուծի մռնչյունի պես։ Սա ամենակարճ Ավետարանն է՝ ընդամենը 16 գլուխ, և հավանաբար ամենահինը։", "Его Евангелие открывается голосом Иоанна Крестителя, «вопиющего в пустыне», громким, как рык льва. Это самое короткое Евангелие, всего 16 глав, и, вероятно, самое древнее.")),
     P(100, 134, t("Luke: an ox", "Ղուկաս՝ եզ", "Лука: телец"), t("His Gospel begins in the Temple, where the priest Zechariah is offering sacrifice, and the ox was an animal of sacrifice. Luke was a physician and also wrote the Acts; only he tells the parables of the good Samaritan and the prodigal son.", "Նրա Ավետարանն սկսվում է տաճարում, որտեղ Զաքարիա քահանան զոհ է մատուցում, իսկ եզը զոհաբերության կենդանի էր։ Ղուկասը բժիշկ էր և գրել է նաև Գործք առաքելոցը․ միայն նա է պատմում բարի սամարացու և անառակ որդու առակները։", "Его Евангелие начинается в Храме, где священник Захария приносит жертву, а телец был жертвенным животным. Лука был врачом и написал также Деяния; только он рассказывает притчи о добром самарянине и блудном сыне.")),
     P(280, 134, t("John: an eagle", "Հովհաննես՝ արծիվ", "Иоанн: орёл"), t("His Gospel starts high above, like an eagle in flight: \"In the beginning was the Word, and the Word was with God.\" It was written last and differs most from the other three.", "Նրա Ավետարանն սկսվում է բարձրից, ինչպես թռչող արծիվ․ «Սկզբից էր Բանը, և Բանն Աստծո մոտ էր»։ Այն գրվել է վերջինը և ամենից շատ է տարբերվում մյուս երեքից։", "Его Евангелие начинается с высоты, как орёл в полёте: «В начале было Слово, и Слово было у Бога». Оно написано последним и больше всего отличается от трёх других.")),
-    P(206, 92, t("Where the symbols come from", "Որտեղից են խորհրդանիշները", "Откуда символы"), t("A man, a lion, an ox and an eagle are the four living creatures in the visions of Ezekiel and of Revelation. Armenian miniature painters put them at the start of each Gospel, so a reader could find the right book at a glance.", "Մարդը, առյուծը, եզը և արծիվը Եզեկիելի և Հայտնության տեսիլքների չորս կենդանի էակներն են։ Հայ մանրանկարիչները դրանք նկարում էին յուրաքանչյուր Ավետարանի սկզբում, որպեսզի ընթերցողը մեկ հայացքով գտնի ճիշտ գիրքը։", "Человек, лев, телец и орёл — четыре живых существа из видений Иезекииля и Откровения. Армянские миниатюристы изображали их в начале каждого Евангелия, чтобы читатель с одного взгляда находил нужную книгу.")),
+    P(206, 92, t("Where the symbols come from", "Որտեղից են խորհրդանիշները", "Откуда символы"), t("A man, a lion, an ox and an eagle are the four living creatures in the visions of Ezekiel and of Revelation. Armenian miniature painters put them at the start of each Gospel, so a reader could find the right book at a glance.", "Մարդը, առյուծը, եզը և արծիվն Եզեկիելի և Հայտնության տեսիլքների չորս կենդանի էակներն են։ Հայ մանրանկարիչները դրանք նկարում էին յուրաքանչյուր Ավետարանի սկզբում, որպեսզի ընթերցողը մեկ հայացքով գտնի ճիշտ գիրքը։", "Человек, лев, телец и орёл — четыре живых существа из видений Иезекииля и Откровения. Армянские миниатюристы изображали их в начале каждого Евангелия, чтобы читатель с одного взгляда находил нужную книгу.")),
     P(122, 126, t("Four Gospels, one good news", "Չորս Ավետարան՝ մեկ բարի լուր", "Четыре Евангелия, одна благая весть"), t("Matthew, Mark and Luke often tell the same events in very similar words, so they are called the synoptic Gospels, from a Greek word for \"seeing together\". Four witnesses, each with his own angle, tell one story.", "Մատթեոսը, Մարկոսը և Ղուկասը հաճախ նույն իրադարձությունները պատմում են շատ նման բառերով, ուստի նրանց կոչում են համատես Ավետարաններ։ Չորս վկաներ, յուրաքանչյուրն իր տեսանկյունից, պատմում են մեկ պատմություն։", "Матфей, Марк и Лука часто рассказывают одни и те же события очень похожими словами, поэтому их называют синоптическими Евангелиями, от греческого «видеть вместе». Четыре свидетеля, каждый со своей точки зрения, рассказывают одну историю.")),
   ],
 };
@@ -403,7 +403,7 @@ const holyweek: Diagram = {
     </g>
   ),
   parts: [
-    P(36, 16, t("Palm Sunday", "Ծաղկազարդ", "Цахказард"), t("Jesus rides into Jerusalem on a donkey, a humble animal, not a war horse, and the crowd waves branches. In Armenian churches willow branches are blessed, and the day is a feast of children.", "Հիսուսը Երուսաղեմ է մտնում էշի վրա նստած՝ համեստ կենդանու, այլ ոչ թե մարտական ձիու, և ամբոխը ճյուղեր է թափահարում։ Հայկական եկեղեցիներում ուռենու ճյուղեր են օրհնում, և այդ օրը երեխաների տոն է։", "Иисус въезжает в Иерусалим на осле — смиренном животном, а не боевом коне, и толпа машет ветвями. В армянских церквях освящают ветви вербы, и этот день — праздник детей.")),
+    P(36, 16, t("Palm Sunday", "Ծաղկազարդ", "Цахказард"), t("Jesus rides into Jerusalem on a donkey, a humble animal, not a war horse, and the crowd waves branches. In Armenian churches willow branches are blessed, and the day is a feast of children.", "Հիսուսն Երուսաղեմ է մտնում էշի վրա նստած՝ համեստ կենդանու, այլ ոչ թե մարտական ձիու, և ամբոխը ճյուղեր է թափահարում։ Հայկական եկեղեցիներում ուռենու ճյուղեր են օրհնում, և այդ օրն երեխաների տոն է։", "Иисус въезжает в Иерусалим на осле — смиренном животном, а не боевом коне, и толпа машет ветвями. В армянских церквях освящают ветви вербы, и этот день — праздник детей.")),
     P(122, 16, t("Monday to Wednesday", "Երկուշաբթիից չորեքշաբթի", "С понедельника по среду"), t("Jesus teaches in the Temple and drives out the money-changers. The Armenian Church remembers on these days the barren fig tree, the parable of the ten virgins and the woman who anointed Jesus with costly oil, while Judas agreed to betray him.", "Հիսուսը քարոզում է տաճարում և դուրս է քշում լումայափոխներին։ Այս օրերին Հայ Եկեղեցին հիշատակում է անպտուղ թզենին, տասը կույսերի առակը և այն կնոջը, որը թանկարժեք յուղով օծեց Հիսուսին, մինչդեռ Հուդան համաձայնեց մատնել նրան։", "Иисус учит в Храме и изгоняет менял. Армянская церковь вспоминает в эти дни бесплодную смоковницу, притчу о десяти девах и женщину, помазавшую Иисуса драгоценным миром, тогда как Иуда согласился его предать.")),
     P(198, 16, t("Holy Thursday", "Ավագ հինգշաբթի", "Великий четверг"), t("The Last Supper and the washing of feet, then the prayer in Gethsemane and the arrest at night. Armenian churches serve the rite of Votnlva in the afternoon and a long evening service in growing darkness.", "Վերջին ընթրիքը և ոտնլվան, ապա աղոթքը Գեթսեմանիում և ձերբակալությունը գիշերը։ Հայկական եկեղեցիներում կեսօրից հետո կատարվում է Ոտնլվայի արարողությունը, իսկ երեկոյան՝ երկար արարողություն աճող խավարի մեջ։", "Тайная вечеря и омовение ног, затем молитва в Гефсимании и арест ночью. В армянских церквях днём совершают чин Вотнлва, а вечером — долгую службу в сгущающейся темноте.")),
     P(238, 16, t("Good Friday", "Ավագ ուրբաթ", "Великая пятница"), t("The trial before Pilate, the way to Golgotha and the Crucifixion. In the evening Armenian churches hold the rite of burial, mourning Christ laid in the tomb.", "Դատաստանը Պիղատոսի առջև, ճանապարհը դեպի Գողգոթա և Խաչելությունը։ Երեկոյան հայկական եկեղեցիներում կատարվում է Թաղման կարգը՝ սգալով գերեզման դրված Քրիստոսին։", "Суд у Пилата, путь на Голгофу и Распятие. Вечером в армянских церквях совершают чин погребения, оплакивая положенного во гроб Христа.")),
@@ -443,9 +443,151 @@ const fifty: Diagram = {
     P(30, 50, t("Great Lent", "Մեծ պահք", "Великий пост"), t("Forty days in memory of Christ's fast in the wilderness, plus Holy Week. Before it comes Barekendan, a day of feasting and fun; then the faithful keep a mostly plant-based fast and pray more.", "Քառասուն օր՝ ի հիշատակ անապատում Քրիստոսի պահքի, գումարած Ավագ շաբաթը։ Դրանից առաջ Բարեկենդանն է՝ խնջույքի և ուրախության օր, իսկ հետո հավատացյալները պահում են հիմնականում բուսական պահք և ավելի շատ են աղոթում։", "Сорок дней в память поста Христа в пустыне плюс Страстная неделя. Перед ним — Барекендан, день пиршества и веселья; затем верующие держат в основном растительный пост и больше молятся.")),
     P(118, 54, t("Easter", "Զատիկ", "Пасха"), t("The centre of the whole Christian year. Everything before it prepares for it, and everything after it is counted from it.", "Ողջ քրիստոնեական տարվա կենտրոնը։ Ամեն ինչ, որ դրանից առաջ է, նախապատրաստում է նրան, և ամեն ինչ, որ հետո է, հաշվվում է նրանից։", "Центр всего христианского года. Всё, что до неё, готовит к ней, а всё, что после, отсчитывается от неё.")),
     P(250, 56, t("The Ascension", "Համբարձում", "Вознесение"), t("Counting Easter Sunday as the first day, the fortieth day is always a Thursday. In Armenian villages it was the day of the Tsaghik vichak fortune-telling game.", "Եթե Զատկի կիրակին հաշվենք առաջին օր, քառասուներորդ օրը միշտ հինգշաբթի է։ Հայկական գյուղերում դա «Ծաղիկ վիճակի» գուշակության խաղի օրն էր։", "Если считать пасхальное воскресенье первым днём, сороковой день всегда приходится на четверг. В армянских сёлах это был день гадания «Цахик вичак».")),
-    P(286, 56, t("Pentecost", "Հոգեգալուստ", "Пятидесятница"), t("The fiftieth day, again a Sunday: the descent of the Holy Spirit on the apostles, the birthday of the Church. The name comes from the Greek word for \"fiftieth\".", "Հիսուներորդ օրը, դարձյալ կիրակի․ Սուրբ Հոգու իջնելը առաքյալների վրա, Եկեղեցու ծննդյան օրը։ «Պենտեկոստե» անունը գալիս է հունարեն «հիսուներորդ» բառից։", "Пятидесятый день, снова воскресенье: сошествие Святого Духа на апостолов, день рождения Церкви. Название «Пятидесятница» и греческое «Пентекост» означают «пятидесятый».")),
+    P(286, 56, t("Pentecost", "Հոգեգալուստ", "Пятидесятница"), t("The fiftieth day, again a Sunday: the descent of the Holy Spirit on the apostles, the birthday of the Church. The name comes from the Greek word for \"fiftieth\".", "Հիսուներորդ օրը, դարձյալ կիրակի․ Սուրբ Հոգու իջնելն առաքյալների վրա, Եկեղեցու ծննդյան օրը։ «Պենտեկոստե» անունը գալիս է հունարեն «հիսուներորդ» բառից։", "Пятидесятый день, снова воскресенье: сошествие Святого Духа на апостолов, день рождения Церкви. Название «Пятидесятница» и греческое «Пентекост» означают «пятидесятый».")),
     P(222, 106, t("Why the date moves", "Ինչու է ամսաթիվը փոխվում", "Почему дата меняется"), t("Since the Council of Nicaea in 325 Easter has been the first Sunday after the first full moon of spring. The Armenian Church follows this rule, but the patriarchate of Jerusalem uses the old Julian calendar, so there Easter is often on a different day.", "325 թվականի Նիկիայի ժողովից ի վեր Զատիկը գարնան առաջին լիալուսնից հետո առաջին կիրակին է։ Հայ Եկեղեցին հետևում է այս կանոնին, բայց Երուսաղեմի պատրիարքությունն օգտագործում է հին՝ Հուլյան օրացույցը, ուստի այնտեղ Զատիկը հաճախ այլ օր է լինում։", "Со времён Никейского собора 325 года Пасха — первое воскресенье после первого весеннего полнолуния. Армянская церковь следует этому правилу, но Иерусалимский патриархат пользуется старым юлианским календарём, поэтому там Пасха часто бывает в другой день.")),
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty };
+/* ---------------- grade 7: where the apostles preached ---------------- */
+
+// a simple map: x from longitude, y from latitude
+const MX = (lon: number) => 12 + (lon - 35) * 27;
+const MY = (lat: number) => 10 + (41.5 - lat) * 34;
+const PLACES: Array<[number, number, Tr, string, number, number, "start" | "middle" | "end"]> = [
+  [35.49, 38.72, t("Caesarea", "Կեսարիա", "Кесария"), "#0369a1", 0, 12, "middle"],
+  [38.79, 37.16, t("Edessa (Urha)", "Եդեսիա (Ուռհա)", "Эдесса (Урха)"), "#b45309", 0, 12, "middle"],
+  [38.5, 37.53, t("Samosata", "Սամոսատ", "Самосата"), "#64748b", -6, -4, "end"],
+  [44.29, 40.16, t("Vagharshapat", "Վաղարշապատ", "Вагаршапат"), "#be123c", -7, -3, "end"],
+  [44.54, 39.09, t("St Thaddeus", "Ս. Թադեոս", "Св. Фаддей"), "#7c3aed", 7, 3, "start"],
+  [44.02, 38.05, t("Albak:|St Bartholomew", "Աղբակ՝|Ս. Բարդուղիմեոս", "Албак:|св. Варфоломей"), "#7c3aed", -4, 13, "middle"],
+];
+
+const apostles: Diagram = {
+  title: t("Where the apostles preached", "Որտեղ քարոզեցին առաքյալները", "Где проповедовали апостолы"),
+  h: 180,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="180" fill="#fefce8" />
+      {/* the Euphrates, Lake Van, Lake Sevan, Lake Urmia */}
+      <path d="M186,62 C160,74 126,84 116,100 S106,138 92,178" fill="none" stroke="#60a5fa" strokeWidth="2.2" />
+      <Tx x={150} y={78} s={t("Euphrates", "Եփրատ", "Евфрат")} lang={lang} size={6.2} fill="#2563eb" w={700} />
+      <ellipse cx={MX(42.95)} cy={MY(38.65)} rx="22" ry="9" transform={`rotate(-22 ${MX(42.95)} ${MY(38.65)})`} fill="#93c5fd" />
+      <Tx x={MX(42.95)} y={MY(38.65) + 2} s={t("Van", "Վան", "Ван")} lang={lang} size={6.4} fill="#1e3a8a" />
+      <ellipse cx={MX(45.3)} cy={MY(40.35)} rx="9" ry="6" fill="#93c5fd" />
+      <Tx x={MX(45.3)} y={MY(40.35) - 9} s={t("Sevan", "Սևան", "Севан")} lang={lang} size={5.8} fill="#1e3a8a" />
+      <ellipse cx={MX(45.45)} cy={MY(37.7)} rx="7" ry="19" fill="#93c5fd" />
+      <Tx x={MX(45.45)} y={MY(37.7) + 30} s={t("Urmia", "Ուրմիա", "Урмия")} lang={lang} size={5.8} fill="#1e3a8a" />
+      {/* Mount Ararat */}
+      <path d={`M${MX(44.3) - 12},${MY(39.7) + 6} l9,-14 l4,5 l5,-7 l9,16 Z`} fill="#a8a29e" />
+      <path d={`M${MX(44.3) - 3},${MY(39.7) - 8} l4,5 l5,-7 l2,4 l-4,1 l-3,-1 l-2,2 Z`} fill="#fff" />
+      <Tx x={MX(44.3) - 22} y={MY(39.7) + 2} s={t("Ararat", "Արարատ", "Арарат")} lang={lang} size={5.8} fill="#57534e" anchor="end" />
+      {PLACES.map(([lon, lat, name, c, dx, dy, anchor], k) => (
+        <g key={k}>
+          <circle cx={MX(lon)} cy={MY(lat)} r={k === 3 ? 4.5 : 3.5} fill={c} stroke="#fff" strokeWidth="1.2" />
+          <Tx x={MX(lon) + dx} y={MY(lat) + dy} s={name} lang={lang} size={6.4} fill={c} anchor={anchor} />
+        </g>
+      ))}
+      {/* the apostles' roads */}
+      <path d={`M${MX(38.79) + 5},${MY(37.16) - 3} Q200,110 ${MX(44.54) - 4},${MY(39.09) + 2}`} fill="none" stroke="#7c3aed" strokeWidth="1.3" strokeDasharray="3 3" />
+      <path d={`M${MX(38.79) + 5},${MY(37.16) + 1} Q190,160 ${MX(44.02) - 4},${MY(38.05) + 2}`} fill="none" stroke="#7c3aed" strokeWidth="1.3" strokeDasharray="3 3" />
+      <path d={`M${MX(35.49) + 5},${MY(38.72) - 2} Q150,40 ${MX(44.29) - 5},${MY(40.16)}`} fill="none" stroke="#0369a1" strokeWidth="1.1" strokeDasharray="1.5 3" />
+      <Tx x={120} y={44} s={t("Gregory's road", "Գրիգորի ճանապարհը", "Путь Григория")} lang={lang} size={5.8} fill="#0369a1" w={700} />
+    </g>
+  ),
+  parts: [
+    P(MX(38.79) - 8, MY(37.16) - 8, t("Edessa", "Եդեսիա", "Эдесса"), t("A Syriac-speaking city, today Şanlıurfa in Turkey. According to tradition, Thaddeus preached here first, at the court of King Abgar, before going on to Armenia.", "Ասորերեն խոսող քաղաք, այսօր՝ Շանլըուրֆա Թուրքիայում։ Ըստ ավանդության՝ Թադեոսն առաջինը քարոզել է այստեղ՝ Աբգար թագավորի արքունիքում, ապա մեկնել Հայաստան։", "Сироязычный город, сегодня Шанлыурфа в Турции. По преданию, Фаддей сначала проповедовал здесь, при дворе царя Абгара, а затем отправился в Армению.")),
+    P(MX(44.54) - 10, MY(39.09) + 6, t("Saint Thaddeus monastery", "Սուրբ Թադեոս վանք", "Монастырь Святого Фаддея"), t("Built, according to tradition, over the apostle's grave, near Maku in today's Iran. Its black-and-white stone church draws thousands of pilgrims every July and is on the UNESCO list.", "Ըստ ավանդության՝ կառուցված առաքյալի գերեզմանի վրա, այսօրվա Իրանի Մակու քաղաքի մոտ։ Նրա սև ու սպիտակ քարից եկեղեցին ամեն հուլիս հազարավոր ուխտավորներ է հավաքում և ընդգրկված է ՅՈւՆԵՍԿՕ-ի ցանկում։", "Построен, по преданию, над могилой апостола, около Маку в сегодняшнем Иране. Его церковь из чёрного и белого камня каждый июль собирает тысячи паломников и внесена в список ЮНЕСКО.")),
+    P(MX(44.02) + 9, MY(38.05) - 2, t("Albak", "Աղբակ", "Албак"), t("In Vaspurakan, south-east of Lake Van, today near Başkale in Turkey. Tradition says Bartholomew was martyred here; the monastery over his grave is now in ruins.", "Վասպուրականում, Վանա լճից հարավ-արևելք, այսօր՝ Թուրքիայի Բաշքալե քաղաքի մոտ։ Ավանդությունն ասում է, որ Բարդուղիմեոսն այստեղ է նահատակվել․ նրա գերեզմանի վրայի վանքն այժմ ավերակ է։", "В Васпуракане, к юго-востоку от озера Ван, сегодня около Башкале в Турции. Предание говорит, что Варфоломей был замучен здесь; монастырь над его могилой сейчас в руинах.")),
+    P(MX(44.29) + 9, MY(40.16) + 4, t("Vagharshapat", "Վաղարշապատ", "Вагаршапат"), t("The royal capital, where the Hripsimeyan virgins were martyred and where Etchmiadzin Cathedral was built after 301.", "Թագավորական մայրաքաղաքը, որտեղ նահատակվեցին Հռիփսիմյան կույսերը, և որտեղ 301 թվականից հետո կառուցվեց Էջմիածնի Մայր տաճարը։", "Царская столица, где приняли мученичество девы-рипсимиянки и где после 301 года был построен Эчмиадзинский собор.")),
+    P(MX(35.49) + 4, MY(38.72) - 8, t("Caesarea", "Կեսարիա", "Кесария"), t("A Greek-speaking city in Cappadocia (today Kayseri). Gregory grew up here as a Christian and returned here to be consecrated bishop; for decades the Armenian catholicoi were consecrated in Caesarea.", "Հունախոս քաղաք Կապադովկիայում (այսօր՝ Կայսերի)։ Գրիգորն այստեղ մեծացավ որպես քրիստոնյա և վերադարձավ այստեղ՝ եպիսկոպոս ձեռնադրվելու․ տասնամյակներ շարունակ հայոց կաթողիկոսները ձեռնադրվում էին Կեսարիայում։", "Грекоязычный город в Каппадокии (сегодня Кайсери). Григорий вырос здесь христианином и вернулся сюда, чтобы стать епископом; десятилетиями армянских католикосов рукополагали в Кесарии.")),
+  ],
+};
+
+/* ---------------- grade 7: the family of Gregory ---------------- */
+
+const GEN: Array<[number, number, Tr, boolean]> = [
+  [28, 50, t("Gregory|the Illuminator", "Գրիգոր|Լուսավորիչ", "Григорий|Просветитель"), true],
+  [80, 50, t("Vrtanes", "Վրթանես", "Вртанес"), true],
+  [80, 116, t("Aristakes", "Արիստակես", "Аристакес"), true],
+  [132, 50, t("Husik", "Հուսիկ", "Усик"), true],
+  [184, 50, t("Athenogenes", "Աթանագինես", "Атанагинес"), false],
+  [236, 50, t("Nerses|the Great", "Ներսես|Մեծ", "Нерсес|Великий"), true],
+  [286, 50, t("Sahak|Partev", "Սահակ|Պարթև", "Саак|Партев"), true],
+];
+
+const gregorids: Diagram = {
+  title: t("A century of catholicoi from one family", "Մեկ ընտանիքից կաթողիկոսների մեկ դար", "Век католикосов из одной семьи"),
+  h: 160,
+  draw: (lang) => (
+    <g>
+      <path d="M28,50 H286 M28,50 Q28,116 64,116" fill="none" stroke="#cbd5e1" strokeWidth="2" />
+      {GEN.map(([x, y, name, cath], k) => (
+        <g key={k}>
+          <circle cx={x} cy={y} r={k === 0 ? 17 : 14} fill={cath ? "#fef3c7" : "#f1f5f9"} stroke={cath ? "#b45309" : "#94a3b8"} strokeWidth={k === 0 ? 2.4 : 1.6} />
+          {cath ? <path d={`M${x},${y - 7} v13 M${x - 5},${y - 2} h10`} stroke="#b45309" strokeWidth="2" strokeLinecap="round" /> : <Head x={x} y={y - 4} r={3.5} fill="#94a3b8" />}
+          <Tx x={x} y={y + (k === 0 ? 27 : 24)} s={name} lang={lang} size={6.2} fill={cath ? "#78350f" : "#64748b"} />
+        </g>
+      ))}
+      <rect x="150" y="104" width="160" height="40" rx="8" fill="#fff" stroke="#e2e8f0" />
+      <path d="M162,116 v9 M157,120 h10" stroke="#b45309" strokeWidth="2" strokeLinecap="round" />
+      <Tx x={174} y={123} s={t("catholicos", "կաթողիկոս", "католикос")} lang={lang} size={6.4} fill="#78350f" anchor="start" w={700} />
+      <Tx x={162} y={138} s={t("each one is the son of the one before", "յուրաքանչյուրը նախորդի որդին է", "каждый — сын предыдущего")} lang={lang} size={6} fill="#475569" anchor="start" w={600} />
+    </g>
+  ),
+  parts: [
+    P(42, 32, t("Gregory the Illuminator", "Գրիգոր Լուսավորիչ", "Григорий Просветитель"), t("The first catholicos, consecrated in Caesarea. Late in life, tradition says, he withdrew to live as a hermit in a cave at Mount Sepuh and left the see to his son.", "Առաջին կաթողիկոսը՝ ձեռնադրված Կեսարիայում։ Ըստ ավանդության՝ կյանքի վերջում նա քաշվեց Սեպուհ լեռան մի քարայր՝ ճգնելու, և աթոռը թողեց որդուն։", "Первый католикос, рукоположенный в Кесарии. По преданию, в конце жизни он удалился отшельником в пещеру на горе Сепух и оставил престол сыну.")),
+    P(94, 100, t("Aristakes", "Արիստակես", "Аристакес"), t("Gregory's younger son, a hermit before he became catholicos. He represented the Armenian Church at the Council of Nicaea in 325 and brought back its Creed.", "Գրիգորի կրտսեր որդին, որը մինչ կաթողիկոս դառնալը ճգնավոր էր։ Նա 325 թվականին Նիկիայի ժողովում ներկայացնում էր Հայ Եկեղեցին և բերեց նրա Հավատո հանգանակը։", "Младший сын Григория, до того как стать католикосом, был отшельником. Он представлял Армянскую церковь на Никейском соборе 325 года и привёз оттуда Символ веры.")),
+    P(146, 34, t("Husik", "Հուսիկ", "Усик"), t("Vrtanes' son. He refused to let King Tiran into church on a feast day because of the king's injustice, and was beaten to death; the Church remembers him as a martyr.", "Վրթանեսի որդին։ Նա տոնի օրը թույլ չտվեց Տիրան թագավորին մտնել եկեղեցի՝ թագավորի անարդարությունների պատճառով, և ծեծելով սպանվեց․ Եկեղեցին նրան հիշատակում է որպես նահատակ։", "Сын Вртанеса. В праздник он не пустил царя Тирана в церковь из-за его несправедливости и был забит насмерть; Церковь чтит его как мученика.")),
+    P(198, 34, t("Athenogenes", "Աթանագինես", "Атанагинес"), t("Husik's son never became catholicos and died young, but the line passed through him to his son Nerses.", "Հուսիկի որդին երբեք կաթողիկոս չդարձավ և մահացավ երիտասարդ տարիքում, բայց գիծը նրա միջոցով անցավ նրա որդի Ներսեսին։", "Сын Усика так и не стал католикосом и умер молодым, но линия перешла через него к его сыну Нерсесу.")),
+    P(250, 34, t("Nerses the Great", "Ներսես Մեծ", "Нерсес Великий"), t("Educated in Caesarea, he was an officer at the royal court before he was made catholicos. His Council of Ashtishat filled the country with shelters, hospitals and schools.", "Կրթություն ստացել էր Կեսարիայում և մինչ կաթողիկոս դառնալը սպա էր արքունիքում։ Նրա հրավիրած Աշտիշատի ժողովից հետո երկիրը լցվեց աղքատանոցներով, հիվանդանոցներով և դպրոցներով։", "Учился в Кесарии и до того как стать католикосом служил офицером при царском дворе. После созванного им Аштишатского собора страна наполнилась приютами, больницами и школами.")),
+    P(300, 34, t("Sahak Partev", "Սահակ Պարթև", "Саак Партев"), t("The last catholicos of Gregory's line. With Mesrop Mashtots he led the creation of the alphabet and the translation of the Bible.", "Գրիգորի տոհմի վերջին կաթողիկոսը։ Մեսրոպ Մաշտոցի հետ նա ղեկավարեց այբուբենի ստեղծումը և Աստվածաշնչի թարգմանությունը։", "Последний католикос из рода Григория. Вместе с Месропом Маштоцем он руководил созданием алфавита и переводом Библии.")),
+  ],
+};
+
+/* ---------------- grade 7: three types of church ---------------- */
+
+const churchtypes: Diagram = {
+  title: t("Three types of early Armenian church (plans, east at the top)", "Վաղ հայկական եկեղեցու երեք տեսակ (հատակագծեր, արևելքը վերևում)", "Три типа ранних армянских церквей (планы, восток вверху)"),
+  h: 160,
+  draw: (lang) => (
+    <g>
+      {/* basilica */}
+      <path d="M30,40 h40 v-4 a20,14 0 0 0 -40,0 Z" fill="#fde68a" stroke="#b45309" strokeWidth="1.5" />
+      <rect x="22" y="40" width="56" height="78" fill="#fff7ed" stroke="#b45309" strokeWidth="2" />
+      {[52, 66, 80, 94, 108].map((y) => <g key={y}><rect x="38" y={y - 2.5} width="5" height="5" fill="#b45309" /><rect x="57" y={y - 2.5} width="5" height="5" fill="#b45309" /></g>)}
+      {/* cross-in-square, the Hripsime type */}
+      <rect x="122" y="36" width="76" height="82" fill="#ecfeff" stroke="#0e7490" strokeWidth="2" />
+      <path d="M142,57 a18,18 0 0 1 36,0 M178,97 a18,18 0 0 1 -36,0 M143,58 a18,18 0 0 0 0,38 M177,58 a18,18 0 0 1 0,38" fill="#cffafe" stroke="#0e7490" strokeWidth="1.5" />
+      <circle cx="160" cy="77" r="16" fill="none" stroke="#0e7490" strokeWidth="1.5" strokeDasharray="3 2" />
+      {[[143, 58], [177, 58], [143, 96], [177, 96]].map(([x, y]) => <circle key={x * y} cx={x} cy={y} r="4" fill="#fff" stroke="#0e7490" strokeWidth="1.3" />)}
+      {/* round, Zvartnots */}
+      <circle cx="262" cy="77" r="42" fill="#f5f3ff" stroke="#6d28d9" strokeWidth="2" />
+      <path d="M250,65 a12,12 0 0 1 24,0 Z" fill="#ddd6fe" stroke="#6d28d9" strokeWidth="1.5" />
+      <path d="M274,65 a12,12 0 0 1 0,24 M274,89 a12,12 0 0 1 -24,0 M250,89 a12,12 0 0 1 0,-24" fill="none" stroke="#6d28d9" strokeWidth="1" strokeDasharray="1 2.5" />
+      {[[274, 77, -60], [262, 89, 30], [250, 77, 120]].flatMap(([cx, cy, a0]) =>
+        [0, 1, 2, 3, 4].map((k) => {
+          const a = ((a0 + k * 30) * Math.PI) / 180;
+          return <circle key={`${cx}-${k}`} cx={cx + 12 * Math.cos(a)} cy={cy + 12 * Math.sin(a)} r="2" fill="#6d28d9" />;
+        }),
+      )}
+      <circle cx="262" cy="77" r="9" fill="none" stroke="#6d28d9" strokeWidth="1.3" strokeDasharray="3 2" />
+      {/* east arrow and names */}
+      <path d="M160,16 v-8 M156,12 l4,-5 l4,5" stroke="#475569" strokeWidth="1.4" fill="none" />
+      <Tx x={168} y={14} s={t("east", "արևելք", "восток")} lang={lang} size={6} fill="#475569" anchor="start" w={700} />
+      <Tx x={50} y={134} s={t("Basilica", "Բազիլիկ", "Базилика")} lang={lang} size={7.4} fill="#b45309" />
+      <Tx x={50} y={145} s={t("Kasakh, Yereruyk", "Քասաղ, Երերույք", "Касах, Ереруйк")} lang={lang} size={5.8} fill="#78350f" w={600} />
+      <Tx x={160} y={134} s={t("Domed cross", "Գմբեթավոր խաչաձև", "Крестово-купольный")} lang={lang} size={7.4} fill="#0e7490" />
+      <Tx x={160} y={145} s={t("St Hripsime, 618", "Ս. Հռիփսիմե, 618", "Св. Рипсиме, 618")} lang={lang} size={5.8} fill="#155e75" w={600} />
+      <Tx x={262} y={134} s={t("Round", "Կլոր", "Круглый")} lang={lang} size={7.4} fill="#6d28d9" />
+      <Tx x={262} y={145} s={t("Zvartnots, 641–652", "Զվարթնոց, 641–652", "Звартноц, 641–652")} lang={lang} size={5.8} fill="#4c1d95" w={600} />
+    </g>
+  ),
+  parts: [
+    P(76, 24, t("The altar faces east", "Խորանը դեպի արևելք է", "Алтарь обращён на восток"), t("The rounded apse with the altar is always at the east end, towards the sunrise, a sign of Christ as the light of the world. The faithful face it during the liturgy.", "Կլոր խորանն՝ սեղանով, միշտ արևելյան կողմում է՝ դեպի արևածագը, որպես Քրիստոսի՝ աշխարհի լույսի նշան։ Պատարագի ժամանակ հավատացյալները դեմքով դեպի այն են կանգնում։", "Полукруглая апсида с престолом всегда на востоке, к восходу солнца, — знак Христа, света миру. Во время литургии верующие стоят лицом к ней.")),
+    P(18, 80, t("Basilica", "Բազիլիկ", "Базилика"), t("A long hall, often divided by two rows of pillars into three aisles. It came from Roman public halls and was the first shape of Armenian churches in the 4th and 5th centuries.", "Երկար դահլիճ, հաճախ երկու շարք սյուներով բաժանված երեք նավի։ Այն ծագել է հռոմեական հասարակական դահլիճներից և IV–V դարերում հայկական եկեղեցիների առաջին ձևն էր։", "Длинный зал, часто разделённый двумя рядами столбов на три нефа. Он произошёл от римских общественных залов и был первой формой армянских церквей в IV–V веках.")),
+    P(182, 77, t("Dome on squinches", "Գմբեթ՝ տրոմպների վրա", "Купол на тромпах"), t("How do you set a round dome on a square room? Armenian builders bridged the corners with small arches called squinches, here with round niches between the four arms of the cross.", "Ինչպե՞ս կլոր գմբեթը դնել քառակուսի սենյակի վրա։ Հայ շինարարներն անկյունները ծածկում էին տրոմպ կոչվող փոքր կամարներով, այստեղ՝ խաչի չորս թևերի միջև եղած կլոր խորշերով։", "Как поставить круглый купол на квадратное помещение? Армянские зодчие перекрывали углы небольшими арками — тромпами, здесь с круглыми нишами между четырьмя рукавами креста.")),
+    P(304, 50, t("Round church", "Կլոր եկեղեցի", "Круглая церковь"), t("Zvartnots was round outside, with a four-lobed core inside, three lobes open with columns and the east one closed for the altar. It rose in three tiers and was one of the tallest buildings of its time.", "Զվարթնոցը դրսից կլոր էր, իսկ ներսում ուներ քառաթերթ միջուկ․ երեք թերթը բաց էին՝ սյունաշարերով, իսկ արևելյանը փակ էր՝ խորանի համար։ Այն բարձրանում էր երեք հարկով և իր ժամանակի ամենաբարձր շենքերից էր։", "Звартноц был круглым снаружи, а внутри имел четырёхлепестковое ядро: три лепестка открыты колоннадами, а восточный закрыт для алтаря. Он поднимался тремя ярусами и был одним из самых высоких зданий своего времени.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes };
