@@ -4,7 +4,7 @@ import type { ArtLang, Tr } from "@/lib/art/spec";
 import { L, t } from "../labels";
 import type { Diagram } from "./types";
 
-/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables, a class with its objects, the DOM, an HTTP exchange, git history. */
+/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables, a class with its objects, the DOM, an HTTP exchange, git history, a Kanban board, an app's architecture. */
 
 const P = (x: number, y: number, name: Tr, text: Tr) => ({ x, y, name, text });
 const Tx = ({ x, y, s, lang, size = 9, fill = "#1e1b4b", anchor = "middle", w = 900 }: { x: number; y: number; s: Tr; lang: ArtLang; size?: number; fill?: string; anchor?: "start" | "middle" | "end"; w?: number }) => (
@@ -740,4 +740,105 @@ const git: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db, oop, dom, http, git };
+/* ---------------- a Kanban board ---------------- */
+
+const KANBAN: Array<[Tr, string, Array<[Tr, boolean]>]> = [
+  [t("To do", "Անելիք", "Сделать"), "#f1f5f9", [[t("reminders", "հիշեցումներ", "напоминания"), false], [t("filter by subject", "զտիչ՝ ըստ առարկայի", "фильтр по предмету"), false], [t("delete a task", "առաջադրանքի ջնջում", "удаление задания"), true]]],
+  [t("In progress", "Ընթացքում", "В работе"), "#fef3c7", [[t("add a task", "առաջադրանքի ավելացում", "добавление задания"), true]]],
+  [t("Done", "Արված", "Готово"), "#dcfce7", [[t("list of tasks", "առաջադրանքների ցուցակ", "список заданий"), true], [t("database tables", "տվյալների աղյուսակներ", "таблицы базы"), true]]],
+];
+
+const kanban: Diagram = {
+  title: t("A Kanban board for a project", "Նախագծի Kanban տախտակ", "Доска Kanban для проекта"),
+  draw: (lang) => (
+    <g>
+      {KANBAN.map(([name, bg, cards], k) => {
+        const x = 8 + k * 104;
+        return (
+          <g key={k}>
+            <rect x={x} y="14" width="96" height="176" rx="6" fill={bg} stroke="#cbd5e1" />
+            <Tx x={x + 48} y={30} s={name} lang={lang} size={8.5} />
+            <text x={x + 88} y="30" textAnchor="end" fontSize="7" fontWeight="800" fill="#64748b">{cards.length}</text>
+            {cards.map(([c, mvp], j) => (
+              <g key={j}>
+                <rect x={x + 6} y={40 + j * 38} width="84" height="32" rx="4" fill="#fff" stroke={mvp ? "#4f46e5" : "#cbd5e1"} strokeWidth={mvp ? 1.3 : 0.8} />
+                <rect x={x + 6} y={40 + j * 38} width="4" height="32" rx="2" fill={mvp ? "#4f46e5" : "#94a3b8"} />
+                <Tx x={x + 14} y={54 + j * 38} s={c} lang={lang} size={6.5} anchor="start" w={800} />
+                {mvp ? <text x={x + 14} y={66 + j * 38} fontSize="6" fontWeight="900" fill="#4f46e5">MVP</text> : null}
+              </g>
+            ))}
+          </g>
+        );
+      })}
+      <Tx x={160} y={208} s={t("Cards move from left to right, one at a time.", "Քարտերը տեղափոխվում են ձախից աջ՝ մեկ առ մեկ։", "Карточки движутся слева направо, по одной.")} lang={lang} size={7.5} fill="#334155" w={700} />
+    </g>
+  ),
+  parts: [
+    P(56, 146, t("Small cards", "Փոքր քարտեր", "Маленькие карточки"), t("Each card is one step of no more than a few hours. \"Make the app\" is not a card; \"add a delete button\" is. Small steps are easy to estimate and give a feeling of progress every day.", "Յուրաքանչյուր քարտ մեկ քայլ է՝ ոչ ավելի, քան մի քանի ժամ։ «Պատրաստել հավելվածը» քարտ չէ, իսկ «ավելացնել ջնջելու կոճակ»-ը՝ քարտ է։ Փոքր քայլերը հեշտ է գնահատել, և ամեն օր առաջընթացի զգացում են տալիս։", "Каждая карточка — один шаг не больше чем на несколько часов. «Сделать приложение» — не карточка, а «добавить кнопку удаления» — карточка. Маленькие шаги легко оценить, и они каждый день дают ощущение движения.")),
+    P(110, 30, t("Work in progress", "Ընթացիկ աշխատանք", "Работа в процессе"), t("Keep only one or two cards in the middle column. Starting five things at once means finishing none of them; Kanban teams set a limit on this column on purpose.", "Միջին սյունակում պահի՛ր միայն մեկ կամ երկու քարտ։ Միանգամից հինգ բան սկսելը նշանակում է դրանցից ոչ մեկը չավարտել․ Kanban թիմերը դիտմամբ սահմանափակում են այս սյունակը։", "Держи в средней колонке только одну-две карточки. Начать пять дел сразу — значит не закончить ни одного; команды Kanban нарочно ограничивают эту колонку.")),
+    P(306, 54, t("MVP first", "Նախ MVP", "Сначала MVP")
+, t("Cards marked MVP make the smallest version that is already useful. Do them first: if time runs out, you still have a working program, and the rest can wait.", "MVP նշված քարտերը կազմում են ամենափոքր տարբերակը, որն արդեն օգտակար է։ Դրանք արա՛ առաջինը․ եթե ժամանակը չբավականացնի, միևնույն է կունենաս աշխատող ծրագիր, իսկ մնացածը կարող է սպասել։", "Карточки с пометкой MVP составляют самую маленькую версию, которая уже полезна. Делай их первыми: если не хватит времени, у тебя всё равно будет работающая программа, а остальное подождёт.")),
+    P(306, 130, t("What \"done\" means", "Ի՞նչ է նշանակում «արված»", "Что значит «готово»"), t("A card goes to Done only when the feature works, is tested and is saved in git, not when the code has merely been written.", "Քարտը Արված սյունակ է անցնում միայն այն ժամանակ, երբ հնարավորությունն աշխատում է, թեստավորված է և պահված է git-ում, և ոչ թե երբ կոդը պարզապես գրված է։", "Карточка попадает в Готово, только когда функция работает, проверена и сохранена в git, а не когда код просто написан.")),
+    P(12, 200, t("Where it came from", "Որտեղից է եկել", "Откуда это"), t("Kanban means \"signboard\" in Japanese. The method grew out of Toyota's car factories, where cards showed which parts were needed next, and was later adopted by software teams.", "Kanban ճապոներեն նշանակում է «ցուցանակ»։ Եղանակը ծագել է Toyota ընկերության ավտոմոբիլային գործարաններում, որտեղ քարտերը ցույց էին տալիս, թե որ մասերն են հաջորդը պետք, և հետագայում ընդունվել է ծրագրավորողների թիմերի կողմից։", "Kanban по-японски значит «вывеска». Метод вырос на автомобильных заводах Toyota, где карточки показывали, какие детали нужны дальше, а потом его переняли команды программистов.")),
+  ],
+};
+
+/* ---------------- the parts of an app ---------------- */
+
+const ARCH_ROWS: Tr[] = [t("Maths: p. 45", "Մաթեմ․ էջ 45", "Математика: с. 45"), t("History essay", "Շարադրություն", "Сочинение"), t("Physics test", "Ֆիզիկայի թեստ", "Физика: тест")];
+
+const arch: Diagram = {
+  title: t("Frontend, backend, database", "Ֆրոնտենդ, բեքենդ, տվյալների բազա", "Фронтенд, бэкенд, база данных"),
+  draw: (lang) => (
+    <g>
+      <defs><marker id="ar-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569" /></marker></defs>
+      {/* the phone wireframe */}
+      <rect x="8" y="12" width="96" height="176" rx="12" fill="#fff" stroke="#334155" strokeWidth="2" />
+      <rect x="14" y="26" width="84" height="18" rx="3" fill="#e0e7ff" />
+      <Tx x={56} y={38} s={t("Homework", "Տնայիններ", "Домашка")} lang={lang} size={8} fill="#3730a3" />
+      {ARCH_ROWS.map((r, k) => (
+        <g key={k}>
+          <rect x="14" y={52 + k * 26} width="84" height="20" rx="3" fill="#f8fafc" stroke="#cbd5e1" strokeDasharray="3 2" />
+          <rect x="18" y={57 + k * 26} width="10" height="10" rx="2" fill={k === 2 ? "#16a34a" : "#fff"} stroke="#64748b" />
+          {k === 2 ? <path d={`M20,${62 + k * 26} l3,3 l5,-6`} stroke="#fff" strokeWidth="1.6" fill="none" /> : null}
+          <Tx x={32} y={65 + k * 26} s={r} lang={lang} size={6} anchor="start" w={700} fill="#334155" />
+        </g>
+      ))}
+      <circle cx="84" cy="164" r="11" fill="#4f46e5" />
+      <path d="M84,158 v12 M78,164 h12" stroke="#fff" strokeWidth="2" />
+      {/* API calls */}
+      {[["GET /tasks", 70, "#4f46e5"], ["POST /tasks", 100, "#16a34a"], ["DELETE /tasks/5", 130, "#e11d48"]].map(([c, y, col]) => (
+        <g key={c as string}>
+          <path d={`M106,${y} H160`} stroke={col as string} strokeWidth="1.4" markerEnd="url(#ar-head)" />
+          <text x="108" y={(y as number) - 3} fontSize="5.5" fontWeight="800" fontFamily={MONO} fill={col as string}>{c}</text>
+        </g>
+      ))}
+      <path d="M160,150 H106" stroke="#475569" strokeWidth="1.2" strokeDasharray="3 2" markerEnd="url(#ar-head)" />
+      <text x="110" y="160" fontSize="5.5" fontWeight="800" fontFamily={MONO} fill="#475569">JSON</text>
+      {/* the backend */}
+      <rect x="162" y="56" width="70" height="104" rx="6" fill="#1e293b" />
+      {[0, 1, 2, 3].map((k) => <g key={k}><rect x="168" y={64 + k * 22} width="58" height="16" rx="2" fill="#334155" /><circle cx="220" cy={72 + k * 22} r="1.8" fill="#4ade80" /></g>)}
+      <text x="197" y="74" textAnchor="middle" fontSize="7" fontWeight="900" fill="#e2e8f0">Python</text>
+      <text x="197" y="96" textAnchor="middle" fontSize="7" fontWeight="900" fill="#e2e8f0">Flask</text>
+      <path d="M234,108 H256" stroke="#475569" strokeWidth="1.4" markerEnd="url(#ar-head)" />
+      <text x="236" y="104" fontSize="5.5" fontWeight="800" fontFamily={MONO} fill="#475569">SQL</text>
+      {/* the database */}
+      <path d="M258,60 v96 a28,8 0 0 0 56,0 v-96" fill="#fef3c7" stroke="#b45309" />
+      <ellipse cx="286" cy="60" rx="28" ry="8" fill="#fde68a" stroke="#b45309" />
+      {["users", "subjects", "tasks", "done"].map((n, k) => <text key={n} x="286" y={86 + k * 18} textAnchor="middle" fontSize="7" fontWeight="800" fontFamily={MONO} fill="#78350f">{n}</text>)}
+      {[[t("frontend", "ֆրոնտենդ", "фронтенд"), 56], [t("backend", "բեքենդ", "бэкенд"), 197], [t("database", "տվյալների բազա", "база данных"), 282]].map(([s, x]) => (
+        <Tx key={x as number} x={x as number} y={206} s={s as Tr} lang={lang} size={8} fill="#334155" />
+      ))}
+    </g>
+  ),
+  parts: [
+    P(98, 22, t("A wireframe", "Սխեմատիկ էսքիզ", "Каркас (wireframe)"), t("A sketch with no colours or pictures, only where things go: the heading, the list, the + button. It takes minutes on paper and shows layout problems before any code is written.", "Էսքիզ առանց գույների և նկարների, միայն թե որտեղ ինչ է դրված․ վերնագիրը, ցուցակը, + կոճակը։ Թղթի վրա այն րոպեներ է տևում և ցույց է տալիս դասավորության խնդիրները դեռ մինչև որևէ կոդ գրելը։", "Набросок без цветов и картинок, только что где расположено: заголовок, список, кнопка +. На бумаге это минуты, и он показывает проблемы раскладки ещё до того, как написан код.")),
+    P(30, 136, t("Feedback", "Հետադարձ կապ", "Обратная связь"), t("The ticked box shows at once that the task is done. A good interface always answers the user's action, even with something as small as a tick or a colour change.", "Նշված վանդակն անմիջապես ցույց է տալիս, որ առաջադրանքն արված է։ Լավ միջերեսը միշտ պատասխանում է օգտատիրոջ գործողությանը, թեկուզ այնպիսի փոքր բանով, ինչպիսին նշիչն է կամ գույնի փոփոխությունը։", "Отмеченный квадратик сразу показывает, что задание сделано. Хороший интерфейс всегда отвечает на действие пользователя, пусть даже галочкой или сменой цвета.")),
+    P(150, 84, t("The API", "API-ն", "API")
+, t("The frontend and backend talk only through a few agreed requests: GET to read the list, POST to add, DELETE to remove. Each side can then be rewritten without breaking the other.", "Ֆրոնտենդը և բեքենդը խոսում են միայն մի քանի համաձայնեցված հարցումներով․ GET՝ ցուցակը կարդալու, POST՝ ավելացնելու, DELETE՝ հեռացնելու համար։ Այդ դեպքում կողմերից յուրաքանչյուրը կարելի է վերաշարադրել՝ առանց մյուսը փչացնելու։", "Фронтенд и бэкенд общаются только несколькими договорёнными запросами: GET — прочитать список, POST — добавить, DELETE — удалить. Тогда каждую сторону можно переписать, не сломав другую.")),
+    P(226, 146, t("The backend", "Բեքենդը", "Бэкенд"), t("The program on the server checks each request (is this user allowed to delete?), talks to the database in SQL and sends back JSON. Never trust the frontend alone: anyone can send a request by hand.", "Սերվերի ծրագիրը ստուգում է յուրաքանչյուր հարցում (թույլատրվա՞ծ է արդյոք այս օգտատիրոջը ջնջել), տվյալների բազայի հետ խոսում է SQL-ով և հետ է ուղարկում JSON։ Երբեք մի՛ վստահիր միայն ֆրոնտենդին․ ցանկացածը կարող է հարցում ուղարկել ձեռքով։", "Программа на сервере проверяет каждый запрос (можно ли этому пользователю удалять?), общается с базой на SQL и отправляет обратно JSON. Никогда не доверяй только фронтенду: кто угодно может отправить запрос вручную.")),
+    P(304, 166, t("The database", "Տվյալների բազան", "База данных"), t("Four tables: tasks points to subjects and users through foreign keys, and done links users with tasks, many to many, so each pupil ticks off their own homework.", "Չորս աղյուսակ․ tasks-ը արտաքին բանալիներով հղում է subjects-ին և users-ին, իսկ done-ը կապում է օգտատերերին առաջադրանքների հետ՝ շատը շատերին, որպեսզի յուրաքանչյուր աշակերտ նշի իր տնայինները։", "Четыре таблицы: tasks ссылается на subjects и users через внешние ключи, а done связывает пользователей с заданиями по схеме «многие ко многим», чтобы каждый ученик отмечал свою домашку.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db, oop, dom, http, git, kanban, arch };
