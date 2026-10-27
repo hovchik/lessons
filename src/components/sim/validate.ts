@@ -85,6 +85,8 @@ const MODES: Record<string, string[]> = {
   sql: ["rows", "group"],
   stats: ["center", "axis"],
   vote: ["prop", "maj"],
+  market: ["supply", "ppf"],
+  finance: ["interest", "profit", "budget", "loan", "tax"],
 };
 
 export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle"];

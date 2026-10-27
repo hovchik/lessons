@@ -413,4 +413,46 @@ const selfgov: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov };
+/* ---------------- grade 10: who counts as unemployed ---------------- */
+
+const LABOUR: Array<[Tr, number, string]> = [
+  [t("Employed: 54", "Զբաղված՝ 54", "Заняты: 54"), 54, "#4f46e5"],
+  [t("Unemployed: 6", "Գործազուրկ՝ 6", "Безработные: 6"), 6, "#e11d48"],
+  [t("Inactive: 40", "Ոչ ակտիվ՝ 40", "Неактивные: 40"), 40, "#cbd5e1"],
+];
+
+const labour: Diagram = {
+  title: t("100 people of working age", "Աշխատունակ տարիքի 100 մարդ", "100 человек трудоспособного возраста"),
+  draw: (lang) => {
+    const colors = LABOUR.flatMap(([, n, c]) => Array(n).fill(c) as string[]);
+    return (
+      <g>
+        {colors.map((c, k) => <circle key={k} cx={22 + (k % 10) * 12} cy={26 + Math.floor(k / 10) * 12} r="4.6" fill={c} />)}
+        <rect x="14" y="18" width="120" height="76" rx="4" fill="none" stroke="#4f46e5" strokeDasharray="3 2" />
+        <text x="74" y="13" textAnchor="middle" fontSize="7" fontWeight="900" fill="#4f46e5">{L(t("economically active: 60", "տնտեսապես ակտիվ՝ 60", "экономически активные: 60"), lang)}</text>
+        {LABOUR.map(([name, , c], k) => (
+          <g key={k}>
+            <rect x="166" y={20 + k * 36} width="14" height="14" rx="7" fill={c} />
+            <Tx x={186} y={31 + k * 36} s={name} lang={lang} size={8.5} anchor="start" fill="#1e293b" />
+          </g>
+        ))}
+        <Tx x={186} y={42} s={t("have a job", "ունեն աշխատանք", "есть работа")} lang={lang} size={6.5} anchor="start" fill="#64748b" w={700} />
+        <Tx x={186} y={78} s={t("no job, looking, ready to start", "չունեն աշխատանք, փնտրում են", "нет работы, ищут, готовы выйти")} lang={lang} size={6.5} anchor="start" fill="#64748b" w={700} />
+        <Tx x={186} y={114} s={t("students, homemakers, not looking", "ուսանողներ, տնային տնտեսուհիներ", "студенты, домохозяйки, не ищут")} lang={lang} size={6.5} anchor="start" fill="#64748b" w={700} />
+        <rect x="14" y="150" width="292" height="58" rx="8" fill="#fff1f2" stroke="#fda4af" />
+        <Tx x={160} y={168} s={t("Unemployment rate", "Գործազրկության մակարդակ", "Уровень безработицы")} lang={lang} size={8.5} fill="#9f1239" />
+        <text x="160" y="190" textAnchor="middle" fontSize="12" fontWeight="900" fill="#9f1239">6 / 60 × 100% = 10%</text>
+        <Tx x={160} y={202} s={t("not 6 / 100: the inactive are not counted", "ոչ թե 6 / 100․ ոչ ակտիվները չեն հաշվվում", "а не 6 / 100: неактивных не считают")} lang={lang} size={6.5} fill="#be123c" w={700} />
+      </g>
+    );
+  },
+  parts: [
+    P(146, 27, t("Employed", "Զբաղվածներ", "Занятые"), t("Anyone who worked for pay or profit, including part-time workers and people running their own business or farm.", "Բոլոր նրանք, ովքեր աշխատել են վարձատրության կամ շահույթի համար, այդ թվում՝ ոչ լրիվ դրույքով աշխատողները և սեփական բիզնես կամ տնտեսություն վարողները։", "Все, кто работал за плату или прибыль, включая тех, кто работает неполный день или ведёт своё дело или хозяйство.")),
+    P(146, 63, t("Unemployed", "Գործազուրկներ", "Безработные"), t("Only people without a job who are actively looking for one and are ready to start. A graduate sending out CVs counts; someone who has given up looking does not.", "Միայն աշխատանք չունեցողները, ովքեր ակտիվորեն փնտրում են այն և պատրաստ են սկսել։ Ինքնակենսագրություն ուղարկող շրջանավարտը հաշվվում է, իսկ փնտրելը դադարեցրածը՝ ոչ։", "Только люди без работы, которые активно её ищут и готовы начать. Выпускник, рассылающий резюме, считается; тот, кто бросил искать, — нет.")),
+    P(146, 99, t("Inactive", "Ոչ ակտիվներ", "Неактивные"), t("Students, people caring for the home or children, and those who are not looking for work. They are outside the labour force, so they do not enter the rate at all.", "Ուսանողները, տան կամ երեխաների մասին հոգ տանողները և նրանք, ովքեր աշխատանք չեն փնտրում։ Նրանք աշխատուժից դուրս են, ուստի ընդհանրապես չեն մտնում մակարդակի հաշվարկի մեջ։", "Студенты, те, кто ведёт дом или ухаживает за детьми, и те, кто не ищет работу. Они вне рабочей силы и вообще не входят в расчёт уровня.")),
+    P(130, 18, t("Economically active", "Տնտեսապես ակտիվներ", "Экономически активные"), t("The employed plus the unemployed: everyone who works or wants to work. This is the bottom of the fraction.", "Զբաղվածները գումարած գործազուրկները․ բոլոր նրանք, ովքեր աշխատում են կամ ուզում են աշխատել։ Սա կոտորակի հայտարարն է։", "Занятые плюс безработные: все, кто работает или хочет работать. Это знаменатель дроби.")),
+    P(296, 168, t("A puzzle", "Հանելուկ", "Загадка"), t("If 3 unemployed people give up and stop looking, the rate falls to 3 / 57, about 5%, although nobody found a job. That is why economists also watch how many people are active at all.", "Եթե 3 գործազուրկ հուսահատվի և դադարի փնտրել, մակարդակը կնվազի մինչև 3 / 57, մոտ 5%, թեև ոչ ոք աշխատանք չի գտել։ Ահա թե ինչու տնտեսագետները հետևում են նաև, թե ընդհանրապես քանի մարդ է ակտիվ։", "Если 3 безработных отчаются и перестанут искать, уровень упадёт до 3 / 57, около 5%, хотя никто не нашёл работу. Поэтому экономисты следят и за тем, сколько людей вообще активны.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov, labour };
