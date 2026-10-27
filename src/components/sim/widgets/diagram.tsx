@@ -15,6 +15,7 @@ const LOAD: Record<DiagramGroup, () => Promise<{ DIAGRAMS: Record<string, Diagra
   geog: () => import("../mech/diag-geog"),
   sci: () => import("../mech/diag-sci"),
   inf: () => import("../mech/diag-inf"),
+  soc: () => import("../mech/diag-soc"),
 };
 
 /** ```sim diagram sun: a labelled picture with numbered parts to tap. */

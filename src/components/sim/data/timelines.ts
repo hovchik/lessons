@@ -1,10 +1,11 @@
 import type { Tr } from "@/lib/art/spec";
 import { HIST_TIMELINES } from "./timelines-hist";
 import { INF_TIMELINES } from "./timelines-inf";
+import { SOC_TIMELINES } from "./timelines-soc";
 import { WORLD_TIMELINES } from "./timelines-world";
 
 /** One dated event: years BC are negative; `to` makes it a period, `c` marks an approximate date. */
 export type TimeEvent = { y: number; to?: number; c?: boolean; l: Tr; n?: Tr };
 export type TimeSet = { title: Tr; events: TimeEvent[]; eras?: Array<{ from: number; to: number; l: Tr; color?: string }> };
 
-export const TIMELINES: Record<string, TimeSet> = { ...HIST_TIMELINES, ...WORLD_TIMELINES, ...INF_TIMELINES };
+export const TIMELINES: Record<string, TimeSet> = { ...HIST_TIMELINES, ...WORLD_TIMELINES, ...INF_TIMELINES, ...SOC_TIMELINES };

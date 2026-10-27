@@ -38,6 +38,7 @@ export const DIAGRAM_GROUPS = {
   geog: ["globegrid", "contour", "earthlayers", "volcano", "river", "atmoslayers", "altzones"],
   sci: ["body", "crossing", "plant", "soil", "forest", "skeleton", "compass"],
   inf: ["computer", "network", "flowchart", "memory", "layers", "url", "tag", "box", "os", "phish", "db", "oop", "dom", "http", "git", "kanban", "arch"],
+  soc: ["socialisation", "maslow", "eduarm", "roles", "tki"],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;
