@@ -124,6 +124,13 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   move3: [t("Symbolism", "Սիմվոլիզմ", "Символизм"), t("Acmeism", "Ակմեիզմ", "Акмеизм"), t("Futurism", "Ֆուտուրիզմ", "Футуризм")],
   ruhy2: [t("Russian", "Ռուսական", "Русский"), t("Armenian", "Հայկական", "Армянский")],
   quote: [t("Quotation", "Մեջբերում", "Цитата"), t("Author", "Հեղինակ", "Автор")],
+  sep3: [t("Together", "Միասին", "Слитно"), t("Hyphen", "Գծիկով", "Через дефис"), t("Separately", "Անջատ", "Раздельно")],
+  origin: [t("Idiom", "Դարձվածք", "Фразеологизм"), t("Origin", "Ծագում", "Происхождение")],
+  speech3: [t("Narration", "Պատմում", "Повествование"), t("Description", "Նկարագրություն", "Описание"), t("Reasoning", "Դատողություն", "Рассуждение")],
+  acad: [t("Conversational", "Խոսակցական", "Разговорный"), t("Scientific", "Գիտական", "Научный")],
+  false3: [t("Russian word", "Ռուսերեն բառ", "Русское слово"), t("Means", "Նշանակում է", "Значит"), t("Not", "Ոչ թե", "Не")],
+  realia: [t("Realia", "Ռեալիա", "Реалия"), t("Explanation", "Բացատրություն", "Пояснение")],
+  metre: [t("Metre", "Չափ", "Размер"), t("Example", "Օրինակ", "Пример")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
