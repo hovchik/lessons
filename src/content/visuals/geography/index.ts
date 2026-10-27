@@ -5,6 +5,7 @@ import { grade8 } from "./grade-8";
 import { grade9 } from "./grade-9";
 import { grade10 } from "./grade-10";
 import { grade11 } from "./grade-11";
+import { grade12 } from "./grade-12";
 
 /**
  * Geography 6–12: climate graphs, map and atmosphere calculators, labelled Earth pictures
@@ -19,4 +20,5 @@ export const geographyVisuals: VisualMap = {
   9: grade9,
   10: grade10,
   11: grade11,
+  12: grade12,
 };
