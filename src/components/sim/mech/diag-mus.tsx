@@ -501,4 +501,213 @@ const peterwolf: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf };
+/* ---------------- grade 4: a whole life in songs ---------------- */
+
+const WHEEL: Array<[Tr, string]> = [
+  [t("lullaby", "օրորո-|ցային", "колы-|бельная"), "#f9a8d4"],
+  [t("dance", "պարերգ", "плясовая"), "#fb923c"],
+  [t("work", "աշխա-|տանքային", "трудовая"), "#facc15"],
+  [t("love", "սիրերգ", "любовная"), "#f87171"],
+  [t("wedding", "հարսա-|նեկան", "свадебная"), "#c084fc"],
+  [t("festive", "տոնա-|ծիսական", "обрядовая"), "#34d399"],
+  [t("comic", "զավեշ-|տական", "шуточная"), "#38bdf8"],
+  [t("wanderer", "պանդխտի", "песня|странника"), "#818cf8"],
+  [t("lament", "ողբ", "плач"), "#94a3b8"],
+];
+const WX = 160, WY = 110;
+const wedge = (r1: number, r2: number, a1: number, a2: number) => {
+  const pt = (r: number, a: number) => `${(WX + r * Math.cos(a)).toFixed(1)},${(WY + r * Math.sin(a)).toFixed(1)}`;
+  return `M${pt(r1, a1)} L${pt(r2, a1)} A${r2},${r2} 0 0 1 ${pt(r2, a2)} L${pt(r1, a2)} A${r1},${r1} 0 0 0 ${pt(r1, a1)} Z`;
+};
+const wAng = (k: number) => -Math.PI / 2 + (k * 2 * Math.PI) / WHEEL.length;
+const wPt = (k: number, r: number): [number, number] => {
+  const a = wAng(k + 0.5);
+  return [WX + r * Math.cos(a), WY + r * Math.sin(a)];
+};
+
+const folkwheel: Diagram = {
+  title: t("A whole life in songs", "Մի ամբողջ կյանք՝ երգերով", "Целая жизнь в песнях"),
+  h: 220,
+  draw: (lang) => (
+    <g>
+      {WHEEL.map(([s, c], k) => {
+        const [x, y] = wPt(k, 70);
+        return (
+          <g key={k}>
+            <path d={wedge(30, 102, wAng(k), wAng(k + 1))} fill={c} stroke="#fff" strokeWidth="2" />
+            <Tx x={x} y={y + (L(s, lang).includes("|") ? -1 : 2.5)} s={s} lang={lang} size={7} fill="#1e1b4b" />
+          </g>
+        );
+      })}
+      <circle cx={WX} cy={WY} r="29" fill="#fff" />
+      <Tx x={WX} y={WY - 3} s={t("one life,|many songs", "մեկ կյանք,|շատ երգեր", "одна жизнь,|много песен")} lang={lang} size={6.5} fill="#475569" />
+      <path d={`M${WX + 112},${WY - 40} A118,118 0 0 1 ${WX + 112},${WY + 40}`} fill="none" stroke="#cbd5e1" strokeWidth="1.5" markerEnd="url(#mus-arr2)" />
+      <defs>
+        <marker id="mus-arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#cbd5e1" />
+        </marker>
+      </defs>
+    </g>
+  ),
+  parts: [
+    P(...wPt(0, 96), t("Lullaby", "Օրորոցային", "Колыбельная"), t("The first songs a child hears: slow, rocking and quiet, often with \"nani-nani\" or \"oror\" repeated again and again.", "Առաջին երգերը, որ լսում է երեխան․ դանդաղ, օրորվող և հանգիստ, հաճախ «նանի-նանի» կամ «օրոր» բառերով, որոնք կրկնվում են նորից ու նորից։", "Первые песни, которые слышит ребёнок: медленные, укачивающие и тихие, часто с повторяющимся «нани-нани» или «орор».")),
+    P(...wPt(2, 96), t("Work songs", "Աշխատանքային երգեր", "Трудовые песни"), t("The horovel was sung behind the plough to urge on the oxen; the rhythm of a work song keeps everyone moving together.", "Հորովելն երգում էին գութանի հետևից՝ եզներին քաջալերելու համար․ աշխատանքային երգի ռիթմն օգնում է բոլորին միասին շարժվել։", "Хоровел пели за плугом, подбадривая волов; ритм трудовой песни помогает всем двигаться вместе.")),
+    P(...wPt(4, 96), t("Wedding songs", "Հարսանեկան երգեր", "Свадебные песни"), t("Songs for every step of a wedding: dressing the bride, greeting the groom, dancing at the feast.", "Երգեր հարսանիքի ամեն քայլի համար՝ հարսին հագցնելիս, փեսային դիմավորելիս, խնջույքին պարելիս։", "Песни для каждого шага свадьбы: когда одевают невесту, встречают жениха, танцуют на пиру.")),
+    P(...wPt(5, 96), t("Festive and ritual", "Տոնածիսական", "Обрядовые"), t("Sung on feast days, like the vijak songs at the Ascension, when girls drew trinkets from a jug to tell fortunes.", "Երգվում էին տոներին, ինչպես վիճակի երգերը Համբարձման տոնին, երբ աղջիկները սափորից հանում էին զարդերը՝ բախտը գուշակելու համար։", "Их пели в праздники, как песни виджак на Вознесение, когда девушки гадали, вынимая украшения из кувшина.")),
+    P(...wPt(7, 96), t("Wanderer's songs", "Պանդխտի երգեր", "Песни странника"), t("Sung by those far from home. In \"Krunk\" the wanderer begs a crane for news of his homeland.", "Երգում էին նրանք, ովքեր հեռու էին տնից։ «Կռունկ» երգում պանդուխտը կռունկից լուր է խնդրում հայրենիքից։", "Их пели те, кто был далеко от дома. В «Крунк» странник просит журавля принести весть с родины.")),
+    P(WX + 120, WY, t("Around the wheel", "Անիվի շուրջը", "По кругу"), t("Read the wheel clockwise from the top: it follows a life from the cradle to old age.", "Կարդա՛ անիվը ժամացույցի սլաքի ուղղությամբ՝ վերևից․ այն հետևում է կյանքին՝ օրորոցից մինչև ծերություն։", "Читай круг по часовой стрелке сверху: он идёт за жизнью от колыбели до старости.")),
+  ],
+};
+
+/* ---------------- grade 4: sacred music on the page ---------------- */
+
+const manuscript: Diagram = {
+  title: t("A page of sharakans", "Շարականների էջ", "Страница шараканов"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="40" y="6" width="240" height="140" rx="4" fill="#fdf6e3" stroke="#d6b26e" />
+      {/* a bird-shaped initial */}
+      <g transform="translate(56 26)">
+        <path d="M6,40 C0,24 8,6 24,6 C34,6 38,14 36,20 L44,18 L38,26 C38,40 26,50 12,48 Z" fill="#0f766e" />
+        <circle cx="28" cy="13" r="2.4" fill="#fde68a" />
+        <path d="M10,46 l-6,12 M18,48 l0,12" stroke="#b91c1c" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M12,24 q8,8 18,4" stroke="#facc15" strokeWidth="2" fill="none" />
+      </g>
+      {/* red heading, then lines of words with khaz above */}
+      <rect x="112" y="18" width="150" height="7" rx="2" fill="#b91c1c" opacity="0.85" />
+      {[0, 1, 2, 3, 4, 5].map((r) => {
+        const y = 44 + r * 17;
+        const x0 = r < 3 ? 112 : 56;
+        const words = r < 3 ? [30, 22, 36, 26] : [28, 40, 24, 34, 30, 34];
+        let x = x0;
+        return (
+          <g key={r}>
+            {words.map((w, k) => {
+              const g = (
+                <g key={k}>
+                  <rect x={x} y={y} width={w} height="4.5" rx="1.5" fill="#57534e" opacity="0.75" />
+                  <path d={["M0,0 q3,-5 6,0", "M0,-2 l4,3 l4,-3", "M0,0 h6 m-2,-3 l2,3", "M0,1 q2,-6 5,-2 q2,2 4,-2"][(r + k) % 4]} transform={`translate(${x + w / 2 - 4} ${y - 4})`} fill="none" stroke="#b91c1c" strokeWidth="1" />
+                </g>
+              );
+              x += w + 6;
+              return g;
+            })}
+          </g>
+        );
+      })}
+      <path d="M268,130 l4,-8 l4,8 l-4,-3 Z" fill="#b91c1c" />
+      {/* soloist melody over the choir's held dam */}
+      <rect x="4" y="154" width="312" height="56" rx="8" fill="#f1f5f9" />
+      <path d={`M44,178 ${[-12, 8, -16, 10, -8, 14, -10, 6, -12].map((d) => `q14,${d} 28,0`).join(" ")}`} fill="none" stroke="#4f46e5" strokeWidth="2" />
+      <line x1="44" x2="300" y1="198" y2="198" stroke="#0d9488" strokeWidth="3" strokeLinecap="round" />
+      <Tx x={10} y={176} s={t("melody", "մեղեդի", "мелодия")} lang={lang} size={6.5} anchor="start" fill="#4f46e5" />
+      <Tx x={10} y={200} s={t("dam", "դամ", "дам")} lang={lang} size={6.5} anchor="start" fill="#0d9488" />
+    </g>
+  ),
+  parts: [
+    P(62, 20, t("A bird for a letter", "Թռչուն՝ տառի փոխարեն", "Птица вместо буквы"), t("Armenian scribes often painted the first letter of a hymn as a bird or a beast. Such letters are called ornithomorphic: \"bird-shaped\".", "Հայ գրիչները հաճախ շարականի առաջին տառը նկարում էին թռչնի կամ գազանի տեսքով։ Այդպիսի տառերը կոչվում են թռչնագիր։", "Армянские писцы часто рисовали первую букву гимна в виде птицы или зверя. Такие буквы называют птицевидными.")),
+    P(272, 20, t("Red ink", "Կարմիր թանաք", "Красные чернила"), t("Titles and instructions for the singers were written in red, so they stood out from the words that were sung.", "Վերնագրերն ու երգիչների համար ցուցումները գրում էին կարմիրով, որպեսզի դրանք առանձնանային երգվող բառերից։", "Заголовки и указания певцам писали красным, чтобы они выделялись среди слов, которые поют.")),
+    P(276, 64, t("Khaz", "Խազեր", "Хазы"), t("Small signs above the words told the singer how the melody moved: up, down, longer, ornamented. Their exact meaning has been partly lost.", "Բառերի վերևի փոքր նշաններն երգչին ցույց էին տալիս, թե ինչպես է շարժվում մեղեդին՝ վեր, վար, երկար, զարդարված։ Դրանց ճշգրիտ իմաստը մասամբ մոռացվել է։", "Маленькие значки над словами показывали певцу, как движется мелодия: вверх, вниз, протяжно, с украшением. Их точный смысл отчасти утрачен.")),
+    P(310, 178, t("Melody", "Մեղեդի", "Мелодия"), t("A soloist or the choir sings the sharakan in unison: one line, flowing and calm.", "Մեներգիչը կամ երգչախումբը միաձայն երգում է շարականը՝ մեկ սահուն, հանգիստ գիծ։", "Солист или хор поёт шаракан в унисон: одна плавная, спокойная линия.")),
+    P(310, 198, t("Dam", "Դամ", "Дам"), t("Under the melody some singers hold one long, steady note, the dam, like the second duduk in a duet.", "Մեղեդու տակ որոշ երգիչներ պահում են մեկ երկար, կայուն նոտա՝ դամը, ինչպես զույգ դուդուկներից երկրորդը։", "Под мелодией некоторые певцы тянут одну долгую ровную ноту — дам, как второй дудук в дуэте.")),
+  ],
+};
+
+/* ---------------- grade 4: the five positions of ballet ---------------- */
+
+const Foot = ({ x, y, dir }: { x: number; y: number; dir: 1 | -1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${dir} 1)`}>
+    <path d="M-11,0 C-11,-4 -2,-5 6,-4.5 C11,-4 13,-2 13,0 C13,2 11,4 6,4.5 C-2,5 -11,4 -11,0 Z" fill="#fbcfe8" stroke="#be185d" strokeWidth="0.9" />
+  </g>
+);
+const POS: Array<Array<[number, number, 1 | -1]>> = [
+  [[-12, 0, -1], [12, 0, 1]],
+  [[-24, 0, -1], [24, 0, 1]],
+  [[-6, -4, -1], [6, 4, 1]],
+  [[0, -11, -1], [0, 11, 1]],
+  [[0, -4.5, -1], [0, 4.5, 1]],
+];
+
+const positions: Diagram = {
+  title: t("Ballet: positions, pointe shoes", "Բալետ․ դիրքեր, պուանտներ", "Балет: позиции и пуанты"),
+  h: 204,
+  draw: (lang) => (
+    <g>
+      {POS.map((feet, k) => (
+        <g key={k}>
+          <rect x={6 + k * 62} y="6" width="58" height="62" rx="8" fill="#fdf2f8" />
+          <text x={35 + k * 62} y="20" textAnchor="middle" fontSize="9" fontWeight="900" fill="#be185d">{k + 1}</text>
+          {feet.map(([dx, dy, d], i) => <Foot key={i} x={35 + k * 62 + dx * 0.85} y={44 + dy} dir={d} />)}
+        </g>
+      ))}
+      {/* a pointe shoe, side view */}
+      <path d="M24,150 C24,128 60,124 92,132 L118,138 C126,140 128,152 120,156 L34,160 C27,160 24,156 24,150 Z" fill="#fbcfe8" stroke="#be185d" />
+      <rect x="114" y="136" width="9" height="20" rx="2" fill="#f9a8d4" stroke="#be185d" />
+      <path d="M40,132 C34,110 50,96 52,84 M52,132 C60,112 74,104 80,92" fill="none" stroke="#f472b6" strokeWidth="2.5" />
+      <path d="M30,160 L118,156" stroke="#9d174d" strokeWidth="2" />
+      {/* a dancer en pointe */}
+      <ellipse cx="236" cy="128" rx="46" ry="9" fill="#f9a8d4" opacity="0.8" />
+      <path d="M230,96 h12 l2,30 h-16 Z" fill="#ec4899" />
+      <circle cx="236" cy="86" r="8" fill={SKIN} stroke={SKIN_LINE} />
+      <path d="M228,82 q8,-10 16,0" fill="#7c2d12" />
+      <path d="M232,100 L206,78 M240,100 L266,78" stroke={SKIN} strokeWidth="3.5" strokeLinecap="round" />
+      <path d="M232,132 L230,196 M240,132 L248,170 L268,164" stroke={SKIN} strokeWidth="4" strokeLinecap="round" fill="none" />
+      <path d="M228,192 l3,6 M268,160 l5,3" stroke="#be185d" strokeWidth="3" strokeLinecap="round" />
+      <Tx x={70} y={178} s={t("pointe shoe", "պուանտ", "пуант")} lang={lang} size={7.5} fill="#9d174d" />
+    </g>
+  ),
+  parts: [
+    P(35, 66, t("First position", "Առաջին դիրք", "Первая позиция"), t("Heels together and toes turned out to the sides. Every ballet lesson starts here.", "Կրունկները միասին, ոտնաթաթերը շրջված դեպի կողքեր։ Բալետի ամեն դաս սկսվում է այստեղից։", "Пятки вместе, носки развёрнуты в стороны. С неё начинается каждый урок балета.")),
+    P(97, 66, t("Second position", "Երկրորդ դիրք", "Вторая позиция"), t("Turned out like the first, but with the heels about a foot apart.", "Շրջված է առաջինի պես, բայց կրունկներն իրարից մոտ մեկ ոտնաթաթ հեռու են։", "Развёрнута, как первая, но пятки на расстоянии примерно одной стопы.")),
+    P(221, 66, t("Fourth and fifth", "Չորրորդ և հինգերորդ", "Четвёртая и пятая"), t("One foot in front of the other: apart in the fourth, touching heel to toe in the fifth. A French dancing master, Pierre Beauchamp, set down the five positions more than 300 years ago.", "Մի ոտքը մյուսի առջև՝ չորրորդում իրարից հեռու, հինգերորդում՝ կրունկը մատներին հպված։ Ֆրանսիացի պարուսույց Պիեռ Բոշանը հինգ դիրքերը սահմանել է ավելի քան 300 տարի առաջ։", "Одна стопа перед другой: в четвёртой на расстоянии, в пятой пятка касается носка. Французский учитель танцев Пьер Бошан закрепил пять позиций более 300 лет назад.")),
+    P(132, 146, t("Pointe shoe", "Պուանտ", "Пуант"), t("A hard, flat box at the tip lets a dancer stand on her toes. It is made of layers of fabric and glue, and a professional can wear out a pair in a single performance.", "Ծայրի կոշտ, տափակ «տուփը» պարուհուն թույլ է տալիս կանգնել մատների վրա։ Այն պատրաստված է կտորի և սոսնձի շերտերից, և պրոֆեսիոնալ պարուհին կարող է մեկ ներկայացման ընթացքում մաշել մի զույգ։", "Твёрдый плоский «пятачок» на конце позволяет балерине стоять на кончиках пальцев. Он сделан из слоёв ткани и клея, и профессионалка может износить пару за один спектакль.")),
+    P(58, 92, t("Ribbons", "Ժապավեններ", "Ленты"), t("Every dancer sews the ribbons onto her own shoes and ties them around the ankle so the shoe cannot slip.", "Ամեն պարուհի ինքն է կարում ժապավեններն իր կոշիկներին և կապում կոճի շուրջը, որպեսզի կոշիկը չսահի։", "Каждая балерина сама пришивает ленты к своим туфлям и обвязывает их вокруг щиколотки, чтобы туфля не соскользнула.")),
+    P(290, 128, t("Tutu", "Տուտու", "Пачка"), t("The short, stiff skirt standing out like a plate shows the dancer's legs and every step clearly.", "Կարճ, կոշտ, ափսեի պես դուրս ցցված կիսաշրջազգեստը պարզ ցույց է տալիս պարուհու ոտքերը և ամեն քայլը։", "Короткая жёсткая юбка, торчащая, как тарелка, позволяет ясно видеть ноги балерины и каждый шаг.")),
+  ],
+};
+
+/* ---------------- grade 4: inside a concert hall ---------------- */
+
+const hall: Diagram = {
+  title: t("Inside a concert hall", "Համերգասրահի ներսում", "Внутри концертного зала"),
+  h: 204,
+  draw: (lang) => (
+    <g>
+      {/* walls, ceiling and floor */}
+      <path d="M8,30 L312,14 V196 H8 Z" fill="#fffbeb" stroke="#d6b26e" />
+      {[0, 1, 2, 3].map((k) => <path key={k} d={`M${70 + k * 58},${36 - k * 3} q24,10 48,-3`} fill="none" stroke="#a16207" strokeWidth="2.5" />)}
+      {/* organ on the back wall of the stage */}
+      {Array.from({ length: 9 }, (_, k) => <rect key={k} x={14 + k * 6} y={60 + Math.abs(4 - k) * 5} width="4.5" height={60 - Math.abs(4 - k) * 5} rx="1.5" fill="#cbd5e1" stroke="#64748b" strokeWidth="0.5" />)}
+      {/* stage with the orchestra */}
+      <rect x="8" y="140" width="112" height="56" fill="#b45309" />
+      {Array.from({ length: 14 }, (_, k) => <circle key={k} cx={20 + (k % 7) * 13} cy={k < 7 ? 132 : 124} r="3.5" fill={k < 7 ? "#16a34a" : "#0284c7"} />)}
+      <circle cx="112" cy="122" r="4" fill="#1e1b4b" />
+      <path d="M112,126 v14 M112,128 l8,-8" stroke="#1e1b4b" strokeWidth="1.6" />
+      {/* sloping stalls and a balcony */}
+      <path d="M120,196 L120,176 L312,150 V196 Z" fill="#fecaca" />
+      {Array.from({ length: 12 }, (_, k) => <circle key={k} cx={136 + k * 15} cy={168 - k * 2.05} r="3.2" fill="#7f1d1d" />)}
+      <path d="M220,96 h92 v12 h-92 Z" fill="#fca5a5" stroke="#b91c1c" strokeWidth="0.8" />
+      {Array.from({ length: 6 }, (_, k) => <circle key={k} cx={232 + k * 14} cy="91" r="3.2" fill="#7f1d1d" />)}
+      {/* sound reaching every seat */}
+      {[0, 1, 2].map((k) => <path key={k} d={`M${130 + k * 14},${110 - k * 6} q${18},${-14} ${10},${-34}`} fill="none" stroke="#7c3aed" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.7" />)}
+      <path d="M130,118 Q210,96 300,140" fill="none" stroke="#7c3aed" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.7" />
+      <path d="M126,60 Q170,30 240,40 Q280,48 296,86" fill="none" stroke="#7c3aed" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.7" />
+      {/* a phone switched off */}
+      <rect x="282" y="160" width="14" height="24" rx="3" fill="#1e293b" />
+      <path d="M278,156 L300,188" stroke="#dc2626" strokeWidth="2.2" />
+      <Tx x={64} y={188} s={t("stage", "բեմ", "сцена")} lang={lang} size={7.5} fill="#fff" />
+      <Tx x={190} y={186} s={t("stalls", "պարտեր", "партер")} lang={lang} size={7.5} fill="#7f1d1d" />
+      <Tx x={266} y={120} s={t("balcony", "օթյակ", "балкон")} lang={lang} size={7} fill="#b91c1c" />
+    </g>
+  ),
+  parts: [
+    P(44, 52, t("The organ", "Երգեհոն", "Орган"), t("Many big halls have a pipe organ built into the wall behind the stage. Some of its pipes are taller than a house.", "Շատ մեծ դահլիճներում բեմի հետևի պատի մեջ խողովակավոր երգեհոն է կառուցված։ Նրա որոշ խողովակներ տնից բարձր են։", "Во многих больших залах в стену за сценой встроен орган. Некоторые его трубы выше дома.")),
+    P(112, 106, t("Conductor", "Դիրիժոր", "Дирижёр"), t("When the conductor lowers the baton and turns to the audience, the piece is over: that is the moment to clap.", "Երբ դիրիժորն իջեցնում է փայտիկը և շրջվում դեպի դահլիճ, ստեղծագործությունն ավարտված է․ հենց այդ պահին է պետք ծափահարել։", "Когда дирижёр опускает палочку и поворачивается к залу, пьеса закончилась: вот тогда и надо хлопать.")),
+    P(186, 24, t("Reflectors", "Անդրադարձիչներ", "Отражатели"), t("Curved panels on the ceiling bounce the sound down, so even the last row hears every note without microphones.", "Առաստաղի կոր վահանակներն արտացոլում են ձայնը դեպի ներքև, ուստի նույնիսկ վերջին շարքը լսում է ամեն նոտա՝ առանց խոսափողների։", "Изогнутые панели на потолке отражают звук вниз, и даже последний ряд слышит каждую ноту без микрофонов.")),
+    P(150, 148, t("Stalls", "Պարտեր", "Партер"), t("The floor slopes upwards, so each row can see over the heads of the row in front.", "Հատակը թեքված է դեպի վեր, որպեսզի ամեն շարք տեսնի առջևի շարքի գլուխների վրայով։", "Пол поднимается, чтобы каждый ряд видел поверх голов предыдущего.")),
+    P(304, 152, t("Phone off", "Հեռախոսն անջատված", "Телефон выключен"), t("A single ringing phone can be heard by two thousand people in a quiet hall, so switch it off before the music starts.", "Հանգիստ դահլիճում մեկ զանգող հեռախոսը կարող են լսել երկու հազար մարդ, ուստի անջատի՛ր այն, մինչև երաժշտությունը սկսվի։", "В тихом зале один звонящий телефон услышат две тысячи человек, поэтому выключи его до начала музыки.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall };
