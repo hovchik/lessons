@@ -11,6 +11,7 @@ import { L, t } from "../labels";
  *   forms lang=ru кот кота коту кота котом коте pl=коты,котов,котам,котов,котами,котах   cases
  *   forms mode=persons lang=hy գրում_եմ գրում_ես …                                         persons of a verb
  *   forms mode=verbs go:went:gone see:saw:seen                                               irregular verbs, hide a column to test yourself
+ *   forms mode=compare cols=stages սիրեմ:կու_սիրեմ:կը_սիրեմ:սիրում_եմ                          the same word side by side (cols: COLS below)
  * lang= is the language of the words (ru: 6 cases, hy: 7 cases). Write stem|ending when the
  * stem changes (день|, дн|я), or put the changing part in [ ] anywhere ([չեմ]_գրում); otherwise
  * the ending is what follows the part all forms share. _ stands for a space, - for "no form".
@@ -23,6 +24,7 @@ const W = {
   personsHint: t("Who does it? The ending (or the helping word) tells you.", "Ո՞վ է անում։ Դա ցույց է տալիս վերջավորությունը (կամ օժանդակ բայը)։", "Кто делает? Это подсказывает окончание (или вспомогательный глагол)."),
   verbs: t("Try it: irregular verbs", "Փորձիր․ անկանոն բայեր", "Попробуй: неправильные глаголы"),
   verbsHint: t("Hide a column, say the forms aloud, then tap a cell to check.", "Թաքցրու մի սյունակ, բարձրաձայն ասա ձևերը, հետո հպիր վանդակին՝ ստուգելու համար։", "Спрячь столбец, назови формы вслух, потом нажми на клетку, чтобы проверить."),
+  compare: t("Try it: compare the forms", "Փորձիր․ համեմատիր ձևերը", "Попробуй: сравни формы"),
   sg: t("Singular", "Եզակի", "Единственное число"),
   pl: t("Plural", "Հոգնակի", "Множественное число"),
   caseH: t("Case", "Հոլով", "Падеж"),
@@ -35,6 +37,17 @@ const W = {
     t("1st, singular", "1-ին դեմք, եզակի", "1-е л., ед. ч."), t("2nd, singular", "2-րդ դեմք, եզակի", "2-е л., ед. ч."), t("3rd, singular", "3-րդ դեմք, եզակի", "3-е л., ед. ч."),
     t("1st, plural", "1-ին դեմք, հոգնակի", "1-е л., мн. ч."), t("2nd, plural", "2-րդ դեմք, հոգնակի", "2-е л., мн. ч."), t("3rd, plural", "3-րդ դեմք, հոգնակի", "3-е л., мн. ч."),
   ],
+};
+/** Column sets for mode=compare. */
+const COLS: Record<string, ReturnType<typeof t>[]> = {
+  stages: [t("Grabar", "Գրաբար", "Грабар"), t("Middle", "Միջին", "Средний"), t("Western", "Արևմտյան", "Западный"), t("Eastern", "Արևելյան", "Восточный")],
+  ew: [t("Eastern Armenian", "Արևելահայերեն", "Восточноармянский"), t("Western Armenian", "Արևմտահայերեն", "Западноармянский")],
+  spelling: [t("Classical spelling", "Դասական ուղղագրություն", "Классическая орфография"), t("Reformed spelling", "Բարեփոխված ուղղագրություն", "Реформированная орфография")],
+  ie: [t("Armenian", "Հայերեն", "Армянский"), t("Latin", "Լատիներեն", "Латынь"), t("Greek", "Հունարեն", "Греческий"), t("English", "Անգլերեն", "Английский")],
+  root: [t("Stressed root", "Շեշտված արմատ", "Корень под ударением"), t("Unstressed root", "Անշեշտ արմատ", "Корень без ударения")],
+  modern: [t("Grabar", "Գրաբար", "Грабар"), t("Modern Armenian", "Արդի հայերեն", "Современный армянский")],
+  dialect: [t("Dialect", "Բարբառ", "Диалект"), t("Standard", "Գրական", "Литературный")],
+  loan: [t("Loanword", "Փոխառություն", "Заимствование"), t("Armenian word", "Հայերեն բառ", "Армянское слово")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
@@ -118,21 +131,27 @@ function Persons({ lang, forms, wl }: { lang: SimProps["lang"]; forms: string[];
   );
 }
 
-function Verbs({ lang, rows }: { lang: SimProps["lang"]; rows: string[][] }) {
+function Verbs({ lang, rows, cols }: { lang: SimProps["lang"]; rows: string[][]; cols?: string }) {
   const [hidden, setHidden] = useState<number | null>(null);
   const [open, setOpen] = useState<string[]>([]);
-  const heads = ["V1", "V2 (past)", "V3 (participle)"];
+  const named = cols ? COLS[cols]?.map((h) => L(h, lang)) : undefined;
+  const heads = named ?? ["V1", "V2 (past)", "V3 (participle)"];
+  const short = named ?? ["V1", "V2", "V3"];
   return (
     <>
       <div className="art-chips">
-        {[1, 2].map((c) => (
-          <button key={c} type="button" className={`art-chip ${hidden === c ? "is-active" : ""}`} onClick={() => { setHidden(c); setOpen([]); }}>
-            {L(W.hide, lang)} V{c + 1}
-          </button>
-        ))}
+        {heads.slice(named ? 0 : 1).map((_, k) => {
+          const c = named ? k : k + 1;
+          return (
+            <button key={c} type="button" className={`art-chip ${hidden === c ? "is-active" : ""}`} onClick={() => { setHidden(c); setOpen([]); }}>
+              {L(W.hide, lang)}: {short[c]}
+            </button>
+          );
+        })}
         <button type="button" className={`art-chip ${hidden === null ? "is-active" : ""}`} onClick={() => setHidden(null)}>{L(W.showAll, lang)}</button>
       </div>
-      <table className="lang-table is-verbs">
+      <div className="lang-scroll">
+      <table className={`lang-table is-verbs ${heads.length > 3 ? "is-wide" : ""}`}>
         <thead><tr>{heads.map((h) => <th key={h}>{h}</th>)}</tr></thead>
         <tbody>
           {rows.map((r, i) => (
@@ -142,7 +161,7 @@ function Verbs({ lang, rows }: { lang: SimProps["lang"]; rows: string[][] }) {
                 const hide = c === hidden && !open.includes(id);
                 return (
                   <td key={c}>
-                    {hide ? <button type="button" className="lang-cover" onClick={() => setOpen([...open, id])}>?</button> : <span className={c ? "lang-form" : undefined}>{sp(v)}</span>}
+                    {hide ? <button type="button" className="lang-cover" onClick={() => setOpen([...open, id])}>?</button> : <span className={c || named ? "lang-form" : undefined}>{sp(v)}</span>}
                   </td>
                 );
               })}
@@ -150,6 +169,7 @@ function Verbs({ lang, rows }: { lang: SimProps["lang"]; rows: string[][] }) {
           ))}
         </tbody>
       </table>
+      </div>
     </>
   );
 }
@@ -157,10 +177,10 @@ function Verbs({ lang, rows }: { lang: SimProps["lang"]; rows: string[][] }) {
 export default function Forms({ spec, lang }: SimProps) {
   const mode = spec.opts.mode ?? "cases";
   const wl = (["ru", "hy", "en"].includes(spec.opts.lang ?? "") ? spec.opts.lang : "ru") as Lang;
-  const [title, hint] = mode === "persons" ? [W.persons, W.personsHint] : mode === "verbs" ? [W.verbs, W.verbsHint] : [W.cases, W.casesHint];
+  const [title, hint] = mode === "persons" ? [W.persons, W.personsHint] : mode === "verbs" ? [W.verbs, W.verbsHint] : mode === "compare" ? [W.compare, W.verbsHint] : [W.cases, W.casesHint];
   return (
-    <ArtFrame kind={mode === "verbs" ? "check" : "look"} title={L(title, lang)} body={spec.body || L(hint, lang)}>
-      {mode === "verbs" ? <Verbs lang={lang} rows={spec.args.map((a) => a.split(":"))} />
+    <ArtFrame kind={mode === "verbs" || mode === "compare" ? "check" : "look"} title={L(title, lang)} body={spec.body || L(hint, lang)}>
+      {mode === "verbs" || mode === "compare" ? <Verbs lang={lang} rows={spec.args.map((a) => a.split(":"))} cols={mode === "compare" ? spec.opts.cols ?? "modern" : undefined} />
         : mode === "persons" ? <Persons lang={lang} forms={spec.args} wl={wl} />
         : <Cases lang={lang} forms={spec.args} pl={list(spec.opts.pl)} wl={wl === "hy" ? "hy" : "ru"} />}
     </ArtFrame>

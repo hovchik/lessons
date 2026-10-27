@@ -720,4 +720,9 @@ button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
 .lang-form b { color: #e11d48; }
 .lang-form b.is-zero { color: #94a3b8; font-weight: 700; }
 .lang-table.is-verbs td { font-size: 1rem; }
+.lang-scroll { overflow-x: auto; }
+.lang-table.is-wide th { padding: 0.2rem 0.3rem; }
+.lang-table.is-wide td { font-size: 0.85rem; padding: 0.35rem 0.3rem; }
+.lang-table.is-wide { hyphens: manual; }
+.lang-table.is-wide .lang-form { font-size: 0.9rem; white-space: normal; }
 .lang-cover { min-width: 3.5rem; min-height: 1.9rem; border-radius: 8px; background: var(--art-soft, #e0e7ff); color: var(--art, #4f46e5); font-weight: 900; }

@@ -19,7 +19,7 @@ type Role = "p" | "r" | "s" | "e" | "c" | "a";
 const ROLES: Role[] = ["p", "r", "s", "e", "c", "a"];
 const W = {
   morph: t("Look: what the word is made of", "Դիտիր․ ինչից է կազմված բառը", "Посмотри: из чего состоит слово"),
-  morphHint: t("Press «Next step» and mark the parts of the word one by one, as in a grammar notebook.", "Սեղմիր «Հաջորդ քայլը» և նշիր բառի մասերը մեկ առ մեկ, ինչպես քերականության տետրում։", "Нажимай «Следующий шаг» и отмечай части слова по очереди, как в тетради по русскому."),
+  morphHint: t("Press «Next step» and mark the parts of the word one by one, as in a grammar notebook.", "Սեղմիր «Հաջորդ քայլը» և նշիր բառի մասերը մեկ առ մեկ, ինչպես քերականության տետրում։", "Нажимай «Следующий шаг» и отмечай части слова по очереди, как в тетради по грамматике."),
   syll: t("Look: syllables", "Դիտիր․ վանկեր", "Посмотри: слоги"),
   syllHint: t("Clap the word: each clap is one syllable, and every syllable has one vowel sound.", "Ծափ տուր բառը․ ամեն ծափը մեկ վանկ է, և յուրաքանչյուր վանկում կա մեկ ձայնավոր հնչյուն։", "Прохлопай слово: каждый хлопок — один слог, и в каждом слоге один гласный звук."),
   next: t("Next step", "Հաջորդ քայլը", "Следующий шаг"),

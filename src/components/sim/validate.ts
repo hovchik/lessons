@@ -69,7 +69,7 @@ const MODES: Record<string, string[]> = {
   letters: ["board", "vowels", "pairs", "order"],
   word: ["morph", "syll"],
   sentence: ["parts", "order"],
-  forms: ["cases", "persons", "verbs"],
+  forms: ["cases", "persons", "verbs", "compare"],
 };
 
 export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense"];
@@ -78,6 +78,9 @@ const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
 
 /** Problems with one sim spec (the text inside the fence). */
+/** Column counts of the forms mode=compare tables (see COLS in widgets/forms.tsx). */
+const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2 };
+
 export function checkSimSpec(source: string): string[] {
   const spec = parseArtSpec(source);
   const where = `sim "${source.split("\n")[0].slice(0, 50)}"`;
@@ -130,7 +133,11 @@ export function checkSimSpec(source: string): string[] {
     case "word": case "sentence": case "forms":
       if (spec.args.length < (spec.widget === "sentence" ? 2 : 1)) errors.push(`${where}: nothing to show`);
       if (spec.widget === "word" && spec.opts.mode !== "syll" && !spec.args.some((a) => a.endsWith(":r") || !a.includes(":"))) errors.push(`${where}: no root (:r)`);
-      if (spec.widget === "forms" && spec.opts.mode !== "verbs" && spec.args.length < (spec.opts.mode === "persons" ? 6 : spec.opts.lang === "hy" ? 7 : 6)) errors.push(`${where}: too few forms`);
+      if (spec.widget === "forms" && spec.opts.mode === "compare") {
+        const n = COMPARE_COLS[spec.opts.cols ?? "modern"];
+        if (!n) errors.push(`${where}: unknown cols "${spec.opts.cols}"`);
+        else if (spec.args.some((a) => a.split(":").length !== n)) errors.push(`${where}: every row needs ${n} cells`);
+      } else if (spec.widget === "forms" && spec.opts.mode !== "verbs" && spec.args.length < (spec.opts.mode === "persons" ? 6 : spec.opts.lang === "hy" ? 7 : 6)) errors.push(`${where}: too few forms`);
       break;
     case "check": {
       const { question, options } = parseCheck(spec.body);

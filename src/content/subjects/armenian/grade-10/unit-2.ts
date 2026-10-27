@@ -64,7 +64,7 @@ The ո → ու alternation is the least regular of the four in the modern langu
 
 ## Reading the rules forward and backward
 
-**Forward.** You know the root and want the derived word. Take **հույս** «hope». Add the verb suffix -ալ: the stress moves, ույ → ու, giving **հուսալ**. Add -ավոր: **հուսավոր**? No, the adjective is **հուսալի**, but the alternation is the same. Take **ձուկ**: the fisherman is **ձկնորս** (ու → zero, and the old stem ձկն- surfaces).
+**Forward.** You know the root and want the derived word. Take **հույս** «hope». Add the verb suffix -ալ: the stress moves, ույ → ու, giving **հուսալ**. Add -ալի and you get the adjective **հուսալի** «reliable», with the same alternation. Take **ձուկ**: the fisherman is **ձկնորս** (ու → zero, and the old stem ձկն- surfaces).
 
 **Backward.** You meet **լուսնկա** and do not know it. Strip the suffix, restore the vowel: լուսն- → լուսին, moon. The word means moonlight. You meet **գրչություն**: գրչ- → գրիչ → գիր. The word means penmanship. You meet **մտքում**: մտք- → միտք, «in the mind».
 
