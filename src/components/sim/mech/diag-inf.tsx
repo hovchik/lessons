@@ -392,4 +392,40 @@ const os: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os };
+/* ---------------- a phishing email ---------------- */
+
+const phish: Diagram = {
+  title: t("Spot the phishing email", "Գտի՛ր ֆիշինգային նամակը", "Найди фишинговое письмо"),
+  hint: t("Every number marks a warning sign. Tap them all.", "Յուրաքանչյուր թիվ նշում է վտանգի նշան։ Սեղմի՛ր բոլորին։", "Каждая цифра отмечает тревожный признак. Нажми на все."),
+  draw: (lang) => (
+    <g>
+      <rect x="8" y="8" width="304" height="204" rx="8" fill="#fff" stroke="#cbd5e1" />
+      <rect x="8" y="8" width="304" height="52" rx="8" fill="#f1f5f9" />
+      <circle cx="28" cy="30" r="11" fill="#94a3b8" />
+      <text x="28" y="34" textAnchor="middle" fontSize="10" fontWeight="900" fill="#fff">S</text>
+      <Tx x={46} y={26} s={t("Security Team", "Անվտանգության թիմ", "Служба безопасности")} lang={lang} anchor="start" size={9} />
+      <text x="46" y="38" fontSize="8" fontFamily="monospace" fill="#b91c1c">support@g00gle-security.xyz</text>
+      <Tx x={20} y={54} s={t("URGENT: your acount will be blocked in 1 hour!!!", "ՇՏԱՊ․ ձեր հաշիվը կարգելափակվի 1 ժամից!!!", "СРОЧНО: ваш акаунт будет заблокирован через 1 час!!!")} lang={lang} anchor="start" size={8.5} fill="#b91c1c" />
+      <Tx x={20} y={80} s={t("Dear user,", "Հարգելի օգտատեր,", "Уважаемый пользователь,")} lang={lang} anchor="start" size={9} w={700} />
+      <Tx x={20} y={96} s={t("To keep your acount, confirm your", "Հաշիվը պահպանելու համար հաստատեկ ձեր", "Чтобы сохранить акаунт, подтвердите свой")} lang={lang} anchor="start" size={9} w={700} />
+      <Tx x={20} y={110} s={t("password and card number here:", "գաղտնաբառը և քարտի համարը այստեղ․", "пароль и номер карты здесь:")} lang={lang} anchor="start" size={9} w={700} />
+      <rect x="20" y="120" width="150" height="24" rx="5" fill="#2563eb" />
+      <text x="95" y="136" textAnchor="middle" fontSize="9" fontWeight="800" fill="#fff">www.google.com/secure</text>
+      <rect x="120" y="148" width="180" height="16" rx="3" fill="#1e293b" />
+      <text x="126" y="159" fontSize="7.5" fontFamily="monospace" fill="#fca5a5">http://g00gle-login.xyz/steal?id=7</text>
+      <path d="M150,144 l-6,4 h12 Z" fill="#1e293b" transform="translate(0,0)" />
+      <rect x="20" y="174" width="280" height="28" rx="6" fill="#fef3c7" stroke="#f59e0b" />
+      <Tx x={160} y={192} s={t("🎁 You have won a free phone in our contest!", "🎁 Դուք շահել եք անվճար հեռախոս մեր մրցույթում։", "🎁 Вы выиграли бесплатный телефон в нашем конкурсе!")} lang={lang} size={8.5} fill="#92400e" />
+    </g>
+  ),
+  parts: [
+    P(270, 34, t("A strange sender", "Տարօրինակ ուղարկող", "Странный отправитель"), t("Look at the address, not the name. g00gle with two zeros and the ending .xyz are not Google. Anyone can type any name in the \"From\" field.", "Նայի՛ր հասցեին, ոչ թե անվանը։ Երկու զրոյով g00gle-ը և .xyz վերջավորությունը Google չեն։ «Ումից» դաշտում ցանկացածը կարող է գրել ցանկացած անուն։", "Смотри на адрес, а не на имя. g00gle с двумя нулями и окончание .xyz — это не Google. В поле «От кого» кто угодно может написать любое имя.")),
+    P(290, 54, t("It rushes you", "Շտապեցնում է", "Тебя торопят"), t("\"1 hour!\" is meant to make you panic and click before you think. Real services do not threaten you like this.", "«1 ժամ»-ը նպատակ ունի խուճապի մատնել քեզ, որ սեղմես՝ առանց մտածելու։ Իրական ծառայություններն այսպես չեն սպառնում։", "«1 час!» — чтобы ты запаниковал и нажал, не подумав. Настоящие сервисы так не угрожают.")),
+    P(176, 80, t("No name, spelling mistakes", "Անուն չկա, ուղղագրական սխալներ", "Нет имени, ошибки"), t("\"Dear user\" instead of your name, and mistakes like \"acount\": the same message was sent to thousands of people at once.", "«Հարգելի օգտատեր»՝ քո անվան փոխարեն, և սխալներ, ինչպես «հաստատեկ» բառում․ նույն նամակն ուղարկվել է միանգամից հազարավոր մարդկանց։", "«Уважаемый пользователь» вместо имени и ошибки вроде «акаунт»: одно и то же письмо разослали тысячам людей сразу.")),
+    P(290, 104, t("It asks for a password", "Գաղտնաբառ է խնդրում", "Просят пароль"), t("No bank, school or game will ever ask you to send your password or card number by email or message.", "Ոչ մի բանկ, դպրոց կամ խաղ երբեք չի խնդրի քեզ ուղարկել գաղտնաբառդ կամ քարտի համարը նամակով կամ հաղորդագրությամբ։", "Ни банк, ни школа, ни игра никогда не попросят прислать пароль или номер карты письмом или сообщением.")),
+    P(100, 162, t("The link lies", "Հղումը ստում է", "Ссылка обманывает"), t("The button says google.com, but hovering the mouse over it (or holding a finger on it) shows where it really goes: a different site.", "Կոճակին գրված է google.com, բայց մկնիկը վրան պահելիս (կամ մատը սեղմած պահելիս) երևում է, թե իրականում ուր է տանում՝ բոլորովին այլ կայք։", "На кнопке написано google.com, но если навести мышь (или задержать палец), видно, куда она ведёт на самом деле, — на другой сайт.")),
+    P(296, 188, t("A prize you never entered for", "Մրցանակ մրցույթից, որին չես մասնակցել", "Приз в конкурсе, где ты не участвовал"), t("If it sounds too good to be true, it is. Delete the message, and if you are unsure, ask an adult or contact the real service yourself.", "Եթե շատ լավ է հնչում, որ ճիշտ լինի, ուրեմն ճիշտ չէ։ Ջնջի՛ր նամակը, իսկ եթե վստահ չես, հարցրու մեծահասակին կամ ինքդ կապվիր իրական ծառայության հետ։", "Если звучит слишком хорошо, чтобы быть правдой, значит, это неправда. Удали письмо, а если сомневаешься, спроси взрослого или сам свяжись с настоящим сервисом.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish };

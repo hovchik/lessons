@@ -55,7 +55,7 @@ const website: Mech = {
             {[0, 1, 2, 3].map((j) => <rect key={j} x={BR.x + 60} y={BR.y + 52 + j * 10} width={44 - (j % 2) * 12} height="5" rx="2" fill="#cbd5e1" />)}
           </g>
         ) : i === 3 ? (
-          <g>{[0, 1, 2, 3].map((j) => <rect key={j} x={BR.x + 10} y={BR.y + 34 + j * 14} width={(BR.w - 20) * Math.min(1, back * 4 - j)} height="8" rx="2" fill="#e0e7ff" />)}</g>
+          <g>{[0, 1, 2, 3].map((j) => <rect key={j} x={BR.x + 10} y={BR.y + 34 + j * 14} width={(BR.w - 20) * Math.max(0, Math.min(1, back * 4 - j))} height="8" rx="2" fill="#e0e7ff" />)}</g>
         ) : (
           <Tag x={BR.x + BR.w / 2} y={BR.y + 70} color="#94a3b8" plain>{i === 0 ? T(lang, "press Enter", "սեղմիր Enter", "нажми Enter") : T(lang, "loading…", "բեռնվում է…", "загрузка…")}</Tag>
         )}
@@ -137,7 +137,7 @@ const packets: Mech = {
           <g>
             <rect x="60" y="4" width="200" height="22" rx="4" fill="#f1f5f9" stroke="#94a3b8" />
             <text x="160" y="19" textAnchor="middle" fontSize="11" fontFamily="monospace" fontWeight="700" fill="#1e1b4b">HELLO ARMENIA</text>
-            {WORD.map((s, j) => <Packet key={j} x={lerp(100 + j * 40, 70 + j * 58, k)} y={lerp(15, 48, k)} n={j + 1} c={PCOL[j]} s={s} />)}
+            {WORD.map((s, j) => <Packet key={j} x={lerp(100 + j * 40, 81 + j * 40, k)} y={lerp(15, 209, k)} n={j + 1} c={PCOL[j]} s={s} />)}
           </g>
         ) : null}
         {i === 1 ? ROUTES.map((r, j) => {
