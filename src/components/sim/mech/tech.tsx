@@ -892,7 +892,7 @@ const wheel: Mech = {
         <circle cx="160" cy="176" r="22" fill="#fde68a" stroke="#92400e" strokeWidth="2" />
         <circle cx="160" cy="176" r={7 + k * 0} fill="#fff" stroke="#92400e" />
         <circle cx="160" cy="177.5" r="5" fill="#64748b" />
-        <Tx x={200} y={180} s={t("hole a little wider than the axle", "անցքն առանցքից մի փոքր լայն է", "отверстие чуть шире оси")} lang={lang} size={8} fill="#475569" anchor="start" />
+        <Tx x={190} y={172} s={t("the hole is a little|wider than the axle", "անցքը մի փոքր|լայն է առանցքից", "отверстие|чуть шире оси")} lang={lang} size={8} fill="#475569" anchor="start" />
         <Tx x={160} y={140} s={t("axle", "առանցք", "ось")} lang={lang} size={10} fill="#334155" />
         <Tx x={160} y={48} s={t("body", "թափք", "кузов")} lang={lang} size={10} fill="#78350f" />
         <Tx x={30} y={40} s={t("wheel", "անիվ", "колесо")} lang={lang} size={10} fill="#92400e" anchor="start" />
@@ -1005,9 +1005,9 @@ const bean: Mech = {
         ) : null}
         {root > 0 ? (
           <g>
-            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#fef3c7" strokeWidth="4" strokeLinecap="round" />
-            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#d6d3d1" strokeWidth="1" />
-            {stem > 0 ? Array.from({ length: 8 }, (_, j) => <line key={j} x1={BX - 4 + (j % 2 ? 2 : -3)} y1={BY + 18 + j * 4} x2={BX - 4 + (j % 2 ? 10 : -12) * stem} y2={BY + 22 + j * 4} stroke="#e7e5e4" strokeWidth="0.8" />) : null}
+            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#a8a29e" strokeWidth="6" strokeLinecap="round" />
+            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#fef9c3" strokeWidth="4" strokeLinecap="round" />
+            {stem > 0 ? Array.from({ length: 8 }, (_, j) => <line key={j} x1={BX - 4 + (j % 2 ? 2 : -3)} y1={BY + 18 + j * 4} x2={BX - 4 + (j % 2 ? 10 : -12) * stem} y2={BY + 22 + j * 4} stroke="#a8a29e" strokeWidth="0.8" />) : null}
           </g>
         ) : null}
         <ellipse cx={BX} cy={BY} rx={16 * sw} ry={10 * sw} fill="#b91c1c" stroke="#7f1d1d" />

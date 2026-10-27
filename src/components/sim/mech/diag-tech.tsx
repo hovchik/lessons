@@ -421,7 +421,7 @@ const carpet: Diagram = {
       <ellipse cx="270" cy="160" rx="10" ry="7" fill="#e5e7eb" stroke="#9ca3af" />
       <ellipse cx="270" cy="160" rx="5" ry="3.5" fill="#be123c" />
       <rect x="244" y="172" width="52" height="10" rx="3" fill="#be123c" />
-      <Tx x={270} y={124} s={t("one knot = one dot", "մեկ հանգույց = մեկ կետ", "один узел = одна точка")} lang={lang} size={7.5} fill="#334155" />
+      <Tx x={276} y={118} s={t("one knot = one dot", "մեկ հանգույց = մեկ կետ", "один узел = одна точка")} lang={lang} size={7.5} fill="#334155" />
       <Tx x={270} y={204} s={t("vordan karmir", "որդան կարմիր", "вордан кармир")} lang={lang} size={8} fill="#be123c" />
     </g>
   ),
@@ -457,10 +457,10 @@ const bins: Diagram = {
           <g key={j}>
             <path d={`M${x - 22},92 h44 l-4,62 h-36 Z`} fill={b.c} />
             <rect x={x - 25} y="84" width="50" height="9" rx="3" fill={b.c} stroke="#0f172a" strokeOpacity="0.25" />
-            <Tx x={x} y={124} s={b.name} lang={lang} size={7.5} fill="#fff" />
+            <Tx x={x} y={124} s={b.name} lang={lang} size={6.5} fill="#fff" />
             <path d={`M${x},158 v14`} stroke="#94a3b8" strokeWidth="1.5" />
             <path d={`M${x - 4},168 l4,6 l4,-6`} fill="none" stroke="#94a3b8" strokeWidth="1.5" />
-            <Tx x={x} y={190} s={b.becomes} lang={lang} size={7.5} fill={b.c} />
+            <Tx x={x} y={190} s={b.becomes} lang={lang} size={6.5} fill={b.c} />
           </g>
         );
       })}
