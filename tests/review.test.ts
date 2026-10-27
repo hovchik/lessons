@@ -109,3 +109,31 @@ test("cards for questions that were removed are dropped", async () => {
   const left = await db.select({ itemId: schema.reviewCards.itemId }).from(schema.reviewCards).where(eq(schema.reviewCards.refId, "physics-7-speed")).all();
   assert.deepEqual(left.map((r) => r.itemId), ["quiz:physics-7-speed#0"]);
 });
+
+test("counts skip unpublished lessons, and their cards come back when it is published again", async () => {
+  const db = await m.client.getDb();
+  const { schema } = m.client;
+  const { eq } = await import("drizzle-orm");
+  const later = new Date(Date.now() + 400 * DAY);
+  const counts = async () => {
+    const s = await m.review.getReviewSummary("u1", later);
+    const queue = await m.review.getReviewQueue("u1", { now: later, size: 100 });
+    const mistakes = await m.review.getMistakes("u1");
+    return { s, queue: queue.length, mistakes: mistakes.length };
+  };
+  const before = await counts();
+  assert.equal(before.s.ready, before.queue);
+  assert.equal(before.s.mistakes, before.mistakes);
+  assert.ok(before.queue > 1);
+
+  await db.update(schema.lessons).set({ status: "draft" }).where(eq(schema.lessons.id, "math-3-tables")).run();
+  const hidden = await counts();
+  assert.equal(hidden.s.ready, hidden.queue);
+  assert.equal(hidden.s.mistakes, hidden.mistakes);
+  assert.ok(hidden.queue < before.queue);
+  const kept = await db.select({ itemId: schema.reviewCards.itemId }).from(schema.reviewCards).where(eq(schema.reviewCards.refId, "math-3-tables")).all();
+  assert.ok(kept.length > 0, "unpublished cards are kept");
+
+  await db.update(schema.lessons).set({ status: "published" }).where(eq(schema.lessons.id, "math-3-tables")).run();
+  assert.equal((await counts()).s.ready, before.s.ready);
+});

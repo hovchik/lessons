@@ -199,6 +199,15 @@ export async function getMistakes(userId: string, limit = 200) {
   return items.map((i) => ({ ...i, lastChoice: lastChoice.get(i.itemId) ?? null }));
 }
 
+/**
+ * Cards whose lesson or exam is published, as the queue and notebook see them,
+ * so the counts never promise questions the review page then hides.
+ */
+const available = sql`(
+  (${schema.reviewCards.itemId} like 'quiz:%' and exists (select 1 from ${schema.lessons} where ${schema.lessons.id} = ${schema.reviewCards.refId} and ${schema.lessons.status} = 'published'))
+  or (${schema.reviewCards.itemId} like 'exam:%' and exists (select 1 from ${schema.exams} where ${schema.exams.id} = ${schema.reviewCards.refId} and ${schema.exams.status} = 'published'))
+)`;
+
 /** Counts for the review entry points: ready now, in the notebook, and review days this week. */
 export async function getReviewSummary(userId: string, now = new Date()) {
   const db = await getDb();
@@ -210,7 +219,7 @@ export async function getReviewSummary(userId: string, now = new Date()) {
       mistakes: sql<number>`coalesce(sum(case when ${rc.lastCorrect} = 0 then 1 else 0 end), 0)`,
     })
     .from(rc)
-    .where(eq(rc.userId, userId))
+    .where(and(eq(rc.userId, userId), available))
     .get();
   const ae = schema.answerEvents;
   const weekAgo = new Date(now.getTime() - 6 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
