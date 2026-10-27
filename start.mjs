@@ -41,6 +41,25 @@ function run(cmd, cmdArgs, opts = {}) {
 const major = Number(process.versions.node.split(".")[0]);
 if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versions.node}). Download it from https://nodejs.org`);
 
+// An app started earlier keeps answering on the port and keeps showing the old version,
+// even after this run rebuilds, so stop here and say how to close it.
+const portBusy = await fetch(`http://127.0.0.1:${PORT}`, { redirect: "manual", signal: AbortSignal.timeout(2000) }).then(
+  () => true,
+  () => false,
+);
+if (portBusy) {
+  fail(
+    [
+      `Something is already running at http://localhost:${PORT}. It is most likely the Lessons app started earlier,`,
+      "  and it keeps showing the old version until it is stopped.",
+      "  Close the other Start window (or press Ctrl+C in it), then run this again.",
+      isWin
+        ? `  If you cannot find that window: run  netstat -ano | findstr :${PORT}  and then  taskkill /PID <number in the last column> /F`
+        : `  If you cannot find that window: run  lsof -i :${PORT}  and then  kill <PID>`,
+    ].join("\n"),
+  );
+}
+
 // Newest modification time of the given files and folders (folders are walked), 0 if none exist.
 // After a `git pull` or a fresh download the changed files are newer than the last build
 // and the last seed, which is how the steps below know they have to run again.
