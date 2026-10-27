@@ -237,4 +237,215 @@ const tablets: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets };
+/* ---------------- grade 6: the four evangelists ---------------- */
+
+const EVANG: Array<[number, number, Tr, string]> = [
+  [70, 52, t("Matthew", "Մատթեոս", "Матфей"), "#0369a1"],
+  [250, 52, t("Mark", "Մարկոս", "Марк"), "#b45309"],
+  [70, 160, t("Luke", "Ղուկաս", "Лука"), "#be123c"],
+  [250, 160, t("John", "Հովհաննես", "Иоанн"), "#7c3aed"],
+];
+
+const evangelists: Diagram = {
+  title: t("Four evangelists and their symbols", "Չորս ավետարանիչները և նրանց խորհրդանիշները", "Четыре евангелиста и их символы"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      {EVANG.map(([x, y], k) => <line key={k} x1={x} y1={y} x2="160" y2="106" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 3" />)}
+      {/* the open book */}
+      <path d="M124,90 q18,-8 36,0 v40 q-18,-8 -36,0 Z M160,90 q18,-8 36,0 v40 q-18,-8 -36,0 Z" fill="#fef3c7" stroke="#b45309" strokeWidth="1.8" />
+      <path d="M152,104 h-20 M152,112 h-20 M188,104 h-20 M188,112 h-20" stroke="#d6b26e" strokeWidth="1.2" />
+      <path d="M160,96 v8 M156,99 h8" stroke="#b91c1c" strokeWidth="1.6" />
+      {EVANG.map(([x, y, name, c], k) => (
+        <g key={k}>
+          <circle cx={x} cy={y} r="30" fill="#fff" stroke={c} strokeWidth="2" />
+          <Tx x={x} y={y + 44} s={name} lang={lang} size={8.5} fill={c} />
+        </g>
+      ))}
+      {/* a man with wings */}
+      <path d="M52,52 q-8,-14 4,-22 q2,12 8,16 Z M88,52 q8,-14 -4,-22 q-2,12 -8,16 Z" fill="#bae6fd" />
+      <Head x={70} y={44} r={7} fill="#0369a1" />
+      {/* a lion */}
+      {Array.from({ length: 12 }, (_, k) => {
+        const a = (k / 12) * Math.PI * 2;
+        return <circle key={k} cx={250 + 13 * Math.cos(a)} cy={50 + 13 * Math.sin(a)} r="5" fill="#d97706" />;
+      })}
+      <circle cx="250" cy="50" r="10" fill="#fbbf24" />
+      <circle cx="246" cy="48" r="1.4" fill="#78350f" /><circle cx="254" cy="48" r="1.4" fill="#78350f" /><path d="M247,54 q3,3 6,0" stroke="#78350f" strokeWidth="1.2" fill="none" />
+      {/* an ox */}
+      <path d="M56,150 q-10,-8 -6,-16 q4,8 10,8 M84,150 q10,-8 6,-16 q-4,8 -10,8" fill="none" stroke="#9f1239" strokeWidth="2.4" />
+      <path d="M58,148 h24 l-4,22 q-8,6 -16,0 Z" fill="#be123c" />
+      <circle cx="65" cy="155" r="1.6" fill="#fff" /><circle cx="75" cy="155" r="1.6" fill="#fff" />
+      {/* an eagle */}
+      <path d="M226,164 q12,-4 24,-20 q12,16 24,20 q-12,-2 -18,4 l-6,10 l-6,-10 q-6,-6 -18,-4 Z" fill="#7c3aed" />
+      <circle cx="250" cy="146" r="4.5" fill="#5b21b6" /><path d="M254,146 l5,2 l-5,1 Z" fill="#f59e0b" />
+    </g>
+  ),
+  parts: [
+    P(100, 26, t("Matthew: a man", "Մատթեոս՝ մարդ", "Матфей: человек"), t("His Gospel begins with the family tree of Jesus, from Abraham through David, that is, with his human descent, so his symbol is a man with wings. He wrote mainly for Jewish readers and often quotes the prophets.", "Նրա Ավետարանն սկսվում է Հիսուսի տոհմածառով՝ Աբրահամից Դավթի միջով, այսինքն՝ նրա մարդկային ծագումով, ուստի նրա խորհրդանիշը թևավոր մարդն է։ Նա գրում էր հիմնականում հրեա ընթերցողների համար և հաճախ մեջբերում է մարգարեներին։", "Его Евангелие начинается с родословия Иисуса от Авраама через Давида, то есть с его человеческого происхождения, поэтому его символ — крылатый человек. Он писал прежде всего для читателей-евреев и часто цитирует пророков.")),
+    P(280, 26, t("Mark: a lion", "Մարկոս՝ առյուծ", "Марк: лев"), t("His Gospel opens with the voice of John the Baptist \"crying in the wilderness\", loud as a lion's roar. It is the shortest Gospel, only 16 chapters, and probably the oldest.", "Նրա Ավետարանը բացվում է Հովհաննես Մկրտչի «անապատում աղաղակողի» ձայնով, որը բարձր է առյուծի մռնչյունի պես։ Սա ամենակարճ Ավետարանն է՝ ընդամենը 16 գլուխ, և հավանաբար ամենահինը։", "Его Евангелие открывается голосом Иоанна Крестителя, «вопиющего в пустыне», громким, как рык льва. Это самое короткое Евангелие, всего 16 глав, и, вероятно, самое древнее.")),
+    P(100, 134, t("Luke: an ox", "Ղուկաս՝ եզ", "Лука: телец"), t("His Gospel begins in the Temple, where the priest Zechariah is offering sacrifice, and the ox was an animal of sacrifice. Luke was a physician and also wrote the Acts; only he tells the parables of the good Samaritan and the prodigal son.", "Նրա Ավետարանն սկսվում է տաճարում, որտեղ Զաքարիա քահանան զոհ է մատուցում, իսկ եզը զոհաբերության կենդանի էր։ Ղուկասը բժիշկ էր և գրել է նաև Գործք առաքելոցը․ միայն նա է պատմում բարի սամարացու և անառակ որդու առակները։", "Его Евангелие начинается в Храме, где священник Захария приносит жертву, а телец был жертвенным животным. Лука был врачом и написал также Деяния; только он рассказывает притчи о добром самарянине и блудном сыне.")),
+    P(280, 134, t("John: an eagle", "Հովհաննես՝ արծիվ", "Иоанн: орёл"), t("His Gospel starts high above, like an eagle in flight: \"In the beginning was the Word, and the Word was with God.\" It was written last and differs most from the other three.", "Նրա Ավետարանն սկսվում է բարձրից, ինչպես թռչող արծիվ․ «Սկզբից էր Բանը, և Բանն Աստծո մոտ էր»։ Այն գրվել է վերջինը և ամենից շատ է տարբերվում մյուս երեքից։", "Его Евангелие начинается с высоты, как орёл в полёте: «В начале было Слово, и Слово было у Бога». Оно написано последним и больше всего отличается от трёх других.")),
+    P(206, 92, t("Where the symbols come from", "Որտեղից են խորհրդանիշները", "Откуда символы"), t("A man, a lion, an ox and an eagle are the four living creatures in the visions of Ezekiel and of Revelation. Armenian miniature painters put them at the start of each Gospel, so a reader could find the right book at a glance.", "Մարդը, առյուծը, եզը և արծիվը Եզեկիելի և Հայտնության տեսիլքների չորս կենդանի էակներն են։ Հայ մանրանկարիչները դրանք նկարում էին յուրաքանչյուր Ավետարանի սկզբում, որպեսզի ընթերցողը մեկ հայացքով գտնի ճիշտ գիրքը։", "Человек, лев, телец и орёл — четыре живых существа из видений Иезекииля и Откровения. Армянские миниатюристы изображали их в начале каждого Евангелия, чтобы читатель с одного взгляда находил нужную книгу.")),
+    P(122, 126, t("Four Gospels, one good news", "Չորս Ավետարան՝ մեկ բարի լուր", "Четыре Евангелия, одна благая весть"), t("Matthew, Mark and Luke often tell the same events in very similar words, so they are called the synoptic Gospels, from a Greek word for \"seeing together\". Four witnesses, each with his own angle, tell one story.", "Մատթեոսը, Մարկոսը և Ղուկասը հաճախ նույն իրադարձությունները պատմում են շատ նման բառերով, ուստի նրանց կոչում են համատես Ավետարաններ։ Չորս վկաներ, յուրաքանչյուրն իր տեսանկյունից, պատմում են մեկ պատմություն։", "Матфей, Марк и Лука часто рассказывают одни и те же события очень похожими словами, поэтому их называют синоптическими Евангелиями, от греческого «видеть вместе». Четыре свидетеля, каждый со своей точки зрения, рассказывают одну историю.")),
+  ],
+};
+
+/* ---------------- grade 6: the parable of the sower ---------------- */
+
+const SOILS: Array<[number, Tr, string, string]> = [
+  [42, t("path", "ճանապարհ", "дорога"), "#d6d3d1", "#78716c"],
+  [120, t("rocky ground", "քարքարոտ հող", "каменистая земля"), "#e7e5e4", "#57534e"],
+  [198, t("thorns", "փշեր", "терние"), "#d9f99d", "#4d7c0f"],
+  [276, t("good soil", "լավ հող", "добрая земля"), "#a16207", "#713f12"],
+];
+
+const sower: Diagram = {
+  title: t("The parable of the sower", "Սերմնացանի առակը", "Притча о сеятеле"),
+  h: 210,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="210" fill="#f0f9ff" />
+      <circle cx="292" cy="26" r="13" fill="#facc15" />
+      {/* the sower */}
+      <Head x={40} y={34} r={7} fill="#b45309" />
+      <path d="M52,50 q14,-4 22,-12" stroke="#b45309" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <ellipse cx="34" cy="62" rx="8" ry="6" fill="#d6b26e" />
+      {SOILS.map(([x], k) => <path key={k} d={`M74,40 Q${(74 + x) / 2},${60 - k * 4} ${x},126`} fill="none" stroke="#a16207" strokeWidth="1" strokeDasharray="1.5 5" />)}
+      {SOILS.map(([x, name, c, edge], k) => (
+        <g key={k}>
+          <rect x={x - 36} y="140" width="72" height="56" rx="6" fill={c} stroke={edge} strokeWidth="1.5" />
+          <Tx x={x} y={134} s={name} lang={lang} size={L(name, lang).length > 12 ? 6.4 : 7.5} fill={edge} />
+        </g>
+      ))}
+      {/* path: footprints and birds */}
+      <ellipse cx="30" cy="180" rx="3" ry="6" fill="#a8a29e" /><ellipse cx="44" cy="166" rx="3" ry="6" fill="#a8a29e" /><ellipse cx="56" cy="184" rx="3" ry="6" fill="#a8a29e" />
+      <path d="M30,152 q4,-4 8,0 q4,-4 8,0 M46,160 q4,-4 8,0 q4,-4 8,0" fill="none" stroke="#1e293b" strokeWidth="1.6" />
+      {/* rocky ground: stones and a wilting sprout */}
+      <ellipse cx="104" cy="184" rx="10" ry="6" fill="#a8a29e" /><ellipse cx="134" cy="186" rx="12" ry="6" fill="#a8a29e" /><ellipse cx="120" cy="174" rx="8" ry="5" fill="#d6d3d1" />
+      <path d="M120,170 q0,-12 8,-14" stroke="#ca8a04" strokeWidth="2" fill="none" />
+      {/* thorns choking a sprout */}
+      <path d="M182,192 l6,-30 l4,30 M206,192 l-4,-34 l8,34 M190,170 l-6,-4 M206,168 l6,-4 M186,178 l6,-4" stroke="#365314" strokeWidth="1.8" fill="none" />
+      <path d="M198,192 v-16" stroke="#84cc16" strokeWidth="2" />
+      {/* good soil: tall ears of grain */}
+      {[258, 270, 282, 294].map((x, k) => (
+        <g key={k}>
+          <path d={`M${x},192 V${150 - (k % 2) * 6}`} stroke="#ca8a04" strokeWidth="1.8" />
+          <ellipse cx={x} cy={148 - (k % 2) * 6} rx="3" ry="8" fill="#eab308" />
+        </g>
+      ))}
+      <Tx x={276} y={206} s={t("×30 · ×60 · ×100", "×30 · ×60 · ×100", "×30 · ×60 · ×100")} lang={lang} size={6.5} fill="#713f12" />
+    </g>
+  ),
+  parts: [
+    P(56, 22, t("The sower", "Սերմնացանը", "Сеятель"), t("In Jesus' time seed was scattered by hand from a bag as the farmer walked, so some of it always fell in the wrong place. Jesus explained that the seed is the word of God, and the different soils are different hearts.", "Հիսուսի ժամանակ սերմը ցանում էին ձեռքով՝ պարկից, քայլելիս, ուստի դրա մի մասը միշտ ընկնում էր ոչ ճիշտ տեղը։ Հիսուսը բացատրեց, որ սերմն Աստծո խոսքն է, իսկ տարբեր հողերը՝ տարբեր սրտեր։", "Во времена Иисуса семена разбрасывали рукой из мешка на ходу, так что часть их всегда падала не туда. Иисус объяснил, что семя — это слово Божие, а разная почва — разные сердца.")),
+    P(70, 146, t("The path", "Ճանապարհը", "Дорога"), t("On hard, trodden ground the seed lies on top, and birds eat it at once. So it is with someone who hears the word but does not take it in: it is snatched away straight away.", "Կոշտ, տրորված հողի վրա սերմը մնում է երեսին, և թռչուններն անմիջապես ուտում են այն։ Այդպես է լինում նրա հետ, ով լսում է խոսքը, բայց չի ընդունում այն․ այն անմիջապես հափշտակվում է։", "На твёрдой утоптанной земле семя лежит сверху, и птицы сразу его склёвывают. Так бывает с тем, кто слышит слово, но не принимает его: оно тут же похищается.")),
+    P(148, 146, t("Rocky ground", "Քարքարոտ հողը", "Каменистая земля"), t("In thin soil the seed sprouts quickly, but it has no deep root, and the sun scorches it. These are people who welcome the word with joy but give up when things get hard.", "Բարակ հողում սերմն արագ է ծլում, բայց խոր արմատ չունի, և արևն այրում է այն։ Սրանք այն մարդիկ են, ովքեր ուրախությամբ են ընդունում խոսքը, բայց հանձնվում են, երբ դժվար է լինում։", "В тонком слое почвы семя быстро всходит, но у него нет глубокого корня, и солнце его сжигает. Это люди, которые с радостью принимают слово, но сдаются, когда становится трудно.")),
+    P(226, 146, t("Among thorns", "Փշերի մեջ", "В тернии"), t("The seed grows, but the thorns grow faster and choke it. Jesus compares them to worries and the love of riches, which crowd out what matters most.", "Սերմն աճում է, բայց փշերն ավելի արագ են աճում և խեղդում այն։ Հիսուսը դրանք համեմատում է հոգսերի և հարստության սիրո հետ, որոնք դուրս են մղում ամենակարևորը։", "Семя растёт, но терние растёт быстрее и заглушает его. Иисус сравнивает его с заботами и любовью к богатству, которые вытесняют самое важное.")),
+    P(304, 146, t("Good soil", "Լավ հողը", "Добрая земля"), t("Here the seed brings thirty, sixty or even a hundred times as much as was sown, far more than an ordinary harvest of that time. These are people who hear the word, understand it and live by it.", "Այստեղ սերմը տալիս է ցանվածից երեսուն, վաթսուն կամ նույնիսկ հարյուր անգամ ավելի, շատ ավելի, քան այն ժամանակվա սովորական բերքը։ Սրանք այն մարդիկ են, ովքեր լսում են խոսքը, հասկանում և ապրում դրանով։", "Здесь семя приносит в тридцать, шестьдесят и даже сто раз больше посеянного — гораздо больше обычного урожая того времени. Это люди, которые слышат слово, понимают его и живут по нему.")),
+    P(160, 60, t("An explained parable", "Բացատրված առակ", "Объяснённая притча"), t("Most parables are left for the listener to think about, but this is one of the few that Jesus explained to his disciples afterwards (Mark 4), soil by soil.", "Առակների մեծ մասը թողնվում է, որ ունկնդիրը մտածի, բայց սա այն քչերից է, որոնք Հիսուսը հետո բացատրեց իր աշակերտներին (Մարկոս 4)՝ հող առ հող։", "Большинство притч оставлено слушателю для размышления, но эту, одну из немногих, Иисус потом объяснил ученикам (Марк 4), почву за почвой.")),
+  ],
+};
+
+/* ---------------- grade 6: Holy Week ---------------- */
+
+const WEEK: Array<[Tr, string]> = [
+  [t("Palm|Sunday", "Ծաղկա-|զարդ", "Цахка-|зард"), "#16a34a"],
+  [t("Mon", "Երկ.", "Пн"), "#94a3b8"],
+  [t("Tue", "Երք.", "Вт"), "#94a3b8"],
+  [t("Wed", "Չրք.", "Ср"), "#94a3b8"],
+  [t("Holy|Thursday", "Ավագ|հինգշաբթի", "Великий|четверг"), "#b45309"],
+  [t("Good|Friday", "Ավագ|ուրբաթ", "Великая|пятница"), "#7f1d1d"],
+  [t("Holy|Saturday", "Ավագ|շաբաթ", "Великая|суббота"), "#7c3aed"],
+  [t("Easter", "Զատիկ", "Пасха"), "#e11d48"],
+];
+
+const holyweek: Diagram = {
+  title: t("Holy Week, day by day", "Ավագ շաբաթը՝ օր առ օր", "Страстная неделя день за днём"),
+  h: 150,
+  draw: (lang) => (
+    <g>
+      {WEEK.map(([name, c], k) => {
+        const x = 6 + k * 38.5;
+        return (
+          <g key={k}>
+            <rect x={x} y="20" width="35" height="80" rx="6" fill="#fff" stroke={c} strokeWidth={k % 7 === 0 || k > 3 ? 2 : 1} />
+            <Tx x={x + 17.5} y={L(name, lang).includes("|") ? 114 : 118} s={name} lang={lang} size={L(name, lang).length > 12 ? 5.6 : 6.4} fill={c} />
+          </g>
+        );
+      })}
+      {/* palm branch */}
+      <path d="M24,92 C24,70 28,50 30,34" stroke="#16a34a" strokeWidth="2" fill="none" />
+      {[40, 50, 60, 70, 80].map((y) => <path key={y} d={`M${24 + (92 - y) / 8},${y} l-8,-4 M${24 + (92 - y) / 8},${y} l8,-4`} stroke="#22c55e" strokeWidth="1.6" />)}
+      {/* bread and cup */}
+      <ellipse cx="174" cy="76" rx="12" ry="6" fill="#d6b26e" />
+      <path d="M170,40 h14 l-3,14 h-8 Z M177,54 v10 M172,64 h10" stroke="#b45309" strokeWidth="1.8" fill="#fde68a" />
+      {/* cross */}
+      <path d="M216,36 v52 M206,50 h20" stroke="#7f1d1d" strokeWidth="4" strokeLinecap="round" />
+      {/* candle */}
+      <rect x="248" y="56" width="12" height="34" rx="2" fill="#ede9fe" stroke="#7c3aed" strokeWidth="1.2" />
+      <path d="M254,54 q-5,-8 0,-16 q5,8 0,16 Z" fill="#f59e0b" />
+      {/* empty tomb at sunrise */}
+      <circle cx="304" cy="40" r="8" fill="#facc15" />
+      <path d="M278,92 v-22 a14,14 0 0 1 28,0 v22 Z" fill="#d6d3d1" />
+      <path d="M286,92 v-14 a6,6 0 0 1 12,0 v14 Z" fill="#1e293b" />
+      <circle cx="312" cy="84" r="8" fill="#a8a29e" />
+      {/* the barren fig tree */}
+      <path d="M62,92 v-30 M62,72 l-9,-10 M62,66 l8,-11" stroke="#78716c" strokeWidth="2.4" strokeLinecap="round" fill="none" />
+      {[[50, 58], [72, 52], [62, 48]].map(([x, y]) => <path key={x} d={`M${x},${y} q-6,-7 0,-12 q6,5 0,12 Z`} fill="#86efac" stroke="#16a34a" strokeWidth="0.8" />)}
+      {/* the lamp of the wise virgins */}
+      <path d="M86,78 q11,10 22,0 l-4,-6 h-14 Z" fill="#fcd34d" stroke="#b45309" strokeWidth="1.2" />
+      <path d="M108,74 l5,-3" stroke="#b45309" strokeWidth="1.6" />
+      <path d="M114,70 q-4,-8 0,-14 q4,6 0,14 Z" fill="#f97316" />
+      {/* the jar of costly oil and the thirty silver coins */}
+      <path d="M134,46 h10 v4 q8,6 6,22 q-1,8 -11,8 q-10,0 -11,-8 q-2,-16 6,-22 Z" fill="#fce7f3" stroke="#be185d" strokeWidth="1.2" />
+      {[0, 1, 2].map((k) => <ellipse key={k} cx={139} cy={93 - k * 3} rx="7" ry="2.2" fill="#e2e8f0" stroke="#64748b" strokeWidth="0.8" />)}
+    </g>
+  ),
+  parts: [
+    P(36, 16, t("Palm Sunday", "Ծաղկազարդ", "Цахказард"), t("Jesus rides into Jerusalem on a donkey, a humble animal, not a war horse, and the crowd waves branches. In Armenian churches willow branches are blessed, and the day is a feast of children.", "Հիսուսը Երուսաղեմ է մտնում էշի վրա նստած՝ համեստ կենդանու, այլ ոչ թե մարտական ձիու, և ամբոխը ճյուղեր է թափահարում։ Հայկական եկեղեցիներում ուռենու ճյուղեր են օրհնում, և այդ օրը երեխաների տոն է։", "Иисус въезжает в Иерусалим на осле — смиренном животном, а не боевом коне, и толпа машет ветвями. В армянских церквях освящают ветви вербы, и этот день — праздник детей.")),
+    P(122, 16, t("Monday to Wednesday", "Երկուշաբթիից չորեքշաբթի", "С понедельника по среду"), t("Jesus teaches in the Temple and drives out the money-changers. The Armenian Church remembers on these days the barren fig tree, the parable of the ten virgins and the woman who anointed Jesus with costly oil, while Judas agreed to betray him.", "Հիսուսը քարոզում է տաճարում և դուրս է քշում լումայափոխներին։ Այս օրերին Հայ Եկեղեցին հիշատակում է անպտուղ թզենին, տասը կույսերի առակը և այն կնոջը, որը թանկարժեք յուղով օծեց Հիսուսին, մինչդեռ Հուդան համաձայնեց մատնել նրան։", "Иисус учит в Храме и изгоняет менял. Армянская церковь вспоминает в эти дни бесплодную смоковницу, притчу о десяти девах и женщину, помазавшую Иисуса драгоценным миром, тогда как Иуда согласился его предать.")),
+    P(198, 16, t("Holy Thursday", "Ավագ հինգշաբթի", "Великий четверг"), t("The Last Supper and the washing of feet, then the prayer in Gethsemane and the arrest at night. Armenian churches serve the rite of Votnlva in the afternoon and a long evening service in growing darkness.", "Վերջին ընթրիքը և ոտնլվան, ապա աղոթքը Գեթսեմանիում և ձերբակալությունը գիշերը։ Հայկական եկեղեցիներում կեսօրից հետո կատարվում է Ոտնլվայի արարողությունը, իսկ երեկոյան՝ երկար արարողություն աճող խավարի մեջ։", "Тайная вечеря и омовение ног, затем молитва в Гефсимании и арест ночью. В армянских церквях днём совершают чин Вотнлва, а вечером — долгую службу в сгущающейся темноте.")),
+    P(238, 16, t("Good Friday", "Ավագ ուրբաթ", "Великая пятница"), t("The trial before Pilate, the way to Golgotha and the Crucifixion. In the evening Armenian churches hold the rite of burial, mourning Christ laid in the tomb.", "Դատաստանը Պիղատոսի առջև, ճանապարհը դեպի Գողգոթա և Խաչելությունը։ Երեկոյան հայկական եկեղեցիներում կատարվում է Թաղման կարգը՝ սգալով գերեզման դրված Քրիստոսին։", "Суд у Пилата, путь на Голгофу и Распятие. Вечером в армянских церквях совершают чин погребения, оплакивая положенного во гроб Христа.")),
+    P(272, 46, t("Holy Saturday", "Ավագ շաբաթ", "Великая суббота"), t("A quiet day of waiting. In the evening comes the Chragaluyts liturgy of Easter, the first celebration of the Resurrection, with candles carried home.", "Սպասման լուռ օր։ Երեկոյան մատուցվում է Զատկի Ճրագալույցի պատարագը՝ Հարության առաջին տոնակատարությունը, և մարդիկ վառվող մոմեր են տանում տուն։", "Тихий день ожидания. Вечером служат пасхальную литургию Чрагалуйц — первое празднование Воскресения, и люди несут домой горящие свечи.")),
+    P(314, 62, t("Easter Sunday", "Զատիկ", "Пасха"), t("The stone is rolled away and the tomb is empty. The greeting \"Christ is risen from the dead!\" replaces ordinary greetings until the Ascension.", "Քարը գլորված է, և գերեզմանը դատարկ է։ «Քրիստոս հարյավ ի մեռելոց» ողջույնը փոխարինում է սովորական ողջույններին մինչև Համբարձում։", "Камень отвален, и гробница пуста. Приветствие «Христос воскрес из мёртвых!» заменяет обычные приветствия до самого Вознесения.")),
+  ],
+};
+
+/* ---------------- grade 6: from Lent to Pentecost ---------------- */
+
+const fifty: Diagram = {
+  title: t("From Great Lent to Pentecost", "Մեծ պահքից մինչև Հոգեգալուստ", "От Великого поста до Пятидесятницы"),
+  h: 148,
+  draw: (lang) => {
+    const X = (d: number) => 106 + d * 3.4;
+    return (
+      <g transform="translate(0,-26)">
+        <rect x={X(-47) < 6 ? 6 : X(-47)} y="62" width={X(0) - (X(-47) < 6 ? 6 : X(-47))} height="16" rx="8" fill="#ede9fe" />
+        <rect x={X(0)} y="62" width={X(49) - X(0)} height="16" rx="8" fill="#fef3c7" />
+        <line x1="6" y1="70" x2="314" y2="70" stroke="#94a3b8" strokeWidth="1.5" />
+        <Tx x={60} y={56} s={t("Great Lent: 40 days + Holy Week", "Մեծ պահք․ 40 օր + Ավագ շաբաթ", "Великий пост: 40 дней + Страстная")} lang={lang} size={6.4} fill="#6d28d9" />
+        <Tx x={190} y={56} s={t("50 days of Easter joy", "Զատկի ուրախության 50 օրը", "50 дней пасхальной радости")} lang={lang} size={6.4} fill="#b45309" />
+        {[[-7, t("Palm|Sunday", "Ծաղկա-|զարդ", "Цахка-|зард"), "#16a34a"], [0, t("Easter", "Զատիկ", "Пасха"), "#e11d48"], [39, t("Ascension|day 40", "Համբարձում|40-րդ օր", "Вознесение|40-й день"), "#0369a1"], [49, t("Pentecost|day 50", "Հոգեգալուստ|50-րդ օր", "Пятидесятница|50-й день"), "#b91c1c"]].map(([d, s, c], k) => (
+          <g key={k}>
+            <circle cx={X(d as number)} cy="70" r={k === 1 ? 9 : 6} fill={c as string} stroke="#fff" strokeWidth="2" />
+            <Tx x={X(d as number)} y={k === 3 ? 116 : k === 1 ? 108 : 94} s={s as Tr} lang={lang} size={6.4} fill={c as string} />
+          </g>
+        ))}
+        {/* the date window */}
+        <rect x="40" y="132" width="180" height="36" rx="8" fill="#fff" stroke="#e11d48" strokeWidth="1.5" />
+        <Tx x={130} y={146} s={t("Easter falls between", "Զատիկը լինում է", "Пасха бывает")} lang={lang} size={7} fill="#475569" w={700} />
+        <Tx x={130} y={161} s={t("22 March and 25 April", "մարտի 22-ից ապրիլի 25-ը", "с 22 марта по 25 апреля")} lang={lang} size={8.5} fill="#e11d48" />
+      </g>
+    );
+  },
+  parts: [
+    P(30, 50, t("Great Lent", "Մեծ պահք", "Великий пост"), t("Forty days in memory of Christ's fast in the wilderness, plus Holy Week. Before it comes Barekendan, a day of feasting and fun; then the faithful keep a mostly plant-based fast and pray more.", "Քառասուն օր՝ ի հիշատակ անապատում Քրիստոսի պահքի, գումարած Ավագ շաբաթը։ Դրանից առաջ Բարեկենդանն է՝ խնջույքի և ուրախության օր, իսկ հետո հավատացյալները պահում են հիմնականում բուսական պահք և ավելի շատ են աղոթում։", "Сорок дней в память поста Христа в пустыне плюс Страстная неделя. Перед ним — Барекендан, день пиршества и веселья; затем верующие держат в основном растительный пост и больше молятся.")),
+    P(118, 54, t("Easter", "Զատիկ", "Пасха"), t("The centre of the whole Christian year. Everything before it prepares for it, and everything after it is counted from it.", "Ողջ քրիստոնեական տարվա կենտրոնը։ Ամեն ինչ, որ դրանից առաջ է, նախապատրաստում է նրան, և ամեն ինչ, որ հետո է, հաշվվում է նրանից։", "Центр всего христианского года. Всё, что до неё, готовит к ней, а всё, что после, отсчитывается от неё.")),
+    P(250, 56, t("The Ascension", "Համբարձում", "Вознесение"), t("Counting Easter Sunday as the first day, the fortieth day is always a Thursday. In Armenian villages it was the day of the Tsaghik vichak fortune-telling game.", "Եթե Զատկի կիրակին հաշվենք առաջին օր, քառասուներորդ օրը միշտ հինգշաբթի է։ Հայկական գյուղերում դա «Ծաղիկ վիճակի» գուշակության խաղի օրն էր։", "Если считать пасхальное воскресенье первым днём, сороковой день всегда приходится на четверг. В армянских сёлах это был день гадания «Цахик вичак».")),
+    P(286, 56, t("Pentecost", "Հոգեգալուստ", "Пятидесятница"), t("The fiftieth day, again a Sunday: the descent of the Holy Spirit on the apostles, the birthday of the Church. The name comes from the Greek word for \"fiftieth\".", "Հիսուներորդ օրը, դարձյալ կիրակի․ Սուրբ Հոգու իջնելը առաքյալների վրա, Եկեղեցու ծննդյան օրը։ «Պենտեկոստե» անունը գալիս է հունարեն «հիսուներորդ» բառից։", "Пятидесятый день, снова воскресенье: сошествие Святого Духа на апостолов, день рождения Церкви. Название «Пятидесятница» и греческое «Пентекост» означают «пятидесятый».")),
+    P(222, 106, t("Why the date moves", "Ինչու է ամսաթիվը փոխվում", "Почему дата меняется"), t("Since the Council of Nicaea in 325 Easter has been the first Sunday after the first full moon of spring. The Armenian Church follows this rule, but the patriarchate of Jerusalem uses the old Julian calendar, so there Easter is often on a different day.", "325 թվականի Նիկիայի ժողովից ի վեր Զատիկը գարնան առաջին լիալուսնից հետո առաջին կիրակին է։ Հայ Եկեղեցին հետևում է այս կանոնին, բայց Երուսաղեմի պատրիարքությունն օգտագործում է հին՝ Հուլյան օրացույցը, ուստի այնտեղ Զատիկը հաճախ այլ օր է լինում։", "Со времён Никейского собора 325 года Пасха — первое воскресенье после первого весеннего полнолуния. Армянская церковь следует этому правилу, но Иерусалимский патриархат пользуется старым юлианским календарём, поэтому там Пасха часто бывает в другой день.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty };
