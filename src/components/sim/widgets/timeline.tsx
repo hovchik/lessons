@@ -28,6 +28,8 @@ const W = {
   bc: t("{y} BC", "մ.թ.ա. {y}", "{y} до н. э."),
   cbc: t("{c} century BC", "մ.թ.ա. {c} դար", "{c} век до н. э."),
   cad: t("{c} century", "{c} դար", "{c} век"),
+  millennium: t("Millennium", "Հազարամյակը", "Тысячелетие"),
+  mbc: t("{c} millennium BC", "մ.թ.ա. {c} հազարամյակ", "{c} тысячелетие до н. э."),
   era: t("BC | AD", "մ.թ.ա. | մ.թ.", "до н. э. | н. э."),
   about: t("c. {y}", "մոտ {y}", "ок. {y}"),
 };
@@ -52,10 +54,13 @@ export function yearText(y: number, lang: ArtLang) {
   return y < 0 ? L(W.bc, lang).replace("{y}", s) : s;
 }
 
+/** Dates more than 3,000 years before Christ are given by millennium, the rest by century. */
+const deep = (y: number) => y < -3000;
+
 function centuryText(y: number, lang: ArtLang) {
-  const c = Math.ceil(Math.abs(y) / 100);
+  const c = Math.ceil(Math.abs(y) / (deep(y) ? 1000 : 100));
   const name = lang === "ru" ? roman(c) : lang === "hy" ? `${c}-րդ` : ordinal(c);
-  return L(y < 0 ? W.cbc : W.cad, lang).replace("{c}", name);
+  return L(deep(y) ? W.mbc : y < 0 ? W.cbc : W.cad, lang).replace("{c}", name);
 }
 
 /** Years from a to b, skipping the year 0 that does not exist. */
@@ -90,7 +95,7 @@ export default function Timeline({ spec, lang }: SimProps) {
   };
   const items: Array<[string, string, string?]> = [];
   if (e && last != null) {
-    items.push([L(W.year, lang), range(last), color(last)], [L(W.century, lang), centuryText(e.y, lang)]);
+    items.push([L(W.year, lang), range(last), color(last)], [L(deep(e.y) ? W.millennium : W.century, lang), centuryText(e.y, lang)]);
     if (e.to != null) items.push([L(W.lasted, lang), yearsText(span(e.y, e.to))]);
     else items.push([L(W.ago, lang), yearsText(span(e.y, now))]);
     if (picks.length === 2) items.push([L(W.between, lang), yearsText(span(ev[picks[0]].y, ev[picks[1]].y)), "#e11d48"]);
