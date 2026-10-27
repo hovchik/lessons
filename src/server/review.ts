@@ -270,7 +270,7 @@ export async function answerItem(input: {
   const correct = input.choice === item.question.answer;
   const [card] = await recordAnswers(
     input.userId,
-    [{ itemId: item.itemId, source, refId: ref.refId, courseId: item.courseId, correct, choice: input.choice, confidence: input.confidence ?? null, ms: input.ms ?? null }],
+    [{ itemId: item.itemId, source, refId: ref.refId, courseId: item.courseId, correct, choice: input.choice, confidence: input.confidence ?? null, ms: input.ms ?? null, options: item.question.options.length }],
     now,
   );
   const days = card ? Math.max(1, Math.round((new Date(card.due).getTime() - now.getTime()) / (24 * 60 * 60 * 1000))) : null;

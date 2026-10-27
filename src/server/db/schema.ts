@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer, index, primaryKey } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, real, index, primaryKey } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
 /** A string translated into the three UI languages. */
@@ -312,8 +312,11 @@ export const lessonSkills = sqliteTable(
   (t) => [primaryKey({ columns: [t.lessonId, t.skillId] }), index("lesson_skills_skill").on(t.skillId)],
 );
 
-/** Where an answer was given. `warmup`: the questions from earlier lessons at the top of a lesson; `unit`: a unit check. */
-export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "unit" | "check";
+/**
+ * Where an answer was given. `warmup`: the questions from earlier lessons at the top of a lesson; `unit`: a unit check;
+ * `practice`: adaptive practice of one skill.
+ */
+export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "unit" | "check" | "practice";
 
 /**
  * One row per question a pupil answers, anywhere in the app. `itemId` names the
@@ -343,7 +346,12 @@ export const answerEvents = sqliteTable(
       .notNull()
       .default(sql`(current_timestamp)`),
   },
-  (t) => [index("answer_events_user_item").on(t.userId, t.itemId, t.createdAt), index("answer_events_user_time").on(t.userId, t.createdAt)],
+  (t) => [
+    index("answer_events_user_item").on(t.userId, t.itemId, t.createdAt),
+    index("answer_events_user_time").on(t.userId, t.createdAt),
+    // Seeds a question's difficulty from everyone's earlier answers (src/server/ability.ts).
+    index("answer_events_item").on(t.itemId),
+  ],
 );
 
 /** FSRS card as stored: dates are ISO strings. */
@@ -384,6 +392,38 @@ export const reviewCards = sqliteTable(
       .default(sql`(current_timestamp)`),
   },
   (t) => [primaryKey({ columns: [t.userId, t.itemId] }), index("review_cards_user_due").on(t.userId, t.due), index("review_cards_user_course").on(t.userId, t.courseId)],
+);
+
+/**
+ * How hard each question is, on the same logit scale as the pupils' ability
+ * (src/lib/elo.ts). Shared by everyone and refined by every first try.
+ */
+export const itemRatings = sqliteTable("item_ratings", {
+  itemId: text("item_id").primaryKey(),
+  difficulty: real("difficulty").notNull(),
+  /** Answers the rating has seen (including the prior's worth); the more, the smaller each step. */
+  answers: integer("answers").notNull().default(0),
+  updatedAt: text("updated_at")
+    .notNull()
+    .default(sql`(current_timestamp)`),
+});
+
+/** A pupil's ability in one skill, on the item difficulty scale. */
+export const skillRatings = sqliteTable(
+  "skill_ratings",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    // No foreign key: the seed rebuilds `skills` with the same ids, and that must not wipe the ratings.
+    skillId: text("skill_id").notNull(),
+    ability: real("ability").notNull(),
+    answers: integer("answers").notNull().default(0),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.skillId] })],
 );
 
 export type Skill = typeof skills.$inferSelect;

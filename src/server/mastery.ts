@@ -78,10 +78,10 @@ export async function getUserMastery(userId: string) {
   return byCourse;
 }
 
-type SkillQuestion = { itemId: string; lessonId: string; lessonTitle: I18nText; lessonSlug: string; q: QuizQuestion };
+export type SkillQuestion = { itemId: string; lessonId: string; lessonTitle: I18nText; lessonSlug: string; q: QuizQuestion };
 
 /** The skill, its course and every question it can be checked with, in lesson order. */
-async function skillQuestions(skillId: string) {
+export async function skillQuestions(skillId: string) {
   const db = await getDb();
   const skill = await db
     .select({ id: schema.skills.id, courseId: schema.skills.courseId, position: schema.skills.position, title: schema.skills.title, subjectId: schema.courses.subjectId, grade: schema.courses.grade })
@@ -201,7 +201,7 @@ export async function recordUnitCheck(userId: string, skillId: string, answers: 
   });
   await recordAnswers(
     userId,
-    results.map((r, i) => ({ itemId: r.itemId, source: "unit" as const, refId: parseItemId(r.itemId)!.refId, courseId: skill.courseId, correct: r.correct, choice: r.choice, confidence: answers[i].confidence ?? null })),
+    results.map((r, i) => ({ itemId: r.itemId, source: "unit" as const, refId: parseItemId(r.itemId)!.refId, courseId: skill.courseId, correct: r.correct, choice: r.choice, confidence: answers[i].confidence ?? null, options: r.options.length })),
   );
   const score = results.filter((r) => r.correct).length;
   await recordAttempt({ userId, kind: "unit", refId: skillId, courseId: skill.courseId, score, total: results.length, answers: answers.map((a) => [a.itemId, a.choice]) });

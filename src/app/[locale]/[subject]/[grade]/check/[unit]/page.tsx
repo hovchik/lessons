@@ -63,7 +63,7 @@ export default async function UnitCheckPage({ params }: { params: Params }) {
         </div>
       </header>
       {questions.length > 0 ? (
-        <UnitCheck skillId={skill.skillId} questions={questions} token={check!.token} courseHref={courseHref} passPct={Math.round(UNIT_CHECK_PASS * 100)} />
+        <UnitCheck skillId={skill.skillId} questions={questions} token={check!.token} courseHref={courseHref} practiceHref={`${courseHref}/practice/${position}`} passPct={Math.round(UNIT_CHECK_PASS * 100)} />
       ) : (
         <p className="clay p-6 text-center text-muted-foreground">{t("noQuestions")}</p>
       )}

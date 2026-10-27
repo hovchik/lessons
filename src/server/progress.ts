@@ -68,6 +68,7 @@ export async function recordQuizResult(input: {
     correct: input.answers[i] === q.answer,
     choice: input.answers[i],
     confidence: input.confidence?.[i] ?? null,
+    options: q.options.length,
   }));
   const seconds = lesson.quiz.flatMap((q, i) => {
     const r = input.retries?.[i];
