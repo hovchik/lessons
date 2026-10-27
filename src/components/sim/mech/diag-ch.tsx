@@ -998,11 +998,157 @@ const ladle: Diagram = {
   ),
   parts: [
     P(226, 104, t("The cauldron", "Կաթսան", "Котёл"), t("The Congress of Berlin of 1878, where the great powers shared out the results of the Russo-Turkish War, like harissa served from one big pot.", "1878 թվականի Բեռլինի վեհաժողովը, որտեղ մեծ տերությունները բաժանում էին ռուս-թուրքական պատերազմի արդյունքները, ինչպես մեկ մեծ կաթսայից բաժանվող հարիսան։", "Берлинский конгресс 1878 года, где великие державы делили итоги Русско-турецкой войны, как арису из одного большого котла.")),
-    P(96, 58, t("Iron ladles", "Երկաթե շերեփներ", "Железные половники"), t("The Balkan peoples came with armies and with the backing of force. Serbia, Montenegro and Romania won independence, and Bulgaria a principality of its own.", "Բալկանյան ժողովուրդները եկել էին բանակներով և ուժի աջակցությամբ։ Սերբիան, Չեռնոգորիան և Ռումինիան անկախություն ստացան, իսկ Բուլղարիան՝ սեփական իշխանություն։", "Балканские народы пришли с армиями и опорой на силу. Сербия, Черногория и Румыния получили независимость, а Болгария — собственное княжество.")),
+    P(96, 58, t("Iron ladles", "Երկաթե շերեփներ", "Железные половники"), t("The Balkan peoples came with armies and with the backing of force. Serbia, Montenegro and Romania won independence, and Bulgaria a principality of its own.", "Բալկանյան ժողովուրդներն եկել էին բանակներով և ուժի աջակցությամբ։ Սերբիան, Չեռնոգորիան և Ռումինիան անկախություն ստացան, իսկ Բուլղարիան՝ սեփական իշխանություն։", "Балканские народы пришли с армиями и опорой на силу. Сербия, Черногория и Румыния получили независимость, а Болгария — собственное княжество.")),
     P(232, 62, t("The paper ladle", "Թղթե շերեփը", "Бумажный половник"), t("Khrimian had only a petition. When he dipped his paper ladle into the pot, it got soaked and tore, and he came home empty-handed.", "Խրիմյանն ուներ միայն խնդրագիր։ Երբ նա իր թղթե շերեփը մտցրեց կաթսան, այն թրջվեց ու պատռվեց, և նա վերադարձավ դատարկաձեռն։", "У Хримяна была только петиция. Когда он опустил свой бумажный половник в котёл, тот размок и порвался, и он вернулся с пустыми руками.")),
     P(276, 52, t("Article 61", "61-րդ հոդված", "Статья 61"), t("The treaty only promised reforms in the Armenian provinces, to be watched over by the powers together. In practice no one made the sultan carry them out.", "Պայմանագիրը միայն խոստանում էր բարենորոգումներ հայկական նահանգներում, որոնց պետք է միասին հետևեին տերությունները։ Գործնականում ոչ ոք սուլթանին չստիպեց կատարել դրանք։", "Договор лишь обещал реформы в армянских провинциях под общим надзором держав. На деле никто не заставил султана их провести.")),
     P(186, 30, t("Hayrik's lesson", "Հայրիկի դասը", "Урок Айрика"), t("Back in Constantinople he told the people from the pulpit that promises on paper are not enough, and that a people must rely above all on its own strength and unity.", "Վերադառնալով Կոստանդնուպոլիս՝ նա ամբիոնից ասաց ժողովրդին, որ թղթի վրա խոստումները բավական չեն, և որ ժողովուրդը պետք է հույսը դնի առաջին հերթին իր ուժի և միասնության վրա։", "Вернувшись в Константинополь, он сказал с амвона народу, что бумажных обещаний мало и что народ должен полагаться прежде всего на свои силы и единство.")),
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees, trinity, sacraments, churchplan, calendar, khachkar, ladle };
+/* ---------------- grade 11: faith, hope, love and the four cardinal virtues ---------------- */
+
+const CARDINAL: Tr[] = [
+  t("Wisdom", "Իմաստություն", "Мудрость"),
+  t("Justice", "Արդարություն", "Справедливость"),
+  t("Courage", "Արիություն", "Мужество"),
+  t("Temperance", "Ժուժկալություն", "Умеренность"),
+];
+
+const virtues: Diagram = {
+  title: t("Faith, hope, love and the four cardinal virtues", "Հավատ, հույս, սեր և չորս գլխավոր առաքինությունները", "Вера, надежда, любовь и четыре главные добродетели"),
+  h: 206,
+  draw: (lang) => (
+    <g>
+      <Tx x={160} y={12} s={t("\"faith, hope, charity, these three\" (1 Cor 13:13)", "«հավատ, հույս, սեր՝ այս երեքը» (Ա Կորնթ. 13։13)", "«вера, надежда, любовь, сии три» (1 Кор. 13:13)")} lang={lang} size={6.6} fill="#64748b" w={500} />
+      {/* faith: a cross */}
+      <path d="M66,24 h8 v14 h12 v8 h-12 v28 h-8 v-28 h-12 v-8 h12 Z" fill="#0369a1" />
+      {/* hope: an anchor */}
+      <circle cx="160" cy="27" r="4" fill="none" stroke="#047857" strokeWidth="3" />
+      <path d="M160,31 v44 M149,42 h22 M140,60 q20,26 40,0" fill="none" stroke="#047857" strokeWidth="4" strokeLinecap="round" />
+      <path d="M136,58 l8,-2 l-2,8 Z M184,58 l-8,-2 l2,8 Z" fill="#047857" />
+      {/* love: the largest, a heart */}
+      <path d="M250,82 C218,60 222,28 250,42 C278,28 282,60 250,82 Z" fill="#be123c" />
+      <Tx x={70} y={92} s={t("faith", "հավատ", "вера")} lang={lang} size={8} fill="#0369a1" />
+      <Tx x={160} y={92} s={t("hope", "հույս", "надежда")} lang={lang} size={8} fill="#047857" />
+      <Tx x={250} y={92} s={t("love|\"the greatest\"", "սեր|«ամենամեծը»", "любовь|«больше всех»")} lang={lang} size={8} fill="#be123c" />
+      {/* the four cardinal virtues as columns under one lintel */}
+      <rect x="34" y="120" width="252" height="12" rx="2" fill="#a16207" />
+      <Tx x={160} y={129} s={t("the four cardinal virtues", "չորս գլխավոր առաքինությունները", "четыре главные добродетели")} lang={lang} size={6.4} fill="#fff" />
+      <rect x="34" y="182" width="252" height="6" rx="1" fill="#a16207" />
+      {CARDINAL.map((v, k) => (
+        <g key={k}>
+          <rect x={52 + k * 64} y="132" width="24" height="50" fill="#fef3c7" stroke="#a16207" strokeWidth="1.2" />
+          <path d={`M${58 + k * 64},136 v42 M${64 + k * 64},136 v42 M${70 + k * 64},136 v42`} stroke="#fcd34d" strokeWidth="1" />
+          <Tx x={64 + k * 64} y={200} s={v} lang={lang} size={6.4} fill="#78350f" />
+        </g>
+      ))}
+    </g>
+  ),
+  parts: [
+    P(94, 64, t("Faith", "Հավատ", "Вера"), t("Trust in God and in his word. The cross is its oldest sign: Christians believe that through it God showed his love.", "Վստահություն Աստծո և նրա խոսքի հանդեպ։ Խաչը նրա ամենահին նշանն է․ քրիստոնյաները հավատում են, որ դրանով Աստված ցույց տվեց իր սերը։", "Доверие к Богу и его слову. Крест — её древнейший знак: христиане верят, что через него Бог явил свою любовь.")),
+    P(186, 36, t("Hope", "Հույս", "Надежда"), t("The Letter to the Hebrews calls hope \"an anchor of the soul, both sure and steadfast\" (6:19). An anchor keeps a ship steady in a storm, and hope keeps a person steady in hard times.", "Եբրայեցիներին ուղղված թուղթը հույսն անվանում է «հոգու խարիսխ՝ ապահով ու հաստատուն» (6։19)։ Խարիսխը նավը կայուն է պահում փոթորկի ժամանակ, իսկ հույսը մարդուն՝ դժվար օրերին։", "Послание к Евреям называет надежду «якорем души, безопасным и крепким» (6:19). Якорь держит корабль в бурю, а надежда держит человека в трудные времена.")),
+    P(288, 70, t("Love", "Սեր", "Любовь"), t("Paul calls love the greatest of the three: faith and hope belong to this life, but love, he writes, \"never faileth\".", "Պողոսը սերն անվանում է երեքից ամենամեծը․ հավատն ու հույսը պատկանում են այս կյանքին, բայց սերը, ինչպես նա գրում է, «երբեք չի անցնում»։", "Павел называет любовь большей из трёх: вера и надежда принадлежат этой жизни, а любовь, пишет он, «никогда не перестаёт».")),
+    P(26, 126, t("Why \"cardinal\"?", "Ինչո՞ւ «գլխավոր»", "Почему «главные»?"), t("The Latin word cardo means a door's hinge. These four virtues are the hinges on which the rest of good behaviour turns. The idea goes back to the Greek philosophers Plato and Aristotle, and Christian teachers took it up.", "Լատիներեն cardo բառը նշանակում է դռան ծխնի, ուստի այս չորսը կոչվում են նաև «ծխնի» առաքինություններ․ դրանց վրա է պտտվում մնացած ամբողջ բարի վարքը։ Գաղափարը գալիս է հույն փիլիսոփաներ Պլատոնից և Արիստոտելից, և քրիստոնյա ուսուցիչներն այն ընդունեցին։", "Латинское cardo значит «дверная петля», отсюда их латинское название «кардинальные»: на этих четырёх добродетелях, как дверь на петлях, держится всё доброе поведение. Идея восходит к греческим философам Платону и Аристотелю, и христианские учители её приняли.")),
+    P(64, 158, t("Wisdom first", "Իմաստությունը՝ առաջինը", "Сначала мудрость"), t("Wisdom is often named first, because it helps the other three: courage without wisdom becomes recklessness, and justice without wisdom becomes harshness.", "Իմաստությունը հաճախ նշվում է առաջինը, որովհետև օգնում է մյուս երեքին․ առանց իմաստության արիությունը դառնում է անխոհեմություն, իսկ արդարությունը՝ դաժանություն։", "Мудрость часто называют первой, потому что она помогает трём остальным: мужество без мудрости становится безрассудством, а справедливость без мудрости — жестокостью.")),
+  ],
+};
+
+/* ---------------- grade 11: the Armenian wedding rite ---------------- */
+
+const Crown = ({ x, y }: { x: number; y: number }) => (
+  <g>
+    <path d={`M${x - 11},${y} l-2,-12 l6,6 l7,-10 l7,10 l6,-6 l-2,12 Z`} fill="#facc15" stroke="#a16207" strokeWidth="1" />
+    <circle cx={x} cy={y - 16} r="1.6" fill="#be123c" />
+  </g>
+);
+
+const wedding: Diagram = {
+  title: t("The sacrament of marriage", "Պսակի խորհուրդը", "Таинство брака"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      {/* the kavor holding a cross over the couple */}
+      <Head x={52} y={92} r={10} fill="#64748b" />
+      <path d="M66,104 L98,52" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+      <path d="M96,30 h6 v8 h8 v6 h-8 v14 h-6 v-14 h-8 v-6 h8 Z" fill="#a16207" />
+      <Tx x={52} y={136} s={t("kavor", "քավոր", "кавор")} lang={lang} size={7} fill="#475569" />
+      {/* the couple with crowns */}
+      <Head x={128} y={88} r={11} fill="#1e3a8a" />
+      <Head x={196} y={88} r={11} fill="#db2777" />
+      <Crown x={128} y={74} />
+      <Crown x={196} y={74} />
+      {/* the narot: a twisted red and white thread joining them */}
+      <path d="M140,108 q22,12 44,0" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="4 4" />
+      <path d="M140,108 q22,12 44,0" fill="none" stroke="#e2e8f0" strokeWidth="3" strokeDasharray="4 4" strokeDashoffset="4" />
+      <Tx x={162} y={130} s={t("narot", "նարոտ", "нарот")} lang={lang} size={7} fill="#b91c1c" />
+      {/* rings and the common cup */}
+      <circle cx="152" cy="166" r="9" fill="none" stroke="#ca8a04" strokeWidth="3" />
+      <circle cx="166" cy="166" r="9" fill="none" stroke="#eab308" strokeWidth="3" />
+      <Tx x={159} y={190} s={t("rings", "մատանիներ", "кольца")} lang={lang} size={7} fill="#a16207" />
+      <path d="M254,150 h24 q0,16 -12,18 v12 h8 v4 h-20 v-4 h8 v-12 q-12,-2 -8,-18 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="1" />
+      <path d="M255,153 h22 q-1,9 -11,11 q-10,-2 -11,-11 Z" fill="#9f1239" />
+      <Tx x={266} y={196} s={t("common cup", "ընդհանուր բաժակ", "общая чаша")} lang={lang} size={7} fill="#a16207" />
+    </g>
+  ),
+  parts: [
+    P(162, 50, t("Crowns", "Պսակներ", "Венцы"), t("In Armenian the same word, psak, means both a crown and a marriage. The couple are crowned as the king and queen of a new family, and also, the Church teaches, as people who will be faithful to each other like martyrs to their faith.", "Հայերենում նույն «պսակ» բառը նշանակում է և՛ թագ, և՛ ամուսնություն։ Զույգին պսակում են որպես նոր ընտանիքի արքա և թագուհի, և, ինչպես ուսուցանում է Եկեղեցին, նաև որպես մարդկանց, որոնք հավատարիմ կլինեն միմյանց, ինչպես նահատակներն իրենց հավատին։", "В армянском одно слово псак означает и венец, и брак. Супругов венчают как царя и царицу новой семьи, а также, как учит Церковь, как людей, которые будут верны друг другу, словно мученики своей вере.")),
+    P(186, 122, t("Narot", "Նարոտ", "Нарот"), t("A thread of twisted red and white strands, blessed by the priest. It binds the two into one; the colours are often explained as love and purity, or as the blood of Christ and the water of baptism.", "Կարմիր և սպիտակ թելերից ոլորված թել, որն օրհնում է քահանան։ Այն միացնում է երկուսին մեկի մեջ․ գույները հաճախ բացատրում են որպես սեր և մաքրություն կամ որպես Քրիստոսի արյուն և մկրտության ջուր։", "Скрученная из красных и белых прядей нить, освящённая священником. Она связывает двоих в одно; цвета часто объясняют как любовь и чистоту или как кровь Христа и воду крещения.")),
+    P(120, 170, t("Rings", "Մատանիներ", "Кольца"), t("The priest blesses the rings at the beginning of the rite. A ring has no beginning and no end, a sign of a promise meant to last for life.", "Քահանան մատանիներն օրհնում է արարողության սկզբում։ Մատանին ո՛չ սկիզբ ունի, ո՛չ վերջ՝ ամբողջ կյանքի համար տրված խոստման նշան։", "Священник благословляет кольца в начале обряда. У кольца нет ни начала, ни конца — знак обещания на всю жизнь.")),
+    P(26, 70, t("Kavor", "Քավոր", "Кавор"), t("The kavor holds a cross over the couple during the rite and promises to help the new family, like a godparent of the marriage. Often the same kavor later becomes godfather to the couple's children.", "Քավորն արարողության ժամանակ խաչը պահում է զույգի գլխավերևում և խոստանում օգնել նոր ընտանիքին՝ ինչպես ամուսնության կնքահայր։ Հաճախ նույն քավորը հետո կնքահայր է դառնում զույգի երեխաներին։", "Кавор держит крест над головами супругов во время обряда и обещает помогать новой семье, как крёстный брака. Часто тот же кавор потом становится крёстным их детей.")),
+    P(292, 160, t("Common cup", "Ընդհանուր բաժակ", "Общая чаша"), t("At the end the couple drink blessed wine from one cup, a sign that from now on they share joy and sorrow alike.", "Վերջում զույգն օրհնված գինի է խմում մեկ բաժակից՝ ի նշան, որ այսուհետ նրանք կիսում են և՛ ուրախությունը, և՛ վիշտը։", "В конце супруги пьют освящённое вино из одной чаши — знак того, что отныне они делят и радость, и горе.")),
+  ],
+};
+
+/* ---------------- grade 11: the road from Jerusalem to Jericho ---------------- */
+
+const ROAD: Array<[number, number]> = [[16, 42], [60, 46], [100, 60], [140, 76], [180, 92], [220, 108], [260, 128], [304, 146]];
+
+const jericho: Diagram = {
+  title: t("The good Samaritan's road: Jerusalem to Jericho", "Բարի սամարացու ճանապարհը՝ Երուսաղեմից Երիքով", "Дорога доброго самарянина: из Иерусалима в Иерихон"),
+  h: 196,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="196" fill="#f0f9ff" />
+      <path d={`M${ROAD.map(([x, y]) => `${x},${y}`).join(" L")} L304,184 L16,184 Z`} fill="#fde68a" />
+      <path d={`M${ROAD.map(([x, y]) => `${x},${y}`).join(" L")}`} fill="none" stroke="#a16207" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d="M16,120 H304" stroke="#0284c7" strokeWidth="1" strokeDasharray="4 3" />
+      <Tx x={20} y={116} s={t("sea level, 0 m", "ծովի մակարդակ՝ 0 մ", "уровень моря, 0 м")} lang={lang} size={6} fill="#0284c7" anchor="start" w={500} />
+      {/* Jerusalem: walls and towers */}
+      <path d="M12,42 v-14 h6 v4 h4 v-4 h6 v4 h4 v-4 h6 v14 Z" fill="#a8a29e" />
+      <path d="M22,28 v-8 a3,3 0 0 1 6,0 v8" fill="#78716c" />
+      <Tx x={50} y={16} s={t("Jerusalem, about 750 m", "Երուսաղեմ՝ մոտ 750 մ", "Иерусалим, около 750 м")} lang={lang} size={6.6} fill="#57534e" anchor="start" />
+      {/* priest and Levite, passing by */}
+      <Head x={104} y={50} r={4} fill="#7c3aed" />
+      <Head x={120} y={57} r={4} fill="#0369a1" />
+      {/* the wounded man lying by the road */}
+      <ellipse cx="152" cy="78" rx="9" ry="2.6" fill="#78716c" />
+      <circle cx="141" cy="77" r="3" fill="#78716c" />
+      {/* the Samaritan and his donkey */}
+      <Head x={186} y={82} r={4} fill="#047857" />
+      <ellipse cx="200" cy="90" rx="8" ry="4.5" fill="#a8a29e" />
+      <path d="M195,93 v7 M205,94 v8" stroke="#78716c" strokeWidth="1.6" />
+      <circle cx="209" cy="85" r="3" fill="#a8a29e" />
+      {/* the inn */}
+      <rect x="236" y="104" width="22" height="14" fill="#fff7ed" stroke="#9a3412" strokeWidth="1" />
+      <path d="M233,104 l14,-10 l14,10 Z" fill="#9a3412" />
+      <rect x="244" y="110" width="6" height="8" fill="#9a3412" />
+      {/* Jericho: a palm */}
+      <path d="M298,146 q-2,-14 1,-26" stroke="#78350f" strokeWidth="2.5" fill="none" />
+      <path d="M299,120 q-10,-4 -16,4 M299,120 q10,-4 16,4 M299,120 q-6,-8 -14,-8 M299,120 q6,-8 14,-8" stroke="#15803d" strokeWidth="2" fill="none" />
+      <Tx x={262} y={160} s={t("Jericho, about|250 m below sea level", "Երիքով՝ ծովի|մակարդակից մոտ 250 մ ցածր", "Иерихон, около 250 м|ниже уровня моря")} lang={lang} size={6.4} fill="#78350f" />
+      <path d="M20,190 H300" stroke="#475569" strokeWidth="1" />
+      <path d="M20,187 v6 M300,187 v6" stroke="#475569" strokeWidth="1" />
+      <Tx x={92} y={180} s={t("about 27 km, 1,000 m down", "մոտ 27 կմ, 1000 մ վայրէջք", "около 27 км, спуск на 1000 м")} lang={lang} size={6.4} fill="#475569" />
+    </g>
+  ),
+  parts: [
+    P(26, 56, t("Jerusalem", "Երուսաղեմ", "Иерусалим"), t("The man in the parable was going \"down from Jerusalem to Jericho\", and it really is downhill all the way: the city stands on hills about 750 m high.", "Առակի մարդը «իջնում էր Երուսաղեմից Երիքով», և ճանապարհն իսկապես ամբողջովին վայրէջք է․ քաղաքը կանգնած է մոտ 750 մ բարձրությամբ բլուրների վրա։", "Человек в притче «шёл из Иерусалима в Иерихон», и путь действительно всё время идёт вниз: город стоит на холмах высотой около 750 м.")),
+    P(112, 36, t("Priest and Levite", "Քահանան և ղևտացին", "Священник и левит"), t("Both served in the Temple and knew the Law well, yet both \"passed by on the other side\". Perhaps they were afraid of robbers, or of becoming ritually unclean by touching a body.", "Երկուսն էլ ծառայում էին տաճարում և լավ գիտեին Օրենքը, բայց երկուսն էլ «անցան կողքով»։ Գուցե նրանք վախենում էին ավազակներից կամ մարմնին դիպչելով ծիսականորեն պղծվելուց։", "Оба служили в Храме и хорошо знали Закон, но оба «прошли мимо». Возможно, они боялись разбойников или ритуальной нечистоты от прикосновения к телу.")),
+    P(152, 96, t("The wounded man", "Վիրավոր մարդը", "Раненый"), t("Robbers stripped and beat him and left him \"half dead\". Jesus does not say who he was or where he came from: anyone can be the one who needs help.", "Ավազակները մերկացրին ու ծեծեցին նրան և թողեցին «կիսամեռ»։ Հիսուսը չի ասում, թե ով էր նա կամ որտեղից էր․ ցանկացած մարդ կարող է լինել նա, ով օգնության կարիք ունի։", "Разбойники раздели и избили его и оставили «едва живым». Иисус не говорит, кто он и откуда: любой может оказаться тем, кому нужна помощь.")),
+    P(196, 66, t("The Samaritan", "Սամարացին", "Самарянин"), t("Jews and Samaritans had no dealings with each other. Yet this stranger poured oil and wine on the wounds, bound them, and set the man on his own animal.", "Հրեաներն ու սամարացիները միմյանց հետ չէին շփվում։ Եվ սակայն այս օտարականը յուղ ու գինի լցրեց վերքերին, կապեց դրանք և մարդուն նստեցրեց իր սեփական գրաստին։", "Иудеи и самаряне не общались друг с другом. Но этот чужак возлил на раны масло и вино, перевязал их и посадил человека на своё животное.")),
+    P(247, 86, t("The inn", "Պանդոկը", "Гостиница"), t("He paid the innkeeper two denarii, about two days' wages, and promised to pay any more on his way back.", "Նա պանդոկապետին տվեց երկու դինար՝ մոտ երկու օրվա վարձ, և խոստացավ վերադարձին վճարել ավելին, եթե պետք լինի։", "Он дал хозяину два динария, примерно двухдневный заработок, и обещал на обратном пути доплатить, если понадобится.")),
+    P(300, 104, t("Jericho", "Երիքով", "Иерихон"), t("One of the oldest cities in the world and one of the lowest, near the Jordan and the Dead Sea; an oasis of palms, which the Bible calls \"the city of palm trees\".", "Աշխարհի ամենահին և ամենացածրադիր քաղաքներից մեկը՝ Հորդանանի և Մեռյալ ծովի մոտ․ արմավենիների օազիս, որն Աստվածաշունչն անվանում է «արմավենիների քաղաք»։", "Один из древнейших и самых низко расположенных городов мира, у Иордана и Мёртвого моря; оазис пальм, который Библия называет «городом пальм».")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees, trinity, sacraments, churchplan, calendar, khachkar, ladle, virtues, wedding, jericho };

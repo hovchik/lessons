@@ -56,7 +56,7 @@ export const CH_TIMELINES: Record<string, TimeSet> = {
       E(1828, t("Treaty of Turkmenchay: Etchmiadzin in Russia", "Թուրքմենչայի պայմանագիր՝ Էջմիածինը Ռուսաստանում", "Туркманчайский договор: Эчмиадзин в России")),
       E(1836, t("The Polozhenie", "Պոլոժենիե", "Положение"), t("The tsar approves the statute on the Armenian Church.", "Ցարը հաստատում է Հայ Եկեղեցու կանոնադրությունը։", "Царь утверждает устав Армянской церкви.")),
       E(1843, t("Nerses V Ashtaraketsi becomes catholicos", "Ներսես Ե Աշտարակեցին դառնում է կաթողիկոս", "Нерсес V Аштаракеци становится католикосом")),
-      E(1874, t("Gevorkian Seminary at Etchmiadzin", "Գևորգյան ճեմարանը Էջմիածնում", "Геворкянская семинария в Эчмиадзине")),
+      E(1874, t("Gevorkian Seminary at Etchmiadzin", "Գևորգյան ճեմարանն Էջմիածնում", "Геворкянская семинария в Эчмиадзине")),
       E(1892, t("Khrimian Hayrik elected catholicos", "Խրիմյան Հայրիկն ընտրվում է կաթողիկոս", "Хримян Айрик избран католикосом")),
       E(1903, t("Law confiscating church property", "Եկեղեցական գույքի բռնագրավման օրենքը", "Закон о конфискации церковного имущества"), t("The whole people protests; in 1905 the property is returned.", "Ամբողջ ժողովուրդը բողոքում է․ 1905 թվականին գույքը վերադարձվում է։", "Весь народ протестует; в 1905 году имущество возвращают.")),
     ],
@@ -68,7 +68,7 @@ export const CH_TIMELINES: Record<string, TimeSet> = {
       E(1921, t("Armenians leave Cilicia; the Catholicos of Sis wanders", "Հայերը լքում են Կիլիկիան․ Սսի կաթողիկոսը թափառում է", "Армяне покидают Киликию; католикос Сиса скитается")),
       E(1922, t("Balakian's \"Armenian Golgotha\" published", "Լույս է տեսնում Բալաքյանի «Հայ Գողգոթան»", "Выходит «Армянская Голгофа» Балакяна")),
       E(1930, t("The Catholicosate of Cilicia settles in Antelias", "Կիլիկիո կաթողիկոսությունը հաստատվում է Անթիլիասում", "Киликийский католикосат обосновывается в Антилиасе")),
-      E(1965, t("50th anniversary: first public remembrance in Yerevan", "50-ամյակ՝ առաջին հանրային հիշատակումը Երևանում", "50-летие: первое публичное поминовение в Ереване")),
+      E(1965, t("50th anniversary: first public remembrance in Yerevan", "50-ամյակ՝ առաջին հանրային հիշատակումն Երևանում", "50-летие: первое публичное поминовение в Ереване")),
       E(2015, t("23 April: the victims are canonised", "Ապրիլի 23՝ զոհերը սրբադասվում են", "23 апреля: жертвы причислены к лику святых")),
     ],
   },
@@ -96,4 +96,18 @@ export const CH_TIMELINES: Record<string, TimeSet> = {
       E(2016, t("Pope Francis visits Armenia", "Ֆրանցիսկոս պապն այցելում է Հայաստան", "Папа Франциск посещает Армению")),
     ],
   },
+  /* ---------------- grade 11 ---------------- */
+  dialogue: {
+    title: t("The Armenian Church in dialogue", "Հայ Եկեղեցին երկխոսության մեջ", "Армянская Церковь в диалоге"),
+    events: [
+      E(1165, t("Nerses Shnorhali writes to Emperor Manuel", "Ներսես Շնորհալին գրում է Մանուել կայսրին", "Нерсес Шнорали пишет императору Мануилу"), t("His letters to the Byzantine emperor explained the Armenian faith in a spirit of love; the talks lasted until his death in 1173.", "Բյուզանդական կայսրին ուղղված նրա նամակները սիրո ոգով բացատրում էին հայոց հավատը․ բանակցությունները շարունակվեցին մինչև նրա մահը՝ 1173 թվականը։", "Его письма византийскому императору в духе любви объясняли армянскую веру; переговоры шли до его смерти в 1173 году.")),
+      E(1962, t("Etchmiadzin joins the World Council of Churches", "Էջմիածինը միանում է Եկեղեցիների համաշխարհային խորհրդին", "Эчмиадзин вступает во Всемирный совет церквей")),
+      E(1965, t("Oriental Orthodox churches meet in Addis Ababa", "Արևելյան ուղղափառ եկեղեցիները հանդիպում են Ադիս Աբեբայում", "Встреча древневосточных церквей в Аддис-Абебе")),
+      E(1970, t("Vazgen I visits Pope Paul VI in Rome", "Վազգեն Ա-ն այցելում է Պողոս VI պապին Հռոմում", "Вазген I посещает папу Павла VI в Риме")),
+      E(1996, t("Garegin I and John Paul II sign a common declaration", "Գարեգին Ա-ն և Հովհաննես Պողոս II-ը ստորագրում են համատեղ հռչակագիր", "Гарегин I и Иоанн Павел II подписывают совместную декларацию"), t("It said that the two churches share the same faith in Christ, true God and true man, despite the different words used since Chalcedon.", "Այն ասում էր, որ երկու եկեղեցիներն ունեն նույն հավատը Քրիստոսի՝ ճշմարիտ Աստծո և ճշմարիտ մարդու հանդեպ, չնայած Քաղկեդոնից ի վեր օգտագործվող տարբեր բառերին։", "В ней говорилось, что обе церкви разделяют одну веру во Христа, истинного Бога и истинного человека, несмотря на разные слова со времён Халкидона.")),
+      E(2001, t("John Paul II visits Armenia", "Հովհաննես Պողոս II-ն այցելում է Հայաստան", "Иоанн Павел II посещает Армению")),
+      E(2016, t("Pope Francis visits Armenia", "Ֆրանցիսկոս պապն այցելում է Հայաստան", "Папа Франциск посещает Армению")),
+    ],
+  },
 };
+
