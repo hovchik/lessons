@@ -4,7 +4,7 @@ import type { ArtLang, Tr } from "@/lib/art/spec";
 import { L, t } from "../labels";
 import type { Diagram } from "./types";
 
-/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables, a class with its objects. */
+/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables, a class with its objects, the DOM, an HTTP exchange, git history. */
 
 const P = (x: number, y: number, name: Tr, text: Tr) => ({ x, y, name, text });
 const Tx = ({ x, y, s, lang, size = 9, fill = "#1e1b4b", anchor = "middle", w = 900 }: { x: number; y: number; s: Tr; lang: ArtLang; size?: number; fill?: string; anchor?: "start" | "middle" | "end"; w?: number }) => (
@@ -577,4 +577,167 @@ const oop: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db, oop };
+/* ---------------- the DOM and an event ---------------- */
+
+const DOM_CODE = ['<h1>{T}</h1>', '<button id="btn">+1</button>', '<p id="out">0</p>', "<script>", "let n = 0;", 'btn.addEventListener("click", () => {', "  n++;", "  out.textContent = n;", "});", "</script>"];
+const DOM_NODES: Array<[string, number, number, string]> = [
+  ["document", 236, 26, "#e0e7ff"], ["html", 236, 54, "#e0e7ff"], ["head", 196, 84, "#f1f5f9"], ["body", 278, 84, "#f1f5f9"],
+  ["h1", 222, 116, "#fef3c7"], ["button", 262, 116, "#dcfce7"], ["p", 304, 116, "#fce7f3"],
+];
+const DOM_EDGES = [[0, 1], [1, 2], [1, 3], [3, 4], [3, 5], [3, 6]];
+
+const dom: Diagram = {
+  title: t("The page as a tree, and a click", "Էջը՝ որպես ծառ, և սեղմում", "Страница как дерево и щелчок"),
+  draw: (lang) => {
+    const title = L(t("Counter", "Հաշվիչ", "Счётчик"), lang);
+    return (
+      <g>
+        <rect x="4" y="14" width="160" height="132" rx="6" fill="#0f172a" />
+        {DOM_CODE.map((ln, k) => (
+          <text key={k} x="9" y={28 + k * 12} fontSize="6" fontWeight="700" fontFamily={MONO} fill={k < 3 ? "#93c5fd" : k === 5 ? "#fbbf24" : k === 7 ? "#86efac" : "#e2e8f0"} xmlSpace="preserve">{ln.replace("{T}", title)}</text>
+        ))}
+        {DOM_EDGES.map(([a, b]) => <line key={b} x1={DOM_NODES[a][1]} y1={DOM_NODES[a][2] + 7} x2={DOM_NODES[b][1]} y2={DOM_NODES[b][2] - 7} stroke="#94a3b8" strokeWidth="1.2" />)}
+        {DOM_NODES.map(([n, x, y, c]) => (
+          <g key={n}>
+            <rect x={x - (n.length > 4 ? 22 : 15)} y={y - 7} width={n.length > 4 ? 44 : 30} height="14" rx="4" fill={c} stroke="#64748b" strokeWidth="0.8" />
+            <text x={x} y={y + 3} textAnchor="middle" fontSize="7" fontWeight="800" fontFamily={MONO} fill="#1e1b4b">{n}</text>
+          </g>
+        ))}
+        {/* what the visitor sees */}
+        <rect x="166" y="140" width="146" height="74" rx="6" fill="#fff" stroke="#64748b" />
+        <rect x="166" y="140" width="146" height="12" rx="6" fill="#e2e8f0" />
+        {["#f87171", "#fbbf24", "#4ade80"].map((c, k) => <circle key={c} cx={174 + k * 7} cy="146" r="2.2" fill={c} />)}
+        <text x="176" y="168" fontSize="10" fontWeight="900" fill="#1e1b4b">{title}</text>
+        <rect x="176" y="176" width="30" height="16" rx="4" fill="#16a34a" />
+        <text x="191" y="187" textAnchor="middle" fontSize="8" fontWeight="900" fill="#fff">+1</text>
+        <path d="M200,186 l0,12 l3,-3 l3,6 l2,-1 l-3,-6 l4,0 Z" fill="#1e1b4b" stroke="#fff" strokeWidth="0.6" />
+        <text x="178" y="207" fontSize="9" fontWeight="900" fill="#db2777">3</text>
+        <path d="M212,184 C240,184 250,170 290,124" fill="none" stroke="#f59e0b" strokeWidth="1.3" strokeDasharray="3 2" />
+        <Tx x={262} y={204} s={t("click → n++ → new text", "սեղմում → n++ → նոր տեքստ", "щелчок → n++ → новый текст")} lang={lang} size={6.5} fill="#b45309" />
+      </g>
+    );
+  },
+  parts: [
+    P(296, 26, t("The DOM tree", "DOM ծառը", "Дерево DOM"), t("The browser reads the HTML and builds a tree of objects: document at the top, then html, head, body and every element inside. JavaScript never edits the HTML text; it changes this tree, and the browser redraws the page.", "Դիտարկիչը կարդում է HTML-ը և կառուցում օբյեկտների ծառ․ վերևում document-ն է, հետո html, head, body և դրանց ներսի յուրաքանչյուր տարր։ JavaScript-ը երբեք չի խմբագրում HTML տեքստը․ այն փոխում է այս ծառը, և դիտարկիչը վերագծում է էջը։", "Браузер читает HTML и строит дерево объектов: наверху document, затем html, head, body и каждый элемент внутри. JavaScript никогда не правит текст HTML: он меняет это дерево, а браузер перерисовывает страницу.")),
+    P(174, 34, t("Elements with an id", "id ունեցող տարրեր", "Элементы с id"), t("id=\"btn\" gives the button a name the script can use. The usual way to find it is document.getElementById(\"btn\"); browsers also let you write just btn, as in this short example.", "id=\"btn\"-ը կոճակին տալիս է անուն, որը սկրիպտը կարող է օգտագործել։ Այն գտնելու սովորական եղանակը document.getElementById(\"btn\") է, իսկ դիտարկիչները թույլ են տալիս գրել նաև պարզապես btn, ինչպես այս կարճ օրինակում։", "id=\"btn\" даёт кнопке имя, которым может пользоваться скрипт. Обычно её находят так: document.getElementById(\"btn\"); браузеры позволяют написать и просто btn, как в этом коротком примере.")),
+    P(174, 104, t("An event listener", "Իրադարձության մշակիչ", "Обработчик события"), t("addEventListener says: when this button is clicked, run this function. The program does not wait in a loop; the browser calls the function each time the event happens.", "addEventListener-ն ասում է․ երբ այս կոճակը սեղմվի, կատարի՛ր այս ֆունկցիան։ Ծրագիրը ցիկլում չի սպասում․ դիտարկիչն ինքն է կանչում ֆունկցիան ամեն անգամ, երբ իրադարձությունը տեղի է ունենում։", "addEventListener говорит: когда нажмут эту кнопку, выполни эту функцию. Программа не ждёт в цикле: браузер сам вызывает функцию каждый раз, когда происходит событие.")),
+    P(302, 102, t("Changing the page", "Էջի փոփոխումը", "Изменение страницы"), t("out.textContent = n puts the new number into the p element. Only that node changes, so the page updates instantly without loading again.", "out.textContent = n հրամանը նոր թիվը դնում է p տարրի մեջ։ Փոխվում է միայն այդ հանգույցը, ուստի էջը թարմանում է ակնթարթորեն՝ առանց նորից բեռնվելու։", "out.textContent = n кладёт новое число в элемент p. Меняется только этот узел, поэтому страница обновляется мгновенно, без повторной загрузки.")),
+    P(300, 160, t("Try it: F12", "Փորձի՛ր․ F12", "Попробуй: F12"), t("Press F12 on any website and open the Console tab. Type document.title = \"Hi\" and press Enter: the tab's title changes at once. Reload the page and it is back, because you changed only your copy of the tree.", "Ցանկացած կայքում սեղմի՛ր F12 և բացի՛ր Console ներդիրը։ Գրի՛ր document.title = \"Hi\" և սեղմի՛ր Enter․ ներդիրի վերնագիրն անմիջապես կփոխվի։ Վերաբեռնի՛ր էջը, և ամեն ինչ կվերադառնա, որովհետև փոխել էիր միայն ծառի քո պատճենը։", "Нажми F12 на любом сайте и открой вкладку Console. Набери document.title = \"Hi\" и нажми Enter: заголовок вкладки сразу изменится. Перезагрузи страницу, и всё вернётся, потому что ты менял только свою копию дерева.")),
+  ],
+};
+
+/* ---------------- an HTTP request and response ---------------- */
+
+const HTTP_REQ = ["GET /weather?city=Yerevan HTTP/1.1", "Host: api.example.com", "Accept: application/json"];
+const HTTP_RES = ["HTTP/1.1 200 OK", "Content-Type: application/json", "", "{", '  "city": "Yerevan",', '  "temp": 24,', '  "sky": "sunny"', "}"];
+
+const http: Diagram = {
+  title: t("A request and a response", "Հարցում և պատասխան", "Запрос и ответ"),
+  draw: (lang) => (
+    <g>
+      <defs><marker id="http-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569" /></marker></defs>
+      {/* client: a laptop */}
+      <rect x="10" y="92" width="40" height="28" rx="3" fill="#1e293b" />
+      <rect x="13" y="95" width="34" height="22" fill="#60a5fa" />
+      <path d="M4,122 h52 l-4,5 h-44 Z" fill="#94a3b8" />
+      <Tx x={30} y={140} s={t("client", "հաճախորդ", "клиент")} lang={lang} size={8} />
+      {/* server: a rack */}
+      <rect x="276" y="84" width="38" height="44" rx="3" fill="#334155" />
+      {[0, 1, 2].map((k) => <g key={k}><rect x="280" y={88 + k * 13} width="30" height="10" rx="2" fill="#475569" /><circle cx="305" cy={93 + k * 13} r="1.6" fill="#4ade80" /></g>)}
+      <Tx x={295} y={140} s={t("server", "սերվեր", "сервер")} lang={lang} size={8} />
+      {/* request */}
+      <rect x="62" y="22" width="206" height="46" rx="5" fill="#eef2ff" stroke="#6366f1" />
+      {HTTP_REQ.map((ln, k) => <text key={k} x="68" y={35 + k * 12} fontSize="7" fontWeight={k ? 700 : 900} fontFamily={MONO} fill={k ? "#475569" : "#3730a3"}>{ln}</text>)}
+      <path d="M30,90 V24 Q30,14 40,14 H285 Q295,14 295,24 V80" fill="none" stroke="#6366f1" strokeWidth="1.3" markerEnd="url(#http-head)" />
+      <Tx x={176} y={11} s={t("request", "հարցում", "запрос")} lang={lang} size={7.5} fill="#4338ca" />
+      {/* response */}
+      <rect x="62" y="80" width="206" height="106" rx="5" fill="#f0fdf4" stroke="#16a34a" />
+      {HTTP_RES.map((ln, k) => <text key={k} x="68" y={93 + k * 12} fontSize="7" fontWeight={k ? 700 : 900} fontFamily={MONO} fill={k === 0 ? "#15803d" : k === 1 ? "#475569" : "#1e1b4b"} xmlSpace="preserve">{ln}</text>)}
+      <path d="M295,146 V194 Q295,204 285,204 H40 Q30,204 30,194 V150" fill="none" stroke="#16a34a" strokeWidth="1.3" markerEnd="url(#http-head)" />
+      <Tx x={166} y={214} s={t("response", "պատասխան", "ответ")} lang={lang} size={7.5} fill="#15803d" />
+    </g>
+  ),
+  parts: [
+    P(258, 30, t("Method and path", "Մեթոդ և ուղի", "Метод и путь"), t("GET means \"give me\". The path /weather names the resource, and everything after ? is parameters: here, which city. POST, PUT and DELETE send, change and delete data.", "GET նշանակում է «տո՛ւր ինձ»։ /weather ուղին անվանում է ռեսուրսը, իսկ ? նշանից հետո եկողը պարամետրերն են․ այստեղ՝ որ քաղաքը։ POST, PUT և DELETE մեթոդներն ուղարկում, փոխում և ջնջում են տվյալներ։", "GET значит «дай мне». Путь /weather называет ресурс, а всё после ? — параметры: здесь, какой город. POST, PUT и DELETE отправляют, меняют и удаляют данные.")),
+    P(258, 56, t("Headers", "Վերնագրեր", "Заголовки"), t("Extra lines of information. Host says which site on the server we want; Accept says we would like JSON back. Many APIs also expect a key in a header, which is why a key must never be published.", "Տեղեկատվության լրացուցիչ տողեր։ Host-ն ասում է, թե սերվերի որ կայքն ենք ուզում, Accept-ը՝ որ պատասխանում JSON ենք ուզում։ Շատ API-ներ վերնագրում նաև բանալի են սպասում, ուստի բանալին երբեք չպետք է հրապարակել։", "Дополнительные строки сведений. Host говорит, какой сайт на сервере нам нужен; Accept — что мы хотим получить JSON. Многие API ждут в заголовке ещё и ключ, поэтому ключ нельзя публиковать.")),
+    P(258, 90, t("Status code", "Կարգավիճակի կոդ", "Код состояния"), t("200 means all is well. The first digit tells the story: 2 success, 3 moved elsewhere, 4 your mistake (404 not found, 403 forbidden), 5 the server's mistake.", "200-ը նշանակում է՝ ամեն ինչ լավ է։ Առաջին թվանշանը պատմում է ամբողջը․ 2՝ հաջողություն, 3՝ տեղափոխվել է, 4՝ քո սխալը (404՝ չի գտնվել, 403՝ արգելված է), 5՝ սերվերի սխալը։", "200 значит, что всё хорошо. Первая цифра говорит главное: 2 — успех, 3 — переехало, 4 — твоя ошибка (404 не найдено, 403 запрещено), 5 — ошибка сервера.")),
+    P(240, 150, t("JSON data", "JSON տվյալներ", "Данные JSON"), t("The body is not a page for a person but data for a program: keys in quotes, values after colons. In Python, json.loads turns this text into a dictionary, so data[\"temp\"] gives 24.", "Մարմինը ոչ թե էջ է մարդու համար, այլ տվյալներ՝ ծրագրի համար․ բանալիները չակերտներում են, արժեքները՝ երկու կետից հետո։ Python-ում json.loads-ը այս տեքստը վերածում է բառարանի, ուստի data[\"temp\"]-ը տալիս է 24։", "Тело — не страница для человека, а данные для программы: ключи в кавычках, значения после двоеточий. В Python json.loads превращает этот текст в словарь, так что data[\"temp\"] даёт 24.")),
+    P(30, 84, t("Client and server", "Հաճախորդ և սերվեր", "Клиент и сервер"), t("The client always starts the conversation, and the server only answers. Each request stands alone: the server does not remember you unless you send something, such as a cookie or a key, every time.", "Զրույցը միշտ սկսում է հաճախորդը, իսկ սերվերը միայն պատասխանում է։ Յուրաքանչյուր հարցում ինքնուրույն է․ սերվերը քեզ չի հիշում, եթե ամեն անգամ ինչ-որ բան, օրինակ՝ cookie կամ բանալի, չուղարկես։", "Разговор всегда начинает клиент, а сервер только отвечает. Каждый запрос сам по себе: сервер тебя не помнит, если ты каждый раз не присылаешь что-нибудь, например cookie или ключ.")),
+  ],
+};
+
+/* ---------------- git history with a branch ---------------- */
+
+const GIT_MAIN: Array<[number, string, Tr]> = [
+  [34, "a1f3", t("first version", "առաջին տարբերակ", "первая версия")],
+  [92, "7c2e", t("add menu", "մենյու", "меню")],
+  [150, "e91b", t("fix typo", "վրիպակ", "опечатка")],
+  [236, "4d07", t("merge", "միավորում", "слияние")],
+];
+const GIT_FEAT: Array<[number, string, Tr]> = [
+  [150, "b3a9", t("dark theme", "մուգ թեմա", "тёмная тема")],
+  [200, "0f6c", t("tests", "թեստեր", "тесты")],
+];
+
+const git: Diagram = {
+  title: t("A project's history in git", "Նախագծի պատմությունը git-ում", "История проекта в git"),
+  draw: (lang) => (
+    <g>
+      <defs><marker id="git-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569" /></marker></defs>
+      {/* the remote */}
+      <path d="M254,40 a12,12 0 0 1 4,-23 a16,16 0 0 1 30,-2 a11,11 0 0 1 16,13 a10,10 0 0 1 -4,12 Z" fill="#f1f5f9" stroke="#64748b" />
+      <text x="278" y="34" textAnchor="middle" fontSize="7.5" fontWeight="900" fill="#1e1b4b">GitHub</text>
+      <path d="M262,78 C262,64 264,56 268,46" fill="none" stroke="#475569" strokeWidth="1.2" markerEnd="url(#git-head)" />
+      <text x="232" y="56" fontSize="6.5" fontWeight="800" fontFamily={MONO} fill="#475569">git push</text>
+      {/* main */}
+      <line x1="34" y1="90" x2="262" y2="90" stroke="#4f46e5" strokeWidth="3" />
+      <text x="10" y="80" fontSize="7" fontWeight="900" fontFamily={MONO} fill="#4f46e5">main</text>
+      {/* the branch */}
+      <path d="M92,90 C112,90 120,140 150,140 H200 C222,140 222,90 236,90" fill="none" stroke="#f59e0b" strokeWidth="3" />
+      <text x="136" y="143" textAnchor="end" fontSize="7" fontWeight="900" fontFamily={MONO} fill="#b45309">new-feature</text>
+      {GIT_MAIN.map(([x, h, m], k) => (
+        <g key={h}>
+          <circle cx={x} cy="90" r={k === 3 ? 8 : 7} fill="#fff" stroke="#4f46e5" strokeWidth="2.5" />
+          <text x={x} y="72" textAnchor="middle" fontSize="6.5" fontWeight="800" fontFamily={MONO} fill="#64748b">{h}</text>
+          <Tx x={k === 3 ? x + 10 : x} y={110} s={m} lang={lang} size={6.5} fill="#3730a3" anchor={k === 3 ? "start" : "middle"} />
+        </g>
+      ))}
+      {GIT_FEAT.map(([x, h, m]) => (
+        <g key={h}>
+          <circle cx={x} cy="140" r="7" fill="#fff" stroke="#f59e0b" strokeWidth="2.5" />
+          <text x={x} y="128" textAnchor="middle" fontSize="6.5" fontWeight="800" fontFamily={MONO} fill="#64748b">{h}</text>
+          <Tx x={x} y={160} s={m} lang={lang} size={6.5} fill="#b45309" />
+        </g>
+      ))}
+      <rect x="248" y="84" width="30" height="12" rx="3" fill="#4f46e5" />
+      <text x="263" y="93" textAnchor="middle" fontSize="6.5" fontWeight="900" fontFamily={MONO} fill="#fff">HEAD</text>
+      {/* the three places a change passes through */}
+      {[
+        [t("working folder", "աշխատանքային թղթապանակ", "рабочая папка"), "#fef3c7"],
+        [t("staging area", "նախապատրաստման տարածք", "индекс"), "#e0e7ff"],
+        [t("history", "պատմություն", "история"), "#dcfce7"],
+      ].map(([s, c], k) => (
+        <g key={k}>
+          <rect x={10 + k * 104} y="180" width="88" height="22" rx="5" fill={c as string} stroke="#94a3b8" />
+          <Tx x={54 + k * 104} y={194} s={s as Tr} lang={lang} size={6.5} fill="#1e1b4b" w={800} />
+        </g>
+      ))}
+      {["git add", "git commit"].map((c, k) => (
+        <g key={c}>
+          <path d={`M${98 + k * 104},191 h6`} stroke="#475569" strokeWidth="1.2" markerEnd="url(#git-head)" />
+          <text x={104 + k * 104} y="214" textAnchor="middle" fontSize="6.5" fontWeight="800" fontFamily={MONO} fill="#475569">{c}</text>
+        </g>
+      ))}
+    </g>
+  ),
+  parts: [
+    P(60, 76, t("A commit", "Commit՝ պահպանված քայլ", "Коммит"), t("A commit is a saved snapshot of the whole project with a message and an author. Its name is a long code computed from the contents, shortened here to four characters; change one letter and the code is completely different.", "Commit-ը ամբողջ նախագծի պահպանված պատկերն է՝ հաղորդագրությամբ և հեղինակով։ Նրա անունը բովանդակությունից հաշվված երկար կոդ է, որն այստեղ կրճատված է չորս նիշի․ փոխի՛ր մեկ տառ, և կոդն ամբողջովին այլ կլինի։", "Коммит — сохранённый снимок всего проекта с сообщением и автором. Его имя — длинный код, вычисленный по содержимому, здесь сокращённый до четырёх знаков; измени одну букву, и код станет совсем другим.")),
+    P(175, 126, t("A branch", "Ճյուղ", "Ветка")
+, t("new-feature is a separate line of work. You can try a dark theme there while main keeps working; if the idea fails, the branch is simply deleted.", "new-feature-ը աշխատանքի առանձին գիծ է։ Այնտեղ կարելի է փորձել մուգ թեման, մինչդեռ main-ը շարունակում է աշխատել․ եթե գաղափարը չստացվի, ճյուղը պարզապես ջնջվում է։", "new-feature — отдельная линия работы. Там можно пробовать тёмную тему, пока main продолжает работать; если идея не удалась, ветку просто удаляют.")),
+    P(216, 66, t("A merge", "Միավորում", "Слияние"), t("git merge joins the branch back into main. If two people changed the same line, git stops and asks a human to choose: that is a merge conflict.", "git merge հրամանը ճյուղը հետ է միացնում main-ին։ Եթե երկու մարդ փոխել են նույն տողը, git-ը կանգ է առնում և խնդրում մարդուն ընտրել․ սա միավորման կոնֆլիկտ է։", "git merge соединяет ветку обратно с main. Если два человека изменили одну и ту же строку, git останавливается и просит человека выбрать: это конфликт слияния.")),
+    P(300, 46, t("The remote copy", "Հեռավոր պատճենը", "Удалённая копия"), t("git push sends your commits to a shared copy, for example on GitHub, and git pull brings in your teammates' work. Every developer keeps the full history on their own computer too.", "git push-ը քո պահպանված քայլերն ուղարկում է ընդհանուր պատճենին, օրինակ՝ GitHub-ում, իսկ git pull-ը բերում է թիմակիցներիդ աշխատանքը։ Յուրաքանչյուր ծրագրավորող ամբողջ պատմությունը պահում է նաև իր համակարգչում։", "git push отправляет твои коммиты в общую копию, например на GitHub, а git pull приносит работу товарищей по команде. Каждый разработчик хранит полную историю и у себя на компьютере.")),
+    P(158, 212, t("Add, then commit", "Նախ add, հետո commit", "Сначала add, потом commit"), t("git add picks which changes go into the next snapshot, and git commit saves them. So you can fix a typo and start a new feature, yet record them as two clear steps.", "git add-ը ընտրում է, թե որ փոփոխությունները մտնեն հաջորդ պատկերի մեջ, իսկ git commit-ը պահպանում է դրանք։ Այսպես կարելի է ուղղել վրիպակը և սկսել նոր հնարավորություն, բայց դրանք գրանցել որպես երկու հստակ քայլ։", "git add выбирает, какие изменения попадут в следующий снимок, а git commit сохраняет их. Так можно исправить опечатку и начать новую функцию, но записать это двумя понятными шагами.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db, oop, dom, http, git };
