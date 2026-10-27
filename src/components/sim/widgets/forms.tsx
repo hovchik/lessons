@@ -49,6 +49,7 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   dialect: [t("Dialect", "Բարբառ", "Диалект"), t("Standard", "Գրական", "Литературный")],
   loan: [t("Loanword", "Փոխառություն", "Заимствование"), t("Armenian word", "Հայերեն բառ", "Армянское слово")],
   norm: [t("Avoid", "Խուսափիր", "Избегай"), t("Literary norm", "Գրական նորմ", "Литературная норма")],
+  sound: [t("We write", "Գրում ենք", "Пишем"), t("We hear", "Լսում ենք", "Слышим")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
