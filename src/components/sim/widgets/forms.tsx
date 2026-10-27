@@ -186,6 +186,15 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   quality: [t("Quality", "Հատկանիշ", "Качество"), t("Job", "Մասնագիտություն", "Профессия")],
   causeeffect: [t("Cause", "Պատճառ", "Причина"), t("Effect", "Հետևանք", "Следствие")],
   linkers: [t("Adding", "Ավելացում", "Добавление"), t("Contrast", "Հակադրություն", "Противопоставление"), t("Result", "Արդյունք", "Следствие")],
+  usedwould: [t("used to: states and habits", "used to՝ վիճակներ և սովորություններ", "used to — состояния и привычки"), t("would: repeated actions only", "would՝ միայն կրկնվող գործողություններ", "would — только повторяющиеся действия")],
+  verbpat: [t("Verb", "Բայ", "Глагол"), t("Pattern", "Կաղապար", "Схема")],
+  plain: [t("Wordy", "Երկարաբան", "Многословно"), t("Plain", "Պարզ", "Просто")],
+  foragainst: [t("For", "Կողմ", "За"), t("Against", "Դեմ", "Против")],
+  prob3: [t("Certain", "Վստահ", "Наверняка"), t("Likely", "Հավանական", "Вероятно"), t("Unlikely", "Քիչ հավանական", "Маловероятно")],
+  prefix: [t("Prefix", "Նախածանց", "Приставка"), t("Example", "Օրինակ", "Пример")],
+  trip: [t("Word", "Բառ", "Слово"), t("When to use it", "Երբ գործածել", "Когда употреблять")],
+  thegeo: [t("No article", "Առանց հոդի", "Без артикля"), t("the", "the", "the")],
+  readskill: [t("Skimming", "Skimming՝ արագ դիտում", "Skimming — просмотр"), t("Scanning", "Scanning՝ որոնում", "Scanning — поиск")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
