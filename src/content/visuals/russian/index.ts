@@ -6,6 +6,7 @@ import { grade4 } from "./grade-4";
 import { grade5 } from "./grade-5";
 import { grade6 } from "./grade-6";
 import { grade7 } from "./grade-7";
+import { grade8 } from "./grade-8";
 
 /**
  * Russian language 1–12: letters and sounds, syllables, word parts, sentence parts and case
@@ -19,4 +20,5 @@ export const russianVisuals: VisualMap = {
   5: grade5,
   6: grade6,
   7: grade7,
+  8: grade8,
 };

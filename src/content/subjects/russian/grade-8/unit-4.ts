@@ -19,7 +19,7 @@ export const unit4: UnitSeed = {
       {
         en: `## The play and its time
 
-Denis Fonvizin finished the comedy **«Недоросль»** in 1782. A *недоросль* was the official word for a young nobleman who had not yet finished his studies and so could not enter the service. By the end of the play the word has become an insult.
+Denis Fonvizin finished the comedy **«Недоросль»** in 1781, and it was first staged in 1782. A *недоросль* was the official word for a young nobleman who had not yet finished his studies and so could not enter the service. By the end of the play the word has become an insult.
 
 The comedy belongs to **классицизм**, the style that ruled the Russian 18th century. Classicism asks a play to obey three unities.
 
@@ -49,7 +49,7 @@ A classicist comedy names its people after their nature, so the audience knows t
 
 In the lesson scene Mitrofan is examined on the door. Asked whether **дверь** is a noun or an adjective, he answers that the door hanging on its hinges is an adjective, *прилагательная*, because it is attached, and the one in the storeroom is a noun, because it is not yet hung. The joke is exact: he has heard the words and learned nothing.
 
-> **Не хочу учиться, а хочу жениться.** (Mitrofan's line, and the whole character in six words)
+> **Не хочу учиться, хочу жениться.** (Mitrofan's line, and the whole character in five words)
 
 In the last act Mitrofan pushes his mother away in her ruin, and Starodum pronounces the moral:
 
@@ -80,7 +80,7 @@ The play is a **комедия нравов**, a comedy of manners: it laughs in
 1. A young nobleman who had not finished his studies and could not enter the service. 2. Of time, of place and of action; the place is the Prostakov estate, which no scene leaves. 3. That he is close to cattle, and indeed he loves his pigs best. 4. A German tutor, though he is a coachman. 5. He calls the hung door an adjective because it is attached and the unhung one a noun, repeating words he has not understood. 6. Starodum's, about Prostakova in her ruin. 7. Character, воспитание: a mind that is only a mind he calls a trifle.`,
         hy: `## Պիեսը և նրա ժամանակը
 
-Դենիս Ֆոնվիզինն ավարտեց **«Недоросль»** կոմեդիան 1782 թվականին։ *Недоросль* էր պաշտոնական բառն այն երիտասարդ ազնվականի համար, որը դեռ չէր ավարտել ուսումը և ուստի չէր կարող ծառայության անցնել։ Պիեսի վերջում բառը դարձել է վիրավորանք։
+Դենիս Ֆոնվիզինն ավարտեց **«Недоросль»** կոմեդիան 1781 թվականին, իսկ առաջին անգամ այն բեմադրվեց 1782-ին։ *Недоросль* էր պաշտոնական բառն այն երիտասարդ ազնվականի համար, որը դեռ չէր ավարտել ուսումը և ուստի չէր կարող ծառայության անցնել։ Պիեսի վերջում բառը դարձել է վիրավորանք։
 
 Կոմեդիան պատկանում է **классицизм**-ին (դասականություն)՝ այն ոճին, որ տիրում էր ռուսական 18-րդ դարում։ Դասականությունը պիեսից պահանջում է հետևել երեք միասնության։
 
@@ -110,7 +110,7 @@ The play is a **комедия нравов**, a comedy of manners: it laughs in
 
 Դասի տեսարանում Միտրոֆանին քննում են դռան շուրջ։ Հարցին՝ **дверь**-ը գոյակա՞ն է, թե՞ ածական, նա պատասխանում է, որ ծխնիներին կախված դուռն ածական է՝ *прилагательная*, քանի որ կցված է, իսկ մառանում եղածը գոյական է, քանի որ դեռ կախված չէ։ Կատակը ճշգրիտ է. նա լսել է բառերը և ոչինչ չի սովորել։
 
-> **Не хочу учиться, а хочу жениться։** (*չեմ ուզում սովորել, ուզում եմ կնության առնել* — Միտրոֆանի խոսքը և ամբողջ բնավորությունը վեց բառում)
+> **Не хочу учиться, хочу жениться։** (*չեմ ուզում սովորել, ուզում եմ կնության առնել* — Միտրոֆանի խոսքը և ամբողջ բնավորությունը հինգ բառում)
 
 Վերջին արարում Միտրոֆանը հրում է մորը նրա կորստի պահին, և Ստարոդումն արտասանում է բարոյախրատը.
 
@@ -141,7 +141,7 @@ The play is a **комедия нравов**, a comedy of manners: it laughs in
 1. Երիտասարդ ազնվական, որ չէր ավարտել ուսումը և չէր կարող ծառայության անցնել։ 2. Ժամանակի, տեղի և գործողության. տեղը Պրոստակովների կայքն է, որտեղից ոչ մի տեսարան դուրս չի գալիս։ 3. Որ նա մոտ է անասունին, և իրոք ամենից շատ սիրում է իր խոզերը։ 4. Գերմանացի դաստիարակ, մինչդեռ կառապան է։ 5. Կախված դուռն անվանում է ածական, քանի որ կցված է, իսկ չկախվածը՝ գոյական, կրկնելով բառեր, որ չի հասկացել։ 6. Ստարոդումի, Պրոստակովայի մասին՝ նրա կորստի պահին։ 7. Բնավորությունը, воспитание-ն. միայն խելք եղող խելքը նա մանրուք է համարում։`,
         ru: `## Пьеса и её время
 
-Денис Фонвизин закончил комедию **«Недоросль»** в 1782 году. *Недоросль* — это официальное слово для молодого дворянина, который ещё не завершил учение и потому не мог поступить на службу. К концу пьесы слово становится оскорблением.
+Денис Фонвизин закончил комедию **«Недоросль»** в 1781 году, а впервые её поставили в 1782-м. *Недоросль* — это официальное слово для молодого дворянина, который ещё не завершил учение и потому не мог поступить на службу. К концу пьесы слово становится оскорблением.
 
 Комедия принадлежит **классицизму** — стилю, который господствовал в русском XVIII веке. Классицизм требует от пьесы соблюдения трёх единств.
 
@@ -171,7 +171,7 @@ The play is a **комедия нравов**, a comedy of manners: it laughs in
 
 В сцене урока Митрофана спрашивают про дверь. На вопрос, существительное ли **дверь** или прилагательное, он отвечает, что дверь, которая висит на петлях, — прилагательная, потому что она приложена, а та, что в чулане, — существительное, потому что ещё не повешена. Шутка точна: он слышал слова и ничему не научился.
 
-> **Не хочу учиться, а хочу жениться.** (реплика Митрофана, и весь характер в шести словах)
+> **Не хочу учиться, хочу жениться.** (реплика Митрофана, и весь характер в пяти словах)
 
 В последнем действии Митрофан отталкивает мать в час её разорения, и Стародум произносит мораль:
 
@@ -205,7 +205,7 @@ The play is a **комедия нравов**, a comedy of manners: it laughs in
         q(t("«Недоросль» was finished in…", "«Недоросль»-ն ավարտվել է", "«Недоросль» был закончен в…"), [t("1782", "1782", "1782"), t("1836", "1836", "1836"), t("1702", "1702", "1702")], 0),
         q(t("The three unities of classicism are those of…", "Դասականության երեք միասնությունները", "Три единства классицизма —"), [t("time, place and action", "ժամանակի, տեղի և գործողության", "времени, места и действия"), t("time, verse and rhyme", "ժամանակի, չափածոյի և հանգի", "времени, стиха и рифмы"), t("hero, villain and judge", "հերոսի, չարագործի և դատավորի", "героя, злодея и судьи")], 0),
         q(t("The name Скотинин comes from the word…", "Скотинин անունը գալիս է բառից", "Фамилия Скотинин происходит от слова…"), [t("скот", "скот", "скот"), t("скоро", "скоро", "скоро"), t("скотный", "скотный", "скотный")], 0),
-        q(t("Mitrofan's line in six words is…", "Միտրոֆանի խոսքը վեց բառում է", "Реплика Митрофана в шести словах —"), [t("Вот злонравия достойные плоды", "Вот злонравия достойные плоды", "Вот злонравия достойные плоды"), t("Не хочу учиться, а хочу жениться", "Не хочу учиться, а хочу жениться", "Не хочу учиться, а хочу жениться"), t("Ум, коли он только что ум", "Ум, коли он только что ум", "Ум, коли он только что ум")], 1),
+        q(t("Mitrofan's line in five words is…", "Միտրոֆանի խոսքը հինգ բառում է", "Реплика Митрофана в пяти словах —"), [t("Вот злонравия достойные плоды", "Вот злонравия достойные плоды", "Вот злонравия достойные плоды"), t("Не хочу учиться, хочу жениться", "Не хочу учиться, хочу жениться", "Не хочу учиться, хочу жениться"), t("Ум, коли он только что ум", "Ум, коли он только что ум", "Ум, коли он только что ум")], 1),
         q(t("Вральман is in fact a…", "Вральман-ն իրականում", "Вральман в действительности —"), [t("German professor", "գերմանացի պրոֆեսոր է", "немецкий профессор"), t("coachman", "կառապան է", "кучер"), t("seminarian", "դպրապետ է", "семинарист")], 1),
         q(t("What does Starodum put above a mind that is only a mind?", "Ի՞նչն է Ստարոդումը դասում միայն խելք եղող խելքից վեր", "Что Стародум ставит выше ума, который только ум?"), [t("upbringing and character", "դաստիարակությունը և բնավորությունը", "воспитание и характер"), t("rank", "աստիճանը", "чин"), t("wealth", "հարստությունը", "богатство")], 0),
       ],
@@ -410,7 +410,7 @@ That judgement is a witness's, not the author's verdict, and the novel keeps bot
 
 Lermontov wrote **«Мцыри»** in 1839. The word is Georgian: *мцыри* means a novice in a monastery, and also a stranger, a newcomer. Both meanings are the hero.
 
-The poem has a frame. Six short stanzas tell the story from outside: a Russian general left a sick Georgian boy at a monastery, the monks raised him, he fled in a storm, was found three days later in the steppe and died. Then the hero himself speaks, and his confession fills twenty-four stanzas out of twenty-six.
+The poem has a frame. The first two stanzas tell the story from outside: a Russian general left a sick Georgian boy at a monastery, the monks raised him, he fled in a storm, was found three days later in the steppe and died. Then the hero himself speaks, and his confession fills twenty-four stanzas out of twenty-six.
 
 The epigraph is from the Bible: **«Вкушая вкусил мало меда, и се аз умираю»** — tasting, I tasted a little honey, and behold, I die. In the Book of Samuel these are Jonathan's words when he is condemned for eating honey against an oath he did not know of. The hero is condemned for three days of life.
 
@@ -462,7 +462,7 @@ The poem is written in **четырёхстопный ямб** with masculine rh
 
 Լերմոնտովը գրել է **«Мцыри»**-ն 1839 թվականին։ Բառը վրացերեն է. *мцыри* նշանակում է վանքի նորընծա, ինչպես նաև օտար, նորեկ։ Երկու իմաստն էլ հերոսն է։
 
-Պոեմն ունի շրջանակ։ Վեց կարճ տաղ պատմում են պատմությունը դրսից. ռուս զորավարը հիվանդ վրացի տղա է թողել վանքում, վանականները մեծացրել են նրան, նա փախել է փոթորկի ժամանակ, գտնվել է երեք օր անց տափաստանում և մահացել։ Ապա խոսում է հերոսն ինքը, և նրա խոստովանությունը լցնում է քսանվեց տաղից քսանչորսը։
+Պոեմն ունի շրջանակ։ Առաջին երկու տները պատմում են պատմությունը դրսից. ռուս զորավարը հիվանդ վրացի տղա է թողել վանքում, վանականները մեծացրել են նրան, նա փախել է փոթորկի ժամանակ, գտնվել է երեք օր անց տափաստանում և մահացել։ Ապա խոսում է հերոսն ինքը, և նրա խոստովանությունը լցնում է քսանվեց տաղից քսանչորսը։
 
 Բնաբանն Աստվածաշնչից է. **«Вкушая вкусил мало меда, и се аз умираю»** (*ճաշակելով ճաշակեցի քիչ մեղր, և ահա ես մեռնում եմ*)։ Սամուելի գրքում սրանք Հովնաթանի խոսքերն են, երբ նրան դատապարտում են մեղր ուտելու համար՝ իրեն անհայտ երդման հակառակ։ Հերոսը դատապարտվում է կյանքի երեք օրվա համար։
 
@@ -514,7 +514,7 @@ The poem is written in **четырёхстопный ямб** with masculine rh
 
 Лермонтов написал **«Мцыри»** в 1839 году. Слово грузинское: *мцыри* значит послушник монастыря, а также чужой, пришелец. Оба значения — это герой.
 
-У поэмы есть рамка. Шесть коротких строф рассказывают историю извне: русский генерал оставил в монастыре больного грузинского мальчика, монахи вырастили его, он убежал в грозу, был найден через три дня в степи и умер. Затем говорит сам герой, и его исповедь занимает двадцать четыре строфы из двадцати шести.
+У поэмы есть рамка. Первые две главки рассказывают историю извне: русский генерал оставил в монастыре больного грузинского мальчика, монахи вырастили его, он убежал в грозу, был найден через три дня в степи и умер. Затем говорит сам герой, и его исповедь занимает двадцать четыре строфы из двадцати шести.
 
 Эпиграф взят из Библии: **«Вкушая вкусил мало меда, и се аз умираю»**. В Книге Царств это слова Ионафана, которого приговаривают за съеденный мёд, нарушивший неизвестную ему клятву. Героя приговаривают за три дня жизни.
 
@@ -591,7 +591,7 @@ Turgenev wrote the **повесть** «Ася» in 1857. A twenty-five-year-old
 | the puzzle | Asya is by turns wild, laughing, cold and ashamed, and he cannot read her |
 | the secret | Gagin tells him that Asya is his half-sister, the daughter of a serf woman |
 | the letter | Asya writes to Н. Н. and asks him to meet her |
-| the meeting in the chapel | she says she is his; he answers with reproaches and silence |
+| the meeting at Frau Louise's | she says she is his; he answers with reproaches and silence |
 | the loss | next morning the brother and sister are gone, and he never sees her again |
 
 ## Asya
@@ -627,7 +627,7 @@ The last page is written years later. He has never married, he keeps her note an
 2. Where does the action take place?
 3. What does Gagin tell Н. Н. about Asya's birth?
 4. Name two traits of Asya and connect each to her birth.
-5. What happens in the chapel scene, and how does Н. Н. answer?
+5. What happens at the meeting in Frau Louise's room, and how does Н. Н. answer?
 6. Quote the sentence about happiness and explain what it says of him.
 7. Why is a superfluous man not the same as a bad man?
 
@@ -644,7 +644,7 @@ The last page is written years later. He has never married, he keeps her note an
 | հանելուկը | Ասյան հերթով վայրի է, ծիծաղկոտ, սառն և ամաչկոտ, և նա չի կարողանում կարդալ նրան |
 | գաղտնիքը | Գագինը պատմում է, որ Ասյան իր կես քույրն է՝ ճորտ կնոջ դուստրը |
 | նամակը | Ասյան գրում է Н. Н.-ին և խնդրում հանդիպել |
-| հանդիպումը մատուռում | նա ասում է, որ իրենն է, նա պատասխանում է նախատինքներով և լռությամբ |
+| հանդիպումը ֆրաու Լուիզայի մոտ | նա ասում է, որ իրենն է, նա պատասխանում է նախատինքներով և լռությամբ |
 | կորուստը | հաջորդ առավոտ եղբայրն ու քույրը գնացել են, և նա այլևս երբեք չի տեսնում նրան |
 
 ## Ասյան
@@ -680,7 +680,7 @@ The last page is written years later. He has never married, he keeps her note an
 2. Որտե՞ղ է տեղի ունենում գործողությունը։
 3. Ի՞նչ է պատմում Գագինը Н. Н.-ին Ասյայի ծագման մասին։
 4. Անվանե՛ք Ասյայի երկու գիծ և կապե՛ք յուրաքանչյուրը նրա ծագման հետ։
-5. Ի՞նչ է կատարվում մատուռի տեսարանում, և ինչպե՞ս է պատասխանում Н. Н.-ը։
+5. Ի՞նչ է կատարվում ֆրաու Լուիզայի սենյակում հանդիպման ժամանակ, և ինչպե՞ս է պատասխանում Н. Н.-ը։
 6. Մեջբերե՛ք նախադասությունն երջանկության մասին և բացատրե՛ք, ինչ է ասում այն նրա մասին։
 7. Ինչո՞ւ ավելորդ մարդը նույնը չէ, ինչ վատ մարդը։
 
@@ -697,7 +697,7 @@ The last page is written years later. He has never married, he keeps her note an
 | загадка | Ася то дика, то смешлива, то холодна, то пристыжена, и он не умеет её прочесть |
 | тайна | Гагин рассказывает, что Ася — его сестра по отцу, дочь крепостной |
 | записка | Ася пишет Н. Н. и просит о встрече |
-| свидание в часовне | она говорит, что она его; он отвечает упрёками и молчанием |
+| свидание у фрау Луизе | она говорит, что она его; он отвечает упрёками и молчанием |
 | потеря | наутро брат и сестра уехали, и он больше никогда её не видит |
 
 ## Ася

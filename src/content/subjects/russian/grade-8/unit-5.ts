@@ -995,7 +995,7 @@ For a hundred years Russian poets have written about Armenia, and in almost ever
 | Osip Mandelstam | five months in Armenia in 1930, after five years of writing nothing | the cycle «Армения» and the prose «Путешествие в Армению» |
 | Andrei Bely | a stay in Koktebel and then in Armenia in 1928 | essays and letters on Armenian architecture |
 | Vasily Grossman | a translation commission in 1961 | the book «Добро вам», written about the village and the people, not the stone |
-| Bella Akhmadulina | friendship with Armenian writers | the cycle «Сны о Грузии» and poems on Armenia |
+| Andrei Bitov | a long stay in Armenia in the 1960s | the travel book «Уроки Армении» (1969) |
 
 Bryusov's anthology matters beyond poetry: it was the first full Russian presentation of Armenian verse from the oral songs to the poets of his own day, and it appeared in the year after the genocide, when it was also a statement.
 
@@ -1050,7 +1050,7 @@ Three names a Russian reader meets most often: **Саят-Нова**, the 18th-c
 | Օսիպ Մանդելշտամ | հինգ ամիս Հայաստանում 1930-ին, հինգ տարի ոչինչ չգրելուց հետո | «Армения» շարքը և «Путешествие в Армению» արձակը |
 | Անդրեյ Բելի | Կոկտեբելում և ապա Հայաստանում մնալը 1928-ին | ակնարկներ և նամակներ հայ ճարտարապետության մասին |
 | Վասիլի Գրոսման | 1961-ի թարգմանական պատվեր | «Добро вам» գիրքը՝ գրված գյուղի և մարդկանց, ոչ քարի մասին |
-| Բելլա Ախմադուլինա | բարեկամություն հայ գրողների հետ | «Сны о Грузии» շարքը և բանաստեղծություններ Հայաստանի մասին |
+| Անդրեյ Բիտով | երկար մնալը Հայաստանում 1960-ականներին | «Уроки Армении» ճամփորդական գիրքը (1969) |
 
 Բրյուսովի անթոլոգիան կարևոր է պոեզիայից դուրս էլ. դա հայ չափածոյի առաջին ամբողջական ռուսական ներկայացումն էր՝ բանավոր երգերից մինչև իր օրերի բանաստեղծները, և լույս տեսավ ցեղասպանությունից հետո եկած տարում, երբ ինքնին հայտարարություն էր։
 
@@ -1105,7 +1105,7 @@ Three names a Russian reader meets most often: **Саят-Нова**, the 18th-c
 | Осип Мандельштам | пять месяцев в Армении в 1930 году, после пяти лет молчания | цикл «Армения» и проза «Путешествие в Армению» |
 | Андрей Белый | пребывание в Коктебеле, а затем в Армении в 1928 году | очерки и письма об армянской архитектуре |
 | Василий Гроссман | переводческий заказ в 1961 году | книга «Добро вам», написанная о деревне и людях, а не о камне |
-| Белла Ахмадулина | дружба с армянскими писателями | цикл «Сны о Грузии» и стихи об Армении |
+| Андрей Битов | долгое пребывание в Армении в 1960-е годы | книга-путешествие «Уроки Армении» (1969) |
 
 Антология Брюсова важна не только для поэзии: это было первое полное русское представление армянского стиха — от народных песен до поэтов его собственных дней, — и вышло оно на следующий год после геноцида, когда само по себе было высказыванием.
 

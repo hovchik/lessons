@@ -101,6 +101,11 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   voice: [t("Active: it acts", "Ներգործական՝ ինքն է գործում", "Действительное: действует само"), t("Passive: done to it", "Կրավորական՝ իր վրա են գործում", "Страдательное: действие над ним")],
   conjclass: [t("Coordinating", "Համադասական", "Сочинительный"), t("Subordinating", "Ստորադասական", "Подчинительный")],
   ruhyen: [t("Russian", "Ռուսերեն", "Русский"), t("Armenian", "Հայերեն", "Армянский"), t("English", "Անգլերեն", "Английский")],
+  link3: [t("Agreement", "Համաձայնություն", "Согласование"), t("Government", "Խնդրառություն", "Управление"), t("Adjunction", "Առդրություն", "Примыкание")],
+  pred3: [t("Simple verbal", "Պարզ բայական", "Простое глагольное"), t("Compound verbal", "Բաղադրյալ բայական", "Составное глагольное"), t("Compound nominal", "Բաղադրյալ անվանական", "Составное именное")],
+  personal: [t("Personal", "Դիմավոր", "Личное"), t("Impersonal", "Անդեմ", "Безличное")],
+  homattr: [t("Homogeneous: commas", "Համասեռ՝ ստորակետով", "Однородные: с запятой"), t("Not homogeneous: no commas", "Ոչ համասեռ՝ առանց ստորակետի", "Неоднородные: без запятой")],
+  vvod: [t("Parenthetical: commas", "Միջանկյալ՝ ստորակետով", "Вводное: с запятыми"), t("Member of the sentence", "Նախադասության անդամ", "Член предложения")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
