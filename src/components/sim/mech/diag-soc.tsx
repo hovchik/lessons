@@ -229,4 +229,188 @@ const tki: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki };
+/* ---------------- grade 9: who chooses whom ---------------- */
+
+const Box = ({ x, y, w = 84, h = 24, s, lang, c, dash }: { x: number; y: number; w?: number; h?: number; s: Tr; lang: ArtLang; c: string; dash?: boolean }) => {
+  const two = L(s, lang).includes("|");
+  return (
+    <g>
+      <rect x={x - w / 2} y={y - h / 2} width={w} height={h} rx="5" fill="#fff" stroke={c} strokeWidth="1.8" strokeDasharray={dash ? "4 3" : undefined} />
+      <Tx x={x} y={two ? y - 1.5 : y + 2.5} s={s} lang={lang} size={7} fill={c} />
+    </g>
+  );
+};
+const Ar = ({ d, c = "#475569", dash }: { d: string; c?: string; dash?: boolean }) => (
+  <path d={d} fill="none" stroke={c} strokeWidth="1.4" strokeDasharray={dash ? "3 2" : undefined} markerEnd="url(#soc-ar)" />
+);
+const ArDef = () => (
+  <defs><marker id="soc-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#475569" /></marker></defs>
+);
+
+const VOTERS = t("Voters", "Ընտրողներ", "Избиратели");
+const PRES = t("President", "Նախագահ", "Президент");
+
+const govforms: Diagram = {
+  title: t("Who chooses whom", "Ով ում է ընտրում", "Кто кого выбирает"),
+  h: 230,
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      {[t("Presidential|USA", "Նախագահական|ԱՄՆ", "Президентская|США"), t("Parliamentary|Armenia", "Խորհրդարանական|Հայաստան", "Парламентская|Армения"), t("Semi-presidential|France", "Կիսանախագահական|Ֆրանսիա", "Полупрезидентская|Франция")].map((s, k) => (
+        <g key={k}>
+          <rect x={4 + k * 105} y="4" width="101" height="222" rx="6" fill={["#eef2ff", "#fff7ed", "#ecfdf5"][k]} />
+          <Tx x={54.5 + k * 105} y={16} s={s} lang={lang} size={7.5} fill="#1e293b" />
+        </g>
+      ))}
+      {/* USA: two separate elections */}
+      <Box x={32} y={80} w={50} s={PRES} lang={lang} c="#4f46e5" />
+      <Box x={80} y={80} w={44} s={t("Congress", "Կոնգրես", "Конгресс")} lang={lang} c="#4f46e5" />
+      <text x="56" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#4f46e5">⇄</text>
+      <Box x={54} y={204} s={VOTERS} lang={lang} c="#334155" />
+      <Ar d="M36,192 V94" /><Ar d="M76,192 V94" />
+      {/* Armenia: voters → National Assembly → prime minister and president */}
+      <Box x={159} y={204} s={VOTERS} lang={lang} c="#334155" />
+      <Box x={159} y={150} s={t("National|Assembly", "Ազգային|ժողով", "Национальное|собрание")} lang={lang} c="#c2410c" h={28} />
+      <Box x={140} y={96} w={66} s={t("Prime|minister", "Վարչա-|պետ", "Премьер-|министр")} lang={lang} c="#c2410c" h={28} />
+      <Box x={170} y={52} w={60} s={PRES} lang={lang} c="#c2410c" dash />
+      <Ar d="M159,192 V166" /><Ar d="M146,136 V112" /><Ar d="M192,136 C200,110 200,80 188,66" />
+      {/* France: the president is elected directly and appoints the prime minister */}
+      <Box x={252} y={52} w={66} s={PRES} lang={lang} c="#047857" />
+      <Box x={276} y={104} w={56} s={t("Prime|minister", "Վարչա-|պետ", "Премьер-|министр")} lang={lang} c="#047857" h={28} />
+      <Box x={264} y={150} w={70} s={t("Parliament", "Խորհրդարան", "Парламент")} lang={lang} c="#047857" />
+      <Box x={264} y={204} s={VOTERS} lang={lang} c="#334155" />
+      <Ar d="M228,192 C214,150 214,90 232,64" /><Ar d="M264,192 V162" /><Ar d="M268,64 L276,90" /><Ar d="M286,138 V118" dash />
+    </g>
+  ),
+  parts: [
+    P(56, 120, t("Presidential republic (USA)", "Նախագահական հանրապետություն (ԱՄՆ)", "Президентская республика (США)"), t("Voters choose the president and Congress in separate elections. The president heads the government for 4 years (at most two terms) and can veto laws; Congress can overrule a veto with two thirds of the votes, but cannot dismiss the president except by impeachment.", "Ընտրողները նախագահին և Կոնգրեսին ընտրում են առանձին ընտրություններով։ Նախագահը 4 տարով (առավելագույնը երկու ժամկետ) ղեկավարում է կառավարությունը և կարող է վետո դնել օրենքների վրա․ Կոնգրեսը կարող է հաղթահարել վետոն ձայների երկու երրորդով, բայց չի կարող պաշտոնանկ անել նախագահին, բացի իմփիչմենթից։", "Избиратели выбирают президента и Конгресс на отдельных выборах. Президент 4 года (не больше двух сроков) возглавляет правительство и может наложить вето на закон; Конгресс может преодолеть вето двумя третями голосов, но отстранить президента может только через импичмент.")),
+    P(184, 96, t("Parliamentary republic (Armenia)", "Խորհրդարանական հանրապետություն (Հայաստան)", "Парламентская республика (Армения)"), t("Voters elect only the National Assembly. It chooses the prime minister, who leads the government, and elects the president for 7 years. Parliament can remove the prime minister by a vote of no confidence, so the government depends on its majority.", "Ընտրողներն ընտրում են միայն Ազգային ժողովը։ Այն ընտրում է կառավարությունը ղեկավարող վարչապետին և 7 տարով ընտրում է նախագահին։ Խորհրդարանը կարող է անվստահություն հայտնել վարչապետին, ուստի կառավարությունը կախված է իր մեծամասնությունից։", "Избиратели выбирают только Национальное собрание. Оно выбирает премьер-министра, который возглавляет правительство, и избирает президента на 7 лет. Парламент может выразить недоверие премьер-министру, поэтому правительство зависит от своего большинства.")),
+    P(236, 104, t("Semi-presidential republic (France)", "Կիսանախագահական հանրապետություն (Ֆրանսիա)", "Полупрезидентская республика (Франция)"), t("Voters elect both the president (for 5 years) and parliament. The president appoints the prime minister, but parliament can bring the government down. When the majority is against the president, he must name a prime minister from the other side: the French call this cohabitation.", "Ընտրողներն ընտրում են և՛ նախագահին (5 տարով), և՛ խորհրդարանին։ Նախագահը նշանակում է վարչապետին, բայց խորհրդարանը կարող է հրաժարականի ուղարկել կառավարությանը։ Երբ մեծամասնությունը նախագահի դեմ է, նա պետք է վարչապետ նշանակի մյուս կողմից․ ֆրանսիացիներն սա անվանում են «համակեցություն»։", "Избиратели выбирают и президента (на 5 лет), и парламент. Президент назначает премьер-министра, но парламент может отправить правительство в отставку. Когда большинство против президента, он должен назначить премьера из другого лагеря: французы называют это «сосуществованием».")),
+    P(130, 204, t("And monarchies?", "Իսկ միապետությունները՞", "А монархии?"), t("A constitutional monarchy such as the United Kingdom or Japan works like the middle column: voters elect parliament, the government answers to it, and the monarch stays as a symbol instead of an elected president.", "Սահմանադրական միապետությունը, օրինակ՝ Մեծ Բրիտանիան կամ Ճապոնիան, աշխատում է միջին սյունակի պես․ ընտրողներն ընտրում են խորհրդարանը, կառավարությունը պատասխանատու է նրա առջև, իսկ ընտրովի նախագահի փոխարեն միապետն է մնում որպես խորհրդանիշ։", "Конституционная монархия, например Великобритания или Япония, устроена как средняя колонка: избиратели выбирают парламент, правительство отвечает перед ним, а вместо выборного президента символом остаётся монарх.")),
+  ],
+};
+
+/* ---------------- grade 9: checks and balances in Armenia ---------------- */
+
+const powers: Diagram = {
+  title: t("Three branches that check each other", "Երեք ճյուղ, որոնք զսպում են միմյանց", "Три ветви, которые сдерживают друг друга"),
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      {[[160, 34, t("Legislative", "Օրենսդիր", "Законодательная"), t("National Assembly", "Ազգային ժողով", "Национальное собрание"), "#4f46e5"], [62, 166, t("Executive", "Գործադիր", "Исполнительная"), t("Government, PM", "Կառավարություն", "Правительство"), "#c2410c"], [258, 166, t("Judicial", "Դատական", "Судебная"), t("Courts", "Դատարաններ", "Суды"), "#047857"]].map(([x, y, a, b, c], k) => (
+        <g key={k}>
+          <rect x={(x as number) - 52} y={(y as number) - 22} width="104" height="44" rx="8" fill="#fff" stroke={c as string} strokeWidth="2.2" />
+          <path d={`M${(x as number) - 10},${(y as number) - 12} l10,-6 l10,6 Z M${(x as number) - 8},${(y as number) - 11} v8 M${(x as number) - 3},${(y as number) - 11} v8 M${(x as number) + 3},${(y as number) - 11} v8 M${(x as number) + 8},${(y as number) - 11} v8`} stroke={c as string} fill={c as string} strokeWidth="1.5" />
+          <Tx x={x as number} y={(y as number) + 6} s={a as Tr} lang={lang} size={8.5} fill={c as string} />
+          <Tx x={x as number} y={(y as number) + 16} s={b as Tr} lang={lang} size={6.5} fill="#475569" w={700} />
+        </g>
+      ))}
+      <Box x={276} y={22} w={76} s={t("President", "Նախագահ", "Президент")} lang={lang} c="#64748b" dash />
+      {/* legislative ⇄ executive */}
+      <Ar d="M116,52 L66,142" c="#4f46e5" /><Ar d="M84,142 L132,58" c="#c2410c" />
+      <Tx x={70} y={84} s={t("elects the PM,|no confidence", "ընտրում է վարչապետին,|անվստահություն", "избирает премьера,|недоверие")} lang={lang} size={6.5} anchor="end" fill="#4f46e5" w={800} />
+      <Tx x={112} y={118} s={t("bills,|budget", "նախագծեր,|բյուջե", "законопроекты,|бюджет")} lang={lang} size={6.5} anchor="start" fill="#c2410c" w={800} />
+      {/* legislative ⇄ judicial */}
+      <Ar d="M188,58 L236,142" c="#4f46e5" /><Ar d="M254,142 L204,52" c="#047857" />
+      <Tx x={206} y={118} s={t("elects|judges", "ընտրում է|դատավորներին", "избирает|судей")} lang={lang} size={6.5} anchor="end" fill="#4f46e5" w={800} />
+      <Tx x={316} y={52} s={t("checks laws against|the Constitution", "ստուգում է օրենքների|սահմանադրականությունը", "проверяет законы на|соответствие Конституции")} lang={lang} size={6.3} anchor="end" fill="#047857" w={800} />
+      {/* judicial → executive */}
+      <Ar d="M206,170 H118" c="#047857" />
+      <Tx x={162} y={164} s={t("reviews decisions", "ստուգում է որոշումները", "проверяет решения")} lang={lang} size={6.5} fill="#047857" w={800} />
+      <Tx x={160} y={208} s={t("No branch can rule alone.", "Ոչ մի ճյուղ չի կարող միայնակ իշխել։", "Ни одна ветвь не может править одна.")} lang={lang} size={8} fill="#334155" />
+    </g>
+  ),
+  parts: [
+    P(206, 26, t("National Assembly", "Ազգային ժողով", "Национальное собрание"), t("At least 101 deputies elected for 5 years by party lists. It passes laws and the budget, elects the prime minister and can remove him by a vote of no confidence.", "Առնվազն 101 պատգամավոր, որոնք ընտրվում են 5 տարով՝ կուսակցական ցուցակներով։ Այն ընդունում է օրենքներ և բյուջե, ընտրում է վարչապետին և կարող է անվստահություն հայտնել նրան։", "Не менее 101 депутата, избранных на 5 лет по партийным спискам. Оно принимает законы и бюджет, избирает премьер-министра и может выразить ему недоверие.")),
+    P(14, 150, t("Government", "Կառավարություն", "Правительство"), t("The prime minister and the ministers carry out the laws and run the country day to day. The government drafts the budget, but only parliament can approve it: the money is the people's.", "Վարչապետը և նախարարները կատարում են օրենքները և ամեն օր կառավարում երկիրը։ Կառավարությունը կազմում է բյուջեի նախագիծը, բայց միայն խորհրդարանը կարող է հաստատել այն․ փողը ժողովրդինն է։", "Премьер-министр и министры исполняют законы и каждый день управляют страной. Правительство составляет проект бюджета, но утвердить его может только парламент: деньги принадлежат народу.")),
+    P(306, 150, t("Courts", "Դատարաններ", "Суды"), t("Courts of first instance, appeal courts and the Court of Cassation settle disputes. The Constitutional Court, with 9 judges, can declare a law invalid if it breaks the Constitution. Judges cannot be told how to decide.", "Առաջին ատյանի դատարանները, վերաքննիչ դատարանները և Վճռաբեկ դատարանը լուծում են վեճերը։ 9 դատավորից բաղկացած Սահմանադրական դատարանը կարող է օրենքն անվավեր ճանաչել, եթե այն խախտում է Սահմանադրությունը։ Ոչ ոք չի կարող դատավորներին թելադրել, թե ինչպես որոշեն։", "Суды первой инстанции, апелляционные суды и Кассационный суд разрешают споры. Конституционный суд из 9 судей может признать закон недействительным, если он нарушает Конституцию. Никто не может указывать судьям, как решать.")),
+    P(228, 22, t("President", "Նախագահ", "Президент"), t("The head of state, elected by parliament for one 7-year term. He or she signs laws and can send a doubtful law to the Constitutional Court before signing it.", "Պետության գլուխը, որին խորհրդարանն ընտրում է մեկ անգամ՝ 7 տարով։ Նա ստորագրում է օրենքները և կարող է կասկածելի օրենքը ստորագրելուց առաջ ուղարկել Սահմանադրական դատարան։", "Глава государства, которого парламент избирает один раз на 7 лет. Он подписывает законы и может до подписания направить сомнительный закон в Конституционный суд.")),
+    P(160, 140, t("Montesquieu's idea", "Մոնտեսքյոյի գաղափարը", "Идея Монтескьё"), t("In \"The Spirit of the Laws\" (1748) Montesquieu wrote that power must stop power. Each arrow on the picture is a brake that one branch holds on another.", "«Օրենքների ոգու մասին» գրքում (1748) Մոնտեսքյոն գրել է, որ իշխանությունը պետք է կանգնեցնի իշխանությանը։ Նկարի յուրաքանչյուր սլաք արգելակ է, որը մի ճյուղը պահում է մյուսի վրա։", "В книге «О духе законов» (1748) Монтескьё писал, что власть должна останавливать власть. Каждая стрелка на картинке — тормоз, который одна ветвь держит на другой.")),
+  ],
+};
+
+/* ---------------- grade 9: rights and responsibility by age ---------------- */
+
+const AGES: Array<[number, Tr, number, number, string]> = [
+  [6, t("Age 6|School starts", "6 տարեկան|Սկսվում է դպրոցը", "6 лет|Начинается школа"), 30, 50, "#0891b2"],
+  [14, t("Age 14|Criminal liability for|serious crimes; light|work with a parent's OK", "14 տարեկան|Քրեական պատասխանատվ.|ծանր հանցանքների համար,|թեթև աշխատանք ծնողի|համաձայնությամբ", "14 лет|Уголовная ответственность|за тяжкие преступления;|лёгкий труд с согласия|родителя"), 130, 40, "#f59e0b"],
+  [16, t("Age 16|Criminal liability in|general; work with|shorter hours; passport", "16 տարեկան|Քրեական պատասխանատվ.|ընդհանուր դեպքում,|աշխատանք, անձնագիր", "16 лет|Уголовная ответственность|в целом; работа|с сокращённым днём; паспорт"), 94, 142, "#e11d48"],
+  [18, t("Age 18|Adult: votes, full legal|capacity; men are called|up for military service", "18 տարեկան|Չափահաս․ ընտրում է,|լրիվ գործունակ, տղաները|զորակոչվում են", "18 лет|Совершеннолетие: выборы,|полная дееспособность;|призыв юношей на службу"), 206, 142, "#4f46e5"],
+];
+
+const ages: Diagram = {
+  title: t("Rights and responsibility grow with age", "Իրավունքներն ու պատասխանատվությունն աճում են տարիքի հետ", "Права и ответственность растут с возрастом"),
+  draw: (lang) => {
+    const X = (a: number) => 20 + a * 14;
+    return (
+      <g>
+        <rect x={X(0)} y="104" width={X(14) - X(0)} height="12" rx="3" fill="#bae6fd" />
+        <rect x={X(14)} y="104" width={X(18) - X(14)} height="12" fill="#fde68a" />
+        <rect x={X(18)} y="104" width={X(20) - X(18)} height="12" rx="3" fill="#c7d2fe" />
+        <Tx x={X(6) + 7} y={113} s={t("parents answer for harm", "վնասը՝ ծնողների վրա", "за вред отвечают родители")} lang={lang} size={6.5} anchor="start" fill="#075985" w={800} />
+        {[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20].map((a) => <text key={a} x={X(a)} y="126" textAnchor="middle" fontSize="7" fontWeight="800" fill="#64748b">{a}</text>)}
+        {AGES.map(([a, s, x, y, c], k) => {
+          const up = y < 100;
+          const lines = L(s, lang).split("|").length;
+          const h = 10 + lines * 8.6;
+          return (
+            <g key={k}>
+              <path d={`M${X(a)},${up ? 104 : 116} L${x + (k ? 55 : 45)},${up ? y + h : y}`} stroke={c} strokeWidth="1.5" />
+              <rect x={x} y={y} width={k ? 110 : 90} height={h} rx="5" fill="#fff" stroke={c} strokeWidth="1.5" />
+              <Tx x={x + 5} y={y + 11} s={s} lang={lang} size={6.3} anchor="start" fill="#1e293b" w={700} />
+              <circle cx={X(a)} cy="110" r="4" fill={c} />
+            </g>
+          );
+        })}
+      </g>
+    );
+  },
+  parts: [
+    P(120, 50, t("School", "Դպրոց", "Школа"), t("At 6 a child starts school. The right to education comes with a duty: since 2017 secondary education is compulsory in Armenia.", "6 տարեկանում երեխան դպրոց է գնում։ Կրթության իրավունքը գալիս է պարտականության հետ․ 2017 թվականից Հայաստանում միջնակարգ կրթությունը պարտադիր է։", "В 6 лет ребёнок идёт в школу. Право на образование связано с обязанностью: с 2017 года среднее образование в Армении обязательно.")),
+    P(12, 110, t("Under 14", "Մինչև 14 տարեկան", "До 14 лет"), t("Parents are liable for harm caused by a child under 14: if a ball breaks a neighbour's window, the family pays.", "Մինչև 14 տարեկան երեխայի պատճառած վնասի համար պատասխանատու են ծնողները․ եթե գնդակը կոտրի հարևանի պատուհանը, վճարում է ընտանիքը։", "За вред, причинённый ребёнком до 14 лет, отвечают родители: если мяч разбил окно соседа, платит семья.")),
+    P(240, 40, t("Age 14", "14 տարեկան", "14 лет"), t("Criminal liability begins for some serious crimes, such as murder, theft and robbery. Light work that does not harm health or studies is allowed with a parent's consent.", "Քրեական պատասխանատվությունը սկսվում է որոշ ծանր հանցագործությունների համար, ինչպիսիք են սպանությունը, գողությունը և ավազակությունը։ Առողջությանը և ուսմանը չվնասող թեթև աշխատանքը թույլատրվում է ծնողի համաձայնությամբ։", "Начинается уголовная ответственность за некоторые тяжкие преступления: убийство, кражу, разбой. Лёгкий труд, не вредящий здоровью и учёбе, разрешён с согласия родителя.")),
+    P(204, 142, t("Age 16", "16 տարեկան", "16 лет"), t("Criminal liability as a general rule. You can start work, with shorter hours and no dangerous jobs, and you get your first passport.", "Քրեական պատասխանատվություն ընդհանուր դեպքում։ Կարող ես սկսել աշխատել՝ կրճատ ժամերով և առանց վտանգավոր աշխատանքի, և ստանում ես առաջին անձնագիրը։", "Уголовная ответственность в общем случае. Можно начать работать — с сокращённым днём и без опасной работы, — и ты получаешь первый паспорт.")),
+    P(312, 142, t("Age 18", "18 տարեկան", "18 лет"), t("Adulthood: you vote in elections and referendums and can sign any contract yourself. Punishments are no longer softened for age.", "Չափահասություն․ քվեարկում ես ընտրություններում և հանրաքվեներում և կարող ես ինքդ կնքել ցանկացած պայմանագիր։ Պատիժներն այլևս չեն մեղմացվում տարիքի պատճառով։", "Совершеннолетие: ты голосуешь на выборах и референдумах и можешь сам заключать любые договоры. Наказания больше не смягчаются из-за возраста.")),
+  ],
+};
+
+/* ---------------- grade 9: local self-government ---------------- */
+
+const selfgov: Diagram = {
+  title: t("Who runs a community", "Ով է կառավարում համայնքը", "Кто управляет общиной"),
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      <rect x="6" y="6" width="198" height="208" rx="8" fill="#fff7ed" stroke="#fdba74" strokeDasharray="4 3" />
+      <Tx x={105} y={20} s={t("Local self-government", "Տեղական ինքնակառավարում", "Местное самоуправление")} lang={lang} size={8} fill="#c2410c" />
+      <rect x="212" y="6" width="102" height="118" rx="8" fill="#eef2ff" stroke="#a5b4fc" strokeDasharray="4 3" />
+      <Tx x={263} y={20} s={t("State power", "Պետական իշխանություն", "Государственная власть")} lang={lang} size={7.5} fill="#4338ca" />
+      <Box x={58} y={70} w={92} h={28} s={t("Council|of elders", "Ավագանի", "Совет|старейшин")} lang={lang} c="#c2410c" />
+      <Box x={156} y={70} w={84} h={28} s={t("Community|head", "Համայնքի|ղեկավար", "Глава|общины")} lang={lang} c="#c2410c" />
+      <Ar d="M105,64 H112" c="#c2410c" />
+      <Tx x={108} y={98} s={t("budget, decisions", "բյուջե, որոշումներ", "бюджет, решения")} lang={lang} size={6.5} fill="#9a3412" w={800} />
+      {[30, 52, 74, 96, 118, 140, 162].map((x, k) => <Head key={k} x={x + 4} y={160} r={5} fill={["#f59e0b", "#0891b2", "#e11d48", "#10b981", "#4f46e5", "#f97316", "#64748b"][k]} />)}
+      <Tx x={105} y={196} s={t("Residents", "Բնակիչներ", "Жители")} lang={lang} size={8} fill="#334155" />
+      <Ar d="M58,148 V88" c="#334155" /><Ar d="M152,148 V88" c="#334155" />
+      <Tx x={105} y={130} s={t("elect", "ընտրում են", "избирают")} lang={lang} size={7} fill="#334155" />
+      <Box x={263} y={48} w={88} s={t("Government", "Կառավարություն", "Правительство")} lang={lang} c="#4338ca" />
+      <Box x={263} y={100} w={88} s={t("Governor", "Մարզպետ", "Марзпет")} lang={lang} c="#4338ca" />
+      <Ar d="M263,60 V88" c="#4338ca" />
+      <Tx x={268} y={77} s={t("appoints", "նշանակում է", "назначает")} lang={lang} size={6.5} anchor="start" fill="#4338ca" w={800} />
+      <rect x="212" y="134" width="102" height="80" rx="8" fill="#ecfdf5" stroke="#6ee7b7" />
+      <Tx x={263} y={148} s={t("Civil society", "Քաղաքացիական|հասարակություն", "Гражданское|общество")} lang={lang} size={7.5} fill="#047857" />
+      <Tx x={220} y={176} s={t("NGOs · unions|media · action groups", "ՀԿ-ներ · արհմիություններ|ԶԼՄ · նախաձեռնող խմբեր", "НКО · профсоюзы|СМИ · инициативы")} lang={lang} size={6.3} anchor="start" fill="#065f46" w={700} />
+      <Ar d="M214,150 C196,130 186,104 168,88" c="#047857" dash />
+    </g>
+  ),
+  parts: [
+    P(20, 56, t("Council of elders", "Ավագանի", "Совет старейшин"), t("The community's representative body. It adopts the budget and local rules and can be watched at work: its meetings are open to residents. Yerevan's council has 65 members and elects the mayor.", "Համայնքի ներկայացուցչական մարմինը։ Այն ընդունում է բյուջեն և տեղական կանոնները, և նրա աշխատանքին կարելի է հետևել․ նիստերը բաց են բնակիչների համար։ Երևանի ավագանին ունի 65 անդամ և ընտրում է քաղաքապետին։", "Представительный орган общины. Он принимает бюджет и местные правила, и за его работой можно следить: заседания открыты для жителей. В Совете старейшин Еревана 65 членов, он избирает мэра.")),
+    P(196, 56, t("Community head", "Համայնքի ղեկավար", "Глава общины"), t("The executive: carries out the council's decisions on roads, lighting, rubbish, water, nurseries and parks.", "Գործադիր մարմինը․ կատարում է ավագանու որոշումները ճանապարհների, լուսավորության, աղբահանության, ջրի, մանկապարտեզների և այգիների վերաբերյալ։", "Исполнительный орган: выполняет решения совета о дорогах, освещении, мусоре, воде, детских садах и парках.")),
+    P(186, 160, t("Residents", "Բնակիչներ", "Жители"), t("They elect the local bodies and can attend council meetings, make proposals and speak at public hearings. A courtyard is fixed faster when residents ask together.", "Նրանք ընտրում են տեղական մարմինները և կարող են մասնակցել ավագանու նիստերին, առաջարկներ ներկայացնել և հանրային լսումներում ելույթ ունենալ։ Բակն ավելի արագ է բարեկարգվում, երբ բնակիչները միասին են խնդրում։", "Они избирают местные органы, могут приходить на заседания совета, вносить предложения и выступать на публичных слушаниях. Двор приводят в порядок быстрее, когда жители просят вместе.")),
+    P(306, 100, t("Governor (marzpet)", "Մարզպետ", "Губернатор (марзпет)"), t("Each of the 10 provinces has a governor appointed by the government. The governor represents state power, not the residents, and is not part of local self-government.", "10 մարզերից յուրաքանչյուրն ունի կառավարության նշանակած մարզպետ։ Մարզպետը ներկայացնում է պետական իշխանությունը, ոչ թե բնակիչներին, և տեղական ինքնակառավարման մաս չէ։", "В каждой из 10 областей есть губернатор, назначенный правительством. Он представляет государственную власть, а не жителей, и не входит в местное самоуправление.")),
+    P(300, 160, t("Civil society", "Քաղաքացիական հասարակություն", "Гражданское общество"), t("Groups that act on their own, without the state: they collect signatures, take part in hearings and report problems. Its arrow is dashed because it advises and watches; it does not command.", "Խմբեր, որոնք գործում են ինքնուրույն՝ առանց պետության․ հավաքում են ստորագրություններ, մասնակցում լսումներին և բարձրաձայնում խնդիրները։ Նրա սլաքը կետագծով է, որովհետև այն խորհուրդ է տալիս և հետևում, բայց չի հրամայում։", "Объединения, которые действуют сами, без государства: собирают подписи, участвуют в слушаниях и сообщают о проблемах. Их стрелка пунктирная: гражданское общество советует и следит, но не приказывает.")),
+    P(105, 40, t("Bigger communities", "Խոշորացված համայնքներ", "Укрупнённые общины"), t("Before the reform Armenia had more than 900 communities, many with only a few hundred residents. After 2016 most were merged, leaving fewer than a hundred, so that each could afford schools, roads and staff.", "Բարեփոխումից առաջ Հայաստանն ուներ ավելի քան 900 համայնք, որոնցից շատերն ունեին ընդամենը մի քանի հարյուր բնակիչ։ 2016 թվականից հետո դրանց մեծ մասը միավորվեց, և մնաց հարյուրից պակաս, որպեսզի յուրաքանչյուրը կարողանա պահել դպրոցներ, ճանապարհներ և աշխատակազմ։", "До реформы в Армении было более 900 общин, во многих — всего несколько сотен жителей. После 2016 года большинство объединили, и их осталось меньше сотни, чтобы каждая могла содержать школы, дороги и сотрудников.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov };
