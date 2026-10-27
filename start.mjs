@@ -11,6 +11,7 @@
 import { spawn, spawnSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import fs from "node:fs";
+import net from "node:net";
 import path from "node:path";
 import readline from "node:readline/promises";
 import { fileURLToPath } from "node:url";
@@ -43,10 +44,13 @@ if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versio
 
 // An app started earlier keeps answering on the port and keeps showing the old version,
 // even after this run rebuilds, so stop here and say how to close it.
-const portBusy = await fetch(`http://127.0.0.1:${PORT}`, { redirect: "manual", signal: AbortSignal.timeout(2000) }).then(
-  () => true,
-  () => false,
-);
+// Trying to listen on the port tells for sure, however slowly the old server answers.
+const portBusy = await new Promise((resolve) => {
+  const probe = net.createServer();
+  probe.once("error", (e) => resolve(e.code === "EADDRINUSE"));
+  probe.once("listening", () => probe.close(() => resolve(false)));
+  probe.listen(Number(PORT));
+});
 if (portBusy) {
   fail(
     [
