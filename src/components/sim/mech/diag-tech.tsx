@@ -529,4 +529,192 @@ const table: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table };
+/* ---------------- grade 4: the design process ---------------- */
+
+const STEPS: Array<[Tr, string]> = [
+  [t("Problem", "Խնդիր", "Задача"), "#ef4444"],
+  [t("Requirements", "Պահանջներ", "Требования"), "#f97316"],
+  [t("Ideas", "Գաղափարներ", "Идеи"), "#eab308"],
+  [t("Choice", "Ընտրություն", "Выбор"), "#84cc16"],
+  [t("Sketch, plan", "Էսքիզ, պլան", "Эскиз, план"), "#10b981"],
+  [t("Making", "Պատրաստում", "Изготовление"), "#0ea5e9"],
+  [t("Testing", "Փորձարկում", "Испытание"), "#6366f1"],
+  [t("Improving", "Բարելավում", "Улучшение"), "#a855f7"],
+];
+const DCX = 160, DCY = 112, DR = 70;
+const dAt = (j: number, r = DR) => [DCX + r * Math.sin((j * Math.PI) / 4), DCY - r * Math.cos((j * Math.PI) / 4)] as const;
+
+const designcycle: Diagram = {
+  title: t("The design process: a pencil pot", "Նախագծման ընթացքը․ մատիտաման", "Процесс проектирования: стакан для карандашей"),
+  h: 222,
+  draw: (lang) => (
+    <g>
+      <circle cx={DCX} cy={DCY} r={DR} fill="none" stroke="#cbd5e1" strokeWidth="3" strokeDasharray="6 5" />
+      {/* the pencil pot in the middle: a bundle of tubes */}
+      <rect x="132" y="104" width="56" height="10" rx="3" fill="#475569" />
+      {[0, 1, 2, 3].map((j) => <rect key={j} x={136 + j * 12} y={78 - (j % 2) * 6} width="12" height={28 + (j % 2) * 6} fill={["#fca5a5", "#fde68a", "#86efac", "#93c5fd"][j]} stroke="#475569" strokeWidth="0.8" />)}
+      {[0, 1, 2, 3, 4].map((j) => <line key={j} x1={140 + j * 10} x2={142 + j * 9} y1={76 - (j % 2) * 6} y2={56 - (j % 3) * 4} stroke={["#ef4444", "#2563eb", "#16a34a", "#eab308", "#7c3aed"][j]} strokeWidth="3" strokeLinecap="round" />)}
+      <Tx x={DCX} y={132} s={t("pencil pot", "մատիտաման", "стакан")} lang={lang} size={8} fill="#475569" />
+      {STEPS.map(([name, c], j) => {
+        const [x, y] = dAt(j);
+        const [lx, ly] = dAt(j, DR + 19);
+        return (
+          <g key={j}>
+            <circle cx={x} cy={y} r="13" fill={c} />
+            <text x={x} y={y + 4} textAnchor="middle" fontSize="11" fontWeight="800" fill="#fff">{j + 1}</text>
+            <Tx x={lx} y={ly + 3} s={name} lang={lang} size={7} fill={c} anchor={j === 0 || j === 4 ? "middle" : j < 4 ? "start" : "end"} />
+          </g>
+        );
+      })}
+    </g>
+  ),
+  parts: [
+    P(dAt(0)[0], dAt(0)[1], STEPS[0][0], t("What is needed, and for whom? Pencils roll about the desk and get lost.", "Ի՞նչ է պետք, և ո՞ւմ համար։ Մատիտները գլորվում են սեղանի վրա և կորչում։", "Что нужно и для кого? Карандаши раскатываются по столу и теряются.")),
+    P(dAt(1)[0], dAt(1)[1], STEPS[1][0], t("What must it be like? It holds 10–15 pencils, stands firmly, looks nice and is made from recycled materials.", "Ինչպիսի՞ն պետք է լինի։ Տեղավորում է 10–15 մատիտ, ամուր կանգնում է, գեղեցիկ է և պատրաստված է վերամշակված նյութերից։", "Каким он должен быть? Вмещает 10–15 карандашей, устойчиво стоит, красиво выглядит и сделан из вторсырья.")),
+    P(dAt(2)[0], dAt(2)[1], STEPS[2][0], t("Think of several options before choosing: a glass jar, a box, the bottom of a bottle, a bundle of tubes.", "Ընտրելուց առաջ մի քանի տարբերակ մտածի՛ր՝ ապակե բանկա, տուփ, շշի տակ, խողովակների կապոց։", "Придумай несколько вариантов, прежде чем выбирать: стеклянная банка, коробка, дно бутылки, связка трубок.")),
+    P(dAt(3)[0], dAt(3)[1], STEPS[3][0], t("Compare the ideas with the requirements. The tubes win: every kind of pencil gets its own compartment.", "Համեմատի՛ր գաղափարները պահանջների հետ։ Հաղթում են խողովակները․ ամեն տեսակի մատիտ իր բաժինն է ստանում։", "Сравни идеи с требованиями. Побеждают трубки: у каждого вида карандашей своё отделение.")),
+    P(dAt(4)[0], dAt(4)[1], STEPS[4][0], t("Draw the pot, write the sizes, choose materials and tools, and plan the order of work.", "Նկարի՛ր մատիտամանը, գրի՛ր չափերը, ընտրի՛ր նյութերն ու գործիքները և պլանավորի՛ր աշխատանքի հաջորդականությունը։", "Нарисуй стакан, запиши размеры, выбери материалы и инструменты и спланируй порядок работы.")),
+    P(dAt(5)[0], dAt(5)[1], STEPS[5][0], t("Work step by step: cut the tubes, cover them in paper, glue them together and onto a base.", "Աշխատի՛ր քայլ առ քայլ․ կտրի՛ր խողովակները, պատի՛ր թղթով, սոսնձի՛ր իրար և հիմքին։", "Работай шаг за шагом: разрежь трубки, оклей их бумагой, склей вместе и приклей к основанию.")),
+    P(dAt(6)[0], dAt(6)[1], STEPS[6][0], t("Does it solve the problem? Take a pencil out quickly: does the pot tip over?", "Արդյո՞ք այն լուծում է խնդիրը։ Արագ հանի՛ր մատիտը․ մատիտամանը չի՞ շրջվում։", "Решает ли он задачу? Быстро вытащи карандаш: не опрокидывается ли стакан?")),
+    P(dAt(7)[0], dAt(7)[1], STEPS[7][0], t("Fix the weak points: if it tips over, glue on a heavier base. Then test again. Mistakes are part of designing.", "Ուղղի՛ր թույլ կողմերը․ եթե շրջվում է, սոսնձի՛ր ավելի ծանր հիմք։ Հետո նորից փորձարկի՛ր։ Սխալները նախագծման մասն են։", "Исправь слабые места: если опрокидывается, приклей основание потяжелее. Потом испытай снова. Ошибки — часть проектирования.")),
+  ],
+};
+
+/* ---------------- grade 4: a technical drawing ---------------- */
+
+const DimArrow = ({ x1, y1, x2, y2 }: { x1: number; y1: number; x2: number; y2: number }) => {
+  const a = Math.atan2(y2 - y1, x2 - x1), h = 6;
+  const tip = (x: number, y: number, b: number) => `M${x},${y} l${h * Math.cos(b + 0.35)},${h * Math.sin(b + 0.35)} M${x},${y} l${h * Math.cos(b - 0.35)},${h * Math.sin(b - 0.35)}`;
+  return <path d={`M${x1},${y1} L${x2},${y2} ${tip(x1, y1, a)} ${tip(x2, y2, a + Math.PI)}`} stroke="#0f172a" strokeWidth="0.8" fill="none" />;
+};
+
+const techdrawing: Diagram = {
+  title: t("Sketch and technical drawing", "Էսքիզ և տեխնիկական գծագիր", "Эскиз и технический чертёж"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {/* the drawing: a plate 80 × 50 with a hole and a hidden groove, scale 1:1 at 2 px per mm */}
+      <rect x="30" y="60" width="160" height="100" fill="#fff" stroke="#0f172a" strokeWidth="2.6" />
+      <circle cx="110" cy="110" r="20" fill="none" stroke="#0f172a" strokeWidth="2.6" />
+      <line x1="30" x2="190" y1="142" y2="142" stroke="#0f172a" strokeWidth="1.2" strokeDasharray="6 4" />
+      <line x1="80" x2="140" y1="110" y2="110" stroke="#0f172a" strokeWidth="0.8" strokeDasharray="14 3 2 3" />
+      <line x1="110" x2="110" y1="80" y2="140" stroke="#0f172a" strokeWidth="0.8" strokeDasharray="14 3 2 3" />
+      {/* dimensions */}
+      <line x1="30" x2="30" y1="58" y2="36" stroke="#0f172a" strokeWidth="0.6" />
+      <line x1="190" x2="190" y1="58" y2="36" stroke="#0f172a" strokeWidth="0.6" />
+      <DimArrow x1={30} y1={42} x2={190} y2={42} />
+      <text x="110" y="38" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0f172a">80</text>
+      <line x1="192" x2="214" y1="60" y2="60" stroke="#0f172a" strokeWidth="0.6" />
+      <line x1="192" x2="214" y1="160" y2="160" stroke="#0f172a" strokeWidth="0.6" />
+      <DimArrow x1={208} y1={60} x2={208} y2={160} />
+      <text x="204" y="114" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0f172a" transform="rotate(-90 204 110)">50</text>
+      <path d="M124,96 L150,74 H170" stroke="#0f172a" strokeWidth="0.8" fill="none" />
+      <text x="160" y="70" textAnchor="middle" fontSize="10" fontWeight="700" fill="#0f172a">Ø20</text>
+      {/* title block */}
+      <rect x="30" y="176" width="160" height="26" fill="none" stroke="#0f172a" strokeWidth="1.2" />
+      <line x1="130" x2="130" y1="176" y2="202" stroke="#0f172a" strokeWidth="1.2" />
+      <text x="160" y="193" textAnchor="middle" fontSize="10" fontWeight="700" fill="#0f172a">1:2</text>
+      <Tx x={80} y={193} s={t("Plate", "Թիթեղ", "Пластина")} lang={lang} size={9} fill="#0f172a" />
+      {/* the sketch */}
+      <path d="M236,72 q20,-3 44,1 q2,26 -1,50 q-22,2 -44,-1 q-2,-24 1,-50 Z" fill="#fef9c3" stroke="#475569" strokeWidth="1.5" />
+      <path d="M258,96 q6,-8 12,0 q-2,8 -12,0 Z" fill="none" stroke="#475569" />
+      <Tx x={258} y={140} s={t("sketch:|by hand", "էսքիզ՝|ձեռքով", "эскиз:|от руки")} lang={lang} size={8} fill="#475569" />
+      <Tx x={258} y={60} s={t("wood?", "փա՞յտ", "дерево?")} lang={lang} size={7.5} fill="#a16207" w={600} />
+    </g>
+  ),
+  parts: [
+    P(30, 80, t("Thick continuous line", "Հաստ հոծ գիծ", "Сплошная толстая линия"), t("The visible outline of the object: everything you can actually see from this side.", "Առարկայի տեսանելի ուրվագիծը՝ այն ամենը, ինչ իրականում երևում է այս կողմից։", "Видимый контур предмета: всё, что действительно видно с этой стороны.")),
+    P(180, 142, t("Dashed line", "Ընդհատ գիծ", "Штриховая линия"), t("Hidden edges: a groove on the back that you cannot see from the front.", "Թաքնված կողեր․ հետևի ակոս, որն առջևից չի երևում։", "Невидимые рёбра: канавка сзади, которую спереди не видно.")),
+    P(140, 120, t("Chain line", "Կետագծիկ գիծ", "Штрихпунктирная линия"), t("Dash-dot-dash lines mark centres and lines of symmetry, like the centre of the hole.", "Գծիկ-կետ-գծիկ գծերը նշում են կենտրոններ և համաչափության առանցքներ, օրինակ՝ անցքի կենտրոնը։", "Линии «штрих-точка» обозначают центры и оси симметрии, например центр отверстия.")),
+    P(70, 42, t("Dimension line", "Չափային գիծ", "Размерная линия"), t("A thin line with arrows at both ends. The number above it is the real size in millimetres, written without \"mm\".", "Բարակ գիծ՝ երկու ծայրերում սլաքներով։ Վրայի թիվն իրական չափն է միլիմետրերով՝ գրված առանց «մմ»-ի։", "Тонкая линия со стрелками на концах. Число над ней — настоящий размер в миллиметрах, записанный без «мм».")),
+    P(160, 58, t("Diameter sign", "Տրամագծի նշան", "Знак диаметра"), t("The sign Ø means diameter: this hole is 20 mm across.", "Ø նշանը նշանակում է տրամագիծ․ այս անցքը 20 մմ է։", "Знак Ø означает диаметр: это отверстие шириной 20 мм.")),
+    P(178, 189, t("Scale", "Մասշտաբ", "Масштаб"), t("1:2 means the drawing is half the real size: 1 cm on paper is 2 cm in real life. The numbers still show the real sizes.", "1:2 նշանակում է, որ գծագիրն իրական չափի կեսն է․ թղթի վրա 1 սմ-ն իրականում 2 սմ է։ Թվերը միևնույնն է ցույց են տալիս իրական չափերը։", "1:2 значит, что чертёж вдвое меньше настоящего предмета: 1 см на бумаге — это 2 см в жизни. Числа всё равно показывают настоящие размеры.")),
+    P(292, 70, t("Sketch", "Էսքիզ", "Эскиз"), t("A quick freehand drawing of the idea, with notes. No ruler and no exact sizes: speed matters more than neatness.", "Գաղափարի արագ ձեռքով նկար՝ նշումներով։ Առանց քանոնի և ճշգրիտ չափերի․ արագությունն ավելի կարևոր է, քան կոկիկությունը։", "Быстрый рисунок идеи от руки с пометками. Без линейки и точных размеров: скорость важнее аккуратности.")),
+  ],
+};
+
+/* ---------------- grade 4: inside a torch ---------------- */
+
+const torch: Diagram = {
+  title: t("Inside a torch: a simple circuit", "Լապտերի ներսում․ պարզ շղթա", "Внутри фонарика: простая цепь"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      {/* light */}
+      <path d="M270,70 L318,40 V160 L270,130 Z" fill="#fef9c3" opacity="0.8" />
+      {/* the case */}
+      <rect x="20" y="70" width="210" height="60" rx="10" fill="#334155" />
+      <path d="M230,64 h28 l14,-6 v84 l-14,-6 h-28 Z" fill="#475569" />
+      <rect x="28" y="78" width="200" height="44" rx="6" fill="#e2e8f0" />
+      {/* batteries */}
+      {[0, 1].map((j) => (
+        <g key={j}>
+          <rect x={52 + j * 76} y="84" width="70" height="32" rx="4" fill="#16a34a" />
+          <rect x={52 + j * 76} y="84" width="20" height="32" rx="4" fill="#111827" />
+          <rect x={122 + j * 76} y="94" width="5" height="12" rx="1" fill="#cbd5e1" />
+          <text x={108 + j * 76} y="104" textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff">+</text>
+          <text x={64 + j * 76} y="104" textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff">−</text>
+        </g>
+      ))}
+      {/* spring at the back */}
+      <path d="M30,100 l4,-12 l4,24 l4,-24 l4,24 l4,-24 l4,12" fill="none" stroke="#94a3b8" strokeWidth="2" />
+      {/* metal strip back to the switch and bulb */}
+      <path d="M32,80 V74 H150 M170,74 H236 V92" fill="none" stroke="#f59e0b" strokeWidth="2.5" />
+      <rect x="146" y="56" width="28" height="14" rx="4" fill="#ef4444" />
+      <path d="M150,72 L170,74" stroke="#f59e0b" strokeWidth="2.5" />
+      {/* bulb and reflector */}
+      <path d="M240,82 L270,64 V136 L240,118 Z" fill="#e5e7eb" stroke="#94a3b8" />
+      <circle cx="252" cy="100" r="9" fill="#fde047" stroke="#ca8a04" />
+      <path d="M248,100 q4,-6 8,0" fill="none" stroke="#b45309" />
+      <rect x="236" y="96" width="8" height="8" fill="#94a3b8" />
+      <Tx x={150} y={52} s={t("switch", "անջատիչ", "выключатель")} lang={lang} size={8} fill="#ef4444" />
+      <Tx x={292} y={186} s={t("light", "լույս", "свет")} lang={lang} size={9} fill="#ca8a04" />
+    </g>
+  ),
+  parts: [
+    P(108, 132, t("Batteries", "Մարտկոցներ", "Батарейки"), t("The source of current. They sit in a row, the + of one touching the − of the next, so their voltages add up: two 1.5-volt batteries give 3 volts.", "Հոսանքի աղբյուրը։ Դրանք դրված են շարքով, մեկի +-ը հպվում է հաջորդի −-ին, ուստի լարումները գումարվում են․ երկու 1,5 վոլտանոց մարտկոցը տալիս է 3 վոլտ։", "Источник тока. Они стоят в ряд, «+» одной касается «−» следующей, поэтому напряжения складываются: две батарейки по 1,5 вольта дают 3 вольта.")),
+    P(40, 112, t("Spring", "Զսպանակ", "Пружина"), t("The metal spring presses the batteries tightly together, so the circuit has no gaps even when you shake the torch.", "Մետաղե զսպանակը մարտկոցներն ամուր սեղմում է իրար, որ շղթայում ճեղքեր չլինեն, նույնիսկ եթե լապտերը թափահարես։", "Металлическая пружина плотно прижимает батарейки друг к другу, чтобы в цепи не было разрывов, даже если трясти фонарик.")),
+    P(100, 66, t("Metal strip", "Մետաղե շերտ", "Металлическая полоска"), t("A strip of metal plays the part of a wire, carrying the current from the back of the batteries to the bulb.", "Մետաղե շերտը լարի դեր է կատարում և հոսանքը տանում է մարտկոցների հետևից դեպի լամպ։", "Металлическая полоска играет роль провода и несёт ток от задней части батареек к лампочке.")),
+    P(176, 56, t("Switch", "Անջատիչ", "Выключатель"), t("Sliding the switch joins the two pieces of metal strip and closes the circuit. Slide it back and the gap opens: the light goes out.", "Անջատիչը սահեցնելիս մետաղե շերտի երկու կտորները միանում են, և շղթան փակվում է։ Ետ սահեցրու, և ճեղքը բացվում է․ լույսը հանգչում է։", "Сдвинутый выключатель соединяет два куска металлической полоски и замыкает цепь. Сдвинь обратно — появится разрыв, и свет погаснет.")),
+    P(252, 86, t("Bulb", "Լամպ", "Лампочка"), t("The current passes through the bulb and makes it glow. Modern torches use LEDs, which give more light from the same batteries.", "Հոսանքն անցնում է լամպով և ստիպում այն լուսավորել։ Ժամանակակից լապտերներում լուսադիոդներ են, որոնք նույն մարտկոցներից ավելի շատ լույս են տալիս։", "Ток проходит через лампочку и заставляет её светиться. В современных фонариках стоят светодиоды: от тех же батареек они дают больше света.")),
+    P(270, 70, t("Reflector", "Անդրադարձիչ", "Отражатель"), t("A shiny bowl behind the bulb catches the light going sideways and sends it forwards as a bright beam.", "Լամպի հետևի փայլուն գոգավորությունը որսում է կողքերը գնացող լույսը և ուղարկում առաջ՝ պայծառ փնջով։", "Блестящая чаша за лампочкой ловит свет, уходящий в стороны, и направляет его вперёд ярким лучом.")),
+    P(20, 140, t("Plastic case", "Պլաստմասե իրան", "Пластмассовый корпус"), t("The case is an insulator: no current passes through it, so you can hold the torch safely.", "Իրանը մեկուսիչ է․ հոսանքը դրանով չի անցնում, ուստի լապտերը կարելի է անվտանգ բռնել։", "Корпус — изолятор: ток через него не проходит, поэтому фонарик можно спокойно держать.")),
+  ],
+};
+
+/* ---------------- grade 4: inside a log ---------------- */
+
+const woodlog: Diagram = {
+  title: t("Inside a log", "Գերանի ներսում", "Внутри бревна"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <circle cx="100" cy="110" r="86" fill="#57381e" />
+      <circle cx="100" cy="110" r="78" fill="#f3d9a4" />
+      <circle cx="100" cy="110" r="48" fill="#d4a15f" />
+      {Array.from({ length: 12 }, (_, j) => <circle key={j} cx={100 + j * 0.4} cy={110 - j * 0.3} r={6 + j * 6} fill="none" stroke="#a16207" strokeWidth={j % 3 ? 0.8 : 1.6} />)}
+      <circle cx="101" cy="110" r="3" fill="#78350f" />
+      <path d="M100,110 L176,82" stroke="#57381e" strokeWidth="1" strokeDasharray="3 2" opacity="0.6" />
+      {/* a plank with grain */}
+      <rect x="206" y="36" width="96" height="150" rx="4" fill="#f3d9a4" stroke="#a16207" />
+      {Array.from({ length: 9 }, (_, j) => <path key={j} d={`M${214 + j * 10},36 C${206 + j * 10},80 ${224 + j * 10},120 ${212 + j * 10},186`} fill="none" stroke="#c48a3f" strokeWidth="1" />)}
+      <ellipse cx="262" cy="120" rx="9" ry="12" fill="#92400e" />
+      <ellipse cx="262" cy="120" rx="4" ry="6" fill="#57381e" />
+      <path d="M248,10 v18 M242,22 l6,8 l6,-8" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+      <path d="M212,200 h18 M222,194 l8,6 l-8,6" fill="none" stroke="#dc2626" strokeWidth="2.5" />
+      <Tx x={240} y={14} s={t("along:|splits easily", "երկայնքով՝|հեշտ ճեղքվում է", "вдоль:|легко колется")} lang={lang} size={7} fill="#16a34a" anchor="end" />
+      <Tx x={240} y={198} s={t("across:|hard to cut", "լայնքով՝|դժվար է կտրել", "поперёк:|трудно резать")} lang={lang} size={7} fill="#dc2626" anchor="start" />
+    </g>
+  ),
+  parts: [
+    P(30, 34, t("Bark", "Կեղև", "Кора"), t("The tree's raincoat and armour: it keeps water in and insects and frost out.", "Ծառի անձրևանոցն ու զրահը․ այն պահում է ջուրը և պաշտպանում միջատներից ու սառնամանիքից։", "Плащ и броня дерева: кора удерживает воду и защищает от насекомых и мороза.")),
+    P(166, 132, t("Sapwood", "Բելի", "Заболонь"), t("The young, pale outer wood still carries water from the roots up to the leaves.", "Երիտասարդ, բաց գույնի արտաքին փայտը դեռ ջուր է տանում արմատներից դեպի տերևներ։", "Молодая светлая наружная древесина ещё проводит воду от корней к листьям.")),
+    P(100, 72, t("Heartwood", "Միջուկային փայտ", "Ядро"), t("The old wood in the middle no longer carries water. It is often darker, harder and lasts longer, so it is the most valuable part.", "Մեջտեղի հին փայտն այլևս ջուր չի տանում։ Այն հաճախ ավելի մուգ է, ավելի պինդ և ավելի երկարակյաց, ուստի ամենաթանկ մասն է։", "Старая древесина в середине уже не проводит воду. Часто она темнее, твёрже и долговечнее, поэтому это самая ценная часть.")),
+    P(140, 92, t("Annual rings", "Տարեկան օղակներ", "Годичные кольца"), t("Each ring is one year: pale, wide wood grows in spring and darker, narrow wood in late summer. Count the dark lines to find the tree's age.", "Ամեն օղակը մեկ տարի է․ բաց, լայն փայտն աճում է գարնանը, իսկ ավելի մուգ, նեղը՝ ամառվա վերջին։ Հաշվի՛ր մուգ գծերը, և կիմանաս ծառի տարիքը։", "Каждое кольцо — один год: светлая широкая древесина растёт весной, тёмная узкая — в конце лета. Посчитай тёмные линии и узнаешь возраст дерева.")),
+    P(230, 60, t("The grain", "Փայտի շերտերը", "Волокна"), t("The long fibres of the wood all run along the trunk. Wood splits easily along them but is hard to cut across them, so always sand along the grain.", "Փայտի երկար թելիկները ձգվում են բնի երկայնքով։ Փայտը հեշտությամբ ճեղքվում է դրանց երկայնքով, բայց դժվար է կտրել լայնքով, ուստի միշտ հղկի՛ր շերտերի ուղղությամբ։", "Длинные волокна древесины тянутся вдоль ствола. Вдоль них дерево легко раскалывается, а поперёк его трудно резать, поэтому шлифуй всегда вдоль волокон.")),
+    P(276, 132, t("Knot", "Հանգույց", "Сучок"), t("A knot is where a branch once grew. It is hard, and the grain bends round it, so it is difficult to cut and plane.", "Հանգույցն այն տեղն է, որտեղ ժամանակին ճյուղ է աճել։ Այն պինդ է, և շերտերը թեքվում են դրա շուրջը, ուստի դժվար է կտրել և ռանդել։", "Сучок — место, где когда-то рос сук. Он твёрдый, и волокна огибают его, поэтому его трудно пилить и строгать.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog };

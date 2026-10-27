@@ -1024,4 +1024,154 @@ const bean: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean };
+/* ---------------- grade 4: a coil pot ---------------- */
+
+const CLAY = "#d6a47a", CLAY_D = "#9a6b45", FIRED = "#c2410c";
+const COILS = [40, 44, 48, 50, 50, 47, 43];
+
+const coilpot: Mech = {
+  title: t("Building a coil pot", "Կավե աման օղակներով", "Горшок из жгутов"),
+  caps: [
+    t("Roll out a flat circle of clay for the base.", "Կավից գլորի՛ր հարթ շրջան՝ հատակի համար։", "Раскатай из глины плоский круг для дна."),
+    t("Roll long sausages, the coils, between your palms and the table.", "Ափերիդ և սեղանի միջև գլորի՛ր երկար երշիկներ՝ օղակներ։", "Раскатай ладонями по столу длинные колбаски — жгуты."),
+    t("Lay the coils round the edge of the base, ring by ring. Make the rings a little wider to give the pot a belly.", "Օղակները դասավորի՛ր հատակի եզրով՝ օղակ առ օղակ։ Օղակները մի փոքր լայնացրու, որ ամանը փորիկ ունենա։", "Укладывай жгуты по краю дна кольцо за кольцом. Делай кольца чуть шире, чтобы у горшка появилось брюшко."),
+    t("Smooth the joins on the inside with a finger, so the rings hold together and no water leaks out.", "Մատով հարթեցրու ներսի միացումները, որ օղակներն իրար պահեն, և ջուրը դուրս չհոսի։", "Загладь пальцем стыки изнутри, чтобы кольца держались вместе и вода не протекала."),
+    t("Let it dry slowly, then fire it in a kiln at about 900 °C. The clay changes for ever and becomes hard as stone.", "Թո՛ղ դանդաղ չորանա, հետո թրծի՛ր հնոցում մոտ 900 °C ջերմաստիճանում։ Կավն ընդմիշտ փոխվում է և քարի պես պինդ դառնում։", "Дай ему медленно высохнуть, потом обожги в печи при температуре около 900 °C. Глина меняется навсегда и становится твёрдой, как камень."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 0) return (
+      <g>
+        <ellipse cx="160" cy="150" rx={lerp(30, 64, k)} ry={lerp(14, 22, k)} fill={CLAY} stroke={CLAY_D} strokeWidth="1.5" />
+        <g transform={`translate(${lerp(110, 210, Math.sin(p * Math.PI * 2) * 0.5 + 0.5)} 120)`}>
+          <rect x="-12" y="-60" width="24" height="120" rx="12" fill="#e7c9a9" stroke="#a16207" transform="rotate(80)" />
+        </g>
+      </g>
+    );
+    if (i === 1) {
+      const len = lerp(40, 200, k);
+      return (
+        <g>
+          <rect x={160 - len / 2} y="140" width={len} height="14" rx="7" fill={CLAY} stroke={CLAY_D} />
+          <ellipse cx={160 - len / 4} cy="128" rx="34" ry="14" fill="#fcd9b6" stroke="#c2410c" />
+          <ellipse cx={160 + len / 4} cy="128" rx="34" ry="14" fill="#fcd9b6" stroke="#c2410c" />
+          {[0, 1, 2].map((j) => <rect key={j} x={60 + j * 70} y={176} width="56" height="12" rx="6" fill={CLAY} stroke={CLAY_D} opacity={k > 0.6 ? 1 : 0} />)}
+        </g>
+      );
+    }
+    const n = i === 2 ? Math.ceil(k * COILS.length) : COILS.length;
+    const smooth = i === 3 ? k : i > 3 ? 1 : 0;
+    const fired = i === 4 ? k : 0;
+    const col = fired > 0.5 ? FIRED : CLAY;
+    const pot = (
+      <g>
+        <ellipse cx="160" cy="176" rx="40" ry="10" fill={col} stroke={CLAY_D} />
+        {smooth > 0 ? <path d={`M120,176 ${COILS.slice(0, n).map((w, j) => `L${160 - w},${168 - j * 12}`).join(" ")} L${160 - COILS[n - 1]},${162 - (n - 1) * 12} L${160 + COILS[n - 1]},${162 - (n - 1) * 12} ${COILS.slice(0, n).reverse().map((w, j) => `L${160 + w},${168 - (n - 1 - j) * 12}`).join(" ")} L200,176 Z`} fill={col} opacity={smooth} /> : null}
+        {COILS.slice(0, n).map((w, j) => <rect key={j} x={160 - w} y={160 - j * 12} width={w * 2} height="13" rx="6.5" fill={col} stroke={CLAY_D} strokeOpacity={1 - smooth} opacity={1 - smooth * 0.8} />)}
+        <ellipse cx="160" cy={166 - (n - 1) * 12} rx={COILS[n - 1] - 6} ry="5" fill="#7c4a2d" />
+      </g>
+    );
+    if (i < 4) return (
+      <g>
+        {pot}
+        {i === 3 ? <g transform={`translate(${160 + 20 * Math.sin(p * Math.PI * 4)} ${120 + 30 * Math.sin(p * Math.PI)})`}><rect x="-6" y="-50" width="12" height="44" rx="6" fill="#fcd9b6" stroke="#c2410c" /></g> : null}
+      </g>
+    );
+    return (
+      <g>
+        <rect x="70" y="30" width="180" height="170" rx="8" fill="#57534e" />
+        <rect x="84" y="44" width="152" height="142" rx="4" fill={fired > 0.3 ? "#7c2d12" : "#44403c"} />
+        {Array.from({ length: 7 }, (_, j) => (
+          <path key={j} d={`M${96 + j * 21},186 q-6,-14 ${2 + (j % 2) * 3},-${18 + 12 * Math.abs(Math.sin(p * 9 + j))} q6,10 4,${18 + 12 * Math.abs(Math.sin(p * 9 + j))}`} fill="#f97316" opacity={0.4 + 0.5 * fired} />
+        ))}
+        <g transform="translate(0 -2)">{pot}</g>
+        <Tx x={160} y={24} s={t("kiln: about 900 °C", "հնոց՝ մոտ 900 °C", "печь: около 900 °C")} lang={lang} size={10} fill="#c2410c" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 4: a pompom ---------------- */
+
+const YARN = "#ec4899", YARN_D = "#be185d";
+
+const pompom: Mech = {
+  title: t("Making a pompom", "Փոմփոնի պատրաստում", "Делаем помпон"),
+  caps: [
+    t("Cut two identical card rings: 6 cm across the outside, with a 2 cm hole.", "Ստվարաթղթից կտրի՛ր երկու միանման օղակ՝ դրսից 6 սմ, 2 սմ անցքով։", "Вырежи из картона два одинаковых кольца: снаружи 6 см, с отверстием 2 см."),
+    t("Put the rings together and wind yarn round them, through the middle hole.", "Օղակները միացրու և դրանց շուրջը մանվածք փաթաթի՛ր՝ մեջտեղի անցքի միջով։", "Сложи кольца вместе и обматывай их пряжей через среднее отверстие."),
+    t("Keep winding until the hole is full.", "Փաթաթի՛ր, մինչև անցքը լցվի։", "Обматывай, пока отверстие не заполнится."),
+    t("Slide the scissors between the two rings and cut the yarn all round the outer edge.", "Մկրատը մտցրու երկու օղակի միջև և կտրի՛ր մանվածքն ամբողջ արտաքին եզրով։", "Просунь ножницы между двумя кольцами и разрежь пряжу по всему внешнему краю."),
+    t("Tie a piece of yarn very tightly between the rings.", "Օղակների միջև մանվածքի կտորը շատ ամուր կապի՛ր։", "Очень туго завяжи кусок пряжи между кольцами."),
+    t("Remove the card and fluff up the pompom. Done!", "Հանի՛ր ստվարաթուղթը և փափկեցրու փոմփոնը։ Պատրաստ է։", "Сними картон и распуши помпон. Готово!"),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const C0 = 160, C1 = 110;
+    const ring = (dx = 0, dy = 0, key = 0) => (
+      <path key={key} d={`M${C0 + dx - 66},${C1 + dy} a66,66 0 1 0 132,0 a66,66 0 1 0 -132,0 Z M${C0 + dx - 22},${C1 + dy} a22,22 0 1 1 44,0 a22,22 0 1 1 -44,0 Z`} fill="#e7e5e4" stroke="#78716c" fillRule="evenodd" />
+    );
+    if (i === 0) return (
+      <g>
+        {ring(-8 * (1 - k) - 60 * (1 - k), 0, 1)}
+        {ring(8 * (1 - k) + 60 * (1 - k), 0, 2)}
+        <Tx x={160} y={204} s={t("6 cm outside, 2 cm hole", "դրսից 6 սմ, անցքը՝ 2 սմ", "снаружи 6 см, отверстие 2 см")} lang={lang} size={10} fill="#57534e" />
+      </g>
+    );
+    if (i < 3) {
+      const wraps = i === 1 ? Math.floor(k * 40) : 40 + Math.floor(k * 80);
+      return (
+        <g>
+          {ring()}
+          {Array.from({ length: wraps }, (_, j) => {
+            const a = (j * 137.5 * Math.PI) / 180;
+            const r0 = 22 - Math.min(18, j * 0.15), r1 = 66 + Math.min(6, j * 0.05);
+            return <line key={j} x1={C0 + r0 * Math.cos(a)} y1={C1 + r0 * Math.sin(a)} x2={C0 + r1 * Math.cos(a)} y2={C1 + r1 * Math.sin(a)} stroke={j % 3 ? YARN : YARN_D} strokeWidth={2.4} />;
+          })}
+          {i === 2 && k > 0.9 ? <circle cx={C0} cy={C1} r="5" fill={YARN_D} /> : null}
+        </g>
+      );
+    }
+    if (i === 3) {
+      const ang = k * Math.PI * 2;
+      return (
+        <g>
+          <circle cx={C0} cy={C1} r="74" fill={YARN} />
+          {Array.from({ length: 90 }, (_, j) => {
+            const a = (j / 90) * Math.PI * 2;
+            const cut = a < ang;
+            return <line key={j} x1={C0 + 60 * Math.cos(a)} y1={C1 + 60 * Math.sin(a)} x2={C0 + (cut ? 82 : 74) * Math.cos(a + (cut ? 0.05 : 0))} y2={C1 + (cut ? 82 : 74) * Math.sin(a + (cut ? 0.05 : 0))} stroke={YARN_D} strokeWidth="2" />;
+          })}
+          <g transform={`translate(${C0 + 72 * Math.cos(ang)} ${C1 + 72 * Math.sin(ang)}) rotate(${(ang * 180) / Math.PI + 90})`}>
+            <path d="M0,0 L-30,-4 L-30,4 Z" fill="#94a3b8" stroke="#475569" />
+            <circle cx="12" cy="-6" r="6" fill="none" stroke="#2563eb" strokeWidth="3" />
+            <circle cx="12" cy="6" r="6" fill="none" stroke="#2563eb" strokeWidth="3" />
+          </g>
+        </g>
+      );
+    }
+    if (i === 4) return (
+      <g>
+        <ellipse cx={C0} cy={C1} rx="30" ry="86" fill={YARN} />
+        {Array.from({ length: 24 }, (_, j) => <line key={j} x1={C0 - 30} x2={C0 + 30} y1={C1 - 80 + j * 7} y2={C1 - 80 + j * 7 + 2} stroke={YARN_D} />)}
+        <rect x={C0 - 6} y={C1 - 66} width="12" height="132" fill="#e7e5e4" stroke="#78716c" opacity={1 - k * 0.3} />
+        <path d={`M${C0 - 40},${C1} q40,${-10 + 10 * k} 80,0`} stroke="#7c3aed" strokeWidth="3" fill="none" />
+        <Tx x={240} y={60} s={t("side view", "կողքից", "вид сбоку")} lang={lang} size={9} fill="#57534e" />
+        <Tx x={240} y={120} s={t("tie tightly!", "կապի՛ր ամուր", "завяжи туго!")} lang={lang} size={10} fill="#7c3aed" />
+      </g>
+    );
+    const r = lerp(56, 70, k);
+    return (
+      <g>
+        {Array.from({ length: 160 }, (_, j) => {
+          const a = (j * 137.5 * Math.PI) / 180, rr = r * (0.55 + 0.45 * ((j * 31) % 17) / 17);
+          return <line key={j} x1={C0 + rr * 0.6 * Math.cos(a)} y1={C1 + rr * 0.6 * Math.sin(a)} x2={C0 + rr * Math.cos(a)} y2={C1 + rr * Math.sin(a)} stroke={j % 3 ? YARN : YARN_D} strokeWidth="3" strokeLinecap="round" />;
+        })}
+        <circle cx={C0} cy={C1} r={r * 0.62} fill={YARN} />
+        {k > 0.9 ? <Tx x={160} y={204} s={t("Done!", "Պատրաստ է։", "Готово!")} lang={lang} size={12} fill="#16a34a" /> : null}
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom };
