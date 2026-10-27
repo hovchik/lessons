@@ -77,10 +77,10 @@ export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagra
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
 
-/** Problems with one sim spec (the text inside the fence). */
 /** Column counts of the forms mode=compare tables (see COLS in widgets/forms.tsx). */
-const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2 };
+const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2, norm: 2 };
 
+/** Problems with one sim spec (the text inside the fence). */
 export function checkSimSpec(source: string): string[] {
   const spec = parseArtSpec(source);
   const where = `sim "${source.split("\n")[0].slice(0, 50)}"`;

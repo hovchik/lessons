@@ -620,7 +620,7 @@ The Armenian question, exclamation and emphasis marks stand **over the stressed 
 | «Դու գնո՞ւմ ես» | «Are you *going*?» |
 | «Դու ես գնում քաղա՞ք» | «Is it to the *city* that you are going?» |
 
-Moving the mark changes the question. In the diphthong ու the mark goes on the letter ւ: «ո՞ւր», «գնո՞ւմ». Only one intonation mark is put in a simple sentence; the end of the sentence still takes «։».
+Moving the mark changes the question. In ու the mark goes on the ո, between the two letters: «ո՞ւր», «գնո՞ւմ»; this is the traditional norm confirmed by the Language Committee. Only one intonation mark is put in a simple sentence; the end of the sentence still takes «։».
 
 ## The pause mark and the middle point in difficult cases
 
@@ -702,7 +702,7 @@ Author's punctuation is legitimate when it is **consistent** and **motivated**. 
 | «Դու գնո՞ւմ ես» | գնո՞ւմ ես, թե՞ ոչ |
 | «Դու ես գնում քաղա՞ք» | հենց քաղա՞ք ես գնում |
 
-Նշանը տեղափոխելը փոխում է հարցը։ ու երկհնչյունում նշանը դրվում է ւ տառի վրա․ «ո՞ւր», «գնո՞ւմ»։ Պարզ նախադասության մեջ դրվում է առոգանության միայն մեկ նշան, նախադասության վերջը դարձյալ ստանում է «։»։
+Նշանը տեղափոխելը փոխում է հարցը։ ու-ի դեպքում նշանը դրվում է ո-ի վրա՝ երկու տառի միջև․ «ո՞ւր», «գնո՞ւմ»․ սա ավանդական նորմն է, որը հաստատել է Լեզվի կոմիտեն։ Պարզ նախադասության մեջ դրվում է առոգանության միայն մեկ նշան, նախադասության վերջը դարձյալ ստանում է «։»։
 
 ## Բութն ու միջակետը դժվար դեպքերում
 
@@ -784,7 +784,7 @@ Author's punctuation is legitimate when it is **consistent** and **motivated**. 
 | «Դու գնո՞ւմ ես» | «Ты *идёшь*?» |
 | «Դու ես գնում քաղա՞ք» | «Ты идёшь именно в *город*?» |
 
-Перемещение знака меняет вопрос. В диграфе ու знак ставится над буквой ւ: «ո՞ւր», «գնո՞ւմ». В простом предложении ставится только один интонационный знак; конец предложения всё равно получает «։».
+Перемещение знака меняет вопрос. В ու знак ставится над ո, между двумя буквами: «ո՞ւր», «գնո՞ւմ»; это традиционная норма, подтверждённая Комитетом по языку. В простом предложении ставится только один интонационный знак; конец предложения всё равно получает «։».
 
 ## Знак паузы и средняя точка в трудных случаях
 
@@ -860,7 +860,7 @@ Author's punctuation is legitimate when it is **consistent** and **motivated**. 
           t("on ո", "ո-ի վրա", "над ո"),
           t("on ւ", "ւ-ի վրա", "над ւ"),
           t("after the word", "բառից հետո", "после слова"),
-        ], 1),
+        ], 0),
         q(t("Author's punctuation is legitimate when it is", "Հեղինակային կետադրությունն օրինական է, երբ այն", "Авторская пунктуация законна, когда она"), [
           t("random", "պատահական է", "случайна"),
           t("used in official documents", "գործածվում է պաշտոնական փաստաթղթերում", "употребляется в официальных документах"),

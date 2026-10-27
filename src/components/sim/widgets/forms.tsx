@@ -48,6 +48,7 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   modern: [t("Grabar", "Գրաբար", "Грабар"), t("Modern Armenian", "Արդի հայերեն", "Современный армянский")],
   dialect: [t("Dialect", "Բարբառ", "Диалект"), t("Standard", "Գրական", "Литературный")],
   loan: [t("Loanword", "Փոխառություն", "Заимствование"), t("Armenian word", "Հայերեն բառ", "Армянское слово")],
+  norm: [t("Avoid", "Խուսափիր", "Избегай"), t("Literary norm", "Գրական նորմ", "Литературная норма")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
@@ -151,7 +152,7 @@ function Verbs({ lang, rows, cols }: { lang: SimProps["lang"]; rows: string[][];
         <button type="button" className={`art-chip ${hidden === null ? "is-active" : ""}`} onClick={() => setHidden(null)}>{L(W.showAll, lang)}</button>
       </div>
       <div className="lang-scroll">
-      <table className={`lang-table is-verbs ${heads.length > 3 ? "is-wide" : ""}`}>
+      <table className={`lang-table is-verbs ${heads.length > 3 ? "is-wide" : named ? "is-compare" : ""}`}>
         <thead><tr>{heads.map((h) => <th key={h}>{h}</th>)}</tr></thead>
         <tbody>
           {rows.map((r, i) => (
