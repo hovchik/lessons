@@ -13,7 +13,7 @@ import { scoreExam } from "@/lib/exam-score";
  *    page and the lesson page read.
  */
 
-export type ActivityKind = "quiz" | "exam";
+export type ActivityKind = "quiz" | "exam" | "unit";
 
 export async function recordAttempt(input: {
   userId: string;
@@ -279,6 +279,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
       lessonTitle: schema.lessons.title,
       lessonSlug: schema.lessons.slug,
       examTitle: schema.exams.title,
+      skillTitle: schema.skills.title,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -287,6 +288,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
     .from(schema.attempts)
     .leftJoin(schema.lessons, and(eq(schema.attempts.kind, "quiz"), eq(schema.attempts.refId, schema.lessons.id)))
     .leftJoin(schema.exams, and(eq(schema.attempts.kind, "exam"), eq(schema.attempts.refId, schema.exams.id)))
+    .leftJoin(schema.skills, and(eq(schema.attempts.kind, "unit"), eq(schema.attempts.refId, schema.skills.id)))
     .leftJoin(schema.courses, eq(schema.attempts.courseId, schema.courses.id))
     .leftJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(schema.attempts.userId, userId))
