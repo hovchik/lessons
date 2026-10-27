@@ -13,6 +13,7 @@ export const MECH_GROUPS = {
     "polymer", "corrosion", "blastfurnace", "haber", "contact", "soap", "greenhouse", "hardness", "ester", "dna", "acidrain",
   ],
   bio: ["mitosis", "meiosis", "protein", "photosynth", "enzyme", "fertilize", "immune", "reflex", "frog", "butterfly", "germinate", "breathing", "selection", "heartcycle", "drift", "limiting"],
+  geog: ["seasons", "watercycle", "plates", "collision", "breeze", "transition"],
   geo: ["midpoint", "bisectAngle", "perpendicular", "copyAngle", "sss", "parallelLine", "angleSum", "threePerp", "cubeSection"],
 } as const;
 
@@ -32,6 +33,7 @@ export const DIAGRAM_GROUPS = {
     "heart", "lungs", "digestive", "neuron", "ear", "kidney", "chloroplast", "mitochondrion", "membrane",
     "fern", "hydra", "snail", "spider", "bird", "bone", "glands", "miller", "homology",
   ],
+  geog: ["globegrid", "contour", "earthlayers", "volcano", "river", "atmoslayers", "altzones"],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;

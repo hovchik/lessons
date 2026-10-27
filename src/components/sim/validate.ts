@@ -6,6 +6,7 @@
 import { list, parseArtSpec } from "@/lib/art/spec";
 import { parseFormula } from "@/lib/sim/elements";
 import { BAR_SETS } from "./data/bars";
+import { CITIES } from "./data/climate";
 import { DIAGRAM_GROUPS, MECH_GROUPS } from "./mech/ids";
 import { REACTIONS } from "./widgets/balance";
 import { CHART_SETS } from "./widgets/chart";
@@ -71,9 +72,10 @@ const MODES: Record<string, string[]> = {
   word: ["morph", "syll"],
   sentence: ["parts", "order"],
   forms: ["cases", "persons", "verbs", "compare"],
+  geocalc: ["scale", "meridian", "time", "height"],
 };
 
-export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars"];
+export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate"];
 
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
@@ -134,6 +136,7 @@ export function checkSimSpec(source: string): string[] {
       if (spec.opts.mode && spec.opts.mode !== "x") errors.push(`${where}: unknown mode "${spec.opts.mode}"`);
       break;
     case "bars": if (!BAR_SETS[spec.opts.set ?? ""]) errors.push(`${where}: unknown set "${spec.opts.set}"`); break;
+    case "climate": for (const c of list(spec.opts.city ?? "yerevan")) if (!CITIES[c]) errors.push(`${where}: unknown city "${c}"`); break;
     case "pyramid": if (spec.args.length < 2 || spec.args.length > 5) errors.push(`${where}: needs 2 to 5 levels`); break;
     case "letters":
       if (spec.opts.mode === "order" && list(spec.opts.words).length < 2) errors.push(`${where}: needs words=`);

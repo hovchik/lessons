@@ -12,6 +12,7 @@ const LOAD: Record<MechGroup, () => Promise<{ MECHS: Record<string, Mech> }>> = 
   phys: () => import("../mech/phys"),
   chem: () => import("../mech/chem"),
   bio: () => import("../mech/bio"),
+  geog: () => import("../mech/geog"),
   geo: () => import("../mech/geo"),
 };
 

@@ -73,6 +73,8 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   punnett: lazy(() => import("./widgets/punnett")),
   pyramid: lazy(() => import("./widgets/pyramid")),
   bars: lazy(() => import("./widgets/bars")),
+  climate: lazy(() => import("./widgets/climate")),
+  geocalc: lazy(() => import("./widgets/geocalc")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
