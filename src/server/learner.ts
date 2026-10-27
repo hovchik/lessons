@@ -1,6 +1,6 @@
 import { and, eq, lte, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
-import type { AnswerSource } from "./db/schema";
+import type { AnswerSource, StoredCard } from "./db/schema";
 import { newId } from "./user-auth";
 import { scheduleAnswer } from "@/lib/memory";
 
@@ -27,9 +27,10 @@ export type AnswerInput = {
  * Two submissions can overlap (two tabs, a double click), so each card is
  * updated optimistically: the write only lands if the card still has the
  * repetition count it was read with, otherwise it is read again and retried.
+ * Returns each answer's card as it stands after that answer.
  */
-export async function recordAnswers(userId: string, answers: AnswerInput[], now = new Date()) {
-  if (answers.length === 0) return;
+export async function recordAnswers(userId: string, answers: AnswerInput[], now = new Date()): Promise<StoredCard[]> {
+  if (answers.length === 0) return [];
   const db = await getDb();
   const rc = schema.reviewCards;
   const at = now.toISOString();
@@ -54,6 +55,7 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
   await db.batch(events as [(typeof events)[number], ...(typeof events)[number][]]);
 
   // Answers are applied in order, so the same question twice in one call chains its card.
+  const out: StoredCard[] = [];
   for (const a of answers) {
     for (let attempt = 0; ; attempt++) {
       const cur = await db
@@ -74,10 +76,14 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
             .values({ userId, itemId: a.itemId, source: a.source, refId: a.refId, courseId: a.courseId ?? null, ...row })
             .onConflictDoNothing()
             .run();
-      if (res.rowsAffected > 0) break;
+      if (res.rowsAffected > 0) {
+        out.push(card);
+        break;
+      }
       if (attempt >= 4) throw new Error(`review card ${a.itemId} kept changing while it was being updated`);
     }
   }
+  return out;
 }
 
 /** How many questions the pupil holds in memory, and how many are due for review now. */
