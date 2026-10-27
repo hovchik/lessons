@@ -22,4 +22,30 @@ export const CH_TIMELINES: Record<string, TimeSet> = {
       E(1387, t("Lithuania", "Լիտվա", "Литва"), t("The last country in Europe to adopt Christianity.", "Եվրոպայում վերջին երկիրը, որ ընդունեց քրիստոնեությունը։", "Последняя страна Европы, принявшая христианство.")),
     ],
   },
+  /* ---------------- grade 8 ---------------- */
+  councils: {
+    title: t("Councils that shaped the Armenian Church", "Ժողովներ, որոնք ձևավորեցին Հայ Եկեղեցին", "Соборы, определившие облик Армянской церкви"),
+    events: [
+      E(325, t("Nicaea", "Նիկիա", "Никея"), t("The Creed; Aristakes, the son of Gregory, takes part.", "Հավատո հանգանակը․ մասնակցում է Գրիգորի որդի Արիստակեսը։", "Символ веры; участвует сын Григория Аристакес.")),
+      E(381, t("Constantinople", "Կոստանդնուպոլիս", "Константинополь"), t("The divinity of the Holy Spirit; the Creed is expanded.", "Սուրբ Հոգու աստվածությունը․ Հավատո հանգանակը լրացվում է։", "Божество Святого Духа; Символ веры дополнен.")),
+      E(431, t("Ephesus", "Եփեսոս", "Эфес"), t("Christ is one person; Mary is the Mother of God.", "Քրիստոս մեկ անձ է․ Մարիամն Աստվածածին է։", "Христос — одна личность; Мария — Богородица.")),
+      E(451, t("Chalcedon", "Քաղկեդոն", "Халкидон"), t("The formula of two natures. The Armenians, fighting at Avarayr that year, did not take part.", "Երկու բնության բանաձևը։ Հայերը, որոնք այդ տարի կռվում էին Ավարայրում, չմասնակցեցին։", "Формула двух природ. Армяне, сражавшиеся в тот год при Аварайре, не участвовали.")),
+      E(506, t("First Council of Dvin", "Դվինի առաջին ժողով", "Первый Двинский собор"), t("Chalcedon is rejected, together with the Georgian and Albanian churches.", "Քաղկեդոնը մերժվում է՝ վրացական և աղվանական եկեղեցիների հետ միասին։", "Халкидон отвергнут вместе с грузинской и албанской церквями.")),
+      E(552, t("The Armenian era begins", "Սկսվում է հայոց թվականը", "Начало армянского летосчисления")),
+      E(554, t("Second Council of Dvin", "Դվինի երկրորդ ժողով", "Второй Двинский собор"), t("The rejection is confirmed and the calendar set in order.", "Մերժումը հաստատվում է, և տոմարը կարգավորվում է։", "Отказ подтверждён, календарь упорядочен.")),
+    ],
+  },
+  seats: {
+    title: t("Where the catholicos lived", "Որտեղ էր կաթողիկոսի աթոռը", "Где находился престол католикоса"),
+    events: [
+      E(301, t("Vagharshapat", "Վաղարշապատ", "Вагаршапат"), undefined, { to: 484 }),
+      E(484, t("Dvin", "Դվին", "Двин"), t("The capital of the marzpans and later of the Arab governors.", "Մարզպանների, իսկ հետո արաբ ոստիկանների մայրաքաղաքը։", "Столица марзпанов, а позже арабских остиканов."), { to: 927 }),
+      E(927, t("Aghtamar", "Աղթամար", "Ахтамар"), t("Under the protection of the Artsruni kings of Vaspurakan.", "Վասպուրականի Արծրունի թագավորների հովանու ներքո։", "Под защитой царей Васпуракана Арцруни."), { to: 947, c: true }),
+      E(947, t("Argina, then Ani", "Արգինա, ապա Անի", "Аргина, затем Ани"), t("Close to the Bagratid capital.", "Բագրատունյաց մայրաքաղաքի մոտ։", "Рядом с багратидской столицей."), { to: 1065, c: true }),
+      E(1065, t("Years of wandering", "Թափառման տարիներ", "Годы скитаний"), t("After the fall of Ani the catholicoi moved from place to place, towards Cilicia.", "Անիի անկումից հետո կաթողիկոսները տեղից տեղ էին տեղափոխվում՝ դեպի Կիլիկիա։", "После падения Ани католикосы переходили с места на место, ближе к Киликии."), { to: 1151, c: true }),
+      E(1151, t("Hromkla", "Հռոմկլա", "Ромкла"), undefined, { to: 1292 }),
+      E(1293, t("Sis", "Սիս", "Сис"), undefined, { to: 1441 }),
+      E(1441, t("Etchmiadzin again", "Կրկին Էջմիածին", "Снова Эчмиадзин"), t("The Council of Vagharshapat brings the see home.", "Վաղարշապատի ժողովն աթոռը վերադարձնում է հայրենիք։", "Собор в Вагаршапате возвращает престол на родину."), { to: 2026 }),
+    ],
+  },
 };

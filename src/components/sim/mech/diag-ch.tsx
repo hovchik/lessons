@@ -590,4 +590,110 @@ const churchtypes: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes };
+/* ---------------- grade 8: a medieval monastery ---------------- */
+
+const Kh = ({ x, y }: { x: number; y: number }) => (
+  <g>
+    <rect x={x - 4} y={y} width="8" height="14" rx="1" fill="#d6d3d1" stroke="#78716c" strokeWidth="0.8" />
+    <path d={`M${x},${y + 2} v9 M${x - 2.5},${y + 5} h5`} stroke="#57534e" strokeWidth="1" />
+  </g>
+);
+
+const monastery: Diagram = {
+  title: t("A medieval Armenian monastery", "Միջնադարյան հայկական վանք", "Средневековый армянский монастырь"),
+  h: 190,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="190" fill="#f0f9ff" />
+      <path d="M0,96 L50,52 L92,80 L150,30 L214,78 L262,46 L320,90 V190 H0 Z" fill="#d9f99d" opacity="0.7" />
+      {/* the wall */}
+      <rect x="8" y="58" width="304" height="124" rx="16" fill="#fefce8" stroke="#a8a29e" strokeWidth="3" strokeDasharray="10 3" />
+      {/* refectory */}
+      <rect x="20" y="124" width="38" height="26" fill="#fde68a" stroke="#92400e" strokeWidth="1.2" />
+      <path d="M18,124 l21,-10 l21,10 Z" fill="#b45309" />
+      {/* gavit with its light opening */}
+      <rect x="64" y="108" width="56" height="42" fill="#fef3c7" stroke="#92400e" strokeWidth="1.2" />
+      <rect x="62" y="104" width="60" height="5" fill="#b45309" />
+      <rect x="86" y="96" width="12" height="8" fill="#fef3c7" stroke="#92400e" strokeWidth="1" />
+      <path d="M86,96 l6,-5 l6,5 Z" fill="#b45309" />
+      {/* main church */}
+      <rect x="120" y="94" width="60" height="56" fill="#fed7aa" stroke="#9a3412" strokeWidth="1.4" />
+      <path d="M118,94 l32,-10 l32,10 Z" fill="#c2410c" />
+      <rect x="140" y="66" width="20" height="20" fill="#fed7aa" stroke="#9a3412" strokeWidth="1.2" />
+      <path d="M137,66 l13,-16 l13,16 Z" fill="#c2410c" />
+      <path d="M150,50 v-9 M146.5,44 h7" stroke="#9a3412" strokeWidth="1.4" />
+      <path d="M144,150 v-14 a6,6 0 0 1 12,0 v14 Z" fill="#7c2d12" />
+      {/* bell tower */}
+      <rect x="196" y="112" width="22" height="38" fill="#fed7aa" stroke="#9a3412" strokeWidth="1.2" />
+      <rect x="199" y="90" width="16" height="22" fill="#fed7aa" stroke="#9a3412" strokeWidth="1.2" />
+      <path d="M203,110 v-10 a4,4 0 0 1 8,0 v10 Z" fill="#7c2d12" />
+      <circle cx="207" cy="104" r="2.6" fill="#facc15" />
+      <path d="M197,90 l10,-12 l10,12 Z" fill="#c2410c" />
+      {/* library and scriptorium */}
+      <rect x="232" y="116" width="44" height="34" fill="#e0e7ff" stroke="#3730a3" strokeWidth="1.2" />
+      <path d="M230,116 l24,-11 l24,11 Z" fill="#4338ca" />
+      {[0, 1, 2, 3, 4].map((k) => <rect key={k} x={238 + k * 7} y="124" width="5" height="11" fill={["#be123c", "#0369a1", "#047857", "#b45309", "#7c3aed"][k]} />)}
+      <rect x="236" y="137" width="36" height="3" fill="#3730a3" />
+      {/* khachkars */}
+      <Kh x={128} y={154} />
+      <Kh x={172} y={154} />
+      <Kh x={286} y={154} />
+      {[
+        [39, t("refectory", "սեղանատուն", "трапезная")],
+        [92, t("gavit", "գավիթ", "гавит")],
+        [150, t("church", "եկեղեցի", "церковь")],
+        [207, t("bell tower", "զանգակատուն", "колокольня")],
+        [254, t("library", "մատենադարան", "библиотека")],
+      ].map(([x, s]) => <Tx key={x as number} x={x as number} y={x === 207 ? 162 : 178} s={s as Tr} lang={lang} size={6.4} fill="#57534e" w={700} />)}
+    </g>
+  ),
+  parts: [
+    P(162, 60, t("The main church", "Գլխավոր եկեղեցին", "Главная церковь"), t("The heart of the monastery, where the brotherhood gathered for the services that marked the hours of the day and night, starting long before sunrise.", "Վանքի սիրտը, որտեղ միաբանությունը հավաքվում էր օրվա և գիշերվա ժամերը նշող արարողությունների համար, որոնք սկսվում էին արևածագից շատ առաջ։", "Сердце монастыря, где братия собиралась на службы, отмечавшие часы дня и ночи и начинавшиеся задолго до рассвета.")),
+    P(76, 98, t("The gavit", "Գավիթը", "Гавит"), t("A big hall in front of the church, lit from an opening in the roof. It served as a narthex, a meeting room, a classroom and sometimes a burial place for princes.", "Եկեղեցու առջևի մեծ դահլիճ, որը լուսավորվում էր տանիքի երդիկից։ Այն ծառայում էր որպես նախասրահ, ժողովների սենյակ, դասարան և երբեմն իշխանների դամբարան։", "Большой зал перед церковью, освещённый через отверстие в крыше. Он служил притвором, залом собраний, классом, а иногда и усыпальницей князей.")),
+    P(222, 84, t("The bell tower", "Զանգակատունը", "Колокольня"), t("From the 13th century monasteries built separate bell towers, often with small chapels inside. Before bells, monks struck a wooden board to call the brothers.", "XIII դարից վանքերում կառուցում էին առանձին զանգակատներ, հաճախ ներսում փոքր մատուռներով։ Մինչ զանգերը վանականները հարվածում էին փայտե տախտակին՝ եղբայրներին կանչելու համար։", "С XIII века в монастырях строили отдельные колокольни, часто с маленькими часовнями внутри. До колоколов монахи били в деревянную доску, созывая братию.")),
+    P(282, 110, t("Library and scriptorium", "Մատենադարան և գրչատուն", "Библиотека и скрипторий"), t("Scribes copied, bound and stored books here. At Haghpat the 13th-century library still has the wall niches where manuscripts were kept.", "Այստեղ գրիչներն ընդօրինակում, կազմում և պահում էին գրքերը։ Հաղպատի XIII դարի մատենադարանում մինչ օրս պահպանվել են պատերի խորշերը, որտեղ պահվում էին ձեռագրերը։", "Здесь писцы переписывали, переплетали и хранили книги. В библиотеке Ахпата XIII века до сих пор сохранились ниши в стенах, где хранили рукописи.")),
+    P(28, 116, t("The refectory", "Սեղանատունը", "Трапезная"), t("The monks ate together in silence while one of them read aloud from the lives of the saints. On fast days the meal was bread, vegetables and beans.", "Վանականները միասին ճաշում էին լռության մեջ, մինչ նրանցից մեկը բարձրաձայն կարդում էր սրբերի վարքերից։ Պահքի օրերին ճաշը հաց, բանջարեղեն և լոբի էր։", "Монахи ели вместе в тишине, а один из них читал вслух жития святых. В постные дни трапеза состояла из хлеба, овощей и бобов.")),
+    P(184, 152, t("Khachkars", "Խաչքարեր", "Хачкары"), t("Carved cross-stones set up in memory of the dead, of a victory or of the building of a church. Each one is different, with a cross that blossoms like a tree of life.", "Փորագրված խաչքարեր, որ կանգնեցվում էին ի հիշատակ մահացածների, հաղթանակի կամ եկեղեցու շինության։ Յուրաքանչյուրը տարբեր է, իսկ խաչը ծաղկում է կենաց ծառի պես։", "Резные камни-кресты, которые ставили в память об умерших, о победе или о постройке церкви. Каждый неповторим, а крест расцветает, как древо жизни.")),
+    P(300, 66, t("The wall", "Պարիսպը", "Стена"), t("Many monasteries stood in remote places and were surrounded by walls, because they kept food, books and treasures and sheltered villagers during raids.", "Շատ վանքեր կանգնած էին հեռավոր վայրերում և շրջապատված էին պարիսպներով, որովհետև դրանցում պահվում էին պաշար, գրքեր և գանձեր, և հարձակումների ժամանակ ապաստան էին տալիս գյուղացիներին։", "Многие монастыри стояли в глухих местах и были окружены стенами, потому что там хранили припасы, книги и сокровища, а во время набегов укрывали крестьян.")),
+  ],
+};
+
+/* ---------------- grade 8: the four hierarchical sees ---------------- */
+
+const SEES: Array<[number, number, Tr, Tr, string]> = [
+  [8, 22, t("Mother See of|Holy Etchmiadzin", "Մայր Աթոռ|Սուրբ Էջմիածին", "Первопрестольный|Святой Эчмиадзин"), t("Catholicos of All Armenians", "Ամենայն հայոց կաթողիկոս", "Католикос всех армян"), "#b45309"],
+  [164, 22, t("Catholicosate of the|Great House of Cilicia", "Մեծի Տանն Կիլիկիո|կաթողիկոսություն", "Католикосат Великого|Дома Киликийского"), t("Catholicos, in Antelias", "Կաթողիկոս, Անթիլիասում", "Католикос, в Антилиасе"), "#be123c"],
+  [8, 100, t("Patriarchate of|Jerusalem", "Երուսաղեմի|պատրիարքություն", "Иерусалимский|патриархат"), t("Patriarch, St James Cathedral", "Պատրիարք, Ս. Հակոբ վանք", "Патриарх, собор Св. Иакова"), "#0369a1"],
+  [164, 100, t("Patriarchate of|Constantinople", "Կոստանդնուպոլսի|պատրիարքություն", "Константинопольский|патриархат"), t("Patriarch, in Istanbul", "Պատրիարք, Ստամբուլում", "Патриарх, в Стамбуле"), "#047857"],
+];
+
+const sees: Diagram = {
+  title: t("One Church, four hierarchical sees", "Մեկ Եկեղեցի, չորս նվիրապետական աթոռ", "Одна Церковь, четыре иерархических престола"),
+  h: 188,
+  draw: (lang) => (
+    <g>
+      {SEES.map(([x, y, name, head, c], k) => (
+        <g key={k}>
+          <rect x={x} y={y} width="148" height="66" rx="10" fill="#fff" stroke={c} strokeWidth={k === 0 ? 2.6 : 1.6} />
+          <rect x={x + 10} y={y + 26} width="20" height="20" fill={c} opacity="0.2" />
+          <path d={`M${x + 8},${y + 26} l12,-14 l12,14 Z`} fill={c} />
+          <path d={`M${x + 20},${y + 12} v-7 M${x + 17},${y + 8} h6`} stroke={c} strokeWidth="1.4" />
+          <Tx x={x + 38} y={y + 20} s={name} lang={lang} size={7} fill={c} anchor="start" />
+          <Tx x={x + 38} y={y + 52} s={head} lang={lang} size={5.8} fill="#475569" anchor="start" w={600} />
+        </g>
+      ))}
+      <circle cx="160" cy="94" r="15" fill="#fef3c7" stroke="#b45309" strokeWidth="1.6" />
+      <path d="M160,86 v16 M154,92 h12" stroke="#b45309" strokeWidth="2" strokeLinecap="round" />
+      <Tx x={160} y={182} s={t("one faith, one liturgy, many countries", "մեկ հավատ, մեկ պատարագ, շատ երկրներ", "одна вера, одна литургия, много стран")} lang={lang} size={6.6} fill="#475569" w={700} />
+    </g>
+  ),
+  parts: [
+    P(150, 30, t("Etchmiadzin", "Էջմիածին", "Эчмиадзин"), t("Since 1441 the seat of the Catholicos of All Armenians. It has the primacy of honour: the other sees recognise it as the first, and the holy myron for the whole Church is blessed here.", "1441 թվականից Ամենայն հայոց կաթողիկոսի աթոռանիստը։ Այն ունի պատվո առաջնություն․ մյուս աթոռներն այն ճանաչում են որպես առաջինը, և ամբողջ Եկեղեցու համար սուրբ մյուռոնն օրհնվում է այստեղ։", "С 1441 года резиденция Католикоса всех армян. Ему принадлежит первенство чести: другие престолы признают его первым, и святое миро для всей Церкви освящается здесь.")),
+    P(306, 30, t("Antelias", "Անթիլիաս", "Антилиас"), t("Heir of the see of Sis. Since 1930 it has stood near Beirut in Lebanon and cares for dioceses in the Middle East and parts of the diaspora.", "Սսի աթոռի ժառանգորդը։ 1930 թվականից այն գտնվում է Լիբանանում՝ Բեյրութի մոտ, և հոգ է տանում Մերձավոր Արևելքի և սփյուռքի որոշ թեմերի մասին։", "Наследник престола Сиса. С 1930 года находится около Бейрута в Ливане и окормляет епархии Ближнего Востока и части диаспоры.")),
+    P(150, 108, t("Jerusalem", "Երուսաղեմ", "Иерусалим"), t("The Armenian brotherhood of St James guards Armenian rights in the holy places, including shares in the Church of the Holy Sepulchre and the Church of the Nativity in Bethlehem.", "Սրբոց Հակոբյանց միաբանությունը պահպանում է հայերի իրավունքները սրբավայրերում, այդ թվում՝ Սուրբ Հարության տաճարում և Բեթղեհեմի Սուրբ Ծննդյան տաճարում։", "Армянское братство Святого Иакова охраняет права армян в святых местах, в том числе в храме Гроба Господня и в храме Рождества в Вифлееме.")),
+    P(306, 108, t("Constantinople", "Կոստանդնուպոլիս", "Константинополь"), t("Founded in 1461, soon after the Ottoman conquest. For centuries the patriarch was also the head of the whole Armenian community of the empire before the sultan.", "Հիմնվել է 1461 թվականին՝ օսմանյան նվաճումից կարճ ժամանակ անց։ Դարեր շարունակ պատրիարքը սուլթանի առջև նաև կայսրության ողջ հայ համայնքի գլուխն էր։", "Основан в 1461 году, вскоре после османского завоевания. Веками патриарх был ещё и главой всей армянской общины империи перед султаном.")),
+    P(176, 82, t("One Church", "Մեկ Եկեղեցի", "Одна Церковь"), t("The sees are not separate churches: they share one faith, one liturgy and one tradition, and their heads meet together on important occasions.", "Աթոռներն առանձին եկեղեցիներ չեն․ նրանք ունեն մեկ հավատ, մեկ պատարագ և մեկ ավանդություն, և նրանց գլուխները կարևոր առիթներով հանդիպում են միասին։", "Престолы — не отдельные церкви: у них одна вера, одна литургия и одна традиция, а их главы собираются вместе в важных случаях.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees };
