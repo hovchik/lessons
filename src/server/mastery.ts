@@ -3,6 +3,7 @@ import { getDb, schema } from "./db/client";
 import type { I18nText, QuizQuestion } from "./db/schema";
 import { recordAnswers } from "./learner";
 import { recordAttempt } from "./progress";
+import { checkSignature, signValue } from "./user-auth";
 import { levelRank, masteryLevel, UNIT_CHECK_PASS, UNIT_CHECK_SIZE, type MasteryLevel, type SkillEvidence } from "@/lib/mastery";
 import { parseItemId, quizItemId } from "@/lib/memory";
 
@@ -118,13 +119,33 @@ function shuffle<T>(xs: T[], seed: number): T[] {
 
 export type UnitCheckQuestion = { itemId: string; lessonTitle: I18nText; prompt: I18nText; options: I18nText[] };
 
+/** How long a pupil has to hand in a check after it was put together. */
+const CHECK_TTL_MS = 6 * 60 * 60 * 1000;
+const checkPayload = (userId: string, skillId: string, exp: number, itemIds: string[]) => `unit.${userId}.${skillId}.${exp}.${[...itemIds].sort().join(",")}`;
+
+/**
+ * A signed note of which questions a check holds, so a handed-in check must
+ * answer exactly those (not, say, one easy question) to count.
+ */
+function checkToken(userId: string, skillId: string, itemIds: string[], now: Date) {
+  const exp = now.getTime() + CHECK_TTL_MS;
+  return `${exp}.${signValue(checkPayload(userId, skillId, exp, itemIds))}`;
+}
+
+function validCheckToken(token: string, userId: string, skillId: string, itemIds: string[], now: Date) {
+  const i = token.indexOf(".");
+  const exp = Number(token.slice(0, i));
+  if (i < 0 || !Number.isFinite(exp) || exp < now.getTime()) return false;
+  return checkSignature(checkPayload(userId, skillId, exp, itemIds), token.slice(i + 1));
+}
+
 /**
  * The questions for one unit check: one lesson after another in turn, so the
  * whole unit is covered, preferring what the pupil got wrong last time, then
  * questions not met yet, then the ones due soonest. Answers are not included;
  * they come back when the check is handed in.
  */
-export async function buildUnitCheck(userId: string, skillId: string, now = new Date(), size = UNIT_CHECK_SIZE): Promise<UnitCheckQuestion[] | null> {
+export async function buildUnitCheck(userId: string, skillId: string, now = new Date(), size = UNIT_CHECK_SIZE): Promise<{ questions: UnitCheckQuestion[]; token: string } | null> {
   const data = await skillQuestions(skillId);
   if (!data) return null;
   const db = await getDb();
@@ -149,19 +170,22 @@ export async function buildUnitCheck(userId: string, skillId: string, now = new 
   const picked: SkillQuestion[] = [];
   for (let round = 0; picked.length < size && queues.some((q) => q.length > round); round++)
     for (const q of queues) if (picked.length < size && q[round]) picked.push(q[round]);
-  return shuffle(picked, day + 7).map((q) => ({ itemId: q.itemId, lessonTitle: q.lessonTitle, prompt: q.q.prompt, options: q.q.options }));
+  const questions = shuffle(picked, day + 7).map((q) => ({ itemId: q.itemId, lessonTitle: q.lessonTitle, prompt: q.q.prompt, options: q.q.options }));
+  return { questions, token: checkToken(userId, skillId, questions.map((q) => q.itemId), now) };
 }
 
 export type UnitCheckAnswer = { itemId: string; choice: number; confidence?: number | null };
 
 /**
- * Scores a handed-in unit check on the server, moves the review cards, logs it
+ * Scores a handed-in unit check on the server (it must answer exactly the
+ * questions `token` was issued for), moves the review cards, logs it
  * as an attempt and says what changed: the level before and after, the lessons
  * to go over, and the earlier skills that are not solid yet.
  */
-export async function recordUnitCheck(userId: string, skillId: string, answers: UnitCheckAnswer[]) {
+export async function recordUnitCheck(userId: string, skillId: string, answers: UnitCheckAnswer[], token: string, now = new Date()) {
+  if (answers.length === 0 || !validCheckToken(token, userId, skillId, answers.map((a) => a.itemId), now)) return null;
   const data = await skillQuestions(skillId);
-  if (!data || answers.length === 0) return null;
+  if (!data) return null;
   const byId = new Map(data.byLesson.flat().map((q) => [q.itemId, q]));
   const seen = new Set<string>();
   for (const a of answers) {

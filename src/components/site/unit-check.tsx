@@ -27,7 +27,7 @@ type Result = {
  * and without feedback, then scored on the server. The results say whether the
  * unit is mastered and, if not, what to go over first.
  */
-export function UnitCheck({ skillId, questions, courseHref, passPct }: { skillId: string; questions: UnitCheckQuestion[]; courseHref: string; passPct: number }) {
+export function UnitCheck({ skillId, questions, token, courseHref, passPct }: { skillId: string; questions: UnitCheckQuestion[]; token: string; courseHref: string; passPct: number }) {
   const t = useTranslations("mastery");
   const tl = useTranslations("lesson");
   const tg = useTranslations("grade");
@@ -46,7 +46,7 @@ export function UnitCheck({ skillId, questions, courseHref, passPct }: { skillId
     setBusy(true);
     setError(false);
     try {
-      const res = await fetch("/api/progress/unit", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ skillId, answers: all }) });
+      const res = await fetch("/api/progress/unit", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ skillId, token, answers: all }) });
       if (!res.ok) throw new Error(String(res.status));
       setResult((await res.json()) as Result);
       router.refresh();

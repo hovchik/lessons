@@ -36,7 +36,8 @@ export default async function UnitCheckPage({ params }: { params: Params }) {
   const skill = skills.find((s) => s.position === position);
   if (!skill) notFound();
   const unit = data.units.find((x) => x.id === skill.unitId);
-  const questions = (await buildUnitCheck(u.id, skill.skillId)) ?? [];
+  const check = await buildUnitCheck(u.id, skill.skillId);
+  const questions = check?.questions ?? [];
   const courseHref = `/${subject}/${grade}`;
 
   return (
@@ -62,7 +63,7 @@ export default async function UnitCheckPage({ params }: { params: Params }) {
         </div>
       </header>
       {questions.length > 0 ? (
-        <UnitCheck skillId={skill.skillId} questions={questions} courseHref={courseHref} passPct={Math.round(UNIT_CHECK_PASS * 100)} />
+        <UnitCheck skillId={skill.skillId} questions={questions} token={check!.token} courseHref={courseHref} passPct={Math.round(UNIT_CHECK_PASS * 100)} />
       ) : (
         <p className="clay p-6 text-center text-muted-foreground">{t("noQuestions")}</p>
       )}

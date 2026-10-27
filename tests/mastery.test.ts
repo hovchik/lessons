@@ -7,6 +7,7 @@ import { masteryLevel } from "../src/lib/mastery";
 
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-mastery-"));
 process.env.DATABASE_PATH = path.join(dir, "test.db");
+process.env.ADMIN_SESSION_SECRET ??= "test-secret";
 
 type Modules = {
   client: typeof import("../src/server/db/client");
@@ -50,6 +51,7 @@ before(async () => {
   await db.insert(schema.users).values([
     { id: "u1", username: "ani", displayName: "Ani", passwordHash: "x" },
     { id: "u2", username: "aram", displayName: "Aram", passwordHash: "x" },
+    { id: "u3", username: "nare", displayName: "Nare", passwordHash: "x" },
   ]).run();
 });
 
@@ -77,8 +79,9 @@ test("mastery grows with quizzes", async () => {
 });
 
 test("a unit check covers every lesson, puts mistakes first and hides the answers", async () => {
-  const check = await m.mastery.buildUnitCheck("u1", "math-3.u1");
-  assert.ok(check);
+  const built = await m.mastery.buildUnitCheck("u1", "math-3.u1");
+  assert.ok(built);
+  const check = built.questions;
   assert.equal(check.length, 10);
   const lessons = new Set(check.map((c) => c.itemId.split("#")[0]));
   assert.deepEqual([...lessons].sort(), ["quiz:a", "quiz:b", "quiz:c"]);
@@ -88,9 +91,9 @@ test("a unit check covers every lesson, puts mistakes first and hides the answer
 });
 
 test("passing the unit check makes the skill Mastered", async () => {
-  const check = (await m.mastery.buildUnitCheck("u1", "math-3.u1"))!;
-  const answers = check.map((c) => ({ itemId: c.itemId, choice: Number(c.itemId.split("#")[1]), confidence: 2 }));
-  const r = await m.mastery.recordUnitCheck("u1", "math-3.u1", answers);
+  const { questions, token } = (await m.mastery.buildUnitCheck("u1", "math-3.u1"))!;
+  const answers = questions.map((c) => ({ itemId: c.itemId, choice: Number(c.itemId.split("#")[1]), confidence: 2 }));
+  const r = await m.mastery.recordUnitCheck("u1", "math-3.u1", answers, token);
   assert.ok(r);
   assert.equal(r.score, 10);
   assert.equal(r.passed, true);
@@ -107,12 +110,12 @@ test("passing the unit check makes the skill Mastered", async () => {
 });
 
 test("failing a later check loses the mastery until the next pass", async () => {
-  const check = (await m.mastery.buildUnitCheck("u1", "math-3.u1"))!;
-  const r = await m.mastery.recordUnitCheck("u1", "math-3.u1", check.map((c, k) => {
+  const { questions, token } = (await m.mastery.buildUnitCheck("u1", "math-3.u1"))!;
+  const r = await m.mastery.recordUnitCheck("u1", "math-3.u1", questions.map((c, k) => {
     // Each question's right option equals its index in these quizzes; get three wrong.
     const right = Number(c.itemId.split("#")[1]);
     return { itemId: c.itemId, choice: k < 3 ? (right + 1) % 4 : right };
-  }));
+  }), token);
   assert.ok(r);
   assert.equal(r.score, 7);
   assert.equal(r.passed, false);
@@ -123,9 +126,9 @@ test("failing a later check loses the mastery until the next pass", async () => 
 test("a failed check names the lessons to go over and the weak earlier skill", async () => {
   // u2 has never worked on the tables unit, which division builds on.
   await m.progress.recordQuizResult({ userId: "u2", lessonId: "d", answers: right });
-  const check = (await m.mastery.buildUnitCheck("u2", "math-3.u2"))!;
-  assert.equal(check.length, 4, "a small unit gives a shorter check");
-  const r = await m.mastery.recordUnitCheck("u2", "math-3.u2", check.map((c) => ({ itemId: c.itemId, choice: 0 })));
+  const { questions, token } = (await m.mastery.buildUnitCheck("u2", "math-3.u2"))!;
+  assert.equal(questions.length, 4, "a small unit gives a shorter check");
+  const r = await m.mastery.recordUnitCheck("u2", "math-3.u2", questions.map((c) => ({ itemId: c.itemId, choice: 0 })), token);
   assert.ok(r);
   assert.equal(r.passed, false);
   assert.deepEqual(r.weakLessons.map((w) => w.href), ["/math/3/d"]);
@@ -134,9 +137,26 @@ test("a failed check names the lessons to go over and the weak earlier skill", a
   assert.equal(typeof right1.answer, "number");
 });
 
-test("answers outside the unit, repeated or out of range are refused", async () => {
-  assert.equal(await m.mastery.recordUnitCheck("u2", "math-3.u2", [{ itemId: "quiz:a#0", choice: 0 }]), null);
-  assert.equal(await m.mastery.recordUnitCheck("u2", "math-3.u2", [{ itemId: "quiz:d#0", choice: 0 }, { itemId: "quiz:d#0", choice: 0 }]), null);
-  assert.equal(await m.mastery.recordUnitCheck("u2", "math-3.u2", [{ itemId: "quiz:d#0", choice: 9 }]), null);
-  assert.equal(await m.mastery.recordUnitCheck("u2", "math-3.u2", []), null);
+test("only the questions the check was issued with count", async () => {
+  const { questions, token } = (await m.mastery.buildUnitCheck("u2", "math-3.u2"))!;
+  const all = questions.map((c) => ({ itemId: c.itemId, choice: Number(c.itemId.split("#")[1]) }));
+  const r = (a: { itemId: string; choice: number }[], opts: { user?: string; skill?: string; tok?: string; now?: Date } = {}) =>
+    m.mastery.recordUnitCheck(opts.user ?? "u2", opts.skill ?? "math-3.u2", a, opts.tok ?? token, opts.now);
+  assert.equal(await r(all.slice(0, 1)), null, "one easy question is not a check");
+  assert.equal(await r([...all.slice(1), { itemId: "quiz:a#0", choice: 0 }]), null, "a question from another unit");
+  assert.equal(await r([...all, all[0]]), null, "a repeated question");
+  assert.equal(await r(all, { user: "u1" }), null, "another pupil's check");
+  assert.equal(await r(all, { tok: token.replace(/.$/, (c) => (c === "A" ? "B" : "A")) }), null, "a changed signature");
+  assert.equal(await r(all, { now: new Date(Date.now() + 7 * 60 * 60 * 1000) }), null, "too late");
+  assert.equal(await r(all.map((a, k) => (k === 0 ? { ...a, choice: 9 } : a))), null, "an option that does not exist");
+  assert.equal(await r([]), null);
+  assert.equal((await r(all))?.score, all.length);
+});
+
+test("a course touched only by a unit check shows on the progress page", async () => {
+  assert.deepEqual(await m.progress.getUserCourseSummaries("u3"), []);
+  const { questions, token } = (await m.mastery.buildUnitCheck("u3", "math-3.u1"))!;
+  await m.mastery.recordUnitCheck("u3", "math-3.u1", questions.map((c) => ({ itemId: c.itemId, choice: 0 })), token);
+  const rows = await m.progress.getUserCourseSummaries("u3");
+  assert.deepEqual(rows.map((r) => [r.courseId, r.completed]), [["math-3", 0]]);
 });
