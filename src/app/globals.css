@@ -715,6 +715,7 @@ button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
 .lang-table td { padding: 0.4rem 0.5rem; background: #fff; font-weight: 700; }
 .lang-table td:first-child { border-radius: 10px 0 0 10px; } .lang-table td:last-child { border-radius: 0 10px 10px 0; }
 .lang-table td.is-q { color: #64748b; font-style: italic; }
+.lang-table.is-persons td.is-q { white-space: nowrap; }
 .lang-form { font-size: 1.05rem; font-weight: 900; color: #1e1b4b; white-space: nowrap; }
 .lang-form b { color: #e11d48; }
 .lang-form b.is-zero { color: #94a3b8; font-weight: 700; }

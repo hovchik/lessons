@@ -107,7 +107,7 @@ function Cases({ lang, forms, pl, wl }: { lang: SimProps["lang"]; forms: string[
 function Persons({ lang, forms, wl }: { lang: SimProps["lang"]; forms: string[]; wl: Lang }) {
   const cells = split(forms);
   return (
-    <table className="lang-table">
+    <table className="lang-table is-persons">
       <thead><tr><th>{L(W.personH, lang)}</th><th /><th>{L(W.formH, lang)}</th></tr></thead>
       <tbody>
         {W.persons6.map((p, i) => (
