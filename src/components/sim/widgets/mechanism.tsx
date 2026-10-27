@@ -16,6 +16,7 @@ const LOAD: Record<MechGroup, () => Promise<{ MECHS: Record<string, Mech> }>> = 
   sci: () => import("../mech/sci"),
   inf: () => import("../mech/inf"),
   geo: () => import("../mech/geo"),
+  tech: () => import("../mech/tech"),
 };
 
 /** ```sim mechanism engine4: a step-by-step animated mechanism from the library. */
