@@ -118,6 +118,12 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   compress: [t("Full", "Ամբողջական", "Полностью"), t("Compressed", "Սեղմված", "Сжато")],
   paronym: [t("Paronym 1", "Պարոնիմ 1", "Пароним 1"), t("Paronym 2", "Պարոնիմ 2", "Пароним 2")],
   colour3: [t("Bookish", "Գրքային", "Книжное"), t("Neutral", "Չեզոք", "Нейтральное"), t("Colloquial", "Խոսակցական", "Разговорное")],
+  tpp3: [t("Theme", "Թեմա", "Тема"), t("Problem", "Խնդիր", "Проблема"), t("Author's position", "Հեղինակի դիրքորոշում", "Позиция автора")],
+  device: [t("Device", "Հնար", "Средство"), t("Example", "Օրինակ", "Пример")],
+  sciart: [t("Scientific", "Գիտական", "Научный"), t("Artistic", "Գեղարվեստական", "Художественный")],
+  move3: [t("Symbolism", "Սիմվոլիզմ", "Символизм"), t("Acmeism", "Ակմեիզմ", "Акмеизм"), t("Futurism", "Ֆուտուրիզմ", "Футуризм")],
+  ruhy2: [t("Russian", "Ռուսական", "Русский"), t("Armenian", "Հայկական", "Армянский")],
+  quote: [t("Quotation", "Մեջբերում", "Цитата"), t("Author", "Հեղինակ", "Автор")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
