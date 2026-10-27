@@ -195,6 +195,17 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   trip: [t("Word", "Բառ", "Слово"), t("When to use it", "Երբ գործածել", "Когда употреблять")],
   thegeo: [t("No article", "Առանց հոդի", "Без артикля"), t("the", "the", "the")],
   readskill: [t("Skimming", "Skimming՝ արագ դիտում", "Skimming — просмотр"), t("Scanning", "Scanning՝ որոնում", "Scanning — поиск")],
+  rightduty: [t("Right", "Իրավունք", "Право"), t("Responsibility", "Պարտականություն", "Обязанность")],
+  crime3: [t("Crime", "Հանցանք", "Преступление"), t("Criminal", "Հանցագործ", "Преступник"), t("Verb", "Բայ", "Глагол")],
+  nominal: [t("Verb", "Բայով", "Глаголом"), t("Noun phrase", "Գոյականով", "Существительным")],
+  star: [t("Situation", "Իրավիճակ", "Ситуация"), t("Task", "Խնդիր", "Задача"), t("Action", "Գործողություն", "Действие"), t("Result", "Արդյունք", "Результат")],
+  cvverb: [t("Weak", "Թույլ", "Слабо"), t("Strong", "Ուժեղ", "Сильно")],
+  weatherclimate: [t("Weather", "Եղանակ", "Погода"), t("Climate", "Կլիմա", "Климат")],
+  subj: [t("Ordinary form", "Սովորական ձև", "Обычная форма"), t("Subjunctive", "Subjunctive", "Сослагательное")],
+  trend: [t("Verb", "Բայ", "Глагол"), t("Noun", "Գոյական", "Существительное")],
+  stagescreen: [t("Theatre", "Թատրոն", "Театр"), t("Cinema", "Կինո", "Кино")],
+  transform: [t("Original", "Բնօրինակ", "Исходное"), t("Rewritten", "Վերաշարադրված", "Перефразированное")],
+  tfng: [t("The text says", "Տեքստում", "В тексте"), t("Statement", "Պնդում", "Утверждение"), t("Answer", "Պատասխան", "Ответ")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {

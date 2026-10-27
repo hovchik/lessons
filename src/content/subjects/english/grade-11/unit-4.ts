@@ -229,7 +229,7 @@ Note the difference between **play** (a person plays a role) and **act** (a pers
 
 ## Tenses in a review
 
-The plot is told in the **present simple**, even for a film made fifty years ago: *A young teacher arrives in a mountain village and finds the school closed.* The making of the film is in the **past**: *Paradjanov shot it in 1968.* Your own reaction is in the **present perfect** or the present: *I have never seen light used like this.*
+The plot is told in the **present simple**, even for a film made fifty years ago: *A young teacher arrives in a mountain village and finds the school closed.* The making of the film is in the **past**: *Paradjanov made The Colour of Pomegranates in 1969.* Your own reaction is in the **present perfect** or the present: *I have never seen light used like this.*
 
 ## Summarising without spoilers
 
@@ -289,7 +289,7 @@ The sharpest reviews separate two questions. *What was the film trying to do?* a
 
 ## Ժամանակները գրախոսության մեջ
 
-Սյուժեն պատմվում է **present simple**-ով, նույնիսկ հիսուն տարի առաջ նկարահանված ֆիլմի համար․ *A young teacher arrives in a mountain village and finds the school closed.* Ֆիլմի ստեղծման մասին խոսվում է **անցյալով**․ *Paradjanov shot it in 1968.* Քո սեփական արձագանքը՝ **present perfect**-ով կամ ներկայով․ *I have never seen light used like this.*
+Սյուժեն պատմվում է **present simple**-ով, նույնիսկ հիսուն տարի առաջ նկարահանված ֆիլմի համար․ *A young teacher arrives in a mountain village and finds the school closed.* Ֆիլմի ստեղծման մասին խոսվում է **անցյալով**․ *Paradjanov made The Colour of Pomegranates in 1969.* Քո սեփական արձագանքը՝ **present perfect**-ով կամ ներկայով․ *I have never seen light used like this.*
 
 ## Ամփոփել՝ առանց ավարտը բացելու
 
@@ -351,7 +351,7 @@ The sharpest reviews separate two questions. *What was the film trying to do?* a
 
 ## Времена в рецензии
 
-Сюжет рассказывают **present simple**, даже для фильма пятидесятилетней давности: *A young teacher arrives in a mountain village and finds the school closed.* О съёмках говорят в **прошедшем**: *Paradjanov shot it in 1968.* Своя реакция — в **present perfect** или настоящем: *I have never seen light used like this.*
+Сюжет рассказывают **present simple**, даже для фильма пятидесятилетней давности: *A young teacher arrives in a mountain village and finds the school closed.* О съёмках говорят в **прошедшем**: *Paradjanov made The Colour of Pomegranates in 1969.* Своя реакция — в **present perfect** или настоящем: *I have never seen light used like this.*
 
 ## Пересказ без спойлеров
 
