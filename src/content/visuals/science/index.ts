@@ -2,6 +2,7 @@ import type { VisualMap } from "..";
 import { grade2 } from "./grade-2";
 import { grade3 } from "./grade-3";
 import { grade4 } from "./grade-4";
+import { grade5 } from "./grade-5";
 
 /**
  * Science 2–6: labelled pictures (the body, a road crossing, a plant, soil, a forest, the
@@ -13,4 +14,5 @@ export const scienceVisuals: VisualMap = {
   2: grade2,
   3: grade3,
   4: grade4,
+  5: grade5,
 };
