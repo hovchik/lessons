@@ -679,4 +679,349 @@ const button: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button };
+/* ---------------- grade 3: a pop-up card ---------------- */
+
+/** A simple oblique view: x runs out along the base, y up the back, z across the card. */
+const V3 = (x: number, y: number, z: number): Pt => [64 + x + z * 0.6, 182 - y - z * 0.34];
+const quad = (a: Pt, b: Pt, c: Pt, d: Pt) => pts([a, b, c, d]);
+const PD = 34, Z1 = 58, Z2 = 98;
+
+const popup: Mech = {
+  title: t("How a pop-up step works", "Ինչպես է աշխատում ցատկող աստիճանը", "Как работает выдвижная ступенька"),
+  caps: [
+    t("Fold a rectangle of paper in half to make a fold line.", "Թղթի ուղղանկյունը ծալի՛ր կիսով չափ, որ ծալքի գիծ ստացվի։", "Сложи прямоугольник бумаги пополам, чтобы получилась линия сгиба."),
+    t("From the fold, cut two parallel lines 3 cm long and 3 cm apart. Cut only along them!", "Ծալքից կտրի՛ր երկու զուգահեռ գիծ՝ 3 սմ երկարությամբ և 3 սմ հեռավորությամբ։ Կտրի՛ր միայն դրանցով։", "От сгиба надрежь две параллельные линии длиной 3 см на расстоянии 3 см. Режь только по ним!"),
+    t("Fold the cut strip forwards and back again, so the crease is sharp.", "Կտրված շերտը ծալի՛ր առաջ և նորից ետ, որ ծալքը հստակ լինի։", "Отогни надрезанную полоску вперёд и обратно, чтобы сгиб был чётким."),
+    t("Open the card halfway and push the strip inwards. Close it and press.", "Բացիկը կիսով չափ բացի՛ր և շերտը հրի՛ր ներս։ Փակի՛ր և սեղմի՛ր։", "Открой открытку наполовину и вдави полоску внутрь. Закрой и прижми."),
+    t("Now every time you open the card the strip stands up as a step. Glue the picture to its front.", "Հիմա ամեն անգամ բացիկը բացելիս շերտը կանգնում է աստիճանի պես։ Նկարը սոսնձի՛ր նրա առջևի մասին։", "Теперь каждый раз, когда открываешь открытку, полоска встаёт ступенькой. Приклей картинку к её передней стороне."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const SHEET = "#bfdbfe", SHEET_D = "#1d4ed8";
+    if (i === 0) {
+      const w = 80 * (1 - 2 * k);
+      return (
+        <g>
+          <rect x="80" y="40" width="80" height="140" fill={SHEET} stroke={SHEET_D} strokeWidth="1.5" />
+          <polygon points={pts([[160, 40], [160 + w, 40], [160 + w, 180], [160, 180]])} fill={k > 0.5 ? "#93c5fd" : SHEET} stroke={SHEET_D} strokeWidth="1.5" />
+          <line x1="160" x2="160" y1="40" y2="180" stroke={SHEET_D} strokeDasharray="4 3" />
+        </g>
+      );
+    }
+    if (i < 3) {
+      const f = i === 2 ? Math.sin(k * Math.PI) : 0;
+      const sx = 1 - 2 * f;
+      return (
+        <g>
+          <rect x="110" y="40" width="100" height="140" fill={SHEET} stroke={SHEET_D} strokeWidth="1.5" />
+          <line x1="110" x2="110" y1="40" y2="180" stroke={SHEET_D} strokeWidth="3" />
+          <Tx x={102} y={36} s={t("fold", "ծալք", "сгиб")} lang={lang} size={9} fill={SHEET_D} anchor="end" />
+          {i === 2 ? <polygon points={pts([[140, 94], [140 - 30 * sx, 94], [140 - 30 * sx, 126], [140, 126]])} fill={f > 0.5 ? "#93c5fd" : SHEET} stroke={SHEET_D} strokeWidth="1.2" /> : null}
+          <line x1="110" x2={110 + 30 * (i === 1 ? k : 1)} y1="94" y2="94" stroke="#dc2626" strokeWidth="2.5" />
+          <line x1="110" x2={110 + 30 * (i === 1 ? k : 1)} y1="126" y2="126" stroke="#dc2626" strokeWidth="2.5" />
+          {i === 2 ? <line x1="140" x2="140" y1="94" y2="126" stroke={SHEET_D} strokeDasharray="3 2" /> : null}
+          <Tx x={220} y={92} s={t("3 cm", "3 սմ", "3 см")} lang={lang} size={9} fill="#dc2626" anchor="start" />
+          <path d="M214,94 v32" stroke="#dc2626" strokeWidth="1" />
+        </g>
+      );
+    }
+    const kk = i === 3 ? k : 1;
+    const M = kk * PD;
+    return (
+      <g>
+        <polygon points={quad(V3(0, 0, 0), V3(0, 120, 0), V3(0, 120, 150), V3(0, 0, 150))} fill="#fde68a" stroke="#a16207" strokeWidth="1.5" />
+        <polygon points={quad(V3(0, 0, 0), V3(110, 0, 0), V3(110, 0, 150), V3(0, 0, 150))} fill="#fef3c7" stroke="#a16207" strokeWidth="1.5" />
+        {kk > 0.02 ? <polygon points={quad(V3(0, 0, Z1), V3(0, PD, Z1), V3(0, PD, Z2), V3(0, 0, Z2))} fill="#78350f" opacity={0.6 * kk} /> : null}
+        {kk > 0.02 ? <polygon points={quad(V3(0, 0, Z1), V3(PD, 0, Z1), V3(PD, 0, Z2), V3(0, 0, Z2))} fill="#78350f" opacity={0.45 * kk} /> : null}
+        <polygon points={quad(V3(0, PD, Z1), V3(M, M, Z1), V3(M, M, Z2), V3(0, PD, Z2))} fill="#fbbf24" stroke="#a16207" strokeWidth="1.2" />
+        <polygon points={quad(V3(M, M, Z1), V3(PD, 0, Z1), V3(PD, 0, Z2), V3(M, M, Z2))} fill="#f59e0b" stroke="#a16207" strokeWidth="1.2" />
+        {i === 3 ? <Arrow d={`M${V3(80, 60, 78)[0]},${V3(80, 60, 78)[1]} L${V3(30, 30, 78)[0]},${V3(30, 30, 78)[1]}`} /> : null}
+        {i === 4 ? (
+          <g opacity={k}>
+            <rect x={V3(PD, 0, 76)[0] - 3} y={V3(PD, 34, 76)[1]} width="6" height="34" fill="#92400e" />
+            <circle cx={V3(PD, 60, 70)[0]} cy={V3(PD, 60, 70)[1]} r="16" fill="#22c55e" stroke="#15803d" />
+            <circle cx={V3(PD, 52, 88)[0]} cy={V3(PD, 52, 88)[1]} r="13" fill="#4ade80" stroke="#15803d" />
+            <circle cx={V3(PD, 76, 80)[0]} cy={V3(PD, 76, 80)[1]} r="13" fill="#16a34a" stroke="#15803d" />
+            <circle cx={V3(PD, 62, 76)[0]} cy={V3(PD, 62, 76)[1]} r="2.5" fill="#dc2626" />
+            <circle cx={V3(PD, 70, 88)[0]} cy={V3(PD, 70, 88)[1]} r="2.5" fill="#dc2626" />
+          </g>
+        ) : null}
+        <Tx x={250} y={40} s={i === 3 ? t("push in", "հրի՛ր ներս", "вдави") : t("the step", "աստիճանը", "ступенька")} lang={lang} size={10} fill="#a16207" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 3: a paper mosaic ---------------- */
+
+const MC = 13, MX = 40, MY = 34, MCOLS = 18, MROWS = 11;
+const inFish = (x: number, y: number) => ((x - 140) / 72) ** 2 + ((y - 106) / 42) ** 2 <= 1 || (x > 200 && x < 252 && Math.abs(y - 106) < (x - 200) * 0.9);
+const CELLS = (() => {
+  const out: Array<{ x: number; y: number; kind: 0 | 1 | 2 | 3 }> = [];
+  for (let r = 0; r < MROWS; r++) for (let c = 0; c < MCOLS; c++) {
+    const x = MX + c * MC + MC / 2, y = MY + r * MC + MC / 2;
+    const inside = inFish(x, y);
+    const edge = inside && [[MC, 0], [-MC, 0], [0, MC], [0, -MC]].some(([dx, dy]) => !inFish(x + dx, y + dy));
+    const eye = Math.hypot(x - 102, y - 98) < 7;
+    out.push({ x, y, kind: !inside ? 3 : eye ? 0 : edge ? 1 : 2 });
+  }
+  return out;
+})();
+const TILE = ["#111827", "#ea580c", "#facc15", "#0ea5e9"];
+
+const mosaic: Mech = {
+  title: t("Making a paper mosaic", "Թղթե խճանկարի պատրաստում", "Делаем бумажную мозаику"),
+  caps: [
+    t("Draw a simple outline on the card base in pencil: a fish.", "Ստվարաթղթե հիմքի վրա մատիտով նկարի՛ր պարզ ուրվագիծ՝ ձուկ։", "Нарисуй на картонной основе карандашом простой контур — рыбку."),
+    t("Cut coloured paper into squares of about 1 cm and sort them by colour into boxes.", "Գունավոր թուղթը կտրի՛ր մոտ 1 սմ քառակուսիների և դասավորի՛ր տուփերում՝ ըստ գույնի։", "Нарежь цветную бумагу на квадратики около 1 см и разложи их по коробочкам по цветам."),
+    t("Glue a small part at a time and lay the pieces along the edges first, leaving thin gaps.", "Ամեն անգամ սոսինձ քսի՛ր փոքր մասի վրա և նախ կտորները շարի՛ր եզրերով՝ բարակ արանքներ թողնելով։", "Мажь клеем небольшой участок и сначала выкладывай кусочки по краям, оставляя тонкие щели."),
+    t("Then fill in the middle.", "Հետո լցրու մեջտեղը։", "Потом заполни середину."),
+    t("Finally fill in the background in a contrasting colour. Step back: the squares become one picture!", "Վերջում ֆոնը լցրու հակադիր գույնով։ Մի քայլ ետ գնա․ քառակուսիները մեկ նկար են դառնում։", "В конце заполни фон контрастным цветом. Отойди на шаг: квадратики превращаются в одну картинку!"),
+  ],
+  draw: (i, p) => {
+    const k = K(p);
+    const outline = <g fill="none" stroke="#94a3b8" strokeWidth="1.2"><ellipse cx="140" cy="106" rx="72" ry="42" /><path d="M200,106 L252,59 V153 Z" /></g>;
+    if (i === 1) return (
+      <g>
+        {[["#ea580c", 50], ["#facc15", 130], ["#0ea5e9", 210]].map(([c, x], j) => (
+          <g key={j}>
+            <rect x={x as number} y="120" width="64" height="44" rx="4" fill="#e7e5e4" stroke="#78716c" />
+            {Array.from({ length: 10 }, (_, q) => (q < 10 * k ? <rect key={q} x={(x as number) + 6 + (q % 5) * 11} y={128 + Math.floor(q / 5) * 14} width="9" height="9" fill={c as string} transform={`rotate(${(q * 23) % 30 - 15} ${(x as number) + 10 + (q % 5) * 11} ${132 + Math.floor(q / 5) * 14})`} /> : null))}
+          </g>
+        ))}
+        <rect x="70" y="40" width="180" height="50" fill="#ea580c" opacity={1 - k} />
+        {[0, 1, 2, 3, 4, 5].map((j) => <line key={j} x1={70 + j * 30} x2={70 + j * 30} y1="40" y2="90" stroke="#fff" opacity={1 - k} />)}
+        <line x1="70" x2="250" y1="65" y2="65" stroke="#fff" opacity={1 - k} />
+      </g>
+    );
+    const show = (kind: number) => (kind === 0 || kind === 1 ? (i === 2 ? k : i > 2 ? 1 : 0) : kind === 2 ? (i === 3 ? k : i > 3 ? 1 : 0) : i === 4 ? k : 0);
+    return (
+      <g>
+        <rect x={MX - 4} y={MY - 4} width={MCOLS * MC + 8} height={MROWS * MC + 8} fill="#fafaf9" stroke="#d6d3d1" />
+        {outline}
+        {CELLS.map((c, j) => {
+          const o = show(c.kind);
+          const order = ((j * 7919) % 97) / 97;
+          return o > order ? <rect key={j} x={c.x - MC / 2 + 1} y={c.y - MC / 2 + 1} width={MC - 2} height={MC - 2} fill={TILE[c.kind]} /> : null;
+        })}
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 3: from dragging to the wheel ---------------- */
+
+const ROCK = "#a8a29e";
+
+function Wheel({ x, y, r, a, spokes = 6 }: { x: number; y: number; r: number; a: number; spokes?: number }) {
+  return (
+    <g>
+      <circle cx={x} cy={y} r={r} fill="#92400e" stroke="#451a03" strokeWidth="2" />
+      <circle cx={x} cy={y} r={r - 5} fill="#fde68a" />
+      {Array.from({ length: spokes }, (_, j) => {
+        const b = a + (j * Math.PI * 2) / spokes;
+        return <line key={j} x1={x} y1={y} x2={x + (r - 5) * Math.cos(b)} y2={y + (r - 5) * Math.sin(b)} stroke="#92400e" strokeWidth="2.5" />;
+      })}
+      <circle cx={x} cy={y} r="4" fill="#451a03" />
+    </g>
+  );
+}
+
+const wheel: Mech = {
+  title: t("From dragging to the wheel", "Քարշ տալուց մինչև անիվ", "От волока к колесу"),
+  caps: [
+    t("Long ago people dragged heavy loads along the ground. The rubbing, called friction, made it very hard work.", "Վաղուց մարդիկ ծանր բեռները քարշ էին տալիս գետնով։ Շփումն աշխատանքը շատ դժվարացնում էր։", "Давным-давно люди волокли тяжёлые грузы по земле. Трение делало эту работу очень тяжёлой."),
+    t("Then they rolled loads on logs. Rolling rubs far less than sliding, but the logs left behind had to be carried to the front again and again.", "Հետո սկսեցին բեռները գլորել գերանների վրայով։ Գլորվելիս շփումը շատ ավելի փոքր է, քան սահելիս, բայց հետևում մնացած գերաններն անընդհատ պետք էր առաջ տանել։", "Потом грузы стали катить на брёвнах. При качении трение намного меньше, чем при скольжении, но оставшиеся сзади брёвна приходилось снова и снова переносить вперёд."),
+    t("About 5,000 to 6,000 years ago came the wheel and axle: the wheels roll along with the cart and never need carrying.", "Մոտ 5000–6000 տարի առաջ հայտնվեցին անիվն ու առանցքը․ անիվները գլորվում են սայլի հետ և երբեք տանելու կարիք չունեն։", "Около 5000–6000 лет назад появились колесо и ось: колёса катятся вместе с телегой, и их не нужно переносить."),
+    t("The axle passes through the centre of each wheel. The hole must be round and a little wider than the axle, so the wheel turns freely with little friction.", "Առանցքն անցնում է յուրաքանչյուր անիվի կենտրոնով։ Անցքը պետք է կլոր լինի և առանցքից մի փոքր լայն, որ անիվն ազատ պտտվի՝ քիչ շփումով։", "Ось проходит через центр каждого колеса. Отверстие должно быть круглым и чуть шире оси, чтобы колесо свободно вращалось с малым трением."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const ground = <><line x1="0" x2="320" y1="180" y2="180" stroke="#78716c" strokeWidth="2" />{Array.from({ length: 12 }, (_, j) => <line key={j} x1={((j * 30 - p * 60 * (i === 2 ? 1 : 0)) % 330 + 330) % 330} x2={((j * 30 - p * 60 * (i === 2 ? 1 : 0)) % 330 + 330) % 330 - 8} y1="184" y2="192" stroke="#a8a29e" />)}</>;
+    if (i === 0) {
+      const x = 150 + 14 * k;
+      return (
+        <g>
+          {ground}
+          <rect x={x} y="128" width="80" height="52" rx="6" fill={ROCK} stroke="#57534e" strokeWidth="1.5" />
+          <path d={`M${x},150 L60,120`} stroke="#92400e" strokeWidth="2.5" />
+          {[0, 1, 2].map((j) => <path key={j} d={`M${x + 84 + j * 6},176 l8,-6`} stroke="#f97316" strokeWidth="2" opacity={Math.sin(p * 20 + j) > 0 ? 1 : 0.2} />)}
+          <Tx x={160} y={40} s={t("sliding: lots of friction", "սահում․ շատ շփում", "скольжение: много трения")} lang={lang} size={11} fill="#dc2626" />
+          <circle cx="50" cy="104" r="9" fill="#fcd9b6" stroke="#c2410c" />
+          <path d="M50,113 L40,150 M44,124 L60,122 M40,150 l-8,28 M40,150 l12,28" stroke="#1e293b" strokeWidth="4" strokeLinecap="round" />
+        </g>
+      );
+    }
+    if (i === 1) {
+      const shift = (p * 40) % 40;
+      return (
+        <g>
+          {ground}
+          <rect x={150 + shift} y="122" width="90" height="44" rx="6" fill={ROCK} stroke="#57534e" strokeWidth="1.5" />
+          {[0, 1, 2, 3].map((j) => {
+            const x = 130 + j * 40 + shift / 2;
+            return <g key={j}><circle cx={x} cy="173" r="7" fill="#b45309" stroke="#78350f" /><line x1={x} y1="173" x2={x + 7 * Math.cos(p * 12)} y2={173 + 7 * Math.sin(p * 12)} stroke="#78350f" /></g>;
+          })}
+          <g opacity={0.5 + 0.5 * Math.sin(p * Math.PI)}>
+            <circle cx="60" cy="173" r="7" fill="#b45309" stroke="#78350f" />
+            <Arrow d="M70,160 C110,130 220,130 280,160" c="#64748b" />
+          </g>
+          <Tx x={160} y={40} s={t("rolling: much less friction", "գլորում․ շատ ավելի քիչ շփում", "качение: трения гораздо меньше")} lang={lang} size={11} fill="#16a34a" />
+        </g>
+      );
+    }
+    if (i === 2) return (
+      <g>
+        {ground}
+        <rect x="90" y="110" width="140" height="40" rx="4" fill="#d97706" stroke="#78350f" strokeWidth="1.5" />
+        <rect x="104" y="88" width="80" height="24" rx="4" fill={ROCK} stroke="#57534e" />
+        <line x1="70" x2="90" y1="128" y2="128" stroke="#78350f" strokeWidth="4" />
+        <Wheel x={122} y={156} r={24} a={p * Math.PI * 4} />
+        <Wheel x={200} y={156} r={24} a={p * Math.PI * 4} />
+        <Tx x={160} y={40} s={t("wheel and axle", "անիվ և առանցք", "колесо и ось")} lang={lang} size={11} fill="#92400e" />
+      </g>
+    );
+    return (
+      <g>
+        <rect x="40" y="56" width="240" height="30" rx="4" fill="#d97706" stroke="#78350f" strokeWidth="1.5" />
+        <rect x="70" y="86" width="12" height="28" fill="#78350f" />
+        <rect x="238" y="86" width="12" height="28" fill="#78350f" />
+        <rect x="40" y="114" width="240" height="8" rx="4" fill="#64748b" />
+        <ellipse cx="44" cy="118" rx="12" ry="44" fill="#92400e" stroke="#451a03" strokeWidth="2" />
+        <ellipse cx="276" cy="118" rx="12" ry="44" fill="#92400e" stroke="#451a03" strokeWidth="2" />
+        <circle cx="160" cy="176" r="22" fill="#fde68a" stroke="#92400e" strokeWidth="2" />
+        <circle cx="160" cy="176" r={7 + k * 0} fill="#fff" stroke="#92400e" />
+        <circle cx="160" cy="177.5" r="5" fill="#64748b" />
+        <Tx x={200} y={180} s={t("hole a little wider than the axle", "անցքն առանցքից մի փոքր լայն է", "отверстие чуть шире оси")} lang={lang} size={8} fill="#475569" anchor="start" />
+        <Tx x={160} y={140} s={t("axle", "առանցք", "ось")} lang={lang} size={10} fill="#334155" />
+        <Tx x={160} y={48} s={t("body", "թափք", "кузов")} lang={lang} size={10} fill="#78350f" />
+        <Tx x={30} y={40} s={t("wheel", "անիվ", "колесо")} lang={lang} size={10} fill="#92400e" anchor="start" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 3: backstitch and cross stitch ---------------- */
+
+const FLOSS = "#7c3aed";
+
+const backstitch: Mech = {
+  title: t("Backstitch and cross stitch", "Ետ ասեղով կար և խաչաձև կար", "Шов «назад иголку» и крестик"),
+  hint: t("Top: the right side. Below: a cut through the fabric.", "Վերևում՝ երեսը։ Ներքևում՝ գործվածքի կտրվածքը։", "Сверху — лицевая сторона. Снизу — разрез ткани."),
+  caps: [
+    t("Backstitch: bring the needle up to the right side at the point A.", "Ետ ասեղով կար․ ասեղը դուրս բե՛ր երեսի կողմ A կետում։", "Шов «назад иголку»: выведи иголку на лицевую сторону в точке A."),
+    t("Push it down back, half a centimetre behind.", "Խրի՛ր ետ՝ կես սանտիմետր հետևում։", "Воткни её назад, на полсантиметра позади."),
+    t("Bring it up forwards, half a centimetre ahead of the first hole.", "Դուրս բե՛ր առաջ՝ առաջին անցքից կես սանտիմետր առաջ։", "Выведи её вперёд, на полсантиметра впереди первого прокола."),
+    t("Push it down back into the first hole. Repeat: the stitches join into a line with no gaps, perfect for outlines.", "Խրի՛ր ետ՝ առաջին անցքի մեջ։ Կրկնի՛ր․ կարերը միանում են անընդհատ գծի, որը հիանալի է ուրվագծերի համար։", "Воткни её назад, в первый прокол. Повторяй: стежки сливаются в линию без промежутков, идеально для контуров."),
+    t("Cross stitch: sew a row of slanting stitches, then come back with stitches slanting the other way, so each pair makes a cross.", "Խաչաձև կար․ կարի՛ր թեք կարերի շարք, հետո վերադարձի՛ր հակառակ թեքությամբ կարերով, որ ամեն զույգ խաչ կազմի։", "Крестик: прошей ряд косых стежков, потом вернись стежками с обратным наклоном, чтобы каждая пара образовала крестик."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 4) {
+      const n = 7;
+      return (
+        <g>
+          <rect x="40" y="50" width="240" height="120" fill="#f8fafc" stroke="#cbd5e1" />
+          {Array.from({ length: 13 }, (_, j) => <line key={`a${j}`} x1={40 + j * 20} x2={40 + j * 20} y1="50" y2="170" stroke="#e2e8f0" />)}
+          {Array.from({ length: 7 }, (_, j) => <line key={`b${j}`} x1="40" x2="280" y1={50 + j * 20} y2={50 + j * 20} stroke="#e2e8f0" />)}
+          {Array.from({ length: n }, (_, j) => {
+            const x = 90 + j * 20;
+            const a = Math.min(1, Math.max(0, k * 2 * n - j));
+            const b = Math.min(1, Math.max(0, (k * 2 - 1) * n - (n - 1 - j)));
+            return (
+              <g key={j}>
+                {a > 0 ? <line x1={x} y1="120" x2={x + 20 * a} y2={120 - 20 * a} stroke={FLOSS} strokeWidth="3.5" strokeLinecap="round" /> : null}
+                {b > 0 ? <line x1={x + 20} y1="120" x2={x + 20 - 20 * b} y2={120 - 20 * b} stroke="#a855f7" strokeWidth="3.5" strokeLinecap="round" /> : null}
+              </g>
+            );
+          })}
+          <Tx x={160} y={40} s={t("/ / / then \\ \\ \\", "/ / / հետո \\ \\ \\", "/ / / потом \\ \\ \\")} lang={lang} size={11} fill={FLOSS} />
+        </g>
+      );
+    }
+    const S = 20, A = 100, Y = 78;
+    const done = i < 1 ? 0 : i === 1 ? k : i === 2 ? 1 : 1 + k * 7;
+    const seg = (j: number) => {
+      const a = A - S + j * S, frac = Math.min(1, done - j);
+      return frac > 0 ? <line key={j} x1={a} x2={a + S * frac} y1={Y} y2={Y} stroke={FLOSS} strokeWidth="3.5" strokeLinecap="round" /> : null;
+    };
+    return (
+      <g>
+        <rect x="20" y="40" width="280" height="76" rx="4" fill={CLOTH} stroke="#7dd3fc" />
+        {Array.from({ length: 8 }, (_, j) => seg(j))}
+        {i === 0 ? <circle cx={A} cy={Y} r="3" fill={FLOSS} /> : null}
+        {i === 0 || i === 2 ? <circle cx={i === 0 ? A : A + S} cy={Y} r={i === 2 ? 3 * k : 0} fill={FLOSS} /> : null}
+        <Tx x={A} y={Y + 22} s={t("A", "A", "A")} lang={lang} size={10} fill={FLOSS} />
+        {/* the cut: on the back the thread jumps forwards two stitch lengths */}
+        <line x1="20" x2="300" y1="164" y2="164" stroke="#7dd3fc" strokeWidth="4" />
+        <path d={(() => {
+          const m = Math.min(8, Math.ceil(done));
+          let d = `M${A},182 L${A},164`;
+          for (let j = 0; j < m; j++) {
+            const a = A + j * S;
+            d += ` Q${a - S / 2},152 ${a - S},164 Q${a},180 ${a + S},164`;
+          }
+          return d;
+        })()} fill="none" stroke={FLOSS} strokeWidth="2" opacity={i === 0 ? 0.5 : 1} />
+        <Tx x={300} y={148} s={t("right side", "երես", "лицо")} lang={lang} size={8} fill="#0369a1" anchor="end" />
+        <Tx x={300} y={192} s={t("wrong side", "ներսի կողմ", "изнанка")} lang={lang} size={8} fill="#0369a1" anchor="end" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 3: sprouting a bean in a glass ---------------- */
+
+const bean: Mech = {
+  title: t("Sprouting a bean in a glass", "Լոբու ծլեցում բաժակում", "Проращиваем фасоль в стакане"),
+  caps: [
+    t("Put damp cotton wool in a glass and press a bean against the side, so you can watch it.", "Բաժակի մեջ դի՛ր խոնավ բամբակ և լոբին սեղմի՛ր պատին, որ կարողանաս հետևել։", "Положи в стакан влажную вату и прижми фасолину к стенке, чтобы было видно."),
+    t("Stand the glass in a warm, light place and keep the cotton wool damp. The bean drinks and swells.", "Բաժակը դի՛ր տաք, լուսավոր տեղում և բամբակը պահի՛ր խոնավ։ Լոբին ջուր է խմում և ուռչում։", "Поставь стакан в тёплое светлое место и следи, чтобы вата была влажной. Фасолина пьёт и набухает."),
+    t("After a few days the root comes out and grows down.", "Մի քանի օր անց արմատը դուրս է գալիս և աճում դեպի ներքև։", "Через несколько дней появляется корешок и растёт вниз."),
+    t("Then the stem pushes up, bent like a hook, and thin root hairs grow.", "Հետո ցողունը դուրս է գալիս դեպի վեր՝ կեռիկի պես ծռված, և աճում են բարակ արմատամազիկներ։", "Потом вверх пробивается стебелёк, согнутый крючком, и вырастают тонкие корневые волоски."),
+    t("The stem straightens and the first leaves open. Write what you see each day in your diary.", "Ցողունն ուղղվում է, և բացվում են առաջին տերևները։ Ամեն օր տեսածդ գրի՛ր օրագրում։", "Стебель выпрямляется, и раскрываются первые листья. Записывай каждый день в дневник, что видишь."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const sw = i === 0 ? 1 : i === 1 ? 1 + 0.25 * k : 1.25;
+    const root = i < 2 ? 0 : i === 2 ? k : 1;
+    const stem = i < 3 ? 0 : i === 3 ? k : 1;
+    const leaf = i === 4 ? k : 0;
+    const BX = 150, BY = 140;
+    return (
+      <g>
+        {i >= 1 ? <g><circle cx="270" cy="40" r="14" fill="#facc15" />{Array.from({ length: 8 }, (_, j) => <line key={j} x1={270 + 18 * Math.cos(j * 0.785)} y1={40 + 18 * Math.sin(j * 0.785)} x2={270 + 25 * Math.cos(j * 0.785)} y2={40 + 25 * Math.sin(j * 0.785)} stroke="#facc15" strokeWidth="2" />)}</g> : null}
+        <path d="M100,60 L114,200 H206 L220,60" fill="#f0f9ff" stroke="#94a3b8" strokeWidth="2" />
+        <path d="M108,140 q20,-10 50,-4 q30,-6 54,4 L206,200 H114 Z" fill="#f5f5f4" stroke="#e7e5e4" />
+        {[0, 1, 2].map((j) => <circle key={j} cx={130 + j * 30} cy={168 + (j % 2) * 10} r="2" fill="#38bdf8" />)}
+        {stem > 0 ? (
+          <path d={`M${BX + 4},${BY - 6} C${BX + 10},${BY - 30 * stem} ${BX + 2},${BY - 60 * stem} ${BX + (i === 3 ? 18 * stem : 0)},${BY - 72 * stem}`} fill="none" stroke="#65a30d" strokeWidth="4" strokeLinecap="round" />
+        ) : null}
+        {leaf > 0 ? (
+          <g transform={`translate(${BX} ${BY - 72})`}>
+            <ellipse cx={-14 * leaf} cy={-4} rx={16 * leaf} ry={7 * leaf} fill="#22c55e" transform={`rotate(-20 ${-14 * leaf} -4)`} />
+            <ellipse cx={14 * leaf} cy={-4} rx={16 * leaf} ry={7 * leaf} fill="#16a34a" transform={`rotate(20 ${14 * leaf} -4)`} />
+          </g>
+        ) : null}
+        {root > 0 ? (
+          <g>
+            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#fef3c7" strokeWidth="4" strokeLinecap="round" />
+            <path d={`M${BX - 4},${BY + 8} C${BX - 8},${BY + 24 * root} ${BX + 4},${BY + 40 * root} ${BX - 2},${BY + 52 * root}`} fill="none" stroke="#d6d3d1" strokeWidth="1" />
+            {stem > 0 ? Array.from({ length: 8 }, (_, j) => <line key={j} x1={BX - 4 + (j % 2 ? 2 : -3)} y1={BY + 18 + j * 4} x2={BX - 4 + (j % 2 ? 10 : -12) * stem} y2={BY + 22 + j * 4} stroke="#e7e5e4" strokeWidth="0.8" />) : null}
+          </g>
+        ) : null}
+        <ellipse cx={BX} cy={BY} rx={16 * sw} ry={10 * sw} fill="#b91c1c" stroke="#7f1d1d" />
+        <path d={`M${BX - 6 * sw},${BY - 6 * sw} q6,4 10,0`} stroke="#fecaca" strokeWidth="1.5" fill="none" />
+        {i === 4 ? (
+          <g opacity={k}>
+            <rect x="12" y="70" width="70" height="80" rx="4" fill="#fff" stroke="#94a3b8" />
+            {[0, 1, 2, 3].map((j) => <line key={j} x1="20" x2={70 - (j % 2) * 14} y1={98 + j * 12} y2={98 + j * 12} stroke="#cbd5e1" strokeWidth="2" />)}
+            <Tx x={47} y={86} s={t("Day 7", "Օր 7", "День 7")} lang={lang} size={10} fill="#2563eb" />
+          </g>
+        ) : null}
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean };

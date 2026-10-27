@@ -358,4 +358,175 @@ const sandwich: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich };
+/* ---------------- grade 3: an Armenian carpet ---------------- */
+
+const RED = "#991b1b", GOLD = "#fbbf24", NAVY = "#1e3a8a", IVORY = "#fef3c7";
+
+/** The eternity sign: eight arms turning around a centre. */
+const Eternity = ({ x, y, r, c = GOLD }: { x: number; y: number; r: number; c?: string }) => (
+  <g>
+    {Array.from({ length: 8 }, (_, j) => (
+      <path key={j} d={`M${x},${y} q${r * 0.6},${-r * 0.2} ${r * 0.7},${-r * 0.8} q${-r * 0.1},${r * 0.35} ${-r * 0.35},${r * 0.55} Z`} fill={c} transform={`rotate(${j * 45} ${x} ${y})`} />
+    ))}
+    <circle cx={x} cy={y} r={r * 0.18} fill={RED} />
+  </g>
+);
+
+const Dragon = ({ x, y, flip = 1 }: { x: number; y: number; flip?: number }) => (
+  <g transform={`translate(${x} ${y}) scale(${flip} 1)`}>
+    <path d="M-18,14 C-18,-2 0,-2 0,-10 C0,-18 12,-18 16,-14" fill="none" stroke={GOLD} strokeWidth="4" strokeLinecap="round" />
+    <path d="M16,-14 l8,-4 l-2,8 Z" fill={GOLD} />
+    <path d="M-18,14 l-6,6 M-8,4 l-4,8 M4,-12 l2,-8" stroke={GOLD} strokeWidth="2" />
+  </g>
+);
+
+const carpet: Diagram = {
+  title: t("Reading an Armenian carpet", "Ինչպես կարդալ հայկական գորգը", "Как читать армянский ковёр"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      {/* fringes */}
+      {Array.from({ length: 30 }, (_, j) => <g key={j}><line x1={30 + j * 6.4} x2={30 + j * 6.4} y1="10" y2="18" stroke="#d6d3d1" strokeWidth="1.5" /><line x1={30 + j * 6.4} x2={30 + j * 6.4} y1="190" y2="198" stroke="#d6d3d1" strokeWidth="1.5" /></g>)}
+      <rect x="26" y="18" width="196" height="172" fill={NAVY} />
+      <rect x="36" y="28" width="176" height="152" fill={RED} />
+      {/* border of small diamonds */}
+      {Array.from({ length: 14 }, (_, j) => <path key={`t${j}`} d={`M${42 + j * 12.4},23 l5,-4 l5,4 l-5,4 Z`} fill={GOLD} />)}
+      {Array.from({ length: 14 }, (_, j) => <path key={`b${j}`} d={`M${42 + j * 12.4},185 l5,-4 l5,4 l-5,4 Z`} fill={GOLD} />)}
+      {Array.from({ length: 13 }, (_, j) => <path key={`l${j}`} d={`M31,${30 + j * 12} l-4,5 l4,5 l4,-5 Z`} fill={GOLD} />)}
+      {Array.from({ length: 13 }, (_, j) => <path key={`r${j}`} d={`M217,${30 + j * 12} l-4,5 l4,5 l4,-5 Z`} fill={GOLD} />)}
+      {/* central medallion */}
+      <path d="M124,52 L178,104 L124,156 L70,104 Z" fill={NAVY} stroke={GOLD} strokeWidth="2" />
+      <path d="M124,70 L160,104 L124,138 L88,104 Z" fill={IVORY} />
+      <Eternity x={124} y={104} r={26} c={RED} />
+      {/* dragons in the corners */}
+      <Dragon x={62} y={52} />
+      <Dragon x={186} y={52} flip={-1} />
+      <Dragon x={62} y={160} />
+      <Dragon x={186} y={160} flip={-1} />
+      {/* tree of life and birds at the sides */}
+      <g>
+        <line x1="50" x2="50" y1="84" y2="128" stroke={IVORY} strokeWidth="3" />
+        {[0, 1, 2].map((j) => <g key={j}><path d={`M50,${92 + j * 12} l-9,-6 M50,${92 + j * 12} l9,-6`} stroke={IVORY} strokeWidth="2" /><path d={`M41,${86 + j * 12} l-3,-3 l3,-3 l3,3 Z M59,${86 + j * 12} l-3,-3 l3,-3 l3,3 Z`} fill="#86efac" /></g>)}
+      </g>
+      {[[198, 92], [198, 116]].map(([x, y], j) => (
+        <g key={j}><path d={`M${x - 8},${y} l8,-6 l8,6 l-8,3 Z`} fill={IVORY} /><circle cx={x + 8} cy={y - 4} r="2.5" fill={IVORY} /><path d={`M${x - 8},${y} l-5,-3 v6 Z`} fill={IVORY} /></g>
+      ))}
+      {/* knot close-up */}
+      <circle cx="270" cy="62" r="40" fill="#fef2f2" stroke="#64748b" strokeWidth="1.5" />
+      {Array.from({ length: 5 }, (_, r) => Array.from({ length: 5 }, (_, c) => (
+        <circle key={`${r}${c}`} cx={250 + c * 10} cy={42 + r * 10} r="4" fill={(r + c) % 4 === 0 ? GOLD : RED} />
+      )))}
+      <line x1="200" x2="236" y1="96" y2="80" stroke="#64748b" strokeDasharray="3 2" />
+      {/* cochineal */}
+      <ellipse cx="270" cy="160" rx="10" ry="7" fill="#e5e7eb" stroke="#9ca3af" />
+      <ellipse cx="270" cy="160" rx="5" ry="3.5" fill="#be123c" />
+      <rect x="244" y="172" width="52" height="10" rx="3" fill="#be123c" />
+      <Tx x={270} y={124} s={t("one knot = one dot", "մեկ հանգույց = մեկ կետ", "один узел = одна точка")} lang={lang} size={7.5} fill="#334155" />
+      <Tx x={270} y={204} s={t("vordan karmir", "որդան կարմիր", "вордан кармир")} lang={lang} size={8} fill="#be123c" />
+    </g>
+  ),
+  parts: [
+    P(124, 120, t("Eternity sign", "Հավերժության նշան", "Знак вечности"), t("Arms turning round a centre, like a wheel that never stops. In Armenian art it stands for the endlessness of life and is found on carpets, khachkars and coins.", "Կենտրոնի շուրջը պտտվող թևեր, ինչպես երբեք չկանգնող անիվ։ Հայկական արվեստում այն խորհրդանշում է կյանքի անվերջությունը և հանդիպում է գորգերի, խաչքարերի և դրամների վրա։", "Лучи, вращающиеся вокруг центра, как колесо, которое никогда не останавливается. В армянском искусстве он означает бесконечность жизни и встречается на коврах, хачкарах и монетах.")),
+    P(76, 40, t("Dragons", "Վիշապներ", "Драконы"), t("S-shaped dragons gave their name to the famous dragon carpets, vishapagorg. They stood for strength and protected the home.", "S-աձև վիշապներն իրենց անունը տվել են հայտնի վիշապագորգերին։ Դրանք խորհրդանշում էին ուժ և պաշտպանում էին տունը։", "S-образные драконы дали имя знаменитым «драконовым коврам» — вишапагоргам. Они означали силу и защищали дом.")),
+    P(50, 136, t("Tree of life", "Կենաց ծառ", "Древо жизни"), t("A trunk with branches on both sides: life, the family and its generations growing from one root.", "Երկու կողմերում ճյուղերով բուն․ կյանքը, ընտանիքը և նրա սերունդները, որոնք աճում են մեկ արմատից։", "Ствол с ветвями по обе стороны: жизнь, семья и её поколения, растущие из одного корня.")),
+    P(206, 130, t("Birds", "Թռչուններ", "Птицы"), t("Birds and eagles stand for freedom. Weavers often placed them in pairs facing the tree of life.", "Թռչուններն ու արծիվները խորհրդանշում են ազատություն։ Ջուլհակները հաճախ դրանք զույգերով էին տեղադրում՝ դեմքով դեպի կենաց ծառը։", "Птицы и орлы означают свободу. Ткачихи часто помещали их парами, лицом к древу жизни.")),
+    P(212, 34, t("Border", "Եզրազարդ", "Кайма"), t("A border of small repeating shapes frames the carpet like a picture frame. Many carpets have several borders, one inside another.", "Կրկնվող փոքր ձևերից եզրազարդը գորգը շրջանակում է նկարի շրջանակի պես։ Շատ գորգեր ունեն մի քանի եզրազարդ՝ մեկը մյուսի ներսում։", "Кайма из маленьких повторяющихся фигур обрамляет ковёр, как рамка картину. У многих ковров несколько кайм, одна внутри другой.")),
+    P(310, 62, t("Knots", "Հանգույցներ", "Узлы"), t("A knotted carpet is a mosaic of tiny knots, each tied by hand round two warp threads and cut short. A good carpet has hundreds of thousands of them, so one carpet can take months.", "Հանգույցավոր գորգը մանրիկ հանգույցների խճանկար է․ յուրաքանչյուրը ձեռքով կապում են հենքի երկու թելի շուրջ և կարճ կտրում։ Լավ գորգն ունի հարյուր հազարավոր հանգույցներ, ուստի մեկ գորգը կարող է ամիսներ տևել։", "Узелковый ковёр — мозаика из крошечных узелков: каждый вручную завязывают вокруг двух нитей основы и коротко подрезают. В хорошем ковре сотни тысяч узлов, поэтому один ковёр могут ткать месяцами.")),
+    P(296, 150, t("Armenian red", "Հայկական կարմիր", "Армянский красный"), t("The famous red came from vordan karmir, a tiny insect that lives on the roots of grasses on the Ararat Plain. Dried and ground, the insects gave a deep red that hardly faded.", "Հայտնի կարմիրը ստանում էին որդան կարմիրից՝ մանրիկ միջատից, որն ապրում է Արարատյան դաշտի խոտերի արմատներին։ Չորացրած և աղացած միջատները տալիս էին մուգ կարմիր գույն, որը գրեթե չէր խամրում։", "Знаменитый красный получали из вордан кармира — крошечного насекомого, которое живёт на корнях трав Араратской равнины. Высушенные и растёртые насекомые давали густой красный цвет, который почти не выцветал.")),
+  ],
+};
+
+/* ---------------- grade 3: sorting waste ---------------- */
+
+const BINS: Array<{ c: string; name: Tr; becomes: Tr }> = [
+  { c: "#2563eb", name: t("paper", "թուղթ", "бумага"), becomes: t("new paper", "նոր թուղթ", "новая бумага") },
+  { c: "#eab308", name: t("plastic", "պլաստիկ", "пластик"), becomes: t("fleece", "ֆլիս", "флис") },
+  { c: "#16a34a", name: t("glass", "ապակի", "стекло"), becomes: t("new jars", "նոր բանկաներ", "новые банки") },
+  { c: "#64748b", name: t("metal", "մետաղ", "металл"), becomes: t("new cans", "նոր տարաներ", "новые банки") },
+  { c: "#92400e", name: t("organic", "օրգանական", "органика"), becomes: t("compost", "կոմպոստ", "компост") },
+];
+
+const bins: Diagram = {
+  title: t("Sorting waste: what each bin becomes", "Աղբի տեսակավորում․ ինչ է դառնում ամեն աման", "Сортировка мусора: во что превращается каждый бак"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      {BINS.map((b, j) => {
+        const x = 34 + j * 63;
+        return (
+          <g key={j}>
+            <path d={`M${x - 22},92 h44 l-4,62 h-36 Z`} fill={b.c} />
+            <rect x={x - 25} y="84" width="50" height="9" rx="3" fill={b.c} stroke="#0f172a" strokeOpacity="0.25" />
+            <Tx x={x} y={124} s={b.name} lang={lang} size={7.5} fill="#fff" />
+            <path d={`M${x},158 v14`} stroke="#94a3b8" strokeWidth="1.5" />
+            <path d={`M${x - 4},168 l4,6 l4,-6`} fill="none" stroke="#94a3b8" strokeWidth="1.5" />
+            <Tx x={x} y={190} s={b.becomes} lang={lang} size={7.5} fill={b.c} />
+          </g>
+        );
+      })}
+      {/* what goes in */}
+      <rect x="20" y="40" width="28" height="34" fill="#f8fafc" stroke="#94a3b8" />
+      {[0, 1, 2].map((j) => <line key={j} x1="24" x2="44" y1={48 + j * 8} y2={48 + j * 8} stroke="#cbd5e1" strokeWidth="2" />)}
+      <path d="M90,74 h14 v-26 l-3,-6 v-8 h-8 v8 l-3,6 Z" fill="#bae6fd" stroke="#0284c7" />
+      <rect x="93" y="30" width="8" height="5" fill="#eab308" />
+      <path d="M152,74 h16 v-24 q0,-6 -4,-8 v-10 h-8 v10 q-4,2 -4,8 Z" fill="#86efac" stroke="#15803d" />
+      <rect x="210" y="44" width="20" height="30" rx="3" fill="#cbd5e1" stroke="#475569" />
+      <line x1="210" x2="230" y1="52" y2="52" stroke="#475569" />
+      <line x1="210" x2="230" y1="66" y2="66" stroke="#475569" />
+      <path d="M274,72 q-10,-14 0,-28 q12,6 6,28 Z" fill="#fb923c" />
+      <path d="M280,72 q6,-18 16,-20 q-2,16 -16,20 Z" fill="#facc15" />
+      <Tx x={160} y={18} s={t("put in clean and dry", "գցել մաքուր և չոր", "класть чистым и сухим")} lang={lang} size={8.5} fill="#475569" />
+    </g>
+  ),
+  parts: [
+    P(34, 140, t("Paper and card", "Թուղթ և ստվարաթուղթ", "Бумага и картон"), t("Newspapers, boxes and old exercise books are mashed into pulp again and made into new paper, card and egg boxes.", "Թերթերը, տուփերը և հին տետրերը նորից դարձնում են զանգված և դրանից պատրաստում նոր թուղթ, ստվարաթուղթ և ձվի տուփեր։", "Газеты, коробки и старые тетради снова превращают в массу и делают из неё новую бумагу, картон и коробки для яиц.")),
+    P(97, 140, t("Plastic", "Պլաստիկ", "Пластик"), t("Clean bottles are chopped into flakes, melted and spun into thread. Soft fleece jackets are often made from old bottles.", "Մաքուր շշերը մանրացնում են փաթիլների, հալեցնում և թել մանում։ Փափուկ ֆլիսե բաճկոնները հաճախ պատրաստում են հին շշերից։", "Чистые бутылки измельчают в хлопья, плавят и прядут из них нить. Мягкие флисовые куртки часто делают из старых бутылок.")),
+    P(160, 140, t("Glass", "Ապակի", "Стекло"), t("Glass can be melted and made into new jars and bottles again and again, without getting worse.", "Ապակին կարելի է հալեցնել և դրանից նորից ու նորից նոր բանկաներ և շշեր պատրաստել՝ առանց որակը կորցնելու։", "Стекло можно плавить и снова и снова делать из него новые банки и бутылки, и оно не становится хуже.")),
+    P(223, 140, t("Metal", "Մետաղ", "Металл"), t("Tins and cans are melted down and rolled into new metal. Rinse them first and squash them to save space.", "Թիթեղյա տարաները հալեցնում են և գլանում նոր մետաղի։ Նախ ողողի՛ր և սեղմի՛ր, որ տեղ խնայես։", "Жестяные банки переплавляют и прокатывают в новый металл. Сначала сполосни их и сплющи, чтобы сэкономить место.")),
+    P(286, 140, t("Organic", "Օրգանական", "Органика"), t("Fruit peel and vegetable scraps rot in a compost heap into dark, crumbly soil food for the garden.", "Մրգի կեղևն ու բանջարեղենի մնացորդները կոմպոստի կույտում փտում են և դառնում մուգ, փխրուն պարարտանյութ այգու համար։", "Кожура фруктов и обрезки овощей перегнивают в компостной куче в тёмное рассыпчатое удобрение для сада.")),
+  ],
+};
+
+/* ---------------- grade 3: laying the table ---------------- */
+
+const table: Diagram = {
+  title: t("Laying a place at the table", "Սեղանի մեկ տեղի սպասք", "Сервировка одного места за столом"),
+  h: 214,
+  draw: () => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#fef9c3" />
+      <rect x="40" y="30" width="240" height="160" rx="10" fill="#fecaca" opacity="0.6" />
+      <line x1="0" x2="320" y1="204" y2="204" stroke="#a16207" strokeWidth="6" />
+      {/* plate with a napkin fan */}
+      <circle cx="160" cy="124" r="52" fill="#fff" stroke="#cbd5e1" strokeWidth="2" />
+      <circle cx="160" cy="124" r="38" fill="#f8fafc" stroke="#e2e8f0" />
+      {Array.from({ length: 6 }, (_, j) => <path key={j} d={`M160,140 L${136 + j * 10},${100 + Math.abs(j - 2.5) * 3} l8,0 Z`} fill={j % 2 ? "#93c5fd" : "#bfdbfe"} stroke="#3b82f6" strokeWidth="0.5" />)}
+      {/* fork */}
+      <rect x="88" y="110" width="5" height="62" rx="2" fill="#94a3b8" />
+      <path d="M82,82 v22 q8,10 16,0 v-22 M87,82 v18 M93,82 v18" fill="none" stroke="#94a3b8" strokeWidth="2.5" />
+      {/* knife, blade towards the plate */}
+      <rect x="226" y="120" width="6" height="52" rx="2" fill="#475569" />
+      <path d="M226,120 v-38 q0,-6 4,-6 q2,0 2,6 v38 Z" fill="#cbd5e1" stroke="#94a3b8" />
+      {/* spoon */}
+      <ellipse cx="250" cy="94" rx="7" ry="11" fill="#cbd5e1" stroke="#94a3b8" />
+      <rect x="248" y="104" width="4" height="66" rx="2" fill="#94a3b8" />
+      {/* glass */}
+      <circle cx="244" cy="54" r="14" fill="#e0f2fe" stroke="#0284c7" strokeWidth="1.5" />
+      <circle cx="244" cy="54" r="9" fill="#bae6fd" />
+      {/* bread plate */}
+      <circle cx="84" cy="54" r="18" fill="#fff" stroke="#cbd5e1" strokeWidth="1.5" />
+      <path d="M72,54 q12,-14 24,0 q-12,8 -24,0 Z" fill="#f5d0a9" stroke="#b45309" />
+    </g>
+  ),
+  parts: [
+    P(160, 184, t("Plate", "Ափսե", "Тарелка"), t("The plate goes in the middle, about 2 cm from the edge of the table, so it cannot be knocked off.", "Ափսեն դրվում է մեջտեղում՝ սեղանի եզրից մոտ 2 սմ հեռու, որ պատահաբար չընկնի։", "Тарелку ставят посередине, примерно в 2 см от края стола, чтобы её не столкнуть.")),
+    P(70, 120, t("Fork on the left", "Պատառաքաղը՝ ձախ", "Вилка слева"), t("We hold food with the fork in the left hand while the right hand cuts.", "Պատառաքաղով սնունդը պահում ենք ձախ ձեռքով, իսկ աջ ձեռքով կտրում ենք։", "Вилкой в левой руке придерживают еду, а правой режут.")),
+    P(214, 150, t("Knife on the right", "Դանակը՝ աջ", "Нож справа"), t("The knife lies to the right of the plate with its blade turned towards the plate, never towards your neighbour.", "Դանակը դրվում է ափսեից աջ՝ սայրը դեպի ափսեն, երբեք՝ դեպի հարևանդ։", "Нож кладут справа от тарелки лезвием к тарелке, а не к соседу.")),
+    P(266, 120, t("Spoon", "Գդալ", "Ложка"), t("The spoon goes to the right of the knife, ready for soup.", "Գդալը դրվում է դանակից աջ՝ պատրաստ ապուրի համար։", "Ложку кладут справа от ножа, она готова для супа.")),
+    P(264, 40, t("Glass", "Բաժակ", "Стакан"), t("The glass stands at the top right, just above the knife, where your right hand finds it easily.", "Բաժակը դրվում է վերևում՝ աջ, դանակից անմիջապես վեր, որտեղ աջ ձեռքդ հեշտությամբ կգտնի այն։", "Стакан ставят вверху справа, прямо над ножом, где его легко найдёт правая рука.")),
+    P(64, 40, t("Bread plate", "Հացի ափսե", "Тарелка для хлеба"), t("A small plate for bread sits at the top left. In Armenia it often holds lavash.", "Հացի փոքր ափսեն դրվում է վերևում՝ ձախ։ Հայաստանում դրա մեջ հաճախ լավաշ է լինում։", "Маленькая тарелка для хлеба стоит вверху слева. В Армении на ней часто лежит лаваш.")),
+    P(184, 98, t("Napkin", "Անձեռոցիկ", "Салфетка"), t("A napkin folded like a fan can stand on the plate or in a glass. Before eating, open it and lay it on your lap.", "Հովհարի պես ծալված անձեռոցիկը կարող է կանգնել ափսեի մեջ կամ բաժակում։ Ուտելուց առաջ բացի՛ր և դի՛ր գոգիդ։", "Салфетку, сложенную веером, можно поставить на тарелку или в стакан. Перед едой разверни её и положи на колени.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table };
