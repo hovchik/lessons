@@ -54,6 +54,13 @@ export function yearText(y: number, lang: ArtLang) {
   return y < 0 ? L(W.bc, lang).replace("{y}", s) : s;
 }
 
+/** Keeps a centred label of `fs`-pixel text inside the strip. */
+const STRIP = 340;
+const fitX = (x: number, text: string, fs: number) => {
+  const hw = text.length * fs * 0.3 + 2;
+  return Math.min(STRIP - hw, Math.max(hw, x));
+};
+
 /** Dates more than 3,000 years before Christ are given by millennium, the rest by century. */
 const deep = (y: number) => y < -3000;
 
@@ -78,7 +85,7 @@ export default function Timeline({ spec, lang }: SimProps) {
   const ys = ev.flatMap((e) => [e.y, e.to ?? e.y]).concat((set.eras ?? []).flatMap((e) => [e.from, e.to]));
   const lo = Math.min(...ys), hi = Math.max(...ys);
   const pad = Math.max(1, (hi - lo) * 0.04);
-  const WW = 340, HH = (set.eras?.length ? 86 : 64), PL = 14, PR = 14, AY = 34;
+  const WW = STRIP, HH = (set.eras?.length ? 86 : 64), PL = 14, PR = 14, AY = 34;
   const X = (y: number) => PL + ((y - (lo - pad)) / (hi - lo + 2 * pad)) * (WW - PL - PR);
   const step = STEPS.find((s) => (hi - lo) / s <= 4) ?? 20000;
   const ticks: number[] = [];
@@ -107,7 +114,7 @@ export default function Timeline({ spec, lang }: SimProps) {
         {ticks.map((v) => (
           <g key={v}>
             <line x1={X(v)} x2={X(v)} y1={AY - 3} y2={AY + 3} stroke="#94a3b8" />
-            {v !== 0 ? <text x={X(v)} y={AY + 14} textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#64748b">{yearText(v, lang)}</text> : null}
+            {v !== 0 ? <text x={fitX(X(v), yearText(v, lang), 8.5)} y={AY + 14} textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#64748b">{yearText(v, lang)}</text> : null}
           </g>
         ))}
         {lo < 0 && hi > 0 ? (
@@ -130,7 +137,7 @@ export default function Timeline({ spec, lang }: SimProps) {
           <circle key={i} cx={X(a)} cy={AY} r={picks.includes(i) ? 6 : 4} fill={color(i)} stroke="#fff" strokeWidth="1.5" onClick={() => pick(i)} style={{ cursor: "pointer" }} />
         ))}
         {picks.map((i) => (
-          <text key={`l${i}`} x={Math.min(WW - 30, Math.max(30, X(ev[i].y)))} y={AY - 11} textAnchor="middle" fontSize="9.5" fontWeight="900" fill={color(i)}>{yearText(ev[i].y, lang)}</text>
+          <text key={`l${i}`} x={fitX(X(ev[i].y), yearText(ev[i].y, lang), 9.5)} y={AY - 11} textAnchor="middle" fontSize="9.5" fontWeight="900" fill={color(i)}>{yearText(ev[i].y, lang)}</text>
         ))}
       </Stage>
       {(set.eras ?? []).some(({ from, to, l }) => L(l, lang).length * 4.6 >= X(to) - X(from) - 4) ? (
