@@ -4,7 +4,7 @@ import type { ArtLang, Tr } from "@/lib/art/spec";
 import { L, t } from "../labels";
 import type { Diagram } from "./types";
 
-/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system. */
+/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables. */
 
 const P = (x: number, y: number, name: Tr, text: Tr) => ({ x, y, name, text });
 const Tx = ({ x, y, s, lang, size = 9, fill = "#1e1b4b", anchor = "middle", w = 900 }: { x: number; y: number; s: Tr; lang: ArtLang; size?: number; fill?: string; anchor?: "start" | "middle" | "end"; w?: number }) => (
@@ -428,4 +428,89 @@ const phish: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish };
+/* ---------------- two related tables ---------------- */
+
+const DB_ST: Array<[number, Tr, Tr]> = [
+  [1, t("Ani", "Անի", "Ани"), t("9A", "9Ա", "9А")],
+  [2, t("Aram", "Արամ", "Арам"), t("9B", "9Բ", "9Б")],
+  [3, t("Mariam", "Մարիամ", "Мариам"), t("9A", "9Ա", "9А")],
+];
+const DB_MK: Array<[number, Tr, number]> = [
+  [1, t("Informatics", "Ինֆորմատիկա", "Информатика"), 10],
+  [1, t("Chemistry", "Քիմիա", "Химия"), 8],
+  [2, t("Informatics", "Ինֆորմատիկա", "Информатика"), 9],
+];
+const DB_LINK = ["#4f46e5", "#4f46e5", "#e11d48"];
+
+const db: Diagram = {
+  title: t("Two tables linked by a key", "Բանալիով կապված երկու աղյուսակ", "Две таблицы, связанные ключом"),
+  draw: (lang) => {
+    const cell = (x: number, y: number, w: number, s: string, opts: { head?: boolean; fill?: string; color?: string; anchor?: "start" | "middle" } = {}) => (
+      <g>
+        <rect x={x} y={y} width={w} height="20" fill={opts.fill ?? (opts.head ? "#f1f5f9" : "#fff")} stroke="#94a3b8" strokeWidth="0.8" />
+        <text x={opts.anchor === "start" ? x + 4 : x + w / 2} y={y + 13.5} textAnchor={opts.anchor ?? "middle"} fontSize={opts.head ? 7 : s.length > 10 ? 6.5 : 7.5} fontWeight={opts.head ? 900 : 700} fill={opts.color ?? (opts.head ? "#475569" : "#1e1b4b")}>{s}</text>
+      </g>
+    );
+    return (
+      <g>
+        <Tx x={76} y={30} s={t("Students", "Աշակերտներ", "Ученики")} lang={lang} size={10} />
+        <Tx x={244} y={30} s={t("Marks", "Գնահատականներ", "Оценки")} lang={lang} size={10} />
+        {/* Students: id, name, class */}
+        {cell(8, 38, 28, "🔑 id", { head: true, fill: "#fef3c7" })}
+        {cell(36, 38, 62, L(t("name", "անուն", "имя"), lang), { head: true })}
+        {cell(98, 38, 46, L(t("class", "դասարան", "класс"), lang), { head: true })}
+        {DB_ST.map(([id, name, cls], k) => (
+          <g key={k}>
+            {cell(8, 58 + k * 20, 28, String(id), { fill: "#fffbeb", color: "#b45309" })}
+            {cell(36, 58 + k * 20, 62, L(name, lang), { anchor: "start" })}
+            {cell(98, 58 + k * 20, 46, L(cls, lang))}
+          </g>
+        ))}
+        {/* Marks: student_id, subject, mark */}
+        {cell(176, 38, 44, "student_id", { head: true, fill: "#e0e7ff" })}
+        {cell(220, 38, 62, L(t("subject", "առարկա", "предмет"), lang), { head: true })}
+        {cell(282, 38, 30, L(t("mark", "գնահ.", "оценка"), lang), { head: true })}
+        {DB_MK.map(([sid, subj, mark], k) => (
+          <g key={k}>
+            {cell(176, 58 + k * 20, 44, String(sid), { fill: "#eef2ff", color: DB_LINK[k] })}
+            {cell(220, 58 + k * 20, 62, L(subj, lang), { anchor: "start" })}
+            {cell(282, 58 + k * 20, 30, String(mark))}
+          </g>
+        ))}
+        {/* the foreign key points at the primary key */}
+        {DB_MK.map(([sid], k) => {
+          const y1 = 68 + k * 20, y2 = 68 + (sid - 1) * 20;
+          return <path key={k} d={`M176,${y1} C160,${y1} 160,${y2} 146,${y2}`} fill="none" stroke={DB_LINK[k]} strokeWidth="1.6" markerEnd="url(#db-head)" />;
+        })}
+        <defs><marker id="db-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569" /></marker></defs>
+        {/* kinds of relationship */}
+        {[
+          [t("one to one", "մեկը մեկին", "один к одному"), "1", "1"],
+          [t("one to many", "մեկը շատերին", "один ко многим"), "1", "∞"],
+          [t("many to many", "շատը շատերին", "многие ко многим"), "∞", "∞"],
+        ].map(([s, a, b], k) => {
+          const x = 14 + k * 102;
+          return (
+            <g key={k}>
+              <rect x={x} y={160} width="26" height="18" rx="3" fill="#e0e7ff" stroke="#6366f1" />
+              <rect x={x + 64} y={160} width="26" height="18" rx="3" fill="#dcfce7" stroke="#16a34a" />
+              <line x1={x + 26} y1="169" x2={x + 64} y2="169" stroke="#475569" strokeWidth="1.4" />
+              <text x={x + 32} y="165" fontSize="8" fontWeight="900" fill="#475569">{a as string}</text>
+              <text x={x + 52} y="165" fontSize="8" fontWeight="900" fill="#475569">{b as string}</text>
+              <Tx x={x + 45} y={194} s={s as Tr} lang={lang} size={8} fill="#334155" />
+            </g>
+          );
+        })}
+      </g>
+    );
+  },
+  parts: [
+    P(70, 130, t("Record and field", "Գրառում և դաշտ", "Запись и поле"), t("Each row is one record, here one pupil. Each column is a field with a fixed type: id is a number, name is text. Every record has the same fields, which is what makes a table easy to search.", "Յուրաքանչյուր տող մեկ գրառում է, այստեղ՝ մեկ աշակերտ։ Յուրաքանչյուր սյուն որոշակի տիպի դաշտ է․ id-ն թիվ է, անունը՝ տեքստ։ Բոլոր գրառումներն ունեն նույն դաշտերը, և հենց դա է աղյուսակը հեշտ որոնելի դարձնում։", "Каждая строка — одна запись, здесь один ученик. Каждый столбец — поле определённого типа: id — число, имя — текст. У всех записей одинаковые поля, поэтому по таблице легко искать.")),
+    P(22, 130, t("Primary key", "Առաջնային բանալի", "Первичный ключ"), t("id identifies a pupil uniquely. There may be two girls called Ani, but never two records with id 1, and the database itself refuses a duplicate.", "id-ն միանշանակ նույնականացնում է աշակերտին։ Կարող են լինել Անի անունով երկու աղջիկ, բայց երբեք երկու գրառում՝ 1 id-ով, և տվյալների բազան ինքն է մերժում կրկնօրինակը։", "id однозначно определяет ученика. Девочек по имени Ани может быть две, но записей с id 1 никогда, и база данных сама откажется добавить дубликат.")),
+    P(198, 130, t("Foreign key", "Արտաքին բանալի", "Внешний ключ"), t("student_id stores only the number of a pupil from the other table. The arrows show the link: both blue marks belong to Ani, the red one to Aram. Mariam has no marks yet.", "student_id-ն պահում է միայն մյուս աղյուսակի աշակերտի համարը։ Սլաքները ցույց են տալիս կապը․ երկու կապույտ գնահատականները Անինն են, կարմիրը՝ Արամինը։ Մարիամը դեռ գնահատական չունի։", "student_id хранит только номер ученика из другой таблицы. Стрелки показывают связь: обе синие оценки принадлежат Ани, красная — Араму. У Мариам оценок пока нет.")),
+    P(258, 130, t("Why two tables?", "Ինչո՞ւ երկու աղյուսակ", "Зачем две таблицы?"), t("If the name were written on every mark row, a pupil with 200 marks would have it 200 times, and one typo would make two different people. With a key, the name lives in one place.", "Եթե անունը գրվեր գնահատականների ամեն տողում, 200 գնահատական ունեցող աշակերտի անունը կլիներ 200 անգամ, և մեկ վրիպակից կստացվեր երկու տարբեր մարդ։ Բանալու շնորհիվ անունը պահվում է մեկ տեղում։", "Если бы имя писали в каждой строке с оценкой, у ученика с 200 оценками оно повторилось бы 200 раз, и одна опечатка превратила бы его в двух разных людей. С ключом имя хранится в одном месте.")),
+    P(262, 150, t("Many to many", "Շատը շատերին", "Многие ко многим"), t("A pupil can join several clubs and a club has many pupils. Neither table can hold that alone, so a third, linking table stores pairs: (pupil, club).", "Աշակերտը կարող է հաճախել մի քանի խմբակ, իսկ խմբակն ունի շատ աշակերտներ։ Դա չի կարող պահել աղյուսակներից ոչ մեկն առանձին, ուստի երրորդ՝ կապող աղյուսակը պահում է զույգեր՝ (աշակերտ, խմբակ)։", "Ученик может ходить в несколько кружков, а в кружке много учеников. Ни одна из таблиц не может хранить это сама, поэтому третья, связующая таблица хранит пары: (ученик, кружок).")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db };

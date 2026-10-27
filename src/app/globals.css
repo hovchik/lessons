@@ -706,6 +706,18 @@ button.art-card:active { transform: scale(0.97); }
 .sim-sheet td.is-bad { color: #b91c1c; background: #fef2f2; }
 .sim-sheet td.is-hot { background: #fef3c7; }
 .sim-sheet input { width: 100%; min-width: 2.2rem; border: 0; background: transparent; text-align: right; font: inherit; color: #4f46e5; }
+.sim-sql-ctl { display: grid; gap: 0.35rem; margin-bottom: 0.5rem; }
+.sim-sql-ctl > div { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+.sim-sql-ctl > div > b { min-width: 5.2rem; font: 900 0.75rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #7c3aed; }
+.sim-sql { display: grid; gap: 0.7rem; margin-top: 0.6rem; }
+@media (min-width: 640px) { .sim-sql { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; } }
+.sim-sql-t { width: 100%; margin-top: 0.3rem; border-collapse: collapse; background: #fff; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.sim-sql-t th { padding: 0.2rem 0.4rem; background: #f1f5f9; color: #475569; font: 800 0.75rem ui-monospace, SFMono-Regular, Menlo, monospace; text-align: left; border: 1px solid #cbd5e1; }
+.sim-sql-t td { padding: 0.2rem 0.4rem; border: 1px solid #cbd5e1; font-weight: 700; transition: opacity 0.2s, background 0.2s; }
+.sim-sql-t td.is-num { text-align: right; }
+.sim-sql-t tr.is-in td { background: #f5f3ff; }
+.sim-sql-t tr.is-out td { opacity: 0.35; }
+.sim-sql-t.is-result td { background: #ecfdf5; color: #065f46; }
 @media (max-width: 30rem) { .sim-eqlist > div { grid-template-columns: 1fr; gap: 0; } }
 
 /* ---- Primary-school math blocks (```sim count, numline, place, fraction, array, column, ...) ---- */

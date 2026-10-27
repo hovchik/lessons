@@ -87,6 +87,8 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   password: lazy(() => import("./widgets/password")),
   turtle: lazy(() => import("./widgets/turtle")),
   sheet: lazy(() => import("./widgets/sheet")),
+  sql: lazy(() => import("./widgets/sql")),
+  stats: lazy(() => import("./widgets/stats")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */
