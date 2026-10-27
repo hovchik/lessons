@@ -50,6 +50,9 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   loan: [t("Loanword", "Փոխառություն", "Заимствование"), t("Armenian word", "Հայերեն բառ", "Армянское слово")],
   norm: [t("Avoid", "Խուսափիր", "Избегай"), t("Literary norm", "Գրական նորմ", "Литературная норма")],
   sound: [t("We write", "Գրում ենք", "Пишем"), t("We hear", "Լսում ենք", "Слышим")],
+  hardsoft: [t("Hard", "Կարծր", "Твёрдый"), t("Soft", "Փափուկ", "Мягкий")],
+  gender: [t("Masculine", "Արական", "Мужской"), t("Feminine", "Իգական", "Женский"), t("Neuter", "Չեզոք", "Средний")],
+  number: [t("One", "Մեկ", "Один"), t("Many", "Շատ", "Много")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [

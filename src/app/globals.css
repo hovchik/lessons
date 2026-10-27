@@ -728,6 +728,6 @@ button.math-pv-digit.is-active { background: #fff; outline: 3px solid #e11d48; }
 .lang-table.is-wide { hyphens: manual; }
 .lang-table.is-wide .lang-form { font-size: 0.9rem; white-space: normal; }
 .lang-table.is-compare { hyphens: manual; }
-.lang-table.is-compare td { overflow-wrap: normal; word-break: normal; }
+.lang-table.is-compare td, .lang-table.is-compare th { overflow-wrap: normal; word-break: normal; }
 .lang-table.is-compare .lang-form { white-space: normal; }
 .lang-cover { min-width: 3.5rem; min-height: 1.9rem; border-radius: 8px; background: var(--art-soft, #e0e7ff); color: var(--art, #4f46e5); font-weight: 900; }

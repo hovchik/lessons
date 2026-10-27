@@ -78,7 +78,7 @@ const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
 
 /** Column counts of the forms mode=compare tables (see COLS in widgets/forms.tsx). */
-const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2, norm: 2, sound: 2 };
+const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2, norm: 2, sound: 2, hardsoft: 2, gender: 3, number: 2 };
 
 /** Problems with one sim spec (the text inside the fence). */
 export function checkSimSpec(source: string): string[] {
