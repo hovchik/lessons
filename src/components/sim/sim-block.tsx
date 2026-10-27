@@ -92,6 +92,7 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   vote: lazy(() => import("./widgets/vote")),
   market: lazy(() => import("./widgets/market")),
   finance: lazy(() => import("./widgets/finance")),
+  piano: lazy(() => import("./widgets/piano")),
 };
 
 /** A ```sim block: a simulation, a step-by-step mechanism, a diagram or a quick check. */

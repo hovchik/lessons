@@ -19,6 +19,7 @@ import { GEO_PRESETS } from "./widgets/geo";
 import { EXCHANGE, SOLUTES } from "./widgets/ions";
 import { CRYSTALS } from "./widgets/lattice";
 import { MOLECULES } from "./widgets/molecule";
+import { parseNote, PROGS, TUNES } from "./widgets/piano";
 import { SETS as PH_SETS } from "./widgets/ph";
 import { NAMES as SOLIDS } from "./widgets/solid";
 import { TENSE_NAMES } from "./widgets/tense";
@@ -87,6 +88,7 @@ const MODES: Record<string, string[]> = {
   vote: ["prop", "maj"],
   market: ["supply", "ppf"],
   finance: ["interest", "profit", "budget", "loan", "tax"],
+  piano: ["keys", "staff", "durations", "rhythm", "meter", "interval", "chord", "sound", "melody", "prog"],
 };
 
 export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle"];
@@ -166,6 +168,13 @@ export function checkSimSpec(source: string): string[] {
         if (!n) errors.push(`${where}: unknown cols "${spec.opts.cols}"`);
         else if (spec.args.some((a) => a.split(":").length !== n)) errors.push(`${where}: every row needs ${n} cells`);
       } else if (spec.widget === "forms" && spec.opts.mode !== "verbs" && spec.args.length < (spec.opts.mode === "persons" ? 6 : spec.opts.lang === "hy" ? 7 : 6)) errors.push(`${where}: too few forms`);
+      break;
+    case "piano":
+      need([...list(spec.opts.notes), ...[spec.opts.from, spec.opts.to].filter((v): v is string => !!v)], (n) => parseNote(n) != null, "note");
+      need(list(spec.opts.pattern), (v) => /^[whqe]r?$/.test(v), "rhythm token");
+      if (spec.opts.root && parseNote(`${spec.opts.root}4`) == null) errors.push(`${where}: unknown root "${spec.opts.root}"`);
+      if (spec.opts.tune && !TUNES[spec.opts.tune]) errors.push(`${where}: unknown tune "${spec.opts.tune}"`);
+      if (spec.opts.prog && !PROGS[spec.opts.prog]) errors.push(`${where}: unknown chord loop "${spec.opts.prog}"`);
       break;
     case "check": {
       const { question, options } = parseCheck(spec.body);
