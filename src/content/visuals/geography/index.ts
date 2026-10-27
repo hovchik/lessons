@@ -1,6 +1,7 @@
 import type { VisualMap } from "..";
 import { grade6 } from "./grade-6";
 import { grade7 } from "./grade-7";
+import { grade8 } from "./grade-8";
 
 /**
  * Geography 6–12: climate graphs, map and atmosphere calculators, labelled Earth pictures
@@ -11,4 +12,5 @@ import { grade7 } from "./grade-7";
 export const geographyVisuals: VisualMap = {
   6: grade6,
   7: grade7,
+  8: grade8,
 };
