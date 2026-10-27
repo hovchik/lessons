@@ -636,7 +636,7 @@ const monastery: Diagram = {
       <rect x="236" y="137" width="36" height="3" fill="#3730a3" />
       {/* khachkars */}
       <Kh x={128} y={154} />
-      <Kh x={172} y={154} />
+      <Kh x={106} y={154} />
       <Kh x={286} y={154} />
       {[
         [39, t("refectory", "սեղանատուն", "трапезная")],
@@ -653,7 +653,7 @@ const monastery: Diagram = {
     P(222, 84, t("The bell tower", "Զանգակատունը", "Колокольня"), t("From the 13th century monasteries built separate bell towers, often with small chapels inside. Before bells, monks struck a wooden board to call the brothers.", "XIII դարից վանքերում կառուցում էին առանձին զանգակատներ, հաճախ ներսում փոքր մատուռներով։ Մինչ զանգերը վանականները հարվածում էին փայտե տախտակին՝ եղբայրներին կանչելու համար։", "С XIII века в монастырях строили отдельные колокольни, часто с маленькими часовнями внутри. До колоколов монахи били в деревянную доску, созывая братию.")),
     P(282, 110, t("Library and scriptorium", "Մատենադարան և գրչատուն", "Библиотека и скрипторий"), t("Scribes copied, bound and stored books here. At Haghpat the 13th-century library still has the wall niches where manuscripts were kept.", "Այստեղ գրիչներն ընդօրինակում, կազմում և պահում էին գրքերը։ Հաղպատի XIII դարի մատենադարանում մինչ օրս պահպանվել են պատերի խորշերը, որտեղ պահվում էին ձեռագրերը։", "Здесь писцы переписывали, переплетали и хранили книги. В библиотеке Ахпата XIII века до сих пор сохранились ниши в стенах, где хранили рукописи.")),
     P(28, 116, t("The refectory", "Սեղանատունը", "Трапезная"), t("The monks ate together in silence while one of them read aloud from the lives of the saints. On fast days the meal was bread, vegetables and beans.", "Վանականները միասին ճաշում էին լռության մեջ, մինչ նրանցից մեկը բարձրաձայն կարդում էր սրբերի վարքերից։ Պահքի օրերին ճաշը հաց, բանջարեղեն և լոբի էր։", "Монахи ели вместе в тишине, а один из них читал вслух жития святых. В постные дни трапеза состояла из хлеба, овощей и бобов.")),
-    P(184, 152, t("Khachkars", "Խաչքարեր", "Хачкары"), t("Carved cross-stones set up in memory of the dead, of a victory or of the building of a church. Each one is different, with a cross that blossoms like a tree of life.", "Փորագրված խաչքարեր, որ կանգնեցվում էին ի հիշատակ մահացածների, հաղթանակի կամ եկեղեցու շինության։ Յուրաքանչյուրը տարբեր է, իսկ խաչը ծաղկում է կենաց ծառի պես։", "Резные камни-кресты, которые ставили в память об умерших, о победе или о постройке церкви. Каждый неповторим, а крест расцветает, как древо жизни.")),
+    P(140, 150, t("Khachkars", "Խաչքարեր", "Хачкары"), t("Carved cross-stones set up in memory of the dead, of a victory or of the building of a church. Each one is different, with a cross that blossoms like a tree of life.", "Փորագրված խաչքարեր, որ կանգնեցվում էին ի հիշատակ մահացածների, հաղթանակի կամ եկեղեցու շինության։ Յուրաքանչյուրը տարբեր է, իսկ խաչը ծաղկում է կենաց ծառի պես։", "Резные камни-кресты, которые ставили в память об умерших, о победе или о постройке церкви. Каждый неповторим, а крест расцветает, как древо жизни.")),
     P(300, 66, t("The wall", "Պարիսպը", "Стена"), t("Many monasteries stood in remote places and were surrounded by walls, because they kept food, books and treasures and sheltered villagers during raids.", "Շատ վանքեր կանգնած էին հեռավոր վայրերում և շրջապատված էին պարիսպներով, որովհետև դրանցում պահվում էին պաշար, գրքեր և գանձեր, և հարձակումների ժամանակ ապաստան էին տալիս գյուղացիներին։", "Многие монастыри стояли в глухих местах и были окружены стенами, потому что там хранили припасы, книги и сокровища, а во время набегов укрывали крестьян.")),
   ],
 };
@@ -696,4 +696,272 @@ const sees: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees };
+/* ---------------- grade 9: the Holy Trinity ---------------- */
+
+const trinity: Diagram = {
+  title: t("The Holy Trinity: one God in three persons", "Սուրբ Երրորդություն՝ մեկ Աստված երեք անձով", "Святая Троица: один Бог в трёх лицах"),
+  h: 186,
+  draw: (lang) => {
+    const C: Array<[number, number, Tr, string]> = [
+      [160, 28, t("Father", "Հայր", "Отец"), "#b45309"],
+      [56, 152, t("Son", "Որդի", "Сын"), "#be123c"],
+      [264, 152, t("Holy|Spirit", "Սուրբ|Հոգի", "Святой|Дух"), "#0369a1"],
+    ];
+    const IS = t("is", "է", "есть");
+    const NOT = t("is not", "չէ", "не есть");
+    return (
+      <g>
+        <path d="M160,28 L56,152 L264,152 Z" fill="none" stroke="#cbd5e1" strokeWidth="3" />
+        {C.map(([x, y], k) => <line key={k} x1={x} y1={y} x2="160" y2="110" stroke="#fcd34d" strokeWidth="3" />)}
+        {[[96, 84, -50], [224, 84, 50], [160, 166, 0]].map(([x, y, r], k) => (
+          <g key={k} transform={`rotate(${r} ${x} ${y})`}><Tx x={x} y={y} s={NOT} lang={lang} size={7} fill="#64748b" /></g>
+        ))}
+        {[[166, 74, "start"], [104, 124, "middle"], [216, 124, "middle"]].map(([x, y, a], k) => (
+          <Tx key={k} x={x as number} y={y as number} s={IS} lang={lang} size={7} fill="#b45309" anchor={a as "start" | "middle"} />
+        ))}
+        {C.map(([x, y, name, c], k) => (
+          <g key={k}>
+            <circle cx={x} cy={y} r="22" fill="#fff" stroke={c} strokeWidth="2.4" />
+            <Tx x={x} y={y + (L(name, lang).includes("|") ? -1 : 3)} s={name} lang={lang} size={7.4} fill={c} />
+          </g>
+        ))}
+        <circle cx="160" cy="110" r="24" fill="#fef3c7" stroke="#b45309" strokeWidth="2.4" />
+        <Tx x={160} y={114} s={t("God", "Աստված", "Бог")} lang={lang} size={9} fill="#78350f" />
+      </g>
+    );
+  },
+  parts: [
+    P(178, 14, t("The Father", "Հայրը", "Отец"), t("The Creator, the source of all things. The Creed begins: \"We believe in one God, the Father Almighty, maker of heaven and earth.\"", "Արարիչը՝ ամեն ինչի սկիզբը։ Հավատո հանգանակը սկսվում է․ «Հավատամք ի մի Աստված, ի Հայրն ամենակալ, յԱրարիչն երկնի և երկրի»։", "Творец, источник всего. Символ веры начинается словами: «Веруем во единого Бога, Отца Вседержителя, Творца неба и земли».")),
+    P(34, 134, t("The Son", "Որդին", "Сын"), t("Jesus Christ, who became man, was crucified and rose again. In Gregory's vision at Etchmiadzin it was the Only Begotten Son who came down.", "Հիսուս Քրիստոսը, որը մարդացավ, խաչվեց և հարություն առավ։ Գրիգորի տեսիլքում Էջմիածնում հենց Միածին Որդին իջավ։", "Иисус Христос, который стал человеком, был распят и воскрес. В видении Григория в Эчмиадзине сошёл именно Единородный Сын.")),
+    P(286, 134, t("The Holy Spirit", "Սուրբ Հոգին", "Святой Дух"), t("The Giver of life, who spoke through the prophets and came down on the apostles at Pentecost. The Council of Constantinople in 381 confirmed his divinity.", "Կենդանարարը, որը խոսեց մարգարեների միջոցով և Հոգեգալստին իջավ առաքյալների վրա։ 381 թվականի Կոստանդնուպոլսի ժողովը հաստատեց նրա աստվածությունը։", "Животворящий, говоривший через пророков и сошедший на апостолов в Пятидесятницу. Константинопольский собор 381 года подтвердил его божество.")),
+    P(182, 98, t("One God", "Մեկ Աստված", "Один Бог"), t("Each person is fully God, and yet there are not three gods but one, sharing one essence. That is why the spokes say \"is\".", "Յուրաքանչյուր անձ լիովին Աստված է, և այնուամենայնիվ երեք աստված չկա, այլ մեկ՝ մեկ էությամբ։ Ահա թե ինչու ճառագայթների վրա գրված է «է»։", "Каждое лицо — полностью Бог, и всё же богов не три, а один, единой сущности. Поэтому на лучах написано «есть».")),
+    P(118, 160, t("Three persons", "Երեք անձ", "Три лица"), t("The Father is not the Son, and the Son is not the Spirit: the persons are distinct. This picture, the \"Shield of the Trinity\", appears in European manuscripts from about 1200.", "Հայրը Որդին չէ, և Որդին Հոգին չէ․ անձերը տարբեր են։ Այս պատկերը՝ «Երրորդության վահանը», հանդիպում է եվրոպական ձեռագրերում մոտ 1200 թվականից։", "Отец не есть Сын, и Сын не есть Дух: лица различны. Эта схема, «Щит Троицы», встречается в европейских рукописях примерно с 1200 года.")),
+  ],
+};
+
+/* ---------------- grade 9: the seven sacraments ---------------- */
+
+const SACR: Array<[Tr, string]> = [
+  [t("Baptism", "Մկրտություն", "Крещение"), "#0369a1"],
+  [t("Chrismation", "Դրոշմ", "Миропомазание"), "#b45309"],
+  [t("Penance", "Ապաշխարություն", "Покаяние"), "#7c3aed"],
+  [t("Communion", "Հաղորդություն", "Причастие"), "#be123c"],
+  [t("Marriage", "Պսակ", "Брак"), "#db2777"],
+  [t("Ordination", "Ձեռնադրություն", "Рукоположение"), "#047857"],
+  [t("Anointing|of the sick", "Կարգ|հիվանդաց", "Елеосвящение"), "#a16207"],
+];
+
+function SacrIcon({ k, x, y, c }: { k: number; x: number; y: number; c: string }) {
+  switch (k) {
+    case 0: return <g><path d={`M${x - 10},${y} h20 a10,9 0 0 1 -20,0 Z`} fill="#bae6fd" stroke={c} strokeWidth="1.4" /><path d={`M${x - 6},${y - 4} q3,-4 6,0 t6,0`} stroke={c} strokeWidth="1.2" fill="none" /></g>;
+    case 1: return <g><path d={`M${x - 3},${y - 10} h6 v4 q6,3 6,10 q0,8 -9,8 q-9,0 -9,-8 q0,-7 6,-10 Z`} fill="#fde68a" stroke={c} strokeWidth="1.3" /><path d={`M${x},${y - 1} q-3,4 0,6 q3,-2 0,-6 Z`} fill={c} /></g>;
+    case 2: return <g><circle cx={x - 5} cy={y} r="5" fill="none" stroke={c} strokeWidth="2" /><path d={`M${x},${y} h11 M${x + 7},${y} v4 M${x + 10},${y} v3`} stroke={c} strokeWidth="2" /></g>;
+    case 3: return <g><path d={`M${x - 7},${y - 10} h14 q0,10 -7,11 q-7,-1 -7,-11 Z M${x},${y + 1} v6 M${x - 5},${y + 8} h10`} fill="#fecdd3" stroke={c} strokeWidth="1.4" /></g>;
+    case 4: return <g><circle cx={x - 4} cy={y} r="6" fill="none" stroke="#eab308" strokeWidth="2.2" /><circle cx={x + 4} cy={y} r="6" fill="none" stroke="#eab308" strokeWidth="2.2" /></g>;
+    case 5: return <g><path d={`M${x - 5},${y - 10} v20 M${x + 5},${y - 10} v20 M${x - 5},${y - 10} q5,-3 10,0`} stroke={c} strokeWidth="2.6" fill="none" /><path d={`M${x - 5},${y + 4} m-2,0 h4 M${x + 5},${y + 4} m-2,0 h4`} stroke="#fff" strokeWidth="1" /></g>;
+    default: return <g><path d={`M${x - 10},${y + 2} q10,8 20,0 l-3,-5 h-14 Z`} fill="#fde68a" stroke={c} strokeWidth="1.3" /><path d={`M${x + 8},${y - 5} q-3,-6 0,-10 q3,4 0,10 Z`} fill="#f97316" /></g>;
+  }
+}
+
+const SPOS = SACR.map((_, k) => {
+  const a = -Math.PI / 2 + (k * 2 * Math.PI) / 7;
+  return [160 + 86 * Math.cos(a), 94 + 66 * Math.sin(a)];
+});
+
+const sacraments: Diagram = {
+  title: t("The seven sacraments", "Յոթ խորհուրդները", "Семь таинств"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      <ellipse cx="160" cy="94" rx="86" ry="66" fill="none" stroke="#e2e8f0" strokeWidth="2" strokeDasharray="4 4" />
+      <Tx x={160} y={89} s={t("visible sign,", "տեսանելի նշան,", "видимый знак,")} lang={lang} size={6.8} fill="#475569" />
+      <Tx x={160} y={101} s={t("invisible grace", "անտեսանելի շնորհ", "невидимая благодать")} lang={lang} size={6.8} fill="#b45309" />
+      {SACR.map(([name, c], k) => {
+        const [x, y] = SPOS[k];
+        return (
+          <g key={k}>
+            <circle cx={x} cy={y} r="17" fill="#fff" stroke={c} strokeWidth="1.8" />
+            <SacrIcon k={k} x={x} y={y} c={c} />
+            <Tx x={x} y={y + 27} s={name} lang={lang} size={6.4} fill={c} />
+          </g>
+        );
+      })}
+    </g>
+  ),
+  parts: [
+    P(SPOS[0][0] + 13, SPOS[0][1] - 13, t("Baptism", "Մկրտություն", "Крещение"), t("Water. The child is dipped three times in the font, in the name of the Father, the Son and the Holy Spirit, and is born into new life.", "Ջուր։ Երեխային երեք անգամ ընկղմում են ավազանում՝ Հոր, Որդու և Սուրբ Հոգու անունով, և նա ծնվում է նոր կյանքի։", "Вода. Ребёнка трижды погружают в купель во имя Отца, и Сына, и Святого Духа, и он рождается к новой жизни.")),
+    P(SPOS[1][0] + 13, SPOS[1][1] - 13, t("Chrismation", "Դրոշմ", "Миропомазание"), t("Holy myron. Straight after baptism the priest anoints nine places on the body, from the forehead to the feet, as a seal of the Holy Spirit.", "Սուրբ մյուռոն։ Մկրտությունից անմիջապես հետո քահանան օծում է մարմնի ինը տեղ՝ ճակատից մինչև ոտքերը, որպես Սուրբ Հոգու կնիք։", "Святое миро. Сразу после крещения священник помазывает девять мест на теле, ото лба до ног, как печать Святого Духа.")),
+    P(SPOS[2][0] + 13, SPOS[2][1] - 13, t("Penance", "Ապաշխարություն", "Покаяние"), t("Words. The believer confesses sins before the priest, and the priest pronounces forgiveness in the name of God.", "Խոսք։ Հավատացյալը քահանայի առջև խոստովանում է մեղքերը, և քահանան Աստծո անունով արձակում է նրանց։", "Слово. Верующий исповедует грехи перед священником, и священник от имени Бога разрешает их.")),
+    P(SPOS[3][0] - 13, SPOS[3][1] - 13, t("Communion", "Հաղորդություն", "Причастие"), t("Bread and wine. At the liturgy they become the Body and Blood of Christ, as at the Last Supper.", "Հաց և գինի։ Պատարագի ժամանակ դրանք դառնում են Քրիստոսի Մարմինն ու Արյունը, ինչպես Վերջին ընթրիքին։", "Хлеб и вино. На литургии они становятся Телом и Кровью Христа, как на Тайной вечере.")),
+    P(SPOS[4][0] + 13, SPOS[4][1] - 13, t("Marriage", "Պսակ", "Брак"), t("The Armenian word psak means \"crown\": bride and groom are crowned, and a red-and-white thread, the narot, is tied on them.", "«Պսակ» բառը նշանակում է «թագ»․ հարսին ու փեսային պսակում են, և նրանց վրա կապում են կարմիր ու սպիտակ թել՝ նարոտ։", "Армянское слово «псак» значит «венец»: жениха и невесту венчают и повязывают им красно-белую нить — нарот.")),
+    P(SPOS[5][0] + 13, SPOS[5][1] - 13, t("Ordination", "Ձեռնադրություն", "Рукоположение"), t("The laying on of hands. A bishop lays his hands on the candidate and prays, so that he may serve as deacon, priest or bishop.", "Ձեռք դնել։ Եպիսկոպոսը ձեռքերը դնում է թեկնածուի վրա և աղոթում, որպեսզի նա ծառայի որպես սարկավագ, քահանա կամ եպիսկոպոս։", "Возложение рук. Епископ возлагает руки на кандидата и молится, чтобы тот служил диаконом, священником или епископом.")),
+    P(SPOS[6][0] + 13, SPOS[6][1] - 13, t("Anointing of the sick", "Կարգ հիվանդաց", "Елеосвящение"), t("Oil and prayer. The priest prays for the healing of soul and body of someone who is ill.", "Յուղ և աղոթք։ Քահանան աղոթում է հիվանդի հոգու և մարմնի բժշկության համար։", "Елей и молитва. Священник молится об исцелении души и тела больного.")),
+  ],
+};
+
+/* ---------------- grade 9: inside a church ---------------- */
+
+const churchplan: Diagram = {
+  title: t("Inside an Armenian church (plan, east at the top)", "Հայկական եկեղեցու ներսը (հատակագիծ, արևելքը վերևում)", "Внутри армянской церкви (план, восток вверху)"),
+  h: 200,
+  draw: (lang) => (
+    <g>
+      {/* sacristies */}
+      <rect x="92" y="30" width="32" height="44" fill="#f1f5f9" stroke="#475569" strokeWidth="1.4" />
+      <rect x="196" y="30" width="32" height="44" fill="#f1f5f9" stroke="#475569" strokeWidth="1.4" />
+      {/* apse with the holy table */}
+      <path d="M124,74 V44 a36,30 0 0 1 72,0 V74 Z" fill="#fef3c7" stroke="#92400e" strokeWidth="1.8" />
+      <rect x="152" y="38" width="16" height="12" fill="#fff" stroke="#92400e" strokeWidth="1.2" />
+      <path d="M160,40 v8 M157,43 h6" stroke="#b45309" strokeWidth="1.2" />
+      {/* bema and steps */}
+      <rect x="112" y="74" width="96" height="16" fill="#fde68a" stroke="#92400e" strokeWidth="1.4" />
+      <path d="M130,90 h60 M134,94 h52" stroke="#a16207" strokeWidth="1" />
+      {/* curtain */}
+      <path d="M112,92 q6,-4 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0" stroke="#dc2626" strokeWidth="2" fill="none" />
+      {/* nave with dome and pillars */}
+      <rect x="92" y="96" width="136" height="60" fill="#fff" stroke="#475569" strokeWidth="1.8" />
+      <circle cx="160" cy="126" r="24" fill="none" stroke="#94a3b8" strokeWidth="1.2" strokeDasharray="3 3" />
+      {[[132, 104], [188, 104], [132, 148], [188, 148]].map(([x, y]) => <rect key={x + y} x={x - 4} y={y - 4} width="8" height="8" fill="#94a3b8" />)}
+      {/* candle stand */}
+      <rect x="104" y="138" width="16" height="10" fill="#fde68a" stroke="#a16207" strokeWidth="1" />
+      {[107, 112, 117].map((x) => <g key={x}><path d={`M${x},138 v-5`} stroke="#fff7ed" strokeWidth="1.6" /><path d={`M${x},132 q-1.5,-3 0,-5 q1.5,2 0,5 Z`} fill="#f97316" /></g>)}
+      {/* gavit and door */}
+      <rect x="104" y="158" width="112" height="30" fill="#f8fafc" stroke="#475569" strokeWidth="1.4" />
+      <rect x="152" y="154" width="16" height="6" fill="#fff" />
+      <rect x="152" y="186" width="16" height="6" fill="#fff" />
+      {/* labels */}
+      <Tx x={160} y={64} s={t("altar", "խորան", "алтарь")} lang={lang} size={6.6} fill="#92400e" />
+      <Tx x={160} y={85} s={t("bema", "բեմ", "бема")} lang={lang} size={6.2} fill="#92400e" />
+      <Tx x={108} y={54} s={t("sacristy", "ավանդա-|տուն", "ризница")} lang={lang} size={5.2} fill="#475569" />
+      <Tx x={212} y={54} s={t("sacristy", "ավանդա-|տուն", "ризница")} lang={lang} size={5.2} fill="#475569" />
+      <Tx x={160} y={129} s={t("nave", "նավ", "неф")} lang={lang} size={7} fill="#334155" />
+      <Tx x={160} y={176} s={t("gavit", "գավիթ", "гавит")} lang={lang} size={6.6} fill="#334155" />
+      <path d="M268,40 v-14 M264,30 l4,-5 l4,5" stroke="#475569" strokeWidth="1.4" fill="none" />
+      <Tx x={268} y={50} s={t("east", "արևելք", "восток")} lang={lang} size={6} fill="#475569" />
+    </g>
+  ),
+  parts: [
+    P(186, 36, t("Altar", "Խորան", "Алтарь"), t("The raised eastern part with the holy table, where the bread and wine are consecrated. Only clergy and servers go up into it.", "Արևելյան բարձրացված մասը՝ սուրբ սեղանով, որտեղ օրհնվում են հացն ու գինին։ Դրա վրա բարձրանում են միայն հոգևորականներն ու սպասավորները։", "Возвышенная восточная часть со святым престолом, где освящают хлеб и вино. На неё поднимаются только духовенство и прислужники.")),
+    P(218, 82, t("Bema", "Բեմ", "Бема"), t("The platform in front of the altar, with steps leading up to it, from which the Gospel is read and the sermon is preached.", "Խորանի առջևի հարթակը, դեպի որը տանում են աստիճաններ, որտեղից կարդում են Ավետարանը և քարոզ են խոսում։", "Помост перед алтарём со ступенями, откуда читают Евангелие и произносят проповедь.")),
+    P(232, 94, t("The curtain", "Վարագույրը", "Завеса"), t("It is drawn closed at certain moments of the liturgy, and for the whole of Great Lent, as a sign of repentance, like the closing of paradise to Adam.", "Այն փակվում է պատարագի որոշ պահերին և ամբողջ Մեծ պահքի ընթացքում՝ որպես ապաշխարության նշան, ինչպես Ադամի համար դրախտի փակվելը։", "Её задёргивают в определённые моменты литургии и на весь Великий пост — как знак покаяния, словно закрытие рая для Адама.")),
+    P(88, 30, t("Sacristies", "Ավանդատներ", "Ризницы"), t("Two rooms beside the altar where vestments, books and the sacred vessels are kept, and where the clergy prepare for the service.", "Խորանի կողքի երկու սենյակները, որտեղ պահվում են զգեստները, գրքերը և սուրբ անոթները, և որտեղ հոգևորականները պատրաստվում են արարողությանը։", "Две комнаты по бокам алтаря, где хранят облачения, книги и священные сосуды и где духовенство готовится к службе.")),
+    P(232, 126, t("Nave and dome", "Նավ և գմբեթ", "Неф и купол"), t("Where the people stand. Armenian churches traditionally have no pews; above, the dome stands for heaven.", "Այստեղ կանգնում է ժողովուրդը։ Հայկական եկեղեցիներում ավանդաբար նստարաններ չկան․ վերևում գմբեթը խորհրդանշում է երկինքը։", "Здесь стоит народ. В армянских церквях по традиции нет скамей; купол наверху означает небо.")),
+    P(98, 132, t("Candles", "Մոմեր", "Свечи"), t("On entering, people light a thin candle and set it in a tray of sand, with a prayer for themselves or for someone they love.", "Ներս մտնելիս մարդիկ վառում են բարակ մոմ և դնում ավազով սկուտեղի մեջ՝ աղոթելով իրենց կամ սիրելիի համար։", "Войдя, люди зажигают тонкую свечу и ставят её в поднос с песком, молясь о себе или о близких.")),
+    P(222, 166, t("Gavit", "Գավիթ", "Гавит"), t("The porch or hall at the western entrance. In large monasteries it was a separate building where meetings were held and princes were buried.", "Արևմտյան մուտքի նախասրահը կամ դահլիճը։ Մեծ վանքերում այն առանձին շենք էր, որտեղ ժողովներ էին անցկացվում և իշխաններ էին թաղվում։", "Притвор или зал у западного входа. В больших монастырях это было отдельное здание, где проходили собрания и хоронили князей.")),
+  ],
+};
+
+/* ---------------- grade 9: the church year ---------------- */
+
+const DOY = (d: number) => -Math.PI / 2 + (2 * Math.PI * d) / 365;
+const WP = (d: number, r: number) => [160 + r * Math.cos(DOY(d)), 108 + r * Math.sin(DOY(d))];
+const WArc = (d1: number, d2: number, r: number) => {
+  const [x1, y1] = WP(d1, r);
+  const [x2, y2] = WP(d2, r);
+  return `M${x1},${y1} A${r},${r} 0 0 1 ${x2},${y2}`;
+};
+const MONTHS: Tr[] = [
+  t("Jan", "հնվ", "янв"), t("Feb", "փտր", "фев"), t("Mar", "մրտ", "мар"), t("Apr", "ապր", "апр"), t("May", "մյս", "май"), t("Jun", "հնս", "июн"),
+  t("Jul", "հլս", "июл"), t("Aug", "օգս", "авг"), t("Sep", "սպտ", "сен"), t("Oct", "հկտ", "окт"), t("Nov", "նյմ", "ноя"), t("Dec", "դկտ", "дек"),
+];
+const FEASTS: Array<[number, number, Tr, string, number]> = [
+  [6, 6, t("Christmas|6 January", "Սուրբ Ծնունդ|հունվարի 6", "Рождество|6 января"), "#b45309", 1],
+  [45, 45, t("Trndez|14 February", "Տյառնընդառաջ|փետրվարի 14", "Трндез|14 февраля"), "#ea580c", 1],
+  [81, 115, t("Easter", "Զատիկ", "Пасха"), "#e11d48", 1],
+  [179, 213, t("Vardavar", "Վարդավառ", "Вардавар"), "#0284c7", 1],
+  [227, 227, t("Dormition", "Վերափոխում", "Успение"), "#7c3aed", 1],
+  [257, 257, t("Khachverats", "Խաչվերաց", "Хачверац"), "#047857", 1],
+];
+
+const calendar: Diagram = {
+  title: t("The church year: the great feasts", "Եկեղեցական տարին՝ տաղավար տոները", "Церковный год: великие праздники"),
+  h: 216,
+  draw: (lang) => (
+    <g>
+      <circle cx="160" cy="108" r="78" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="10" />
+      {MONTHS.map((m, k) => {
+        const d = k * 30.4;
+        const [x1, y1] = WP(d, 73);
+        const [x2, y2] = WP(d, 83);
+        const [tx, ty] = WP(d + 15.2, 62);
+        return (
+          <g key={k}>
+            <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#fff" strokeWidth="1.6" />
+            <Tx x={tx} y={ty + 2.5} s={m} lang={lang} size={6} fill="#94a3b8" w={700} />
+          </g>
+        );
+      })}
+      {FEASTS.map(([d1, d2, name, c], k) => {
+        const mid = (d1 + d2) / 2;
+        const [lx, ly] = WP(mid, 100);
+        const right = Math.cos(DOY(mid)) > 0.25;
+        const left = Math.cos(DOY(mid)) < -0.25;
+        return (
+          <g key={k}>
+            {d1 === d2 ? <circle cx={WP(d1, 78)[0]} cy={WP(d1, 78)[1]} r="6" fill={c} stroke="#fff" strokeWidth="1.6" /> : <path d={WArc(d1, d2, 78)} stroke={c} strokeWidth="10" fill="none" strokeLinecap="round" />}
+            <Tx x={lx} y={ly + (ly < 108 ? -2 : 6)} s={name} lang={lang} size={6.6} fill={c} anchor={right ? "start" : left ? "end" : "middle"} />
+          </g>
+        );
+      })}
+      <Tx x={160} y={104} s={t("movable feasts", "շարժական տոներ", "переходящие")} lang={lang} size={6.4} fill="#e11d48" />
+      <Tx x={160} y={116} s={t("follow Easter", "կախված են Զատկից", "зависят от Пасхи")} lang={lang} size={6.4} fill="#475569" w={600} />
+    </g>
+  ),
+  parts: [
+    P(WP(6, 78)[0] + 10, WP(6, 78)[1] + 4, t("Christmas and Theophany", "Սուրբ Ծնունդ և Աստվածհայտնություն", "Рождество и Богоявление"), t("6 January: the birth and the baptism of Christ celebrated together, as all Christians did in the first centuries. After the liturgy comes the blessing of water.", "Հունվարի 6՝ Քրիստոսի ծնունդն ու մկրտությունը միասին, ինչպես բոլոր քրիստոնյաները նշում էին առաջին դարերում։ Պատարագից հետո կատարվում է ջրօրհնեք։", "6 января: рождение и крещение Христа празднуют вместе, как все христиане в первые века. После литургии совершают водосвятие.")),
+    P(WP(45, 78)[0] + 10, WP(45, 78)[1] + 4, t("Trndez", "Տյառնընդառաջ", "Трндез"), t("The Presentation of the infant Jesus in the Temple, forty days after his birth. On the eve a bonfire is lit and young couples jump over it.", "Մանուկ Հիսուսի ընծայումը տաճարին՝ ծնվելուց քառասուն օր անց։ Նախօրեին խարույկ են վառում, և երիտասարդ զույգերը ցատկում են նրա վրայով։", "Сретение младенца Иисуса в Храме, через сорок дней после рождения. Накануне разжигают костёр, и молодые пары прыгают через него.")),
+    P(WP(98, 78)[0] + 10, WP(98, 78)[1] + 6, t("Easter", "Զատիկ", "Пасха"), t("The greatest feast, on a Sunday between 22 March and 25 April. Great Lent before it and the feasts after it move with it.", "Ամենամեծ տոնը՝ կիրակի օրը մարտի 22-ից ապրիլի 25-ն ընկած ժամանակահատվածում։ Նրան նախորդող Մեծ պահքը և հաջորդող տոները շարժվում են նրա հետ։", "Величайший праздник, в воскресенье между 22 марта и 25 апреля. Великий пост перед ним и праздники после него движутся вместе с ним.")),
+    P(WP(196, 78)[0] - 12, WP(196, 78)[1] + 4, t("Vardavar", "Վարդավառ", "Вардавар"), t("The Transfiguration, 98 days after Easter, so always between late June and early August. The best-loved summer custom is splashing water.", "Պայծառակերպությունը՝ Զատկից 98 օր անց, ուստի միշտ հունիսի վերջից օգոստոսի սկիզբն ընկած ժամանակահատվածում։ Ամենասիրված ամառային սովորույթը ջուր լցնելն է։", "Преображение, через 98 дней после Пасхи, поэтому всегда между концом июня и началом августа. Самый любимый летний обычай — обливаться водой.")),
+    P(WP(227, 78)[0] - 12, WP(227, 78)[1] - 2, t("Dormition", "Վերափոխում", "Успение"), t("The falling asleep of the Mother of God, on the Sunday nearest 15 August. The first grapes of the year are blessed.", "Աստվածածնի Վերափոխումը՝ օգոստոսի 15-ին ամենամոտ կիրակի օրը։ Օրհնում են տարվա առաջին խաղողը։", "Успение Богородицы, в воскресенье, ближайшее к 15 августа. Освящают первый виноград года.")),
+    P(WP(257, 78)[0] - 12, WP(257, 78)[1] - 4, t("Khachverats", "Խաչվերաց", "Хачверац"), t("The Exaltation of the Cross, on the Sunday nearest 14 September: the return of the Holy Cross to Jerusalem.", "Խաչվերացը՝ սեպտեմբերի 14-ին ամենամոտ կիրակի օրը․ Սուրբ Խաչի վերադարձն Երուսաղեմ։", "Воздвижение Креста, в воскресенье, ближайшее к 14 сентября: возвращение Святого Креста в Иерусалим.")),
+  ],
+};
+
+/* ---------------- grade 9: how a khachkar is built ---------------- */
+
+const khachkar: Diagram = {
+  title: t("Reading a khachkar", "Ինչպես կարդալ խաչքարը", "Как читать хачкар"),
+  h: 204,
+  draw: (lang) => (
+    <g>
+      <path d="M112,196 V24 q0,-12 12,-12 h72 q12,0 12,12 V196 Z" fill="#e7e5e4" stroke="#78716c" strokeWidth="2" />
+      {/* the ornamental border */}
+      <path d="M120,188 V28 q0,-8 8,-8 h64 q8,0 8,8 V188 Z" fill="none" stroke="#a8a29e" strokeWidth="6" strokeDasharray="4 3" />
+      <rect x="126" y="26" width="68" height="132" fill="#f5f5f4" stroke="#a8a29e" strokeWidth="1" />
+      {/* the cross with flared, budding ends */}
+      <path d="M160,38 V112 M136,62 H184" stroke="#57534e" strokeWidth="7" strokeLinecap="round" />
+      {[[160, 34], [132, 62], [188, 62]].map(([x, y]) => <g key={x + y}><circle cx={x - 3.5} cy={y} r="3" fill="#57534e" /><circle cx={x + 3.5} cy={y} r="3" fill="#57534e" /><circle cx={x} cy={y - 3.5} r="3" fill="#57534e" /></g>)}
+      {/* tree of life: leaves growing from the foot */}
+      <path d="M160,112 C150,116 140,112 134,104 M160,112 C170,116 180,112 186,104" stroke="#15803d" strokeWidth="2" fill="none" />
+      {[[136, 100, -30], [184, 100, 30], [146, 112, -60], [174, 112, 60]].map(([x, y, r], k) => <ellipse key={k} cx={x} cy={y} rx="6" ry="3" transform={`rotate(${r} ${x} ${y})`} fill="#86efac" stroke="#15803d" strokeWidth="0.8" />)}
+      {/* eternity sign */}
+      <circle cx="160" cy="136" r="15" fill="#fff" stroke="#57534e" strokeWidth="1.4" />
+      {[0, 1, 2, 3, 4, 5, 6, 7].map((k) => {
+        const a = (k * Math.PI) / 4;
+        const x1 = 160 + 3 * Math.cos(a);
+        const y1 = 136 + 3 * Math.sin(a);
+        const x2 = 160 + 14 * Math.cos(a + 0.9);
+        const y2 = 136 + 14 * Math.sin(a + 0.9);
+        return <path key={k} d={`M${x1},${y1} Q${160 + 12 * Math.cos(a)},${136 + 12 * Math.sin(a)} ${x2},${y2}`} stroke="#b45309" strokeWidth="1.6" fill="none" />;
+      })}
+      {/* inscription */}
+      {[166, 172, 178].map((y) => <path key={y} d={`M130,${y} h${y === 178 ? 40 : 60}`} stroke="#78716c" strokeWidth="1.6" strokeDasharray="3 1.5" />)}
+      {/* labels */}
+      <Tx x={104} y={64} s={t("cross", "խաչ", "крест")} lang={lang} size={7} fill="#57534e" anchor="end" />
+      <Tx x={104} y={108} s={t("tree of life", "կենաց ծառ", "древо жизни")} lang={lang} size={7} fill="#15803d" anchor="end" />
+      <Tx x={216} y={139} s={t("eternity sign", "հավերժության նշան", "знак вечности")} lang={lang} size={7} fill="#b45309" anchor="start" />
+      <Tx x={216} y={40} s={t("ornament", "զարդանախշ", "орнамент")} lang={lang} size={7} fill="#78716c" anchor="start" />
+      <Tx x={216} y={176} s={t("inscription", "արձանագրություն", "надпись")} lang={lang} size={7} fill="#78716c" anchor="start" />
+      <path d="M106,62 h24 M106,106 h28 M214,136 h-38 M214,38 h-18 M214,174 h-20" stroke="#cbd5e1" strokeWidth="1" />
+    </g>
+  ),
+  parts: [
+    P(196, 52, t("The cross", "Խաչը", "Крест"), t("Always in the centre, often with ends that open into buds or trefoils, as if the cross itself were flowering. It is a cross of life, not of death.", "Միշտ կենտրոնում է, հաճախ բողբոջների կամ եռաթերթերի վերածվող ծայրերով, կարծես խաչն ինքն է ծաղկում։ Դա կյանքի խաչ է, ոչ թե մահվան։", "Всегда в центре, часто с концами, раскрывающимися бутонами или трилистниками, словно сам крест цветёт. Это крест жизни, а не смерти.")),
+    P(126, 120, t("Tree of life", "Կենաց ծառ", "Древо жизни"), t("Leaves and shoots grow from the foot of the cross: the Church teaches that through the cross Christ gives life, like the tree of life in paradise.", "Տերևներ և ընձյուղներ են աճում խաչի ստորոտից․ Եկեղեցին ուսուցանում է, որ խաչի միջոցով Քրիստոսը կյանք է տալիս, ինչպես դրախտի կենաց ծառը։", "Из подножия креста растут листья и побеги: Церковь учит, что через крест Христос дарует жизнь, как древо жизни в раю.")),
+    P(178, 152, t("Eternity sign", "Հավերժության նշան", "Знак вечности"), t("A rosette of curved rays turning around a centre, an ancient Armenian sign of the sun, of endless movement and of eternity.", "Կենտրոնի շուրջ պտտվող կոր ճառագայթներով վարդյակ՝ արևի, անվերջ շարժման և հավերժության հին հայկական նշան։", "Розетка из изогнутых лучей, вращающихся вокруг центра, — древний армянский знак солнца, вечного движения и вечности.")),
+    P(204, 24, t("Ornament", "Զարդանախշ", "Орнамент"), t("Bands of interlace and plant patterns fill the frame. On the finest khachkars, such as master Poghos's at Goshavank, the stone looks like lace.", "Հյուսկեն և բուսական նախշերի գոտիները լցնում են շրջանակը։ Լավագույն խաչքարերի վրա, ինչպես Պողոս վարպետինը Գոշավանքում, քարը ժանյակի տեսք ունի։", "Пояса плетёнки и растительных узоров заполняют рамку. На лучших хачкарах, как у мастера Погоса в Гошаванке, камень похож на кружево.")),
+    P(204, 188, t("Inscription", "Արձանագրություն", "Надпись"), t("Usually at the bottom or on the edge: who set up the khachkar, in whose memory and in what year, often ending with a request to remember them in prayer.", "Սովորաբար ներքևում կամ եզրին․ ով է կանգնեցրել խաչքարը, ում հիշատակին և որ թվականին, հաճախ աղոթքում իրենց հիշելու խնդրանքով։", "Обычно внизу или по краю: кто поставил хачкар, в чью память и в каком году, часто с просьбой помянуть их в молитве.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees, trinity, sacraments, churchplan, calendar, khachkar };
