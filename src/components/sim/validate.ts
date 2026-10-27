@@ -5,6 +5,7 @@
  */
 import { list, parseArtSpec } from "@/lib/art/spec";
 import { parseFormula } from "@/lib/sim/elements";
+import { BAR_SETS } from "./data/bars";
 import { DIAGRAM_GROUPS, MECH_GROUPS } from "./mech/ids";
 import { REACTIONS } from "./widgets/balance";
 import { CHART_SETS } from "./widgets/chart";
@@ -72,7 +73,7 @@ const MODES: Record<string, string[]> = {
   forms: ["cases", "persons", "verbs", "compare"],
 };
 
-export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense"];
+export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars"];
 
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
@@ -126,6 +127,14 @@ export function checkSimSpec(source: string): string[] {
       break;
     }
     case "tense": if (spec.opts.name && !TENSE_NAMES.includes(spec.opts.name)) errors.push(`${where}: unknown tense "${spec.opts.name}"`); break;
+    case "punnett":
+      if (spec.opts.mode === "x") {
+        if (!/^[A-Za-z]{2}$/.test(spec.args[0] ?? "") || !/^[A-Za-z]$/.test(spec.args[1] ?? "")) errors.push(`${where}: X mode needs a mother like Hh and a father like H`);
+      } else if (spec.args.length !== 2 || spec.args.some((g) => !/^([A-Za-z]{2}){1,2}$/.test(g) || g.length !== spec.args[0].length)) errors.push(`${where}: needs two genotypes of the same length, like Aa Aa or AaBb AaBb`);
+      if (spec.opts.mode && spec.opts.mode !== "x") errors.push(`${where}: unknown mode "${spec.opts.mode}"`);
+      break;
+    case "bars": if (!BAR_SETS[spec.opts.set ?? ""]) errors.push(`${where}: unknown set "${spec.opts.set}"`); break;
+    case "pyramid": if (spec.args.length < 2 || spec.args.length > 5) errors.push(`${where}: needs 2 to 5 levels`); break;
     case "letters":
       if (spec.opts.mode === "order" && list(spec.opts.words).length < 2) errors.push(`${where}: needs words=`);
       if (spec.opts.abc && !["hy", "ru", "en"].includes(spec.opts.abc)) errors.push(`${where}: unknown alphabet "${spec.opts.abc}"`);

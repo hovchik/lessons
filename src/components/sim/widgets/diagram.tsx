@@ -11,6 +11,7 @@ import type { Diagram } from "../mech/types";
 const LOAD: Record<DiagramGroup, () => Promise<{ DIAGRAMS: Record<string, Diagram> }>> = {
   phys: () => import("../mech/diag-phys"),
   chem: () => import("../mech/diag-chem"),
+  bio: () => import("../mech/diag-bio"),
 };
 
 /** ```sim diagram sun: a labelled picture with numbered parts to tap. */

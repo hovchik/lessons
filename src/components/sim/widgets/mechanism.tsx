@@ -11,6 +11,7 @@ import type { Mech } from "../mech/types";
 const LOAD: Record<MechGroup, () => Promise<{ MECHS: Record<string, Mech> }>> = {
   phys: () => import("../mech/phys"),
   chem: () => import("../mech/chem"),
+  bio: () => import("../mech/bio"),
   geo: () => import("../mech/geo"),
 };
 

@@ -554,6 +554,30 @@ button.art-card:active { transform: scale(0.97); }
 .sim-part-card { margin-top: 0.6rem; padding: 0.6rem 0.8rem; border-radius: 16px; background: #fff; border: 2px solid color-mix(in srgb, var(--art) 35%, transparent); }
 .sim-part-card b { color: var(--art); }
 
+/* punnett square */
+.sim-punnett { display: grid; gap: 0.6rem; justify-items: center; }
+.sim-punnett-parents { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; font-weight: 800; }
+.sim-punnett-parents b { color: var(--art); }
+.sim-punnett-grid { display: grid; gap: 4px; width: 100%; }
+.sim-punnett-corner, .sim-punnett-gamete { display: grid; place-items: center; min-height: 2.6rem; border-radius: 12px; font-weight: 900; font-size: 0.95rem; }
+.sim-punnett-corner { color: var(--muted-foreground); font-size: 0.75rem; }
+.sim-punnett-gamete { background: var(--art-soft, #eef2ff); color: var(--art); }
+.sim-punnett-cell { min-height: 2.6rem; border-radius: 12px; border: 2px dashed var(--border); background: #fff; font-weight: 900; font-size: 1rem; color: var(--muted-foreground); padding: 0; }
+.sim-punnett-cell.is-small { font-size: 0.78rem; }
+.sim-punnett-cell.is-shown { border-style: solid; border-color: var(--pc); color: var(--pc); background: color-mix(in srgb, var(--pc) 10%, #fff); }
+
+/* energy pyramid */
+.sim-bars { display: grid; gap: 6px; }
+.sim-bars-row { display: grid; gap: 3px; padding: 4px 6px; border: 0; border-radius: 10px; background: transparent; text-align: left; cursor: pointer; }
+.sim-bars-row.is-active { background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.sim-bars-label { display: flex; justify-content: space-between; gap: 0.6rem; font-size: 0.86rem; font-weight: 800; }
+.sim-bars-label b { white-space: nowrap; font-weight: 900; }
+.sim-bars-track { display: block; height: 12px; border-radius: 6px; background: #eef0f6; overflow: hidden; }
+.sim-bars-track span { display: block; height: 100%; border-radius: 6px; transition: width 400ms ease; }
+.sim-pyramid { display: grid; gap: 4px; justify-items: center; }
+.sim-pyramid-level { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-height: 2.5rem; padding: 0 0.7rem; border-radius: 12px; font-weight: 900; color: #fff; border: 0; transition: width 400ms ease; }
+.sim-pyramid-level span:first-child { font-size: 1.25rem; }
+
 /* periodic table */
 .sim-ptable { display: grid; grid-template-columns: repeat(18, minmax(0, 1fr)); gap: 2px; }
 .sim-el { position: relative; aspect-ratio: 1; min-width: 0; border-radius: 4px; font: 900 clamp(6px, 1.6vw, 12px)/1 Nunito, sans-serif; color: #1e1b4b; border: 1px solid rgb(0 0 0 / 0.08); padding: 0; display: grid; place-items: center; transition: transform 150ms ease, opacity 300ms ease; }

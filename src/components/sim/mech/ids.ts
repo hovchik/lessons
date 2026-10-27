@@ -12,6 +12,7 @@ export const MECH_GROUPS = {
     "filtration", "distillation", "separate", "ionic", "covalent", "metallic", "electrolysis", "dissolve", "redox", "combustion", "catalyst",
     "polymer", "corrosion", "blastfurnace", "haber", "contact", "soap", "greenhouse", "hardness", "ester", "dna", "acidrain",
   ],
+  bio: ["mitosis", "meiosis", "protein", "photosynth", "enzyme", "fertilize", "immune", "reflex", "frog", "butterfly", "germinate", "breathing", "selection", "heartcycle", "drift", "limiting"],
   geo: ["midpoint", "bisectAngle", "perpendicular", "copyAngle", "sss", "parallelLine", "angleSum", "threePerp", "cubeSection"],
 } as const;
 
@@ -26,6 +27,11 @@ export function mechGroup(id: string): MechGroup | null {
 export const DIAGRAM_GROUPS = {
   phys: ["sun", "solarsystem", "galaxy", "galaxytypes", "thermos", "eye", "microscope", "telescope", "standardmodel", "interactions", "hr", "smartphone", "tracks"],
   chem: ["lab", "burner", "oilcolumn", "hazards"],
+  bio: [
+    "plantcell", "animalcell", "bacterium", "virus", "amoeba", "root", "stem", "leaf", "flower", "seed", "mushroom", "insect", "fish",
+    "heart", "lungs", "digestive", "neuron", "ear", "kidney", "chloroplast", "mitochondrion", "membrane",
+    "fern", "hydra", "snail", "spider", "bird", "bone", "glands", "miller", "homology",
+  ],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;
