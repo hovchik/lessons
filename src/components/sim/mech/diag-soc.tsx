@@ -144,7 +144,7 @@ const eduarm: Diagram = {
   },
   parts: [
     P(124, 33, t("Pre-school", "Նախադպրոցական", "Дошкольное"), t("Kindergarten up to age 6. Children learn through play: speaking, counting, drawing and getting along in a group.", "Մանկապարտեզ մինչև 6 տարեկանը։ Երեխաները սովորում են խաղի միջոցով՝ խոսել, հաշվել, նկարել և յոլա գնալ խմբում։", "Детский сад до 6 лет. Дети учатся через игру: говорить, считать, рисовать и ладить в группе.")),
-    P(153, 53, t("Primary school", "Տարրական դպրոց", "Начальная школа"), t("Grades 1 to 4, starting at 6. Reading, writing and arithmetic, the base for everything that follows.", "1-ից 4-րդ դասարաններ՝ 6 տարեկանից։ Կարդալ, գրել, թվաբանություն՝ հիմքը այն ամենի, ինչ հաջորդում է։", "Классы с 1 по 4, с 6 лет. Чтение, письмо и арифметика — основа всего, что дальше.")),
+    P(153, 53, t("Primary school", "Տարրական դպրոց", "Начальная школа"), t("Grades 1 to 4, starting at 6. Reading, writing and arithmetic, the base for everything that follows.", "1-ից 4-րդ դասարաններ՝ 6 տարեկանից։ Կարդալ, գրել, թվաբանություն՝ հիմքն այն ամենի, ինչ հաջորդում է։", "Классы с 1 по 4, с 6 лет. Чтение, письмо и арифметика — основа всего, что дальше.")),
     P(190, 73, t("Basic school", "Հիմնական դպրոց", "Основная школа"), t("Grades 5 to 9. After grade 9 a pupil can go on to high school or to a college that teaches a profession.", "5-ից 9-րդ դասարաններ։ 9-րդ դասարանից հետո աշակերտը կարող է շարունակել ավագ դպրոցում կամ քոլեջում, որը մասնագիտություն է տալիս։", "Классы с 5 по 9. После 9 класса можно пойти в старшую школу или в колледж, который даёт профессию.")),
     P(223, 93, t("High school", "Ավագ դպրոց", "Старшая школа"), t("Grades 10 to 12, with streams such as science and maths or humanities. It ends with final exams that also count for university entry.", "10-ից 12-րդ դասարաններ՝ հոսքերով, օրինակ՝ բնագիտամաթեմատիկական կամ հումանիտար։ Այն ավարտվում է ավարտական քննություններով, որոնք հաշվվում են նաև բուհ ընդունվելիս։", "Классы с 10 по 12, с профилями, например естественно-математическим или гуманитарным. Она заканчивается выпускными экзаменами, которые засчитываются и при поступлении в вуз.")),
     P(229, 113, t("College", "Քոլեջ", "Колледж"), t("Vocational education after grade 9 or 12: nurse, programmer, cook, electrician. Since 2017 college counts as completing compulsory secondary education too.", "Մասնագիտական կրթություն 9-րդ կամ 12-րդ դասարանից հետո՝ բուժքույր, ծրագրավորող, խոհարար, էլեկտրիկ։ 2017 թվականից քոլեջը նույնպես համարվում է պարտադիր միջնակարգ կրթության ավարտ։", "Профессиональное образование после 9 или 12 класса: медсестра, программист, повар, электрик. С 2017 года колледж тоже считается получением обязательного среднего образования.")),
@@ -225,7 +225,7 @@ const tki: Diagram = {
     P(300, 24, t("Collaborating", "Համագործակցություն", "Сотрудничество"), t("You ask why. Your sister needs the computer for a project due tomorrow, you want to play: she works first, you play after. It takes the most time and trust, and both get what really matters.", "Հարցնում ես՝ ինչու։ Քրոջդ համակարգիչը պետք է վաղվա նախագծի համար, իսկ դու ուզում ես խաղալ․ նա աշխատում է առաջինը, դու խաղում ես հետո։ Սա ամենաշատ ժամանակն ու վստահությունն է պահանջում, և երկուսն էլ ստանում են իսկապես կարևորը։", "Ты спрашиваешь «зачем?». Сестре компьютер нужен для проекта к завтрашнему дню, а ты хочешь поиграть: сначала работает она, потом играешь ты. Это требует больше всего времени и доверия, зато оба получают то, что действительно важно.")),
     P(214, 84, t("Compromising", "Փոխզիջում", "Компромисс"), t("An hour each. Quick and looks fair, but each gets only half of what they wanted, and nobody asked why.", "Յուրաքանչյուրին՝ մեկ ժամ։ Արագ է և արդար տեսք ունի, բայց յուրաքանչյուրը ստանում է ուզածի միայն կեսը, և ոչ ոք չհարցրեց՝ ինչու։", "По часу каждому. Быстро и выглядит справедливо, но каждый получает лишь половину желаемого, и никто не спросил «зачем?».")),
     P(128, 144, t("Avoiding", "Խուսափում", "Избегание"), t("Both sulk and say nothing. Wise for a short while, to calm down, or when the matter is trivial; otherwise the problem only grows.", "Երկուսն էլ նեղացած լռում են։ Իմաստուն է կարճ ժամանակով՝ հանգստանալու համար, կամ երբ հարցը չնչին է․ այլապես խնդիրը միայն մեծանում է։", "Оба дуются и молчат. Разумно ненадолго, чтобы остыть, или когда вопрос пустяковый; иначе проблема только растёт.")),
-    P(300, 144, t("Accommodating", "Զիջում", "Приспособление"), t("\"Fine, take it.\" Good when the matter means much more to the other person, or when you were wrong. If you always give in, your own needs are never met.", "«Լավ, վերցրու»։ Լավ է, երբ հարցը շատ ավելի կարևոր է մյուսի համար, կամ երբ դու սխալ էիր։ Եթե միշտ զիջես, քո սեփական կարիքները երբեք չեն բավարարվի։", "«Ладно, бери». Хорошо, когда вопрос гораздо важнее для другого или когда ты был неправ. Если уступать всегда, твои собственные потребности никогда не будут учтены.")),
+    P(300, 144, t("Accommodating", "Զիջում", "Приспособление"), t("\"Fine, take it.\" Good when the matter means much more to the other person, or when you were wrong. If you always give in, your own needs are never met.", "«Լավ, վերցրու»։ Լավ է, երբ հարցը շատ ավելի կարևոր է մյուսի համար, կամ երբ դու սխալ էիր։ Եթե միշտ զիջես, քո սեփական կարիքներն երբեք չեն բավարարվի։", "«Ладно, бери». Хорошо, когда вопрос гораздо важнее для другого или когда ты был неправ. Если уступать всегда, твои собственные потребности никогда не будут учтены.")),
   ],
 };
 
@@ -283,7 +283,7 @@ const govforms: Diagram = {
     </g>
   ),
   parts: [
-    P(56, 120, t("Presidential republic (USA)", "Նախագահական հանրապետություն (ԱՄՆ)", "Президентская республика (США)"), t("Voters choose the president and Congress in separate elections. The president heads the government for 4 years (at most two terms) and can veto laws; Congress can overrule a veto with two thirds of the votes, but cannot dismiss the president except by impeachment.", "Ընտրողները նախագահին և Կոնգրեսին ընտրում են առանձին ընտրություններով։ Նախագահը 4 տարով (առավելագույնը երկու ժամկետ) ղեկավարում է կառավարությունը և կարող է վետո դնել օրենքների վրա․ Կոնգրեսը կարող է հաղթահարել վետոն ձայների երկու երրորդով, բայց չի կարող պաշտոնանկ անել նախագահին, բացի իմփիչմենթից։", "Избиратели выбирают президента и Конгресс на отдельных выборах. Президент 4 года (не больше двух сроков) возглавляет правительство и может наложить вето на закон; Конгресс может преодолеть вето двумя третями голосов, но отстранить президента может только через импичмент.")),
+    P(56, 120, t("Presidential republic (USA)", "Նախագահական հանրապետություն (ԱՄՆ)", "Президентская республика (США)"), t("Voters choose the president and Congress in separate elections. The president heads the government for 4 years (at most two terms) and can veto laws; Congress can overrule a veto with two thirds of the votes, but cannot dismiss the president except by impeachment.", "Ընտրողները նախագահին և Կոնգրեսին ընտրում են առանձին ընտրություններով։ Նախագահը 4 տարով (առավելագույնն երկու ժամկետ) ղեկավարում է կառավարությունը և կարող է վետո դնել օրենքների վրա․ Կոնգրեսը կարող է հաղթահարել վետոն ձայների երկու երրորդով, բայց չի կարող պաշտոնանկ անել նախագահին, բացի իմփիչմենթից։", "Избиратели выбирают президента и Конгресс на отдельных выборах. Президент 4 года (не больше двух сроков) возглавляет правительство и может наложить вето на закон; Конгресс может преодолеть вето двумя третями голосов, но отстранить президента может только через импичмент.")),
     P(184, 96, t("Parliamentary republic (Armenia)", "Խորհրդարանական հանրապետություն (Հայաստան)", "Парламентская республика (Армения)"), t("Voters elect only the National Assembly. It chooses the prime minister, who leads the government, and elects the president for 7 years. Parliament can remove the prime minister by a vote of no confidence, so the government depends on its majority.", "Ընտրողներն ընտրում են միայն Ազգային ժողովը։ Այն ընտրում է կառավարությունը ղեկավարող վարչապետին և 7 տարով ընտրում է նախագահին։ Խորհրդարանը կարող է անվստահություն հայտնել վարչապետին, ուստի կառավարությունը կախված է իր մեծամասնությունից։", "Избиратели выбирают только Национальное собрание. Оно выбирает премьер-министра, который возглавляет правительство, и избирает президента на 7 лет. Парламент может выразить недоверие премьер-министру, поэтому правительство зависит от своего большинства.")),
     P(236, 104, t("Semi-presidential republic (France)", "Կիսանախագահական հանրապետություն (Ֆրանսիա)", "Полупрезидентская республика (Франция)"), t("Voters elect both the president (for 5 years) and parliament. The president appoints the prime minister, but parliament can bring the government down. When the majority is against the president, he must name a prime minister from the other side: the French call this cohabitation.", "Ընտրողներն ընտրում են և՛ նախագահին (5 տարով), և՛ խորհրդարանին։ Նախագահը նշանակում է վարչապետին, բայց խորհրդարանը կարող է հրաժարականի ուղարկել կառավարությանը։ Երբ մեծամասնությունը նախագահի դեմ է, նա պետք է վարչապետ նշանակի մյուս կողմից․ ֆրանսիացիներն սա անվանում են «համակեցություն»։", "Избиратели выбирают и президента (на 5 лет), и парламент. Президент назначает премьер-министра, но парламент может отправить правительство в отставку. Когда большинство против президента, он должен назначить премьера из другого лагеря: французы называют это «сосуществованием».")),
     P(130, 204, t("And monarchies?", "Իսկ միապետությունները՞", "А монархии?"), t("A constitutional monarchy such as the United Kingdom or Japan works like the middle column: voters elect parliament, the government answers to it, and the monarch stays as a symbol instead of an elected president.", "Սահմանադրական միապետությունը, օրինակ՝ Մեծ Բրիտանիան կամ Ճապոնիան, աշխատում է միջին սյունակի պես․ ընտրողներն ընտրում են խորհրդարանը, կառավարությունը պատասխանատու է նրա առջև, իսկ ընտրովի նախագահի փոխարեն միապետն է մնում որպես խորհրդանիշ։", "Конституционная монархия, например Великобритания или Япония, устроена как средняя колонка: избиратели выбирают парламент, правительство отвечает перед ним, а вместо выборного президента символом остаётся монарх.")),
@@ -486,7 +486,7 @@ const spheres: Diagram = {
     P(20, 20, t("Economic sphere", "Տնտեսական ոլորտ", "Экономическая сфера"), t("The world financial crisis of 2008 reached Armenia in 2009: construction stopped, money sent home by relatives abroad fell, and the economy shrank by about 14%. An economic shock soon became a social one, with lost jobs and new emigration.", "2008 թվականի համաշխարհային ֆինանսական ճգնաժամը Հայաստան հասավ 2009 թվականին․ շինարարությունը կանգ առավ, արտասահմանում աշխատող հարազատների ուղարկած գումարները նվազեցին, և տնտեսությունը կրճատվեց մոտ 14%-ով։ Տնտեսական ցնցումը շուտով դարձավ սոցիալական՝ կորցրած աշխատատեղերով և նոր արտագաղթով։", "Мировой финансовый кризис 2008 года дошёл до Армении в 2009-м: стройки остановились, переводы от родственников из-за границы сократились, и экономика упала примерно на 14%. Экономический шок вскоре стал социальным — с потерянной работой и новой эмиграцией.")),
     P(300, 20, t("Political sphere", "Քաղաքական ոլորտ", "Политическая сфера"), t("A political decision can redraw the economy: when Armenia joined the Eurasian Economic Union in 2015, customs rules, trade partners and the prices of many imported goods changed.", "Քաղաքական որոշումը կարող է վերաձևել տնտեսությունը․ երբ 2015 թվականին Հայաստանը միացավ Եվրասիական տնտեսական միությանը, փոխվեցին մաքսային կանոնները, առևտրային գործընկերները և շատ ներմուծվող ապրանքների գները։", "Политическое решение может перекроить экономику: когда в 2015 году Армения вступила в Евразийский экономический союз, изменились таможенные правила, торговые партнёры и цены многих импортных товаров.")),
     P(20, 200, t("Social sphere", "Սոցիալական ոլորտ", "Социальная сфера"), t("Groups, families and nations. When many people leave to work abroad, families change: grandparents raise children, and money from abroad becomes part of the family budget.", "Խմբեր, ընտանիքներ և ազգեր։ Երբ շատ մարդիկ մեկնում են արտասահման աշխատելու, ընտանիքները փոխվում են․ երեխաներին մեծացնում են պապերն ու տատերը, իսկ արտասահմանից եկող գումարը դառնում է ընտանեկան բյուջեի մաս։", "Группы, семьи и нации. Когда многие уезжают работать за границу, семьи меняются: детей растят бабушки и дедушки, а деньги из-за границы становятся частью семейного бюджета.")),
-    P(300, 200, t("Spiritual sphere", "Հոգևոր ոլորտ", "Духовная сфера"), t("Ideas change the other spheres. Computer research in Yerevan from the 1950s and schools like TUMO helped to create an IT industry that now exports services worldwide.", "Գաղափարները փոխում են մյուս ոլորտները։ 1950-ականներից Երևանում կատարվող համակարգչային հետազոտությունները և ԹՈՒՄՈ-ի նման կրթական կենտրոնները օգնեցին ստեղծել ՏՏ ոլորտ, որն այսօր ծառայություններ է արտահանում ամբողջ աշխարհ։", "Идеи меняют другие сферы. Компьютерные исследования в Ереване с 1950-х и такие центры, как TUMO, помогли создать IT-отрасль, которая сегодня экспортирует услуги по всему миру.")),
+    P(300, 200, t("Spiritual sphere", "Հոգևոր ոլորտ", "Духовная сфера"), t("Ideas change the other spheres. Computer research in Yerevan from the 1950s and schools like TUMO helped to create an IT industry that now exports services worldwide.", "Գաղափարները փոխում են մյուս ոլորտները։ 1950-ականներից Երևանում կատարվող համակարգչային հետազոտությունները և ԹՈՒՄՈ-ի նման կրթական կենտրոններն օգնեցին ստեղծել ՏՏ ոլորտ, որն այսօր ծառայություններ է արտահանում ամբողջ աշխարհ։", "Идеи меняют другие сферы. Компьютерные исследования в Ереване с 1950-х и такие центры, как TUMO, помогли создать IT-отрасль, которая сегодня экспортирует услуги по всему миру.")),
     P(186, 84, t("Why \"system\"", "Ինչու «համակարգ»", "Почему «система»"), t("Like organs in a body, the spheres depend on each other: a change in one spreads to the rest. That is why a reform rarely affects only the area it was meant for.", "Ինչպես մարմնի օրգանները, ոլորտները կախված են միմյանցից․ մեկում փոփոխությունը տարածվում է մյուսներին։ Ահա թե ինչու բարեփոխումը հազվադեպ է ազդում միայն այն ոլորտի վրա, որի համար նախատեսված էր։", "Как органы в теле, сферы зависят друг от друга: изменение в одной передаётся остальным. Поэтому реформа редко затрагивает только ту область, для которой задумана.")),
   ],
 };
@@ -559,7 +559,7 @@ const fakenews: Diagram = {
     P(170, 28, t("Who wrote it?", "Ո՞վ է գրել", "Кто автор?"), t("An unknown site with a number in its name and no author. A reliable outlet has an editorial office, an address and named journalists.", "Անհայտ կայք՝ անվան մեջ թվով և առանց հեղինակի։ Վստահելի լրատվամիջոցն ունի խմբագրություն, հասցե և անուններով լրագրողներ։", "Неизвестный сайт с цифрой в названии и без автора. У надёжного издания есть редакция, адрес и журналисты с именами.")),
     P(128, 37, t("When?", "Ե՞րբ", "Когда?"), t("Published years ago and shared again as if it were new. Old stories are often brought back when they fit a new mood.", "Հրապարակվել է տարիներ առաջ և նորից տարածվում է, կարծես նոր լինի։ Հին պատմությունները հաճախ վերադարձվում են, երբ համապատասխանում են նոր տրամադրությանը։", "Опубликовано много лет назад и снова распространяется как новое. Старые истории часто возвращают, когда они подходят к новому настроению.")),
     P(262, 76, t("Is anyone else reporting it?", "Ուրիշ որևէ մեկը հաղորդո՞ւմ է", "Пишет ли кто-то ещё?"), t("A real discovery about heart attacks would be in every serious newspaper and medical journal. If only one unknown site has it, it is almost certainly false.", "Ինֆարկտի մասին իրական հայտնագործությունը կլիներ յուրաքանչյուր լուրջ թերթում և բժշկական ամսագրում։ Եթե այն ունի միայն մեկ անհայտ կայք, այն գրեթե անկասկած կեղծ է։", "Настоящее открытие об инфарктах было бы в каждой серьёзной газете и медицинском журнале. Если об этом пишет только один неизвестный сайт, это почти наверняка ложь.")),
-    P(228, 132, t("The picture", "Նկարը", "Картинка"), t("The photo is from another place and year. A reverse image search (uploading the picture to a search engine) shows where it first appeared.", "Լուսանկարը այլ վայրից և տարուց է։ Նկարի հակադարձ որոնումը (նկարը որոնողական համակարգ վերբեռնելը) ցույց է տալիս, թե որտեղ է այն առաջին անգամ հայտնվել։", "Фото из другого места и года. Обратный поиск по картинке (загрузка изображения в поисковик) показывает, где оно появилось впервые.")),
+    P(228, 132, t("The picture", "Նկարը", "Картинка"), t("The photo is from another place and year. A reverse image search (uploading the picture to a search engine) shows where it first appeared.", "Լուսանկարն այլ վայրից և տարուց է։ Նկարի հակադարձ որոնումը (նկարը որոնողական համակարգ վերբեռնելը) ցույց է տալիս, թե որտեղ է այն առաջին անգամ հայտնվել։", "Фото из другого места и года. Обратный поиск по картинке (загрузка изображения в поисковик) показывает, где оно появилось впервые.")),
     P(262, 176, t("Feelings and fake experts", "Զգացմունքներ և կեղծ փորձագետներ", "Эмоции и фальшивые эксперты"), t("Capital letters, exclamation marks and \"experts say\" without a single name are built to make you afraid, not to inform you. Strong fear or anger is a signal to slow down.", "Մեծատառերը, բացականչական նշանները և «փորձագետներն ասում են»՝ առանց մեկ անվան, ստեղծված են քեզ վախեցնելու, ոչ թե տեղեկացնելու համար։ Ուժեղ վախը կամ զայրույթը դանդաղելու ազդանշան է։", "Заглавные буквы, восклицательные знаки и «эксперты говорят» без единого имени созданы, чтобы напугать, а не сообщить. Сильный страх или злость — сигнал притормозить.")),
     P(280, 197, t("Don't share yet", "Մի՛ տարածիր առայժմ", "Пока не делись"), t("Pressure to share \"before it is deleted\" is a trick. 48,000 shares prove only that many people did not check. Share after checking, or not at all.", "«Մինչև ջնջեն» տարածելու ճնշումը հնարք է։ 48 000 տարածումն ապացուցում է միայն, որ շատերը չեն ստուգել։ Տարածի՛ր ստուգելուց հետո, կամ ընդհանրապես մի՛ տարածիր։", "Давление «расшарь, пока не удалили» — это уловка. 48 000 репостов доказывают лишь, что многие не проверили. Делись после проверки или не делись вовсе.")),
   ],
@@ -597,12 +597,234 @@ const chain: Diagram = {
   ),
   parts: [
     P(16, 18, t("Design", "Դիզայն", "Дизайн"), t("Engineers and programmers create the look and the software. Much of the value of a phone, and of its price, goes to the companies that own the design and the brand.", "Ինժեներներն ու ծրագրավորողները ստեղծում են արտաքին տեսքն ու ծրագրերը։ Հեռախոսի արժեքի և գնի մեծ մասը բաժին է ընկնում այն ընկերություններին, որոնց պատկանում են դիզայնն ու ապրանքանիշը։", "Инженеры и программисты создают внешний вид и программы. Большая часть стоимости телефона и его цены достаётся компаниям, которым принадлежат дизайн и бренд.")),
-    P(206, 18, t("Chips", "Միկրոսխեմաներ", "Микросхемы"), t("The most advanced processors are made in only a few factories in the world, many of them in Taiwan. When those factories stop, car and phone makers everywhere wait.", "Ամենաառաջադեմ պրոցեսորները արտադրվում են աշխարհի ընդամենը մի քանի գործարանում, որոնցից շատերը՝ Թայվանում։ Երբ այդ գործարանները կանգ են առնում, ամենուր ավտոմեքենաների և հեռախոսների արտադրողները սպասում են։", "Самые передовые процессоры делают лишь на нескольких заводах в мире, многие из них — на Тайване. Когда эти заводы останавливаются, производители машин и телефонов по всему миру ждут.")),
+    P(206, 18, t("Chips", "Միկրոսխեմաներ", "Микросхемы"), t("The most advanced processors are made in only a few factories in the world, many of them in Taiwan. When those factories stop, car and phone makers everywhere wait.", "Ամենաառաջադեմ պրոցեսորներն արտադրվում են աշխարհի ընդամենը մի քանի գործարանում, որոնցից շատերը՝ Թայվանում։ Երբ այդ գործարանները կանգ են առնում, ամենուր ավտոմեքենաների և հեռախոսների արտադրողները սպասում են։", "Самые передовые процессоры делают лишь на нескольких заводах в мире, многие из них — на Тайване. Когда эти заводы останавливаются, производители машин и телефонов по всему миру ждут.")),
     P(304, 18, t("Metals", "Մետաղներ", "Металлы"), t("A phone holds dozens of elements. Most of the world's cobalt for batteries comes from the Democratic Republic of the Congo, where children have been found working in some small mines.", "Հեռախոսը պարունակում է տասնյակ տարրեր։ Մարտկոցների համար աշխարհի կոբալտի մեծ մասը գալիս է Կոնգոյի Դեմոկրատական Հանրապետությունից, որտեղ որոշ փոքր հանքերում հայտնաբերվել են աշխատող երեխաներ։", "В телефоне десятки элементов. Большая часть кобальта для аккумуляторов в мире добывается в Демократической Республике Конго, где на некоторых мелких рудниках находили работающих детей.")),
     P(304, 108, t("Assembly", "Հավաքում", "Сборка"), t("Hundreds of parts are put together in huge factories, mostly in Asia, where labour costs less. Assembly adds only a small share of the final price.", "Հարյուրավոր մասեր հավաքվում են հսկայական գործարաններում, հիմնականում Ասիայում, որտեղ աշխատուժն ավելի էժան է։ Հավաքումը վերջնական գնի միայն փոքր մասն է ավելացնում։", "Сотни деталей собирают на огромных заводах, в основном в Азии, где труд дешевле. Сборка добавляет лишь небольшую долю итоговой цены.")),
-    P(206, 108, t("Shipping", "Փոխադրում", "Перевозка"), t("Standard containers and cargo planes make moving goods so cheap that crossing an ocean adds very little to the price of a phone.", "Ստանդարտ բեռնարկղերն ու բեռնատար ինքնաթիռները ապրանքների փոխադրումն այնքան էժան են դարձնում, որ օվկիանոսն անցնելը հեռախոսի գնին շատ քիչ է ավելացնում։", "Стандартные контейнеры и грузовые самолёты делают перевозку настолько дешёвой, что пересечение океана почти не сказывается на цене телефона.")),
+    P(206, 108, t("Shipping", "Փոխադրում", "Перевозка"), t("Standard containers and cargo planes make moving goods so cheap that crossing an ocean adds very little to the price of a phone.", "Ստանդարտ բեռնարկղերն ու բեռնատար ինքնաթիռներն ապրանքների փոխադրումն այնքան էժան են դարձնում, որ օվկիանոսն անցնելը հեռախոսի գնին շատ քիչ է ավելացնում։", "Стандартные контейнеры и грузовые самолёты делают перевозку настолько дешёвой, что пересечение океана почти не сказывается на цене телефона.")),
     P(16, 108, t("Shops", "Խանութներ", "Магазины"), t("The same model is sold in Yerevan, Tokyo and São Paulo. That is economic globalisation: one product, a chain of many countries, and a crisis anywhere in the chain is felt everywhere.", "Նույն մոդելը վաճառվում է Երևանում, Տոկիոյում և Սան Պաուլուում։ Սա տնտեսական գլոբալացումն է․ մեկ ապրանք, շատ երկրների շղթա, և շղթայի ցանկացած օղակում ճգնաժամը զգացվում է ամենուր։", "Одна и та же модель продаётся в Ереване, Токио и Сан-Паулу. Это экономическая глобализация: один товар, цепочка из многих стран, и кризис в любом её звене ощущается везде.")),
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov, labour, spheres, mobility, fakenews, chain };
+/* ---------------- grade 12: Plato's cave ---------------- */
+
+const cave: Diagram = {
+  title: t("Plato's cave", "Պլատոնի քարանձավը", "Пещера Платона"),
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="216" fill="#fde68a" />
+      <circle cx="298" cy="22" r="13" fill="#facc15" stroke="#f59e0b" strokeWidth="2" />
+      <path d="M0,0 H262 C250,40 246,70 252,96 L316,60 V216 H0 Z" fill="#44403c" />
+      <path d="M8,30 H40 V200 H8 Z" fill="#57534e" />
+      {/* shadows on the back wall */}
+      <path d="M14,96 q8,-14 18,-4 q4,-10 6,2 v18 h-24 Z" fill="#1c1917" />
+      <path d="M20,140 q-6,10 0,20 h12 q6,-10 0,-20 Z" fill="#1c1917" />
+      {/* prisoners facing the wall */}
+      {[86, 106, 126].map((x, k) => (
+        <g key={k}>
+          <Head x={x} y={150} r={6} fill="#a8a29e" />
+          <path d={`M${x - 6},170 L${x - 14},196 M${x + 6},170 L${x + 2},196`} stroke="#78716c" strokeWidth="1.4" strokeDasharray="2 2" />
+        </g>
+      ))}
+      {/* low wall, carriers and objects */}
+      <rect x="150" y="150" width="46" height="30" fill="#78716c" />
+      <Head x={172} y={136} r={5} fill="#292524" />
+      <path d="M168,128 V112 M176,128 V108" stroke="#a8a29e" strokeWidth="1.4" />
+      <path d="M160,112 q8,-12 16,-2 q3,-6 5,1 v6 h-21 Z" fill="#d6d3d1" />
+      {/* fire */}
+      <path d="M222,182 q-10,-14 0,-30 q2,10 8,8 q-2,-10 4,-18 q10,18 2,40 Z" fill="#f97316" />
+      <path d="M226,182 q-4,-8 2,-16 q4,8 6,16 Z" fill="#fde047" />
+      {/* light rays to the wall */}
+      <path d="M216,160 L42,112 M216,164 L42,150" stroke="#fdba74" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.6" />
+      {/* the way up and the freed prisoner */}
+      <path d="M236,196 C260,170 262,130 272,90" fill="none" stroke="#d6d3d1" strokeWidth="2" strokeDasharray="4 3" />
+      <Head x={268} y={112} r={5} fill="#fbbf24" />
+      <Tx x={24} y={22} s={t("wall", "պատ", "стена")} lang={lang} size={7} fill="#e7e5e4" />
+      <Tx x={292} y={50} s={t("outside", "դրսում", "снаружи")} lang={lang} size={7} fill="#92400e" anchor="end" />
+    </g>
+  ),
+  parts: [
+    P(106, 132, t("The prisoners", "Կալանավորները", "Узники"), t("Chained from childhood, they can look only at the wall in front of them. They have never seen anything else, so they take the shadows for real things. Plato says that this is us, whenever we accept how things look without asking what they really are.", "Մանկուց շղթայված՝ նրանք կարող են նայել միայն դիմացի պատին։ Նրանք երբեք ուրիշ բան չեն տեսել, ուստի ստվերներն իրական առարկաներ են համարում։ Պլատոնն ասում է, որ սա մենք ենք, ամեն անգամ, երբ ընդունում ենք իրերն այնպես, ինչպես երևում են, առանց հարցնելու, թե իրականում ինչ են։", "Скованные с детства, они могут смотреть только на стену перед собой. Они никогда не видели ничего другого и принимают тени за настоящие вещи. Платон говорит, что это мы, когда принимаем вещи такими, какими они кажутся, не спрашивая, что они такое на самом деле.")),
+    P(36, 80, t("Shadows", "Ստվերներ", "Тени"), t("The only world the prisoners know. They even give prizes to whoever is best at guessing which shadow comes next. For Plato, the things we see with our senses are like these shadows: copies of the ideas, which are more real.", "Կալանավորներին հայտնի միակ աշխարհը։ Նրանք նույնիսկ մրցանակ են տալիս նրան, ով ամենալավն է գուշակում, թե որ ստվերը կհայտնվի հետո։ Պլատոնի համար այն, ինչ մենք տեսնում ենք զգայարաններով, նման է այս ստվերներին՝ գաղափարների պատճեններ, որոնք ավելի իրական են։", "Единственный мир, который знают узники. Они даже награждают того, кто лучше всех угадывает, какая тень появится следующей. Для Платона то, что мы видим органами чувств, похоже на эти тени: это копии идей, которые реальнее.")),
+    P(196, 104, t("Fire and objects", "Կրակ և առարկաներ", "Огонь и предметы"), t("Behind the prisoners, people carry objects along a low wall in front of a fire. The objects cast the shadows. Even what seems real at first can turn out to be only a copy of something else.", "Կալանավորների թիկունքում մարդիկ կրակի առջև ցածր պատի երկայնքով առարկաներ են տանում։ Առարկաներն են ստվերներ գցում։ Նույնիսկ այն, ինչ սկզբում իրական է թվում, կարող է պարզվել, որ ուրիշ բանի պատճենն է։", "За спинами узников люди проносят предметы вдоль низкой стены перед огнём. Предметы и отбрасывают тени. Даже то, что поначалу кажется настоящим, может оказаться лишь копией чего-то другого.")),
+    P(284, 128, t("The way out", "Ելքը", "Путь наверх"), t("One prisoner is set free. The light hurts his eyes, the climb is steep, and at first he wants to go back to the familiar shadows. Learning can be painful, but it frees. Plato describes education as turning the whole soul towards the light.", "Կալանավորներից մեկին ազատում են։ Լույսը ցավեցնում է նրա աչքերը, վերելքը զառիվեր է, և սկզբում նա ուզում է վերադառնալ սովոր ստվերներին։ Սովորելը կարող է ցավոտ լինել, բայց այն ազատում է։ Պլատոնը կրթությունը նկարագրում է որպես ամբողջ հոգու շրջում դեպի լույսը։", "Одного узника освобождают. Свет режет ему глаза, подъём крутой, и сначала он хочет вернуться к привычным теням. Учиться бывает больно, но это освобождает. Платон описывает образование как поворот всей души к свету.")),
+    P(276, 22, t("The sun", "Արևը", "Солнце"), t("Outside he first looks at reflections in water, then at real things, and finally at the sun, which makes everything visible. In Plato's story the sun stands for the idea of the Good, the highest knowledge.", "Դրսում նա սկզբում նայում է ջրի մեջ արտացոլումներին, հետո իրական առարկաներին և վերջապես արևին, որն ամեն ինչ տեսանելի է դարձնում։ Պլատոնի պատմության մեջ արևը բարու գաղափարն է՝ ամենաբարձր գիտելիքը։", "Снаружи он сначала смотрит на отражения в воде, потом на настоящие вещи и наконец на солнце, которое делает всё видимым. В рассказе Платона солнце означает идею Блага, высшее знание.")),
+    P(150, 196, t("Going back", "Վերադարձը", "Возвращение"), t("If the freed man returns to tell the others, his eyes are no longer used to the dark, and they laugh at him. Plato adds that they would kill anyone who tried to lead them out: a hint at his teacher Socrates, executed in Athens in 399 BC.", "Եթե ազատված մարդը վերադառնա՝ մյուսներին պատմելու, նրա աչքերն այլևս սովոր չեն մթությանը, և նրանք ծիծաղում են նրա վրա։ Պլատոնն ավելացնում է, որ նրանք կսպանեին յուրաքանչյուրին, ով կփորձեր նրանց դուրս հանել․ ակնարկ նրա ուսուցիչ Սոկրատեսին, որին մահապատժի ենթարկեցին Աթենքում մ.թ.ա. 399 թվականին։", "Если освобождённый вернётся, чтобы рассказать остальным, его глаза уже отвыкли от темноты, и над ним смеются. Платон добавляет, что они убили бы любого, кто попытался бы вывести их наружу: намёк на его учителя Сократа, казнённого в Афинах в 399 году до н. э.")),
+  ],
+};
+
+/* ---------------- grade 12: the scientific method ---------------- */
+
+const STEPS: Array<[number, number, Tr, string]> = [
+  [160, 22, t("Observation", "Դիտարկում", "Наблюдение"), "#0891b2"],
+  [258, 62, t("Question", "Հարց", "Вопрос"), "#4f46e5"],
+  [258, 154, t("Hypothesis", "Վարկած", "Гипотеза"), "#7c3aed"],
+  [160, 194, t("Experiment", "Փորձ", "Эксперимент"), "#e11d48"],
+  [62, 154, t("Analysis", "Վերլուծություն", "Анализ"), "#f59e0b"],
+  [62, 62, t("Conclusion", "Եզրակացություն", "Вывод"), "#10b981"],
+];
+
+const method: Diagram = {
+  title: t("The scientific method: why does bread go mouldy?", "Գիտական մեթոդ․ ինչո՞ւ է հացը բորբոսնում", "Научный метод: почему плесневеет хлеб?"),
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      <Ar d="M206,30 C230,36 244,44 250,48" />
+      <Ar d="M258,76 V138" />
+      <Ar d="M248,168 C230,184 214,190 208,192" />
+      <Ar d="M112,192 C96,190 82,182 72,168" />
+      <Ar d="M62,140 V78" />
+      <Ar d="M72,48 C82,40 96,32 112,28" />
+      <Ar d="M90,76 C120,172 196,172 214,160" dash />
+      <Tx x={172} y={140} s={t("rejected?|a new hypothesis", "մերժվե՞ց․|նոր վարկած", "отвергнута?|новая гипотеза")} lang={lang} size={6.3} fill="#64748b" w={700} />
+      {STEPS.map(([x, y, name, c], k) => (
+        <g key={k}>
+          <rect x={x - 46} y={y - 13} width="92" height="26" rx="13" fill="#fff" stroke={c} strokeWidth="2" />
+          <Tx x={x} y={y + 3} s={name} lang={lang} size={L(name, lang).length > 12 ? 7 : 8} fill={c} />
+        </g>
+      ))}
+      {/* two slices: warm and cold */}
+      <path d="M118,104 q0,-22 18,-22 q18,0 18,22 v22 h-36 Z" fill="#fcd34d" stroke="#b45309" strokeWidth="1.5" />
+      <circle cx="128" cy="104" r="4" fill="#65a30d" /><circle cx="142" cy="114" r="3" fill="#65a30d" /><circle cx="134" cy="96" r="2.5" fill="#65a30d" />
+      <path d="M166,104 q0,-22 18,-22 q18,0 18,22 v22 h-36 Z" fill="#fcd34d" stroke="#b45309" strokeWidth="1.5" />
+      <Tx x={136} y={78} s={t("warm", "տաք", "тепло")} lang={lang} size={6.5} fill="#b45309" />
+      <Tx x={184} y={78} s={t("fridge", "սառնարան", "холодильник")} lang={lang} size={6.5} fill="#0369a1" />
+    </g>
+  ),
+  parts: [
+    P(206, 12, t("Observation", "Դիտարկում", "Наблюдение"), t("Bread left on the table goes mouldy in a few days, and it seems to happen faster in summer. Science starts by noticing something, and noticing it carefully.", "Սեղանին թողած հացը մի քանի օրում բորբոսնում է, և թվում է, թե ամռանն ավելի արագ է դա տեղի ունենում։ Գիտությունը սկսվում է ինչ-որ բան նկատելուց, այն էլ ուշադիր նկատելուց։", "Хлеб, оставленный на столе, плесневеет за несколько дней, и летом, кажется, быстрее. Наука начинается с того, что что-то замечают, и замечают внимательно.")),
+    P(304, 52, t("Question", "Հարց", "Вопрос"), t("Does warmth make mould grow faster? A good question can be answered by a test, unlike \"Why is mould so disgusting?\"", "Արդյո՞ք ջերմությունն արագացնում է բորբոսի աճը։ Լավ հարցին կարելի է պատասխանել փորձով, ի տարբերություն «Ինչո՞ւ է բորբոսն այդքան զզվելի» հարցի։", "Ускоряет ли тепло рост плесени? На хороший вопрос можно ответить опытом, в отличие от вопроса «Почему плесень такая противная?».")),
+    P(304, 144, t("Hypothesis", "Վարկած", "Гипотеза"), t("\"Mould grows faster in warmth.\" A hypothesis must be falsifiable: we can imagine a result that would show it is wrong, for example the cold slice going mouldy first.", "«Բորբոսն ավելի արագ է աճում ջերմության մեջ»։ Վարկածը պետք է լինի հերքելի․ կարող ենք պատկերացնել արդյունք, որը ցույց կտա, որ այն սխալ է, օրինակ՝ սառը կտորն առաջինը բորբոսնի։", "«Плесень растёт быстрее в тепле». Гипотеза должна быть опровержимой: можно представить результат, который покажет, что она неверна, например холодный ломтик заплесневеет первым.")),
+    P(206, 184, t("Experiment", "Փորձ", "Эксперимент"), t("Two identical slices from the same loaf, in identical bags: one in the fridge, one in a warm room. Only one thing changes, the temperature; everything else stays the same. Otherwise we cannot tell what caused the difference.", "Միևնույն բոքոնից երկու միանման կտոր՝ միանման տոպրակներում․ մեկը սառնարանում, մյուսը՝ տաք սենյակում։ Փոխվում է միայն մեկ բան՝ ջերմաստիճանը, մնացած ամեն ինչը մնում է նույնը։ Հակառակ դեպքում չենք կարող ասել, թե ինչն է տարբերության պատճառը։", "Два одинаковых ломтика от одной буханки в одинаковых пакетах: один в холодильнике, другой в тёплой комнате. Меняется только одно — температура, всё остальное остаётся прежним. Иначе нельзя понять, что вызвало разницу.")),
+    P(16, 144, t("Analysis", "Վերլուծություն", "Анализ"), t("Count the days until mould appears. Do it with several pairs of slices, because one result can be chance. Then compare with what the hypothesis predicted.", "Հաշվիր օրերը մինչև բորբոսի հայտնվելը։ Արա դա մի քանի զույգ կտորով, որովհետև մեկ արդյունքը կարող է պատահական լինել։ Հետո համեմատիր այն բանի հետ, ինչ կանխատեսում էր վարկածը։", "Считай дни до появления плесени. Сделай это с несколькими парами ломтиков: один результат может быть случайным. Потом сравни с тем, что предсказывала гипотеза.")),
+    P(16, 52, t("Conclusion", "Եզրակացություն", "Вывод"), t("If the warm slices go mouldy first, the hypothesis is confirmed, for now: others should be able to repeat the test and get the same result. Each answer brings new questions, such as \"Does light matter too?\", and the cycle starts again.", "Եթե տաք կտորներն առաջինն են բորբոսնում, վարկածը հաստատվում է, առայժմ․ ուրիշները պետք է կարողանան կրկնել փորձը և ստանալ նույն արդյունքը։ Յուրաքանչյուր պատասխան նոր հարցեր է բերում, օրինակ՝ «Իսկ լույսը նշանակությո՞ւն ունի», և շրջանն սկսվում է նորից։", "Если тёплые ломтики плесневеют первыми, гипотеза подтверждается, пока что: другие должны суметь повторить опыт и получить тот же результат. Каждый ответ приносит новые вопросы, например «А влияет ли свет?», и круг начинается снова.")),
+  ],
+};
+
+/* ---------------- grade 12: the United Nations ---------------- */
+
+const AGENCIES = ["UNESCO", "UNICEF", "WHO", "UNHCR", "WFP"];
+
+const un: Diagram = {
+  title: t("How the UN is built", "Ինչպես է կառուցված ՄԱԿ-ը", "Как устроена ООН"),
+  draw: (lang) => (
+    <g>
+      <circle cx="160" cy="34" r="22" fill="#e0f2fe" stroke="#0284c7" strokeWidth="2" />
+      <circle cx="160" cy="34" r="13" fill="none" stroke="#0284c7" strokeWidth="1.2" />
+      <path d="M147,34 H173 M160,21 V47 M150,26 Q160,34 150,42 M170,26 Q160,34 170,42" fill="none" stroke="#0284c7" strokeWidth="1" />
+      <Tx x={160} y={70} s={t("1945 · 193 members", "1945 · 193 անդամ", "1945 · 193 члена")} lang={lang} size={7.5} fill="#0369a1" />
+      {/* General Assembly */}
+      <rect x="8" y="24" width="112" height="70" rx="8" fill="#fff" stroke="#0284c7" strokeWidth="2" />
+      <Tx x={64} y={38} s={t("General Assembly", "Գլխավոր ասամբլեա", "Генеральная Ассамблея")} lang={lang} size={lang === "ru" ? 6.6 : 7.5} fill="#0369a1" />
+      {Array.from({ length: 30 }, (_, k) => <circle key={k} cx={20 + (k % 10) * 9.8} cy={52 + Math.floor(k / 10) * 9} r="3" fill="#7dd3fc" />)}
+      <Tx x={64} y={88} s={t("one country, one vote", "մեկ երկիր՝ մեկ ձայն", "одна страна — один голос")} lang={lang} size={6.3} fill="#475569" w={700} />
+      {/* Security Council */}
+      <rect x="200" y="24" width="112" height="70" rx="8" fill="#fff" stroke="#e11d48" strokeWidth="2" />
+      <Tx x={256} y={38} s={t("Security Council", "Անվտանգության խորհուրդ", "Совет Безопасности")} lang={lang} size={lang === "hy" ? 6.6 : 7.5} fill="#be123c" />
+      {Array.from({ length: 15 }, (_, k) => {
+        const a = Math.PI - (k / 14) * Math.PI;
+        return <circle key={k} cx={256 + 40 * Math.cos(a)} cy={82 - 28 * Math.sin(a)} r="3.6" fill={k >= 5 && k < 10 ? "#e11d48" : "#fecdd3"} />;
+      })}
+      <Tx x={256} y={84} s={t("5 with a veto", "5-ը՝ վետոյով", "5 с вето")} lang={lang} size={6.3} fill="#be123c" w={800} />
+      {/* Secretariat and the Court */}
+      <rect x="8" y="112" width="112" height="44" rx="8" fill="#fff" stroke="#4f46e5" strokeWidth="2" />
+      <Tx x={64} y={130} s={t("Secretariat", "Քարտուղարություն", "Секретариат")} lang={lang} size={7.5} fill="#4338ca" />
+      <Tx x={64} y={144} s={t("Secretary-General", "Գլխավոր քարտուղար", "Генеральный секретарь")} lang={lang} size={6.3} fill="#475569" w={700} />
+      <rect x="200" y="112" width="112" height="44" rx="8" fill="#fff" stroke="#a16207" strokeWidth="2" />
+      <Tx x={256} y={130} s={t("International Court", "Միջազգային դատարան", "Международный суд")} lang={lang} size={7.5} fill="#a16207" />
+      <Tx x={256} y={144} s={t("The Hague · 15 judges", "Հաագա · 15 դատավոր", "Гаага · 15 судей")} lang={lang} size={6.3} fill="#475569" w={700} />
+      <path d="M120,34 H138 M182,34 H200 M120,134 H200" fill="none" stroke="#94a3b8" strokeWidth="1.5" />
+      {/* agencies */}
+      <path d="M160,76 V170" stroke="#94a3b8" strokeWidth="1.5" />
+      {AGENCIES.map((a, k) => (
+        <g key={a}>
+          <rect x={14 + k * 60} y="176" width="52" height="22" rx="11" fill="#ecfdf5" stroke="#10b981" strokeWidth="1.5" />
+          <text x={40 + k * 60} y="190" textAnchor="middle" fontSize="7.5" fontWeight="900" fill="#047857">{a}</text>
+        </g>
+      ))}
+      <path d="M40,176 V170 H280 V176 M100,170 V176 M160,170 V176 M220,170 V176" fill="none" stroke="#94a3b8" strokeWidth="1.5" />
+      <Tx x={160} y={210} s={t("specialised agencies", "մասնագիտացված գործակալություններ", "специализированные учреждения")} lang={lang} size={6.5} fill="#047857" w={700} />
+    </g>
+  ),
+  parts: [
+    P(14, 22, t("General Assembly", "Գլխավոր ասամբլեա", "Генеральная Ассамблея"), t("Every member state, big or small, has one vote: Armenia's counts the same as China's. The Assembly debates world problems, adopts the budget and admits new members, but most of its resolutions are recommendations, not binding law. Armenia joined on 2 March 1992.", "Յուրաքանչյուր անդամ պետություն, մեծ թե փոքր, ունի մեկ ձայն․ Հայաստանի ձայնը նույնքան է արժե, որքան Չինաստանինը։ Ասամբլեան քննարկում է համաշխարհային խնդիրները, ընդունում բյուջեն և նոր անդամներ, բայց նրա բանաձևերի մեծ մասը հանձնարարականներ են, այլ ոչ թե պարտադիր օրենք։ Հայաստանն անդամակցել է 1992 թվականի մարտի 2-ին։", "У каждого государства-члена, большого или маленького, один голос: голос Армении весит столько же, сколько голос Китая. Ассамблея обсуждает мировые проблемы, утверждает бюджет и принимает новых членов, но большинство её резолюций — рекомендации, а не обязательный закон. Армения вступила 2 марта 1992 года.")),
+    P(306, 22, t("Security Council", "Անվտանգության խորհուրդ", "Совет Безопасности"), t("15 members: 5 permanent (the USA, Russia, China, the United Kingdom, France) and 10 elected for two years. It is the only body whose decisions all members must carry out: it can impose sanctions or send peacekeepers. A single \"no\" from a permanent member, the veto, blocks a decision.", "15 անդամ՝ 5 մշտական (ԱՄՆ, Ռուսաստան, Չինաստան, Միացյալ Թագավորություն, Ֆրանսիա) և 10-ը՝ ընտրված երկու տարով։ Սա միակ մարմինն է, որի որոշումները բոլոր անդամները պարտավոր են կատարել․ այն կարող է պատժամիջոցներ սահմանել կամ խաղաղապահներ ուղարկել։ Մշտական անդամի մեկ «ոչ»-ը՝ վետոն, արգելափակում է որոշումը։", "15 членов: 5 постоянных (США, Россия, Китай, Великобритания, Франция) и 10 избранных на два года. Это единственный орган, решения которого обязаны выполнять все члены: он может вводить санкции или направлять миротворцев. Одно «нет» постоянного члена, вето, блокирует решение.")),
+    P(14, 112, t("Secretariat", "Քարտուղարություն", "Секретариат"), t("The UN's staff, led by the Secretary-General, who is appointed by the General Assembly on the Security Council's recommendation, usually for five years. The headquarters is in New York, with large offices in Geneva, Vienna and Nairobi.", "ՄԱԿ-ի աշխատակազմը՝ Գլխավոր քարտուղարի գլխավորությամբ, որին նշանակում է Գլխավոր ասամբլեան՝ Անվտանգության խորհրդի առաջարկով, սովորաբար հինգ տարով։ Կենտրոնակայանը Նյու Յորքում է, խոշոր գրասենյակներ կան Ժնևում, Վիեննայում և Նայրոբիում։", "Аппарат ООН во главе с Генеральным секретарём, которого назначает Генеральная Ассамблея по рекомендации Совета Безопасности, обычно на пять лет. Штаб-квартира — в Нью-Йорке, крупные отделения — в Женеве, Вене и Найроби.")),
+    P(306, 112, t("International Court of Justice", "Միջազգային դատարան", "Международный суд"), t("15 judges, elected for nine years, settle disputes between states that accept the court's authority. Do not confuse it with the International Criminal Court, also in The Hague, which tries individual people for the gravest crimes.", "15 դատավոր, որոնք ընտրվում են ինը տարով, լուծում են այն պետությունների վեճերը, որոնք ընդունում են դատարանի իրավասությունը։ Մի՛ շփոթիր այն Միջազգային քրեական դատարանի հետ, որը նույնպես Հաագայում է և դատում է առանձին մարդկանց ամենածանր հանցագործությունների համար։", "15 судей, избираемых на девять лет, разрешают споры между государствами, которые признают полномочия суда. Не путай его с Международным уголовным судом, тоже в Гааге, который судит отдельных людей за самые тяжкие преступления.")),
+    P(286, 174, t("Specialised agencies", "Մասնագիտացված գործակալություններ", "Специализированные учреждения"), t("They do the practical work: UNESCO keeps the heritage lists, WHO coordinates the fight against epidemics, UNICEF helps children, UNHCR protects refugees, and the World Food Programme brings food where there is hunger.", "Նրանք կատարում են գործնական աշխատանքը․ ՅՈՒՆԵՍԿՕ-ն վարում է ժառանգության ցանկերը, ԱՀԿ-ն համակարգում է համաճարակների դեմ պայքարը, ՅՈՒՆԻՍԵՖ-ն օգնում է երեխաներին, ՓԳՀ-ն պաշտպանում է փախստականներին, իսկ Պարենի համաշխարհային ծրագիրը սնունդ է հասցնում այնտեղ, որտեղ սով է։", "Они выполняют практическую работу: ЮНЕСКО ведёт списки наследия, ВОЗ координирует борьбу с эпидемиями, ЮНИСЕФ помогает детям, УВКБ защищает беженцев, а Всемирная продовольственная программа доставляет еду туда, где голод.")),
+    P(182, 16, t("The Charter", "Կանոնադրությունը", "Устав"), t("The UN Charter was signed in San Francisco on 26 June 1945 and came into force on 24 October 1945, which is celebrated as United Nations Day. It was founded by 51 states; today almost every country in the world is a member.", "ՄԱԿ-ի կանոնադրությունը ստորագրվել է Սան Ֆրանցիսկոյում 1945 թվականի հունիսի 26-ին և ուժի մեջ է մտել 1945 թվականի հոկտեմբերի 24-ին, որը նշվում է որպես Միավորված ազգերի կազմակերպության օր։ Այն հիմնել են 51 պետություններ, այսօր աշխարհի գրեթե բոլոր երկրներն անդամ են։", "Устав ООН подписан в Сан-Франциско 26 июня 1945 года и вступил в силу 24 октября 1945 года — этот день отмечают как День Организации Объединённых Наций. Её основали 51 государство; сегодня членами являются почти все страны мира.")),
+  ],
+};
+
+/* ---------------- grade 12: linear and circular economy ---------------- */
+
+const LINE: Tr[] = [t("Take", "Վերցնել", "Взять"), t("Make", "Արտադրել", "Произвести"), t("Use", "Օգտագործել", "Использовать"), t("Throw away", "Նետել", "Выбросить")];
+const LOOP: Array<[number, number, Tr]> = [
+  [160, 104, t("Make", "Արտադրել", "Произвести")],
+  [240, 150, t("Use", "Օգտագործել", "Использовать")],
+  [160, 196, t("Repair, reuse", "Վերանորոգել, կրկին օգտագործել", "Ремонт, повторно")],
+  [80, 150, t("Recycle", "Վերամշակել", "Переработать")],
+];
+
+const circular: Diagram = {
+  title: t("Linear and circular economy", "Գծային և շրջանառու տնտեսություն", "Линейная и циркулярная экономика"),
+  h: 220,
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      <Tx x={8} y={14} s={t("Linear", "Գծային", "Линейная")} lang={lang} size={8} fill="#b91c1c" anchor="start" />
+      {LINE.map((s, k) => <Box key={k} x={44 + k * 78} y={42} w={66} s={s} lang={lang} c={k === 3 ? "#b91c1c" : "#475569"} />)}
+      {[0, 1, 2].map((k) => <Ar key={k} d={`M${77 + k * 78},42 H${89 + k * 78}`} />)}
+      <path d="M262,62 h44 l-6,14 h-32 Z" fill="#a8a29e" />
+      <path d="M270,62 l6,-6 l6,6 M286,62 l5,-4 l4,4" stroke="#78716c" strokeWidth="1.5" fill="none" />
+      <line x1="0" y1="86" x2="320" y2="86" stroke="#e2e8f0" strokeWidth="1.5" />
+      <Tx x={8} y={100} s={t("Circular", "Շրջանառու", "Циркулярная")} lang={lang} size={8} fill="#047857" anchor="start" />
+      <circle cx="160" cy="150" r="46" fill="none" stroke="#10b981" strokeWidth="2.5" strokeDasharray="6 4" />
+      <Ar d="M196,122 L204,130" c="#047857" />
+      <Ar d="M204,172 L196,180" c="#047857" />
+      <Ar d="M124,180 L116,172" c="#047857" />
+      <Ar d="M116,128 L124,120" c="#047857" />
+      {LOOP.map(([x, y, s], k) => <Box key={k} x={x} y={y} w={k === 2 ? 104 : 76} s={s} lang={lang} c="#047857" />)}
+      <circle cx="160" cy="150" r="20" fill="#ecfdf5" stroke="#10b981" strokeWidth="1.5" />
+      <Tx x={160} y={153} s={t("Reduce", "Նվազեցնել", "Сократить")} lang={lang} size={lang === "en" ? 7.5 : 6.2} fill="#047857" />
+    </g>
+  ),
+  parts: [
+    P(12, 30, t("Take", "Վերցնել", "Взять"), t("Ore is mined, trees are cut, oil is pumped. The Earth's stock of many materials is limited, and getting them leaves scars: quarries, tailings, polluted rivers.", "Հանքաքար են արդյունահանում, ծառեր են կտրում, նավթ են հանում։ Շատ նյութերի պաշարն Երկրի վրա սահմանափակ է, և դրանց արդյունահանումը հետքեր է թողնում՝ քարհանքեր, պոչամբարներ, աղտոտված գետեր։", "Добывают руду, рубят лес, качают нефть. Запасы многих материалов на Земле ограничены, а их добыча оставляет следы: карьеры, хвостохранилища, загрязнённые реки.")),
+    P(306, 54, t("Throw away", "Նետել", "Выбросить"), t("In the linear model a product's life ends in a landfill. Rotting rubbish releases methane, a strong greenhouse gas, and a plastic bottle can take hundreds of years to break down.", "Գծային մոդելում ապրանքի կյանքն ավարտվում է աղբավայրում։ Փտող աղբն արտանետում է մեթան՝ ուժեղ ջերմոցային գազ, իսկ պլաստիկ շիշը կարող է քայքայվել հարյուրավոր տարիներ։", "В линейной модели жизнь товара заканчивается на свалке. Гниющий мусор выделяет метан — сильный парниковый газ, а пластиковая бутылка может разлагаться сотни лет.")),
+    P(186, 134, t("Reduce", "Նվազեցնել", "Сократить"), t("The best rubbish is the rubbish that never appears: buying less, choosing things that last, refusing needless packaging. That is why \"reduce\" comes first.", "Լավագույն աղբն այն է, որն երբեք չի առաջանում․ ավելի քիչ գնել, ընտրել երկար ծառայող իրեր, հրաժարվել ավելորդ փաթեթավորումից։ Ահա թե ինչու «նվազեցնելը» առաջինն է։", "Лучший мусор — тот, который не появился: покупать меньше, выбирать долговечные вещи, отказываться от лишней упаковки. Поэтому «сократить» стоит на первом месте.")),
+    P(218, 186, t("Repair and reuse", "Վերանորոգել և կրկին օգտագործել", "Ремонт и повторное использование"), t("A phone with a new battery, a jacket with a new zip, a glass jar used again. Since 2009, when the first one opened in Amsterdam, volunteers have run thousands of \"repair cafés\" around the world where people fix things together.", "Նոր մարտկոցով հեռախոս, նոր շղթայով բաճկոն, կրկին օգտագործվող ապակե տարա։ 2009 թվականից, երբ Ամստերդամում բացվեց առաջինը, կամավորներն աշխարհում հազարավոր «վերանորոգման սրճարաններ» են բացել, որտեղ մարդիկ միասին նորոգում են իրերը։", "Телефон с новой батареей, куртка с новой молнией, стеклянная банка, использованная снова. С 2009 года, когда в Амстердаме открылось первое такое место, волонтёры по всему миру устроили тысячи «ремонтных кафе», где люди вместе чинят вещи.")),
+    P(36, 136, t("Recycle", "Վերամշակել", "Переработать"), t("Materials go back into production. An aluminium can can be melted down again and again, and making it from scrap takes about 95% less energy than making it from ore.", "Նյութերը վերադառնում են արտադրություն։ Ալյումինե տարան կարելի է նորից ու նորից հալել, և այն ջարդոնից պատրաստելը մոտ 95%-ով ավելի քիչ էներգիա է պահանջում, քան հանքաքարից։", "Материалы возвращаются в производство. Алюминиевую банку можно переплавлять снова и снова, и сделать её из лома требует примерно на 95% меньше энергии, чем из руды.")),
+    P(204, 96, t("Design", "Նախագծում", "Проектирование"), t("A circular economy starts at the drawing board: products that are easy to open, with parts that can be replaced and materials that can be separated. A phone glued shut cannot be repaired, however good the intentions.", "Շրջանառու տնտեսությունն սկսվում է գծագրական սեղանից․ ապրանքներ, որոնք հեշտ է բացել, որոնց մասերը կարելի է փոխարինել, իսկ նյութերը՝ առանձնացնել։ Սոսնձված հեռախոսը հնարավոր չէ վերանորոգել, որքան էլ լավ լինեն մտադրությունները։", "Циркулярная экономика начинается за чертёжной доской: вещи, которые легко открыть, с заменяемыми деталями и материалами, которые можно разделить. Заклеенный телефон не починить, какими бы добрыми ни были намерения.")),
+  ],
+};
+
+/* ---------------- grade 12: where a good choice lies ---------------- */
+
+const lifepath: Diagram = {
+  title: t("Where a good choice lies", "Որտեղ է լավ ընտրությունը", "Где лежит хороший выбор"),
+  draw: (lang) => (
+    <g>
+      <circle cx="124" cy="80" r="64" fill="#f59e0b" opacity="0.22" stroke="#f59e0b" strokeWidth="2" />
+      <circle cx="196" cy="80" r="64" fill="#4f46e5" opacity="0.18" stroke="#4f46e5" strokeWidth="2" />
+      <circle cx="160" cy="140" r="64" fill="#10b981" opacity="0.2" stroke="#10b981" strokeWidth="2" />
+      <Tx x={96} y={52} s={t("I want", "Ուզում եմ", "Хочу")} lang={lang} size={9} fill="#b45309" />
+      <Tx x={224} y={52} s={t("I can", "Կարող եմ", "Могу")} lang={lang} size={9} fill="#4338ca" />
+      <Tx x={160} y={188} s={t("Needed", "Պետք է", "Нужно")} lang={lang} size={9} fill="#047857" />
+      <Tx x={160} y={64} s={t("hobby", "հոբբի", "хобби")} lang={lang} size={6.8} fill="#334155" w={700} />
+      <Tx x={204} y={136} s={t("routine", "ձանձրույթ", "рутина")} lang={lang} size={6.8} fill="#334155" w={700} />
+      <Tx x={116} y={136} s={t("learn", "սովորել", "учиться")} lang={lang} size={6.8} fill="#334155" w={700} />
+      <path d="M160,92 l4,9 l10,1 l-7,7 l2,10 l-9,-5 l-9,5 l2,-10 l-7,-7 l10,-1 Z" fill="#e11d48" />
+    </g>
+  ),
+  parts: [
+    P(70, 36, t("What I want", "Ի՞նչ եմ ուզում", "Чего я хочу"), t("Interests, values, dreams. A useful clue is what you do when nobody makes you, and what kind of problems you enjoy thinking about even when they are hard.", "Հետաքրքրություններ, արժեքներ, երազանքներ։ Օգտակար հուշում է այն, ինչով զբաղվում ես, երբ ոչ ոք քեզ չի ստիպում, և թե ինչպիսի խնդիրների մասին ես հաճույքով մտածում, նույնիսկ երբ դրանք դժվար են։", "Интересы, ценности, мечты. Полезная подсказка — чем ты занимаешься, когда никто не заставляет, и о каких задачах тебе нравится думать, даже если они трудные.")),
+    P(250, 36, t("What I can do", "Ի՞նչ կարող եմ", "Что я могу"), t("Abilities, marks, skills. Remember that most skills are not fixed: they grow with practice, so \"I can't yet\" is often more accurate than \"I can't\".", "Ունակություններ, գնահատականներ, հմտություններ։ Հիշիր, որ հմտությունների մեծ մասն անփոփոխ չէ․ դրանք աճում են վարժանքով, ուստի «դեռ չեմ կարող»-ը հաճախ ավելի ճշգրիտ է, քան «չեմ կարող»-ը։", "Способности, оценки, навыки. Помни, что большинство навыков не застыли: они растут с практикой, поэтому «пока не могу» часто точнее, чем «не могу».")),
+    P(212, 196, t("What is needed", "Ի՞նչ է պետք", "Что нужно"), t("Demand in the labour market, pay, prospects. Look at real job advertisements and salaries, and talk to people who do the job: the picture is often different from what films show.", "Աշխատանքի շուկայի պահանջարկ, աշխատավարձ, հեռանկարներ։ Նայիր իրական աշխատանքային հայտարարություններին և աշխատավարձերին, խոսիր այդ աշխատանքն անողների հետ․ պատկերը հաճախ տարբերվում է ֆիլմերում ցուցադրվածից։", "Спрос на рынке труда, зарплата, перспективы. Посмотри настоящие объявления о работе и зарплаты, поговори с теми, кто этим занимается: картина часто отличается от той, что показывают в фильмах.")),
+    P(160, 46, t("Want + can", "Ուզում եմ + կարող եմ", "Хочу + могу"), t("If few people will pay for it, it may stay a wonderful hobby, or it may need a creative way to turn it into work.", "Եթե քչերն են պատրաստ դրա համար վճարել, այն կարող է մնալ հրաշալի հոբբի, կամ դրանից աշխատանք ստեղծելու համար ստեղծագործ մոտեցում կպահանջվի։", "Если за это мало кто готов платить, оно может остаться прекрасным хобби или потребует творческого подхода, чтобы стать работой.")),
+    P(204, 119, t("Can + needed", "Կարող եմ + պետք է", "Могу + нужно"), t("A job you can do well and that pays, but without interest it can become a grey routine that drains you.", "Աշխատանք, որը լավ ես անում և որը վարձատրվում է, բայց առանց հետաքրքրության այն կարող է դառնալ գորշ առօրյա, որը սպառում է քեզ։", "Работа, которую ты делаешь хорошо и за которую платят, но без интереса она может превратиться в серую рутину, которая выматывает.")),
+    P(116, 119, t("Want + needed", "Ուզում եմ + պետք է", "Хочу + нужно"), t("You don't have the skills yet. This is a goal: make a SMART plan for how and by when you will learn them.", "Հմտությունները դեռ չունես։ Սա նպատակ է․ կազմիր SMART պլան, թե ինչպես և երբ կսովորես դրանք։", "Навыков пока нет. Это цель: составь SMART-план, как и к какому сроку ты им научишься.")),
+    P(182, 104, t("The middle", "Կենտրոնը", "Середина"), t("Where all three meet lies the best choice. It is rarely found at once and can move during a life, so it is worth checking again from time to time.", "Այնտեղ, որտեղ երեքը հատվում են, լավագույն ընտրությունն է։ Այն հազվադեպ է միանգամից գտնվում և կյանքի ընթացքում կարող է տեղաշարժվել, ուստի արժե ժամանակ առ ժամանակ նորից ստուգել։", "Там, где сходятся все три, лежит лучший выбор. Его редко находят сразу, и за жизнь он может смещаться, поэтому стоит время от времени проверять снова.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov, labour, spheres, mobility, fakenews, chain, cave, method, un, circular, lifepath };
