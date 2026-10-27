@@ -54,6 +54,9 @@ export async function getSubjectGradeRanges() {
 }
 
 export async function getCourse(subjectId: string, grade: number) {
+  // URLs that are not lessons (e.g. Chrome DevTools asking for /.well-known/appspecific/…)
+  // land here with a grade that is not a number; the database driver throws on NaN.
+  if (!Number.isInteger(grade)) return null;
   const db = await getDb();
   const course = await db
     .select()
