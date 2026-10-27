@@ -6,6 +6,8 @@
 import { list, parseArtSpec } from "@/lib/art/spec";
 import { parseFormula } from "@/lib/sim/elements";
 import { BAR_SETS } from "./data/bars";
+import { CHESS_SETS, chessFrames } from "./data/chess-sets";
+import { parseFen, sq } from "./chess-core";
 import { CITIES } from "./data/climate";
 import { TIMELINES } from "./data/timelines";
 import { TRACES } from "./data/traces";
@@ -26,6 +28,7 @@ import { TENSE_NAMES } from "./widgets/tense";
 
 /** Modes each widget understands; the first one is what it shows without mode=. */
 const MODES: Record<string, string[]> = {
+  chess: ["play", "moves", "squares"],
   motion: ["accel", "uniform", "fall", "two", "air"],
   circuit: ["ohm", "series", "parallel", "rheostat", "emf", "fuse"],
   forces: ["cart", "friction", "gravity", "incline", "resultant", "third"],
@@ -153,6 +156,21 @@ export function checkSimSpec(source: string): string[] {
       break;
     case "bars": if (!BAR_SETS[spec.opts.set ?? ""]) errors.push(`${where}: unknown set "${spec.opts.set}"`); break;
     case "trace": if (!TRACES[spec.opts.set ?? ""]) errors.push(`${where}: unknown trace "${spec.opts.set}"`); break;
+    case "chess": {
+      const mode = spec.opts.mode ?? "play";
+      if (mode === "play") {
+        const set = CHESS_SETS[spec.opts.set ?? ""];
+        if (!set) errors.push(`${where}: unknown chess set "${spec.opts.set}"`);
+        else {
+          const errs: string[] = [];
+          chessFrames(set, errs);
+          errors.push(...errs.map((e) => `${where}: ${e}`));
+        }
+      }
+      if (spec.opts.fen && !parseFen(spec.opts.fen)) errors.push(`${where}: bad fen`);
+      if (spec.opts.pick && !parseFen(spec.opts.fen ?? "8/8/8/8/8/8/8/8")?.[sq(spec.opts.pick)]) errors.push(`${where}: no piece on ${spec.opts.pick}`);
+      break;
+    }
     case "timeline": if (!TIMELINES[spec.opts.set ?? ""]) errors.push(`${where}: unknown timeline "${spec.opts.set}"`); break;
     case "climate": for (const c of list(spec.opts.city ?? "yerevan")) if (!CITIES[c]) errors.push(`${where}: unknown city "${c}"`); break;
     case "pyramid": if (spec.args.length < 2 || spec.args.length > 5) errors.push(`${where}: needs 2 to 5 levels`); break;
