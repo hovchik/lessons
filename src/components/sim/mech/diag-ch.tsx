@@ -964,4 +964,45 @@ const khachkar: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees, trinity, sacraments, churchplan, calendar, khachkar };
+/* ---------------- grade 10: the sermon of the iron ladle ---------------- */
+
+const Ladle = ({ x, y, a, paper }: { x: number; y: number; a: number; paper?: boolean }) => (
+  <g transform={`rotate(${a} ${x} ${y})`}>
+    <rect x={x - 2} y={y - 70} width="4" height="62" rx="2" fill={paper ? "#f8fafc" : "#475569"} stroke={paper ? "#94a3b8" : "#1e293b"} strokeWidth="1" />
+    <path d={paper ? `M${x - 9},${y - 8} q9,14 18,0 l-3,6 l-4,-3 l-3,5 l-3,-4 l-3,4 Z` : `M${x - 9},${y - 8} q9,16 18,0 Z`} fill={paper ? "#fff" : "#64748b"} stroke={paper ? "#94a3b8" : "#1e293b"} strokeWidth="1" />
+  </g>
+);
+
+const ladle: Diagram = {
+  title: t("Khrimian's sermon of the iron ladle (1878)", "Խրիմյանի «երկաթե շերեփի» քարոզը (1878)", "Проповедь Хримяна о железном половнике (1878)"),
+  h: 190,
+  draw: (lang) => (
+    <g>
+      {/* steam and cauldron */}
+      {[130, 160, 190].map((x) => <path key={x} d={`M${x},58 q-6,-8 0,-16 q6,-8 0,-16`} stroke="#cbd5e1" strokeWidth="2" fill="none" />)}
+      <path d="M94,92 h132 l-10,54 q-56,22 -112,0 Z" fill="#334155" />
+      <ellipse cx="160" cy="92" rx="66" ry="12" fill="#fde68a" stroke="#1e293b" strokeWidth="2" />
+      <path d="M118,166 l-8,14 M202,166 l8,14 M160,170 v12" stroke="#334155" strokeWidth="4" strokeLinecap="round" />
+      <path d="M130,182 q-6,-8 0,-12 q4,6 8,0 q4,6 0,12 Z M184,182 q-6,-8 0,-12 q4,6 8,0 q4,6 0,12 Z" fill="#f97316" />
+      <Tx x={178} y={97} s={t("harissa", "հարիսա", "ариса")} lang={lang} size={6.6} fill="#92400e" />
+      {/* iron ladles on the left, paper ladle on the right */}
+      <Ladle x={114} y={96} a={-28} />
+      <Ladle x={130} y={96} a={-14} />
+      <Ladle x={146} y={96} a={-4} />
+      <Ladle x={206} y={96} a={24} paper />
+      <Tx x={46} y={14} s={t("iron ladles", "երկաթե շերեփներ", "железные половники")} lang={lang} size={7.4} fill="#334155" />
+      <Tx x={46} y={25} s={t("Serbia, Montenegro,|Romania, Bulgaria", "Սերբիա, Չեռնոգորիա,|Ռումինիա, Բուլղարիա", "Сербия, Черногория,|Румыния, Болгария")} lang={lang} size={6} fill="#475569" w={600} />
+      <Tx x={276} y={14} s={t("paper ladle", "թղթե շերեփ", "бумажный половник")} lang={lang} size={7.4} fill="#94a3b8" />
+      <Tx x={276} y={25} s={t("the Armenians:|Article 61", "հայերը՝|61-րդ հոդված", "армяне:|статья 61")} lang={lang} size={6} fill="#475569" w={600} />
+    </g>
+  ),
+  parts: [
+    P(226, 104, t("The cauldron", "Կաթսան", "Котёл"), t("The Congress of Berlin of 1878, where the great powers shared out the results of the Russo-Turkish War, like harissa served from one big pot.", "1878 թվականի Բեռլինի վեհաժողովը, որտեղ մեծ տերությունները բաժանում էին ռուս-թուրքական պատերազմի արդյունքները, ինչպես մեկ մեծ կաթսայից բաժանվող հարիսան։", "Берлинский конгресс 1878 года, где великие державы делили итоги Русско-турецкой войны, как арису из одного большого котла.")),
+    P(96, 58, t("Iron ladles", "Երկաթե շերեփներ", "Железные половники"), t("The Balkan peoples came with armies and with the backing of force. Serbia, Montenegro and Romania won independence, and Bulgaria a principality of its own.", "Բալկանյան ժողովուրդները եկել էին բանակներով և ուժի աջակցությամբ։ Սերբիան, Չեռնոգորիան և Ռումինիան անկախություն ստացան, իսկ Բուլղարիան՝ սեփական իշխանություն։", "Балканские народы пришли с армиями и опорой на силу. Сербия, Черногория и Румыния получили независимость, а Болгария — собственное княжество.")),
+    P(232, 62, t("The paper ladle", "Թղթե շերեփը", "Бумажный половник"), t("Khrimian had only a petition. When he dipped his paper ladle into the pot, it got soaked and tore, and he came home empty-handed.", "Խրիմյանն ուներ միայն խնդրագիր։ Երբ նա իր թղթե շերեփը մտցրեց կաթսան, այն թրջվեց ու պատռվեց, և նա վերադարձավ դատարկաձեռն։", "У Хримяна была только петиция. Когда он опустил свой бумажный половник в котёл, тот размок и порвался, и он вернулся с пустыми руками.")),
+    P(276, 52, t("Article 61", "61-րդ հոդված", "Статья 61"), t("The treaty only promised reforms in the Armenian provinces, to be watched over by the powers together. In practice no one made the sultan carry them out.", "Պայմանագիրը միայն խոստանում էր բարենորոգումներ հայկական նահանգներում, որոնց պետք է միասին հետևեին տերությունները։ Գործնականում ոչ ոք սուլթանին չստիպեց կատարել դրանք։", "Договор лишь обещал реформы в армянских провинциях под общим надзором держав. На деле никто не заставил султана их провести.")),
+    P(186, 30, t("Hayrik's lesson", "Հայրիկի դասը", "Урок Айрика"), t("Back in Constantinople he told the people from the pulpit that promises on paper are not enough, and that a people must rely above all on its own strength and unity.", "Վերադառնալով Կոստանդնուպոլիս՝ նա ամբիոնից ասաց ժողովրդին, որ թղթի վրա խոստումները բավական չեն, և որ ժողովուրդը պետք է հույսը դնի առաջին հերթին իր ուժի և միասնության վրա։", "Вернувшись в Константинополь, он сказал с амвона народу, что бумажных обещаний мало и что народ должен полагаться прежде всего на свои силы и единство.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { bible, sixdays, patriarchs, tablets, evangelists, sower, holyweek, fifty, apostles, gregorids, churchtypes, monastery, sees, trinity, sacraments, churchplan, calendar, khachkar, ladle };

@@ -39,7 +39,7 @@ export const DIAGRAM_GROUPS = {
   sci: ["body", "crossing", "plant", "soil", "forest", "skeleton", "compass"],
   inf: ["computer", "network", "flowchart", "memory", "layers", "url", "tag", "box", "os", "phish", "db", "oop", "dom", "http", "git", "kanban", "arch"],
   soc: ["socialisation", "maslow", "eduarm", "roles", "tki", "govforms", "powers", "ages", "selfgov", "labour", "spheres", "mobility", "fakenews", "chain", "cave", "method", "un", "circular", "lifepath"],
-  ch: ["bible", "sixdays", "patriarchs", "tablets", "evangelists", "sower", "holyweek", "fifty", "apostles", "gregorids", "churchtypes", "monastery", "sees", "trinity", "sacraments", "churchplan", "calendar", "khachkar"],
+  ch: ["bible", "sixdays", "patriarchs", "tablets", "evangelists", "sower", "holyweek", "fifty", "apostles", "gregorids", "churchtypes", "monastery", "sees", "trinity", "sacraments", "churchplan", "calendar", "khachkar", "ladle"],
 } as const;
 
 export type DiagramGroup = keyof typeof DIAGRAM_GROUPS;
