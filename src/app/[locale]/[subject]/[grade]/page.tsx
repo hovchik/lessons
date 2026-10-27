@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Lock, PlayCircle } from "lucide-react";
+import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Gauge, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -151,14 +151,27 @@ export default async function CoursePage({ params }: { params: Params }) {
                 })}
               </ol>
               {(user ? (mastery.get(u.id)?.evidence.lessons ?? 0) > 0 : u.lessons.some((x) => x.status === "published")) && (
-                <Link
-                  href={`/${subject}/${grade}/check/${mastery.get(u.id)?.position ?? ui + 1}`}
-                  className="flex min-h-14 items-center gap-3 border-t border-border/70 px-4 py-3 font-bold text-primary transition-colors active:bg-muted sm:gap-4 sm:px-6 sm:hover:bg-muted"
-                >
-                  <ClipboardCheck className="size-5 shrink-0" aria-hidden="true" />
-                  <span className="flex-1">{t("mastery.unitCheck")}</span>
-                  <span className="text-xs font-semibold text-muted-foreground">{t("mastery.unitCheckHint")}</span>
-                </Link>
+                <div className="grid border-t border-border/70 sm:grid-cols-2 sm:divide-x sm:divide-border/70">
+                  {(
+                    [
+                      ["practice", Gauge, t("practice.practise"), t("practice.practiseHint")],
+                      ["check", ClipboardCheck, t("mastery.unitCheck"), t("mastery.unitCheckHint")],
+                    ] as const
+                  ).map(([path, Icon, label, hint], k) => (
+                    <Link
+                      key={path}
+                      href={`/${subject}/${grade}/${path}/${mastery.get(u.id)?.position ?? ui + 1}`}
+                      className={cn(
+                        "flex min-h-14 items-center gap-3 px-4 py-3 font-bold text-primary transition-colors active:bg-muted sm:gap-4 sm:px-6 sm:hover:bg-muted",
+                        k > 0 && "border-t border-border/70 sm:border-t-0",
+                      )}
+                    >
+                      <Icon className="size-5 shrink-0" aria-hidden="true" />
+                      <span className="flex-1">{label}</span>
+                      <span className="text-xs font-semibold text-muted-foreground">{hint}</span>
+                    </Link>
+                  ))}
+                </div>
               )}
             </li>
           ))}

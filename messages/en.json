@@ -325,5 +325,29 @@
     "notSaved": "Could not send your answers. Check the internet connection.",
     "tryAgain": "Send again",
     "unitsMastered": "{n} of {total} units mastered"
+  },
+  "practice": {
+    "practise": "Practise",
+    "practiseHint": "Questions at your level",
+    "title": "Practise unit {n}",
+    "intro": "Questions picked for your level, one at a time, with the answer straight after. They get harder as you get them right and easier when you get stuck.",
+    "readiness": "Ready for about {pct}% of this unit's questions",
+    "readinessChanged": "Ready for {from}% → {to}% of this unit's questions",
+    "stretch": {
+      "easy": "Warm-up",
+      "right": "Just right",
+      "hard": "Challenge"
+    },
+    "correct": "Right!",
+    "incorrect": "Not quite",
+    "next": "Next question",
+    "finish": "See how you did",
+    "readLesson": "Read the lesson",
+    "notSaved": "Could not check your answer. Check the internet connection.",
+    "summaryTitle": "You got {score} of {total}",
+    "again": "Practise more",
+    "takeCheck": "Take the unit check",
+    "missedTitle": "Look at these again",
+    "afterCheck": "Practise this unit"
   }
 }

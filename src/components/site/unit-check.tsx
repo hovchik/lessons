@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BookOpen, CheckCircle2, ClipboardCheck, RotateCcw, TriangleAlert, XCircle } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, ClipboardCheck, Gauge, RotateCcw, TriangleAlert, XCircle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
@@ -27,10 +27,25 @@ type Result = {
  * and without feedback, then scored on the server. The results say whether the
  * unit is mastered and, if not, what to go over first.
  */
-export function UnitCheck({ skillId, questions, token, courseHref, passPct }: { skillId: string; questions: UnitCheckQuestion[]; token: string; courseHref: string; passPct: number }) {
+export function UnitCheck({
+  skillId,
+  questions,
+  token,
+  courseHref,
+  practiceHref,
+  passPct,
+}: {
+  skillId: string;
+  questions: UnitCheckQuestion[];
+  token: string;
+  courseHref: string;
+  practiceHref: string;
+  passPct: number;
+}) {
   const t = useTranslations("mastery");
   const tl = useTranslations("lesson");
   const tg = useTranslations("grade");
+  const tp = useTranslations("practice");
   const locale = useLocale();
   const router = useRouter();
   const [i, setI] = useState(0);
@@ -81,7 +96,13 @@ export function UnitCheck({ skillId, questions, token, courseHref, passPct }: { 
             {result.after !== result.before ? t("levelChanged", { from: t(result.before), to: t(result.after) }) : t("levelNow", { level: t(result.after) })}
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link href={courseHref} className={buttonClasses({ size: "lg" })}>
+            {!result.passed && (
+              <Link href={practiceHref} className={buttonClasses({ size: "lg" })}>
+                <Gauge className="size-5" aria-hidden="true" />
+                {tp("afterCheck")}
+              </Link>
+            )}
+            <Link href={courseHref} className={buttonClasses({ variant: result.passed ? "primary" : "secondary", size: "lg" })}>
               {t("backToCourse")}
             </Link>
             <Button variant="secondary" size="lg" onClick={() => window.location.reload()}>

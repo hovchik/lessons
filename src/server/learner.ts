@@ -1,12 +1,14 @@
 import { and, eq, lte, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { AnswerSource, StoredCard } from "./db/schema";
+import { updateRatings } from "./ability";
 import { newId } from "./user-auth";
 import { parseItemId, scheduleAnswer } from "@/lib/memory";
 
 /**
- * The learner model: every answered question is logged in `answer_events` and
- * moves its spaced-repetition card in `review_cards`. Scores and lesson
+ * The learner model: every answered question is logged in `answer_events`,
+ * moves its spaced-repetition card in `review_cards` and, for lesson questions,
+ * the pupil's ability and the question's difficulty (ability.ts). Scores and lesson
  * completion stay in progress.ts; this file only knows about single questions.
  */
 
@@ -20,6 +22,8 @@ export type AnswerInput = {
   confidence?: number | null;
   ms?: number | null;
   hintUsed?: boolean;
+  /** How many options the question has, so a lucky guess counts for less in the ratings. */
+  options?: number | null;
   /**
    * False logs the answer without moving its card: a second try after a hint,
    * or a lesson's quick check (which Daily Review cannot show).
@@ -39,6 +43,9 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
   const db = await getDb();
   const rc = schema.reviewCards;
   const at = now.toISOString();
+
+  // Ratings first: a pupil's first rating in a skill starts from their cards as they were before these answers.
+  await updateRatings(userId, answers, now);
 
   // The log is append-only, so it can go in first, in one transaction.
   const events = answers.map((a) =>
