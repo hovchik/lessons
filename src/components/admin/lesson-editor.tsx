@@ -56,7 +56,7 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
       setMessage({ kind: "ok", text: status === "published" ? "Published." : status === "draft" ? "Unpublished." : "Saved." });
       startTransition(() => router.refresh());
     } else {
-      setMessage({ kind: "error", text: data.error ?? "Save failed" });
+      setMessage({ kind: "error", text: data.problems?.length ? `${data.error}: ${data.problems.join("; ")}` : (data.error ?? "Save failed") });
     }
   }
 
@@ -153,7 +153,7 @@ export function LessonEditor({ lesson: initial, siteUrl, claudeReady }: { lesson
             )}
           </div>
           <div>
-            <label htmlFor="quiz" className="block text-sm font-bold">Quiz (JSON: prompt, options, answer index, explanation; each text is {"{en, hy, ru}"})</label>
+            <label htmlFor="quiz" className="block text-sm font-bold">Quiz (JSON: prompt, options, answer index, explanation; each text is {"{en, hy, ru}"}. Typed, gap, order and match questions have a kind; see src/content/types.ts)</label>
             <textarea id="quiz" rows={10} value={quizJson} onChange={(e) => setQuizJson(e.target.value)} className="mt-1 w-full rounded-[12px] border border-border bg-card p-3 font-mono text-xs leading-relaxed" aria-invalid={!!quizError} />
             {quizError && <p role="alert" className="mt-1 text-sm font-semibold text-destructive">{quizError}</p>}
           </div>

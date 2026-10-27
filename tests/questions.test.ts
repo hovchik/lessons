@@ -20,6 +20,8 @@ import {
 } from "../src/lib/questions";
 import { gap, match, num, order, q } from "../src/content/types";
 import { questionProblems } from "../src/content/questions/validate";
+import { QUESTIONS } from "../src/content/questions";
+import { QuizQuestionSchema } from "../src/server/api-schemas";
 
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-questions-"));
 process.env.DATABASE_PATH = path.join(dir, "test.db");
@@ -123,6 +125,16 @@ test("content check catches broken questions", () => {
   assert.ok(questionProblems(match(tx("x"), [[tx("a"), tx("1")], [tx("b"), tx("1")], [tx("c"), tx("2")]]), ["en"]).some((p) => p.includes('duplicate en right "1"')));
   assert.ok(questionProblems(num(tx("x"), NaN), ["en"]).includes("answer is not a number"));
   assert.deepEqual(questionProblems(speed, ["en", "hy", "ru"]), []);
+});
+
+test("the admin editor's quiz schema takes every kind and keeps it whole", () => {
+  const all = [pick, ...Object.values(QUESTIONS).flatMap((g) => Object.values(g).flatMap((m) => Object.values(m).flat()))];
+  for (const qq of all) {
+    const sent = JSON.parse(JSON.stringify(qq));
+    assert.deepEqual(QuizQuestionSchema.parse(sent), sent);
+  }
+  assert.equal(QuizQuestionSchema.safeParse({ kind: "order", prompt: tx("x"), items: [tx("a")] }).success, false);
+  assert.equal(QuizQuestionSchema.safeParse({ kind: "number", prompt: tx("x"), options: [] }).success, false);
 });
 
 type Modules = {
