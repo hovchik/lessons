@@ -11,6 +11,7 @@
 import { spawn, spawnSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import fs from "node:fs";
+import net from "node:net";
 import path from "node:path";
 import readline from "node:readline/promises";
 import { fileURLToPath } from "node:url";
@@ -40,6 +41,28 @@ function run(cmd, cmdArgs, opts = {}) {
 // 1. Node version
 const major = Number(process.versions.node.split(".")[0]);
 if (major < 20) fail(`Node.js 20 or newer is required (you have ${process.versions.node}). Download it from https://nodejs.org`);
+
+// An app started earlier keeps answering on the port and keeps showing the old version,
+// even after this run rebuilds, so stop here and say how to close it.
+// Trying to listen on the port tells for sure, however slowly the old server answers.
+const portBusy = await new Promise((resolve) => {
+  const probe = net.createServer();
+  probe.once("error", (e) => resolve(e.code === "EADDRINUSE"));
+  probe.once("listening", () => probe.close(() => resolve(false)));
+  probe.listen(Number(PORT));
+});
+if (portBusy) {
+  fail(
+    [
+      `Something is already running at http://localhost:${PORT}. It is most likely the Lessons app started earlier,`,
+      "  and it keeps showing the old version until it is stopped.",
+      "  Close the other Start window (or press Ctrl+C in it), then run this again.",
+      isWin
+        ? `  If you cannot find that window: run  netstat -ano | findstr :${PORT}  and then  taskkill /PID <number in the last column> /F`
+        : `  If you cannot find that window: run  lsof -i :${PORT}  and then  kill <PID>`,
+    ].join("\n"),
+  );
+}
 
 // Newest modification time of the given files and folders (folders are walked), 0 if none exist.
 // After a `git pull` or a fresh download the changed files are newer than the last build
