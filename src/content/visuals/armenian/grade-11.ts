@@ -1,6 +1,6 @@
 import type { VisualMap } from "..";
 import { ask } from "../ask";
-import { closer, fact } from "../more";
+import { closer } from "../more";
 
 export const grade11: VisualMap[number] = {
   "declension-difficult": [

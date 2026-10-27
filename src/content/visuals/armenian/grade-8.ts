@@ -1,6 +1,6 @@
 import type { VisualMap } from "..";
 import { ask } from "../ask";
-import { closer, fact } from "../more";
+import { closer } from "../more";
 
 export const grade8: VisualMap[number] = {
   "phrase-types": [
