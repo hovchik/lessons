@@ -116,6 +116,8 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   cohesion3: [t("First mention", "Առաջին հիշատակում", "Первое упоминание"), t("Pronoun", "Դերանուն", "Местоимение"), t("Synonym", "Հոմանիշ", "Синоним")],
   official: [t("Conversational", "Խոսակցական", "Разговорный"), t("Official", "Պաշտոնական", "Официально-деловой")],
   compress: [t("Full", "Ամբողջական", "Полностью"), t("Compressed", "Սեղմված", "Сжато")],
+  paronym: [t("Paronym 1", "Պարոնիմ 1", "Пароним 1"), t("Paronym 2", "Պարոնիմ 2", "Пароним 2")],
+  colour3: [t("Bookish", "Գրքային", "Книжное"), t("Neutral", "Չեզոք", "Нейтральное"), t("Colloquial", "Խոսակցական", "Разговорное")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {

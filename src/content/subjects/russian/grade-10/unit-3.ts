@@ -1076,7 +1076,7 @@ In pronouns не and ни are separated by a preposition and then written in thr
 | Hyphen | Example |
 | --- | --- |
 | two equal nouns | диван-кровать, кафе-ресторан, учёный-физик |
-| a foreign first part: вице-, экс-, обер-, лейб-, унтер-, штаб-, контр-admiral | вице-президент, экс-чемпион, контр-адмирал |
+| a foreign first part: вице-, экс-, обер-, лейб-, унтер-, штаб-, контр- | вице-президент, экс-чемпион, контр-адмирал |
 | a compass point | северо-восток, юго-западный |
 | a geographical name of two parts | Ростов-на-Дону, Санкт-Петербург, Алма-Ата |
 | пол- before a vowel, a capital letter or л | пол-яблока, пол-Москвы, пол-литра |

@@ -42,7 +42,7 @@ The poem is built as an argument in five stanzas.
 | 4 | the reason: the poet woke good feelings, praised freedom, pleaded for the fallen |
 | 5 | the instruction: be obedient to the Muse alone, fear no insult and ask no crown |
 
-The third stanza is the one the censor touched: Pushkin names **славянин, финн, тунгус, калмык**, and the list says that the reader of this poetry is anyone at all, not a court.
+The third stanza is the widest: Pushkin names **славянин, финн, тунгус, калмык**, and the list says that the reader of this poetry is anyone at all, not a court.
 
 The fourth stanza is the poem's own answer to the question "what is a poet for":
 
@@ -105,7 +105,7 @@ The themes are freedom, the poet and the crowd, and the road with time and memor
 | 4 | պատճառը՝ բանաստեղծն արթնացրել է բարի զգացումներ, գովերգել ազատությունը, ողորմություն խնդրել ընկածների համար |
 | 5 | պատվերը՝ հնազանդվել միայն Մուսային, չվախենալ վիրավորանքից և պսակ չխնդրել |
 
-Երրորդ տունն է, որին դիպչել է գրաքննիչը․ Պուշկինն անվանում է **славянин, финн, тунгус, калмык**, և ցանկն ասում է, որ այս պոեզիայի ընթերցողը ցանկացած մարդ է, ոչ թե արքունիքը։
+Երրորդ տունն ամենալայնն է․ Պուշկինն անվանում է **славянин, финн, тунгус, калмык**, և ցանկն ասում է, որ այս պոեզիայի ընթերցողը ցանկացած մարդ է, ոչ թե արքունիքը։
 
 Չորրորդ տունը բանաստեղծության պատասխանն է այն հարցին, թե ինչի համար է բանաստեղծը․
 
@@ -168,7 +168,7 @@ The themes are freedom, the poet and the crowd, and the road with time and memor
 | 4 | причина: поэт будил добрые чувства, славил свободу, призывал милость к падшим |
 | 5 | завет: быть послушным одной Музе, не бояться обиды и не просить венца |
 
-Третью строфу и тронула цензура: Пушкин называет **славянина, финна, тунгуса, калмыка**, и перечисление говорит, что читатель этих стихов — любой человек, а не двор.
+Третья строфа самая широкая: Пушкин называет **славянина, финна, тунгуса, калмыка**, и перечисление говорит, что читатель этих стихов — любой человек, а не двор.
 
 Четвёртая строфа — собственный ответ стихотворения на вопрос, зачем нужен поэт:
 
@@ -525,11 +525,11 @@ Patriotism here is not pride in the state; it is a physical memory of a landscap
 | --- | --- |
 | early morning | beggars, workmen, a sleepy clerk |
 | noon | tutors with children, governesses |
-| two o'clock | officials in their departments' uniforms |
-| four | the parade of whiskers, moustaches, hats and sleeves |
+| two to three | the parade of whiskers, moustaches, hats and sleeves |
+| three o'clock | officials in their departments' uniforms |
 | evening | lamps, young men, shadows, deceit |
 
-In the four o'clock passage people disappear and only their parts remain: «тысячи сортов шляпок, платьев, платков», whiskers that walk by themselves. The device is called **synecdoche**, the part standing for the whole, and Gogol uses it to say that in this city a man is his uniform and nothing more.
+In the passage from two to three people disappear and only their parts remain: «тысячи сортов шляпок, платьев, платков», whiskers that walk by themselves. The device is called **synecdoche**, the part standing for the whole, and Gogol uses it to say that in this city a man is his uniform and nothing more.
 
 ## «Невский проспект»: two endings, one lesson
 
@@ -547,7 +547,7 @@ The two plots are the same joke told twice, once as tragedy and once as farce. G
 | --- | --- |
 | the name | born into a comic naming scene, Акакий Акакиевич Башмачкин |
 | the work | copying papers; he loves the letters themselves |
-| the loss | the old coat is beyond mending; Петрович demands 80 roubles |
+| the loss | the old coat is beyond mending; Петрович asks 150 roubles and settles for 80 |
 | the saving | half a year of no tea and no candles |
 | the day | the new coat, the party, the theft on the empty square |
 | the refusal | the «значительное лицо» shouts at him |
@@ -591,7 +591,7 @@ Gogol ends the story by saying out loud that such things do not happen, and then
 
 ### Answers
 
-The street belongs to beggars and workmen early, to tutors and children at noon, to officials at two, to hats and whiskers at four, and to lamps and deceit in the evening. The device is synecdoche, a part standing for the whole, and here it says that in Petersburg a man is his uniform and his hat and nothing besides. Piskaryov follows a beauty into a brothel, takes opium and cuts his throat, while Pirogov is beaten by a tinsmith and consoles himself with a pastry and a dance. The stages are the comic naming, the copying he loves, the unmendable coat, the half year of saving, the new coat and the party, the theft, the shouting of the important person, death in fever, a funeral with nobody there, and the ghost on the square. The words are spoken by Akaky to the clerks who mock him, and the young man who hears them never laughs at him again. The nose is a state councillor, three ranks above Kovalyov, which says that rank can be detached from a person and still outrank him. Gogol admits the impossibility in order to leave the reader with the unease of a story that is absurd in its events and exact in its meaning.`,
+The street belongs to beggars and workmen early, to tutors and children at noon, to hats and whiskers from two to three, to officials at three, and to lamps and deceit in the evening. The device is synecdoche, a part standing for the whole, and here it says that in Petersburg a man is his uniform and his hat and nothing besides. Piskaryov follows a beauty into a brothel, takes opium and cuts his throat, while Pirogov is beaten by a tinsmith and consoles himself with a pastry and a dance. The stages are the comic naming, the copying he loves, the unmendable coat, the half year of saving, the new coat and the party, the theft, the shouting of the important person, death in fever, a funeral with nobody there, and the ghost on the square. The words are spoken by Akaky to the clerks who mock him, and the young man who hears them never laughs at him again. The nose is a state councillor, three ranks above Kovalyov, which says that rank can be detached from a person and still outrank him. Gogol admits the impossibility in order to leave the reader with the unease of a story that is absurd in its events and exact in its meaning.`,
         hy: `## Քաղաքը՝ որպես կերպար
 
 «Невский проспект»-ը բացվում է ոչ մարդով, այլ փողոցով, և փողոցը նկարագրվում է ժամացույցով։
@@ -600,11 +600,11 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 | --- | --- |
 | վաղ առավոտ | աղքատներ, բանվորներ, քնատ գրագիր |
 | կեսօր | դաստիարակներ երեխաների հետ, դայակներ |
-| ժամն երկուսին | պաշտոնյաներ՝ իրենց գերատեսչության համազգեստով |
-| չորսին | այտամորուսների, բեղերի, գլխարկների և թևքերի շքերթ |
+| երկուսից երեքը | այտամորուսների, բեղերի, գլխարկների և թևքերի շքերթ |
+| ժամը երեքին | պաշտոնյաներ՝ իրենց գերատեսչության համազգեստով |
 | երեկո | լապտերներ, երիտասարդներ, ստվերներ, խաբեություն |
 
-Ժամը չորսի հատվածում մարդիկ անհետանում են, և մնում են միայն նրանց մասերը՝ «тысячи сортов шляпок, платьев, платков», բեղեր, որ ինքնուրույն քայլում են։ Հնարանքը կոչվում է **սինեկդոխ**՝ մասն ամբողջի փոխարեն, և Գոգոլն օգտագործում է այն՝ ասելու, որ այս քաղաքում մարդն իր համազգեստն է և ոչ ավելին։
+Երկուսից երեքի հատվածում մարդիկ անհետանում են, և մնում են միայն նրանց մասերը՝ «тысячи сортов шляпок, платьев, платков», բեղեր, որ ինքնուրույն քայլում են։ Հնարանքը կոչվում է **սինեկդոխ**՝ մասն ամբողջի փոխարեն, և Գոգոլն օգտագործում է այն՝ ասելու, որ այս քաղաքում մարդն իր համազգեստն է և ոչ ավելին։
 
 ## «Невский проспект»․ երկու ավարտ, մեկ դաս
 
@@ -622,7 +622,7 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 | --- | --- |
 | անունը | ծնվում է անվանակոչության կատակերգական տեսարանում՝ Акакий Акакиевич Башмачкин |
 | աշխատանքը | թղթեր է արտագրում, սիրում է հենց տառերը |
-| կորուստը | հին վերարկուն անվերանորոգելի է, Պետրովիչը պահանջում է 80 ռուբլի |
+| կորուստը | հին վերարկուն անվերանորոգելի է, Պետրովիչը պահանջում է 150 ռուբլի և համաձայնում 80-ի |
 | խնայողությունը | կես տարի առանց թեյի և առանց մոմի |
 | օրը | նոր վերարկուն, երեկույթը, գողությունը դատարկ հրապարակում |
 | մերժումը | «значительное лицо»-ն բղավում է նրա վրա |
@@ -666,7 +666,7 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 
 ### Պատասխաններ
 
-Փողոցը վաղ առավոտյան պատկանում է աղքատներին և բանվորներին, կեսօրին՝ դաստիարակներին և երեխաներին, ժամն երկուսին՝ պաշտոնյաներին, չորսին՝ գլխարկներին և բեղերին, երեկոյան՝ լապտերներին և խաբեությանը։ Հնարանքը սինեկդոխն է՝ մասն ամբողջի փոխարեն, և այստեղ ասում է, որ Պետերբուրգում մարդն իր համազգեստն ու գլխարկն է և ոչ ավելին։ Պիսկարյովը գեղեցկուհուն հետևելով հասնում է հասարակաց տուն, ափիոն վերցնում և կտրում կոկորդը, իսկ Պիրոգովը ծեծ է ստանում թիթեղագործից և մխիթարվում խմորեղենով և պարով։ Փուլերն են՝ կատակերգական անվանակոչությունը, սիրած արտագրությունը, անվերանորոգելի վերարկուն, կես տարվա խնայողությունը, նոր վերարկուն և երեկույթը, գողությունը, նշանավոր դեմքի բղավոցը, մահը տենդի մեջ, թաղումն առանց ոչ մեկի և ուրվականը հրապարակում։ Խոսքերն ասում է Ակակին իրեն ծաղրող գրագիրներին, և երիտասարդը, որ լսում է դրանք, այլևս երբեք չի ծաղրում նրան։ Քիթը պետական խորհրդական է՝ Կովալյովից երեք աստիճան բարձր, ինչն ասում է, որ աստիճանը կարող է անջատվել մարդուց և դեռ մնալ նրանից բարձր։ Գոգոլը խոստովանում է անհնարինությունը, որ ընթերցողին թողնի այն պատմության անհանգստությունը, որ իրադարձություններով անհեթեթ է և իմաստով ճշգրիտ։`,
+Փողոցը վաղ առավոտյան պատկանում է աղքատներին և բանվորներին, կեսօրին՝ դաստիարակներին և երեխաներին, երկուսից երեքը՝ գլխարկներին և բեղերին, ժամը երեքին՝ պաշտոնյաներին, երեկոյան՝ լապտերներին և խաբեությանը։ Հնարանքը սինեկդոխն է՝ մասն ամբողջի փոխարեն, և այստեղ ասում է, որ Պետերբուրգում մարդն իր համազգեստն ու գլխարկն է և ոչ ավելին։ Պիսկարյովը գեղեցկուհուն հետևելով հասնում է հասարակաց տուն, ափիոն վերցնում և կտրում կոկորդը, իսկ Պիրոգովը ծեծ է ստանում թիթեղագործից և մխիթարվում խմորեղենով և պարով։ Փուլերն են՝ կատակերգական անվանակոչությունը, սիրած արտագրությունը, անվերանորոգելի վերարկուն, կես տարվա խնայողությունը, նոր վերարկուն և երեկույթը, գողությունը, նշանավոր դեմքի բղավոցը, մահը տենդի մեջ, թաղումն առանց ոչ մեկի և ուրվականը հրապարակում։ Խոսքերն ասում է Ակակին իրեն ծաղրող գրագիրներին, և երիտասարդը, որ լսում է դրանք, այլևս երբեք չի ծաղրում նրան։ Քիթը պետական խորհրդական է՝ Կովալյովից երեք աստիճան բարձր, ինչն ասում է, որ աստիճանը կարող է անջատվել մարդուց և դեռ մնալ նրանից բարձր։ Գոգոլը խոստովանում է անհնարինությունը, որ ընթերցողին թողնի այն պատմության անհանգստությունը, որ իրադարձություններով անհեթեթ է և իմաստով ճշգրիտ։`,
         ru: `## Город как персонаж
 
 «Невский проспект» открывается не человеком, а улицей, и улица описана по часам.
@@ -675,11 +675,11 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 | --- | --- |
 | раннее утро | нищие, работники, сонный чиновник |
 | полдень | гувернёры с детьми, гувернантки |
-| два часа | чиновники в мундирах своих департаментов |
-| четыре | парад бакенбард, усов, шляп и рукавов |
+| с двух до трёх | парад бакенбард, усов, шляп и рукавов |
+| три часа | чиновники в мундирах своих департаментов |
 | вечер | фонари, молодые люди, тени, обман |
 
-В пассаже о четырёх часах люди исчезают и остаются только их части: «тысячи сортов шляпок, платьев, платков», бакенбарды, которые ходят сами. Приём называется **синекдохой**, часть вместо целого, и Гоголь пользуется им, чтобы сказать: в этом городе человек есть свой мундир и ничего кроме.
+В пассаже о времени с двух до трёх люди исчезают и остаются только их части: «тысячи сортов шляпок, платьев, платков», бакенбарды, которые ходят сами. Приём называется **синекдохой**, часть вместо целого, и Гоголь пользуется им, чтобы сказать: в этом городе человек есть свой мундир и ничего кроме.
 
 ## «Невский проспект»: два финала, один урок
 
@@ -697,7 +697,7 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 | --- | --- |
 | имя | комическая сцена наречения: Акакий Акакиевич Башмачкин |
 | служба | переписывание бумаг; он любит самые буквы |
-| утрата | старый капот не починить, Петрович требует 80 рублей |
+| утрата | старый капот не починить, Петрович просит полтораста рублей и сходится на восьмидесяти |
 | сбережения | полгода без чая и без свечей |
 | день | новая шинель, вечер у чиновника, кража на пустой площади |
 | отказ | «значительное лицо» кричит на него |
@@ -741,7 +741,7 @@ The street belongs to beggars and workmen early, to tutors and children at noon,
 
 ### Ответы
 
-Улица рано утром принадлежит нищим и работникам, в полдень гувернёрам и детям, в два часа чиновникам, в четыре шляпам и бакенбардам, вечером фонарям и обману. Приём — синекдоха, часть вместо целого, и здесь он говорит, что в Петербурге человек есть свой мундир и своя шляпа и ничего больше. Пискарёв идёт за красавицей в публичный дом, принимает опиум и режет себе горло, а Пирогов избит жестянщиком и утешается пирожком и танцем. Этапы таковы: комическое наречение, любимое переписывание, непочиняемый капот, полгода сбережений, новая шинель и вечер, кража, крик значительного лица, смерть в горячке, похороны без провожающих и призрак на площади. Слова говорит Акакий чиновникам, которые над ним смеются, и молодой человек, услышавший их, больше никогда над ним не смеётся. Нос — статский советник, на три чина выше Ковалёва, и это значит, что чин может отделиться от человека и остаться выше его. Гоголь признаёт невозможность, чтобы оставить читателя с тревогой от повести, абсурдной по событиям и точной по смыслу.`,
+Улица рано утром принадлежит нищим и работникам, в полдень гувернёрам и детям, с двух до трёх шляпам и бакенбардам, в три часа чиновникам, вечером фонарям и обману. Приём — синекдоха, часть вместо целого, и здесь он говорит, что в Петербурге человек есть свой мундир и своя шляпа и ничего больше. Пискарёв идёт за красавицей в публичный дом, принимает опиум и режет себе горло, а Пирогов избит жестянщиком и утешается пирожком и танцем. Этапы таковы: комическое наречение, любимое переписывание, непочиняемый капот, полгода сбережений, новая шинель и вечер, кража, крик значительного лица, смерть в горячке, похороны без провожающих и призрак на площади. Слова говорит Акакий чиновникам, которые над ним смеются, и молодой человек, услышавший их, больше никогда над ним не смеётся. Нос — статский советник, на три чина выше Ковалёва, и это значит, что чин может отделиться от человека и остаться выше его. Гоголь признаёт невозможность, чтобы оставить читателя с тревогой от повести, абсурдной по событиям и точной по смыслу.`,
       },
       [
         q(
@@ -1316,7 +1316,7 @@ Bazarov's programme is almost entirely negative, and he says so.
 | art is a waste | «Рафаэль гроша медного не стоит» |
 | nature is a workshop, not a temple | he dissects frogs and is uninterested in the sunset |
 | love is physiology | «И что за таинственные отношения между мужчиной и женщиной?» |
-| the first task is to clear the ground | «Сперва нужно место очистить» |
+| the first task is to clear the ground | «Сперва нужно место расчистить» |
 
 Pavel Petrovich's objection is the strongest the fathers can make: you destroy and build nothing. Bazarov answers that clearing is itself work, and the novel does not decide the argument in the drawing room. It decides it in the body.
 
@@ -1362,7 +1362,7 @@ The word **нигилист** existed before 1862, but this novel put it into ev
 
 ### Answers
 
-The novel begins on the twentieth of May 1859, two years before emancipation, so that the whole action stands in the gap where the old order is ending and nothing has replaced it. Bazarov holds that nothing may be taken on authority, that art is worthless, that nature is a workshop, that love is physiology, and that the first task is to clear the ground, shown in «Я ничего не признаю», the remark about Raphael, the dissected frogs, the question about men and women, and «сперва нужно место очистить». Pavel Petrovich objects that nihilism destroys and builds nothing, and Bazarov answers that clearing is itself work. The three defeats are the love for Odintsova, which disproves that love is physiology, the parents, whose love he can neither bear nor refuse, which disproves that family feeling is a prejudice, and his own death from an infected cut, which disproves that nature is merely a workshop. The duel is absurd, fought over Fenechka with a footman as second, because Turgenev refuses to let the real conflict be settled by the fathers' weapons. Bazarov says «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», and the sentence is the hardest in the book because the strongest character in it withdraws his own claim to be necessary. The last paragraph changes the scale: the quarrel was about a decade, while the flowers on the grave speak about any human life, and that is why both radicals and conservatives were angry with a book that had turned out to be about death.`,
+The novel begins on the twentieth of May 1859, two years before emancipation, so that the whole action stands in the gap where the old order is ending and nothing has replaced it. Bazarov holds that nothing may be taken on authority, that art is worthless, that nature is a workshop, that love is physiology, and that the first task is to clear the ground, shown in «Я ничего не признаю», the remark about Raphael, the dissected frogs, the question about men and women, and «сперва нужно место расчистить». Pavel Petrovich objects that nihilism destroys and builds nothing, and Bazarov answers that clearing is itself work. The three defeats are the love for Odintsova, which disproves that love is physiology, the parents, whose love he can neither bear nor refuse, which disproves that family feeling is a prejudice, and his own death from an infected cut, which disproves that nature is merely a workshop. The duel is absurd, fought over Fenechka with a footman as second, because Turgenev refuses to let the real conflict be settled by the fathers' weapons. Bazarov says «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», and the sentence is the hardest in the book because the strongest character in it withdraws his own claim to be necessary. The last paragraph changes the scale: the quarrel was about a decade, while the flowers on the grave speak about any human life, and that is why both radicals and conservatives were angry with a book that had turned out to be about death.`,
         hy: `## 1859․ տարին, որում դրված է վեպը
 
 Տուրգենևը ճշգրիտ թվագրում է գործողությունը՝ 1859-ի մայիսի քսանը, ճորտատիրության վերացումից երկու տարի առաջ։ Ողջ գիրքը կանգնած է այդ բացվածքում, երբ հին կարգը հաստատ ավարտվում է, և ոչինչ նրան չի փոխարինել։
@@ -1382,7 +1382,7 @@ The novel begins on the twentieth of May 1859, two years before emancipation, so
 | արվեստը վատնում է | «Рафаэль гроша медного не стоит» |
 | բնությունն արհեստանոց է, ոչ տաճար | կտրատում է գորտերը և չի հետաքրքրվում մայրամուտով |
 | սերը ֆիզիոլոգիա է | «И что за таинственные отношения между мужчиной и женщиной?» |
-| առաջին գործը տեղը մաքրելն է | «Сперва нужно место очистить» |
+| առաջին գործը տեղը մաքրելն է | «Сперва нужно место расчистить» |
 
 Պավել Պետրովիչի առարկությունն ամենաուժեղն է, որ հայրերը կարող են անել՝ դուք քանդում եք և ոչինչ չեք կառուցում։ Բազարովը պատասխանում է, որ մաքրելն ինքն է գործ, և վեպը վիճաբանությունը չի լուծում հյուրասենյակում։ Նա լուծում է այն մարմնում։
 
@@ -1428,7 +1428,7 @@ The novel begins on the twentieth of May 1859, two years before emancipation, so
 
 ### Պատասխաններ
 
-Վեպը սկսվում է 1859-ի մայիսի քսանին՝ ճորտատիրության վերացումից երկու տարի առաջ, որպեսզի ողջ գործողությունը կանգնի այն բացվածքում, որտեղ հին կարգն ավարտվում է, և ոչինչ նրան չի փոխարինել։ Բազարովը պնդում է, որ ոչինչ չպետք է ընդունվի հեղինակության ուժով, որ արվեստն անարժեք է, որ բնությունն արհեստանոց է, որ սերը ֆիզիոլոգիա է և որ առաջին գործը տեղը մաքրելն է՝ ցույց տրված «Я ничего не признаю»-ում, Ռաֆայելի մասին ասույթում, կտրատված գորտերում, տղամարդու և կնոջ մասին հարցում և «сперва нужно место очистить»-ում։ Պավել Պետրովիչն առարկում է, որ նիհիլիզմը քանդում է և ոչինչ չի կառուցում, իսկ Բազարովը պատասխանում է, որ մաքրելն ինքն է գործ։ Երեք պարտություններն Օդինցովայի հանդեպ սերն է, որ հերքում է սիրո ֆիզիոլոգիականությունը, ծնողները, որոնց սիրուն նա ոչ կարող է դիմանալ, ոչ մերժել, ինչը հերքում է, թե ընտանեկան զգացումը նախապաշարմունք է, և իր մահը վարակված կտրվածքից, որ հերքում է, թե բնությունը սոսկ արհեստանոց է։ Մարտամարտն անհեթեթ է՝ Ֆենեչկայի պատճառով և ծառայով որպես վկա, որովհետև Տուրգենևը չի թողնում, որ իրական բախումը լուծվի հայրերի զենքերով։ Բազարովն ասում է «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», և նախադասությունը գրքում ամենածանրն է, որովհետև նրա մեջ ամենաուժեղ կերպարը հետ է վերցնում իր իսկ հավակնությունը՝ անհրաժեշտ լինելու։ Վերջին պարբերությունը փոխում է մասշտաբը․ վիճաբանությունը մեկ տասնամյակի մասին էր, իսկ գերեզմանի ծաղիկները խոսում են ցանկացած մարդկային կյանքի մասին, և ահա թե ինչու և ռադիկալները, և պահպանողականները բարկացած էին գրքից, որ վերջում մահվան մասին էր։`,
+Վեպը սկսվում է 1859-ի մայիսի քսանին՝ ճորտատիրության վերացումից երկու տարի առաջ, որպեսզի ողջ գործողությունը կանգնի այն բացվածքում, որտեղ հին կարգն ավարտվում է, և ոչինչ նրան չի փոխարինել։ Բազարովը պնդում է, որ ոչինչ չպետք է ընդունվի հեղինակության ուժով, որ արվեստն անարժեք է, որ բնությունն արհեստանոց է, որ սերը ֆիզիոլոգիա է և որ առաջին գործը տեղը մաքրելն է՝ ցույց տրված «Я ничего не признаю»-ում, Ռաֆայելի մասին ասույթում, կտրատված գորտերում, տղամարդու և կնոջ մասին հարցում և «сперва нужно место расчистить»-ում։ Պավել Պետրովիչն առարկում է, որ նիհիլիզմը քանդում է և ոչինչ չի կառուցում, իսկ Բազարովը պատասխանում է, որ մաքրելն ինքն է գործ։ Երեք պարտություններն Օդինցովայի հանդեպ սերն է, որ հերքում է սիրո ֆիզիոլոգիականությունը, ծնողները, որոնց սիրուն նա ոչ կարող է դիմանալ, ոչ մերժել, ինչը հերքում է, թե ընտանեկան զգացումը նախապաշարմունք է, և իր մահը վարակված կտրվածքից, որ հերքում է, թե բնությունը սոսկ արհեստանոց է։ Մարտամարտն անհեթեթ է՝ Ֆենեչկայի պատճառով և ծառայով որպես վկա, որովհետև Տուրգենևը չի թողնում, որ իրական բախումը լուծվի հայրերի զենքերով։ Բազարովն ասում է «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», և նախադասությունը գրքում ամենածանրն է, որովհետև նրա մեջ ամենաուժեղ կերպարը հետ է վերցնում իր իսկ հավակնությունը՝ անհրաժեշտ լինելու։ Վերջին պարբերությունը փոխում է մասշտաբը․ վիճաբանությունը մեկ տասնամյակի մասին էր, իսկ գերեզմանի ծաղիկները խոսում են ցանկացած մարդկային կյանքի մասին, և ահա թե ինչու և ռադիկալները, և պահպանողականները բարկացած էին գրքից, որ վերջում մահվան մասին էր։`,
         ru: `## 1859 год, в котором поставлен роман
 
 Тургенев датирует действие точно: двадцатое мая 1859 года, за два года до отмены крепостного права. Вся книга стоит в этом зазоре, когда старый порядок несомненно кончается, а ничего на его место не пришло.
@@ -1448,7 +1448,7 @@ The novel begins on the twentieth of May 1859, two years before emancipation, so
 | искусство — пустая трата | «Рафаэль гроша медного не стоит» |
 | природа — мастерская, а не храм | он режет лягушек и равнодушен к закату |
 | любовь — физиология | «И что за таинственные отношения между мужчиной и женщиной?» |
-| первое дело — очистить место | «Сперва нужно место очистить» |
+| первое дело — расчистить место | «Сперва нужно место расчистить» |
 
 Возражение Павла Петровича — сильнейшее, на какое способны отцы: вы разрушаете и ничего не строите. Базаров отвечает, что расчистка и есть работа, и роман не решает спора в гостиной. Он решает его в теле.
 
@@ -1494,7 +1494,7 @@ The novel begins on the twentieth of May 1859, two years before emancipation, so
 
 ### Ответы
 
-Роман начинается двадцатого мая 1859 года, за два года до отмены крепостного права, чтобы всё действие стояло в зазоре, где старый порядок кончается, а ничего на его место не пришло. Базаров утверждает, что ничто не принимается на веру авторитета, что искусство ничего не стоит, что природа — мастерская, что любовь — физиология и что первое дело — очистить место; это видно в «Я ничего не признаю», в замечании о Рафаэле, в разрезанных лягушках, в вопросе о мужчине и женщине и в «сперва нужно место очистить». Павел Петрович возражает, что нигилизм разрушает и ничего не строит, а Базаров отвечает, что расчистка и есть работа. Три поражения — любовь к Одинцовой, опровергающая, что любовь есть физиология, родители, чью любовь он не может ни вынести, ни отвергнуть, что опровергает взгляд на родственное чувство как на предрассудок, и собственная смерть от заражённого пореза, опровергающая, что природа только мастерская. Дуэль абсурдна, из-за Фенечки и с лакеем в секундантах, потому что Тургенев не позволяет решить настоящий конфликт оружием отцов. Базаров говорит «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», и это самое тяжёлое предложение книги, потому что сильнейший её характер сам отзывает своё притязание быть нужным. Последний абзац меняет масштаб: спор шёл о десятилетии, а цветы на могиле говорят о всякой человеческой жизни, и потому и радикалы, и консерваторы были недовольны книгой, оказавшейся книгой о смерти.`,
+Роман начинается двадцатого мая 1859 года, за два года до отмены крепостного права, чтобы всё действие стояло в зазоре, где старый порядок кончается, а ничего на его место не пришло. Базаров утверждает, что ничто не принимается на веру авторитета, что искусство ничего не стоит, что природа — мастерская, что любовь — физиология и что первое дело — расчистить место; это видно в «Я ничего не признаю», в замечании о Рафаэле, в разрезанных лягушках, в вопросе о мужчине и женщине и в «сперва нужно место расчистить». Павел Петрович возражает, что нигилизм разрушает и ничего не строит, а Базаров отвечает, что расчистка и есть работа. Три поражения — любовь к Одинцовой, опровергающая, что любовь есть физиология, родители, чью любовь он не может ни вынести, ни отвергнуть, что опровергает взгляд на родственное чувство как на предрассудок, и собственная смерть от заражённого пореза, опровергающая, что природа только мастерская. Дуэль абсурдна, из-за Фенечки и с лакеем в секундантах, потому что Тургенев не позволяет решить настоящий конфликт оружием отцов. Базаров говорит «Я нужен России… Нет, видно, не нужен. Да и кто нужен?», и это самое тяжёлое предложение книги, потому что сильнейший её характер сам отзывает своё притязание быть нужным. Последний абзац меняет масштаб: спор шёл о десятилетии, а цветы на могиле говорят о всякой человеческой жизни, и потому и радикалы, и консерваторы были недовольны книгой, оказавшейся книгой о смерти.`,
       },
       [
         q(
