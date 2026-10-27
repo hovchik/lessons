@@ -23,6 +23,7 @@ import { worldHistoryVisuals } from "./world-history";
 import { scienceVisuals } from "./science";
 import { informaticsVisuals } from "./informatics";
 import { socialStudiesVisuals } from "./social-studies";
+import { churchHistoryVisuals } from "./church-history";
 
 type At = {
   /** Where to put it: before the n-th heading (1-based, ## and ###), "top" (before the first heading) or "end". Default: before the exercises. */
@@ -52,6 +53,7 @@ export const VISUALS: Record<string, VisualMap> = {
   science: scienceVisuals,
   informatics: informaticsVisuals,
   "social-studies": socialStudiesVisuals,
+  "church-history": churchHistoryVisuals,
 };
 
 const EXERCISES = /^#{2,3} (Exercises|Упражнения|Задания|Վարժություններ|Առաջադրանքներ)\s*$/m;
