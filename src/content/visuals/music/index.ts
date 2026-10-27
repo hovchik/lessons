@@ -3,6 +3,7 @@ import { grade1 } from "./grade-1";
 import { grade2 } from "./grade-2";
 import { grade3 } from "./grade-3";
 import { grade4 } from "./grade-4";
+import { grade5 } from "./grade-5";
 
 /**
  * Music 1–7: a keyboard, staff, rhythm and metronome you can hear (piano), labelled pictures,
@@ -13,4 +14,5 @@ export const musicVisuals: VisualMap = {
   2: grade2,
   3: grade3,
   4: grade4,
+  5: grade5,
 };

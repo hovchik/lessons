@@ -710,4 +710,117 @@ const hall: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall };
+/* ---------------- grade 5: how loud and how joined ---------------- */
+
+const DYN: Array<[string, number]> = [["pp", 10], ["p", 18], ["mp", 26], ["mf", 34], ["f", 44], ["ff", 54]];
+const SL = (k: number) => 168 - k * 4; // staff: k = 0 is the bottom line, each step is a line or space
+const Head = ({ x, k, up = true }: { x: number; k: number; up?: boolean }) => (
+  <g>
+    <ellipse cx={x} cy={SL(k)} rx="4.6" ry="3.4" transform={`rotate(-20 ${x} ${SL(k)})`} fill="#1e1b4b" />
+    <line x1={up ? x + 4.2 : x - 4.2} x2={up ? x + 4.2 : x - 4.2} y1={SL(k)} y2={SL(k) + (up ? -24 : 24)} stroke="#1e1b4b" strokeWidth="1.3" />
+  </g>
+);
+
+const marks: Diagram = {
+  title: t("Dynamics and articulation", "Դինամիկա և արտիկուլյացիա", "Динамика и штрихи"),
+  h: 204,
+  draw: (lang) => (
+    <g>
+      {DYN.map(([m, hgt], k) => (
+        <g key={m}>
+          <rect x={22 + k * 48} y={64 - hgt} width="36" height={hgt} rx="4" fill="#7c3aed" opacity={0.25 + k * 0.13} />
+          <text x={40 + k * 48} y="78" textAnchor="middle" fontSize="12" fontWeight="900" fontStyle="italic" fontFamily="Georgia, serif" fill="#4c1d95">{m}</text>
+        </g>
+      ))}
+      <path d="M24,96 L146,90 M24,96 L146,102" stroke="#0d9488" strokeWidth="2" fill="none" />
+      <path d="M174,90 L296,96 M174,102 L296,96" stroke="#d97706" strokeWidth="2" fill="none" />
+      <Tx x={84} y={114} s={t("crescendo: louder and louder", "կրեշենդո՝ ավելի ու ավելի ուժեղ", "крещендо: всё громче")} lang={lang} size={6.5} fill="#0d9488" />
+      <Tx x={236} y={114} s={t("diminuendo: quieter and quieter", "դիմինուենդո՝ ավելի ու ավելի թույլ", "диминуэндо: всё тише")} lang={lang} size={6.5} fill="#d97706" />
+      {[0, 2, 4, 6, 8].map((k) => <line key={k} x1="8" x2="312" y1={SL(k)} y2={SL(k)} stroke="#94a3b8" strokeWidth="0.8" />)}
+      {/* legato: four notes under one slur */}
+      {[2, 3, 4, 5].map((k, i) => <Head key={i} x={30 + i * 18} k={k} />)}
+      <path d="M27,168 Q58,180 87,158" fill="none" stroke="#1e1b4b" strokeWidth="1.4" />
+      {/* staccato: dots */}
+      {[4, 4, 3, 2].map((k, i) => (
+        <g key={i}>
+          <Head x={124 + i * 18} k={k} />
+          <circle cx={124 + i * 18} cy={SL(k) + 8} r="1.6" fill="#1e1b4b" />
+        </g>
+      ))}
+      {/* accent */}
+      <Head x={220} k={3} />
+      <Head x={238} k={3} />
+      <path d="M216,126 l8,3 l-8,3" stroke="#dc2626" strokeWidth="1.6" fill="none" />
+      {/* fermata */}
+      <Head x={284} k={0} />
+      <path d="M274,132 q10,-12 20,0" fill="none" stroke="#1e1b4b" strokeWidth="1.6" />
+      <circle cx="284" cy="129" r="1.6" fill="#1e1b4b" />
+      <line x1="306" x2="306" y1={SL(8)} y2={SL(0)} stroke="#1e1b4b" strokeWidth="1.2" />
+      <line x1="310" x2="310" y1={SL(8)} y2={SL(0)} stroke="#1e1b4b" strokeWidth="2.6" />
+      <Tx x={57} y={194} s={t("legato", "լեգատո", "легато")} lang={lang} size={7} fill="#475569" />
+      <Tx x={151} y={194} s={t("staccato", "ստակատո", "стаккато")} lang={lang} size={7} fill="#475569" />
+      <Tx x={229} y={194} s={t("accent", "շեշտ", "акцент")} lang={lang} size={7} fill="#dc2626" />
+      <Tx x={284} y={194} s={t("fermata", "ֆերմատա", "фермата")} lang={lang} size={7} fill="#475569" />
+    </g>
+  ),
+  parts: [
+    P(16, 22, t("From pp to ff", "pp-ից մինչև ff", "От pp до ff"), t("The Italian words piano (quiet) and forte (loud) give the letters. Add \"m\" (mezzo, \"fairly\") for the middle, or double the letter for \"very\".", "Տառերը գալիս են իտալերեն piano (թույլ) և forte (ուժեղ) բառերից։ Միջինի համար ավելացնում են «m» (mezzo՝ «բավական»), իսկ «շատ»-ի համար տառը կրկնում են։", "Буквы взяты из итальянских слов piano (тихо) и forte (громко). Для среднего добавляют «m» (mezzo — «умеренно»), а для «очень» букву удваивают.")),
+    P(160, 96, t("Hairpins", "Սեպիկներ", "«Вилочки»"), t("A sign that opens like a mouth means grow louder; one that closes means fade away. Musicians call them hairpins.", "Բերանի պես բացվող նշանը նշանակում է ուժեղացնել, փակվողը՝ մարել։ Երաժիշտներն այդ նշաններն երբեմն սեպիկներ են անվանում։", "Знак, раскрывающийся как рот, значит «громче», закрывающийся — «тише». Музыканты называют их «вилочками».")),
+    P(57, 132, t("Legato", "Լեգատո", "Легато"), t("The curved line joins the notes: play them smoothly, with no gaps, as if singing in one breath.", "Կոր գիծը միացնում է նոտաները․ նվագի՛ր դրանք սահուն, առանց ընդմիջումների, կարծես մեկ շնչով երգելիս։", "Дуга связывает ноты: играй их плавно, без промежутков, как будто поёшь на одном дыхании.")),
+    P(151, 132, t("Staccato", "Ստակատո", "Стаккато"), t("A dot makes a note short and detached, like a little jump or a raindrop.", "Կետը նոտան դարձնում է կարճ և անջատ, ինչպես փոքրիկ ցատկը կամ անձրևի կաթիլը։", "Точка делает ноту короткой и отрывистой, как маленький прыжок или капля дождя.")),
+    P(252, 126, t("Accent", "Շեշտ", "Акцент"), t("The sign > over a note says: this one louder than the rest, like a stressed syllable in a word.", "Նոտայի վրայի > նշանն ասում է՝ այս մեկը մյուսներից ուժեղ, ինչպես բառի շեշտված վանկը։", "Знак > над нотой говорит: эту громче остальных, как ударный слог в слове.")),
+    P(300, 122, t("Fermata", "Ֆերմատա", "Фермата"), t("The \"bird's eye\" lets the performer hold the note as long as they wish. It often marks the end of a hymn line.", "«Թռչնի աչքը» կատարողին թույլ է տալիս պահել նոտան որքան ցանկանա։ Այն հաճախ նշում է շարականի տողի վերջը։", "«Птичий глаз» позволяет исполнителю держать ноту сколько угодно. Часто она отмечает конец строки хорала.")),
+  ],
+};
+
+/* ---------------- grade 5: how a fugue is built ---------------- */
+
+const FV = [36, 84, 132];
+const Subj = ({ x, y, c, label }: { x: number; y: number; c: string; label?: string }) => (
+  <g>
+    <rect x={x} y={y - 14} width="84" height="28" rx="7" fill={c} opacity="0.18" />
+    <polyline points={[0, 2, 1, 3, 4, 2, 5, 6, 4, 3].map((d, i) => `${x + 6 + i * 8},${y + 8 - d * 2.4}`).join(" ")} fill="none" stroke={c} strokeWidth="2" strokeLinejoin="round" />
+    {label ? <text x={x + 78} y={y - 4} textAnchor="end" fontSize="7" fontWeight="900" fill={c}>{label}</text> : null}
+  </g>
+);
+const Free = ({ x1, x2, y, c }: { x1: number; x2: number; y: number; c: string }) => (
+  <path d={`M${x1},${y} ${Array.from({ length: Math.floor((x2 - x1) / 12) }, (_, i) => `q3,${i % 2 ? 6 : -6} 6,0 q3,${i % 2 ? -4 : 4} 6,0`).join(" ")}`} fill="none" stroke={c} strokeWidth="1.4" opacity="0.7" />
+);
+
+const fugue: Diagram = {
+  title: t("How a fugue is built", "Ինչպես է կառուցված ֆուգան", "Как устроена фуга"),
+  h: 186,
+  draw: (lang) => (
+    <g>
+      {FV.map((y, k) => (
+        <g key={k}>
+          <line x1="44" x2="314" y1={y} y2={y} stroke="#e2e8f0" strokeWidth="18" strokeLinecap="round" />
+          <Tx x={6} y={y + 3} s={[t("voice 1", "ձայն 1", "голос 1"), t("voice 2", "ձայն 2", "голос 2"), t("voice 3", "ձայն 3", "голос 3")][k]} lang={lang} size={6.5} anchor="start" fill="#475569" />
+        </g>
+      ))}
+      <Subj x={46} y={FV[1]} c="#4f46e5" label="T" />
+      <Free x1={132} x2={216} y={FV[1]} c="#0d9488" />
+      <Subj x={132} y={FV[0]} c="#4f46e5" label="T" />
+      <Free x1={218} x2={300} y={FV[0]} c="#0d9488" />
+      <Subj x={218} y={FV[2]} c="#4f46e5" label="T" />
+      <Free x1={218} x2={300} y={FV[1]} c="#94a3b8" />
+      <line x1="132" x2="132" y1="14" y2="150" stroke="#cbd5e1" strokeDasharray="3 3" />
+      <line x1="218" x2="218" y1="14" y2="150" stroke="#cbd5e1" strokeDasharray="3 3" />
+      <path d="M48,164 H310" stroke="#64748b" strokeWidth="1.2" markerEnd="url(#mus-arr3)" />
+      <defs>
+        <marker id="mus-arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#64748b" />
+        </marker>
+      </defs>
+      <Tx x={180} y={178} s={t("time", "ժամանակ", "время")} lang={lang} size={6.5} fill="#64748b" />
+    </g>
+  ),
+  parts: [
+    P(88, 64, t("The theme alone", "Թեման մենակ", "Тема одна"), t("A fugue begins with one voice playing the theme (T) on its own. Listen carefully: you will hear it again and again.", "Ֆուգան սկսվում է նրանով, որ մեկ ձայնը միայնակ նվագում է թեման (T)։ Ուշադիր լսի՛ր․ այն կլսես նորից ու նորից։", "Фуга начинается с того, что один голос в одиночку играет тему (T). Слушай внимательно: ты услышишь её снова и снова.")),
+    P(174, 16, t("The answer", "Պատասխանը", "Ответ"), t("A second voice enters with the same theme, usually a fifth higher, as if running after the first: \"fugue\" means \"flight\".", "Երկրորդ ձայնը մտնում է նույն թեմայով, սովորաբար կվինտա բարձր, կարծես վազում է առաջինի հետևից․ «ֆուգա» նշանակում է «փախուստ»։", "Второй голос вступает с той же темой, обычно на квинту выше, будто бежит за первым: «фуга» значит «бег».")),
+    P(174, 104, t("The countersubject", "Հակադրույթը", "Противосложение"), t("Meanwhile the first voice does not stop: it plays a new line that fits with the theme like a second melody.", "Միևնույն ժամանակ առաջին ձայնը չի կանգնում․ այն նվագում է նոր գիծ, որը թեմային համապատասխանում է որպես երկրորդ մեղեդի։", "Тем временем первый голос не умолкает: он играет новую линию, которая сочетается с темой, как вторая мелодия.")),
+    P(260, 152, t("All voices", "Բոլոր ձայները", "Все голоса"), t("When the third voice brings the theme, all three lines weave together. Bach could keep track of four or five such voices at once.", "Երբ երրորդ ձայնը բերում է թեման, երեք գծերն էլ միահյուսվում են։ Բախը կարող էր միաժամանակ հետևել նման չորս կամ հինգ ձայնի։", "Когда третий голос приносит тему, все три линии сплетаются. Бах мог одновременно следить за четырьмя-пятью такими голосами.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall, marks, fugue };
