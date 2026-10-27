@@ -455,4 +455,154 @@ const labour: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov, labour };
+/* ---------------- grade 11: the four spheres of society ---------------- */
+
+const SPHERES: Array<[number, number, Tr, Tr, string]> = [
+  [8, 8, t("Economic", "Տնտեսական", "Экономическая"), t("production · trade|jobs · money", "արտադրություն · առևտուր|աշխատանք · փող", "производство · торговля|работа · деньги"), "#f59e0b"],
+  [172, 8, t("Political", "Քաղաքական", "Политическая"), t("state · parties|elections · power", "պետություն · կուսակցություններ|ընտրություններ · իշխանություն", "государство · партии|выборы · власть"), "#4f46e5"],
+  [8, 132, t("Social", "Սոցիալական", "Социальная"), t("groups · families|nations · welfare", "խմբեր · ընտանիք|ազգեր · սոցապահովություն", "группы · семья|нации · соцзащита"), "#10b981"],
+  [172, 132, t("Spiritual", "Հոգևոր", "Духовная"), t("education · science|art · religion · morality", "կրթություն · գիտություն|արվեստ · կրոն · բարոյականություն", "образование · наука|искусство · религия · мораль"), "#e11d48"],
+];
+
+const spheres: Diagram = {
+  title: t("Four spheres, one system", "Չորս ոլորտ՝ մեկ համակարգ", "Четыре сферы — одна система"),
+  draw: (lang) => (
+    <g>
+      {SPHERES.map(([x, y, name, ex, c], k) => (
+        <g key={k}>
+          <rect x={x} y={y} width="140" height="80" rx="10" fill="#fff" stroke={c} strokeWidth="2" />
+          <rect x={x} y={y} width="140" height="22" rx="10" fill={c} />
+          <rect x={x} y={y + 12} width="140" height="10" fill={c} />
+          <Tx x={x + 70} y={y + 15} s={name} lang={lang} size={9} fill="#fff" />
+          <Tx x={x + 70} y={y + 42} s={ex} lang={lang} size={6.8} fill="#334155" w={700} />
+        </g>
+      ))}
+      <path d="M150,48 H170 M150,172 H170 M78,90 V130 M242,90 V130" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4 3" />
+      <circle cx="160" cy="110" r="34" fill="#f8fafc" stroke="#334155" strokeWidth="2" />
+      <Tx x={160} y={113} s={t("Society", "Հասարակություն", "Общество")} lang={lang} size={lang === "en" ? 8.5 : lang === "hy" ? 5.6 : 7.4} fill="#1e293b" />
+    </g>
+  ),
+  parts: [
+    P(20, 20, t("Economic sphere", "Տնտեսական ոլորտ", "Экономическая сфера"), t("The world financial crisis of 2008 reached Armenia in 2009: construction stopped, money sent home by relatives abroad fell, and the economy shrank by about 14%. An economic shock soon became a social one, with lost jobs and new emigration.", "2008 թվականի համաշխարհային ֆինանսական ճգնաժամը Հայաստան հասավ 2009 թվականին․ շինարարությունը կանգ առավ, արտասահմանում աշխատող հարազատների ուղարկած գումարները նվազեցին, և տնտեսությունը կրճատվեց մոտ 14%-ով։ Տնտեսական ցնցումը շուտով դարձավ սոցիալական՝ կորցրած աշխատատեղերով և նոր արտագաղթով։", "Мировой финансовый кризис 2008 года дошёл до Армении в 2009-м: стройки остановились, переводы от родственников из-за границы сократились, и экономика упала примерно на 14%. Экономический шок вскоре стал социальным — с потерянной работой и новой эмиграцией.")),
+    P(300, 20, t("Political sphere", "Քաղաքական ոլորտ", "Политическая сфера"), t("A political decision can redraw the economy: when Armenia joined the Eurasian Economic Union in 2015, customs rules, trade partners and the prices of many imported goods changed.", "Քաղաքական որոշումը կարող է վերաձևել տնտեսությունը․ երբ 2015 թվականին Հայաստանը միացավ Եվրասիական տնտեսական միությանը, փոխվեցին մաքսային կանոնները, առևտրային գործընկերները և շատ ներմուծվող ապրանքների գները։", "Политическое решение может перекроить экономику: когда в 2015 году Армения вступила в Евразийский экономический союз, изменились таможенные правила, торговые партнёры и цены многих импортных товаров.")),
+    P(20, 200, t("Social sphere", "Սոցիալական ոլորտ", "Социальная сфера"), t("Groups, families and nations. When many people leave to work abroad, families change: grandparents raise children, and money from abroad becomes part of the family budget.", "Խմբեր, ընտանիքներ և ազգեր։ Երբ շատ մարդիկ մեկնում են արտասահման աշխատելու, ընտանիքները փոխվում են․ երեխաներին մեծացնում են պապերն ու տատերը, իսկ արտասահմանից եկող գումարը դառնում է ընտանեկան բյուջեի մաս։", "Группы, семьи и нации. Когда многие уезжают работать за границу, семьи меняются: детей растят бабушки и дедушки, а деньги из-за границы становятся частью семейного бюджета.")),
+    P(300, 200, t("Spiritual sphere", "Հոգևոր ոլորտ", "Духовная сфера"), t("Ideas change the other spheres. Computer research in Yerevan from the 1950s and schools like TUMO helped to create an IT industry that now exports services worldwide.", "Գաղափարները փոխում են մյուս ոլորտները։ 1950-ականներից Երևանում կատարվող համակարգչային հետազոտությունները և ԹՈՒՄՈ-ի նման կրթական կենտրոնները օգնեցին ստեղծել ՏՏ ոլորտ, որն այսօր ծառայություններ է արտահանում ամբողջ աշխարհ։", "Идеи меняют другие сферы. Компьютерные исследования в Ереване с 1950-х и такие центры, как TUMO, помогли создать IT-отрасль, которая сегодня экспортирует услуги по всему миру.")),
+    P(186, 84, t("Why \"system\"", "Ինչու «համակարգ»", "Почему «система»"), t("Like organs in a body, the spheres depend on each other: a change in one spreads to the rest. That is why a reform rarely affects only the area it was meant for.", "Ինչպես մարմնի օրգանները, ոլորտները կախված են միմյանցից․ մեկում փոփոխությունը տարածվում է մյուսներին։ Ահա թե ինչու բարեփոխումը հազվադեպ է ազդում միայն այն ոլորտի վրա, որի համար նախատեսված էր։", "Как органы в теле, сферы зависят друг от друга: изменение в одной передаётся остальным. Поэтому реформа редко затрагивает только ту область, для которой задумана.")),
+  ],
+};
+
+/* ---------------- grade 11: social mobility ---------------- */
+
+const mobility: Diagram = {
+  title: t("Moving between layers", "Շարժ շերտերի միջև", "Движение между слоями"),
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      <path d="M110,14 H210 L250,66 H70 Z" fill="#ede9fe" />
+      <path d="M70,70 H250 L300,140 H20 Z" fill="#dbeafe" />
+      <path d="M20,144 H300 L260,206 H60 Z" fill="#fef3c7" />
+      <Tx x={160} y={30} s={t("Upper class", "Վերին դաս", "Высший класс")} lang={lang} size={8} fill="#5b21b6" />
+      <Tx x={160} y={86} s={t("Middle class", "Միջին դաս", "Средний класс")} lang={lang} size={8} fill="#1d4ed8" />
+      <Tx x={160} y={200} s={t("Lower class", "Ստորին դաս", "Низший класс")} lang={lang} size={8} fill="#92400e" />
+      {/* up through education */}
+      <Head x={70} y={168} r={5} fill="#4f46e5" />
+      <path d="M82,160 C96,140 96,120 98,104" fill="none" stroke="#4f46e5" strokeWidth="2.2" markerEnd="url(#soc-ar)" />
+      <Head x={104} y={96} r={5} fill="#4f46e5" />
+      <path d="M96,90 l8,-4 l8,4 l-8,4 Z" fill="#1e1b4b" />
+      {/* down */}
+      <Head x={236} y={96} r={5} fill="#e11d48" />
+      <path d="M236,116 C236,130 240,146 244,160" fill="none" stroke="#e11d48" strokeWidth="2.2" markerEnd="url(#soc-ar)" />
+      <Head x={246} y={166} r={5} fill="#e11d48" />
+      {/* sideways */}
+      <Head x={140} y={110} r={5} fill="#10b981" />
+      <path d="M152,118 H182" stroke="#10b981" strokeWidth="2.2" markerEnd="url(#soc-ar)" />
+      <Head x={194} y={110} r={5} fill="#10b981" />
+      {/* parents and child */}
+      <Head x={160} y={158} r={4.5} fill="#f59e0b" />
+      <path d="M168,160 C200,150 196,60 176,44" fill="none" stroke="#f59e0b" strokeWidth="1.8" strokeDasharray="4 3" markerEnd="url(#soc-ar)" />
+      <Head x={166} y={40} r={4} fill="#f59e0b" />
+    </g>
+  ),
+  parts: [
+    P(118, 130, t("Upwards through education", "Վերև՝ կրթության միջոցով", "Вверх через образование"), t("A village pupil becomes a doctor: vertical mobility upwards. In modern society education is the main channel, which is why free schooling matters so much for fairness.", "Գյուղի աշակերտը դառնում է բժիշկ․ ուղղահայաց շարժունություն դեպի վեր։ Ժամանակակից հասարակությունում կրթությունը գլխավոր ուղին է, ահա թե ինչու է անվճար դպրոցն այդքան կարևոր արդարության համար։", "Сельский школьник становится врачом: вертикальная мобильность вверх. В современном обществе главный канал — образование, поэтому бесплатная школа так важна для справедливости.")),
+    P(270, 120, t("Downwards", "Դեպի ներքև", "Вниз"), t("A business goes bankrupt, or an illness ends a career: vertical mobility can also go down. Social security exists to soften such falls.", "Բիզնեսը սնանկանում է, կամ հիվանդությունն ավարտում է կարիերան․ ուղղահայաց շարժունությունը կարող է նաև դեպի ներքև լինել։ Սոցիալական ապահովությունը գոյություն ունի նման անկումները մեղմելու համար։", "Бизнес разоряется или болезнь обрывает карьеру: вертикальная мобильность бывает и вниз. Социальная защита существует, чтобы смягчать такие падения.")),
+    P(168, 126, t("Horizontal", "Հորիզոնական", "Горизонтальная"), t("A teacher moves to another school, or a family moves from one city to another: the position changes, the level does not.", "Ուսուցիչը տեղափոխվում է այլ դպրոց, կամ ընտանիքը տեղափոխվում է մի քաղաքից մյուսը․ դիրքը փոխվում է, մակարդակը՝ ոչ։", "Учитель переходит в другую школу или семья переезжает в другой город: положение меняется, уровень — нет.")),
+    P(212, 60, t("Intergenerational", "Միջսերնդային", "Межпоколенная"), t("Children end up in a different position from their parents. How often this happens is a measure of how open a society is.", "Երեխաները հայտնվում են ծնողներից տարբեր դիրքում։ Թե որքան հաճախ է դա տեղի ունենում, ցույց է տալիս, թե որքան բաց է հասարակությունը։", "Дети оказываются в другом положении, чем родители. То, насколько часто это происходит, показывает, насколько открыто общество.")),
+    P(36, 106, t("A wide middle", "Լայն միջին", "Широкая середина"), t("When the middle class is the largest layer, the picture looks like a diamond, not a pyramid. Sociologists see this as a sign of a stable society.", "Երբ միջին դասն ամենամեծ շերտն է, պատկերը նման է ադամանդի, ոչ թե բուրգի։ Սոցիոլոգներն սա համարում են կայուն հասարակության նշան։", "Когда средний класс — самый большой слой, картинка похожа на ромб, а не на пирамиду. Социологи считают это признаком устойчивого общества.")),
+  ],
+};
+
+/* ---------------- grade 11: spotting a fake post ---------------- */
+
+const fakenews: Diagram = {
+  title: t("Six warning signs in one post", "Վեց նախազգուշական նշան մեկ գրառման մեջ", "Шесть тревожных признаков в одном посте"),
+  h: 236,
+  draw: (lang) => (
+    <g>
+      <rect x="40" y="6" width="240" height="224" rx="14" fill="#fff" stroke="#cbd5e1" strokeWidth="1.5" />
+      <circle cx="62" cy="28" r="11" fill="#fca5a5" />
+      <text x="62" y="31" textAnchor="middle" fontSize="8" fontWeight="900" fill="#7f1d1d">!</text>
+      <text x="78" y="26" fontSize="8.5" fontWeight="900" fill="#1e293b">N3ws-Today24.info</text>
+      <text x="78" y="37" fontSize="7" fontWeight="700" fill="#94a3b8">12.05.2019</text>
+      <Tx x={52} y={58} s={t("SHOCK!!! Cold water after a meal|causes heart attacks.|Doctors are SILENT!", "ՑՆՑՈՒՄ!!! Սառը ջուրը ճաշից հետո|ինֆարկտ է առաջացնում։|Բժիշկները ԼՌՈՒՄ ԵՆ։", "ШОК!!! Холодная вода после еды|вызывает инфаркт.|Врачи МОЛЧАТ!")} lang={lang} size={9.5} anchor="start" fill="#b91c1c" />
+      <rect x="52" y="96" width="216" height="64" rx="6" fill="#bfdbfe" />
+      <path d="M52,160 L96,118 L128,146 L160,122 L210,160 Z" fill="#64748b" />
+      <rect x="196" y="104" width="64" height="14" rx="3" fill="#0f172a" opacity="0.7" />
+      <Tx x={228} y={114} s={t("photo: 2011", "լուսանկար՝ 2011", "фото: 2011")} lang={lang} size={6.5} fill="#fff" />
+      <Tx x={52} y={176} s={t("\"Experts say\" everyone knows this…", "«Փորձագետներն ասում են», բոլորը գիտեն…", "«Эксперты говорят», все это знают…")} lang={lang} size={7.5} anchor="start" fill="#475569" w={700} />
+      <rect x="52" y="186" width="216" height="22" rx="11" fill="#e11d48" />
+      <Tx x={160} y={200} s={t("SHARE before they delete it!", "ՏԱՐԱԾԻ՛Ր, մինչև ջնջեն։", "РАСШАРЬ, пока не удалили!")} lang={lang} size={8} fill="#fff" />
+      <text x="56" y="222" fontSize="7" fontWeight="800" fill="#64748b">🔥 48K</text>
+    </g>
+  ),
+  parts: [
+    P(170, 28, t("Who wrote it?", "Ո՞վ է գրել", "Кто автор?"), t("An unknown site with a number in its name and no author. A reliable outlet has an editorial office, an address and named journalists.", "Անհայտ կայք՝ անվան մեջ թվով և առանց հեղինակի։ Վստահելի լրատվամիջոցն ունի խմբագրություն, հասցե և անուններով լրագրողներ։", "Неизвестный сайт с цифрой в названии и без автора. У надёжного издания есть редакция, адрес и журналисты с именами.")),
+    P(128, 37, t("When?", "Ե՞րբ", "Когда?"), t("Published years ago and shared again as if it were new. Old stories are often brought back when they fit a new mood.", "Հրապարակվել է տարիներ առաջ և նորից տարածվում է, կարծես նոր լինի։ Հին պատմությունները հաճախ վերադարձվում են, երբ համապատասխանում են նոր տրամադրությանը։", "Опубликовано много лет назад и снова распространяется как новое. Старые истории часто возвращают, когда они подходят к новому настроению.")),
+    P(262, 76, t("Is anyone else reporting it?", "Ուրիշ որևէ մեկը հաղորդո՞ւմ է", "Пишет ли кто-то ещё?"), t("A real discovery about heart attacks would be in every serious newspaper and medical journal. If only one unknown site has it, it is almost certainly false.", "Ինֆարկտի մասին իրական հայտնագործությունը կլիներ յուրաքանչյուր լուրջ թերթում և բժշկական ամսագրում։ Եթե այն ունի միայն մեկ անհայտ կայք, այն գրեթե անկասկած կեղծ է։", "Настоящее открытие об инфарктах было бы в каждой серьёзной газете и медицинском журнале. Если об этом пишет только один неизвестный сайт, это почти наверняка ложь.")),
+    P(228, 132, t("The picture", "Նկարը", "Картинка"), t("The photo is from another place and year. A reverse image search (uploading the picture to a search engine) shows where it first appeared.", "Լուսանկարը այլ վայրից և տարուց է։ Նկարի հակադարձ որոնումը (նկարը որոնողական համակարգ վերբեռնելը) ցույց է տալիս, թե որտեղ է այն առաջին անգամ հայտնվել։", "Фото из другого места и года. Обратный поиск по картинке (загрузка изображения в поисковик) показывает, где оно появилось впервые.")),
+    P(262, 176, t("Feelings and fake experts", "Զգացմունքներ և կեղծ փորձագետներ", "Эмоции и фальшивые эксперты"), t("Capital letters, exclamation marks and \"experts say\" without a single name are built to make you afraid, not to inform you. Strong fear or anger is a signal to slow down.", "Մեծատառերը, բացականչական նշանները և «փորձագետներն ասում են»՝ առանց մեկ անվան, ստեղծված են քեզ վախեցնելու, ոչ թե տեղեկացնելու համար։ Ուժեղ վախը կամ զայրույթը դանդաղելու ազդանշան է։", "Заглавные буквы, восклицательные знаки и «эксперты говорят» без единого имени созданы, чтобы напугать, а не сообщить. Сильный страх или злость — сигнал притормозить.")),
+    P(280, 197, t("Don't share yet", "Մի՛ տարածիր առայժմ", "Пока не делись"), t("Pressure to share \"before it is deleted\" is a trick. 48,000 shares prove only that many people did not check. Share after checking, or not at all.", "«Մինչև ջնջեն» տարածելու ճնշումը հնարք է։ 48 000 տարածումն ապացուցում է միայն, որ շատերը չեն ստուգել։ Տարածի՛ր ստուգելուց հետո, կամ ընդհանրապես մի՛ տարածիր։", "Давление «расшарь, пока не удалили» — это уловка. 48 000 репостов доказывают лишь, что многие не проверили. Делись после проверки или не делись вовсе.")),
+  ],
+};
+
+/* ---------------- grade 11: one phone, many countries ---------------- */
+
+const CHAIN: Array<[number, number, Tr, Tr, string]> = [
+  [62, 40, t("Design, software", "Դիզայն, ծրագրեր", "Дизайн, программы"), t("USA, Europe…", "ԱՄՆ, Եվրոպա…", "США, Европа…"), "#4f46e5"],
+  [160, 40, t("Chips", "Միկրոսխեմաներ", "Микросхемы"), t("Taiwan,|South Korea", "Թայվան,|Հարավային Կորեա", "Тайвань,|Южная Корея"), "#0891b2"],
+  [258, 40, t("Metals", "Մետաղներ", "Металлы"), t("DR Congo, Chile…", "ԿԴՀ, Չիլի…", "ДР Конго, Чили…"), "#a16207"],
+  [258, 130, t("Assembly", "Հավաքում", "Сборка"), t("China, India,|Vietnam", "Չինաստան,|Հնդկաստան, Վիետնամ", "Китай, Индия,|Вьетнам"), "#e11d48"],
+  [160, 130, t("Shipping", "Փոխադրում", "Перевозка"), t("containers|by sea and air", "բեռնարկղեր՝|ծովով և օդով", "контейнеры|морем и самолётом"), "#64748b"],
+  [62, 130, t("Shops", "Խանութներ", "Магазины"), t("everywhere,|Armenia too", "ամենուր,|նաև Հայաստանում", "везде,|и в Армении"), "#10b981"],
+];
+
+const chain: Diagram = {
+  title: t("One phone, many countries", "Մեկ հեռախոս՝ շատ երկրներ", "Один телефон — много стран"),
+  draw: (lang) => (
+    <g>
+      <ArDef />
+      <path d="M108,40 H112 M206,40 H210 M258,62 V106 M210,130 H206 M112,130 H108" stroke="#475569" strokeWidth="2" markerEnd="url(#soc-ar)" />
+      {CHAIN.map(([x, y, name, where, c], k) => (
+        <g key={k}>
+          <rect x={x - 46} y={y - 22} width="92" height="44" rx="8" fill="#fff" stroke={c} strokeWidth="2" />
+          <Tx x={x} y={y - 4} s={name} lang={lang} size={8} fill={c} />
+          <Tx x={x} y={y + 9} s={where} lang={lang} size={6.3} fill="#475569" w={700} />
+        </g>
+      ))}
+      <rect x="130" y="172" width="60" height="40" rx="5" fill="#1e293b" />
+      <rect x="134" y="176" width="52" height="30" rx="2" fill="#93c5fd" />
+      <circle cx="160" cy="209" r="1.6" fill="#64748b" />
+      <Tx x={160} y={164} s={t("parts from dozens of countries", "մասեր տասնյակ երկրներից", "детали из десятков стран")} lang={lang} size={7} fill="#334155" w={700} />
+    </g>
+  ),
+  parts: [
+    P(16, 18, t("Design", "Դիզայն", "Дизайн"), t("Engineers and programmers create the look and the software. Much of the value of a phone, and of its price, goes to the companies that own the design and the brand.", "Ինժեներներն ու ծրագրավորողները ստեղծում են արտաքին տեսքն ու ծրագրերը։ Հեռախոսի արժեքի և գնի մեծ մասը բաժին է ընկնում այն ընկերություններին, որոնց պատկանում են դիզայնն ու ապրանքանիշը։", "Инженеры и программисты создают внешний вид и программы. Большая часть стоимости телефона и его цены достаётся компаниям, которым принадлежат дизайн и бренд.")),
+    P(206, 18, t("Chips", "Միկրոսխեմաներ", "Микросхемы"), t("The most advanced processors are made in only a few factories in the world, many of them in Taiwan. When those factories stop, car and phone makers everywhere wait.", "Ամենաառաջադեմ պրոցեսորները արտադրվում են աշխարհի ընդամենը մի քանի գործարանում, որոնցից շատերը՝ Թայվանում։ Երբ այդ գործարանները կանգ են առնում, ամենուր ավտոմեքենաների և հեռախոսների արտադրողները սպասում են։", "Самые передовые процессоры делают лишь на нескольких заводах в мире, многие из них — на Тайване. Когда эти заводы останавливаются, производители машин и телефонов по всему миру ждут.")),
+    P(304, 18, t("Metals", "Մետաղներ", "Металлы"), t("A phone holds dozens of elements. Most of the world's cobalt for batteries comes from the Democratic Republic of the Congo, where children have been found working in some small mines.", "Հեռախոսը պարունակում է տասնյակ տարրեր։ Մարտկոցների համար աշխարհի կոբալտի մեծ մասը գալիս է Կոնգոյի Դեմոկրատական Հանրապետությունից, որտեղ որոշ փոքր հանքերում հայտնաբերվել են աշխատող երեխաներ։", "В телефоне десятки элементов. Большая часть кобальта для аккумуляторов в мире добывается в Демократической Республике Конго, где на некоторых мелких рудниках находили работающих детей.")),
+    P(304, 108, t("Assembly", "Հավաքում", "Сборка"), t("Hundreds of parts are put together in huge factories, mostly in Asia, where labour costs less. Assembly adds only a small share of the final price.", "Հարյուրավոր մասեր հավաքվում են հսկայական գործարաններում, հիմնականում Ասիայում, որտեղ աշխատուժն ավելի էժան է։ Հավաքումը վերջնական գնի միայն փոքր մասն է ավելացնում։", "Сотни деталей собирают на огромных заводах, в основном в Азии, где труд дешевле. Сборка добавляет лишь небольшую долю итоговой цены.")),
+    P(206, 108, t("Shipping", "Փոխադրում", "Перевозка"), t("Standard containers and cargo planes make moving goods so cheap that crossing an ocean adds very little to the price of a phone.", "Ստանդարտ բեռնարկղերն ու բեռնատար ինքնաթիռները ապրանքների փոխադրումն այնքան էժան են դարձնում, որ օվկիանոսն անցնելը հեռախոսի գնին շատ քիչ է ավելացնում։", "Стандартные контейнеры и грузовые самолёты делают перевозку настолько дешёвой, что пересечение океана почти не сказывается на цене телефона.")),
+    P(16, 108, t("Shops", "Խանութներ", "Магазины"), t("The same model is sold in Yerevan, Tokyo and São Paulo. That is economic globalisation: one product, a chain of many countries, and a crisis anywhere in the chain is felt everywhere.", "Նույն մոդելը վաճառվում է Երևանում, Տոկիոյում և Սան Պաուլուում։ Սա տնտեսական գլոբալացումն է․ մեկ ապրանք, շատ երկրների շղթա, և շղթայի ցանկացած օղակում ճգնաժամը զգացվում է ամենուր։", "Одна и та же модель продаётся в Ереване, Токио и Сан-Паулу. Это экономическая глобализация: один товар, цепочка из многих стран, и кризис в любом её звене ощущается везде.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { socialisation, maslow, eduarm, roles, tki, govforms, powers, ages, selfgov, labour, spheres, mobility, fakenews, chain };
