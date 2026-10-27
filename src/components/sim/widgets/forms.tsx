@@ -149,6 +149,11 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   feel: [t("Feeling", "Զգացում", "Чувство"), t("Sentence", "Նախադասություն", "Предложение")],
   muchmany: [t("How many …? (you can count)", "How many …? (հաշվվող)", "How many …? (можно посчитать)"), t("How much …? (you can't count)", "How much …? (չհաշվվող)", "How much …? (нельзя посчитать)")],
   edsound: [t("-ed = [t]", "-ed = [t]", "-ed = [t]"), t("-ed = [d]", "-ed = [d]", "-ed = [d]"), t("-ed = [ɪd]", "-ed = [ɪd]", "-ed = [ɪd]")],
+  article3: [t("a / an", "a / an", "a / an"), t("the", "the", "the"), t("no article", "առանց հոդի", "без артикля")],
+  nation: [t("Country", "Երկիր", "Страна"), t("Nationality", "Ազգություն", "Национальность"), t("Language", "Լեզու", "Язык")],
+  when: [t("When", "Երբ", "Когда"), t("What happened", "Ինչ եղավ", "Что произошло")],
+  oblig3: [t("must: necessary", "must՝ անհրաժեշտ է", "must — необходимо"), t("mustn't: forbidden", "mustn't՝ արգելված է", "mustn't — запрещено"), t("don't have to: not necessary", "don't have to՝ պարտադիր չէ", "don't have to — не обязательно")],
+  ask3: [t("Can I…? (friends)", "Can I…? (ընկերներին)", "Can I…? (друзьям)"), t("Could I…? (polite)", "Could I…? (քաղաքավարի)", "Could I…? (вежливо)"), t("May I…? (formal)", "May I…? (պաշտոնական)", "May I…? (официально)")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {

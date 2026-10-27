@@ -28,7 +28,7 @@ export const unit1: UnitSeed = {
 | Literature | PE (physical education) |
 | Art | Music |
 
-Subjects are written with a **capital letter** when they are the name of a language or a country word: Maths, English, Armenian. Say **I have got Maths** or **I have Maths**, never «I have the Maths».
+Language subjects always take a **capital letter**: English, Armenian, Russian. Other subjects are written small inside a sentence (*I like maths*), but on a timetable all subjects usually start with a capital, as in the table above. Say **I have got Maths** or **I have Maths**, never «I have the Maths».
 
 ## The timetable
 
@@ -64,7 +64,7 @@ Useful adjectives: interesting, boring, easy, difficult, useful, fun.
 
 ### Answers
 
-1. Own answer, for example Maths, English, Armenian, History, PE. 2. on. 3. For example, I've got five lessons. 4. I like Music because it is fun. 5. I like Maths. 6. What have you got on Thursday? 7. For example, My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.`,
+1. Own answer, for example Maths, English, Armenian, History, PE. 2. on. 3. For example, I've got five lessons. 4. I like Music because it is fun. 5. I like maths. 6. What have you got on Thursday? 7. For example, My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.`,
         hy: `## Առարկաներ
 
 | Առարկա | Թարգմանություն |
@@ -82,7 +82,7 @@ Useful adjectives: interesting, boring, easy, difficult, useful, fun.
 | PE (physical education) | ֆիզկուլտուրա |
 | Music | երաժշտություն |
 
-Առարկաները գրվում են **մեծատառով**։ Ասում ենք **I have got Maths** կամ **I have Maths** (*մաթեմատիկա ունեմ*), երբեք՝ «I have the Maths»։
+Լեզուների անունները միշտ գրվում են **մեծատառով**՝ English, Armenian, Russian։ Մյուս առարկաները նախադասության մեջ գրվում են փոքրատառով (*I like maths*), բայց դասացուցակում բոլոր առարկաները սովորաբար սկսվում են մեծատառով, ինչպես վերևի աղյուսակում։ Ասում ենք **I have got Maths** կամ **I have Maths** (*մաթեմատիկա ունեմ*), երբեք՝ «I have the Maths»։
 
 ## Դասացուցակը
 
@@ -118,7 +118,7 @@ Useful adjectives: interesting, boring, easy, difficult, useful, fun.
 
 ### Պատասխաններ
 
-1. Սեփական պատասխան, օրինակ՝ Maths, English, Armenian, History, PE։ 2. on։ 3. Օրինակ՝ I've got five lessons.։ 4. I like Music because it is fun.։ 5. I like Maths.։ 6. What have you got on Thursday?։ 7. Օրինակ՝ My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.։`,
+1. Սեփական պատասխան, օրինակ՝ Maths, English, Armenian, History, PE։ 2. on։ 3. Օրինակ՝ I've got five lessons.։ 4. I like Music because it is fun.։ 5. I like maths.։ 6. What have you got on Thursday?։ 7. Օրինակ՝ My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.։`,
         ru: `## Предметы
 
 | Subject | Перевод |
@@ -136,7 +136,7 @@ Useful adjectives: interesting, boring, easy, difficult, useful, fun.
 | PE (physical education) | физкультура |
 | Music | музыка |
 
-Названия предметов пишутся с **заглавной буквы**. Говорим **I have got Maths** или **I have Maths** (*у меня математика*), но никогда «I have the Maths».
+Названия языков всегда пишутся с **заглавной буквы**: English, Armenian, Russian. Остальные предметы внутри предложения пишутся со строчной (*I like maths*), но в расписании все предметы обычно пишут с заглавной, как в таблице выше. Говорим **I have got Maths** или **I have Maths** (*у меня математика*), но никогда «I have the Maths».
 
 ## Расписание
 
@@ -172,7 +172,7 @@ Useful adjectives: interesting, boring, easy, difficult, useful, fun.
 
 ### Ответы
 
-1. Свой ответ, например Maths, English, Armenian, History, PE. 2. on. 3. Например, I've got five lessons. 4. I like Music because it is fun. 5. I like Maths. 6. What have you got on Thursday? 7. Например, My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.`,
+1. Свой ответ, например Maths, English, Armenian, History, PE. 2. on. 3. Например, I've got five lessons. 4. I like Music because it is fun. 5. I like maths. 6. What have you got on Thursday? 7. Например, My favourite subject is Biology. It is interesting. I've got Biology on Tuesday and Friday.`,
       },
       [
         q(t("Which word is a school subject?", "Ո՞ր բառն է դպրոցական առարկա։", "Какое слово — школьный предмет?"), [
