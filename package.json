@@ -10,7 +10,8 @@
     "db:generate": "drizzle-kit generate",
     "db:seed": "tsx scripts/seed.ts",
     "generate": "tsx scripts/generate.ts",
-    "content:check": "tsx scripts/check-content.ts"
+    "content:check": "tsx scripts/check-content.ts",
+    "test": "tsx --test tests/*.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
@@ -28,6 +29,7 @@
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "tailwind-merge": "^3.7.0",
+    "ts-fsrs": "5.4.2",
     "zod": "^4.6.7"
   },
   "devDependencies": {

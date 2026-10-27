@@ -11,6 +11,7 @@ import { getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
 import { seedTips } from "./seed-tips";
+import { seedSkills } from "./seed-skills";
 
 const slugify = (s: string) =>
   s
@@ -185,6 +186,8 @@ async function run() {
   );
   const tipStats = await seedTips();
   console.log(`Seeded ${tipStats.tips} tips across ${tipStats.courses} courses.`);
+  const skillStats = await seedSkills();
+  console.log(`Seeded ${skillStats.skills} skills, ${skillStats.prereqs} prerequisite links, ${skillStats.lessons} lessons mapped to skills.`);
   console.log(
     `Seeded ${subjects.length} subjects, ${courses.length} courses, ${unitsCount} units, ${lessonsCount} lessons (${withContent} with full content, ${lessonsCount - withContent} outlines).`,
   );

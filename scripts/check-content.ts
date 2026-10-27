@@ -5,7 +5,7 @@
  *
  * Checks: unique, URL-safe lesson slugs per course, every written lesson has a body,
  * objectives and quiz in all three languages, every quiz answer points
- * at an existing option, and art and sim blocks name things their widgets know. Prints a per-course summary of written vs outline lessons.
+ * at an existing option, art and sim blocks name things their widgets know, and the skill map has no unknown ids, later-grade prerequisites or cycles. Prints a per-course summary of written vs outline lessons.
  */
 import katex from "katex";
 import { courses, courseId } from "../src/content";
@@ -15,6 +15,7 @@ import { checkTips } from "./check-tips";
 import { checkArtBlocks } from "../src/lib/art/validate";
 import { checkSimBlocks } from "../src/components/sim/validate";
 import { VISUALS } from "../src/content/visuals";
+import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -147,6 +148,10 @@ if (missingTrials.length) console.log(`Courses without a year-end trial: ${missi
 
 const tipCheck = checkTips();
 errors.push(...tipCheck.errors);
+
+const skillMap = buildSkillMap(courses);
+errors.push(...checkSkillMap(skillMap));
+console.log(`${skillMap.length} skills, ${skillMap.reduce((a, s) => a + s.prereqs.length, 0)} prerequisite links (${Object.keys(prerequisites).length} skills mapped by hand).`);
 console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
