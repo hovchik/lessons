@@ -1,4 +1,4 @@
-import type { I18nText, QuizQuestion } from "@/server/db/schema";
+import type { ChoiceQuestion, GapQuestion, I18nText, MatchQuestion, NumberQuestion, OrderQuestion, QuizQuestion } from "@/server/db/schema";
 
 export type { I18nText, QuizQuestion };
 
@@ -63,7 +63,24 @@ export const q = (
   options: I18nText[],
   answer: number,
   explanation?: I18nText,
-): QuizQuestion => ({ prompt, options, answer, explanation });
+): ChoiceQuestion => ({ prompt, options, answer, explanation });
+
+/** Type-the-number question: `tolerance` for rounded answers, `unit` shown after the box. */
+export const num = (prompt: I18nText, answer: number, opts: { tolerance?: number; unit?: I18nText; explanation?: I18nText } = {}): NumberQuestion => ({
+  kind: "number",
+  prompt,
+  answer,
+  ...opts,
+});
+
+/** Fill-the-gaps question: `text` marks each gap with ___; each gap's answers per language, alternatives split by |. */
+export const gap = (prompt: I18nText, text: I18nText, gaps: I18nText[], explanation?: I18nText): GapQuestion => ({ kind: "gap", prompt, text, gaps, ...(explanation ? { explanation } : {}) });
+
+/** Put-in-order question: `items` in the right order (they are shown mixed). */
+export const order = (prompt: I18nText, items: I18nText[], explanation?: I18nText): OrderQuestion => ({ kind: "order", prompt, items, ...(explanation ? { explanation } : {}) });
+
+/** Match-the-pairs question: `pairs` written matched (the right column is shown mixed). */
+export const match = (prompt: I18nText, pairs: [I18nText, I18nText][], explanation?: I18nText): MatchQuestion => ({ kind: "match", prompt, pairs, ...(explanation ? { explanation } : {}) });
 
 /** Full lesson shorthand: trilingual title, objectives, markdown body and quiz. */
 export const lesson = (

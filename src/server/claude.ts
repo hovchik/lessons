@@ -1,12 +1,12 @@
 import Anthropic from "@anthropic-ai/sdk";
-import type { I18nText, QuizQuestion } from "./db/schema";
+import type { ChoiceQuestion, I18nText } from "./db/schema";
 
 export const GENERATION_MODEL = process.env.CLAUDE_MODEL || "claude-opus-5-5";
 
 export type GeneratedLesson = {
   objectives: { en: string[]; hy: string[]; ru: string[] };
   content: I18nText;
-  quiz: QuizQuestion[];
+  quiz: ChoiceQuestion[];
 };
 
 const i18n = {

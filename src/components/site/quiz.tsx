@@ -4,7 +4,9 @@ import { CheckCircle2, CircleHelp, RotateCcw, Save, XCircle } from "lucide-react
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
 
@@ -15,33 +17,38 @@ type Props = {
 };
 
 /** With four or more options, a wrong first try also crosses out one other wrong option as the hint. */
-function crossedOut(q: LocalQuestion, i: number, first: number): number | null {
-  if (q.options.length < 4) return null;
-  const wrong = q.options.map((_, k) => k).filter((k) => k !== q.answer && k !== first);
+function crossedOut(q: LocalQuestion, i: number, first: QuizResponse): number | null {
+  if (q.shown.kind !== "choice" || q.key.kind !== "choice" || typeof first !== "number" || q.shown.options.length < 4) return null;
+  const answer = q.key.answer;
+  const wrong = q.shown.options.map((_, k) => k).filter((k) => k !== answer && k !== first);
   return wrong[(i + first) % wrong.length];
 }
 
+const same = (a: QuizResponse | undefined, b: QuizResponse | undefined) => JSON.stringify(a) === JSON.stringify(b);
+
 /**
  * The lesson quiz. Each question is checked with "sure" or "guessing"; a wrong
- * first try gets one more go with a hint before the answer is shown. The score
- * counts first tries.
+ * first try gets one more go (with a hint for multiple choice) before the
+ * answer is shown. The score counts first tries.
  */
 export function Quiz({ questions, save }: Props) {
   const t = useTranslations("lesson");
-  // The option currently picked, the first checked answer with its confidence, and the second try.
-  const [picked, setPicked] = useState<Record<number, number>>({});
-  const [first, setFirst] = useState<Record<number, number>>({});
+  // The answer being given, the first checked answer with its confidence, and the second try.
+  const [picked, setPicked] = useState<Record<number, QuizResponse>>({});
+  const [first, setFirst] = useState<Record<number, QuizResponse>>({});
   const [confidence, setConfidence] = useState<Record<number, Confidence>>({});
-  const [second, setSecond] = useState<Record<number, number>>({});
+  const [second, setSecond] = useState<Record<number, QuizResponse>>({});
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
   const [saved, setSaved] = useState(false);
   const savedRun = useRef(0);
 
   const total = questions.length;
+  const right = (i: number, r: QuizResponse | undefined) => isRight(questions[i].key, r);
   // With only two options a second try would be a giveaway, so there is none.
-  const isDone = (i: number) => first[i] !== undefined && (first[i] === questions[i].answer || second[i] !== undefined || questions[i].options.length <= 2);
-  const score = questions.filter((qq, i) => first[i] === qq.answer).length;
-  const secondTries = questions.filter((qq, i) => second[i] === qq.answer).length;
+  const noRetry = (q: LocalQuestion) => q.shown.kind === "choice" && q.shown.options.length <= 2;
+  const isDone = (i: number) => first[i] !== undefined && (right(i, first[i]) || second[i] !== undefined || noRetry(questions[i]));
+  const score = questions.filter((_, i) => right(i, first[i])).length;
+  const secondTries = questions.filter((_, i) => second[i] !== undefined && right(i, second[i])).length;
   const allDone = questions.every((_, i) => isDone(i));
 
   // Save once per completed run.
@@ -81,48 +88,54 @@ export function Quiz({ questions, save }: Props) {
           const tried = first[i] !== undefined;
           const done = isDone(i);
           const retrying = tried && !done;
-          const firstRight = first[i] === qq.answer;
+          const firstRight = right(i, first[i]);
           const cross = tried && !firstRight ? crossedOut(qq, i, first[i]) : null;
+          const answer = qq.key.kind === "choice" ? qq.key.answer : -1;
+          const set = (r: QuizResponse) => setPicked((a) => ({ ...a, [i]: r }));
           return (
             <li key={i} className="space-y-3 border-t border-border/60 pt-5 first:border-t-0 first:pt-0">
               <p className="text-xs font-extrabold uppercase tracking-wide text-muted-foreground">{t("question", { n: i + 1, total })}</p>
-              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{qq.prompt}</p>
-              <div role="radiogroup" aria-labelledby={`q-${i}`} className="grid gap-2.5 md:grid-cols-3">
-                {qq.options.map((opt, oi) => {
-                  const selected = chosen === oi;
-                  const ruledOut = tried && (oi === first[i] || oi === cross) && oi !== qq.answer;
-                  const showCorrect = done && oi === qq.answer;
-                  const showWrong = (done && selected && oi !== qq.answer) || (tried && oi === first[i] && !firstRight);
-                  return (
-                    <button
-                      key={oi}
-                      type="button"
-                      role="radio"
-                      aria-checked={selected}
-                      disabled={done || ruledOut}
-                      onClick={() => setPicked((a) => ({ ...a, [i]: oi }))}
-                      className={cn(
-                        "clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold disabled:opacity-100",
-                        selected && !done && !ruledOut && "ring-3 ring-primary",
-                        showCorrect && "bg-emerald-50 ring-3 ring-success",
-                        showWrong && "bg-red-50 ring-3 ring-destructive",
-                        oi === cross && !done && "text-muted-foreground line-through opacity-60",
-                      )}
-                    >
-                      <span className="flex items-start gap-2 leading-snug">
-                        {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
-                        {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
-                        {opt}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
+              <p id={`q-${i}`} className="text-base font-bold leading-snug sm:text-lg">{qq.shown.prompt}</p>
+              {qq.shown.kind === "choice" ? (
+                <div role="radiogroup" aria-labelledby={`q-${i}`} className="grid gap-2.5 md:grid-cols-3">
+                  {qq.shown.options.map((opt, oi) => {
+                    const selected = chosen === oi;
+                    const ruledOut = tried && (oi === first[i] || oi === cross) && oi !== answer;
+                    const showCorrect = done && oi === answer;
+                    const showWrong = (done && selected && oi !== answer) || (tried && oi === first[i] && !firstRight);
+                    return (
+                      <button
+                        key={oi}
+                        type="button"
+                        role="radio"
+                        aria-checked={selected}
+                        disabled={done || ruledOut}
+                        onClick={() => set(oi)}
+                        className={cn(
+                          "clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold disabled:opacity-100",
+                          selected && !done && !ruledOut && "ring-3 ring-primary",
+                          showCorrect && "bg-emerald-50 ring-3 ring-success",
+                          showWrong && "bg-red-50 ring-3 ring-destructive",
+                          oi === cross && !done && "text-muted-foreground line-through opacity-60",
+                        )}
+                      >
+                        <span className="flex items-start gap-2 leading-snug">
+                          {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
+                          {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
+                          {opt}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <AnswerArea shown={qq.shown} value={done ? (second[i] ?? first[i]) : chosen} onChange={set} reveal={done ? qq.key : null} labelledBy={`q-${i}`} />
+              )}
               {!tried ? (
                 <ConfidenceCheck
-                  disabled={chosen === undefined}
+                  disabled={!isComplete(qq.shown, defaultResponse(qq.shown, chosen))}
                   onCheck={(c) => {
-                    setFirst((f) => ({ ...f, [i]: chosen }));
+                    setFirst((f) => ({ ...f, [i]: defaultResponse(qq.shown, chosen)! }));
                     setConfidence((s) => ({ ...s, [i]: c }));
                   }}
                 />
@@ -132,14 +145,19 @@ export function Quiz({ questions, save }: Props) {
                     <p className="font-extrabold text-destructive">{confidence[i] === 2 ? t("wrongSure") : t("wrongGuess")}</p>
                     <p className="mt-1 font-semibold">{cross !== null ? t("hintCrossed") : t("hintOnce")}</p>
                   </div>
-                  <Button size="sm" className="w-full sm:w-auto" disabled={chosen === undefined || chosen === first[i]} onClick={() => setSecond((s) => ({ ...s, [i]: chosen }))}>
+                  <Button
+                    size="sm"
+                    className="w-full sm:w-auto"
+                    disabled={!isComplete(qq.shown, defaultResponse(qq.shown, chosen)) || same(defaultResponse(qq.shown, chosen), first[i])}
+                    onClick={() => setSecond((s) => ({ ...s, [i]: defaultResponse(qq.shown, chosen)! }))}
+                  >
                     {t("check")}
                   </Button>
                 </div>
               ) : (
                 <div className="flex flex-wrap items-center gap-3">
-                  <p role="status" className={cn("font-bold", firstRight || second[i] === qq.answer ? "text-success" : "text-destructive")}>
-                    {firstRight ? (confidence[i] === 0 ? t("rightGuess") : t("correct")) : second[i] === qq.answer ? t("rightSecond") : t("wrongSecond")}
+                  <p role="status" className={cn("font-bold", firstRight || right(i, second[i]) ? "text-success" : "text-destructive")}>
+                    {firstRight ? (confidence[i] === 0 ? t("rightGuess") : t("correct")) : second[i] !== undefined && right(i, second[i]) ? t("rightSecond") : qq.shown.kind === "choice" ? t("wrongSecond") : t("wrongSecondShown")}
                   </p>
                   {qq.explanation && (
                     <button type="button" className="min-h-11 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted" onClick={() => setShowWhy((s) => ({ ...s, [i]: !s[i] }))}>

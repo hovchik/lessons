@@ -15,6 +15,8 @@ import { checkTips } from "./check-tips";
 import { checkArtBlocks } from "../src/lib/art/validate";
 import { checkSimBlocks } from "../src/components/sim/validate";
 import { VISUALS } from "../src/content/visuals";
+import { QUESTIONS } from "../src/content/questions";
+import { questionProblems } from "../src/content/questions/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 
 const LANGS = ["en", "hy", "ru"] as const;
@@ -22,6 +24,7 @@ const errors: string[] = [];
 let total = 0;
 let written = 0;
 let questions = 0;
+const kinds: Record<string, number> = {};
 
 for (const c of courses) {
   const id = courseId(c.subject, c.grade);
@@ -64,14 +67,9 @@ for (const c of courses) {
       if (!l.quiz?.length) errors.push(`${where}: no quiz`);
       for (const [i, qq] of (l.quiz ?? []).entries()) {
         questions++;
-        if (qq.answer < 0 || qq.answer >= qq.options.length) errors.push(`${where}: quiz ${i + 1} answer out of range`);
-        if (qq.options.length < 2) errors.push(`${where}: quiz ${i + 1} needs at least 2 options`);
-        for (const lang of langs) {
-          if (!qq.prompt[lang]?.trim()) errors.push(`${where}: quiz ${i + 1} missing ${lang} prompt`);
-          qq.options.forEach((o, oi) => {
-            if (!o[lang]?.trim()) errors.push(`${where}: quiz ${i + 1} option ${oi + 1} missing ${lang}`);
-          });
-        }
+        kinds[qq.kind ?? "choice"] = (kinds[qq.kind ?? "choice"] ?? 0) + 1;
+        // Questions added on top of a lesson (src/content/questions) are always written in all three languages.
+        for (const p of questionProblems(qq, qq.kind ? LANGS : langs)) errors.push(`${where}: quiz ${i + 1} ${p}`);
       }
     }
   }
@@ -92,6 +90,16 @@ for (const [subject, byGrade] of Object.entries(VISUALS)) {
     const bare = lessons.filter((l) => l.content && !bySlug[l.slug]?.length).map((l) => l.slug);
     if (bare.length) console.log(`${subject}-${grade}: no visuals in ${bare.join(", ")}`);
     visualLessons += Object.keys(bySlug).length;
+  }
+}
+
+// Extra questions: every lesson in a questions map must exist and be written.
+for (const [subject, byGrade] of Object.entries(QUESTIONS)) {
+  for (const [grade, bySlug] of Object.entries(byGrade)) {
+    const c = courses.find((x) => x.subject === subject && x.grade === Number(grade));
+    if (!c) { errors.push(`questions ${subject}-${grade}: no such course`); continue; }
+    const lessons = c.units.flatMap((u) => u.lessons);
+    for (const slug of Object.keys(bySlug)) if (!lessons.some((l) => l.slug === slug && l.content)) errors.push(`questions ${subject}-${grade}: no written lesson "${slug}"`);
   }
 }
 
@@ -152,7 +160,8 @@ errors.push(...tipCheck.errors);
 const skillMap = buildSkillMap(courses);
 errors.push(...checkSkillMap(skillMap));
 console.log(`${skillMap.length} skills, ${skillMap.reduce((a, s) => a + s.prereqs.length, 0)} prerequisite links (${Object.keys(prerequisites).length} skills mapped by hand).`);
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions, ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons.`);
+const kindList = Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(", ");
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

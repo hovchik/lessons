@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, CheckCircle2, NotebookPen, XCircle } from "lucide
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { buttonClasses } from "@/components/ui/button";
+import { answerText, isRight, localKey, localShown, responseText } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import { getMistakes } from "@/server/review";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
@@ -73,34 +74,44 @@ export default async function MistakesPage({ params }: { params: Promise<{ local
                 {first.grade ? <span className="text-muted-foreground"> · {tg("title", { grade: first.grade })}</span> : null}
               </h2>
               <ol className="clay divide-y divide-border/70 overflow-hidden">
-                {list.map((m) => (
-                  <li key={m.itemId} className="space-y-2 px-4 py-4 sm:px-5">
-                    <p className="text-xs font-bold text-muted-foreground">{pick(m.refTitle, l)}</p>
-                    <p className="whitespace-pre-line font-bold leading-snug">{pick(m.question.prompt, l)}</p>
-                    {m.lastChoice !== null && m.lastChoice !== m.question.answer && m.question.options[m.lastChoice] && (
-                      <p className="flex items-start gap-1.5 text-sm text-destructive">
-                        <XCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                {list.map((m) => {
+                  const shown = localShown(m.shown, (x) => pick(x, l));
+                  const yours = m.lastResponse !== null && !isRight(m.key, m.lastResponse) ? responseText(shown, m.lastResponse) : "";
+                  return (
+                    <li key={m.itemId} className="space-y-2 px-4 py-4 sm:px-5">
+                      <p className="text-xs font-bold text-muted-foreground">{pick(m.refTitle, l)}</p>
+                      <p className="whitespace-pre-line font-bold leading-snug">{shown.prompt}</p>
+                      {shown.kind === "gap" && <p className="whitespace-pre-line leading-snug">{shown.text}</p>}
+                      {yours && (
+                        <p className="flex items-start gap-1.5 text-sm text-destructive">
+                          <XCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                          <span>
+                            <span className="font-bold">{t("yourAnswer")}:</span> {yours}
+                            {m.wasSure && <span className="ml-2 rounded-full bg-red-50 px-2 py-0.5 text-xs font-extrabold">{t("wasSure")}</span>}
+                          </span>
+                        </p>
+                      )}
+                      <p className="flex items-start gap-1.5 text-sm text-success">
+                        <CheckCircle2 className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                         <span>
-                          <span className="font-bold">{t("yourAnswer")}:</span> {pick(m.question.options[m.lastChoice], l)}
-                          {m.wasSure && <span className="ml-2 rounded-full bg-red-50 px-2 py-0.5 text-xs font-extrabold">{t("wasSure")}</span>}
+                          <span className="font-bold">{t("rightAnswer")}:</span>{" "}
+                          {answerText(
+                            shown,
+                            localKey(m.key, (x) => pick(x, l)),
+                            l,
+                          )}
                         </span>
                       </p>
-                    )}
-                    <p className="flex items-start gap-1.5 text-sm text-success">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                      <span>
-                        <span className="font-bold">{t("rightAnswer")}:</span> {pick(m.question.options[m.question.answer], l)}
-                      </span>
-                    </p>
-                    {m.question.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(m.question.explanation, l)}</p>}
-                    {m.href && (
-                      <Link href={m.href} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
-                        <BookOpen className="size-4" aria-hidden="true" />
-                        {m.source === "exam" ? t("openExam") : t("readLesson")}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                      {m.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(m.explanation, l)}</p>}
+                      {m.href && (
+                        <Link href={m.href} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
+                          <BookOpen className="size-4" aria-hidden="true" />
+                          {m.source === "exam" ? t("openExam") : t("readLesson")}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ol>
             </section>
           );

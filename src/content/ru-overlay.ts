@@ -40,6 +40,8 @@ const withLang = (lang: "ru" | "en") => (course: CourseSeed, ru: RuCourse): Cour
           content: { en: l.content?.en ?? "", hy: l.content?.hy ?? "", ru: l.content?.ru ?? "", [lang]: r.content },
           quiz: quiz.map((q, qi) => {
             const [prompt, options] = r.quiz[qi];
+            // Armenian-first courses are written as multiple choice (hyLesson).
+            if (q.kind !== undefined && q.kind !== "choice") throw new Error(`${id}/${l.slug}: question ${qi + 1} is not multiple choice`);
             if (options.length !== q.options.length) throw new Error(`${id}/${l.slug}: ${L} question ${qi + 1} has ${options.length} options for ${q.options.length}`);
             return { ...q, prompt: { ...q.prompt, [lang]: prompt }, options: q.options.map((o, oi) => ({ ...o, [lang]: options[oi] })) };
           }),

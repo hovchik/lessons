@@ -4,6 +4,7 @@ import { getDb, schema } from "./db/client";
 import type { AnswerSource, I18nText, QuizQuestion } from "./db/schema";
 import { recordAnswers } from "./learner";
 import { parseItemId } from "@/lib/memory";
+import { displayForm, recordFor, validResponse, type Key, type QuizResponse, type Shown } from "@/lib/questions";
 
 /**
  * Daily Review and the mistake notebook, built on the learner model
@@ -33,10 +34,15 @@ export type ReviewItem = {
   refTitle: I18nText;
   /** Where to read up on it. */
   href: string | null;
-  question: QuizQuestion;
+  /** The question as shown (order and match items mixed) and its key. */
+  shown: Shown<I18nText>;
+  key: Key<I18nText>;
+  explanation: I18nText | null;
   lastCorrect: boolean;
   lapses: number;
 };
+
+const form = (q: QuizQuestion, itemId: string) => ({ ...displayForm(q, itemId), explanation: q.explanation ?? null });
 
 export type CardRef = { itemId: string; courseId: string | null; lastCorrect: boolean; lapses: number };
 
@@ -101,7 +107,7 @@ export async function resolveItems(cards: CardRef[]): Promise<{ items: ReviewIte
         grade: c?.grade ?? null,
         refTitle: l.title,
         href: c ? `/${c.subjectId}/${c.grade}/${l.slug}` : null,
-        question: q,
+        ...form(q, card.itemId),
         lastCorrect: card.lastCorrect,
         lapses: card.lapses,
       });
@@ -121,7 +127,7 @@ export async function resolveItems(cards: CardRef[]): Promise<{ items: ReviewIte
         grade: c?.grade ?? e.grade,
         refTitle: e.title,
         href: `/exams/${e.id}`,
-        question: { prompt: q.prompt, options: q.options, answer: q.answer, explanation: q.explanation },
+        ...form(q, card.itemId),
         lastCorrect: card.lastCorrect,
         lapses: card.lapses,
       });
@@ -172,7 +178,7 @@ export async function getReviewQueue(userId: string, opts: { mode?: "due" | "mis
   return interleave(items, (i) => i.courseId ?? i.itemId).slice(0, size);
 }
 
-/** Everything in the mistake notebook, with the option the pupil chose last time and whether they were sure of it. */
+/** Everything in the mistake notebook, with the pupil's answer last time and whether they were sure of it. */
 export async function getMistakes(userId: string, limit = 200) {
   const db = await getDb();
   const rc = schema.reviewCards;
@@ -188,7 +194,7 @@ export async function getMistakes(userId: string, limit = 200) {
   const ae = schema.answerEvents;
   const last = items.length
     ? await db
-        .select({ itemId: ae.itemId, choice: ae.choice, confidence: ae.confidence, at: sql<string>`max(${ae.createdAt})` })
+        .select({ itemId: ae.itemId, choice: ae.choice, response: ae.response, confidence: ae.confidence, at: sql<string>`max(${ae.createdAt})` })
         .from(ae)
         // A second try after a hint does not move the card, so it is not "the answer last time".
         .where(and(eq(ae.userId, userId), eq(ae.hintUsed, false), inArray(ae.itemId, items.map((i) => i.itemId))))
@@ -197,7 +203,10 @@ export async function getMistakes(userId: string, limit = 200) {
     : [];
   // SQLite returns the bare columns from the row that holds the max(), so these are from the latest answer.
   const latest = new Map(last.map((r) => [r.itemId, r]));
-  return items.map((i) => ({ ...i, lastChoice: latest.get(i.itemId)?.choice ?? null, wasSure: latest.get(i.itemId)?.confidence === 2 }));
+  return items.map((i) => {
+    const l = latest.get(i.itemId);
+    return { ...i, lastResponse: (l?.response ?? l?.choice ?? null) as QuizResponse | null, wasSure: l?.confidence === 2 };
+  });
 }
 
 /**
@@ -239,13 +248,13 @@ export const getReviewSummaryCached = cache((userId: string) => getReviewSummary
  * Records one answer to a question met before: in Daily Review (only questions
  * the pupil already has a card for) or in a lesson's warm-up (any published quiz
  * question, so a card may be created). The question is looked up on the server,
- * so the client only says which option it chose. Returns null for an unknown or
- * retired question.
+ * so the client only sends its answer. Returns null for an unknown or retired
+ * question, or an answer that does not fit it.
  */
 export async function answerItem(input: {
   userId: string;
   itemId: string;
-  choice: number;
+  response: QuizResponse;
   source?: "review" | "warmup";
   confidence?: number | null;
   ms?: number | null;
@@ -266,13 +275,13 @@ export async function answerItem(input: {
   if (!known && ref?.source !== "quiz") return null;
   const { items } = await resolveItems([known ?? { itemId: input.itemId, courseId: null, lastCorrect: false, lapses: 0 }]);
   const item = items[0];
-  if (!item || !ref || input.choice >= item.question.options.length) return null;
-  const correct = input.choice === item.question.answer;
+  if (!item || !ref || !validResponse(item.shown, input.response)) return null;
+  const rec = recordFor(item.shown, item.key, input.response);
   const [card] = await recordAnswers(
     input.userId,
-    [{ itemId: item.itemId, source, refId: ref.refId, courseId: item.courseId, correct, choice: input.choice, confidence: input.confidence ?? null, ms: input.ms ?? null, options: item.question.options.length }],
+    [{ itemId: item.itemId, source, refId: ref.refId, courseId: item.courseId, ...rec, confidence: input.confidence ?? null, ms: input.ms ?? null }],
     now,
   );
   const days = card ? Math.max(1, Math.round((new Date(card.due).getTime() - now.getTime()) / (24 * 60 * 60 * 1000))) : null;
-  return { correct, answer: item.question.answer, nextInDays: days };
+  return { correct: rec.correct, nextInDays: days };
 }

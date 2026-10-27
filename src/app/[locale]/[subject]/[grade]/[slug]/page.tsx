@@ -111,7 +111,7 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       {ready && <RecallPrompt bodyId="lesson-body" objectives={objectives} hasQuiz={lesson.quiz.length > 0} />}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l)} save={user ? { lessonId: lesson.id } : null} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l, lesson.id)} save={user ? { lessonId: lesson.id } : null} />}
 
       {ready && (
         <LessonProgressCard

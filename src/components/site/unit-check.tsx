@@ -5,8 +5,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import type { MasteryLevel } from "@/lib/mastery";
+import { answerText, defaultResponse, isComplete, localKey, localShown, responseText, type Key, type QuizResponse, type Shown } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
 import type { UnitCheckQuestion } from "@/server/mastery";
@@ -17,7 +19,7 @@ type Result = {
   passed: boolean;
   before: MasteryLevel;
   after: MasteryLevel;
-  results: { itemId: string; choice: number; correct: boolean; answer: number; explanation: I18nText | null; prompt: I18nText; options: I18nText[]; lessonTitle: I18nText }[];
+  results: { itemId: string; response: QuizResponse; correct: boolean; shown: Shown<I18nText>; key: Key<I18nText>; explanation: I18nText | null; lessonTitle: I18nText }[];
   weakLessons: { id: string; title: I18nText; href: string }[];
   weakPrereqs: { skillId: string; title: I18nText; level: MasteryLevel; grade: number; href: string }[];
 };
@@ -49,13 +51,15 @@ export function UnitCheck({
   const locale = useLocale();
   const router = useRouter();
   const [i, setI] = useState(0);
-  const [chosen, setChosen] = useState<number | undefined>();
-  const [answers, setAnswers] = useState<{ itemId: string; choice: number; confidence: Confidence }[]>([]);
+  const [chosen, setChosen] = useState<QuizResponse | undefined>();
+  const [answers, setAnswers] = useState<{ itemId: string; response: QuizResponse; confidence: Confidence }[]>([]);
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
   const topRef = useRef<HTMLDivElement>(null);
   const q = questions[i];
+  const f = (x: I18nText) => pick(x, locale);
+  const shown = q ? localShown(q.shown, f) : null;
 
   const submit = async (all: typeof answers) => {
     setBusy(true);
@@ -73,8 +77,9 @@ export function UnitCheck({
   };
 
   const answer = (confidence: Confidence) => {
-    if (chosen === undefined || answers.length >= questions.length) return;
-    const all = [...answers, { itemId: q.itemId, choice: chosen, confidence }];
+    const response = shown ? defaultResponse(shown, chosen) : undefined;
+    if (!shown || !isComplete(shown, response) || response === undefined || answers.length >= questions.length) return;
+    const all = [...answers, { itemId: q.itemId, response, confidence }];
     setAnswers(all);
     setChosen(undefined);
     if (i + 1 < questions.length) {
@@ -150,27 +155,30 @@ export function UnitCheck({
         <section className="space-y-3">
           <h2 className="text-lg font-extrabold">{t("answersTitle")}</h2>
           <ol className="clay divide-y divide-border/70 overflow-hidden">
-            {result.results.map((r, k) => (
-              <li key={r.itemId} className="space-y-1 px-4 py-3 sm:px-5">
-                <p className="flex items-start gap-2 font-bold">
-                  {r.correct ? <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" aria-label={tl("correct")} /> : <XCircle className="mt-0.5 size-5 shrink-0 text-destructive" aria-label={t("wrong")} />}
-                  <span className="whitespace-pre-line">
-                    {k + 1}. {pick(r.prompt, locale)}
-                  </span>
-                </p>
-                {!r.correct && (
-                  <div className="space-y-1 pl-7 text-sm">
-                    <p className="text-destructive">
-                      <span className="font-bold">{t("yourAnswer")}:</span> {pick(r.options[r.choice], locale)}
-                    </p>
-                    <p className="text-success">
-                      <span className="font-bold">{t("rightAnswer")}:</span> {pick(r.options[r.answer], locale)}
-                    </p>
-                    {r.explanation && <p className="text-muted-foreground">{pick(r.explanation, locale)}</p>}
-                  </div>
-                )}
-              </li>
-            ))}
+            {result.results.map((r, k) => {
+              const rs = localShown(r.shown, f);
+              return (
+                <li key={r.itemId} className="space-y-1 px-4 py-3 sm:px-5">
+                  <p className="flex items-start gap-2 font-bold">
+                    {r.correct ? <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" aria-label={tl("correct")} /> : <XCircle className="mt-0.5 size-5 shrink-0 text-destructive" aria-label={t("wrong")} />}
+                    <span className="whitespace-pre-line">
+                      {k + 1}. {rs.prompt}
+                    </span>
+                  </p>
+                  {!r.correct && (
+                    <div className="space-y-1 pl-7 text-sm">
+                      <p className="text-destructive">
+                        <span className="font-bold">{t("yourAnswer")}:</span> {responseText(rs, r.response)}
+                      </p>
+                      <p className="text-success">
+                        <span className="font-bold">{t("rightAnswer")}:</span> {answerText(rs, localKey(r.key, f), locale)}
+                      </p>
+                      {r.explanation && <p className="text-muted-foreground">{pick(r.explanation, locale)}</p>}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ol>
         </section>
       </div>
@@ -187,23 +195,9 @@ export function UnitCheck({
       </div>
       <section className="clay space-y-4 p-4 sm:p-7" aria-labelledby={`uq-${i}`}>
         <p className="text-xs font-extrabold uppercase tracking-wide" style={{ color: "var(--s-text)" }}>{pick(q.lessonTitle, locale)}</p>
-        <p id={`uq-${i}`} className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{pick(q.prompt, locale)}</p>
-        <div role="radiogroup" aria-labelledby={`uq-${i}`} className="grid gap-2.5 md:grid-cols-2">
-          {q.options.map((opt, oi) => (
-            <button
-              key={oi}
-              type="button"
-              role="radio"
-              aria-checked={chosen === oi}
-              disabled={busy}
-              onClick={() => setChosen(oi)}
-              className={cn("clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold", chosen === oi && "ring-3 ring-primary")}
-            >
-              {pick(opt, locale)}
-            </button>
-          ))}
-        </div>
-        <ConfidenceCheck size="lg" label={t("howSure")} disabled={chosen === undefined || busy || answers.length >= questions.length} onCheck={answer} />
+        <p id={`uq-${i}`} className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{shown!.prompt}</p>
+        <AnswerArea key={q.itemId} shown={shown!} value={chosen} onChange={setChosen} disabled={busy} labelledBy={`uq-${i}`} />
+        <ConfidenceCheck size="lg" label={t("howSure")} disabled={!isComplete(shown!, defaultResponse(shown!, chosen)) || busy || answers.length >= questions.length} onCheck={answer} />
         {error && (
           <div role="alert" className="flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
             <p className="font-bold text-destructive">{t("notSaved")}</p>

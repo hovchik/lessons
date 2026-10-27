@@ -1,0 +1,1 @@
+ALTER TABLE `answer_events` ADD `response` text;

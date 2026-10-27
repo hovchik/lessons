@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { QuizResponseSchema } from "@/server/api-schemas";
 import { recordUnitCheck } from "@/server/mastery";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
-/** A handed-in unit check: the question ids and chosen options; the score and new mastery level are worked out here. */
+/** A handed-in unit check: the question ids and answers; the score and new mastery level are worked out here. */
 const Body = z.object({
   skillId: z.string().min(1).max(200),
   token: z.string().min(1).max(200),
@@ -11,7 +12,7 @@ const Body = z.object({
     .array(
       z.object({
         itemId: z.string().min(1).max(300),
-        choice: z.number().int().min(0).max(50),
+        response: QuizResponseSchema,
         confidence: z.union([z.literal(0), z.literal(2)]).nullable().optional(),
       }),
     )
