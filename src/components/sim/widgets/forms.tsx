@@ -131,6 +131,12 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   false3: [t("Russian word", "Ռուսերեն բառ", "Русское слово"), t("Means", "Նշանակում է", "Значит"), t("Not", "Ոչ թե", "Не")],
   realia: [t("Realia", "Ռեալիա", "Реалия"), t("Explanation", "Բացատրություն", "Пояснение")],
   metre: [t("Metre", "Չափ", "Размер"), t("Example", "Օրինակ", "Пример")],
+  enhyru: [t("English", "Անգլերեն", "Английский"), t("Armenian", "Հայերեն", "Армянский"), t("Russian", "Ռուսերեն", "Русский")],
+  aan: [t("a: before a consonant sound", "a՝ բաղաձայն հնչյունից առաջ", "a — перед согласным звуком"), t("an: before a vowel sound", "an՝ ձայնավոր հնչյունից առաջ", "an — перед гласным звуком")],
+  brame: [t("British", "Բրիտանական", "Британский"), t("American", "Ամերիկյան", "Американский")],
+  countable: [t("Count it: add -s", "Հաշվվող՝ ավելացրու -s", "Исчисляемое: добавь -s"), t("Don't count it: no -s", "Չհաշվվող՝ առանց -s", "Неисчисляемое: без -s")],
+  rhyme: [t("Word", "Բառ", "Слово"), t("Rhymes with", "Հանգավորվում է", "Рифмуется с")],
+  plonly: [t("One thing: a …", "Մեկ իր՝ a …", "Один предмет: a …"), t("Always plural", "Միշտ հոգնակի", "Всегда во мн. числе")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {

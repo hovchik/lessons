@@ -15,6 +15,7 @@ import { mathVisuals } from "./math";
 import { algebraVisuals } from "./algebra";
 import { armenianVisuals } from "./armenian";
 import { russianVisuals } from "./russian";
+import { englishVisuals } from "./english";
 
 type At = {
   /** Where to put it: before the n-th heading (1-based, ## and ###), "top" (before the first heading) or "end". Default: before the exercises. */
@@ -36,6 +37,7 @@ export const VISUALS: Record<string, VisualMap> = {
   algebra: algebraVisuals,
   armenian: armenianVisuals,
   russian: russianVisuals,
+  english: englishVisuals,
 };
 
 const EXERCISES = /^#{2,3} (Exercises|Упражнения|Задания|Վարժություններ|Առաջադրանքներ)\s*$/m;
