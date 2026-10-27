@@ -4,7 +4,7 @@ import type { ArtLang, Tr } from "@/lib/art/spec";
 import { L, t } from "../labels";
 import type { Diagram } from "./types";
 
-/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables. */
+/* Labelled pictures for informatics: the computer, a home network, a flowchart, the memory pyramid, a neural network, a URL, an HTML tag, the CSS box, the operating system, a phishing email, two related tables, a class with its objects. */
 
 const P = (x: number, y: number, name: Tr, text: Tr) => ({ x, y, name, text });
 const Tx = ({ x, y, s, lang, size = 9, fill = "#1e1b4b", anchor = "middle", w = 900 }: { x: number; y: number; s: Tr; lang: ArtLang; size?: number; fill?: string; anchor?: "start" | "middle" | "end"; w?: number }) => (
@@ -513,4 +513,68 @@ const db: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db };
+/* ---------------- a class, its objects and its children ---------------- */
+
+const MONO = "ui-monospace, SFMono-Regular, Menlo, monospace";
+const OOP_OBJ: Array<[Tr, Tr, string, string]> = [
+  [t("anya", "ani", "anya"), t("Anya", "Անի", "Аня"), "[9, 10]", "9.5"],
+  [t("aram", "aram", "aram"), t("Aram", "Արամ", "Арам"), "[8]", "8.0"],
+];
+const OOP_KIDS: Array<[string, Tr, string, string]> = [
+  ["Dog", t("Woof", "Հաֆ", "Гав"), "#dcfce7", "#16a34a"],
+  ["Cat", t("Miaow", "Մյաու", "Мяу"), "#fce7f3", "#db2777"],
+];
+
+const oop: Diagram = {
+  title: t("A class, its objects and its children", "Դաս, նրա օբյեկտները և ժառանգները", "Класс, его объекты и наследники"),
+  draw: (lang) => (
+    <g fontFamily={MONO}>
+      <defs><marker id="oop-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569" /></marker></defs>
+      {/* the class: a blueprint */}
+      <rect x="10" y="14" width="118" height="112" rx="6" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="5 3" />
+      <rect x="10" y="14" width="118" height="20" rx="6" fill="#2563eb" />
+      <text x="69" y="28" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff">class Student</text>
+      {["name", "grade", "scores"].map((f, k) => <text key={f} x="18" y={48 + k * 12} fontSize="8" fontWeight="700" fill="#1e3a8a">self.{f}</text>)}
+      <line x1="10" y1="82" x2="128" y2="82" stroke="#93c5fd" />
+      {["__init__()", "add_score(s)", "average()"].map((m, k) => <text key={m} x="18" y={96 + k * 12} fontSize="8" fontWeight="700" fill="#7c3aed">{m}</text>)}
+      {/* two objects built from it */}
+      {OOP_OBJ.map(([v, name, sc, avg], k) => {
+        const y = 14 + k * 58;
+        return (
+          <g key={k}>
+            <path d={`M128,${50 + k * 30} C150,${50 + k * 30} 150,${y + 24} 172,${y + 24}`} fill="none" stroke="#475569" strokeWidth="1.3" markerEnd="url(#oop-head)" />
+            <rect x="174" y={y} width="138" height="50" rx="6" fill="#fff" stroke="#f59e0b" strokeWidth="1.5" />
+            <text x="182" y={y + 13} fontSize="8.5" fontWeight="900" fill="#b45309">{L(v, lang)}: Student</text>
+            <text x="182" y={y + 26} fontSize="7.5" fontWeight="700" fill="#334155">name = &quot;{L(name, lang)}&quot;, grade = 10</text>
+            <text x="182" y={y + 38} fontSize="7.5" fontWeight="700" fill="#334155">scores = {sc}</text>
+            <text x="304" y={y + 38} textAnchor="end" fontSize="7.5" fontWeight="900" fill="#7c3aed">→ {avg}</text>
+          </g>
+        );
+      })}
+      {/* inheritance */}
+      <rect x="20" y="146" width="96" height="30" rx="6" fill="#f1f5f9" stroke="#475569" />
+      <text x="68" y="159" textAnchor="middle" fontSize="8.5" fontWeight="900" fill="#1e1b4b">Animal</text>
+      <text x="68" y="170" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#475569">sound() → &quot;...&quot;</text>
+      {OOP_KIDS.map(([c, snd, bg, fg], k) => {
+        const x = 136 + k * 92;
+        return (
+          <g key={c}>
+            <path d={`M${x + 43},186 C${x + 43},166 140,161 118,161`} fill="none" stroke={fg} strokeWidth="1.3" markerEnd="url(#oop-head)" />
+            <rect x={x} y="186" width="86" height="30" rx="6" fill={bg} stroke={fg} />
+            <text x={x + 43} y="199" textAnchor="middle" fontSize="8.5" fontWeight="900" fill="#1e1b4b">{c}(Animal)</text>
+            <text x={x + 43} y="210" textAnchor="middle" fontSize="7" fontWeight="700" fill={fg}>sound() → &quot;{L(snd, lang)}&quot;</text>
+          </g>
+        );
+      })}
+    </g>
+  ),
+  parts: [
+    P(118, 20, t("Class: the blueprint", "Դաս՝ նախագիծը", "Класс: чертёж"), t("A class describes what every object of its kind will have: properties (name, grade, scores) and methods (add_score, average). By itself it holds no pupil's data, just as a blueprint is not a house.", "Դասը նկարագրում է, թե ինչ կունենա իր տեսակի յուրաքանչյուր օբյեկտ․ հատկություններ (name, grade, scores) և մեթոդներ (add_score, average)։ Ինքնին այն ոչ մի աշակերտի տվյալ չի պահում, ինչպես որ նախագիծը տուն չէ։", "Класс описывает, что будет у каждого объекта этого вида: свойства (name, grade, scores) и методы (add_score, average). Сам по себе он не хранит данных ни одного ученика, как чертёж — это ещё не дом.")),
+    P(302, 20, t("Objects: the houses", "Օբյեկտներ՝ տները", "Объекты: дома"), t("Each call Student(...) builds a new object with its own copy of the properties. Changing Aram's scores does not touch Anya's: the two objects share only the class's methods.", "Student(...) յուրաքանչյուր կանչը կառուցում է նոր օբյեկտ՝ հատկությունների իր սեփական պատճենով։ Արամի գնահատականները փոխելը չի դիպչում Անիի գնահատականներին․ երկու օբյեկտներին ընդհանուր են միայն դասի մեթոդները։", "Каждый вызов Student(...) строит новый объект со своей копией свойств. Если изменить оценки Арама, оценки Ани не изменятся: у двух объектов общие только методы класса.")),
+    P(118, 100, t("Methods and self", "Մեթոդներ և self", "Методы и self"), t("A method is a function that lives inside the class. When you write anya.average(), Python passes the object itself as self, so the same code adds up Anya's scores for her and Aram's for him.", "Մեթոդը դասի ներսում ապրող ֆունկցիա է։ Երբ գրում ես ani.average(), Python-ն օբյեկտն ինքը փոխանցում է որպես self, ուստի նույն կոդը գումարում է Անիի համար՝ Անիի գնահատականները, իսկ Արամի համար՝ Արամինը։", "Метод — это функция, живущая внутри класса. Когда ты пишешь anya.average(), Python передаёт сам объект как self, поэтому один и тот же код складывает оценки Ани для неё и оценки Арама для него.")),
+    P(28, 150, t("Inheritance", "Ժառանգում", "Наследование"), t("Dog(Animal) means: a Dog is an Animal. It gets the name and everything else from Animal for free and only writes what is different.", "Dog(Animal) նշանակում է՝ շունը կենդանի է։ Այն Animal դասից անվճար ստանում է անունը և մնացած ամեն ինչ և գրում է միայն տարբերվողը։", "Dog(Animal) значит: собака — это животное. Она бесплатно получает от Animal имя и всё остальное и пишет только то, что отличается.")),
+    P(306, 172, t("Polymorphism", "Պոլիմորֆիզմ", "Полиморфизм"), t("The same call, a.sound(), gives a different answer for each class. A loop over a list of animals does not need to know which animal is which.", "Նույն կանչը՝ a.sound(), տարբեր պատասխան է տալիս յուրաքանչյուր դասի համար։ Կենդանիների ցուցակով անցնող ցիկլին պետք չէ իմանալ, թե որ կենդանին որն է։", "Один и тот же вызов a.sound() даёт разный ответ для каждого класса. Циклу по списку животных не нужно знать, какое животное какое.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { computer, network, flowchart, memory, layers, url, tag, box, os, phish, db, oop };
