@@ -53,6 +53,18 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   hardsoft: [t("Hard", "Կարծր", "Твёрдый"), t("Soft", "Փափուկ", "Мягкий")],
   gender: [t("Masculine", "Արական", "Мужской"), t("Feminine", "Իգական", "Женский"), t("Neuter", "Չեզոք", "Средний")],
   number: [t("One", "Մեկ", "Один"), t("Many", "Շատ", "Много")],
+  gender4: [t("Masculine", "Արական", "Мужской"), t("Feminine", "Իգական", "Женский"), t("Neuter", "Չեզոք", "Средний"), t("Plural", "Հոգնակի", "Мн. число")],
+  check: [t("Word", "Բառ", "Слово"), t("Check word", "Ստուգիչ բառ", "Проверочное слово")],
+  tenses: [t("Past", "Անցյալ", "Прошедшее"), t("Present", "Ներկա", "Настоящее"), t("Future", "Ապառնի", "Будущее")],
+  aspect: [t("что делать? (process)", "что делать? (ընթացք)", "что делать? (процесс)"), t("что сделать? (result)", "что сделать? (արդյունք)", "что сделать? (результат)")],
+  opposite: [t("Word", "Բառ", "Слово"), t("Opposite", "Հականիշ", "Антоним")],
+  where: [t("где? (prepositional)", "где? (նախդրային)", "где? (предложный)"), t("куда? (accusative)", "куда? (հայցական)", "куда? (винительный)")],
+  signs: [t("Dividing ъ", "Բաժանիչ ъ", "Разделительный ъ"), t("Dividing ь", "Բաժանիչ ь", "Разделительный ь")],
+  animate: [t("Animate: кто?", "Շնչավոր՝ кто?", "Одушевлённые: кто?"), t("Inanimate: что?", "Անշունչ՝ что?", "Неодушевлённые: что?")],
+  together: [t("Together", "Միասին", "Слитно"), t("Separately", "Առանձին", "Раздельно")],
+  precise: [t("Plain", "Պարզ", "Просто"), t("Precise", "Ճշգրիտ", "Точно")],
+  polite: [t("Friendly: ты", "Մտերմիկ՝ ты", "Дружески: ты"), t("Polite: Вы", "Քաղաքավարի՝ Вы", "Вежливо: Вы")],
+  old: [t("Old word", "Հին բառ", "Старое слово"), t("Today", "Այսօր", "Сегодня")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
   ru: [
@@ -166,7 +178,7 @@ function Verbs({ lang, rows, cols }: { lang: SimProps["lang"]; rows: string[][];
                 const hide = c === hidden && !open.includes(id);
                 return (
                   <td key={c}>
-                    {hide ? <button type="button" className="lang-cover" onClick={() => setOpen([...open, id])}>?</button> : <span className={c || named ? "lang-form" : undefined}>{sp(v)}</span>}
+                    {hide ? <button type="button" className="lang-cover" onClick={() => setOpen([...open, id])}>?</button> : <span className={c || named ? "lang-form" : undefined}>{v === "-" ? "—" : sp(v)}</span>}
                   </td>
                 );
               })}
