@@ -154,6 +154,14 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   when: [t("When", "Երբ", "Когда"), t("What happened", "Ինչ եղավ", "Что произошло")],
   oblig3: [t("must: necessary", "must՝ անհրաժեշտ է", "must — необходимо"), t("mustn't: forbidden", "mustn't՝ արգելված է", "mustn't — запрещено"), t("don't have to: not necessary", "don't have to՝ պարտադիր չէ", "don't have to — не обязательно")],
   ask3: [t("Can I…? (friends)", "Can I…? (ընկերներին)", "Can I…? (друзьям)"), t("Could I…? (polite)", "Could I…? (քաղաքավարի)", "Could I…? (вежливо)"), t("May I…? (formal)", "May I…? (պաշտոնական)", "May I…? (официально)")],
+  domake: [t("do + jobs and activities", "do + գործեր, զբաղմունքներ", "do + дела, занятия"), t("make + something new appears", "make + նոր բան է հայտնվում", "make + появляется что-то новое")],
+  ordinal: [t("Number", "Թիվ", "Число"), t("Ordinal", "Դասական", "Порядковое"), t("Short form", "Կրճատ ձև", "Сокращение")],
+  jay: [t("just: a moment ago", "just՝ հենց նոր", "just — только что"), t("already: sooner than expected", "already՝ արդեն", "already — уже"), t("yet: questions and negatives", "yet՝ հարց և ժխտում", "yet — вопросы и отрицания")],
+  forsince: [t("for + how long", "for + որքան ժամանակ", "for + как долго"), t("since + starting point", "since + սկզբնակետ", "since + с какого момента")],
+  perfpast: [t("Present perfect: time not said", "Present perfect՝ ժամանակը նշված չէ", "Present perfect: время не названо"), t("Past simple: finished time", "Past simple՝ ավարտված ժամանակ", "Past simple: законченное время")],
+  fewlittle: [t("(a) few: you can count", "(a) few՝ հաշվվող", "(a) few — исчисляемые"), t("(a) little: you can't count", "(a) little՝ չհաշվվող", "(a) little — неисчисляемые")],
+  container: [t("Container", "Տարա", "Упаковка"), t("What is in it", "Ինչ կա ներսում", "Что внутри")],
+  capital: [t("City", "Քաղաք", "Город"), t("Country", "Երկիր", "Страна"), t("River", "Գետ", "Река")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
