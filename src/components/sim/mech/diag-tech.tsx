@@ -717,4 +717,391 @@ const woodlog: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog };
+/* ---------------- grade 5: the woodwork bench ---------------- */
+
+const STEEL = "#94a3b8", STEEL_D = "#475569";
+
+const workbench: Diagram = {
+  title: t("The woodwork bench and its tools", "Հյուսնի դազգահը և գործիքները", "Столярный верстак и инструменты"),
+  h: 214,
+  draw: () => (
+    <g>
+      {/* pegboard */}
+      <rect x="8" y="6" width="304" height="96" rx="4" fill="#e7d3b0" stroke="#c4a574" />
+      {Array.from({ length: 15 * 5 }, (_, j) => <circle key={j} cx={18 + (j % 15) * 20.5} cy={14 + Math.floor(j / 15) * 20} r="1.3" fill="#a8875a" />)}
+      {/* saw */}
+      <path d="M16,44 L84,30 V64 L16,56 Z" fill="#cbd5e1" stroke="#64748b" />
+      <polyline points={Array.from({ length: 18 }, (_, j) => `${16 + j * 4},${56 + (j * 8) / 17 + (j % 2 ? 3 : 0)}`).join(" ")} fill="none" stroke="#64748b" />
+      <path d="M84,26 h16 q10,0 10,12 v26 q0,10 -10,10 h-16 Z" fill={WOOD} />
+      <ellipse cx="97" cy="48" rx="4.5" ry="11" fill="#e7d3b0" />
+      {/* hammer */}
+      <rect x="123" y="30" width="7" height="64" rx="2" fill={WOOD_L} />
+      <path d="M112,20 h20 q10,0 14,10 q-8,-4 -14,2 h-20 Z" fill={STEEL_D} />
+      {/* chisel */}
+      <rect x="155" y="18" width="9" height="36" rx="3" fill={WOOD} />
+      <path d="M156,54 h7 v30 l-3.5,6 l-3.5,-4 Z" fill={STEEL} stroke="#64748b" strokeWidth="0.6" />
+      {/* file */}
+      <rect x="175" y="18" width="8" height="26" rx="3" fill={WOOD_D} />
+      <rect x="176" y="44" width="6" height="46" fill="#6b7280" />
+      {Array.from({ length: 11 }, (_, j) => <line key={j} x1="176" x2="182" y1={46 + j * 4} y2={48 + j * 4} stroke="#374151" strokeWidth="0.6" />)}
+      {/* screwdriver */}
+      <rect x="196" y="18" width="11" height="30" rx="4" fill="#ef4444" />
+      <rect x="200" y="48" width="3" height="38" fill={STEEL} />
+      <rect x="199" y="86" width="5" height="3" fill="#64748b" />
+      {/* try square */}
+      <rect x="222" y="18" width="10" height="56" fill={WOOD} />
+      <rect x="232" y="18" width="46" height="6" fill={STEEL} stroke="#64748b" strokeWidth="0.5" />
+      {Array.from({ length: 9 }, (_, j) => <line key={j} x1={236 + j * 5} x2={236 + j * 5} y1="24" y2={j % 2 ? 21 : 19} stroke="#334155" strokeWidth="0.5" />)}
+      {/* brace */}
+      <circle cx="300" cy="18" r="6" fill={WOOD} />
+      <path d="M300,24 V36 H284 V64 H300 V76" fill="none" stroke={STEEL_D} strokeWidth="3" />
+      <rect x="282" y="42" width="5" height="16" rx="2" fill={WOOD_L} />
+      <rect x="296" y="76" width="8" height="8" fill="#64748b" />
+      <path d="M300,84 V96" stroke="#334155" strokeWidth="1.6" />
+      {/* bench */}
+      <rect x="14" y="150" width="292" height="12" fill={WOOD} />
+      <rect x="30" y="162" width="12" height="48" fill={WOOD_D} />
+      <rect x="276" y="162" width="12" height="48" fill={WOOD_D} />
+      <rect x="42" y="192" width="234" height="6" fill={WOOD_D} />
+      {/* plank, stop and tail vice */}
+      <rect x="56" y="134" width="5" height="16" fill={WOOD_D} />
+      <rect x="61" y="138" width="232" height="12" fill="#f3d9a4" stroke="#c48a3f" />
+      <rect x="293" y="132" width="11" height="30" fill={WOOD_D} />
+      <path d="M304,154 H314 M314,146 V162" stroke={STEEL_D} strokeWidth="2.5" />
+      {/* plane with a shaving */}
+      <path d="M116,138 L120,124 H170 L176,138 Z" fill="#1e40af" />
+      <circle cx="128" cy="119" r="5" fill={WOOD} />
+      <path d="M160,124 q2,-14 12,-14 l2,6 q-6,0 -6,8 Z" fill={WOOD} />
+      <path d="M144,124 q-2,-12 8,-12 q8,2 2,8" fill="none" stroke="#e9c48f" strokeWidth="3" />
+    </g>
+  ),
+  parts: [
+    P(50, 46, t("Handsaw", "Ձեռքի սղոց", "Ножовка"), t("Cuts wood. Start slowly, guiding the side of the blade with your thumb, never the teeth, and use the whole length of the blade.", "Կտրում է փայտը։ Սկսի՛ր դանդաղ՝ բութ մատով ուղղորդելով սայրի կողը, ոչ թե ատամները, և աշխատի՛ր սայրի ամբողջ երկարությամբ։", "Пилит дерево. Начинай медленно, направляя большим пальцем бок полотна, а не зубья, и работай всей длиной полотна.")),
+    P(126, 60, t("Hammer", "Մուրճ", "Молоток"), t("Drives in nails. The split claw on the back pulls bent nails out again.", "Մեխեր է խփում։ Հետևի ճեղքված մասը ծուռ մեխերը հետ է հանում։", "Забивает гвозди. Раздвоенный конец сзади выдёргивает погнутые гвозди.")),
+    P(159, 72, t("Chisel", "Դուր", "Стамеска"), t("A sharp blade for cutting hollows and joints. Keep both hands behind the edge and store it with the blade covered.", "Սուր սայր՝ փոսորակներ և միացումներ փորելու համար։ Երկու ձեռքն էլ պահի՛ր սայրից հետ, իսկ դուրը պահի՛ր ծածկած սայրով։", "Острое лезвие для выборки гнёзд и соединений. Держи обе руки позади лезвия, а храни стамеску с закрытым лезвием.")),
+    P(179, 68, t("File", "Խարտոց", "Напильник"), t("Rows of tiny teeth smooth the edges after sawing.", "Մանր ատամների շարքերը հարթեցնում են եզրերը սղոցելուց հետո։", "Ряды мелких зубчиков сглаживают края после пиления.")),
+    P(202, 34, t("Screwdriver", "Պտուտակահան", "Отвёртка"), t("Turns screws. Choose a tip that fits the slot exactly, or it will slip and damage the screw.", "Պտուտակներ է պտտում։ Ընտրի՛ր ճիշտ ակոսին համապատասխան ծայր, այլապես այն կսահի և կփչացնի պտուտակը։", "Закручивает шурупы. Подбирай жало точно по шлицу, иначе оно соскользнёт и испортит шуруп.")),
+    P(254, 34, t("Try square", "Անկյունակ", "Угольник"), t("Checks and marks perfect right angles, together with a pencil and ruler.", "Ստուգում և գծանշում է ճիշտ ուղիղ անկյուններ՝ մատիտի և քանոնի հետ։", "Проверяет и размечает точные прямые углы вместе с карандашом и линейкой.")),
+    P(292, 50, t("Brace", "Ձեռքի գայլիկոն", "Коловорот"), t("A hand drill: press on the round top and turn the crank to bore a hole.", "Ձեռքի շաղափ․ սեղմի՛ր կլոր գլխիկին և պտտի՛ր բռնակը, որ անցք բացվի։", "Ручная дрель: нажимай на круглую головку и крути рукоятку, чтобы просверлить отверстие.")),
+    P(146, 128, t("Plane", "Ռանդա", "Рубанок"), t("Its blade sticks out a tiny bit below the sole and takes off thin curly shavings, leaving the surface flat and smooth.", "Դանակը ներբանից մի փոքր դուրս է գալիս և հանում բարակ, ոլորված տաշեղներ՝ մակերեսը թողնելով հարթ ու ողորկ։", "Его нож чуть-чуть выступает из подошвы и снимает тонкую кудрявую стружку, оставляя поверхность ровной и гладкой.")),
+    P(299, 172, t("Workbench and vice", "Դազգահ և մամլակ", "Верстак и зажим"), t("The vice squeezes the plank against a stop, so both your hands are free and the work cannot slide.", "Մամլակը տախտակը սեղմում է հենակին, և երկու ձեռքդ ազատ են, իսկ դետալը չի սահում։", "Зажим прижимает доску к упору, так что обе руки свободны, а заготовка не скользит.")),
+  ],
+};
+
+/* ---------------- grade 5: tools for sheet metal and wire ---------------- */
+
+const Pliers = ({ x, jaw, c }: { x: number; jaw: "flat" | "round" | "cut" | "snips"; c: string }) => (
+  <g>
+    <path d={`M${x - 3},80 Q${x - 14},116 ${x - 14},176 M${x + 3},80 Q${x + 14},116 ${x + 14},176`} fill="none" stroke={STEEL_D} strokeWidth="5" strokeLinecap="round" />
+    <path d={`M${x - 11},124 Q${x - 14},146 ${x - 14},176 M${x + 11},124 Q${x + 14},146 ${x + 14},176`} fill="none" stroke={c} strokeWidth="8" strokeLinecap="round" />
+    {jaw === "flat" ? <g fill="#64748b"><rect x={x - 6} y="42" width="5.4" height="38" /><rect x={x + 0.6} y="42" width="5.4" height="38" /></g> : null}
+    {jaw === "round" ? <g fill="#64748b"><path d={`M${x - 7},80 L${x - 3},40 h2.4 V80 Z`} /><path d={`M${x + 7},80 L${x + 3},40 h-2.4 V80 Z`} /></g> : null}
+    {jaw === "cut" ? <g fill="#64748b"><path d={`M${x - 9},80 Q${x - 9},62 ${x - 0.6},54 V80 Z`} /><path d={`M${x + 9},80 Q${x + 9},62 ${x + 0.6},54 V80 Z`} /></g> : null}
+    {jaw === "snips" ? <g fill={STEEL} stroke="#64748b" strokeWidth="0.6"><path d={`M${x - 8},80 Q${x - 8},40 ${x},18 V80 Z`} /><path d={`M${x + 8},80 Q${x + 8},40 ${x},18 V80 Z`} /></g> : null}
+    <circle cx={x} cy="80" r="4" fill="#1f2937" />
+  </g>
+);
+
+const wiretools: Diagram = {
+  title: t("Tools for sheet metal and wire", "Թիթեղի և լարի գործիքներ", "Инструменты для жести и проволоки"),
+  h: 196,
+  draw: () => (
+    <g>
+      <rect x="0" y="0" width="320" height="196" fill="#f8fafc" />
+      <Pliers x={40} jaw="snips" c="#dc2626" />
+      <Pliers x={98} jaw="flat" c="#2563eb" />
+      <Pliers x={150} jaw="round" c="#16a34a" />
+      <Pliers x={202} jaw="cut" c="#f59e0b" />
+      {/* mallet */}
+      <rect x="230" y="30" width="44" height="26" rx="6" fill={WOOD_L} stroke={WOOD} />
+      <ellipse cx="232" cy="43" rx="3" ry="11" fill={WOOD} />
+      <rect x="249" y="56" width="7" height="122" rx="2" fill={WOOD} />
+      {/* finished copper hook */}
+      <circle cx="297" cy="40" r="8" fill="none" stroke="#c2410c" strokeWidth="3" />
+      <path d="M297,48 V140 Q297,166 282,162 Q270,158 272,146" fill="none" stroke="#c2410c" strokeWidth="3" strokeLinecap="round" />
+    </g>
+  ),
+  parts: [
+    P(40, 36, t("Tin snips", "Թիթեղի մկրատ", "Ножницы по металлу"), t("Heavy scissors with short, strong blades for cutting thin sheet metal. Wear gloves: the cut edges are as sharp as a knife.", "Ծանր մկրատ՝ կարճ, ամուր շեղբերով, բարակ թիթեղ կտրելու համար։ Ձեռնոցներ հագի՛ր․ կտրված եզրերը դանակի պես սուր են։", "Тяжёлые ножницы с короткими прочными лезвиями для тонкой жести. Надевай перчатки: края среза острые, как нож.")),
+    P(98, 50, t("Flat-nose pliers", "Տափակաբերան աքցան", "Плоскогубцы"), t("Flat jaws grip the wire firmly and bend it into sharp right angles.", "Տափակ ծնոտներն ամուր բռնում են լարը և ծալում այն ուղիղ անկյունով։", "Плоские губки крепко держат проволоку и сгибают её под прямым углом.")),
+    P(150, 50, t("Round-nose pliers", "Կլորաբերան աքցան", "Круглогубцы"), t("Cone-shaped jaws: wind the wire round them to make neat loops and rings. Nearer the tip, the loop is smaller.", "Կոնաձև ծնոտներ․ լարը փաթաթի՛ր դրանց շուրջը, որ կոկիկ օղակներ ստացվեն։ Որքան մոտ է ծայրին, այնքան փոքր է օղակը։", "Конические губки: оборачивай вокруг них проволоку, чтобы получить аккуратные петли и колечки. Чем ближе к кончику, тем меньше петля.")),
+    P(202, 64, t("Wire cutters", "Լարակտրիչ", "Кусачки"), t("Two sharp edges meet and nip the wire. Hold the end that is cut off, or it can fly into someone's eye.", "Երկու սուր եզր հանդիպում են և կտրում լարը։ Բռնի՛ր կտրվող ծայրը, թե չէ այն կարող է թռչել և ընկնել մեկի աչքը։", "Две острые кромки смыкаются и перекусывают проволоку. Придерживай отрезаемый конец, иначе он может отлететь кому-нибудь в глаз.")),
+    P(158, 160, t("Insulated grips", "Մեկուսացված բռնակներ", "Изолированные ручки"), t("Plastic grips stop your hands slipping and blistering. On electricians' pliers they also protect against electric shock.", "Պլաստմասե բռնակները թույլ չեն տալիս ձեռքերին սահել և ջրկալվել։ Էլեկտրիկների աքցաններին դրանք պաշտպանում են նաև էլեկտրական հարվածից։", "Пластмассовые ручки не дают рукам скользить и натирать мозоли. У инструмента электриков они ещё и защищают от удара током.")),
+    P(252, 36, t("Mallet", "Փայտե մուրճ", "Киянка"), t("A wooden or rubber hammer flattens and bends sheet metal without leaving dents.", "Փայտե կամ ռետինե մուրճը հարթեցնում և ծալում է թիթեղը՝ առանց փոսիկներ թողնելու։", "Деревянный или резиновый молоток выравнивает и гнёт жесть, не оставляя вмятин.")),
+    P(306, 120, t("A finished hook", "Պատրաստի կեռիկ", "Готовый крючок"), t("A loop made with round-nose pliers, a straight stem and a curved end. File the ends so they are not sharp.", "Կլորաբերան աքցանով արված օղակ, ուղիղ ձող և կեռ ծայր։ Ծայրերը խարտոցով հղկի՛ր, որ սուր չլինեն։", "Петля, сделанная круглогубцами, прямой стержень и загнутый конец. Опили концы, чтобы они не были острыми.")),
+  ],
+};
+
+/* ---------------- grade 5: three views of a stepped block ---------------- */
+
+const VIS = { stroke: "#0f172a", strokeWidth: 2.2, fill: "#fff" } as const;
+const CON = { stroke: "#94a3b8", strokeWidth: 0.7, strokeDasharray: "3 2" } as const;
+
+const views: Diagram = {
+  title: t("Three views of a stepped block", "Աստիճանաձև չորսուի երեք տեսքը", "Три вида ступенчатого бруска"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {/* construction lines */}
+      {[30, 80, 130].map((x) => <line key={x} x1={x} x2={x} y1="100" y2="130" {...CON} />)}
+      {[40, 70, 100].map((y) => <line key={y} x1="130" x2="160" y1={y} y2={y} {...CON} />)}
+      <line x1="130" x2="160" y1="130" y2="130" {...CON} />
+      <line x1="130" x2="210" y1="180" y2="180" {...CON} />
+      <line x1="160" x2="160" y1="100" y2="130" {...CON} />
+      <line x1="210" x2="210" y1="100" y2="180" {...CON} />
+      <line x1="150" x2="220" y1="120" y2="190" stroke="#94a3b8" strokeWidth="0.9" />
+      {/* front view */}
+      <path d="M30,40 H80 V70 H130 V100 H30 Z" {...VIS} />
+      {/* top view */}
+      <rect x="30" y="130" width="100" height="50" {...VIS} />
+      <line x1="80" x2="80" y1="130" y2="180" stroke="#0f172a" strokeWidth="2.2" />
+      {/* left view */}
+      <rect x="160" y="40" width="50" height="60" {...VIS} />
+      <line x1="160" x2="210" y1="70" y2="70" stroke="#0f172a" strokeWidth="1.2" strokeDasharray="5 3" />
+      <Tx x={105} y={84} s={t("front", "գլխավոր", "главный")} lang={lang} size={7} fill="#475569" w={600} />
+      <Tx x={105} y={160} s={t("top", "վերևից", "сверху")} lang={lang} size={7} fill="#475569" w={600} />
+      <Tx x={185} y={90} s={t("left", "ձախից", "слева")} lang={lang} size={7} fill="#475569" w={600} />
+      {/* dimensions */}
+      <DimArrow x1={30} y1={194} x2={130} y2={194} />
+      <text x="80" y="206" textAnchor="middle" fontSize="10" fontWeight="700" fill="#0f172a">100</text>
+      <DimArrow x1={16} y1={40} x2={16} y2={100} />
+      <text x="12" y="74" textAnchor="middle" fontSize="10" fontWeight="700" fill="#0f172a" transform="rotate(-90 12 70)">60</text>
+      <DimArrow x1={160} y1={30} x2={210} y2={30} />
+      <text x="185" y="26" textAnchor="middle" fontSize="10" fontWeight="700" fill="#0f172a">50</text>
+      {/* the part itself, drawn in oblique */}
+      <g stroke="#1e3a8a" strokeWidth="1" strokeLinejoin="round">
+        <path d="M240,154 H270 L286,138 H256 Z" fill="#bfdbfe" />
+        <path d="M270,172 H300 L316,156 H286 Z" fill="#bfdbfe" />
+        <path d="M270,154 V172 L286,156 V138 Z" fill="#60a5fa" />
+        <path d="M300,172 V190 L316,174 V156 Z" fill="#60a5fa" />
+        <path d="M240,190 H300 V172 H270 V154 H240 Z" fill="#93c5fd" />
+      </g>
+      <path d="M220,176 h16 M230,172 l6,4 l-6,4" fill="none" stroke="#dc2626" strokeWidth="2" />
+      <path d="M300,116 v20 M296,130 l4,6 l4,-6" fill="none" stroke="#dc2626" strokeWidth="2" />
+    </g>
+  ),
+  parts: [
+    P(48, 54, t("Front view", "Գլխավոր տեսք", "Главный вид"), t("Looking straight at the front. It shows the length and the height, and here you can see the step. It always goes in the top left corner.", "Ուղիղ առջևից նայելիս։ Ցույց է տալիս երկարությունը և բարձրությունը, և այստեղ երևում է աստիճանը։ Այն միշտ գծվում է վերևի ձախ անկյունում։", "Взгляд прямо спереди. Он показывает длину и высоту, и на нём видна ступенька. Его всегда чертят в левом верхнем углу.")),
+    P(55, 150, t("Top view", "Վերևից տեսք", "Вид сверху"), t("Drawn under the front view. It shows the length and the width; the edge of the step becomes a line across the rectangle.", "Գծվում է գլխավոր տեսքի տակ։ Ցույց է տալիս երկարությունը և լայնությունը․ աստիճանի կողն ուղղանկյան մեջ դառնում է գիծ։", "Чертят под главным видом. Он показывает длину и ширину; ребро ступеньки становится линией поперёк прямоугольника.")),
+    P(185, 54, t("Left view", "Ձախից տեսք", "Вид слева"), t("Drawn to the right of the front view. It shows the width and the height.", "Գծվում է գլխավոր տեսքից աջ։ Ցույց է տալիս լայնությունը և բարձրությունը։", "Чертят справа от главного вида. Он показывает ширину и высоту.")),
+    P(200, 74, t("Hidden edge", "Անտեսանելի կող", "Невидимое ребро"), t("From the left the tall part hides the step, so its edge is drawn as a dashed line.", "Ձախից նայելիս բարձր մասը ծածկում է աստիճանը, ուստի դրա կողը գծվում է ընդհատ գծով։", "Слева высокая часть закрывает ступеньку, поэтому её ребро чертят штриховой линией.")),
+    P(145, 56, t("Projection lines", "Կապող գծեր", "Линии связи"), t("Thin lines carry each size across: the front and top views share the length, the front and left views share the height.", "Բարակ գծերը չափերը փոխանցում են մի տեսքից մյուսը․ գլխավոր և վերևից տեսքերն ունեն նույն երկարությունը, գլխավոր և ձախից տեսքերը՝ նույն բարձրությունը։", "Тонкие линии переносят размеры: у главного вида и вида сверху общая длина, у главного вида и вида слева — общая высота.")),
+    P(196, 160, t("The 45° line", "45° գիծ", "Линия под 45°"), t("A helper line that turns the width of the top view round the corner, so the left view gets exactly the same width.", "Օժանդակ գիծ, որը վերևից տեսքի լայնությունը «շրջում» է անկյունով, որպեսզի ձախից տեսքը ստանա ճիշտ նույն լայնությունը։", "Вспомогательная линия «поворачивает» ширину вида сверху за угол, чтобы вид слева получил точно такую же ширину.")),
+    P(262, 186, t("The part", "Դետալը", "Деталь"), t("The real block: 100 mm long, 50 mm wide and 60 mm high. The red arrows show where we look from for the top and left views.", "Իրական չորսուն՝ 100 մմ երկարությամբ, 50 մմ լայնությամբ և 60 մմ բարձրությամբ։ Կարմիր սլաքները ցույց են տալիս, թե որտեղից ենք նայում վերևից և ձախից տեսքերի համար։", "Настоящий брусок: длина 100 мм, ширина 50 мм, высота 60 мм. Красные стрелки показывают, откуда мы смотрим для вида сверху и вида слева.")),
+  ],
+};
+
+/* ---------------- grade 5: three weaves ---------------- */
+
+const Swatch = ({ x, y, up }: { x: number; y: number; up: (r: number, c: number) => boolean }) => (
+  <g>
+    <rect x={x} y={y} width="90" height="90" fill="#334155" />
+    {Array.from({ length: 81 }, (_, j) => {
+      const r = Math.floor(j / 9), c = j % 9, cx = x + c * 10, cy = y + r * 10;
+      return up(r, c) ? <rect key={j} x={cx + 1.5} y={cy} width="7" height="10" fill={WARP} /> : <rect key={j} x={cx} y={cy + 1.5} width="10" height="7" fill={WEFT} />;
+    })}
+  </g>
+);
+
+const weaves3: Diagram = {
+  title: t("Three basic weaves", "Երեք հիմնական գործվածք", "Три основных переплетения"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      <line x1="30" x2="30" y1="6" y2="22" stroke={WARP} strokeWidth="5" />
+      <Tx x={38} y={18} s={t("warp", "հենք", "основа")} lang={lang} size={8} fill={WARP} anchor="start" />
+      <line x1="110" x2="130" y1="14" y2="14" stroke={WEFT} strokeWidth="5" />
+      <Tx x={136} y={18} s={t("weft", "միջահյուս", "уток")} lang={lang} size={8} fill={WEFT} anchor="start" />
+      <Swatch x={12} y={30} up={(r, c) => (r + c) % 2 === 0} />
+      <Swatch x={115} y={30} up={(r, c) => (c + r) % 3 !== 0} />
+      <Swatch x={218} y={30} up={(r, c) => (c + r * 2) % 5 !== 0} />
+      {Array.from({ length: 9 }, (_, r) => r % 2 ? <path key={r} d={`M12,${33.5 + r * 10} q-7,5 0,10`} fill="none" stroke={WEFT} strokeWidth="3" /> : null)}
+      <Tx x={57} y={134} s={t("plain", "պարզ", "полотняное")} lang={lang} size={9} />
+      <Tx x={160} y={134} s={t("twill", "սարժա", "саржевое")} lang={lang} size={9} />
+      <Tx x={263} y={134} s={t("satin", "ատլաս", "атласное")} lang={lang} size={9} />
+      <Tx x={57} y={145} s={t("calico, sheets", "չիթ, սպիտակեղեն", "ситец, бязь")} lang={lang} size={7} fill="#475569" w={500} />
+      <Tx x={160} y={145} s={t("denim", "ջինս", "джинса")} lang={lang} size={7} fill="#475569" w={500} />
+      <Tx x={263} y={145} s={t("shiny satin", "փայլուն ատլաս", "блестящий атлас")} lang={lang} size={7} fill="#475569" w={500} />
+      {/* cross-section of plain weave */}
+      {Array.from({ length: 11 }, (_, k) => <circle key={k} cx={40 + k * 24} cy="182" r="5" fill={WARP} />)}
+      <path d={`M28,182 ${Array.from({ length: 11 }, (_, k) => `Q${40 + k * 24},${182 + (k % 2 ? 16 : -16)} ${52 + k * 24},182`).join(" ")}`} fill="none" stroke={WEFT} strokeWidth="3" />
+      <Tx x={160} y={208} s={t("cut through plain weave: over one, under one", "պարզ գործվածքի կտրվածք․ մեկի վրայով, մեկի տակով", "разрез полотняного: над одной, под одной")} lang={lang} size={7.5} fill="#475569" w={600} />
+    </g>
+  ),
+  parts: [
+    P(30, 14, t("Warp", "Հենք", "Основа"), t("The long threads stretched on the loom first. They run along the length of the fabric and do not stretch much.", "Երկար թելեր, որոնք առաջինն են ձգվում ջուլհակահաստոցի վրա։ Դրանք անցնում են գործվածքի երկայնքով և քիչ են ձգվում։", "Длинные нити, которые первыми натягивают на ткацком станке. Они идут вдоль ткани и почти не тянутся.")),
+    P(120, 14, t("Weft", "Միջահյուս", "Уток"), t("The thread that the shuttle carries across, weaving over and under the warp.", "Թելը, որը մաքոքը տանում է լայնքով՝ անցնելով հենքի վրայով և տակով։", "Нить, которую челнок проводит поперёк, то над, то под нитями основы.")),
+    P(57, 75, t("Plain weave", "Պարզ գործվածք", "Полотняное"), t("Over one, under one, like a chessboard. The strongest and simplest weave, and it looks the same on both sides.", "Մեկի վրայով, մեկի տակով, ինչպես շախմատի տախտակը։ Ամենաամուր և ամենապարզ գործվածքը, որն երկու կողմից էլ նույնն է երևում։", "Над одной, под одной, как шахматная доска. Самое прочное и простое переплетение, с обеих сторон оно выглядит одинаково.")),
+    P(160, 75, t("Twill", "Սարժա", "Саржа"), t("Each row starts one step further along, so diagonal ribs appear. Twill is tough and hides dirt: jeans are made this way.", "Ամեն շարք սկսվում է մեկ քայլ առաջ, ուստի հայտնվում են շեղ շերտեր։ Սարժան դիմացկուն է և թաքցնում է կեղտը․ ջինսերն այսպես են գործված։", "Каждый ряд начинается на шаг дальше, поэтому появляются диагональные рубчики. Саржа прочная и не так пачкается: так ткут джинсы.")),
+    P(263, 75, t("Satin", "Ատլաս", "Атлас"), t("The warp floats over four weft threads at a time. Long smooth floats reflect light, so satin shines, but they catch easily.", "Հենքն անցնում է միանգամից չորս միջահյուսի վրայով։ Երկար ողորկ թելերն անդրադարձնում են լույսը, ուստի ատլասը փայլում է, բայց հեշտությամբ կառչում է։", "Нить основы перекрывает сразу четыре уточные нити. Длинные гладкие перекрытия отражают свет, поэтому атлас блестит, но легко цепляется.")),
+    P(6, 120, t("Selvedge", "Եզրաշերտ", "Кромка"), t("Where the weft turns round at the edge, the fabric has a firm edge that never frays.", "Եզրում, որտեղ միջահյուսը շրջվում է, գործվածքն ունի ամուր եզր, որը չի քանդվում։", "Там, где уток разворачивается у края, у ткани получается плотная кромка, которая не осыпается.")),
+  ],
+};
+
+/* ---------------- grade 5: parts of a sewing machine ---------------- */
+
+const sewmachine: Diagram = {
+  title: t("Parts of a sewing machine", "Կարի մեքենայի մասերը", "Устройство швейной машины"),
+  h: 210,
+  draw: () => (
+    <g>
+      <rect x="0" y="0" width="320" height="210" fill="#f8fafc" />
+      {/* body */}
+      <rect x="18" y="150" width="270" height="26" rx="6" fill="#e2e8f0" stroke="#94a3b8" />
+      <rect x="226" y="40" width="54" height="112" rx="8" fill="#f1f5f9" stroke="#94a3b8" />
+      <rect x="40" y="36" width="240" height="34" rx="14" fill="#f1f5f9" stroke="#94a3b8" />
+      <rect x="40" y="40" width="44" height="72" rx="8" fill="#f1f5f9" stroke="#94a3b8" />
+      {/* spool and thread path */}
+      <rect x="178" y="22" width="3" height="16" fill="#64748b" />
+      <rect x="171" y="12" width="17" height="20" rx="2" fill="#dc2626" />
+      <path d="M176,20 Q120,8 94,52 L92,62 L66,48 V120" fill="none" stroke="#dc2626" strokeWidth="1" />
+      <circle cx="92" cy="60" r="6" fill="#cbd5e1" stroke="#64748b" />
+      <rect x="62" y="44" width="10" height="5" rx="2" fill="#64748b" />
+      {/* needle bar, needle, presser foot */}
+      <rect x="58" y="110" width="6" height="18" fill={STEEL} />
+      <rect x="60" y="128" width="2" height="16" fill="#475569" />
+      <rect x="70" y="110" width="4" height="26" fill={STEEL} />
+      <path d="M48,144 h30 q6,0 6,-4 h-36 Z" fill="#475569" />
+      {/* fabric, plate, feed dogs, bobbin */}
+      <rect x="22" y="144" width="140" height="4" fill="#93c5fd" />
+      <rect x="40" y="148" width="54" height="2" fill="#94a3b8" />
+      {[0, 1, 2, 3, 4].map((j) => <path key={j} d={`M${52 + j * 5},151 l2.5,-3 l2.5,3`} fill="#f97316" />)}
+      <rect x="44" y="154" width="40" height="18" rx="3" fill="#1e293b" />
+      <circle cx="64" cy="163" r="7" fill="#bfdbfe" stroke="#2563eb" strokeWidth="1.5" />
+      <circle cx="64" cy="163" r="2" fill="#1e3a8a" />
+      {/* handwheel and dial */}
+      <ellipse cx="290" cy="74" rx="9" ry="28" fill="#cbd5e1" stroke="#64748b" />
+      <circle cx="253" cy="110" r="11" fill="#fff" stroke="#64748b" />
+      <path d="M253,110 L259,102" stroke="#dc2626" strokeWidth="2" />
+      {[0, 1, 2, 3, 4].map((j) => <circle key={j} cx={253 + 14 * Math.cos(Math.PI * (1 + j / 4))} cy={110 + 14 * Math.sin(Math.PI * (1 + j / 4))} r="1" fill="#475569" />)}
+      {/* pedal */}
+      <path d="M260,176 Q260,196 236,196" fill="none" stroke="#334155" strokeWidth="1.5" />
+      <path d="M190,204 L196,190 H236 L240,204 Z" fill="#334155" />
+    </g>
+  ),
+  parts: [
+    P(61, 136, t("Needle", "Ասեղ", "Игла"), t("The eye of a machine needle is near the point, not at the top. It carries the upper thread down through the fabric.", "Մեքենայի ասեղի անցքը սուր ծայրի մոտ է, ոչ թե վերևում։ Այն վերին թելը տանում է գործվածքի միջով ներքև։", "Ушко машинной иглы у самого острия, а не наверху. Игла проводит верхнюю нить сквозь ткань.")),
+    P(92, 140, t("Presser foot", "Թաթիկ", "Лапка"), t("Presses the fabric flat against the feed dogs. Always lower it before you start sewing.", "Գործվածքը սեղմում է տեղափոխիչին։ Կարելուց առաջ միշտ իջեցրու այն։", "Прижимает ткань к рейке. Всегда опускай её, прежде чем начать шить.")),
+    P(36, 151, t("Feed dogs", "Տեղափոխիչ", "Зубчатая рейка"), t("Little metal teeth under the plate that move the fabric on after every stitch. Do not pull the fabric yourself; just guide it.", "Փոքրիկ մետաղե ատամներ թիթեղի տակ, որոնք ամեն կարից հետո գործվածքն առաջ են տանում։ Գործվածքը մի՛ քաշիր, միայն ուղղորդի՛ր։", "Маленькие металлические зубчики под пластиной продвигают ткань после каждого стежка. Не тяни ткань сам, только направляй.")),
+    P(76, 172, t("Bobbin", "Մասրա", "Шпулька"), t("A small reel under the plate holding the lower thread. Wind it before you start.", "Փոքրիկ կոճ թիթեղի տակ՝ ստորին թելով։ Փաթաթի՛ր այն նախքան սկսելը։", "Маленькая катушка под пластиной с нижней нитью. Намотай её до начала работы.")),
+    P(190, 14, t("Spool", "Կոճ", "Катушка"), t("The upper thread comes from here, passing through guides on its way to the needle.", "Վերին թելը գալիս է այստեղից՝ ասեղին հասնելու ճանապարհին անցնելով ուղղորդիչներով։", "Верхняя нить идёт отсюда и по пути к игле проходит через направители.")),
+    P(100, 64, t("Thread tension", "Թելի լարվածություն", "Натяжение нити"), t("Two discs squeeze the upper thread. Too loose and loops appear under the fabric; too tight and the seam puckers.", "Երկու սկավառակ սեղմում են վերին թելը։ Թույլ լինելու դեպքում գործվածքի տակ օղակներ են հայտնվում, իսկ շատ ձիգ լինելու դեպքում կարը կնճռոտվում է։", "Два диска зажимают верхнюю нить. Если слабо, под тканью появляются петли, если туго, шов стягивается.")),
+    P(298, 50, t("Handwheel", "Թափանիվ", "Маховое колесо"), t("Turns the whole mechanism. Always turn it towards you, to raise or lower the needle by hand.", "Պտտում է ամբողջ մեխանիզմը։ Միշտ պտտի՛ր դեպի քեզ, որ ասեղը ձեռքով բարձրացնես կամ իջեցնես։", "Вращает весь механизм. Поворачивай его всегда к себе, чтобы поднять или опустить иглу вручную.")),
+    P(253, 92, t("Stitch length dial", "Կարի երկարության կարգավորիչ", "Регулятор длины стежка"), t("Sets how far the feed dogs move the fabric: about 2.5 mm for an ordinary seam.", "Որոշում է, թե որքան է տեղափոխիչն առաջ տանում գործվածքը․ սովորական կարի համար՝ մոտ 2,5 մմ։", "Задаёт, насколько рейка продвигает ткань: для обычного шва около 2,5 мм.")),
+    P(214, 200, t("Pedal", "Ոտնակ", "Педаль"), t("Press gently to go slowly, harder to go faster. Take your foot off before touching the needle.", "Թեթև սեղմի՛ր՝ դանդաղ աշխատելու համար, ուժեղ՝ արագ։ Ասեղին դիպչելուց առաջ ոտքդ վերցրու ոտնակից։", "Нажимай слегка, чтобы шить медленно, сильнее — быстрее. Убери ногу, прежде чем трогать иглу.")),
+  ],
+};
+
+/* ---------------- grade 5: the healthy plate ---------------- */
+
+const sector = (cx: number, cy: number, r: number, a0: number, a1: number) => {
+  const p = (a: number) => `${cx + r * Math.cos((a * Math.PI) / 180)},${cy + r * Math.sin((a * Math.PI) / 180)}`;
+  return `M${cx},${cy} L${p(a0)} A${r},${r} 0 ${a1 - a0 > 180 ? 1 : 0} 1 ${p(a1)} Z`;
+};
+
+const plate: Diagram = {
+  title: t("The healthy plate", "Առողջ ափսե", "Тарелка здорового питания"),
+  h: 210,
+  draw: (lang) => (
+    <g>
+      <circle cx="116" cy="106" r="98" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="2" />
+      <path d={sector(116, 106, 86, 90, 270)} fill="#bbf7d0" stroke="#fff" strokeWidth="3" />
+      <path d={sector(116, 106, 86, 270, 360)} fill="#fde68a" stroke="#fff" strokeWidth="3" />
+      <path d={sector(116, 106, 86, 0, 90)} fill="#fecaca" stroke="#fff" strokeWidth="3" />
+      {/* vegetables and fruit */}
+      <circle cx="70" cy="62" r="11" fill="#dc2626" /><path d="M70,51 q2,-6 6,-7" stroke="#166534" strokeWidth="2" fill="none" />
+      <path d="M44,100 l30,-8 l-26,14 Z" fill="#f97316" /><path d="M74,92 l6,-4 M74,92 l7,0" stroke="#16a34a" strokeWidth="2" />
+      <g transform="translate(8 8)"><circle cx="82" cy="138" r="8" fill="#16a34a" /><circle cx="92" cy="134" r="8" fill="#15803d" /><circle cx="88" cy="144" r="8" fill="#22c55e" /><rect x="85" y="146" width="5" height="12" fill="#86efac" /></g>
+      <circle cx="56" cy="148" r="9" fill="#ef4444" /><circle cx="56" cy="148" r="3" fill="#fca5a5" />
+      {/* grains */}
+      <path d="M128,52 q0,-14 14,-14 h12 q14,0 14,14 v28 h-40 Z" fill="#d97706" stroke="#92400e" />
+      <path d="M133,56 q0,-10 9,-10 h12 q9,0 9,10 v20 h-30 Z" fill="#fcd34d" />
+      {Array.from({ length: 10 }, (_, j) => <ellipse key={j} cx={176 + (j % 4) * 6} cy={70 + Math.floor(j / 4) * 6} rx="2.6" ry="1.5" fill="#fff" stroke="#e5e7eb" strokeWidth="0.4" />)}
+      {/* protein */}
+      <ellipse cx="150" cy="140" rx="16" ry="12" fill="#fff" /><circle cx="152" cy="140" r="6" fill="#facc15" />
+      <path d="M170,118 q14,-10 28,0 l8,-6 v12 l-8,-6 q-14,10 -28,0 Z" fill="#fb923c" />
+      {Array.from({ length: 6 }, (_, j) => <ellipse key={j} cx={176 + (j % 3) * 7} cy={152 + Math.floor(j / 3) * 6} rx="3.2" ry="2.2" fill="#7c2d12" />)}
+      <Tx x={66} y={116} s={t("vegetables|and fruit", "բանջարեղեն|և միրգ", "овощи|и фрукты")} lang={lang} size={7.5} fill="#166534" />
+      <Tx x={160} y={98} s={t("grains", "հացահատիկ", "крупы")} lang={lang} size={7.5} fill="#92400e" />
+      <Tx x={168} y={178} s={t("protein", "սպիտակուց", "белки")} lang={lang} size={7.5} fill="#991b1b" />
+      {/* water */}
+      <path d="M238,36 h32 l-4,70 h-24 Z" fill="#e0f2fe" stroke="#7dd3fc" strokeWidth="1.5" />
+      <path d="M240,56 h28 l-2.6,50 h-22.8 Z" fill="#38bdf8" opacity="0.7" />
+      <Tx x={254} y={120} s={t("water", "ջուր", "вода")} lang={lang} size={8} fill="#0369a1" />
+      {/* less often */}
+      <rect x="226" y="138" width="88" height="66" rx="8" fill="#fff" stroke="#f87171" strokeDasharray="4 3" />
+      <rect x="240" y="150" width="20" height="36" rx="3" fill="#b91c1c" /><rect x="243" y="146" width="14" height="4" fill="#94a3b8" />
+      <path d="M270,186 l20,-30 l14,30 Z" fill="#f9a8d4" stroke="#be185d" /><circle cx="290" cy="154" r="3" fill="#dc2626" />
+      <Tx x={270} y={200} s={t("less often", "ավելի հազվադեպ", "пореже")} lang={lang} size={7.5} fill="#b91c1c" />
+    </g>
+  ),
+  parts: [
+    P(40, 70, t("Vegetables", "Բանջարեղեն", "Овощи"), t("Half the plate is vegetables and fruit, with more vegetables than fruit. They give vitamins, minerals and fibre.", "Ափսեի կեսը բանջարեղեն և միրգ է, ընդ որում՝ բանջարեղենն ավելի շատ։ Դրանք տալիս են վիտամիններ, հանքային նյութեր և բջջանյութ։", "Половина тарелки — овощи и фрукты, причём овощей больше. Они дают витамины, минералы и клетчатку.")),
+    P(70, 46, t("Fruit", "Միրգ", "Фрукты"), t("A whole apple is better than juice: it keeps its fibre and fills you up for longer.", "Ամբողջական խնձորն ավելի լավ է, քան հյութը․ դրանում պահպանվում է բջջանյութը, և կշտությունն ավելի երկար է տևում։", "Целое яблоко лучше сока: в нём сохраняется клетчатка, и сытость держится дольше.")),
+    P(150, 36, t("Grains", "Հացահատիկ", "Крупы и хлеб"), t("A quarter of the plate: bread, rice, buckwheat, pasta, potatoes. Wholegrain kinds give energy slowly, for longer.", "Ափսեի քառորդը՝ հաց, բրինձ, հնդկաձավար, մակարոն, կարտոֆիլ։ Ամբողջահատիկ տեսակներն էներգիա են տալիս դանդաղ և ավելի երկար։", "Четверть тарелки: хлеб, рис, гречка, макароны, картофель. Цельнозерновые дают энергию медленно и надолго.")),
+    P(186, 140, t("Protein", "Սպիտակուց", "Белки"), t("A quarter of the plate: eggs, fish, meat, cheese, beans, lentils. Protein builds muscles and repairs the body.", "Ափսեի քառորդը՝ ձու, ձուկ, միս, պանիր, լոբի, ոսպ։ Սպիտակուցը մկաններ է կառուցում և վերականգնում օրգանիզմը։", "Четверть тарелки: яйца, рыба, мясо, сыр, фасоль, чечевица. Белки строят мышцы и восстанавливают организм.")),
+    P(276, 50, t("Water", "Ջուր", "Вода"), t("The best drink with any meal. A school-age child needs about 6 to 8 glasses of liquid a day, more on hot days.", "Լավագույն ըմպելիքը ցանկացած ուտեստի հետ։ Դպրոցական տարիքի երեխային օրական մոտ 6-8 բաժակ հեղուկ է պետք, շոգ օրերին՝ ավելի։", "Лучший напиток к любой еде. Школьнику нужно около 6–8 стаканов жидкости в день, в жару больше.")),
+    P(306, 146, t("Less often", "Ավելի հազվադեպ", "Пореже"), t("Sweets, fizzy drinks, crisps and very salty or fatty food are for now and then, not every day.", "Քաղցրավենիքը, գազավորված ըմպելիքները, չիպսերը և շատ աղի կամ յուղոտ սնունդն երբեմն-երբեմն են, ոչ ամեն օր։", "Сладости, газировка, чипсы и очень солёная или жирная еда — иногда, а не каждый день.")),
+  ],
+};
+
+/* ---------------- grade 5: care symbols ---------------- */
+
+const Tub = ({ x, y }: { x: number; y: number }) => (
+  <g fill="none" stroke="#1e293b" strokeWidth="2">
+    <path d={`M${x},${y} L${x + 6},${y + 34} H${x + 50} L${x + 56},${y}`} />
+    <path d={`M${x + 2},${y + 9} q7,-6 13,0 t13,0 t13,0 t13,0`} />
+  </g>
+);
+const Cross = ({ x, y, w, h }: { x: number; y: number; w: number; h: number }) => (
+  <path d={`M${x},${y} L${x + w},${y + h} M${x + w},${y} L${x},${y + h}`} stroke="#dc2626" strokeWidth="2.4" />
+);
+const Iron = ({ x, y, dots }: { x: number; y: number; dots: number }) => (
+  <g>
+    <path d={`M${x},${y + 36} H${x + 56} V${y + 16} q0,-6 -6,-6 H${x + 22} Q${x + 6},${y + 12} ${x},${y + 36} Z`} fill="none" stroke="#1e293b" strokeWidth="2" />
+    <path d={`M${x + 24},${y + 10} L${x + 20},${y} H${x + 52} L${x + 54},${y + 10}`} fill="none" stroke="#1e293b" strokeWidth="2" />
+    {Array.from({ length: dots }, (_, j) => <circle key={j} cx={x + 36 - (dots - 1) * 5 + j * 10} cy={y + 25} r="2.6" fill="#1e293b" />)}
+  </g>
+);
+
+const carelabel: Diagram = {
+  title: t("Reading the care label", "Ինչպես կարդալ խնամքի պիտակը", "Читаем ярлык по уходу"),
+  h: 166,
+  draw: () => (
+    <g>
+      <rect x="0" y="0" width="320" height="166" fill="#f8fafc" />
+      {/* row 1: washing and bleaching */}
+      <Tub x={12} y={26} />
+      <text x="40" y="54" textAnchor="middle" fontSize="12" fontWeight="800" fill="#1e293b">40</text>
+      <Tub x={90} y={26} />
+      <path d="M108,56 v-16 q0,-4 3,-4 v-8 q0,-3 3,-3 q3,0 3,3 v-2 q0,-3 3,-3 q3,0 3,3 v2 q0,-3 3,-3 q3,0 3,3 v14 q4,-4 6,0 l-6,14 Z" fill="#fde68a" stroke="#1e293b" strokeWidth="1.2" />
+      <Tub x={168} y={26} />
+      <Cross x={170} y={22} w={52} h={40} />
+      <path d="M252,60 L276,22 L300,60 Z" fill="none" stroke="#1e293b" strokeWidth="2" />
+      <Cross x={256} y={24} w={40} h={36} />
+      {/* row 2: ironing, drying, dry cleaning */}
+      <Iron x={10} y={108} dots={1} />
+      <Iron x={88} y={108} dots={3} />
+      <rect x="176" y="106" width="40" height="40" fill="none" stroke="#1e293b" strokeWidth="2" />
+      <circle cx="196" cy="126" r="14" fill="none" stroke="#1e293b" strokeWidth="2" />
+      <circle cx="196" cy="126" r="2.6" fill="#1e293b" />
+      <circle cx="276" cy="126" r="20" fill="none" stroke="#1e293b" strokeWidth="2" />
+      <text x="276" y="131" textAnchor="middle" fontSize="14" fontWeight="800" fill="#1e293b">P</text>
+      <line x1="0" x2="320" y1="84" y2="84" stroke="#e2e8f0" />
+    </g>
+  ),
+  parts: [
+    P(40, 18, t("Machine wash 40°", "Մեքենայական լվացք 40°", "Стирка при 40°"), t("A washtub means it can be washed. The number is the hottest water allowed: 30, 40 or 60 degrees.", "Լվացքի տաշտը նշանակում է, որ կարելի է լվանալ։ Թիվը թույլատրելի ամենատաք ջրի ջերմաստիճանն է՝ 30, 40 կամ 60 աստիճան։", "Тазик значит, что вещь можно стирать. Число — самая горячая допустимая вода: 30, 40 или 60 градусов.")),
+    P(118, 18, t("Hand wash only", "Միայն ձեռքով լվացք", "Только ручная стирка"), t("A hand in the tub: wash gently by hand in lukewarm water, without rubbing or twisting.", "Ձեռք տաշտում․ լվա՛ զգույշ, ձեռքով, գաղջ ջրում՝ առանց շփելու կամ ոլորելու։", "Рука в тазике: стирай бережно руками в тёплой воде, не три и не выкручивай.")),
+    P(232, 30, t("Do not wash", "Չի կարելի լվանալ", "Не стирать"), t("A crossed-out tub: the item must not get wet at all. It can only be dry-cleaned.", "Խաչված տաշտ․ իրն ընդհանրապես չի կարելի թրջել։ Այն կարելի է միայն քիմմաքրել։", "Перечёркнутый тазик: вещь нельзя мочить вообще. Её можно только сдать в химчистку.")),
+    P(306, 64, t("No bleach", "Առանց սպիտակեցնողի", "Не отбеливать"), t("A triangle is about bleach. Crossed out, it means no bleach, or the colour will be ruined.", "Եռանկյունը սպիտակեցնողի մասին է։ Խաչված լինելու դեպքում՝ առանց սպիտակեցնողի, այլապես գույնը կփչանա։", "Треугольник — это об отбеливании. Перечёркнутый значит «не отбеливать», иначе цвет испортится.")),
+    P(40, 98, t("Cool iron", "Թույլ արդուկ", "Слабый нагрев утюга"), t("One dot: a cool iron, about 110 °C, for synthetics. A hot iron would melt them.", "Մեկ կետ․ թույլ արդուկ՝ մոտ 110 °C, սինթետիկայի համար։ Տաք արդուկը կհալեցներ դրանք։", "Одна точка: слабый нагрев, около 110 °C, для синтетики. Горячий утюг её бы расплавил.")),
+    P(118, 98, t("Hot iron", "Տաք արդուկ", "Сильный нагрев утюга"), t("Three dots: a hot iron, about 200 °C, for cotton and linen. Two dots, in between, are for wool and silk.", "Երեք կետ․ տաք արդուկ՝ մոտ 200 °C, բամբակի և վուշի համար։ Երկու կետը միջինն է՝ բրդի և մետաքսի համար։", "Три точки: сильный нагрев, около 200 °C, для хлопка и льна. Две точки, средний, — для шерсти и шёлка.")),
+    P(224, 104, t("Tumble dry", "Թմբուկային չորացում", "Сушка в барабане"), t("A circle in a square: it can go in a tumble dryer. One dot means a low heat.", "Շրջան քառակուսու մեջ․ կարելի է չորացնել չորացման մեքենայում։ Մեկ կետը նշանակում է ցածր ջերմություն։", "Круг в квадрате: можно сушить в сушильной машине. Одна точка — низкая температура.")),
+    P(302, 104, t("Dry clean", "Քիմմաքրում", "Химчистка"), t("A circle is for professional cleaning. The letter inside tells the cleaner which liquid to use.", "Շրջանը մասնագիտական մաքրման համար է։ Ներսի տառը քիմմաքրողին ասում է, թե որ հեղուկն օգտագործել։", "Круг — для профессиональной чистки. Буква внутри подсказывает химчистке, каким средством пользоваться.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog, workbench, wiretools, views, weaves3, sewmachine, plate, carelabel };

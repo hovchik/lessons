@@ -1174,4 +1174,106 @@ const pompom: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom };
+/* ---------------- grade 5: making a cutting board ---------------- */
+
+const PLANK = "#e9c48f", PLANK_L = "#c48a3f";
+const boardPath = (r: number) => `M${60 + r},50 H${260 - r} Q260,50 260,${50 + r} V${160 - r} Q260,160 ${260 - r},160 H${60 + r} Q60,160 60,${160 - r} V${50 + r} Q60,50 ${60 + r},50 Z`;
+
+const board: Mech = {
+  title: t("Making a cutting board", "Կտրատելու տախտակի պատրաստում", "Делаем разделочную доску"),
+  caps: [
+    t("Check the board for cracks, then mark out the outline, the rounded corners and the hole with a ruler, set square and template.", "Ստուգի՛ր տախտակը ճաքերի համար, հետո քանոնով, անկյունակով և կաղապարով գծանշի՛ր ուրվագիծը, կլորացված անկյունները և անցքը։", "Проверь доску на трещины, потом линейкой, угольником и шаблоном разметь контур, скруглённые углы и отверстие."),
+    t("Fix the board in the vice and saw along the outline.", "Տախտակն ամրացրու մամլակում և սղոցի՛ր ուրվագծով։", "Зажми доску в тисках и выпили по контуру."),
+    t("Mark the centre of the hole and drill it, wearing safety glasses.", "Նշի՛ր անցքի կենտրոնը և ծակի՛ր այն՝ պաշտպանիչ ակնոցով։", "Отметь центр отверстия и просверли его в защитных очках."),
+    t("Smooth the edges with a file, working towards the corners.", "Եզրերը հարթեցրու խարտոցով՝ շարժվելով դեպի անկյունները։", "Обработай края напильником, двигаясь к углам."),
+    t("Sand along the grain, first with coarse sandpaper, then with fine. Brush the dust away.", "Հղկի՛ր շերտերի ուղղությամբ՝ սկզբում խոշորահատիկ, հետո մանրահատիկ հղկաթղթով։ Փոշին մաքրի՛ր խոզանակով։", "Шлифуй вдоль волокон сначала крупной шкуркой, потом мелкой. Смети пыль щёткой."),
+    t("Rub in a thin layer of food-safe oil, wait a few hours and wipe off the rest. No varnish or paint on a board that touches food!", "Քսի՛ր սննդի համար անվտանգ յուղի բարակ շերտ, մի քանի ժամ սպասի՛ր և սրբի՛ր մնացածը։ Սննդի հետ շփվող տախտակին՝ ոչ լաք, ոչ ներկ։", "Вотри тонкий слой пищевого масла, подожди несколько часов и вытри остаток. Никакого лака и краски на доске для еды!"),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const r = i === 0 ? 0 : 16;
+    const grain = Array.from({ length: 8 }, (_, j) => <path key={j} d={`M60,${60 + j * 13} C120,${54 + j * 13} 200,${68 + j * 13} 260,${60 + j * 13}`} fill="none" stroke={PLANK_L} strokeWidth="0.8" />);
+    const oiled = i === 5 ? k : 0;
+    return (
+      <g>
+        {i === 0 ? <rect x="40" y="36" width="240" height="138" fill={PLANK} stroke={PLANK_L} /> : null}
+        {i === 1 ? <rect x="40" y="36" width="240" height="138" fill={PLANK} stroke={PLANK_L} opacity={1 - k} /> : null}
+        <path d={boardPath(r)} fill={oiled > 0 ? `rgb(${233 - 40 * oiled},${196 - 50 * oiled},${143 - 50 * oiled})` : PLANK} stroke={i >= 3 ? "#92400e" : PLANK_L} strokeWidth={i >= 3 ? 2 : 1} />
+        {grain}
+        {i === 0 ? <path d={boardPath(16)} fill="none" stroke="#1e293b" strokeWidth="1.5" strokeDasharray="5 3" pathLength={1} style={{ strokeDasharray: `${k} 1` }} /> : null}
+        {i === 0 ? <g opacity={k}><line x1="234" x2="246" y1="105" y2="105" stroke="#1e293b" /><line x1="240" x2="240" y1="99" y2="111" stroke="#1e293b" /></g> : null}
+        {i >= 2 ? <circle cx="240" cy="105" r={i === 2 ? 7 * k : 7} fill="#fff" stroke="#92400e" strokeWidth="1.5" /> : null}
+        {i === 1 ? <g transform={`translate(${lerp(70, 250, k)} 40) rotate(-8)`}><path d="M0,0 h80 l6,-14 h-86 Z" fill="#cbd5e1" stroke="#475569" />{Array.from({ length: 14 }, (_, j) => <path key={j} d={`M${j * 6},0 l3,4 l3,-4`} fill="#475569" />)}<rect x="84" y="-20" width="26" height="22" rx="6" fill="#b45309" /></g> : null}
+        {i === 2 ? <g transform={`translate(240 ${lerp(30, 96, k)})`}><rect x="-3" y="-60" width="6" height="60" fill="#94a3b8" /><path d="M-3,0 l3,8 l3,-8" fill="#64748b" /><rect x="-16" y="-80" width="32" height="20" rx="4" fill="#ef4444" /></g> : null}
+        {i === 3 ? <g transform={`translate(${lerp(80, 240, k)} 160) rotate(-6)`}><rect x="-40" y="-5" width="80" height="10" rx="2" fill="#64748b" />{Array.from({ length: 16 }, (_, j) => <line key={j} x1={-38 + j * 5} x2={-36 + j * 5} y1="-5" y2="5" stroke="#334155" />)}<rect x="40" y="-6" width="26" height="12" rx="5" fill="#b45309" /></g> : null}
+        {i === 4 ? <g transform={`translate(${160 + 70 * Math.sin(p * Math.PI * 4)} 104)`}><rect x="-26" y="-16" width="52" height="32" rx="3" fill={k < 0.5 ? "#a8a29e" : "#e7e5e4"} stroke="#57534e" /><Tx x={0} y={4} s={k < 0.5 ? t("coarse", "խոշոր", "крупная") : t("fine", "մանր", "мелкая")} lang={lang} size={9} fill="#292524" /></g> : null}
+        {i === 5 ? <g transform={`translate(${lerp(90, 230, k)} ${100 + 20 * Math.sin(k * 12)})`}><path d="M-22,-12 q22,-10 44,0 q4,14 -2,24 q-20,6 -40,0 q-6,-12 -2,-24 Z" fill="#fef3c7" stroke="#d97706" /></g> : null}
+        {i === 5 && k > 0.95 ? <Tx x={160} y={200} s={t("Done!", "Պատրաստ է։", "Готово!")} lang={lang} size={12} fill="#16a34a" /> : null}
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 5: how a sewing machine makes a lockstitch ---------------- */
+
+const UP = "#dc2626", LOW = "#2563eb";
+
+const lockstitch: Mech = {
+  title: t("How a sewing machine locks a stitch", "Ինչպես է կարի մեքենան կապում կարը", "Как швейная машина делает челночный стежок"),
+  hint: t("A cut through the fabric: the red upper thread comes from the spool, the blue lower thread from the bobbin.", "Կտրվածք գործվածքի միջով․ կարմիր վերին թելը գալիս է կոճից, կապույտ ստորինը՝ մասրայից։", "Разрез через ткань: красная верхняя нить идёт с катушки, синяя нижняя — со шпульки."),
+  caps: [
+    t("The needle goes down through the fabric, carrying the upper thread.", "Ասեղն իջնում է գործվածքի միջով՝ իր հետ տանելով վերին թելը։", "Игла опускается сквозь ткань и несёт верхнюю нить."),
+    t("As the needle starts to rise, the thread makes a little loop under the fabric, and the turning hook catches it.", "Երբ ասեղը սկսում է բարձրանալ, թելը գործվածքի տակ փոքրիկ օղակ է կազմում, և պտտվող կեռիկը բռնում է այն։", "Когда игла начинает подниматься, нить образует под тканью маленькую петлю, и вращающийся крючок подхватывает её."),
+    t("The hook carries the loop right round the bobbin, so the loop wraps the lower thread.", "Կեռիկն օղակը տանում է մասրայի շուրջը, և օղակը փաթաթվում է ստորին թելին։", "Крючок обводит петлю вокруг шпульки, и петля охватывает нижнюю нить."),
+    t("The upper thread is pulled tight. The two threads lock together in the middle of the fabric.", "Վերին թելը ձգվում է։ Երկու թելերը կապվում են իրար գործվածքի մեջտեղում։", "Верхнюю нить затягивают. Две нити переплетаются в середине ткани."),
+    t("The feed dogs move the fabric on by one stitch, and it all happens again, hundreds of times a minute.", "Տեղափոխիչը գործվածքն առաջ է տանում մեկ կարի չափով, և ամեն ինչ կրկնվում է՝ րոպեում հարյուրավոր անգամներ։", "Зубчатая рейка продвигает ткань на один стежок, и всё повторяется сотни раз в минуту."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const FY = 96, BX = 160, BY = 160;
+    const tipY = i === 0 ? lerp(40, 140, k) : i === 1 ? lerp(140, 128, k) : i === 2 ? lerp(128, 60, k) : 40;
+    const shift = i === 4 ? -40 * k : 0;
+    const hookA = i === 1 ? lerp(-150, -60, k) : i === 2 ? lerp(-60, 260, k) : -150;
+    const hx = BX + 26 * Math.cos((hookA * Math.PI) / 180), hy = BY + 26 * Math.sin((hookA * Math.PI) / 180);
+    const done = i === 4 ? 3 : i === 3 ? 2 : 2;
+    return (
+      <g>
+        {/* fabric */}
+        <rect x="0" y={FY} width="320" height="16" fill="#fde68a" opacity="0.8" />
+        {/* earlier stitches */}
+        <g transform={`translate(${shift} 0)`}>
+          <line x1={BX - done * 40} x2={i >= 3 ? BX : BX - 40} y1={FY - 1} y2={FY - 1} stroke={UP} strokeWidth="2.5" />
+          <line x1={BX - done * 40} x2={i >= 3 ? BX : BX - 40} y1={FY + 17} y2={FY + 17} stroke={LOW} strokeWidth="2.5" />
+          {Array.from({ length: done + (i >= 3 ? 1 : 0) }, (_, j) => {
+            const x = BX - (done - j) * 40;
+            return <g key={j}><line x1={x} x2={x} y1={FY - 1} y2={FY + 8} stroke={UP} strokeWidth="2.5" /><line x1={x} x2={x} y1={FY + 8} y2={FY + 17} stroke={LOW} strokeWidth="2.5" /><circle cx={x} cy={FY + 8} r="2.5" fill="#7c3aed" /></g>;
+          })}
+          {i === 3 ? <circle cx={BX} cy={FY + 8} r={6 * (1 - k) + 2.5} fill="none" stroke="#7c3aed" strokeWidth="1.5" /> : null}
+        </g>
+        {/* bobbin and hook */}
+        <circle cx={BX} cy={BY} r="30" fill="none" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3 3" />
+        <circle cx={BX} cy={BY} r="14" fill="#bfdbfe" stroke={LOW} strokeWidth="2" />
+        <circle cx={BX} cy={BY} r="4" fill="#1e3a8a" />
+        <path d={`M${BX},${BY - 14} Q${BX - 20},${FY + 30} ${BX - 30},${FY + 17}`} fill="none" stroke={LOW} strokeWidth="2" />
+        <path d={`M${hx},${hy} l${8 * Math.cos(((hookA + 90) * Math.PI) / 180)},${8 * Math.sin(((hookA + 90) * Math.PI) / 180)}`} stroke="#334155" strokeWidth="4" strokeLinecap="round" />
+        <circle cx={hx} cy={hy} r="3.5" fill="#334155" />
+        {/* the loop of upper thread */}
+        {i === 1 || i === 2 ? (
+          <path d={`M${BX - 2},${FY + 8} Q${(BX + hx) / 2 - 10},${(FY + hy) / 2 + 20} ${hx},${hy} Q${(BX + hx) / 2 + 14},${(FY + hy) / 2 + 20} ${BX + 2},${FY + 8}`} fill="none" stroke={UP} strokeWidth="2" />
+        ) : null}
+        {/* needle and upper thread */}
+        <g transform={`translate(${BX} 0)`}>
+          <rect x="-3" y={tipY - 80} width="6" height="76" fill="#cbd5e1" stroke="#64748b" strokeWidth="0.8" />
+          <path d={`M-3,${tipY - 4} L0,${tipY} L3,${tipY - 4} Z`} fill="#64748b" />
+          <ellipse cx="0" cy={tipY - 10} rx="1.5" ry="3" fill="#fff" stroke="#64748b" strokeWidth="0.6" />
+          <line x1="2" x2="2" y1="0" y2={tipY - 10} stroke={UP} strokeWidth="2" />
+        </g>
+        {i === 4 ? <g>{[0, 1, 2, 3].map((j) => <path key={j} d={`M${100 + j * 30 - 30 * k},${FY + 24} l6,-8 l6,8`} fill="#475569" />)}<Arrow d="M220,140 h-50" c="#475569" /></g> : null}
+        <Tx x={300} y={FY - 6} s={t("fabric", "գործվածք", "ткань")} lang={lang} size={8} fill="#a16207" anchor="end" />
+        <Tx x={BX + 34} y={BY + 34} s={t("bobbin", "մասրա", "шпулька")} lang={lang} size={8} fill={LOW} anchor="start" />
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom, board, lockstitch };
