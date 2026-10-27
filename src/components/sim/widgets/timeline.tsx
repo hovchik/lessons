@@ -74,7 +74,7 @@ export default function Timeline({ spec, lang }: SimProps) {
   const [now, setNow] = useState(2026);
   useEffect(() => setNow(new Date().getFullYear()), []);
   if (!set) return <pre className="art-unknown">timeline {spec.opts.set}</pre>;
-  const ev = set.events;
+  const ev = [...set.events].sort((a, b) => a.y - b.y);
   const ys = ev.flatMap((e) => [e.y, e.to ?? e.y]).concat((set.eras ?? []).flatMap((e) => [e.from, e.to]));
   const lo = Math.min(...ys), hi = Math.max(...ys);
   const pad = Math.max(1, (hi - lo) * 0.04);
