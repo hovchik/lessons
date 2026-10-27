@@ -78,7 +78,7 @@ const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
 
 /** Column counts of the forms mode=compare tables (see COLS in widgets/forms.tsx). */
-const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2, norm: 2, sound: 2, hardsoft: 2, gender: 3, number: 2, gender4: 4, check: 2, tenses: 3, aspect: 2, opposite: 2, where: 2, signs: 2, animate: 2, together: 2, precise: 2, polite: 2, old: 2, decl3: 3, iya: 2, animacc: 2, withprep: 2, conj: 2, tsya: 2, dash: 2, reported: 2, stress: 2, figurative: 2, homonym: 2, ao: 2, zs: 2, oe: 2, iy: 2, short: 2, softsign: 2, proverb: 2, prepri: 2, nnn: 2, degrees: 3, moods: 3, transitive: 2, chik: 2, neni: 2, hyphen: 2, native: 2, idiom: 2, numkind: 3, adjclass: 3, itete: 2, ova: 2, skaz: 2 };
+const COMPARE_COLS: Record<string, number> = { stages: 4, ew: 2, spelling: 2, ie: 4, root: 2, modern: 2, dialect: 2, loan: 2, norm: 2, sound: 2, hardsoft: 2, gender: 3, number: 2, gender4: 4, check: 2, tenses: 3, aspect: 2, opposite: 2, where: 2, signs: 2, animate: 2, together: 2, precise: 2, polite: 2, old: 2, decl3: 3, iya: 2, animacc: 2, withprep: 2, conj: 2, tsya: 2, dash: 2, reported: 2, stress: 2, figurative: 2, homonym: 2, ao: 2, zs: 2, oe: 2, iy: 2, short: 2, softsign: 2, proverb: 2, prepri: 2, nnn: 2, degrees: 3, moods: 3, transitive: 2, chik: 2, neni: 2, hyphen: 2, native: 2, idiom: 2, numkind: 3, adjclass: 3, itete: 2, ova: 2, skaz: 2, partadj: 2, voice: 2, conjclass: 2, ruhyen: 3 };
 
 /** Problems with one sim spec (the text inside the fence). */
 export function checkSimSpec(source: string): string[] {
