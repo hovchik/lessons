@@ -255,13 +255,13 @@ export const grade3: VisualMap[number] = {
     closer(
       `**He, she, it get an «s».** Look at the table: only the third line changes, **has** instead of have. It is the same little «s» you will meet in «he plays», «she reads». Remember it now and the present simple in grade 4 will be easy.
 
-**One «'s», two meanings.** «He**'s** got a kite» means he **has** got, but «He**'s** nine» means he **is**. How to tell? If **got** comes next, it is «has». Read each sentence twice, once with «has» and once with «is», and keep the one that makes sense.`,
+**One «'s», two meanings.** «**He's** got a kite» means he **has** got, but «**He's** nine» means he **is**. How to tell? If **got** comes next, it is «has». Read each sentence twice, once with «has» and once with «is», and keep the one that makes sense.`,
       `**He, she, it-ը ստանում են «s»։** Նայիր աղյուսակին․ փոխվում է միայն երրորդ տողը՝ have-ի փոխարեն **has**։ Դա նույն փոքրիկ «s»-ն է, որին կհանդիպես «he plays», «she reads» ձևերում։ Հիշիր այն հիմա, և 4-րդ դասարանի present simple-ը հեշտ կլինի։
 
-**Մեկ «'s»՝ երկու իմաստ։** «He**'s** got a kite»-ը նշանակում է he **has** got, իսկ «He**'s** nine»-ը՝ he **is**։ Ինչպե՞ս տարբերել։ Եթե հետո գալիս է **got**, ուրեմն «has» է։ Ամեն նախադասություն կարդա երկու անգամ՝ մեկ «has»-ով, մեկ «is»-ով, և պահիր այն, որն իմաստ ունի։`,
+**Մեկ «'s»՝ երկու իմաստ։** «**He's** got a kite»-ը նշանակում է he **has** got, իսկ «**He's** nine»-ը՝ he **is**։ Ինչպե՞ս տարբերել։ Եթե հետո գալիս է **got**, ուրեմն «has» է։ Ամեն նախադասություն կարդա երկու անգամ՝ մեկ «has»-ով, մեկ «is»-ով, և պահիր այն, որն իմաստ ունի։`,
       `**He, she, it получают «s».** Посмотри на таблицу: меняется только третья строка — **has** вместо have. Это та же маленькая «s», которую ты встретишь в «he plays», «she reads». Запомни её сейчас — и present simple в 4 классе будет лёгким.
 
-**Одно «'s» — два значения.** «He**'s** got a kite» значит he **has** got, а «He**'s** nine» — he **is**. Как различить? Если дальше идёт **got**, это «has». Прочитай каждое предложение дважды — с «has» и с «is» — и оставь то, что имеет смысл.`,
+**Одно «'s» — два значения.** «**He's** got a kite» значит he **has** got, а «**He's** nine» — he **is**. Как различить? Если дальше идёт **got**, это «has». Прочитай каждое предложение дважды — с «has» и с «is» — и оставь то, что имеет смысл.`,
     ),
     ask(1, {
       en: ["What does «she's» mean in «She's got a brother»?", ["she has", "she is", "she was"], "Got comes next, so 's means has."],

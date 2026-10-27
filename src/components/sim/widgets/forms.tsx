@@ -144,6 +144,11 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   nounadj: [t("Noun", "Գոյական", "Существительное"), t("Adjective: -y", "Ածական՝ -y", "Прилагательное: -y")],
   playgodo: [t("play + ball games, music", "play + գնդակով խաղեր, երաժշտություն", "play + игры с мячом, музыка"), t("go + -ing", "go + -ing", "go + -ing"), t("do + other sports", "do + այլ մարզաձևեր", "do + другие виды спорта")],
   named: [t("Word", "Բառ", "Слово"), t("Named after", "Անվանվել է", "Назван в честь")],
+  isgot: [t("is … (height, age)", "is … (հասակ, տարիք)", "is … (рост, возраст)"), t("has got … (hair, eyes)", "has got … (մազեր, աչքեր)", "has got … (волосы, глаза)")],
+  freq: [t("Word", "Բառ", "Слово"), t("How often", "Որքան հաճախ", "Как часто")],
+  feel: [t("Feeling", "Զգացում", "Чувство"), t("Sentence", "Նախադասություն", "Предложение")],
+  muchmany: [t("How many …? (you can count)", "How many …? (հաշվվող)", "How many …? (можно посчитать)"), t("How much …? (you can't count)", "How much …? (չհաշվվող)", "How much …? (нельзя посчитать)")],
+  edsound: [t("-ed = [t]", "-ed = [t]", "-ed = [t]"), t("-ed = [d]", "-ed = [d]", "-ed = [d]"), t("-ed = [ɪd]", "-ed = [ɪd]", "-ed = [ɪd]")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
