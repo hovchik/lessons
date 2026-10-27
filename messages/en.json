@@ -16,7 +16,8 @@
     "login": "Log in",
     "signup": "Sign up",
     "logout": "Log out",
-    "account": "Account"
+    "account": "Account",
+    "review": "Review"
   },
   "home": {
     "heroTitle": "Learn every subject, from grade 1 to 12",
@@ -224,5 +225,43 @@
     "quizResult": "Quiz: {score} of {total}",
     "exam": "Exam",
     "continue": "Continue"
+  },
+  "review": {
+    "title": "Daily Review",
+    "intro": "A few minutes a day keeps what you learned. Questions come back just before you would forget them.",
+    "ready": "{n, plural, one {# question ready} other {# questions ready}}",
+    "start": "Start review",
+    "caughtUp": "All done for today",
+    "caughtUpText": "Every question is reviewed. New ones arrive tomorrow; meanwhile you can learn a new lesson.",
+    "daysThisWeek": "{n, plural, one {# day} other {# days}} of the last 7",
+    "mistakesCount": "{n, plural, one {# question} other {# questions}} in the mistake notebook",
+    "practise": "Practise my mistakes",
+    "practiseTitle": "Fix my mistakes",
+    "practiseIntro": "Questions you got wrong last time. Answer one correctly and it leaves the notebook.",
+    "emptyTitle": "Nothing to review yet",
+    "emptyText": "Take a lesson quiz or an exam: its questions come back here at the right moment.",
+    "noMistakesTitle": "The mistake notebook is empty",
+    "noMistakesText": "Every mistake is fixed. Questions you answer wrongly will show up here.",
+    "learnSomethingNew": "Learn a new lesson",
+    "progressLabel": "{n} / {total}",
+    "next": "Next question",
+    "finish": "See results",
+    "backIn": "{n, plural, =1 {Back tomorrow} other {Back in # days}}",
+    "notSaved": "Not saved: check your connection",
+    "summaryTitle": "You remembered {score} of {total}",
+    "summaryGood": "Great work! These questions will come back later.",
+    "summaryOk": "Good. The ones you missed come back tomorrow.",
+    "summaryLow": "That is what review is for. The ones you missed come back tomorrow, and you can reread the lesson.",
+    "reviewMore": "Review more",
+    "notebook": "Mistake notebook",
+    "notebookIntro": "Questions you got wrong last time, with the right answer and why. They come back in the Daily Review until you get them right.",
+    "backToProgress": "My progress",
+    "missedTitle": "Have another look",
+    "rightAnswer": "Right answer",
+    "yourAnswer": "Your answer",
+    "readLesson": "Read the lesson",
+    "openExam": "Open the exam",
+    "correct": "Correct!",
+    "incorrect": "Not quite"
   }
 }

@@ -3,10 +3,12 @@ import { ArrowRight, BookOpenCheck, History, Sparkles, Trophy } from "lucide-rea
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { LogoutLink } from "@/components/site/logout-link";
+import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { getRecentAttempts, getUserCourseSummaries, getUserTotals } from "@/server/progress";
+import { getReviewSummaryCached } from "@/server/review";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
 export const dynamic = "force-dynamic";
@@ -23,12 +25,13 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
   const user = await getCurrentUser();
   if (!user) redirect({ href: "/login?next=/progress", locale });
   const u = user!;
-  const [t, l, totals, courses, recent] = await Promise.all([
+  const [t, l, totals, courses, recent, review] = await Promise.all([
     getTranslations(),
     getLocale(),
     getUserTotals(u.id),
     getUserCourseSummaries(u.id),
     getRecentAttempts(u.id, 8),
+    getReviewSummaryCached(u.id),
   ]);
   await touchLastSeen(u.id);
 
@@ -71,6 +74,8 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
           ))}
         </dl>
       </header>
+
+      <ReviewCard summary={review} />
 
       {courses.length === 0 ? (
         <section className="clay p-6 text-center sm:p-10">

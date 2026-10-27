@@ -2,10 +2,13 @@ import { ArrowRight, Landmark, Sparkles } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { GradePicker } from "@/components/site/grade-picker";
+import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { getStats, getSubjectGradeRanges, getSubjects } from "@/server/queries";
+import { getReviewSummaryCached } from "@/server/review";
+import { getCurrentUser } from "@/server/user-auth";
 
 export const dynamic = "force-dynamic";
 
@@ -14,11 +17,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations();
   const l = await getLocale();
-  const [subjects, rangeRows, stats] = await Promise.all([getSubjects(), getSubjectGradeRanges(), getStats()]);
+  const [subjects, rangeRows, stats, user] = await Promise.all([getSubjects(), getSubjectGradeRanges(), getStats(), getCurrentUser()]);
+  const review = user ? await getReviewSummaryCached(user.id) : null;
   const ranges = new Map(rangeRows.map((r) => [r.subjectId, r]));
 
   return (
     <div className="space-y-10 sm:space-y-14">
+      {review && review.ready > 0 && <ReviewCard summary={review} />}
       <section className="clay relative overflow-hidden px-5 py-8 sm:px-12 sm:py-16">
         <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-secondary/30 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-24 -left-16 size-72 rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />

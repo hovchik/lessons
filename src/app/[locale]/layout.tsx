@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
-import { MobileNav } from "@/components/site/mobile-nav";
+import { SiteMobileNav } from "@/components/site/site-mobile-nav";
 import "../globals.css";
 
 export const dynamic = "force-dynamic";
@@ -72,7 +72,7 @@ export default async function LocaleLayout({
           <SiteFooter />
           {/* Space for the fixed bottom tab bar on phones. */}
           <div className="pb-safe h-16 sm:hidden" aria-hidden="true" />
-          <MobileNav />
+          <SiteMobileNav />
         </NextIntlClientProvider>
       </body>
     </html>
