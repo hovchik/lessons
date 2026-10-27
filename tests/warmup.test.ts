@@ -88,6 +88,16 @@ test("a warm-up draws from the nearest earlier published lessons, one question e
   assert.deepEqual(await m.warmup.getWarmup("m1", null), [], "the first lesson has nothing before it");
 });
 
+test("drafts and lessons without a quiz do not use up the nearest lessons", async () => {
+  const { schema } = m.client;
+  const db = await m.client.getDb();
+  for (let k = 0; k < 6; k++)
+    await db.insert(schema.lessons).values({ id: `m4-gap${k}`, unitId: "math-3-u2", courseId: "math-3", position: 10 + k, slug: `gap${k}`, title: tx("gap"), objectives: { en: [], hy: [], ru: [] }, content: tx("Body"), quiz: k % 2 ? [] : quiz, status: k % 2 ? "published" : "draft" }).run();
+  await db.insert(schema.lessons).values({ id: "m5", unitId: "math-3-u2", courseId: "math-3", position: 20, slug: "m5", title: tx("m5"), objectives: { en: [], hy: [], ru: [] }, content: tx("Body"), quiz, status: "published" }).run();
+  const items = await m.warmup.getWarmup("m5", null);
+  assert.deepEqual(items.map((i) => i.itemId.split("#")[0]), ["quiz:m4", "quiz:m2"]);
+});
+
 test("prerequisite skills from another course feed the warm-up", async () => {
   const items = await m.warmup.getWarmup("p1", null);
   assert.deepEqual(items.map((i) => i.itemId.split("#")[0]).sort(), ["quiz:m1", "quiz:m2"]);

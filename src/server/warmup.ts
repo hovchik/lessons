@@ -38,6 +38,8 @@ async function earlierLessons(lessonId: string): Promise<Source[]> {
     .all();
   const before = course
     .filter((c) => c.unitPosition < here.unitPosition || (c.unitPosition === here.unitPosition && c.position < here.position))
+    // Drafts and lessons without a quiz must not use up the nearest few.
+    .filter((c) => c.status === "published" && c.quiz.length > 0)
     .reverse()
     .slice(0, NEAREST);
 
