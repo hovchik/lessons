@@ -917,4 +917,99 @@ const sonata: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall, marks, fugue, harpsi, sonata };
+/* ---------------- grade 7: a rock band on stage ---------------- */
+
+const band: Diagram = {
+  title: t("A rock band on stage", "Ռոք խումբը բեմում", "Рок-группа на сцене"),
+  h: 210,
+  draw: (lang) => (
+    <g>
+      <rect x="4" y="4" width="312" height="150" rx="6" fill="#1e1b4b" />
+      <path d="M4,154 H316 L306,200 H14 Z" fill="#78350f" />
+      {[60, 160, 260].map((x) => <path key={x} d={`M${x},4 L${x - 34},150 H${x + 34} Z`} fill="#fde68a" opacity="0.09" />)}
+      {/* amplifiers */}
+      {[[18, 92], [262, 92]].map(([x, y]) => (
+        <g key={x}>
+          <rect x={x} y={y} width="40" height="58" rx="3" fill="#111827" stroke="#4b5563" />
+          {[0, 1].map((k) => <circle key={k} cx={x + 20} cy={y + 17 + k * 25} r="10" fill="#374151" stroke="#6b7280" />)}
+        </g>
+      ))}
+      {/* drum kit */}
+      <circle cx="160" cy="118" r="26" fill="#f8fafc" stroke="#dc2626" strokeWidth="4" />
+      <circle cx="160" cy="118" r="8" fill="#dc2626" opacity="0.4" />
+      <ellipse cx="128" cy="100" rx="13" ry="5" fill="#e5e7eb" stroke="#dc2626" strokeWidth="2" />
+      <ellipse cx="192" cy="100" rx="13" ry="5" fill="#e5e7eb" stroke="#dc2626" strokeWidth="2" />
+      <ellipse cx="106" cy="122" rx="14" ry="5" fill="#e5e7eb" stroke="#dc2626" strokeWidth="2" />
+      <path d="M118,62 L94,58 M202,62 L226,58" stroke="#9ca3af" />
+      <ellipse cx="104" cy="58" rx="20" ry="4" fill="#facc15" />
+      <ellipse cx="216" cy="58" rx="20" ry="4" fill="#facc15" />
+      <path d="M104,62 V150 M216,62 V150" stroke="#9ca3af" strokeWidth="1.2" />
+      {/* electric guitar */}
+      <g transform="rotate(-28 78 128)">
+        <path d="M56,120 c-10,-8 -6,-22 8,-20 c6,1 8,6 14,6 c6,0 10,-6 16,-4 c10,4 8,22 -2,26 c-8,4 -12,-2 -18,-2 c-6,0 -10,4 -18,-6 Z" fill="#dc2626" stroke="#7f1d1d" />
+        <rect x="92" y="108" width="54" height="5" fill="#92400e" />
+        <rect x="146" y="105" width="12" height="11" rx="2" fill="#451a03" />
+        <rect x="68" y="108" width="4" height="10" fill="#f8fafc" />
+        <rect x="76" y="108" width="4" height="10" fill="#f8fafc" />
+      </g>
+      {/* bass guitar, standing upright */}
+      <rect x="238" y="58" width="6" height="64" fill="#92400e" />
+      <rect x="235" y="48" width="12" height="12" rx="2" fill="#451a03" />
+      <path d="M241,116 c-14,-4 -20,10 -12,18 c-6,8 0,20 12,18 c12,2 18,-10 12,-18 c8,-8 2,-22 -12,-18 Z" fill="#2563eb" stroke="#1e3a8a" />
+      <rect x="236" y="128" width="10" height="4" fill="#f8fafc" />
+      {/* keyboard */}
+      <rect x="236" y="164" width="72" height="12" rx="2" fill="#111827" />
+      {Array.from({ length: 12 }, (_, k) => <rect key={k} x={238 + k * 5.8} y="166" width="5" height="8" fill="#f8fafc" />)}
+      <path d="M244,176 l-6,20 M300,176 l6,20" stroke="#6b7280" strokeWidth="2" />
+      {/* microphone */}
+      <path d="M160,200 V166" stroke="#9ca3af" strokeWidth="2" />
+      <path d="M150,200 h20" stroke="#9ca3af" strokeWidth="2" />
+      <rect x="155" y="152" width="10" height="16" rx="5" fill="#4b5563" />
+      <Tx x={36} y={194} s={t("cables and amplifiers make it loud", "մալուխներն ու ուժեղարարները ձայնն ուժեղացնում են", "кабели и усилители делают звук громким")} lang={lang} size={6} anchor="start" fill="#fde68a" w={600} />
+    </g>
+  ),
+  parts: [
+    P(84, 108, t("Electric guitar", "Էլեկտրական կիթառ", "Электрогитара"), t("Its solid body barely sounds on its own. Magnets under the strings, the pickups, turn the vibrations into an electric signal for the amplifier.", "Նրա ամուր իրանն ինքնուրույն գրեթե չի հնչում։ Լարերի տակի մագնիսները՝ ձայնառիչները, թրթռումները վերածում են էլեկտրական ազդանշանի ուժեղարարի համար։", "Цельный корпус сам почти не звучит. Магниты под струнами — звукосниматели — превращают колебания в электрический сигнал для усилителя.")),
+    P(222, 90, t("Bass guitar", "Բաս կիթառ", "Бас-гитара"), t("Usually four thick strings, tuned an octave below the lowest guitar strings. It locks the drums and the chords together.", "Սովորաբար չորս հաստ լար՝ լարված կիթառի ամենացածր լարերից մեկ օկտավա ցածր։ Այն միացնում է հարվածայիններն ու ակորդները։", "Обычно четыре толстые струны, на октаву ниже самых низких гитарных. Бас скрепляет барабаны и аккорды.")),
+    P(160, 84, t("Drum kit", "Հարվածային կայանք", "Ударная установка"), t("One drummer plays it all with hands and feet: the bass drum with a pedal, the snare and toms with sticks, and cymbals for crashes and the steady beat.", "Մեկ թմբկահար նվագում է ամբողջը ձեռքերով և ոտքերով․ մեծ թմբուկը՝ ոտնակով, փոքր թմբուկն ու թոմերը՝ փայտիկներով, իսկ ծնծղաները՝ հարվածների և հավասար զարկի համար։", "Один барабанщик играет на всём руками и ногами: большой барабан — педалью, малый и томы — палочками, а тарелки дают удары и ровный ритм.")),
+    P(292, 160, t("Keyboards", "Ստեղնաշարային", "Клавишные"), t("A synthesiser can sound like a piano, an organ, strings or completely new electronic sounds.", "Սինթեզատորը կարող է հնչել դաշնամուրի, երգեհոնի, լարայինների կամ բոլորովին նոր էլեկտրոնային հնչյունների պես։", "Синтезатор может звучать как рояль, орган, струнные или совершенно новые электронные звуки.")),
+    P(176, 160, t("Vocals", "Վոկալ", "Вокал"), t("The singer usually stands at the front. The microphone turns the voice into a signal so it can be heard over the band.", "Երգիչը սովորաբար կանգնում է առջևում։ Խոսափողը ձայնը վերածում է ազդանշանի, որպեսզի այն լսվի խմբի վրայով։", "Певец обычно стоит впереди. Микрофон превращает голос в сигнал, чтобы его было слышно поверх группы.")),
+    P(38, 86, t("Amplifier", "Ուժեղարար", "Усилитель"), t("A box with a loudspeaker that makes the guitar's weak signal loud. Turned up high, it can also distort the sound on purpose for a rough rock tone.", "Բարձրախոսով արկղ, որը կիթառի թույլ ազդանշանն ուժեղացնում է։ Ուժեղ միացնելիս այն կարող է նաև դիտմամբ աղավաղել ձայնը՝ ռոքի կոպիտ հնչողության համար։", "Ящик с динамиком, который делает слабый сигнал гитары громким. На большой громкости он может нарочно искажать звук ради грубого рокового тембра.")),
+  ],
+};
+
+/* ---------------- grade 7: analogue and digital sound ---------------- */
+
+const WAVE = (x: number) => 52 + 22 * Math.sin((x - 20) / 19) + 9 * Math.sin((x - 20) / 7);
+const SAMPLES = Array.from({ length: 15 }, (_, k) => 24 + k * 19);
+
+const sampling: Diagram = {
+  title: t("Analogue and digital sound", "Անալոգային և թվային ձայն", "Аналоговый и цифровой звук"),
+  h: 210,
+  draw: (lang) => (
+    <g>
+      <rect x="4" y="4" width="312" height="94" rx="8" fill="#fef3c7" />
+      <polyline points={Array.from({ length: 141 }, (_, k) => `${20 + k * 2},${WAVE(20 + k * 2)}`).join(" ")} fill="none" stroke="#d97706" strokeWidth="2.2" />
+      <Tx x={12} y={18} s={t("analogue: one continuous wave", "անալոգային՝ մեկ անընդհատ ալիք", "аналоговый: одна непрерывная волна")} lang={lang} size={7} anchor="start" fill="#92400e" />
+      <rect x="4" y="104" width="312" height="102" rx="8" fill="#e0f2fe" />
+      <Tx x={12} y={118} s={t("digital: measured again and again", "թվային՝ չափված նորից ու նորից", "цифровой: измерение снова и снова")} lang={lang} size={7} anchor="start" fill="#075985" />
+      <polyline points={Array.from({ length: 141 }, (_, k) => `${20 + k * 2},${WAVE(20 + k * 2) + 104}`).join(" ")} fill="none" stroke="#94a3b8" strokeWidth="1" strokeDasharray="2 2" />
+      <path d={SAMPLES.map((x, i) => `${i ? "L" : "M"}${x},${(WAVE(x) + 104).toFixed(1)} h19`).join(" ")} fill="none" stroke="#0284c7" strokeWidth="1.8" />
+      {SAMPLES.map((x) => (
+        <g key={x}>
+          <line x1={x} x2={x} y1="196" y2={WAVE(x) + 104} stroke="#7dd3fc" strokeWidth="1" />
+          <circle cx={x} cy={WAVE(x) + 104} r="2.6" fill="#0369a1" />
+          <text x={x} y="203" textAnchor="middle" fontSize="5.5" fontWeight="800" fill="#075985">{Math.round((96 - WAVE(x)) / 8)}</text>
+        </g>
+      ))}
+    </g>
+  ),
+  parts: [
+    P(300, 30, t("A groove or a magnetic trace", "Ակոս կամ մագնիսական հետք", "Канавка или магнитный след"), t("A record's groove and a tape's magnetism copy the shape of the sound wave directly, smoothly and without breaks.", "Ձայնապնակի ակոսը և ժապավենի մագնիսականությունն ուղղակիորեն պատճենում են ձայնային ալիքի ձևը՝ սահուն և առանց ընդհատումների։", "Канавка пластинки и намагниченность ленты прямо повторяют форму звуковой волны — плавно и без разрывов.")),
+    P(62, 150, t("Samples", "Նմուշներ", "Отсчёты"), t("A digital recorder measures the height of the wave at regular moments. Each dot is one measurement, called a sample.", "Թվային ձայնագրիչը կանոնավոր պահերին չափում է ալիքի բարձրությունը։ Յուրաքանչյուր կետ մեկ չափում է, որը կոչվում է նմուշ։", "Цифровой рекордер измеряет высоту волны через равные промежутки. Каждая точка — одно измерение, отсчёт.")),
+    P(306, 196, t("Just numbers", "Միայն թվեր", "Только числа"), t("The recording is only a long list of numbers like these. A CD stores 44,100 of them every second for each ear.", "Ձայնագրությունը միայն այսպիսի թվերի երկար ցուցակ է։ CD-ն ամեն վայրկյան պահում է դրանցից 44 100-ը՝ յուրաքանչյուր ականջի համար։", "Запись — это лишь длинный список таких чисел. CD хранит 44 100 таких чисел в секунду для каждого уха.")),
+    P(180, 134, t("Steps back to a wave", "Աստիճաններից՝ ալիք", "От ступенек к волне"), t("When you press Play, the numbers are turned back into a voltage and smoothed into a wave. With so many samples a second the steps are far too small to hear.", "Երբ սեղմում ես «Նվագել», թվերը կրկին վերածվում են լարման և հարթվում ալիքի։ Վայրկյանում այդքան շատ նմուշների դեպքում աստիճանները չափազանց փոքր են՝ լսելու համար։", "Когда нажимаешь «Играть», числа снова превращаются в напряжение и сглаживаются в волну. При таком числе отсчётов в секунду ступеньки слишком малы, чтобы их услышать.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { singer, instgroups, folkinst, forms, varia, orchestra, voices, dances, peterwolf, folkwheel, manuscript, positions, hall, marks, fugue, harpsi, sonata, band, sampling };
