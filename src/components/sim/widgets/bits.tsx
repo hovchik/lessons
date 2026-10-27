@@ -32,6 +32,7 @@ const W = {
   blue: t("Blue (B)", "Կապույտ (B)", "Синий (B)"),
   hex: t("Web code", "Վեբ կոդ", "Веб-код"),
   bytes: t("Bytes", "Բայթ", "Байт"),
+  bitsU: t("bits", "բիթ", "бита"),
   chars: t("Characters", "Նիշ", "Символов"),
   code: t("code", "կոդ", "код"),
   ascii: t("ASCII would need", "ASCII-ում պետք կլիներ", "В ASCII нужно было бы"),
@@ -108,7 +109,7 @@ function Rgb({ lang, body }: { lang: ArtLang; body: string }) {
           <Slider key={k} label={L(name, lang)} value={c[k]} min={0} max={255} lang={lang} display={`${c[k]} = ${b8(c[k])}₂`} onChange={(x) => set(k, x)} />
         ))}
       </div>
-      <Readouts items={[["RGB", `(${c.join(", ")})`, COLORS.a], [L(W.hex, lang), hex, COLORS.b], [L(W.bytes, lang), "3 × 8 = 24 bit", COLORS.d]]} />
+      <Readouts items={[["RGB", `(${c.join(", ")})`, COLORS.a], [L(W.hex, lang), hex, COLORS.b], [L(W.bytes, lang), `3 × 8 = 24 ${L(W.bitsU, lang)}`, COLORS.d]]} />
       <div className="art-chips">
         {presets.map(([n, v]) => <button key={n.en} type="button" className="art-chip" onClick={() => setC(v)}>{L(n, lang)}</button>)}
       </div>
