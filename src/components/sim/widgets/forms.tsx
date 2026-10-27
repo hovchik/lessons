@@ -137,6 +137,13 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   countable: [t("Count it: add -s", "Հաշվվող՝ ավելացրու -s", "Исчисляемое: добавь -s"), t("Don't count it: no -s", "Չհաշվվող՝ առանց -s", "Неисчисляемое: без -s")],
   rhyme: [t("Word", "Բառ", "Слово"), t("Rhymes with", "Հանգավորվում է", "Рифмуется с")],
   plonly: [t("One thing: a …", "Մեկ իր՝ a …", "Один предмет: a …"), t("Always plural", "Միշտ հոգնակի", "Всегда во мн. числе")],
+  magice: [t("Short: closed syllable", "Կարճ՝ փակ վանկ", "Краткий: закрытый слог"), t("Long: magic e", "Երկար՝ «կախարդական» e", "Долгий: «волшебная» e")],
+  nearfar: [t("Near: here", "Մոտ՝ այստեղ", "Близко: здесь"), t("Far: there", "Հեռու՝ այնտեղ", "Далеко: там")],
+  apos: [t("the … of …", "the … of …", "the … of …"), t("…'s", "…'s", "…'s")],
+  its: [t("it's = it is", "it's = it is", "it's = it is"), t("its = of it", "its = նրա (իրի, կենդանու)", "its = его (о предмете, животном)")],
+  nounadj: [t("Noun", "Գոյական", "Существительное"), t("Adjective: -y", "Ածական՝ -y", "Прилагательное: -y")],
+  playgodo: [t("play + ball games, music", "play + գնդակով խաղեր, երաժշտություն", "play + игры с мячом, музыка"), t("go + -ing", "go + -ing", "go + -ing"), t("do + other sports", "do + այլ մարզաձևեր", "do + другие виды спорта")],
+  named: [t("Word", "Բառ", "Слово"), t("Named after", "Անվանվել է", "Назван в честь")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
