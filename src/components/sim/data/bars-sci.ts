@@ -43,7 +43,7 @@ export const SCI_BARS: Record<string, BarSet> = {
   /* ---------------- grade 6 ---------------- */
   mohs: {
     title: t("The Mohs scale of mineral hardness", "Միներալների կարծրության Մոոսի սանդղակը", "Шкала твёрдости минералов Мооса"),
-    source: t("Each mineral scratches the ones below it. The steps are an order, not equal amounts: diamond is several times harder than corundum.", "Յուրաքանչյուր միներալ քերծում է իրենից ցածր գտնվողներին։ Աստիճանները հերթականություն են, ոչ թե հավասար չափեր. ադամանդը մի քանի անգամ ավելի կարծր է, քան կորունդը։", "Каждый минерал царапает те, что ниже. Ступени — это порядок, а не равные доли: алмаз в разы твёрже корунда."),
+    source: t("Each mineral scratches the ones below it. The steps are an order, not equal amounts: diamond is several times harder than corundum.", "Յուրաքանչյուր միներալ քերծում է իրենից ցածր գտնվողներին։ Աստիճանները հերթականություն են, ոչ թե հավասար չափեր․ ադամանդը մի քանի անգամ ավելի կարծր է, քան կորունդը։", "Каждый минерал царапает те, что ниже. Ступени — это порядок, а не равные доли: алмаз в разы твёрже корунда."),
     rows: [
       [t("Talc", "Տալկ", "Тальк"), 1, t("So soft you can scratch it with a fingernail; ground up, it is talcum powder.", "Այնքան փափուկ է, որ կարելի է քերծել եղունգով. մանրացված՝ այն տալկի փոշի է։", "Такой мягкий, что царапается ногтем; молотый — это тальк в присыпке.")],
       [t("Gypsum", "Գիպս", "Гипс"), 2, t("A fingernail (about 2.5) still scratches it.", "Եղունգը (մոտ 2,5) դեռ քերծում է այն։", "Ноготь (около 2,5) ещё царапает его.")],
