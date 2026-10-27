@@ -214,4 +214,148 @@ const nature: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature };
+/* ---------------- grade 2: the net of a card house ---------------- */
+
+const SQ = 38, NX = 14, NY = 46;
+const sq = (c: number, r: number) => [NX + c * SQ, NY + r * SQ] as const;
+/** A glue tab on one side of a square: 0 top, 1 right, 2 bottom, 3 left. */
+function tab(c: number, r: number, side: number) {
+  const [x, y] = sq(c, r), d = 9, e = 7;
+  const P4 = [
+    [[x, y], [x + e, y - d], [x + SQ - e, y - d], [x + SQ, y]],
+    [[x + SQ, y], [x + SQ + d, y + e], [x + SQ + d, y + SQ - e], [x + SQ, y + SQ]],
+    [[x, y + SQ], [x + e, y + SQ + d], [x + SQ - e, y + SQ + d], [x + SQ, y + SQ]],
+    [[x, y], [x - d, y + e], [x - d, y + SQ - e], [x, y + SQ]],
+  ][side];
+  return <polygon key={`${c}${r}${side}`} points={P4.map((q) => q.join(",")).join(" ")} fill="#fde68a" stroke="#a16207" strokeWidth="0.8" />;
+}
+
+const housenet: Diagram = {
+  title: t("The net of a card house", "Ստվարաթղթե տնակի փռվածքը", "Развёртка домика из картона"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      {[tab(0, 1, 0), tab(2, 1, 0), tab(3, 1, 0), tab(0, 1, 2), tab(2, 1, 2), tab(3, 1, 2), tab(3, 1, 1)]}
+      {[[1, 0], [0, 1], [1, 1], [2, 1], [3, 1], [1, 2]].map(([c, r]) => {
+        const [x, y] = sq(c, r);
+        return <rect key={`${c}${r}`} x={x} y={y} width={SQ} height={SQ} fill={r === 1 ? "#fef3c7" : "#e7e5e4"} stroke="#78350f" strokeWidth="1.5" />;
+      })}
+      {/* fold lines */}
+      {[[NX + SQ, NY + SQ, NX + SQ, NY + 2 * SQ], [NX + 2 * SQ, NY + SQ, NX + 2 * SQ, NY + 2 * SQ], [NX + 3 * SQ, NY + SQ, NX + 3 * SQ, NY + 2 * SQ], [NX + SQ, NY + SQ, NX + 2 * SQ, NY + SQ], [NX + SQ, NY + 2 * SQ, NX + 2 * SQ, NY + 2 * SQ]].map(([a, b, c, d], k) => (
+        <line key={k} x1={a} y1={b} x2={c} y2={d} stroke="#dc2626" strokeWidth="1.5" strokeDasharray="4 3" />
+      ))}
+      {/* windows and a door drawn on the walls before folding */}
+      <rect x={NX + SQ + 13} y={NY + SQ + 14} width="12" height="24" fill="#92400e" />
+      <rect x={NX + 10} y={NY + SQ + 10} width="16" height="14" fill="#7dd3fc" stroke="#0369a1" />
+      <rect x={NX + 2 * SQ + 11} y={NY + SQ + 10} width="16" height="14" fill="#7dd3fc" stroke="#0369a1" />
+      {/* the finished house */}
+      <g transform="translate(206 70)">
+        <path d="M0,40 h60 v60 h-60 Z" fill="#fef3c7" stroke="#78350f" strokeWidth="1.5" />
+        <path d="M60,40 l26,-18 v60 l-26,18 Z" fill="#fde68a" stroke="#78350f" strokeWidth="1.5" />
+        <path d="M-6,42 L30,6 L66,42 Z" fill="#dc2626" stroke="#7f1d1d" />
+        <path d="M30,6 L56,-12 L92,24 L66,42 Z" fill="#b91c1c" stroke="#7f1d1d" />
+        <rect x="22" y="68" width="14" height="32" fill="#92400e" />
+        <polygon points="66,58 80,48 80,62 66,72" fill="#7dd3fc" stroke="#0369a1" />
+        <rect x="44" y="-14" width="10" height="18" fill="#57534e" />
+      </g>
+      <Tx x={NX + 2 * SQ} y={NY - 26} s={t("6 cm squares", "6 սմ քառակուսիներ", "квадраты по 6 см")} lang={lang} size={8} fill="#78350f" />
+      <Tx x={250} y={196} s={t("folded and glued", "ծալված և սոսնձված", "сложен и склеен")} lang={lang} size={8} fill="#78350f" />
+    </g>
+  ),
+  parts: [
+    P(NX + 0.5 * SQ, NY + 1.5 * SQ + 12, t("Four walls in a row", "Չորս պատ՝ շարքով", "Четыре стены в ряд"), t("The four squares in a row become the walls. Draw the door and windows on them before you fold: it is much easier on a flat sheet.", "Շարքով չորս քառակուսիները դառնում են պատեր։ Դուռն ու պատուհանները նկարի՛ր դրանց վրա մինչև ծալելը․ հարթ թերթի վրա շատ ավելի հեշտ է։", "Четыре квадрата в ряд становятся стенами. Нарисуй на них дверь и окна до того, как сгибать: на плоском листе это гораздо легче.")),
+    P(NX + 1.5 * SQ, NY + 0.5 * SQ, t("Top", "Վերնամաս", "Верх"), t("The square above the row folds over to close the top of the cube. The pitched roof is glued on top of it.", "Շարքից վերև գտնվող քառակուսին ծալվում է և փակում խորանարդի վերևը։ Թեք տանիքը սոսնձում են դրա վրա։", "Квадрат над рядом сгибается и закрывает верх куба. На него приклеивают двускатную крышу.")),
+    P(NX + 1.5 * SQ, NY + 2.5 * SQ, t("Floor", "Հատակ", "Пол"), t("The square below the row folds under to make the floor, so the house stands firmly.", "Շարքից ներքև գտնվող քառակուսին ծալվում է տակ և դառնում հատակ, որ տնակն ամուր կանգնի։", "Квадрат под рядом подгибается вниз и становится полом, чтобы домик стоял устойчиво.")),
+    P(NX + 4 * SQ + 9, NY + 1.5 * SQ, t("Glue tabs", "Սոսնձման եզրիկներ", "Клапаны для клея"), t("Small trapezium tabs carry the glue. A cube needs seven of them: twelve edges, minus the five that are already joined by folds.", "Փոքրիկ սեղանաձև եզրիկների վրա սոսինձ են քսում։ Խորանարդին պետք է յոթ եզրիկ․ տասներկու կող՝ հանած այն հինգը, որոնք արդեն միացված են ծալքերով։", "На маленькие клапаны-трапеции наносят клей. Кубу нужно семь клапанов: двенадцать рёбер минус пять, которые уже соединены сгибами.")),
+    P(NX + 3 * SQ, NY + 2 * SQ - 6, t("Score the folds", "Ակոսել ծալքերը", "Продавить сгибы"), t("Run the blunt side of the scissors along a ruler over each dashed line. The card then folds sharply and exactly where you want.", "Մկրատի բութ կողմը քանոնի երկայնքով անցկացրու ամեն կետագծի վրայով։ Այդ դեպքում ստվարաթուղթը ծալվում է հստակ և ճիշտ այնտեղ, որտեղ պետք է։", "Проведи тупой стороной ножниц по линейке вдоль каждой пунктирной линии. Тогда картон согнётся чётко и точно там, где нужно.")),
+    P(262, 54, t("Pitched roof", "Թեք տանիք", "Двускатная крыша"), t("A card rectangle folded in half makes a roof with two slopes, so that rain runs off both sides.", "Կիսով չափ ծալված ստվարաթղթե ուղղանկյունը դառնում է երկթեք տանիք, որից անձրևը հոսում է երկու կողմ։", "Картонный прямоугольник, сложенный пополам, превращается в двускатную крышу, с которой дождь стекает на обе стороны.")),
+  ],
+};
+
+/* ---------------- grade 2: fabric and the needle ---------------- */
+
+const WARP = "#2563eb", WEFT = "#f97316";
+
+const weave: Diagram = {
+  title: t("Fabric up close, and the sewing kit", "Գործվածքը մոտիկից, և կարի պարագաները", "Ткань вблизи и швейные принадлежности"),
+  h: 210,
+  draw: (lang) => (
+    <g>
+      <rect x="14" y="20" width="150" height="150" rx="6" fill="#f8fafc" stroke="#cbd5e1" />
+      {/* weft threads underneath, then warp, then weft on top where it passes over */}
+      {Array.from({ length: 7 }, (_, r) => <rect key={`w${r}`} x="20" y={28 + r * 20} width="138" height="12" rx="6" fill={WEFT} />)}
+      {Array.from({ length: 7 }, (_, c) => <rect key={`v${c}`} x={28 + c * 20} y="22" width="12" height="146" rx="6" fill={WARP} />)}
+      {Array.from({ length: 7 }, (_, r) => Array.from({ length: 7 }, (_, c) => ((r + c) % 2 ? <rect key={`o${r}${c}`} x={24 + c * 20} y={28 + r * 20} width="20" height="12" fill={WEFT} /> : null)))}
+      <Tx x={89} y={186} s={t("over, under, over, under…", "վրայով, տակով, վրայով, տակով…", "над, под, над, под…")} lang={lang} size={8} fill="#334155" />
+      {/* needle */}
+      <g transform="rotate(-30 240 60)">
+        <path d="M184,60 L292,57 L300,60 L292,63 Z" fill="#cbd5e1" stroke="#475569" />
+        <ellipse cx="196" cy="60" rx="7" ry="1.8" fill="#fff" stroke="#475569" strokeWidth="0.8" />
+        <path d="M196,60 C170,64 172,90 196,96" fill="none" stroke="#dc2626" strokeWidth="1.5" />
+      </g>
+      {/* thimble */}
+      <path d="M190,150 v-26 q0,-14 16,-14 q16,0 16,14 v26 Z" fill="#cbd5e1" stroke="#475569" />
+      {Array.from({ length: 12 }, (_, k) => <circle key={k} cx={196 + (k % 4) * 7} cy={122 + Math.floor(k / 4) * 9} r="1.4" fill="#64748b" />)}
+      {/* pincushion */}
+      <ellipse cx="270" cy="148" rx="30" ry="20" fill="#ef4444" stroke="#991b1b" />
+      <path d="M244,140 q26,12 52,0" fill="none" stroke="#991b1b" />
+      {[[256, 134, -20], [272, 130, 0], [288, 134, 18]].map(([x, y, r], k) => (
+        <g key={k} transform={`rotate(${r} ${x} ${y})`}><line x1={x} x2={x} y1={y} y2={y - 26} stroke="#64748b" strokeWidth="1.5" /><circle cx={x} cy={y - 26} r="3" fill={["#facc15", "#22c55e", "#3b82f6"][k]} /></g>
+      ))}
+      {/* magnet */}
+      <path d="M232,196 v-14 a10,10 0 0 1 20,0 v14 h-6 v-14 a4,4 0 0 0 -8,0 v14 Z" fill="#dc2626" />
+      <rect x="232" y="192" width="6" height="5" fill="#cbd5e1" />
+      <rect x="246" y="192" width="6" height="5" fill="#cbd5e1" />
+    </g>
+  ),
+  parts: [
+    P(34, 14, t("Warp: lengthways", "Հենք՝ երկայնքով", "Основа: вдоль"), t("On a loom the lengthways threads are stretched tight first. They are called the warp.", "Ջուլհակի հաստոցում նախ ձգում են երկայնական թելերը։ Դրանք կոչվում են հենք։", "На ткацком станке сначала туго натягивают продольные нити. Их называют основой.")),
+    P(10, 74, t("Weft: across", "Միջաթել՝ լայնքով", "Уток: поперёк"), t("The crosswise thread goes over one warp thread and under the next, then back the other way. Pushed tightly together, they become fabric.", "Լայնական թելն անցնում է հենքի մի թելի վրայով, հաջորդի տակով, հետո ետ՝ հակառակ ձևով։ Իրար ամուր սեղմված՝ դրանք դառնում են գործվածք։", "Поперечная нить проходит над одной нитью основы и под следующей, потом обратно наоборот. Плотно прижатые друг к другу, они становятся тканью.")),
+    P(216, 30, t("The eye", "Ասեղնանցք", "Ушко"), t("The hole in the needle is called the eye. Cut the thread at a slant so its pointed end slips through easily.", "Ասեղի անցքը կոչվում է ասեղնանցք։ Թելը կտրի՛ր թեք, որ սրացած ծայրը հեշտությամբ անցնի։", "Дырочка в иголке называется ушком. Отрежь нитку наискосок, чтобы острый кончик легко прошёл.")),
+    P(206, 100, t("Thimble", "Մատնոց", "Напёрсток"), t("A metal cap for the middle finger. Its little dents stop the end of the needle from slipping when you push it through thick fabric.", "Մետաղե գլխիկ միջնամատի համար։ Նրա փոքրիկ փոսիկները թույլ չեն տալիս ասեղի ծայրին սահել, երբ այն հրում ես հաստ գործվածքի միջով։", "Металлический колпачок на средний палец. Маленькие ямки не дают концу иглы соскользнуть, когда проталкиваешь её через толстую ткань.")),
+    P(304, 140, t("Pincushion", "Ասեղնաման", "Игольница"), t("Needles and pins live here, never in your mouth or on your clothes. Count them before and after work.", "Ասեղներն ու գնդասեղներն այստեղ են ապրում, երբեք՝ բերանումդ կամ հագուստիդ վրա։ Հաշվի՛ր դրանք աշխատանքից առաջ և հետո։", "Иголки и булавки живут здесь, а не во рту и не на одежде. Пересчитай их до и после работы.")),
+    P(220, 186, t("Magnet", "Մագնիս", "Магнит"), t("A dropped needle is hard to see on the floor. Sweep a magnet over the floor and it jumps up by itself.", "Ընկած ասեղը դժվար է տեսնել հատակին։ Մագնիսը սահեցրու հատակի վրայով, և ասեղն ինքը կցատկի դեպի այն։", "Упавшую иголку трудно заметить на полу. Проведи магнитом над полом, и она сама прыгнет к нему.")),
+  ],
+};
+
+/* ---------------- grade 2: a funny-face sandwich ---------------- */
+
+const sandwich: Diagram = {
+  title: t("A healthy funny-face sandwich", "Առողջ բուտերբրոդ՝ զվարճալի դեմքով", "Полезный бутерброд-рожица"),
+  h: 214,
+  draw: () => (
+    <g>
+      <ellipse cx="160" cy="112" rx="132" ry="96" fill="#f1f5f9" stroke="#cbd5e1" />
+      {/* wholemeal bread */}
+      <path d="M90,60 q0,-30 30,-30 h80 q30,0 30,30 v100 q0,20 -20,20 h-100 q-20,0 -20,-20 Z" fill="#b45309" />
+      <path d="M98,64 q0,-24 26,-24 h72 q26,0 26,24 v92 q0,16 -16,16 h-92 q-16,0 -16,-16 Z" fill="#d6a461" />
+      {[[120, 70], [190, 80], [140, 150], [200, 140], [110, 120]].map(([x, y], k) => <ellipse key={k} cx={x} cy={y} rx="2" ry="1" fill="#92400e" />)}
+      {/* cheese */}
+      <path d="M104,72 h112 v80 h-112 Z" fill="#fde047" opacity="0.92" />
+      <circle cx="120" cy="140" r="4" fill="#facc15" /><circle cx="204" cy="86" r="5" fill="#facc15" />
+      {/* herbs as hair */}
+      {Array.from({ length: 9 }, (_, k) => <path key={k} d={`M${108 + k * 13},76 q${k % 2 ? 6 : -6},-26 ${k % 2 ? -2 : 4},-40`} stroke="#16a34a" strokeWidth="3" fill="none" strokeLinecap="round" />)}
+      {/* tomato eyes */}
+      {[134, 186].map((x) => <g key={x}><circle cx={x} cy="100" r="14" fill="#ef4444" stroke="#b91c1c" /><circle cx={x} cy="100" r="5" fill="#fca5a5" />{[0, 1, 2, 3, 4, 5].map((j) => <line key={j} x1={x} y1="100" x2={x + 10 * Math.cos(j)} y2={100 + 10 * Math.sin(j)} stroke="#b91c1c" strokeWidth="0.7" />)}</g>)}
+      {/* egg nose */}
+      <ellipse cx="160" cy="122" rx="9" ry="11" fill="#fff" stroke="#e5e7eb" />
+      <circle cx="160" cy="123" r="5" fill="#f59e0b" />
+      {/* cucumber smile */}
+      {[-2, -1, 0, 1, 2].map((j) => <g key={j}><circle cx={160 + j * 13} cy={146 - Math.abs(j) * 3 * (Math.abs(j) > 1 ? 1.5 : 1)} r="7" fill="#86efac" stroke="#15803d" strokeWidth="2" /></g>)}
+      {/* blunt knife */}
+      <path d="M244,190 l40,-50 q6,-4 4,4 l-34,52 Z" fill="#cbd5e1" stroke="#64748b" />
+      <rect x="230" y="186" width="20" height="8" rx="3" fill="#1e293b" transform="rotate(-52 240 190)" />
+    </g>
+  ),
+  parts: [
+    P(96, 44, t("Wholemeal bread", "Ամբողջահատիկ հաց", "Цельнозерновой хлеб"), t("Wholemeal bread is made from the whole grain, with its skin. It keeps you full longer than white bread. Lavash works just as well.", "Ամբողջահատիկ հացը պատրաստում են ամբողջ հատիկից՝ թաղանթով հանդերձ։ Այն ավելի երկար է կուշտ պահում, քան սպիտակ հացը։ Լավաշը նույնպես լավ տարբերակ է։", "Цельнозерновой хлеб делают из целого зерна вместе с оболочкой. Он дольше насыщает, чем белый хлеб. Лаваш тоже подойдёт.")),
+    P(224, 120, t("Cheese", "Պանիր", "Сыр"), t("Cheese and cottage cheese give your bones and teeth calcium and your muscles protein.", "Պանիրն ու կաթնաշոռը ոսկորներին և ատամներին կալցիում են տալիս, իսկ մկաններին՝ սպիտակուց։", "Сыр и творог дают костям и зубам кальций, а мышцам — белок.")),
+    P(134, 78, t("Tomato", "Լոլիկ", "Помидор"), t("Tomatoes are full of water and vitamin C. Wash them well and let an adult slice them, or use cherry tomatoes cut in half.", "Լոլիկը լի է ջրով և C վիտամինով։ Լավ լվա՛ և թող մեծահասակը կտրատի, կամ օգտագործի՛ր կիսով չափ կտրած բալ-լոլիկներ։", "В помидорах много воды и витамина C. Хорошо вымой их и попроси взрослого нарезать или возьми помидоры черри, разрезанные пополам.")),
+    P(214, 30, t("Herbs", "Կանաչի", "Зелень"), t("Parsley, dill and coriander make green hair. Herbs add flavour and vitamins without any salt.", "Մաղադանոսը, սամիթը և համեմը կանաչ մազեր են դառնում։ Կանաչին համ և վիտամիններ է ավելացնում՝ առանց աղի։", "Петрушка, укроп и кинза станут зелёными волосами. Зелень добавляет вкус и витамины без соли.")),
+    P(172, 116, t("Egg", "Ձու", "Яйцо"), t("A hard-boiled egg is a small parcel of protein. Peel it and cut it into slices or halves.", "Պինդ եփած ձուն սպիտակուցի փոքրիկ ծրար է։ Կեղևը հանի՛ր և կտրատի՛ր շերտերով կամ կիսով չափ։", "Сваренное вкрутую яйцо — маленький запас белка. Очисти его и нарежь кружками или половинками.")),
+    P(186, 160, t("Cucumber", "Վարունգ", "Огурец"), t("Thin cucumber rounds make a crunchy smile. A cucumber is almost all water, so it is very refreshing.", "Վարունգի բարակ օղակները խրթխրթան ժպիտ են դառնում։ Վարունգը գրեթե ամբողջությամբ ջուր է, ուստի շատ թարմացնող է։", "Тонкие кружочки огурца — хрустящая улыбка. Огурец почти весь состоит из воды, поэтому очень освежает.")),
+    P(292, 136, t("Blunt knife", "Բութ դանակ", "Тупой нож"), t("Spread and arrange with a blunt knife. Sharp knives, the cooker and electrical appliances only with an adult.", "Քսի՛ր և դասավորի՛ր բութ դանակով։ Սուր դանակները, սալօջախը և էլեկտրական սարքերը՝ միայն մեծահասակի հետ։", "Намазывай и раскладывай тупым ножом. Острые ножи, плиту и электроприборы — только вместе со взрослым.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich };

@@ -1,5 +1,6 @@
 import type { VisualMap } from "..";
 import { grade1 } from "./grade-1";
+import { grade2 } from "./grade-2";
 
 /**
  * Technology 1–7: step-by-step players for folding, modelling and sewing, labelled pictures of
@@ -7,4 +8,5 @@ import { grade1 } from "./grade-1";
  */
 export const technologyVisuals: VisualMap = {
   1: grade1,
+  2: grade2,
 };
