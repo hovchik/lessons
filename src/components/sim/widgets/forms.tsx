@@ -162,6 +162,14 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   fewlittle: [t("(a) few: you can count", "(a) few՝ հաշվվող", "(a) few — исчисляемые"), t("(a) little: you can't count", "(a) little՝ չհաշվվող", "(a) little — неисчисляемые")],
   container: [t("Container", "Տարա", "Упаковка"), t("What is in it", "Ինչ կա ներսում", "Что внутри")],
   capital: [t("City", "Քաղաք", "Город"), t("Country", "Երկիր", "Страна"), t("River", "Գետ", "Река")],
+  towncountry: [t("In the city", "Քաղաքում", "В городе"), t("In the country", "Գյուղում", "За городом")],
+  relwho: [t("who: people", "who՝ մարդիկ", "who — люди"), t("which: things", "which՝ իրեր", "which — вещи"), t("where: places", "where՝ վայրեր", "where — места")],
+  dodont: [t("Do", "Արա", "Делай"), t("Don't", "Մի արա", "Не делай")],
+  factop: [t("Fact: can be checked", "Փաստ՝ կարելի է ստուգել", "Факт: можно проверить"), t("Opinion: what someone thinks", "Կարծիք՝ ինչ է մտածում մեկը", "Мнение: что кто-то думает")],
+  inged: [t("-ing: what causes it", "-ing՝ ինչն է պատճառը", "-ing — что вызывает"), t("-ed: how you feel", "-ed՝ ինչ ես զգում", "-ed — что ты чувствуешь")],
+  phrasal: [t("Phrasal verb", "Դարձվածային բայ", "Фразовый глагол"), t("Meaning", "Իմաստ", "Значение")],
+  heritage: [t("Monument", "Հուշարձան", "Памятник"), t("Where", "Որտեղ", "Где"), t("When built", "Երբ է կառուցվել", "Когда построен")],
+  who3: [t("Name", "Անուն", "Имя"), t("Who", "Ով", "Кто"), t("Famous for", "Հայտնի է", "Знаменит")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
