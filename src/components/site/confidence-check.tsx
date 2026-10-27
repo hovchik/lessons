@@ -11,11 +11,11 @@ export type Confidence = 0 | 2;
  * Checks an answer with one tap that also says how sure the pupil is. Saying it
  * first trains self-assessment, and a right guess comes back for review sooner.
  */
-export function ConfidenceCheck({ disabled, onCheck, size = "sm" }: { disabled?: boolean; onCheck: (c: Confidence) => void; size?: "sm" | "lg" }) {
+export function ConfidenceCheck({ disabled, onCheck, size = "sm", label }: { disabled?: boolean; onCheck: (c: Confidence) => void; size?: "sm" | "lg"; label?: string }) {
   const t = useTranslations("lesson");
   return (
     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-      <span className="text-sm font-bold text-muted-foreground">{t("howSure")}</span>
+      <span className="text-sm font-bold text-muted-foreground">{label ?? t("howSure")}</span>
       <div className="grid grid-cols-2 gap-2 sm:flex">
         <Button size={size} disabled={disabled} onClick={() => onCheck(2)}>
           <ShieldCheck className="size-5" aria-hidden="true" />

@@ -3,10 +3,12 @@ import { ArrowRight, BookOpenCheck, History, Sparkles, Trophy } from "lucide-rea
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { LogoutLink } from "@/components/site/logout-link";
+import { levelSwatch } from "@/components/site/mastery-badge";
 import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
+import { getUserMastery } from "@/server/mastery";
 import { getRecentAttempts, getUserCourseSummaries, getUserTotals } from "@/server/progress";
 import { getReviewSummaryCached } from "@/server/review";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
@@ -25,13 +27,14 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
   const user = await getCurrentUser();
   if (!user) redirect({ href: "/login?next=/progress", locale });
   const u = user!;
-  const [t, l, totals, courses, recent, review] = await Promise.all([
+  const [t, l, totals, courses, recent, review, mastery] = await Promise.all([
     getTranslations(),
     getLocale(),
     getUserTotals(u.id),
     getUserCourseSummaries(u.id),
     getRecentAttempts(u.id, 8),
     getReviewSummaryCached(u.id),
+    getUserMastery(u.id),
   ]);
   await touchLastSeen(u.id);
 
@@ -110,6 +113,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
                     {list.map((c) => {
                       const done = c.totalLessons ? Math.min(100, Math.round((c.completed / c.totalLessons) * 100)) : 0;
                       const best = pct(c.avgScore);
+                      const skills = (mastery.get(c.courseId) ?? []).filter((s) => s.evidence.lessons > 0);
                       return (
                         <li key={c.courseId}>
                           <Link href={`/${c.subjectId}/${c.grade}`} className="block px-4 py-3 transition-colors active:bg-muted sm:px-5 sm:hover:bg-muted">
@@ -124,6 +128,18 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
                               <span>{best === null ? t("progress.noQuiz") : t("progress.best", { pct: best })}</span>
                               <span>{done}%</span>
                             </div>
+                            {skills.length > 0 && (
+                              <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                                <span className="flex gap-1" aria-hidden="true">
+                                  {skills.map((s) => (
+                                    <span key={s.skillId} title={`${pick(s.title, l)}: ${t(`mastery.${s.level}`)}`} className={cn("size-3.5 rounded-[4px]", levelSwatch[s.level])} />
+                                  ))}
+                                </span>
+                                <span className="text-xs font-bold text-muted-foreground">
+                                  {t("mastery.unitsMastered", { n: skills.filter((s) => s.level === "mastered").length, total: skills.length })}
+                                </span>
+                              </div>
+                            )}
                           </Link>
                         </li>
                       );
@@ -145,7 +161,8 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
           <ol className="clay divide-y divide-border/70 overflow-hidden">
             {recent.map((a) => {
               const okPct = a.total ? a.score / a.total : 0;
-              const href = a.lessonSlug && a.subjectId ? `/${a.subjectId}/${a.grade}/${a.lessonSlug}` : a.kind === "exam" && a.examTitle ? `/exams/${a.refId}` : null;
+              const unitN = a.kind === "unit" ? Number(a.refId.split(".u")[1]) : null;
+              const href = a.lessonSlug && a.subjectId ? `/${a.subjectId}/${a.grade}/${a.lessonSlug}` : a.kind === "exam" && a.examTitle ? `/exams/${a.refId}` : unitN && a.subjectId ? `/${a.subjectId}/${a.grade}/check/${unitN}` : null;
               const inner = (
                 <>
                   <span
@@ -154,7 +171,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
                     {a.score}/{a.total}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate font-bold">{a.lessonTitle ? pick(a.lessonTitle, l) : a.examTitle ? pick(a.examTitle, l) : t("progress.exam")}</span>
+                    <span className="block truncate font-bold">{a.lessonTitle ? pick(a.lessonTitle, l) : a.examTitle ? pick(a.examTitle, l) : a.skillTitle ? `${t("mastery.unitCheck")}: ${pick(a.skillTitle, l)}` : t("progress.exam")}</span>
                     <span className="block text-xs font-semibold text-muted-foreground">
                       {a.subjectName ? `${pick(a.subjectName, l)} · ${t("grade.title", { grade: a.grade! })} · ` : ""}
                       {dateFmt.format(new Date(a.createdAt.endsWith("Z") || a.createdAt.includes("T") ? a.createdAt : a.createdAt + "Z"))}

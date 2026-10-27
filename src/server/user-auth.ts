@@ -50,6 +50,18 @@ function sign(payload: string) {
   return createHmac("sha256", secret()).update(payload).digest("base64url");
 }
 
+/** Signs a payload with the server secret (for values the browser must hand back unchanged). */
+export function signValue(payload: string) {
+  return sign(payload);
+}
+
+/** True when `sig` is the server's signature of `payload`. */
+export function checkSignature(payload: string, sig: string) {
+  if (!accountsConfigured()) return false;
+  const expected = sign(payload);
+  return sig.length === expected.length && timingSafeEqual(Buffer.from(sig), Buffer.from(expected));
+}
+
 export function createUserToken(userId: string) {
   const exp = Math.floor(Date.now() / 1000) + TTL_SECONDS;
   const payload = `user.${userId}.${exp}`;

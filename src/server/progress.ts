@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import { newId } from "./user-auth";
 import { recordAnswers } from "./learner";
@@ -13,7 +13,7 @@ import { scoreExam } from "@/lib/exam-score";
  *    page and the lesson page read.
  */
 
-export type ActivityKind = "quiz" | "exam";
+export type ActivityKind = "quiz" | "exam" | "unit";
 
 export async function recordAttempt(input: {
   userId: string;
@@ -198,12 +198,17 @@ export type CourseSummary = {
   lastActivity: string | null;
 };
 
-/** Per-course summary for the progress page, only courses the user touched. */
+/**
+ * Per-course summary for the progress page, only courses the user touched:
+ * through lessons, or only through questions met elsewhere (a warm-up, a unit
+ * check or an exam), which still show their mastery.
+ */
 export async function getUserCourseSummaries(userId: string): Promise<CourseSummary[]> {
   const db = await getDb();
   const lp = schema.lessonProgress;
   const rows = await db
     .select({
+      sortOrder: schema.subjects.sortOrder,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -224,9 +229,38 @@ export async function getUserCourseSummaries(userId: string): Promise<CourseSumm
     .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(lp.userId, userId))
     .groupBy(schema.courses.id)
-    .orderBy(asc(schema.subjects.sortOrder), asc(schema.courses.grade))
     .all();
-  return rows.map((r) => ({
+  const seen = new Set(rows.map((r) => r.courseId));
+  const rc = schema.reviewCards;
+  const other = (await db.selectDistinct({ courseId: rc.courseId }).from(rc).where(eq(rc.userId, userId)).all())
+    .map((r) => r.courseId)
+    .filter((c): c is string => !!c && !seen.has(c));
+  const extra = other.length
+    ? await db
+        .select({
+          sortOrder: schema.subjects.sortOrder,
+          courseId: schema.courses.id,
+          subjectId: schema.courses.subjectId,
+          grade: schema.courses.grade,
+          courseTitle: schema.courses.title,
+          subjectName: schema.subjects.name,
+          subjectColor: schema.subjects.color,
+          subjectIcon: schema.subjects.icon,
+          totalLessons: sql<number>`(select count(*) from lessons l where l.course_id = ${schema.courses.id} and l.status = 'published')`,
+          completed: sql<number>`0`,
+          bestScore: sql<number>`0`,
+          bestTotal: sql<number>`0`,
+          quizzesTaken: sql<number>`0`,
+          lastActivity: sql<string | null>`null`,
+        })
+        .from(schema.courses)
+        .innerJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
+        .where(inArray(schema.courses.id, other))
+        .all()
+    : [];
+  return [...rows, ...extra]
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.grade - b.grade)
+    .map((r) => ({
     courseId: r.courseId,
     subjectId: r.subjectId,
     grade: r.grade,
@@ -279,6 +313,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
       lessonTitle: schema.lessons.title,
       lessonSlug: schema.lessons.slug,
       examTitle: schema.exams.title,
+      skillTitle: schema.skills.title,
       courseId: schema.courses.id,
       subjectId: schema.courses.subjectId,
       grade: schema.courses.grade,
@@ -287,6 +322,7 @@ export async function getRecentAttempts(userId: string, limit = 10) {
     .from(schema.attempts)
     .leftJoin(schema.lessons, and(eq(schema.attempts.kind, "quiz"), eq(schema.attempts.refId, schema.lessons.id)))
     .leftJoin(schema.exams, and(eq(schema.attempts.kind, "exam"), eq(schema.attempts.refId, schema.exams.id)))
+    .leftJoin(schema.skills, and(eq(schema.attempts.kind, "unit"), eq(schema.attempts.refId, schema.skills.id)))
     .leftJoin(schema.courses, eq(schema.attempts.courseId, schema.courses.id))
     .leftJoin(schema.subjects, eq(schema.courses.subjectId, schema.subjects.id))
     .where(eq(schema.attempts.userId, userId))
