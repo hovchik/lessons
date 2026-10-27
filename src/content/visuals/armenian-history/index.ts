@@ -3,6 +3,7 @@ import { grade5 } from "./grade-5";
 import { grade6 } from "./grade-6";
 import { grade7 } from "./grade-7";
 import { grade8 } from "./grade-8";
+import { grade9 } from "./grade-9";
 
 /**
  * Armenian history 5–12: tap-to-read timelines with BC/AD years, centuries and the years between
@@ -13,4 +14,5 @@ export const armenianHistoryVisuals: VisualMap = {
   6: grade6,
   7: grade7,
   8: grade8,
+  9: grade9,
 };
