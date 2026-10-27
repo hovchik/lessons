@@ -82,6 +82,21 @@ const COLS: Record<string, ReturnType<typeof t>[]> = {
   iy: [t("и: root or -ция", "и՝ արմատ կամ -ция", "и: корень или -ция"), t("ы: ending or -ын", "ы՝ վերջավորություն կամ -ын", "ы: окончание или -ын")],
   short: [t("Full form", "Լրիվ ձև", "Полная форма"), t("Short form", "Կարճ ձև", "Краткая форма")],
   softsign: [t("With ь", "ь-ով", "С ь"), t("Without ь", "Առանց ь-ի", "Без ь")],
+  prepri: [t("пре-", "пре-", "пре-"), t("при-", "при-", "при-")],
+  nnn: [t("One н", "Մեկ н", "Одна н"), t("Two нн", "Երկու нн", "Две нн")],
+  degrees: [t("Positive", "Դրական", "Положительная"), t("Comparative", "Համեմատական", "Сравнительная"), t("Superlative", "Գերադրական", "Превосходная")],
+  moods: [t("Indicative", "Սահմանական", "Изъявительное"), t("Conditional", "Պայմանական", "Условное"), t("Imperative", "Հրամայական", "Повелительное")],
+  transitive: [t("Transitive", "Անցողական", "Переходный"), t("Intransitive", "Անանցողական", "Непереходный")],
+  chik: [t("-чик", "-чик", "-чик"), t("-щик", "-щик", "-щик")],
+  neni: [t("не", "не", "не"), t("ни", "ни", "ни")],
+  hyphen: [t("Together", "Միասին", "Слитно"), t("With a hyphen", "Գծիկով", "Через дефис")],
+  native: [t("Native Russian", "Բնիկ ռուսերեն", "Исконное"), t("Borrowed", "Փոխառված", "Заимствованное")],
+  idiom: [t("Phraseme", "Դարձվածք", "Фразеологизм"), t("Meaning", "Իմաստ", "Значение")],
+  numkind: [t("Cardinal", "Քանակական", "Количественное"), t("Collective", "Հավաքական", "Собирательное"), t("Ordinal", "Դասական", "Порядковое")],
+  adjclass: [t("Qualitative", "Որակական", "Качественное"), t("Relative", "Հարաբերական", "Относительное"), t("Possessive", "Ստացական", "Притяжательное")],
+  itete: [t("Request: -ите", "Խնդրանք՝ -ите", "Просьба: -ите"), t("Future: -ете", "Ապառնի՝ -ете", "Будущее: -ете")],
+  ova: [t("я -ую → -ова-, -ева-", "я -ую → -ова-, -ева-", "я -ую → -ова-, -ева-"), t("я -ываю → -ыва-, -ива-", "я -ываю → -ыва-, -ива-", "я -ываю → -ыва-, -ива-")],
+  skaz: [t("Word in the tale", "Բառը պատմվածքում", "Слово из сказа"), t("Standard word", "Գրական բառ", "Обычное слово")],
   proverb: [t("Proverb", "Առած", "Пословица"), t("Saying", "Ասացվածք", "Поговорка")],
 };
 const CASES: Record<"ru" | "hy", Array<[ReturnType<typeof t>, string]>> = {
@@ -186,7 +201,7 @@ function Verbs({ lang, rows, cols }: { lang: SimProps["lang"]; rows: string[][];
         <button type="button" className={`art-chip ${hidden === null ? "is-active" : ""}`} onClick={() => setHidden(null)}>{L(W.showAll, lang)}</button>
       </div>
       <div className="lang-scroll">
-      <table className={`lang-table is-verbs ${heads.length > 3 ? "is-wide" : named ? "is-compare" : ""}`}>
+      <table className={`lang-table is-verbs ${heads.length > 3 ? "is-wide" : named ? `is-compare${heads.length === 3 ? " is-three" : ""}` : ""}`}>
         <thead><tr>{heads.map((h) => <th key={h}>{h}</th>)}</tr></thead>
         <tbody>
           {rows.map((r, i) => (
