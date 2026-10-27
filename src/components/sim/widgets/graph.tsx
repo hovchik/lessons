@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play, RotateCcw } from "lucide-react";
 import { ArtFrame } from "@/components/art/frame";
-import type { ArtLang, Tr } from "@/lib/art/spec";
+import type { Tr } from "@/lib/art/spec";
 import type { SimProps } from "../sim-block";
 import { Readouts, Stage } from "../kit";
 import { L, t, UI } from "../labels";

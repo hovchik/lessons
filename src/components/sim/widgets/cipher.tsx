@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { ArtFrame } from "@/components/art/frame";
-import type { ArtLang } from "@/lib/art/spec";
 import type { SimProps } from "../sim-block";
 import { Choice, Readouts, Slider, Stage, Toggle } from "../kit";
 import { L, t } from "../labels";
