@@ -1104,4 +1104,218 @@ const carelabel: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog, workbench, wiretools, views, weaves3, sewmachine, plate, carelabel };
+/* ---------------- grade 6: wood joints ---------------- */
+
+const JA = "#e9c48f", JB = "#c98f45", JE = "#92400e";
+const Hid = ({ x, y, w, h }: { x: number; y: number; w: number; h: number }) => <rect x={x} y={y} width={w} height={h} fill="none" stroke={JE} strokeWidth="0.9" strokeDasharray="3 2" />;
+const Nail = ({ x, y, l }: { x: number; y: number; l: number }) => (
+  <g><line x1={x} x2={x + l} y1={y} y2={y} stroke="#334155" strokeWidth="1.6" /><rect x={x - 2} y={y - 3} width="2" height="6" fill="#334155" /></g>
+);
+const Down = ({ x, y }: { x: number; y: number }) => <path d={`M${x},${y} v10 M${x - 3},${y + 6} l3,4 l3,-4`} fill="none" stroke="#7c3aed" strokeWidth="1.5" />;
+const Right = ({ x, y }: { x: number; y: number }) => <path d={`M${x},${y} h8 M${x + 4},${y - 3} l4,3 l-4,3`} fill="none" stroke="#7c3aed" strokeWidth="1.5" />;
+
+const joints: Diagram = {
+  title: t("Wood joints and fasteners", "Փայտի միացումներ և ամրակներ", "Столярные соединения и крепёж"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      {/* butt joint */}
+      <g transform="translate(6 6)">
+        <rect x="20" y="6" width="14" height="66" fill={JB} stroke={JE} />
+        <rect x="34" y="56" width="58" height="16" fill={JA} stroke={JE} />
+        <Nail x={22} y={61} l={28} /><Nail x={22} y={68} l={28} />
+      </g>
+      {/* halving joint */}
+      <g transform="translate(110 6)">
+        <path d="M6,52 H50 V60 H80 V68 H6 Z" fill={JA} stroke={JE} />
+        <path d="M50,22 H96 V38 H80 V30 H50 Z" fill={JB} stroke={JE} />
+        <Down x={65} y={36} />
+      </g>
+      {/* mortise and tenon */}
+      <g transform="translate(214 6)">
+        <path d="M2,30 H30 V36 H44 V48 H30 V54 H2 Z" fill={JA} stroke={JE} />
+        <rect x="58" y="4" width="22" height="72" fill={JB} stroke={JE} />
+        <Hid x={58} y={36} w={14} h={12} />
+        <Right x={46} y={42} />
+      </g>
+      {/* dowel joint */}
+      <g transform="translate(6 112)">
+        <rect x="2" y="28" width="34" height="26" fill={JA} stroke={JE} />
+        <rect x="64" y="28" width="34" height="26" fill={JB} stroke={JE} />
+        <rect x="36" y="33" width="28" height="5" fill="#fef3c7" stroke={JE} strokeWidth="0.6" />
+        <rect x="36" y="44" width="28" height="5" fill="#fef3c7" stroke={JE} strokeWidth="0.6" />
+        <Hid x={24} y={33} w={12} h={5} /><Hid x={24} y={44} w={12} h={5} /><Hid x={64} y={33} w={12} h={5} /><Hid x={64} y={44} w={12} h={5} />
+      </g>
+      {/* dovetail */}
+      <g transform="translate(110 112)">
+        <rect x="44" y="6" width="50" height="62" fill={JB} stroke={JE} />
+        <path d="M6,6 H44 V14 L60,10 V30 L44,26 V40 L60,36 V56 L44,52 V68 H6 Z" fill={JA} stroke={JE} />
+      </g>
+      {/* fasteners */}
+      <g transform="translate(214 112)">
+        <line x1="10" x2="10" y1="14" y2="66" stroke="#475569" strokeWidth="2.5" /><rect x="5" y="10" width="10" height="4" fill="#475569" /><path d="M8.7,66 l1.3,5 l1.3,-5" fill="#475569" />
+        <path d="M30,14 h12 l-2,4 h-8 Z" fill="#64748b" /><rect x="34" y="18" width="4" height="44" fill="#94a3b8" /><path d="M34,62 l2,8 l2,-8" fill="#94a3b8" />
+        {Array.from({ length: 9 }, (_, j) => <line key={j} x1="33" x2="39" y1={22 + j * 4.5} y2={24 + j * 4.5} stroke="#475569" />)}
+        <path d="M62,30 h20 v38 h-20 Z" fill="#f8fafc" stroke="#475569" /><path d="M66,30 l4,-12 h4 l4,12" fill="#f97316" stroke="#475569" />
+        <rect x="64" y="42" width="16" height="12" fill="#fde68a" />
+      </g>
+      {[[56, 92, t("butt", "կցորդային", "встык")], [160, 92, t("halving", "կիսահաստ", "вполдерева")], [262, 92, t("mortise and tenon", "փորակ և ելուստ", "шип и паз")], [56, 198, t("dowels", "նագելներ", "на шкантах")], [160, 198, t("dovetail", "ագռավաբույն", "ласточкин хвост")], [262, 198, t("nail, screw, glue", "մեխ, պտուտակ, սոսինձ", "гвоздь, шуруп, клей")]].map(([x, y, s], j) => (
+        <Tx key={j} x={x as number} y={y as number} s={s as Tr} lang={lang} size={8} fill="#334155" />
+      ))}
+    </g>
+  ),
+  parts: [
+    P(64, 46, t("Butt joint", "Կցորդային միացում", "Соединение встык"), t("The parts are simply put together and nailed or screwed. Quick but weak: nails pull out of the end grain easily.", "Մասերը պարզապես դրվում են իրար կողք և մեխվում կամ պտուտակվում։ Արագ է, բայց թույլ․ մեխերը հեշտությամբ դուրս են գալիս ճակատային կտրվածքից։", "Детали просто приставляют друг к другу и сбивают гвоздями или шурупами. Быстро, но слабо: гвозди легко вылезают из торца.")),
+    P(150, 58, t("Halving joint", "Կիսահաստ միացում", "Соединение вполдерева"), t("Half the thickness is cut away from each part, so they overlap and stay flush. Used in frames and stools.", "Ամեն մասից կտրվում է հաստության կեսը, որ դրանք ծածկեն իրար և հավասար մնան։ Օգտագործվում է շրջանակներում և աթոռակներում։", "От каждой детали срезают половину толщины, и они накладываются, оставаясь вровень. Применяется в рамах и табуретах.")),
+    P(238, 26, t("Mortise and tenon", "Փորակ և ելուստ", "Шип и паз"), t("A tongue (the tenon) fits tightly into a slot (the mortise) and is glued. Very strong: chairs and tables are made this way.", "Լեզվակը՝ ելուստը, ամուր մտնում է ակոսի՝ փորակի մեջ և սոսնձվում։ Շատ ամուր է․ աթոռներն ու սեղաններն այսպես են պատրաստում։", "Выступ (шип) плотно входит в гнездо (паз) и приклеивается. Очень прочно: так делают стулья и столы.")),
+    P(56, 136, t("Dowel joint", "Նագելային միացում", "Соединение на шкантах"), t("Round wooden pins with glue fit into matching holes in both parts. The holes must line up exactly.", "Կլոր փայտե գամերը սոսնձով մտնում են երկու մասերի համապատասխան անցքերը։ Անցքերը պետք է ճշգրիտ համընկնեն։", "Круглые деревянные шканты с клеем входят в совпадающие отверстия обеих деталей. Отверстия должны точно совпасть.")),
+    P(144, 128, t("Dovetail", "Ագռավաբույն", "Ласточкин хвост"), t("Wedge-shaped tails lock into pins and cannot be pulled apart in one direction. Strong and beautiful, used on drawers.", "Սեպաձև ելուստները կողպվում են իրար մեջ և մի ուղղությամբ չեն կարող դուրս քաշվել։ Ամուր է և գեղեցիկ, օգտագործվում է դարակներում։", "Клиновидные шипы запираются друг в друге, и в одну сторону их не растащить. Прочно и красиво, применяется в ящиках.")),
+    P(30, 138, t("Hidden lines", "Թաքնված գծեր", "Невидимые линии"), t("Dashed lines show the holes and slots hidden inside the wood, as on a technical drawing.", "Ընդհատ գծերը ցույց են տալիս փայտի ներսում թաքնված անցքերն ու ակոսները, ինչպես տեխնիկական գծագրում։", "Штриховые линии показывают скрытые внутри дерева отверстия и пазы, как на техническом чертеже.")),
+    P(240, 126, t("Fasteners", "Ամրակներ", "Крепёж"), t("A nail holds by friction, a screw by its thread, which grips much harder. Wood glue joins the fibres and is often stronger than the wood itself.", "Մեխը պահվում է շփման շնորհիվ, իսկ պտուտակը՝ պարույրի, որն ավելի ամուր է բռնում։ Փայտի սոսինձը միացնում է թելիկները և հաճախ փայտից էլ ամուր է։", "Гвоздь держится трением, шуруп — резьбой, которая держит гораздо крепче. Столярный клей соединяет волокна и часто прочнее самого дерева.")),
+  ],
+};
+
+/* ---------------- grade 6: sitting well at a desk ---------------- */
+
+const LIMB = { stroke: "#2563eb", strokeWidth: 12, strokeLinecap: "round", fill: "none" } as const;
+const Rt = ({ x, y, a }: { x: number; y: number; a: number }) => (
+  <path d={`M${x},${y} m${8 * Math.cos(a)},${8 * Math.sin(a)} l${8 * Math.cos(a + Math.PI / 2)},${8 * Math.sin(a + Math.PI / 2)} l${-8 * Math.cos(a)},${-8 * Math.sin(a)}`} fill="none" stroke="#dc2626" strokeWidth="1.4" />
+);
+
+const ergochair: Diagram = {
+  title: t("Sitting well at a desk", "Ճիշտ նստել սեղանի մոտ", "Правильная посадка за столом"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      <rect x="0" y="196" width="320" height="18" fill="#e2e8f0" />
+      {/* chair */}
+      <rect x="64" y="140" width="62" height="8" rx="3" fill="#475569" />
+      <rect x="58" y="78" width="9" height="70" rx="3" fill="#475569" />
+      <rect x="90" y="148" width="6" height="40" fill="#64748b" />
+      <path d="M68,196 L93,186 L118,196" fill="none" stroke="#64748b" strokeWidth="4" />
+      {/* desk and screen */}
+      <rect x="140" y="106" width="150" height="7" fill={WOOD} />
+      <rect x="276" y="113" width="8" height="83" fill={WOOD_D} />
+      <rect x="234" y="96" width="24" height="10" fill="#64748b" />
+      <rect x="242" y="44" width="8" height="54" rx="2" fill="#1e293b" />
+      <rect x="150" y="100" width="40" height="5" rx="1" fill="#cbd5e1" />
+      {/* the person */}
+      <path d="M96,134 L146,134 L146,190 L164,192" {...LIMB} strokeLinejoin="round" />
+      <path d="M96,134 L90,74" {...LIMB} strokeWidth={18} />
+      <path d="M90,80 L100,108 L150,100" {...LIMB} strokeLinejoin="round" />
+      <circle cx="94" cy="52" r="15" fill="#fcd9b6" />
+      <path d="M80,48 q4,-16 20,-14 q8,2 9,10 q-14,-6 -29,4 Z" fill="#78350f" />
+      <circle cx="103" cy="50" r="1.8" fill="#1e293b" />
+      <rect x="67" y="104" width="14" height="22" rx="6" fill="#f59e0b" />
+      <circle cx="30" cy="60" r="13" fill="#fff" stroke="#475569" strokeWidth="2" /><path d="M30,52 V60 L36,63" fill="none" stroke="#475569" strokeWidth="1.8" />
+      {/* lines */}
+      <line x1="104" x2="242" y1="50" y2="48" stroke="#16a34a" strokeWidth="1.2" strokeDasharray="4 3" />
+      <line x1="104" x2="242" y1="50" y2="70" stroke="#16a34a" strokeWidth="1.2" strokeDasharray="4 3" />
+      <DimArrow x1={108} y1={30} x2={242} y2={30} />
+      <Tx x={175} y={26} s={t("50–70 cm", "50–70 սմ", "50–70 см")} lang={lang} size={8.5} fill="#0f172a" />
+      <Rt x={146} y={134} a={Math.PI} /><Rt x={146} y={134} a={Math.PI / 2} />
+      <Rt x={100} y={108} a={-Math.PI / 2 - 0.35} />
+      <Rt x={96} y={134} a={-Math.PI / 2} />
+    </g>
+  ),
+  parts: [
+    P(262, 46, t("Screen at eye level", "Էկրանը՝ աչքերի մակարդակին", "Экран на уровне глаз"), t("The top of the screen should be level with your eyes or a little lower, so you look slightly down and your neck stays relaxed.", "Էկրանի վերին եզրը պետք է լինի աչքերի մակարդակին կամ մի փոքր ցածր, որ թեթևակի ներքև նայես, և պարանոցդ թուլացած մնա։", "Верх экрана должен быть на уровне глаз или чуть ниже, чтобы ты смотрел немного вниз, а шея оставалась расслабленной.")),
+    P(175, 38, t("Distance", "Հեռավորություն", "Расстояние"), t("About an arm's length, 50–70 cm, from the eyes to a screen; about 30–35 cm to a book.", "Մոտ մեկ ձեռքի երկարություն՝ 50–70 սմ աչքերից մինչև էկրան, և մոտ 30–35 սմ՝ մինչև գիրք։", "Примерно вытянутая рука, 50–70 см, от глаз до экрана; до книги около 30–35 см.")),
+    P(74, 115, t("Back support", "Մեջքի հենարան", "Опора для спины"), t("Sit right back in the chair. A small cushion in the curve of the lower back keeps the spine in its natural shape.", "Նստի՛ր աթոռի խորքում։ Գոտկատեղի կորության մեջ դրված փոքր բարձիկը ողնաշարը պահում է իր բնական ձևում։", "Садись глубоко на стул. Маленькая подушка в изгибе поясницы сохраняет естественную форму позвоночника.")),
+    P(112, 100, t("Elbows at 90°", "Արմունկները՝ 90°", "Локти под 90°"), t("Shoulders relaxed, elbows bent at about a right angle, forearms resting on the desk.", "Ուսերը թուլացած են, արմունկները ծալված են մոտավորապես ուղիղ անկյան տակ, նախաբազուկները հենված են սեղանին։", "Плечи расслаблены, локти согнуты примерно под прямым углом, предплечья лежат на столе.")),
+    P(158, 146, t("Knees at 90°", "Ծնկները՝ 90°", "Колени под 90°"), t("The seat should be at the height of your knees, so your thighs are level and your knees bent at a right angle.", "Նստատեղը պետք է լինի ծնկներիդ բարձրությամբ, որ ազդրերը հորիզոնական լինեն, իսկ ծնկները ծալված լինեն ուղիղ անկյան տակ։", "Сиденье должно быть на высоте колен, чтобы бёдра были горизонтальны, а колени согнуты под прямым углом.")),
+    P(168, 182, t("Feet flat", "Ոտնաթաթերը՝ հատակին", "Стопы на полу"), t("Both feet flat on the floor. If they do not reach, put a footrest or a thick book under them.", "Երկու ոտնաթաթն էլ ամբողջությամբ հատակին են։ Եթե չեն հասնում, տակը ոտքի հենարան կամ հաստ գիրք դիր։", "Обе стопы полностью стоят на полу. Если не достают, подставь подставку или толстую книгу.")),
+    P(30, 82, t("Take breaks", "Ընդմիջումներ արա", "Делай перерывы"), t("Even the best position tires you. Every 30–40 minutes stand up, stretch and look into the distance for a minute.", "Նույնիսկ լավագույն դիրքը հոգնեցնում է։ Ամեն 30–40 րոպեն մեկ վեր կաց, ձգվի՛ր և մեկ րոպե նայի՛ր հեռուն։", "Даже самая удобная поза утомляет. Каждые 30–40 минут вставай, потягивайся и минуту смотри вдаль.")),
+  ],
+};
+
+/* ---------------- grade 6: the apron pattern on the fabric ---------------- */
+
+const GrainArrow = ({ x, y1, y2 }: { x: number; y1: number; y2: number }) => (
+  <path d={`M${x},${y1} V${y2} M${x - 3},${y1 + 5} l3,-5 l3,5 M${x - 3},${y2 - 5} l3,5 l3,-5`} fill="none" stroke="#1e293b" strokeWidth="1" />
+);
+
+const apronpattern: Diagram = {
+  title: t("Laying out an apron pattern", "Գոգնոցի ձևվածքի դասավորում", "Раскладка выкройки фартука"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="10" y="10" width="300" height="196" fill="#fce7f3" />
+      {Array.from({ length: 30 }, (_, j) => <line key={j} x1={10 + j * 10} x2={10 + j * 10} y1="10" y2="206" stroke="#fbcfe8" strokeWidth="0.6" />)}
+      <line x1="12" x2="12" y1="10" y2="206" stroke="#be185d" strokeWidth="1.6" strokeDasharray="12 3 2 3" />
+      <rect x="306" y="10" width="4" height="196" fill="#f9a8d4" />
+      {/* main body, half on the fold */}
+      <path d="M12,24 H52 Q54,64 72,76 Q104,80 112,88 V196 H12 Z" fill="#fff" stroke="#1e293b" strokeWidth="1.6" />
+      <path d="M12,18 H58 Q60,60 76,70 Q110,74 118,84 V202 H12" fill="none" stroke="#1e293b" strokeWidth="0.8" strokeDasharray="4 3" />
+      <path d="M112,140 l-6,-3 v6 Z" fill="#1e293b" />
+      <GrainArrow x={92} y1={150} y2={190} />
+      <Tx x={20} y={112} s={t("bib and skirt|×1|on the fold", "կրծքամաս և փեշ|×1|ծալքի վրա", "нагрудник|и полотнище|×1, со сгибом")} lang={lang} size={7.5} fill="#1e293b" anchor="start" />
+      {/* ties and neck strap, cut along the warp */}
+      {[244, 264, 284].map((x, j) => (
+        <g key={x}>
+          <rect x={x} y="18" width="14" height="180" fill="#fff" stroke="#1e293b" strokeWidth="1.4" />
+          <GrainArrow x={x + 7} y1={24} y2={64} />
+          <g transform={`rotate(-90 ${x + 9.5} 130)`}><Tx x={x + 9.5} y={130} s={j < 2 ? t("tie ×2", "կապ ×2", "завязка ×2") : t("neck strap ×1", "պարանոցի կապ ×1", "лямка ×1")} lang={lang} size={7} fill="#1e293b" /></g>
+        </g>
+      ))}
+      {/* pocket */}
+      <rect x="146" y="100" width="70" height="60" fill="#fff" stroke="#1e293b" strokeWidth="1.4" />
+      <line x1="146" x2="216" y1="110" y2="110" stroke="#1e293b" strokeWidth="0.8" strokeDasharray="4 3" />
+      <GrainArrow x={156} y1={118} y2={154} />
+      <Tx x={190} y={138} s={t("pocket ×1", "գրպան ×1", "карман ×1")} lang={lang} size={7} fill="#1e293b" />
+      <g transform="rotate(-90 316 110)"><Tx x={316} y={110} s={t("selvedge", "եզրաշերտ", "кромка")} lang={lang} size={7} fill="#be185d" /></g>
+    </g>
+  ),
+  parts: [
+    P(20, 40, t("Fold", "Ծալք", "Сгиб"), t("The fabric is folded in half and the half-pattern is placed against the fold. When you open it out, the piece is perfectly symmetrical.", "Գործվածքը ծալվում է կիսով չափ, և ձևվածքի կեսը դրվում է ծալքին։ Բացելիս մասը կատարյալ համաչափ է ստացվում։", "Ткань складывают пополам и прикладывают половину выкройки к сгибу. Когда развернёшь, деталь получится идеально симметричной.")),
+    P(100, 176, t("Grain arrow", "Թելի ուղղության սլաք", "Долевая нить"), t("The arrow on every piece must run along the warp, parallel to the selvedge, or the apron will twist after washing.", "Ամեն մասի սլաքը պետք է ուղղված լինի հենքի երկայնքով՝ եզրաշերտին զուգահեռ, այլապես լվանալուց հետո գոգնոցը կծռվի։", "Стрелка на каждой детали должна идти вдоль нитей основы, параллельно кромке, иначе после стирки фартук перекосит.")),
+    P(124, 104, t("Seam allowance", "Կարի պաշար", "Припуск на шов"), t("Cut 1–1.5 cm outside the pattern line (the dashed line): this margin goes into the seam.", "Կտրի՛ր ձևվածքի գծից 1–1,5 սմ դուրս (ընդհատ գիծը)․ այս պաշարը գնում է կարի մեջ։", "Режь на 1–1,5 см дальше линии выкройки (штриховая линия): этот запас уходит в шов.")),
+    P(104, 140, t("Notch", "Նշակետ", "Надсечка"), t("A little mark showing where a tie is sewn on. Notches help match pieces exactly.", "Փոքրիկ նշան, որը ցույց է տալիս, թե որտեղ է կարվում կապը։ Նշակետերն օգնում են մասերը ճշգրիտ համապատասխանեցնել։", "Маленькая метка, показывающая, где пришивается завязка. Надсечки помогают точно совместить детали.")),
+    P(36, 90, t("Measurements", "Չափեր", "Мерки"), t("The pattern is drawn from your measurements: half the waist, the length from waist to knee and the bib height.", "Ձևվածքը գծվում է քո չափերով՝ գոտկատեղի կեսը, երկարությունը գոտկատեղից մինչև ծունկ և կրծքամասի բարձրությունը։", "Выкройку строят по твоим меркам: половина обхвата талии, длина от талии до колена и высота нагрудника.")),
+    P(291, 40, t("Ties and strap", "Կապեր և ժապավեն", "Завязки и лямка"), t("Long strips are cut too. Folded and stitched, they become the ties and the neck strap.", "Կտրում են նաև երկար շերտեր։ Ծալված և կարված՝ դրանք դառնում են կապեր և պարանոցի ժապավեն։", "Ещё вырезают длинные полосы. Сложенные и прострочённые, они станут завязками и лямкой.")),
+    P(200, 92, t("Pocket", "Գրպան", "Карман"), t("The top edge of the pocket is folded over twice and stitched before the pocket is sewn on.", "Գրպանի վերին եզրն երկու անգամ ծալվում և կարվում է, նախքան գրպանը կարելը։", "Верхний край кармана дважды подгибают и прострачивают, прежде чем пришить карман.")),
+  ],
+};
+
+/* ---------------- grade 6: temperatures that keep food safe ---------------- */
+
+const TY = (c: number) => 200 - (c + 20) * 1.24;
+
+const foodtemp: Diagram = {
+  title: t("Temperatures and food safety", "Ջերմաստիճան և սննդի անվտանգություն", "Температура и безопасность еды"),
+  h: 214,
+  draw: (lang) => (
+    <g>
+      <rect x="0" y="0" width="320" height="214" fill="#f8fafc" />
+      <rect x="54" y={TY(60)} width="236" height={TY(5) - TY(60)} fill="#fee2e2" />
+      <Tx x={286} y={TY(60) + 12} s={t("danger zone 5–60 °C", "վտանգավոր գոտի 5–60 °C", "опасная зона 5–60 °C")} lang={lang} size={8} fill="#b91c1c" anchor="end" />
+      {/* thermometer */}
+      <rect x="30" y="14" width="16" height="190" rx="8" fill="#fff" stroke="#94a3b8" />
+      <rect x="35" y={TY(121)} width="6" height={200 - TY(121)} rx="3" fill="#ef4444" />
+      <circle cx="38" cy="204" r="9" fill="#ef4444" />
+      {[[121, t("121 °C: canning under pressure", "121 °C․ պահածոյացում ճնշման տակ", "121 °C: консервирование под давлением"), "#7c3aed"], [100, t("100 °C: boiling kills most microbes", "100 °C․ եռալը սպանում է մանրէների մեծ մասը", "100 °C: кипячение убивает большинство микробов"), "#7c3aed"], [75, t("75 °C: well cooked and reheated food", "75 °C․ լավ եփված և տաքացված սնունդ", "75 °C: хорошо приготовленная и разогретая еда"), "#ea580c"], [37, t("37 °C: microbes multiply fastest", "37 °C․ մանրէներն ամենաարագն են բազմանում", "37 °C: микробы размножаются быстрее всего"), "#b91c1c"], [4, t("4 °C: fridge", "4 °C․ սառնարան", "4 °C: холодильник"), "#0284c7"], [-18, t("−18 °C: freezer", "−18 °C․ սառցախցիկ", "−18 °C: морозилка"), "#0369a1"]].map(([c, s, col]) => (
+        <g key={c as number}>
+          <line x1="46" x2="58" y1={TY(c as number)} y2={TY(c as number)} stroke={col as string} strokeWidth="2" />
+          <Tx x={62} y={TY(c as number) + 3} s={s as Tr} lang={lang} size={7.5} fill={col as string} anchor="start" />
+        </g>
+      ))}
+      {/* doubling bacteria */}
+      {[[1, 210, 128], [8, 236, 128], [64, 266, 128]].map(([n, x]) => (
+        <g key={n}>{Array.from({ length: Math.min(n, 16) }, (_, j) => <ellipse key={j} cx={x + (j % 4) * 5} cy={140 + Math.floor(j / 4) * 5} rx="2.2" ry="1.4" fill="#16a34a" />)}</g>
+      ))}
+      <Tx x={250} y={170} s={t("1 → 8 → 64 in 2 hours", "1 → 8 → 64՝ 2 ժամում", "1 → 8 → 64 за 2 часа")} lang={lang} size={7} fill="#15803d" />
+    </g>
+  ),
+  parts: [
+    P(20, TY(30), t("Danger zone", "Վտանգավոր գոտի", "Опасная зона"), t("Between 5 and 60 °C most microbes that spoil food or make us ill can grow. Do not leave cooked food out for more than about two hours.", "5-ից 60 °C-ի միջև սնունդը փչացնող կամ մեզ հիվանդացնող մանրէների մեծ մասը կարող է աճել։ Եփած սնունդը մի՛ թող սենյակում մոտ երկու ժամից ավելի։", "От 5 до 60 °C могут расти большинство микробов, которые портят еду или вызывают болезни. Не оставляй приготовленную еду на столе дольше примерно двух часов.")),
+    P(250, 132, t("Doubling", "Կրկնապատկում", "Удвоение"), t("In warm, moist food some bacteria divide every 20 minutes: one becomes 8 in an hour, 64 in two hours and over 500 in three.", "Տաք, խոնավ սննդում որոշ բակտերիաներ բաժանվում են ամեն 20 րոպեն մեկ․ մեկը մեկ ժամում դառնում է 8, երկու ժամում՝ 64, իսկ երեքում՝ ավելի քան 500։", "В тёплой влажной еде некоторые бактерии делятся каждые 20 минут: из одной за час получается 8, за два — 64, за три — больше 500.")),
+    P(20, TY(4), t("Fridge", "Սառնարան", "Холодильник"), t("At 0–5 °C microbes slow down but do not die. That is why food in the fridge still keeps only a few days.", "0–5 °C-ում մանրէները դանդաղում են, բայց չեն մահանում։ Ահա թե ինչու սառնարանում սնունդը պահվում է ընդամենը մի քանի օր։", "При 0–5 °C микробы замедляются, но не погибают. Поэтому в холодильнике еда хранится лишь несколько дней.")),
+    P(20, TY(-18), t("Freezer", "Սառցախցիկ", "Морозилка"), t("At −18 °C microbes stop growing completely, so frozen food keeps for months. When it thaws they wake up again.", "−18 °C-ում մանրէներն ամբողջովին դադարում են աճել, ուստի սառեցված սնունդը պահվում է ամիսներով։ Երբ այն հալվում է, նրանք նորից արթնանում են։", "При −18 °C микробы совсем перестают расти, поэтому замороженная еда хранится месяцами. Когда она оттаивает, они снова просыпаются.")),
+    P(20, TY(75), t("Cooking", "Եփում", "Готовка"), t("Food heated right through to 75 °C is safe. Reheat leftovers until they are steaming hot, and only once.", "Մինչև 75 °C ամբողջությամբ տաքացած սնունդն անվտանգ է։ Մնացորդները տաքացրու մինչև գոլորշի արձակեն, և միայն մեկ անգամ։", "Еда, прогретая насквозь до 75 °C, безопасна. Разогревай остатки до горячего пара и только один раз.")),
+    P(20, TY(121), t("Canning", "Պահածոյացում", "Консервирование"), t("Jars heated and sealed so no microbes can get in keep for a year or more. A swollen lid means microbes are growing inside: throw it away.", "Տաքացված և հերմետիկ փակված բանկաները, որոնց մեջ մանրէներ չեն կարող ներթափանցել, պահվում են մեկ տարի և ավելի։ Ուռած կափարիչը նշանակում է, որ ներսում մանրէներ են աճում․ դեն նետի՛ր։", "Прогретые и герметично закрытые банки, куда не могут попасть микробы, хранятся год и больше. Вздутая крышка значит, что внутри растут микробы: выброси банку.")),
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { materials, desk, collage, nature, housenet, weave, sandwich, carpet, bins, table, designcycle, techdrawing, torch, woodlog, workbench, wiretools, views, weaves3, sewmachine, plate, carelabel, joints, ergochair, apronpattern, foodtemp };

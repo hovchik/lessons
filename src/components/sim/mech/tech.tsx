@@ -1276,4 +1276,183 @@ const lockstitch: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom, board, lockstitch };
+/* ---------------- grade 6: hanging a picture with a wall plug ---------------- */
+
+const WALL = "#d6d3d1", PLUG = "#facc15";
+
+const wallplug: Mech = {
+  title: t("Hanging a picture with a wall plug", "Նկարի կախում դյուբելով", "Вешаем картину на дюбель"),
+  hint: t("A cut through the wall, seen from the side.", "Պատի կտրվածք՝ կողքից տեսքով։", "Разрез стены, вид сбоку."),
+  caps: [
+    t("Before drilling, run a detector over the wall: hidden pipes and electric cables must not be hit. Then mark the spot with a pencil.", "Ծակելուց առաջ դետեկտորն անցկացրու պատի վրայով․ չի կարելի դիպչել թաքնված խողովակներին և էլեկտրական մալուխներին։ Հետո տեղը նշի՛ր մատիտով։", "Перед сверлением проведи детектором по стене: нельзя попасть в скрытые трубы и электрические кабели. Потом отметь место карандашом."),
+    t("With an adult, drill a hole as wide as the plug and a little deeper than it, wearing safety glasses.", "Մեծահասակի հետ պաշտպանիչ ակնոցով ծակի՛ր դյուբելի լայնությամբ և դրանից մի փոքր ավելի խորն անցք։", "Вместе со взрослым, в защитных очках, просверли отверстие шириной с дюбель и чуть глубже его."),
+    t("Blow out the dust and push the plastic plug in until it is level with the wall. Tap it gently with a hammer if needed.", "Մաքրի՛ր փոշին և պլաստմասե դյուբելը մտցրու այնքան, որ պատի հետ հավասարվի։ Անհրաժեշտության դեպքում մուրճով թեթև խփի՛ր։", "Выдуй пыль и вставь пластиковый дюбель вровень со стеной. Если нужно, слегка постучи молотком."),
+    t("Turn the screw in. As it goes deeper it pushes the plug apart, and the plug presses hard against the wall of the hole.", "Պտուտակը պտտելով մտցրու։ Որքան խորն է մտնում, այնքան լայնացնում է դյուբելը, և դյուբելն ուժեղ սեղմվում է անցքի պատերին։", "Вкручивай шуруп. Чем глубже он входит, тем сильнее распирает дюбель, и тот плотно прижимается к стенкам отверстия."),
+    t("Leave the head sticking out a few millimetres and hang the picture. Check it with a spirit level.", "Գլխիկը թող մի քանի միլիմետր դուրս մնա և կախի՛ր նկարը։ Ստուգի՛ր հարթաչափով։", "Оставь шляпку выступать на несколько миллиметров и повесь картину. Проверь уровнем."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 4) {
+      const off = lerp(-30, 0, k);
+      return (
+        <g>
+          <rect x="0" y="0" width="320" height="220" fill="#f5f5f4" />
+          <circle cx="160" cy="50" r="4" fill="#64748b" />
+          <g transform={`translate(0 ${off})`}>
+            <path d="M110,100 L160,52 L210,100" fill="none" stroke="#475569" strokeWidth="1.5" />
+            <rect x="100" y="96" width="120" height="86" fill="#92400e" />
+            <rect x="110" y="106" width="100" height="66" fill="#bae6fd" />
+            <path d="M110,172 L140,130 L160,150 L180,120 L210,172 Z" fill="#16a34a" />
+            <circle cx="190" cy="122" r="7" fill="#fde047" />
+          </g>
+          <rect x="110" y="196" width="100" height="14" rx="3" fill="#facc15" stroke="#a16207" />
+          <rect x="152" y="199" width="16" height="8" rx="4" fill="#bbf7d0" stroke="#16a34a" />
+          <circle cx="160" cy="203" r="2.5" fill="#16a34a" opacity={k} />
+        </g>
+      );
+    }
+    const depth = i === 0 ? 0 : i === 1 ? 74 * k : 74;
+    const plugX = i < 2 ? null : i === 2 ? lerp(210, 80, k) : 80;
+    const swell = i === 3 ? 3 * Math.max(0, (k - 0.3) / 0.7) : 0;
+    const tip = i === 3 ? lerp(220, 86, k) : null;
+    return (
+      <g>
+        {/* the wall in section */}
+        <rect x="0" y="10" width="140" height="200" fill={WALL} />
+        <defs><clipPath id="wp-wall"><rect x="0" y="10" width="140" height="200" /></clipPath></defs>
+        <g clipPath="url(#wp-wall)">{Array.from({ length: 16 }, (_, j) => <line key={j} x1={j * 12 - 60} x2={j * 12 + 20} y1="210" y2="10" stroke="#a8a29e" strokeWidth="0.7" />)}</g>
+        <rect x="128" y="10" width="12" height="200" fill="#f5f5f4" />
+        {/* hidden pipe and cable */}
+        <circle cx="100" cy="40" r="7" fill="#dc2626" stroke="#7f1d1d" />
+        <circle cx="96" cy="180" r="10" fill="#93c5fd" stroke="#1e40af" />
+        <rect x="0" y="0" width="140" height="10" fill="#fff" />
+        <rect x="0" y="210" width="140" height="10" fill="#fff" />
+        {depth > 0 ? <rect x={140 - depth} y={104 - swell} width={depth} height={12 + 2 * swell} fill="#57534e" /> : null}
+        {i === 0 ? (
+          <g transform={`translate(0 ${lerp(30, 190, k) - 110})`}>
+            <rect x="142" y="92" width="30" height="36" rx="5" fill="#334155" />
+            <circle cx="157" cy="104" r="5" fill={Math.abs(lerp(30, 190, k) - 40) < 22 || Math.abs(lerp(30, 190, k) - 180) < 24 ? "#ef4444" : "#22c55e"} />
+          </g>
+        ) : null}
+        {i === 0 && k > 0.95 ? <path d="M138,106 l8,8 M146,106 l-8,8" stroke="#1e293b" strokeWidth="2" /> : null}
+        {i === 1 ? (
+          <g transform={`translate(${140 - depth} 0)`}>
+            <rect x="0" y="107" width="84" height="6" fill="#94a3b8" />
+            {Array.from({ length: 8 }, (_, j) => <path key={j} d={`M${4 + j * 10},107 l6,6`} stroke="#475569" />)}
+            <rect x="84" y="96" width="60" height="28" rx="6" fill="#16a34a" />
+            <rect x="110" y="124" width="18" height="40" rx="4" fill="#15803d" />
+            {k > 0.1 && k < 0.98 ? [0, 1, 2].map((j) => <circle key={j} cx={-2 + depth - 4 + j * 4} cy={120 + ((p * 60 + j * 9) % 30)} r="1.5" fill="#78716c" />) : null}
+          </g>
+        ) : null}
+        {plugX !== null ? (
+          <g>
+            <path d={`M${plugX},${106 - swell} H${plugX + 58} V${114 + swell} H${plugX} Z`} fill={PLUG} stroke="#a16207" />
+            {Array.from({ length: 6 }, (_, j) => <path key={j} d={`M${plugX + 6 + j * 9},${106 - swell} v-2 M${plugX + 6 + j * 9},${114 + swell} v2`} stroke="#a16207" strokeWidth="1.5" />)}
+            <rect x={plugX + 56} y="102" width="4" height="16" fill={PLUG} stroke="#a16207" />
+          </g>
+        ) : null}
+        {tip !== null ? (
+          <g>
+            <path d={`M${tip},110 L${tip + 8},107 H${tip + 66} V113 H${tip + 8} Z`} fill="#94a3b8" stroke="#475569" strokeWidth="0.8" />
+            {Array.from({ length: 10 }, (_, j) => <line key={j} x1={tip + 10 + j * 5 + ((p * 40) % 5)} x2={tip + 12 + j * 5 + ((p * 40) % 5)} y1="107" y2="113" stroke="#475569" strokeWidth="0.8" />)}
+            <rect x={tip + 66} y="102" width="5" height="16" rx="1.5" fill="#64748b" />
+            {k > 0.6 ? <g><path d="M110,94 v-8 M106,90 l4,-5 l4,5 M110,126 v8 M106,130 l4,5 l4,-5" fill="none" stroke="#dc2626" strokeWidth="2" /></g> : null}
+          </g>
+        ) : null}
+        <Tx x={70} y={30} s={t("cable", "մալուխ", "кабель")} lang={lang} size={8} fill="#7f1d1d" />
+        <Tx x={60} y={202} s={t("water pipe", "ջրատար խողովակ", "водопровод")} lang={lang} size={8} fill="#1e40af" />
+        <Tx x={232} y={200} s={t("wall", "պատ", "стена")} lang={lang} size={9} fill="#57534e" anchor="end" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 6: baking lavash in a tonir ---------------- */
+
+const LAV = "#fde9c4", LAV_D = "#e7c98f";
+
+const lavash: Mech = {
+  title: t("Baking lavash in a tonir", "Լավաշի թխում թոնրում", "Выпекаем лаваш в тонире"),
+  caps: [
+    t("Knead a stiff dough of flour, water and salt and leave it to rest. Divide it into balls.", "Ալյուրից, ջրից և աղից պինդ խմոր հունցի՛ր և թող հանգստանա։ Բաժանի՛ր գնդերի։", "Замеси крутое тесто из муки, воды и соли и дай ему отдохнуть. Раздели на шарики."),
+    t("Roll each ball out with a long thin rolling pin until it is almost see-through.", "Ամեն գունդն երկար, բարակ գրտնակով բացի՛ր, մինչև գրեթե թափանցիկ դառնա։", "Раскатай каждый шарик длинной тонкой скалкой, пока он не станет почти прозрачным."),
+    t("Stretch the thin sheet over an oval cushion, the batat, tossing it from hand to hand.", "Բարակ թերթը ձգի՛ր օվալաձև բարձիկի՝ բաթաթի վրա՝ ձեռքից ձեռք նետելով։", "Растяни тонкий пласт на овальной подушке — батате, перебрасывая его из руки в руку."),
+    t("With one quick movement slap the sheet onto the hot clay wall of the tonir. It sticks there and bakes in less than a minute.", "Մեկ արագ շարժումով թերթը խփի՛ր թոնրի տաք կավե պատին։ Այն կպչում է այնտեղ և թխվում է մեկ րոպեից էլ քիչ ժամանակում։", "Одним быстрым движением прилепи пласт к горячей глиняной стенке тонира. Он прилипает и выпекается меньше чем за минуту."),
+    t("Lift it out with a long iron hook and stack the sheets. Dried lavash keeps for months: sprinkle it with water and it turns soft again.", "Երկար երկաթե կեռով հանի՛ր և թերթերը դարսի՛ր։ Չորացրած լավաշը պահվում է ամիսներով․ ջուր ցողիր, և այն նորից կփափկի։", "Достань его длинным железным крюком и сложи листы стопкой. Сушёный лаваш хранится месяцами: сбрызни водой, и он снова станет мягким."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const tonir = (
+      <g>
+        <rect x="0" y="70" width="320" height="150" fill="#a16207" opacity="0.35" />
+        <path d="M84,70 L110,206 H210 L236,70 H218 L196,190 H124 L102,70 Z" fill="#b45309" />
+        <path d="M102,70 L124,190 H196 L218,70 Z" fill="#451a03" />
+        {[0, 1, 2].map((j) => <ellipse key={j} cx={140 + j * 20} cy={186 - 4 * Math.abs(Math.sin(p * 9 + j))} rx="12" ry={8 + 4 * Math.abs(Math.sin(p * 7 + j))} fill={j === 1 ? "#fbbf24" : "#f97316"} opacity="0.9" />)}
+        <Tx x={300} y={210} s={t("tonir", "թոնիր", "тонир")} lang={lang} size={9} fill="#fff" anchor="end" />
+      </g>
+    );
+    if (i === 0) {
+      const sq = 1 + 0.25 * Math.abs(Math.sin(p * Math.PI * 4));
+      return (
+        <g>
+          <rect x="40" y="150" width="240" height="14" rx="4" fill="#d97706" />
+          <ellipse cx="160" cy={150 - 26 / sq} rx={34 * sq} ry={26 / sq} fill={LAV} stroke={LAV_D} />
+          {[0, 1, 2, 3].map((j) => <circle key={j} cx={60 + j * 18} cy="140" r={k > j / 4 ? 9 : 0} fill={LAV} stroke={LAV_D} />)}
+          <Tx x={250} y={60} s={t("flour + water + salt", "ալյուր + ջուր + աղ", "мука + вода + соль")} lang={lang} size={9} fill="#92400e" />
+        </g>
+      );
+    }
+    if (i === 1) {
+      const w = lerp(30, 120, k);
+      return (
+        <g>
+          <rect x="20" y="150" width="280" height="14" rx="4" fill="#d97706" />
+          <ellipse cx="160" cy="146" rx={w} ry={lerp(10, 4, k)} fill={LAV} stroke={LAV_D} opacity={lerp(1, 0.75, k)} />
+          <rect x={160 + w * Math.sin(p * Math.PI * 6) - 70} y="128" width="140" height="8" rx="4" fill="#92400e" />
+        </g>
+      );
+    }
+    if (i === 2) {
+      const toss = Math.sin(p * Math.PI * 4);
+      return (
+        <g>
+          <ellipse cx="160" cy="150" rx="70" ry="22" fill="#78350f" />
+          <ellipse cx="160" cy="146" rx="70" ry="22" fill="#a16207" />
+          <path d={`M${80 - 20 * k},${130 - 20 * toss} Q160,${110 - 30 * toss} ${240 + 20 * k},${130 + 20 * toss} Q160,${160 - 10 * toss} ${80 - 20 * k},${130 - 20 * toss} Z`} fill={LAV} stroke={LAV_D} opacity="0.95" />
+          <Tx x={160} y={196} s={t("batat cushion", "բաթաթ", "батат")} lang={lang} size={9} fill="#78350f" />
+        </g>
+      );
+    }
+    if (i === 3) {
+      const hand = mix([160, 30], [124, 120], k);
+      const stuck = k > 0.98;
+      return (
+        <g>
+          {tonir}
+          {!stuck ? (
+            <g transform={`translate(${hand[0]} ${hand[1]}) rotate(${lerp(0, 70, k)})`}>
+              <ellipse cx="0" cy="0" rx="34" ry="12" fill="#a16207" />
+              <ellipse cx="0" cy="-6" rx="36" ry="10" fill={LAV} stroke={LAV_D} />
+            </g>
+          ) : (
+            <path d="M106,84 Q118,120 120,160 L130,158 Q126,120 114,84 Z" fill={LAV} stroke={LAV_D} />
+          )}
+          {stuck ? <Tx x={250} y={50} s={t("in about 30–60 seconds!", "մոտ 30–60 վայրկյանում", "за 30–60 секунд!")} lang={lang} size={9} fill="#b45309" /> : null}
+        </g>
+      );
+    }
+    const lift = mix([118, 130], [250, 36], k);
+    const n = 3 + Math.floor(k * 4);
+    return (
+      <g>
+        {tonir}
+        <path d={`M${lift[0] + 30},${lift[1] - 60} L${lift[0]},${lift[1] - 10} q-4,8 4,10`} fill="none" stroke="#334155" strokeWidth="2.5" />
+        <path d={`M${lift[0] - 4},${lift[1]} q-6,30 0,50 h10 q6,-20 0,-50 Z`} fill="#f5d08a" stroke="#c48a3f" />
+        {[0, 1, 2, 3].map((j) => <circle key={j} cx={lift[0] + 2} cy={lift[1] + 8 + j * 11} r="2" fill="#a16207" />)}
+        {Array.from({ length: n }, (_, j) => <ellipse key={j} cx="40" cy={62 - j * 3} rx="28" ry="5" fill={j % 2 ? "#f5d08a" : "#fde9c4"} stroke="#c48a3f" strokeWidth="0.6" />)}
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { cup, hedgehog, tshirt, card, papermaking, symmetry, fox, running, button, popup, mosaic, wheel, backstitch, bean, coilpot, pompom, board, lockstitch, wallplug, lavash };
