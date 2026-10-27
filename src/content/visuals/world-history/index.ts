@@ -4,6 +4,7 @@ import { grade7 } from "./grade-7";
 import { grade8 } from "./grade-8";
 import { grade9 } from "./grade-9";
 import { grade10 } from "./grade-10";
+import { grade11 } from "./grade-11";
 
 /**
  * World history 6–12: tap-to-read timelines with BC/AD years, centuries and the years between
@@ -15,4 +16,5 @@ export const worldHistoryVisuals: VisualMap = {
   8: grade8,
   9: grade9,
   10: grade10,
+  11: grade11,
 };
