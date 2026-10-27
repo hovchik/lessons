@@ -9,6 +9,7 @@ import { grade8 } from "./grade-8";
 import { grade9 } from "./grade-9";
 import { grade10 } from "./grade-10";
 import { grade11 } from "./grade-11";
+import { grade12 } from "./grade-12";
 
 /**
  * English 2–12: the letter board, counting, compare tables (English, Armenian and Russian side
@@ -26,4 +27,5 @@ export const englishVisuals: VisualMap = {
   9: grade9,
   10: grade10,
   11: grade11,
+  12: grade12,
 };
