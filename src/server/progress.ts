@@ -39,7 +39,15 @@ export async function recordAttempt(input: {
  * lesson is marked completed. Returns null when the lesson or its quiz does not
  * exist, or the number of answers does not match the quiz.
  */
-export async function recordQuizResult(input: { userId: string; lessonId: string; answers: number[] }) {
+export async function recordQuizResult(input: {
+  userId: string;
+  lessonId: string;
+  answers: number[];
+  /** Per question, how sure the pupil was before checking: 0 guessing, 2 sure. */
+  confidence?: (number | null)[];
+  /** Per question, the option picked on the second try after a wrong first one (null when none). */
+  retries?: (number | null)[];
+}) {
   const db = await getDb();
   const lesson = await db
     .select({ id: schema.lessons.id, courseId: schema.lessons.courseId, quiz: schema.lessons.quiz, status: schema.lessons.status })
@@ -47,20 +55,27 @@ export async function recordQuizResult(input: { userId: string; lessonId: string
     .where(eq(schema.lessons.id, input.lessonId))
     .get();
   if (!lesson || lesson.status !== "published" || lesson.quiz.length === 0 || input.answers.length !== lesson.quiz.length) return null;
+  if (input.confidence && input.confidence.length !== lesson.quiz.length) return null;
+  if (input.retries && input.retries.length !== lesson.quiz.length) return null;
   const total = lesson.quiz.length;
+  // The score counts first tries; a second try after a hint is logged but does not count.
   const score = lesson.quiz.filter((q, i) => input.answers[i] === q.answer).length;
   await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score, total, answers: input.answers });
-  await recordAnswers(
-    input.userId,
-    lesson.quiz.map((q, i) => ({
-      itemId: quizItemId(lesson.id, i),
-      source: "quiz" as const,
-      refId: lesson.id,
-      courseId: lesson.courseId,
-      correct: input.answers[i] === q.answer,
-      choice: input.answers[i],
-    })),
-  );
+  const base = { source: "quiz" as const, refId: lesson.id, courseId: lesson.courseId };
+  const firsts = lesson.quiz.map((q, i) => ({
+    ...base,
+    itemId: quizItemId(lesson.id, i),
+    correct: input.answers[i] === q.answer,
+    choice: input.answers[i],
+    confidence: input.confidence?.[i] ?? null,
+  }));
+  const seconds = lesson.quiz.flatMap((q, i) => {
+    const r = input.retries?.[i];
+    // Only a wrong first answer gets a second try, and it must be a different option.
+    if (r == null || r >= q.options.length || input.answers[i] === q.answer || r === input.answers[i]) return [];
+    return [{ ...base, itemId: quizItemId(lesson.id, i), correct: r === q.answer, choice: r, hintUsed: true, schedule: false }];
+  });
+  await recordAnswers(input.userId, [...firsts, ...seconds]);
   const now = new Date().toISOString();
   const lp = schema.lessonProgress;
   // Best-score comparison happens inside the upsert so two overlapping

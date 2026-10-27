@@ -2,7 +2,7 @@ import { and, eq, lte, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { AnswerSource, StoredCard } from "./db/schema";
 import { newId } from "./user-auth";
-import { scheduleAnswer } from "@/lib/memory";
+import { parseItemId, scheduleAnswer } from "@/lib/memory";
 
 /**
  * The learner model: every answered question is logged in `answer_events` and
@@ -20,6 +20,11 @@ export type AnswerInput = {
   confidence?: number | null;
   ms?: number | null;
   hintUsed?: boolean;
+  /**
+   * False logs the answer without moving its card: a second try after a hint,
+   * or a lesson's quick check (which Daily Review cannot show).
+   */
+  schedule?: boolean;
 };
 
 /**
@@ -27,9 +32,9 @@ export type AnswerInput = {
  * Two submissions can overlap (two tabs, a double click), so each card is
  * updated optimistically: the write only lands if the card still has the
  * repetition count it was read with, otherwise it is read again and retried.
- * Returns each answer's card as it stands after that answer.
+ * Returns each answer's card as it stands after that answer (null when not scheduled).
  */
-export async function recordAnswers(userId: string, answers: AnswerInput[], now = new Date()): Promise<StoredCard[]> {
+export async function recordAnswers(userId: string, answers: AnswerInput[], now = new Date()): Promise<(StoredCard | null)[]> {
   if (answers.length === 0) return [];
   const db = await getDb();
   const rc = schema.reviewCards;
@@ -55,8 +60,12 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
   await db.batch(events as [(typeof events)[number], ...(typeof events)[number][]]);
 
   // Answers are applied in order, so the same question twice in one call chains its card.
-  const out: StoredCard[] = [];
+  const out: (StoredCard | null)[] = [];
   for (const a of answers) {
+    if (a.schedule === false) {
+      out.push(null);
+      continue;
+    }
     for (let attempt = 0; ; attempt++) {
       const cur = await db
         .select({ card: rc.card, reps: rc.reps })
@@ -73,7 +82,8 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
             .run()
         : await db
             .insert(rc)
-            .values({ userId, itemId: a.itemId, source: a.source, refId: a.refId, courseId: a.courseId ?? null, ...row })
+            // The card belongs to where the question lives, even when it is first met in a warm-up.
+            .values({ userId, itemId: a.itemId, source: parseItemId(a.itemId)?.source ?? a.source, refId: a.refId, courseId: a.courseId ?? null, ...row })
             .onConflictDoNothing()
             .run();
       if (res.rowsAffected > 0) {

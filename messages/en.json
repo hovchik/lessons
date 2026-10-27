@@ -93,7 +93,18 @@
     "undone": "Mark as not done",
     "saved": "Saved to your progress",
     "saveHint": "Log in to save your score",
-    "bestScore": "Your best: {score} of {total}"
+    "bestScore": "Your best: {score} of {total}",
+    "howSure": "Check your answer:",
+    "sure": "I'm sure",
+    "guessing": "I'm guessing",
+    "wrongSure": "You were sure, but this isn't right. Worth a closer look.",
+    "wrongGuess": "Not quite.",
+    "hintCrossed": "Hint: one more wrong answer is crossed out. Try once more.",
+    "hintOnce": "Read the question again and try once more.",
+    "rightGuess": "Correct, even as a guess. It will come back soon so it sticks.",
+    "rightSecond": "Right on the second try.",
+    "wrongSecond": "Not this time. The right answer is marked green.",
+    "secondTries": "+{n} on the second try"
   },
   "tips": {
     "title": "Tips & tricks",
@@ -262,6 +273,26 @@
     "readLesson": "Read the lesson",
     "openExam": "Open the exam",
     "correct": "Correct!",
-    "incorrect": "Not quite"
+    "incorrect": "Not quite",
+    "wasSure": "You were sure"
+  },
+  "warmup": {
+    "title": "Warm-up",
+    "intro": "{n, plural, one {One question} other {# questions}} from earlier lessons. Answer from memory before reading on: recalling old material helps it stick.",
+    "from": "From: {title}",
+    "done": "Warmed up. On to the new lesson!"
+  },
+  "recall": {
+    "title": "Close the book",
+    "intro": "Before the quiz, hide the lesson and write down what you remember. Putting it in your own words is one of the best ways to learn.",
+    "start": "Hide the lesson",
+    "label": "What do you remember?",
+    "placeholder": "Main ideas, rules, words, an example…",
+    "compare": "Show the lesson and compare",
+    "tick": "Tick what your notes covered:",
+    "noObjectives": "Scroll up and check what you missed.",
+    "result": "{n} of {total} remembered.",
+    "after": "Anything you missed is worth a quick reread.",
+    "toQuiz": "On to the quiz"
   }
 }

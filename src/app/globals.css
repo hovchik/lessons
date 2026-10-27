@@ -610,3 +610,15 @@ button.art-card:active { transform: scale(0.97); }
 .sim-eqlist span { font-size: 0.75rem; font-weight: 800; color: var(--muted-foreground); }
 .sim-eqlist b { font-size: 1rem; font-weight: 800; }
 @media (max-width: 30rem) { .sim-eqlist > div { grid-template-columns: 1fr; gap: 0; } }
+
+/* "Close the book" (recall-prompt.tsx): the lesson text is hidden while the pupil recalls it. */
+.recall-hidden {
+  filter: blur(9px);
+  user-select: none;
+  transition: filter 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .recall-hidden {
+    transition: none;
+  }
+}

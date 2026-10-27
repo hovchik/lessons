@@ -82,6 +82,7 @@ export default async function MistakesPage({ params }: { params: Promise<{ local
                         <XCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                         <span>
                           <span className="font-bold">{t("yourAnswer")}:</span> {pick(m.question.options[m.lastChoice], l)}
+                          {m.wasSure && <span className="ml-2 rounded-full bg-red-50 px-2 py-0.5 text-xs font-extrabold">{t("wasSure")}</span>}
                         </span>
                       </p>
                     )}

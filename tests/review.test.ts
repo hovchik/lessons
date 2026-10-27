@@ -69,10 +69,10 @@ test("nothing is ready right after a quiz; tomorrow the mistakes are, mixed acro
 
 test("a review answer is checked on the server and moves the card", async () => {
   const later = new Date(Date.now() + DAY);
-  const right = await m.review.answerReviewItem({ userId: "u1", itemId: "quiz:math-3-tables#1", choice: 1, now: later });
+  const right = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#1", choice: 1, now: later });
   assert.deepEqual(right && { correct: right.correct, answer: right.answer }, { correct: true, answer: 1 });
-  assert.ok(right!.nextInDays >= 1);
-  const wrong = await m.review.answerReviewItem({ userId: "u1", itemId: "quiz:math-3-tables#3", choice: 2, now: later });
+  assert.ok((right?.nextInDays ?? 0) >= 1);
+  const wrong = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#3", choice: 2, now: later });
   assert.equal(wrong?.correct, false);
   assert.equal(wrong?.nextInDays, 1);
   const queue = await m.review.getReviewQueue("u1", { now: later });
@@ -83,11 +83,11 @@ test("a review answer is checked on the server and moves the card", async () => 
 });
 
 test("unknown questions, wrong option numbers and other pupils' questions are refused", async () => {
-  assert.equal(await m.review.answerReviewItem({ userId: "u1", itemId: "quiz:math-3-tables#9", choice: 0 }), null);
-  assert.equal(await m.review.answerReviewItem({ userId: "u1", itemId: "quiz:math-3-tables#0", choice: 7 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#9", choice: 0 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#0", choice: 7 }), null);
   const db = await m.client.getDb();
   await db.insert(m.client.schema.users).values({ id: "u2", username: "aram", displayName: "Aram", passwordHash: "x" }).run();
-  assert.equal(await m.review.answerReviewItem({ userId: "u2", itemId: "quiz:math-3-tables#0", choice: 0 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u2", itemId: "quiz:math-3-tables#0", choice: 0 }), null);
 });
 
 test("the mistake notebook lists wrong answers with the option chosen last", async () => {

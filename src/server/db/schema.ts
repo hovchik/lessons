@@ -312,8 +312,8 @@ export const lessonSkills = sqliteTable(
   (t) => [primaryKey({ columns: [t.lessonId, t.skillId] }), index("lesson_skills_skill").on(t.skillId)],
 );
 
-/** Where an answer was given. */
-export type AnswerSource = "quiz" | "exam" | "review" | "check";
+/** Where an answer was given. `warmup`: the questions from earlier lessons at the top of a lesson. */
+export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "check";
 
 /**
  * One row per question a pupil answers, anywhere in the app. `itemId` names the
