@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { MasteryBadge } from "@/components/site/mastery-badge";
@@ -121,8 +122,9 @@ export function PracticeSession({
     const missed = round.filter((r) => !r.correct);
     return (
       <div ref={topRef} className="space-y-6 scroll-mt-20">
-        <section className="clay p-6 text-center sm:p-10" role="status" aria-live="polite">
-          <span className="mx-auto grid size-16 place-items-center rounded-[20px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
+        <section className="fx-rise relative clay p-6 text-center sm:p-10" role="status" aria-live="polite">
+          {round.length > 0 && score / round.length >= 0.8 && <Confetti />}
+          <span style={{ background: "var(--s)", animationDelay: "120ms" }} className="fx-pop mx-auto grid size-16 place-items-center rounded-[20px] text-white shadow-clay-sm">
             <Gauge className="size-8" aria-hidden="true" />
           </span>
           <h2 className="mt-5 text-2xl font-black sm:text-3xl">{t("summaryTitle", { score, total: round.length })}</h2>
@@ -171,11 +173,11 @@ export function PracticeSession({
       <div className="flex items-center gap-3">
         <p className="shrink-0 text-sm font-extrabold tabular-nums">{tm("progressLabel", { n, total })}</p>
         <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={round.length} aria-label={tm("progressLabel", { n, total })}>
-          <div className="h-full rounded-full transition-[width] duration-300" style={{ width: `${(round.length / total) * 100}%`, background: "var(--s)" }} />
+          <div className="bar-fill h-full rounded-full" style={{ width: `${(round.length / total) * 100}%`, background: "var(--s)" }} />
         </div>
       </div>
 
-      <section className="clay space-y-4 p-4 sm:p-7" aria-labelledby="pq">
+      <section key={q.itemId} className="fx-next clay space-y-4 p-4 sm:p-7" aria-labelledby="pq">
         <p className="flex flex-wrap items-center gap-2 text-xs font-extrabold uppercase tracking-wide" style={{ color: "var(--s-text)" }}>
           <span>{pick(q.lessonTitle, locale)}</span>
           <span className={cn("rounded-full px-2 py-0.5 normal-case tracking-normal", STRETCH[q.stretch])}>{t(`stretch.${q.stretch}`)}</span>
@@ -187,7 +189,7 @@ export function PracticeSession({
           <>
             <ConfidenceCheck size="lg" label={tm("howSure")} disabled={!isComplete(shown, defaultResponse(shown, chosen)) || busy} onCheck={check} />
             {error && (
-              <div role="alert" className="flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+              <div role="alert" className="fx-in flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
                 <p className="font-bold text-destructive">{t("notSaved")}</p>
                 <Button size="sm" variant="secondary" disabled={busy} onClick={() => check(pending.current ?? 2)}>
                   {tm("tryAgain")}
@@ -196,7 +198,7 @@ export function PracticeSession({
             )}
           </>
         ) : (
-          <div className="space-y-3">
+          <div className="fx-in space-y-3">
             <p role="status" className={cn("text-lg font-extrabold", feedback.correct ? "text-success" : "text-destructive")}>{feedback.correct ? t("correct") : t("incorrect")}</p>
             {feedback.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(feedback.explanation, locale)}</p>}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

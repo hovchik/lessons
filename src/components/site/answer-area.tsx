@@ -6,9 +6,9 @@ import { Fragment } from "react";
 import { answerText, isRight, partsRight, type Key, type QuizResponse, type Shown } from "@/lib/questions";
 import { cn } from "@/lib/utils";
 
-const right = "bg-emerald-50 ring-3 ring-success";
+const right = "bg-emerald-50 ring-3 ring-success fx-right";
 const inWord = (before: string, after: string) => /\p{L}$/u.test(before) || /^\p{L}/u.test(after);
-const wrong = "bg-red-50 ring-3 ring-destructive";
+const wrong = "bg-red-50 ring-3 ring-destructive fx-wrong";
 
 /**
  * Where a pupil answers a question of any kind: options to pick, a number to
@@ -44,7 +44,7 @@ export function AnswerArea({
   const input = "min-h-11 rounded-xl border-2 border-border bg-background px-3 font-semibold outline-none focus:border-primary disabled:opacity-100";
 
   const answerLine = reveal && !ok && shown.kind !== "choice" && (
-    <p className="text-sm text-success">
+    <p className="fx-in text-sm text-success">
       <span className="font-bold">{t("rightAnswer")}:</span> {answerText(shown, reveal, locale)}
     </p>
   );
@@ -68,8 +68,8 @@ export function AnswerArea({
               className={cn(box, "clay-press text-left disabled:opacity-100", selected && !reveal && "ring-3 ring-primary", showCorrect && right, showWrong && wrong)}
             >
               <span className="flex items-start gap-2 leading-snug">
-                {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
-                {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
+                {showCorrect && <CheckCircle2 className="fx-tick size-5 shrink-0 text-success" aria-hidden="true" />}
+                {showWrong && <XCircle className="fx-tick size-5 shrink-0 text-destructive" aria-hidden="true" />}
                 {opt}
               </span>
             </button>
@@ -93,10 +93,10 @@ export function AnswerArea({
             value={typeof value === "string" ? value : ""}
             placeholder={t("typeNumber")}
             onChange={(e) => onChange(e.target.value)}
-            className={cn(input, "w-40 text-lg tabular-nums", reveal && (ok ? "border-success bg-emerald-50" : "border-destructive bg-red-50"))}
+            className={cn(input, "w-40 text-lg tabular-nums", reveal && (ok ? "border-success bg-emerald-50 fx-right" : "border-destructive bg-red-50 fx-wrong"))}
           />
           {shown.unit && <span className="font-bold">{shown.unit}</span>}
-          {reveal && (ok ? <CheckCircle2 className="size-5 text-success" aria-hidden="true" /> : <XCircle className="size-5 text-destructive" aria-hidden="true" />)}
+          {reveal && (ok ? <CheckCircle2 className="fx-tick size-5 text-success" aria-hidden="true" /> : <XCircle className="fx-tick size-5 text-destructive" aria-hidden="true" />)}
         </label>
         {answerLine}
       </div>
@@ -118,7 +118,7 @@ export function AnswerArea({
         disabled={locked}
         value={vals[i] ?? ""}
         onChange={(e) => set(i, e.target.value)}
-        className={cn(input, small ? "mx-0.5 w-16 px-2 text-center" : "mx-1 w-32 sm:w-40", "align-middle", reveal && (parts[i] ? "border-success bg-emerald-50" : "border-destructive bg-red-50"))}
+        className={cn(input, small ? "mx-0.5 w-16 px-2 text-center" : "mx-1 w-32 sm:w-40", "align-middle", reveal && (parts[i] ? "border-success bg-emerald-50 fx-right" : "border-destructive bg-red-50 fx-wrong"))}
       />
     );
     return (

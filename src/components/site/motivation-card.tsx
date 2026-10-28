@@ -21,8 +21,8 @@ export async function MotivationCard({ m, className }: { m: Motivation; classNam
       <h2 id="motivation-title" className="text-xl font-extrabold sm:text-2xl">{t("title")}</h2>
       <div className="mt-4 grid gap-5 lg:grid-cols-[1fr_1.4fr_0.9fr] lg:gap-6">
         <div className="flex items-start gap-3">
-          <span className={cn("grid size-14 shrink-0 place-items-center rounded-[18px] shadow-clay-sm", streak.todayDone ? "bg-orange-500 text-white" : "bg-orange-50 text-orange-600")}>
-            <Flame className="size-8" aria-hidden="true" />
+          <span className={cn("fx-pop grid size-14 shrink-0 place-items-center rounded-[18px] shadow-clay-sm", streak.todayDone ? "bg-orange-500 text-white" : "bg-orange-50 text-orange-600")}>
+            <Flame className={cn("size-8", streak.todayDone && "fx-flame")} aria-hidden="true" />
           </span>
           <div className="min-w-0">
             <p className="text-2xl font-black tabular-nums">{t("streak", { n: streak.days })}</p>
@@ -43,13 +43,16 @@ export async function MotivationCard({ m, className }: { m: Motivation; classNam
             <span className={cn("text-sm", goalMet ? "text-success" : "text-muted-foreground")}>{goalMet ? t("goalDone") : t("goalLine", { done: week.done, goal: week.goal })}</span>
           </p>
           <ol className="mt-2 grid grid-cols-7 gap-1.5" aria-label={t("goalLine", { done: week.done, goal: week.goal })}>
-            {week.week.map((d) => {
+            {week.week.map((d, k) => {
               const frozen = streak.frozen.includes(d.date);
               return (
                 <li key={d.date} className="text-center">
                   <span
+                    style={d.done || frozen ? { animationDelay: `${150 + k * 60}ms` } : undefined}
                     className={cn(
                       "mx-auto grid size-9 place-items-center rounded-full text-xs font-black sm:size-10",
+                      (d.done || frozen) && "fx-pop",
+                      d.today && !d.done && !frozen && "fx-breathe",
                       d.done ? "bg-orange-500 text-white" : frozen ? "bg-sky-100 text-sky-700" : d.today ? "border-2 border-dashed border-orange-400 text-orange-600" : "bg-muted text-muted-foreground",
                       d.future && "opacity-60",
                     )}
@@ -98,9 +101,9 @@ export async function BadgesSection({ m }: { m: Motivation }) {
         </h2>
         <p className="mt-1 text-sm text-muted-foreground">{t("badgesIntro")}</p>
       </div>
-      <ul className="flex flex-wrap gap-2">
+      <ul className="stagger flex flex-wrap gap-2">
         {m.badges.streaks.map((b) => (
-          <li key={b.days} className={cn("inline-flex min-h-11 items-center gap-2 rounded-full px-3.5 text-sm font-extrabold", b.earned ? "bg-orange-500 text-white shadow-clay-sm" : "bg-muted text-muted-foreground")}>
+          <li key={b.days} className={cn("inline-flex min-h-11 items-center gap-2 rounded-full px-3.5 text-sm font-extrabold", b.earned ? "fx-shine bg-orange-500 text-white shadow-clay-sm" : "bg-muted text-muted-foreground")}>
             <Flame className="size-4" aria-hidden="true" />
             {t("streakBadge", { n: b.days })}
             <span className="sr-only">{b.earned ? t("earned") : t("notYet")}</span>
@@ -108,13 +111,13 @@ export async function BadgesSection({ m }: { m: Motivation }) {
         ))}
       </ul>
       {subjects.length > 0 ? (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {subjects.map((s) => (
-            <li key={s.subjectId} className={cn("clay-sm flex items-center gap-3 p-4", `subject-${s.color}`)}>
+            <li key={s.subjectId} className={cn("clay-sm flex items-center gap-3 p-4", s.tier > 0 && "fx-shine", `subject-${s.color}`)}>
               <span className="relative grid size-12 shrink-0 place-items-center rounded-[16px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
                 <SubjectIcon name={s.icon} className="size-6" />
                 {s.tier > 0 && (
-                  <span className={cn("absolute -bottom-1.5 -right-1.5 grid size-6 place-items-center rounded-full ring-2 ring-card", TIER[s.tier])}>
+                  <span className={cn("fx-pop absolute -bottom-1.5 -right-1.5 grid size-6 place-items-center rounded-full ring-2 ring-card", TIER[s.tier])} style={{ animationDelay: "300ms" }}>
                     <Award className="size-3.5" aria-hidden="true" />
                   </span>
                 )}

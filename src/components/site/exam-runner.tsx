@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ExamQuestion, ExamScale } from "@/server/db/schema";
 import { Button } from "@/components/ui/button";
+import { Confetti } from "@/components/ui/confetti";
 import { cn, pick } from "@/lib/utils";
 import { notifyChanged } from "@/lib/live";
 import { examTotal, marksFor, scoreExam } from "@/lib/exam-score";
@@ -90,7 +91,8 @@ export function ExamRunner({
       )}
 
       {phase === "done" && (
-        <div className={cn("clay p-5 sm:p-8", result.passed ? "ring-3 ring-success" : "ring-3 ring-accent")} role="status" aria-live="polite">
+        <div className={cn("fx-rise relative clay p-5 sm:p-8", result.passed ? "ring-3 ring-success" : "ring-3 ring-accent")} role="status" aria-live="polite">
+          {result.passed && <Confetti />}
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-wide text-muted-foreground">{t("result")}</p>

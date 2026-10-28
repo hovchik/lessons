@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
 import { LiveUserProvider } from "@/components/site/live-user";
 import { MobileNav } from "@/components/site/mobile-nav";
+import { NavProgress } from "@/components/site/nav-progress";
 import { getLiveUser } from "@/server/live";
 import { getCurrentUser } from "@/server/user-auth";
 import "../globals.css";
@@ -51,7 +52,7 @@ export default async function LocaleLayout({
   const live = user ? await getLiveUser(user.id) : null;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="flex min-h-dvh flex-col">
+        <NavProgress />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"

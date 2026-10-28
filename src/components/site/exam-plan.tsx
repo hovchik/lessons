@@ -141,7 +141,7 @@ export function DiagnosticRunner({ examId, first }: { examId: string; first: Dia
       <div className="flex items-center gap-3">
         <p className="shrink-0 text-sm font-extrabold tabular-nums">{t("testProgress", { n: q.n, max: q.max })}</p>
         <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={q.max} aria-valuenow={q.n - 1} aria-label={t("testProgress", { n: q.n, max: q.max })}>
-          <div className="h-full rounded-full bg-primary transition-[width] duration-300" style={{ width: `${((q.n - 1) / q.max) * 100}%` }} />
+          <div className="bar-fill h-full rounded-full bg-primary" style={{ width: `${((q.n - 1) / q.max) * 100}%` }} />
         </div>
       </div>
       <section className="clay space-y-4 p-4 sm:p-7" aria-labelledby="dq">

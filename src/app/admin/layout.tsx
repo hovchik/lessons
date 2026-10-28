@@ -3,6 +3,7 @@ import { Award, BookOpen, GraduationCap, LayoutDashboard, Lightbulb, Users } fro
 import Link from "next/link";
 import { isAdmin } from "@/server/auth";
 import { LogoutButton } from "@/components/admin/logout-button";
+import { NavProgress } from "@/components/site/nav-progress";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const authed = await isAdmin();
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -34,6 +35,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         />
       </head>
       <body className="min-h-dvh">
+        <NavProgress />
         {authed ? (
           <div className="flex min-h-dvh flex-col md:flex-row">
             <aside className="pt-safe-2 sticky top-0 z-30 flex items-center gap-1 border-b border-border/60 bg-card px-3 pb-3 sm:gap-2 sm:px-4 md:static md:w-60 md:flex-col md:items-stretch md:gap-1 md:border-b-0 md:border-r md:px-4 md:py-6">

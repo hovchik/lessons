@@ -82,7 +82,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             return (
               <li key={s.id} className={cn(`subject-${s.color}`)}>
                 <Link href={`/${s.id}/${r?.min ?? 1}`} className="clay clay-press flex h-full flex-col gap-2.5 p-4 sm:gap-3 sm:p-5">
-                  <span className="grid size-12 place-items-center rounded-[16px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
+                  <span className="fx-chip grid size-12 place-items-center rounded-[16px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
                     <SubjectIcon name={s.icon} className="size-6" />
                   </span>
                   <h3 className="text-base font-extrabold sm:text-lg">{pick(s.name, l)}</h3>
