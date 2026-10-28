@@ -54,6 +54,12 @@ export function ArtText({ children, className }: { children: string; className?:
   );
 }
 
+/** Inline style for a range input: how far its track is filled (the --p of .art-range in globals.css). */
+export function fill(value: number, min: number, max: number, reversed = false): React.CSSProperties {
+  const p = max > min ? ((value - min) / (max - min)) * 100 : 0;
+  return { ["--p" as string]: `${(reversed ? 100 - p : p).toFixed(2)}%` };
+}
+
 /** A round tap-friendly toggle button used by the widgets. */
 export function Chip({
   active,

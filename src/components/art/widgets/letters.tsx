@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Tr } from "@/lib/art/spec";
 import { tr } from "@/lib/art/spec";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame, Chip } from "../frame";
+import { ArtFrame, Chip, fill } from "../frame";
 import { UI } from "../labels";
 
 const t = (en: string, hy: string, ru: string): Tr => ({ en, hy, ru });
@@ -35,7 +35,7 @@ export default function Letters({ spec, lang }: WidgetProps) {
         <div className="art-chips">{STYLES.map((x) => <Chip key={x.id} active={x.id === style} onClick={() => setStyle(x.id)}>{tr(x.name, lang)}</Chip>)}</div>
         <label className="art-range-label">
           <span>{UI.weight[lang]}</span>
-          <input type="range" min={300} max={900} step={100} value={weight} onChange={(e) => setWeight(Number(e.target.value))} className="art-range" />
+          <input type="range" min={300} max={900} step={100} value={weight} onChange={(e) => setWeight(Number(e.target.value))} className="art-range" style={fill(weight, 300, 900)} />
         </label>
       </div>
     </ArtFrame>

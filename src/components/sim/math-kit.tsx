@@ -34,7 +34,7 @@ export function Counter({ value, min, max, step = 1, label, onChange, lang, colo
         <button type="button" aria-label={`${less}${label ? `: ${label}` : ""}`} disabled={value <= min} onClick={() => onChange(clamp(Number((value - step).toFixed(6)), min, max))}>
           <Minus className="size-4" aria-hidden="true" />
         </button>
-        <b>{num(value, lang)}</b>
+        <b key={value} className="fx-num">{num(value, lang)}</b>
         <button type="button" aria-label={`${more}${label ? `: ${label}` : ""}`} disabled={value >= max} onClick={() => onChange(clamp(Number((value + step).toFixed(6)), min, max))}>
           <Plus className="size-4" aria-hidden="true" />
         </button>

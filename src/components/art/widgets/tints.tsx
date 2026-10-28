@@ -4,7 +4,7 @@ import { useState } from "react";
 import { hexToRgb, rgbToHex, WHEEL } from "@/lib/art/colors";
 import { tr } from "@/lib/art/spec";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame } from "../frame";
+import { ArtFrame, fill } from "../frame";
 import { UI } from "../labels";
 
 const BASES = [4, 2, 0, 10, 8, 6];
@@ -30,7 +30,7 @@ export default function Tints({ spec, lang }: WidgetProps) {
             <button key={s} type="button" className={s === v ? "is-active" : undefined} style={{ background: colorAt(s) }} onClick={() => setV(s)} aria-label={String(s)} />
           ))}
         </div>
-        <input type="range" min={-3} max={3} step={1} value={v} onChange={(e) => setV(Number(e.target.value))} className="art-range" aria-label={UI.tints[lang]} />
+        <input type="range" min={-3} max={3} step={1} value={v} onChange={(e) => setV(Number(e.target.value))} className="art-range" style={fill(v, -3, 3)} aria-label={UI.tints[lang]} />
         <div className="art-ladder-legend"><span>{UI.addBlack[lang]}</span><span>{UI.pure[lang]}</span><span>{UI.addWhite[lang]}</span></div>
         <div className="art-tint-big" style={{ background: colorAt(v) }}>
           <span>{v === 0 ? UI.pure[lang] : `${tr(WHEEL[base].name, lang)} ${v < 0 ? UI.addBlack[lang] : UI.addWhite[lang]} ×${Math.abs(v)}`}</span>

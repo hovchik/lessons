@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame, Chip } from "../frame";
+import { ArtFrame, Chip, fill } from "../frame";
 import { UI } from "../labels";
 
 /** Frame sets in a 160 × 100 box. */
@@ -65,7 +65,7 @@ export default function Flipbook({ spec, lang }: WidgetProps) {
         </div>
         <label className="art-range-label">
           <span>{UI.speed[lang]}: {fps}</span>
-          <input type="range" min={2} max={24} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="art-range" />
+          <input type="range" min={2} max={24} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="art-range" style={fill(fps, 2, 24)} />
         </label>
       </div>
     </ArtFrame>
