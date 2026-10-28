@@ -2,9 +2,10 @@
 
 import { CheckCircle2, CircleDashed } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { lessonChange, notifyChanged, onChanged, type LessonProgressRow } from "@/lib/live";
 
 type Props = {
   lessonId: string;
@@ -18,13 +19,32 @@ type Props = {
 /**
  * "Mark as done" card under a lesson. For guests it shows a login hint. Quiz
  * results are saved separately by the Quiz component; this covers lessons
- * without a quiz and pupils who prefer to tick a lesson off by hand.
+ * without a quiz and pupils who prefer to tick a lesson off by hand. A saved
+ * quiz (here or in another tab) updates the card straight away.
  */
-export function LessonProgressCard({ lessonId, signedIn, completed: initial, best, returnTo }: Props) {
+export function LessonProgressCard({ lessonId, signedIn, completed: initialCompleted, best: initialBest, returnTo }: Props) {
   const t = useTranslations("lesson");
   const tn = useTranslations("nav");
-  const [completed, setCompleted] = useState(initial);
+  const [completed, setCompleted] = useState(initialCompleted);
+  const [best, setBest] = useState(initialBest);
   const [busy, setBusy] = useState(false);
+  // A refreshed page brings the saved values, which win.
+  const [seen, setSeen] = useState({ initialCompleted, initialBest });
+  if (seen.initialCompleted !== initialCompleted || JSON.stringify(seen.initialBest) !== JSON.stringify(initialBest)) {
+    setSeen({ initialCompleted, initialBest });
+    setCompleted(initialCompleted);
+    setBest(initialBest);
+  }
+
+  useEffect(
+    () =>
+      onChanged(({ lesson }) => {
+        if (lesson?.id !== lessonId) return;
+        setCompleted(lesson.completed);
+        setBest(lesson.bestTotal ? { score: lesson.bestScore ?? 0, total: lesson.bestTotal } : null);
+      }),
+    [lessonId],
+  );
 
   if (!signedIn) {
     return (
@@ -60,7 +80,10 @@ export function LessonProgressCard({ lessonId, signedIn, completed: initial, bes
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ lessonId, completed: !completed }),
           });
-          if (res.ok) setCompleted(!completed);
+          if (res.ok) {
+            const { progress } = (await res.json()) as { progress: LessonProgressRow };
+            notifyChanged(lessonChange(progress));
+          }
           setBusy(false);
         }}
       >

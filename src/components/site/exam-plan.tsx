@@ -3,10 +3,10 @@
 import { ArrowRight, CalendarDays, CircleHelp, RefreshCw, RotateCcw, Trash2 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { AnswerArea } from "@/components/site/answer-area";
 import { PLAN_MINUTES, type PlanMinutes } from "@/lib/exam-plan";
+import { notifyChanged } from "@/lib/live";
 import { defaultResponse, isComplete, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
@@ -53,7 +53,6 @@ function DateAndTime({ date, minutes, min, max, onDate, onMinutes }: { date: str
 /** The first step: the exam date and daily time, then the placement test starts. */
 export function PlanSetup({ examId, defaultDate, min, max, questions }: { examId: string; defaultDate: string; min: string; max: string; questions: number }) {
   const t = useTranslations("plan");
-  const router = useRouter();
   const [date, setDate] = useState(defaultDate);
   const [minutes, setMinutes] = useState<PlanMinutes>(30);
   const [busy, setBusy] = useState(false);
@@ -67,7 +66,7 @@ export function PlanSetup({ examId, defaultDate, min, max, questions }: { examId
     setError(false);
     try {
       await post("/api/plan/start", { examId, examDate: date, minutesPerDay: minutes });
-      router.refresh();
+      notifyChanged();
     } catch {
       setError(true);
       setBusy(false);
@@ -99,7 +98,6 @@ export function DiagnosticRunner({ examId, first }: { examId: string; first: Dia
   const t = useTranslations("plan");
   const tg = useTranslations("grade");
   const locale = useLocale();
-  const router = useRouter();
   const [q, setQ] = useState(first);
   const [chosen, setChosen] = useState<QuizResponse | undefined>();
   const [busy, setBusy] = useState(false);
@@ -127,7 +125,7 @@ export function DiagnosticRunner({ examId, first }: { examId: string; first: Dia
         setChosen(undefined);
         setBusy(false);
         topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else router.refresh();
+      } else notifyChanged();
     } catch {
       setError(true);
       setBusy(false);
@@ -170,7 +168,6 @@ export function DiagnosticRunner({ examId, first }: { examId: string; first: Dia
 /** Update the plan from today, change its date or time, retake the test or remove it. */
 export function PlanActions({ examId, examDate, minutes, min, max }: { examId: string; examDate: string; minutes: PlanMinutes; min: string; max: string }) {
   const t = useTranslations("plan");
-  const router = useRouter();
   const [editing, setEditing] = useState(false);
   const [date, setDate] = useState(examDate < min ? min : examDate);
   const [mins, setMins] = useState(minutes);
@@ -184,7 +181,7 @@ export function PlanActions({ examId, examDate, minutes, min, max }: { examId: s
     try {
       await post(path, body);
       after?.();
-      router.refresh();
+      notifyChanged();
     } catch {
       setError(true);
     }

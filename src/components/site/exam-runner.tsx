@@ -7,6 +7,7 @@ import type { ExamQuestion, ExamScale } from "@/server/db/schema";
 import { Button } from "@/components/ui/button";
 import { Confetti } from "@/components/ui/confetti";
 import { cn, pick } from "@/lib/utils";
+import { notifyChanged } from "@/lib/live";
 import { examTotal, marksFor, scoreExam } from "@/lib/exam-score";
 
 type Phase = "intro" | "running" | "done";
@@ -62,7 +63,11 @@ export function ExamRunner({
     if (save) {
       const payload = { examId: save.examId, answers: questions.map((_, i) => answers[i] ?? null) };
       fetch("/api/progress/exam", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
-        .then((r) => r.ok && setSaved(true))
+        .then((r) => {
+          if (!r.ok) return;
+          setSaved(true);
+          notifyChanged();
+        })
         .catch(() => {});
     }
   };

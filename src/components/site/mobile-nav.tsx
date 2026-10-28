@@ -4,12 +4,14 @@ import { Award, BookOpen, GraduationCap, Home, Trophy } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { useLiveUser } from "./live-user";
 
 /**
  * Bottom tab bar shown on phones only (hidden from `sm` up, where the header
  * nav takes over). Thumb-reachable, 56px tall plus the device safe area.
  */
-export function MobileNav({ reviewReady = 0 }: { reviewReady?: number }) {
+export function MobileNav() {
+  const reviewReady = useLiveUser()?.review.ready ?? 0;
   const t = useTranslations("nav");
   const tr = useTranslations("review");
   const pathname = usePathname();

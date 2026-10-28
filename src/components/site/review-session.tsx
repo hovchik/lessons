@@ -8,6 +8,7 @@ import { Button, buttonClasses } from "@/components/ui/button";
 import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { answerText, defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
@@ -30,6 +31,8 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
   const [busy, setBusy] = useState(false);
   const shownAt = useRef(Date.now());
   const topRef = useRef<HTMLDivElement>(null);
+  // Once answering starts, a page refresh waits: the queue it brings would replace this session and its summary.
+  useHoldRefresh(results.length > 0);
 
   const item = items[Math.min(i, items.length - 1)];
   const result = results[i];
@@ -55,6 +58,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
       if (res.ok) {
         const data = (await res.json()) as { correct: boolean; nextInDays: number };
         r = { correct: data.correct, nextInDays: data.nextInDays, saved: true };
+        notifyChanged();
       }
     } catch {
       // Offline: show the answer anyway; the card is not moved.

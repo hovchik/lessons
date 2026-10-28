@@ -2,14 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { useRouter } from "@/i18n/navigation";
+import { notifyChanged } from "@/lib/live";
 import { WEEKLY_GOALS, type WeeklyGoal } from "@/lib/motivation";
 import { cn } from "@/lib/utils";
 
 /** Three buttons for the weekly goal: 3, 5 or 7 learning days. */
 export function GoalPicker({ goal }: { goal: WeeklyGoal }) {
   const t = useTranslations("motivation");
-  const router = useRouter();
   const [value, setValue] = useState(goal);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(false);
@@ -23,7 +22,7 @@ export function GoalPicker({ goal }: { goal: WeeklyGoal }) {
     try {
       const res = await fetch("/api/motivation/goal", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ goal: g }) });
       if (!res.ok) throw new Error(String(res.status));
-      router.refresh();
+      notifyChanged();
     } catch {
       setValue(before);
       setError(true);
