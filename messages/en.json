@@ -652,5 +652,11 @@
         "about": "From languages, drawing, music and technology."
       }
     }
+  },
+  "map": {
+    "title": "Your journey",
+    "progress": "{n} of {total} units learned well",
+    "stop": "Unit {n}: {title}",
+    "here": "next stop"
   }
 }

@@ -10,6 +10,7 @@ import { ExamCard } from "@/components/site/exam-card";
 import { MasteryBadge } from "@/components/site/mastery-badge";
 import { TipsSection } from "@/components/site/tips-section";
 import { WhyThis } from "@/components/fun/why-this";
+import { CourseMap } from "@/components/fun/course-map";
 import { relevanceFor } from "@/content/relevance";
 import { getMastery } from "@/server/mastery";
 import { getReflections } from "@/server/reflection";
@@ -85,6 +86,10 @@ export default async function CoursePage({ params }: { params: Params }) {
           </div>
         </div>
       </header>
+
+      {units.length > 1 && (
+        <CourseMap stops={units.map((u) => ({ position: u.position, title: pick(u.title, l), level: mastery.get(u.id)?.level ?? null }))} signedIn={!!user} />
+      )}
 
       <section aria-labelledby="curriculum-title" className="grid gap-4 md:grid-cols-2">
         <h2 id="curriculum-title" className="md:col-span-2 text-xl font-extrabold sm:text-2xl">{t("course.curriculum")}</h2>
