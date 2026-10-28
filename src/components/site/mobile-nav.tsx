@@ -49,7 +49,7 @@ export function MobileNav() {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[11px] font-bold leading-tight transition-[color,transform] duration-200 active:scale-95",
+                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-0.5 py-1.5 text-[10px] font-bold min-[400px]:text-[11px] leading-tight transition-[color,transform] duration-200 active:scale-95",
                 active ? "text-primary" : "text-muted-foreground",
               )}
             >
