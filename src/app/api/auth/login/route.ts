@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { blockedFor, clientIp, hit, LIMITS, tooMany } from "@/server/rate-limit";
+import { blockedFor, clientIp, hit, LIMITS, refund, tooMany } from "@/server/rate-limit";
 import {
   accountsConfigured,
   burnPasswordCheck,
@@ -24,13 +24,15 @@ export async function POST(req: Request) {
   const userKey = `login-user:${normalizeUsername(parsed.data.username)}`;
   const wait = Math.max(blockedFor(ipKey, LIMITS.loginIp), blockedFor(userKey, LIMITS.loginUser));
   if (wait) return tooMany(wait);
+  // Count the try before any await, so a burst of parallel guesses can't all slip past the check;
+  // a right password takes it back, so only failures use up the budget.
+  hit(ipKey, LIMITS.loginIp);
+  hit(userKey, LIMITS.loginUser);
   const user = await findUserByUsername(parsed.data.username);
   const ok = user ? await verifyPassword(parsed.data.password, user.passwordHash) : (await burnPasswordCheck(parsed.data.password), false);
-  if (!user || !ok) {
-    hit(ipKey, LIMITS.loginIp);
-    hit(userKey, LIMITS.loginUser);
-    return NextResponse.json({ error: "wrong_credentials" }, { status: 401 });
-  }
+  if (!user || !ok) return NextResponse.json({ error: "wrong_credentials" }, { status: 401 });
+  refund(ipKey);
+  refund(userKey);
   if (user.disabled) return NextResponse.json({ error: "disabled" }, { status: 403 });
   await touchLastSeen(user.id);
   const res = NextResponse.json({ user: toPublicUser(user) });

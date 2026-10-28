@@ -58,6 +58,12 @@ export function hit(key: string, limit: Limit, now = Date.now()) {
   buckets.set(key, { count: 1, resetAt: now + limit.windowMs });
 }
 
+/** Takes back one try counted against `key` (it was reserved before a check that then passed). */
+export function refund(key: string) {
+  const b = buckets.get(key);
+  if (b && b.count > 0) b.count--;
+}
+
 /** Forgets the tries counted against `key`. */
 export function clear(key: string) {
   buckets.delete(key);

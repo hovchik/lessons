@@ -24,6 +24,17 @@ test("rate limits block after the budget and open again when the window passes",
   assert.equal(blockedFor("k", limit, now + 1000), 0);
 });
 
+test("a refunded try no longer counts", async () => {
+  const { blockedFor, hit, refund, resetRateLimits } = await import("../src/server/rate-limit");
+  resetRateLimits();
+  const limit = { max: 2, windowMs: 1000 };
+  hit("r", limit, 0);
+  hit("r", limit, 0);
+  assert.ok(blockedFor("r", limit, 1) > 0);
+  refund("r");
+  assert.equal(blockedFor("r", limit, 1), 0);
+});
+
 test("the client address is the last forwarded hop, which our own server wrote", async () => {
   const { clientIp } = await import("../src/server/rate-limit");
   const req = (xff?: string) => new Request("http://x/", { headers: xff ? { "x-forwarded-for": xff } : {} });
