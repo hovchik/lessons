@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { LIVE_COUNTS, LIVE_SECONDS } from "@/lib/live-quiz";
 import { createGame } from "@/server/live-quiz";
+import { blockedFor, hit, LIMITS, tooMany } from "@/server/rate-limit";
 import { getCurrentUser } from "@/server/user-auth";
 
 /** A teacher (any signed-in account) starts a live quiz on a unit and gets its PIN. */
@@ -16,6 +17,10 @@ export async function POST(req: Request) {
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
+  const key = `live-create:${user.id}`;
+  const wait = blockedFor(key, LIMITS.liveCreateUser);
+  if (wait) return tooMany(wait);
+  hit(key, LIMITS.liveCreateUser);
   const made = await createGame(user.id, parsed.data.skillId, parsed.data.count, parsed.data.seconds);
   if ("error" in made) return NextResponse.json(made, { status: made.error === "busy" ? 503 : 400 });
   return NextResponse.json(made);

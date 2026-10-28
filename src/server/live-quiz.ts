@@ -1,4 +1,4 @@
-import { randomBytes } from "node:crypto";
+import { randomBytes, randomInt, timingSafeEqual } from "node:crypto";
 import { asc, eq } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { I18nText } from "./db/schema";
@@ -27,15 +27,21 @@ type Game = {
   startedAt: number;
   endsAt: number;
   players: Map<string, Player>;
+  /** Tokens of removed players, so their phones can say so (any other token gets "no game"). */
+  kicked: Set<string>;
   touchedAt: number;
 };
 
 const IDLE_MS = 3 * 60 * 60 * 1000;
 const MAX_GAMES = 300;
+/** Open games per teacher; a new one closes their oldest, so one account can't fill the server. */
+const MAX_GAMES_PER_HOST = 3;
 // Kept on globalThis so a dev-server reload doesn't lose running games.
 const store = ((globalThis as { __liveGames?: Map<string, Game> }).__liveGames ??= new Map<string, Game>());
 
 const token = () => randomBytes(18).toString("base64url");
+/** PINs from the crypto generator, so they can't be predicted from earlier ones. */
+const cryptoRandom = () => randomInt(0, 2 ** 31) / 2 ** 31;
 const sweep = (now: number) => {
   for (const [pin, g] of store) if (now - g.touchedAt > IDLE_MS) store.delete(pin);
 };
@@ -76,9 +82,11 @@ export async function createGame(hostUserId: string, skillId: string, count: num
 
 /** Opens a game in the lobby with questions already chosen. */
 export function openGame(hostUserId: string, title: I18nText, questions: LiveQuestion[], seconds: number, now = Date.now()) {
-  let pin = makePin();
-  while (store.has(pin)) pin = makePin();
-  const game: Game = { pin, hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: new Map(), touchedAt: now };
+  const mine = [...store.values()].filter((g) => g.hostUserId === hostUserId).sort((a, b) => a.touchedAt - b.touchedAt);
+  for (const old of mine.slice(0, Math.max(0, mine.length - MAX_GAMES_PER_HOST + 1))) store.delete(old.pin);
+  let pin = makePin(cryptoRandom);
+  while (store.has(pin)) pin = makePin(cryptoRandom);
+  const game: Game = { pin, hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: new Map(), kicked: new Set(), touchedAt: now };
   store.set(pin, game);
   return { pin, hostToken: game.hostToken };
 }
@@ -104,6 +112,10 @@ function settle(g: Game, now: number) {
   if (questionOver(now, g.endsAt, answered, g.players.size)) g.phase = "reveal";
 }
 
+const sameToken = (a: string, b: string) => {
+  const x = Buffer.from(a), y = Buffer.from(b);
+  return x.length === y.length && timingSafeEqual(x, y);
+};
 const playerBy = (g: Game, tok: string) => [...g.players.values()].find((p) => p.token === tok);
 
 export function answer(pin: string, tok: string, choice: number, now = Date.now()) {
@@ -111,7 +123,7 @@ export function answer(pin: string, tok: string, choice: number, now = Date.now(
   if (!g) return { error: "nogame" as const };
   settle(g, now);
   const p = playerBy(g, tok);
-  if (!p) return { error: "noplayer" as const };
+  if (!p) return { error: g.kicked.has(tok) ? ("noplayer" as const) : ("nogame" as const) };
   const q = g.questions[g.index];
   if (g.phase !== "question" || !q || p.answers.has(g.index)) return { error: "closed" as const };
   if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { error: "invalid" as const };
@@ -128,7 +140,7 @@ export type HostAction = "start" | "reveal" | "next" | "end" | "kick";
 
 export function hostAct(pin: string, hostToken: string, action: HostAction, playerId?: string, now = Date.now()) {
   const g = store.get(pin);
-  if (!g || g.hostToken !== hostToken) return { error: "nogame" as const };
+  if (!g || !sameToken(g.hostToken, hostToken)) return { error: "nogame" as const };
   settle(g, now);
   const open = (i: number) => {
     g.phase = "question";
@@ -144,7 +156,11 @@ export function hostAct(pin: string, hostToken: string, action: HostAction, play
     if (g.index + 1 < g.questions.length) open(g.index + 1);
     else g.phase = "podium";
   } else if (action === "end") g.phase = "podium";
-  else if (action === "kick" && playerId) g.players.delete(playerId);
+  else if (action === "kick" && playerId) {
+    const p = g.players.get(playerId);
+    if (p) g.kicked.add(p.token);
+    g.players.delete(playerId);
+  }
   g.touchedAt = now;
   return { ok: true as const };
 }
@@ -154,7 +170,7 @@ const standings = (g: Game) => leaderboard([...g.players.values()].map((p) => ({
 /** What the teacher's screen shows. */
 export function hostView(pin: string, hostToken: string, now = Date.now()) {
   const g = store.get(pin);
-  if (!g || g.hostToken !== hostToken) return null;
+  if (!g || !sameToken(g.hostToken, hostToken)) return null;
   settle(g, now);
   g.touchedAt = now;
   const q = g.questions[g.index];
@@ -185,7 +201,8 @@ export function playerView(pin: string, tok: string, now = Date.now()) {
   if (!g) return null;
   settle(g, now);
   const p = playerBy(g, tok);
-  if (!p) return { kicked: true as const };
+  // A made-up token learns nothing, not even that the PIN is in use.
+  if (!p) return g.kicked.has(tok) ? { kicked: true as const } : null;
   const q = g.questions[g.index];
   const mine = p.answers.get(g.index);
   const board = standings(g);

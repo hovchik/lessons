@@ -131,7 +131,7 @@ function HostSetup({ catalogue, onReady, t }: { catalogue: Catalogue; onReady: (
           </div>
         </fieldset>
       </div>
-      {error && <p role="alert" className="text-sm font-bold text-destructive">{t(`errors.${["few", "busy", "network"].includes(error) ? error : "invalid"}`)}</p>}
+      {error && <p role="alert" className="text-sm font-bold text-destructive">{t(`errors.${["few", "busy", "network", "too_many"].includes(error) ? error : "invalid"}`)}</p>}
       <Button size="lg" className="w-full sm:w-auto" onClick={create} disabled={busy || !skillId}>
         <Play className="size-5" aria-hidden="true" />
         {t("create")}
