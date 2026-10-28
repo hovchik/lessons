@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { cleanName, leaderboard, livePoints, makePin, questionOver, uniqueName } from "../src/lib/live-quiz";
+import { LIVE_MAX_PLAYERS, cleanName, leaderboard, livePoints, makePin, questionOver, uniqueName } from "../src/lib/live-quiz";
 import type { LiveQuestion } from "../src/server/live-quiz";
 
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-live-"));
@@ -96,16 +96,17 @@ test("a whole game: lobby, questions, reveals and podium, with the key hidden un
   assert.equal((await joinGame(pin, "Late")).error, "over");
 });
 
-test("answers sent at the same moment are all counted (games are shared by every server worker)", async () => {
+test("answers sent at the same moment are all counted, in a full game (games are shared by every server worker)", async () => {
   const { answer, hostAct, hostView, joinGame, openGame } = live;
   const now = 2_000_000;
   const { pin, hostToken } = await openGame("teacher", t("Sums"), questions, 20, now);
-  const players = await Promise.all(Array.from({ length: 20 }, (_, i) => joinGame(pin, `P${i}`, now)));
-  assert.equal(new Set(players.map((p) => p.name)).size, 20);
+  const players = await Promise.all(Array.from({ length: LIVE_MAX_PLAYERS }, (_, i) => joinGame(pin, `P${i}`, now)));
+  assert.equal(new Set(players.map((p) => p.name)).size, LIVE_MAX_PLAYERS);
   await hostAct(pin, hostToken, "start", undefined, now);
   const results = await Promise.all(players.map((p, i) => answer(pin, p.token!, i % 2, now + 1000)));
   assert.ok(results.every((r) => r.ok));
   const hv = (await hostView(pin, hostToken, now + 1000))!;
   assert.equal(hv.phase, "reveal");
-  assert.deepEqual(hv.reveal!.counts, [10, 10, 0, 0]);
+  assert.equal(hv.players.length, LIVE_MAX_PLAYERS);
+  assert.deepEqual(hv.reveal!.counts, [LIVE_MAX_PLAYERS / 2, LIVE_MAX_PLAYERS / 2, 0, 0]);
 });

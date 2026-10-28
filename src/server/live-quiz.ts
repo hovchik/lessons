@@ -56,7 +56,8 @@ async function load(pin: string) {
 
 /**
  * Reads the game, lets `change` alter it, and saves it if it did (`change` returns true), unless
- * another request saved the game in between: then it starts again with the newer game.
+ * another request saved the game in between: then it starts again with the newer game, until the
+ * change is saved. A result is returned only once its change is in the database.
  */
 async function update<R>(pin: string, now: number, change: (g: Game) => { result: R; changed: boolean }): Promise<R | null> {
   const db = await getDb();
@@ -68,7 +69,10 @@ async function update<R>(pin: string, now: number, change: (g: Game) => { result
     if (!changed && !touch) return result;
     const set = changed ? { state: JSON.stringify(found.game), version: found.version + 1, touchedAt: now } : { touchedAt: now };
     const saved = await db.update(lg).set(set).where(and(eq(lg.pin, pin), eq(lg.version, found.version))).run();
-    if (saved.rowsAffected > 0 || attempt >= 20) return result;
+    // A view that only keeps the game alive may lose the race: someone else just saved it.
+    if (saved.rowsAffected > 0 || !changed) return result;
+    // Each clash means another request's change went in, so this ends; after a few, spread the retries out.
+    if (attempt >= 3) await new Promise((r) => setTimeout(r, Math.random() * Math.min(attempt, 20)));
   }
 }
 
