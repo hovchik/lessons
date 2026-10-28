@@ -609,5 +609,48 @@
       "picture": "Picture to name",
       "listen": "Listen"
     }
+  },
+  "cards": {
+    "title": "Card album",
+    "intro": "Win a card each time a unit reaches Proficient. When you master the unit, its card turns shiny.",
+    "count": "{n} of {total} cards",
+    "progress": "{n}/{total}",
+    "toFind": "{n} more to find",
+    "locked": "Not found yet",
+    "newCards": "{n, plural, one {A new card!} other {# new cards!}}",
+    "tapToTurn": "Tap to turn over",
+    "turnOver": "Turn the card over",
+    "shiny": "Shiny",
+    "rarity": {
+      "common": "Common",
+      "rare": "Rare",
+      "epic": "Epic"
+    },
+    "signup": "Sign up",
+    "signupWhy": "to start collecting: every unit you learn well wins a card.",
+    "won": "{n, plural, one {You won a card!} other {You won # cards!}}",
+    "wonHint": "Open your album to turn it over.",
+    "collections": {
+      "numbers": {
+        "name": "Numbers and logic",
+        "about": "From maths, algebra, geometry, informatics and chess."
+      },
+      "science": {
+        "name": "Elements and discoveries",
+        "about": "From physics, chemistry and science."
+      },
+      "nature": {
+        "name": "Animals and wonders",
+        "about": "From biology and geography."
+      },
+      "history": {
+        "name": "Places and people of history",
+        "about": "From history, church history and social studies."
+      },
+      "arts": {
+        "name": "Words, art and music",
+        "about": "From languages, drawing, music and technology."
+      }
+    }
   }
 }

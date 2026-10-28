@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { QuizResponseSchema } from "@/server/api-schemas";
+import { syncCards } from "@/server/cards";
 import { recordUnitCheck } from "@/server/mastery";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
@@ -28,5 +29,7 @@ export async function POST(req: Request) {
   const result = await recordUnitCheck(user.id, parsed.data.skillId, parsed.data.answers, parsed.data.token);
   if (!result) return NextResponse.json({ error: "Unknown unit or questions" }, { status: 400 });
   await touchLastSeen(user.id);
-  return NextResponse.json(result);
+  // A unit that just reached "proficient" deals a collectible card.
+  const newCards = await syncCards(user.id);
+  return NextResponse.json({ ...result, newCards: newCards.map((c) => c.id) });
 }

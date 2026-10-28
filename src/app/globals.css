@@ -392,6 +392,32 @@ details[open] > :not(summary) { animation: drop-in 320ms var(--ease-out) backwar
   transform: scaleX(0.9);
   transition: transform 8s cubic-bezier(0.1, 0.8, 0.2, 1) 120ms, opacity 150ms ease 120ms;
 }
+/* ---- Collectible cards ---- */
+.card-flip { perspective: 900px; }
+.card-flip-inner { display: grid; transform-style: preserve-3d; transition: transform 700ms var(--ease-spring); }
+.card-flip[data-open="true"] .card-flip-inner { transform: rotateY(180deg); }
+/* Both faces share one grid cell, so the card is as tall as its longer side. */
+.card-flip-face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.card-flip-back { transform: rotateY(180deg); }
+/* A shiny card (its unit is mastered) has a slow rainbow sheen. */
+.card-holo { position: relative; overflow: hidden; isolation: isolate; }
+.card-holo::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  pointer-events: none;
+  background: conic-gradient(from 0deg, #f472b680, #facc1580, #4ade8080, #38bdf880, #a78bfa80, #f472b680);
+  opacity: 0.35;
+  animation: holo 6s linear infinite;
+}
+@keyframes holo { to { transform: rotate(360deg); } }
+.card-wobble { animation: wobble 2.2s ease-in-out infinite; }
+@keyframes wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg) translateY(-3px); }
+}
+
 .nav-progress[data-state="done"] {
   opacity: 0;
   transform: scaleX(1);
@@ -406,6 +432,7 @@ details[open] > :not(summary) { animation: drop-in 320ms var(--ease-out) backwar
     scroll-behavior: auto !important;
   }
   .confetti, .fx-shine::after, .fx-right::after { display: none; }
+  .card-holo::before { animation: none; }
 }
 
 /* ---- Lesson prose ---- */

@@ -24,6 +24,8 @@ type Result = {
   results: { itemId: string; response: QuizResponse; correct: boolean; shown: Shown<I18nText>; key: Key<I18nText>; explanation: I18nText | null; lessonTitle: I18nText }[];
   weakLessons: { id: string; title: I18nText; href: string }[];
   weakPrereqs: { skillId: string; title: I18nText; level: MasteryLevel; grade: number; href: string }[];
+  /** Collectible cards this check dealt (ids). */
+  newCards?: string[];
 };
 
 /**
@@ -50,6 +52,7 @@ export function UnitCheck({
   const tl = useTranslations("lesson");
   const tg = useTranslations("grade");
   const tp = useTranslations("practice");
+  const tc = useTranslations("cards");
   const locale = useLocale();
   const [i, setI] = useState(0);
   const [chosen, setChosen] = useState<QuizResponse | undefined>();
@@ -120,6 +123,17 @@ export function UnitCheck({
             </Button>
           </div>
         </section>
+
+        {!!result.newCards?.length && (
+          <Link href="/cards" className="fx-pop clay-press flex items-center gap-4 rounded-[var(--radius)] bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500 p-4 text-white shadow-clay-sm sm:p-5" style={{ animationDelay: "400ms" }}>
+            <span className="card-wobble grid h-16 w-12 shrink-0 place-items-center rounded-[12px] bg-white/20 text-2xl font-black" aria-hidden="true">?</span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-lg font-black">{tc("won", { n: result.newCards.length })}</span>
+              <span className="block text-sm font-semibold text-white/90">{tc("wonHint")}</span>
+            </span>
+            <ArrowRight className="size-6 shrink-0" aria-hidden="true" />
+          </Link>
+        )}
 
         {result.weakPrereqs.length > 0 && (
           <section className="clay-sm space-y-3 p-4 sm:p-6">
