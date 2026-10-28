@@ -106,14 +106,15 @@ function settle(g: Game, now: number) {
 
 const playerBy = (g: Game, tok: string) => [...g.players.values()].find((p) => p.token === tok);
 
-export function answer(pin: string, tok: string, choice: number, now = Date.now()) {
+/** `index` is the question the player saw: an answer sent just before the host moved on must not land on the next one. */
+export function answer(pin: string, tok: string, index: number, choice: number, now = Date.now()) {
   const g = store.get(pin);
   if (!g) return { error: "nogame" as const };
   settle(g, now);
   const p = playerBy(g, tok);
   if (!p) return { error: "noplayer" as const };
   const q = g.questions[g.index];
-  if (g.phase !== "question" || !q || p.answers.has(g.index)) return { error: "closed" as const };
+  if (g.phase !== "question" || !q || index !== g.index || p.answers.has(g.index)) return { error: "closed" as const };
   if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { error: "invalid" as const };
   const ms = now - g.startedAt;
   const points = livePoints(choice === q.answer, ms, g.seconds * 1000);
