@@ -17,7 +17,8 @@
     "signup": "Sign up",
     "logout": "Log out",
     "account": "Account",
-    "review": "Review"
+    "review": "Review",
+    "play": "Play"
   },
   "home": {
     "heroTitle": "Learn every subject, from grade 1 to 12",
@@ -459,5 +460,310 @@
     "earned": "earned",
     "notYet": "not yet",
     "noBadges": "Pass a unit check to master your first unit and earn a badge."
+  },
+  "puzzle": {
+    "title": "Daily puzzle",
+    "heading": "Puzzle #{n}",
+    "intro": "One new puzzle every day, the same for everyone. You have two tries.",
+    "levels": "Level",
+    "level": {
+      "junior": "Grades 1–6",
+      "senior": "Grades 7–12"
+    },
+    "theme": {
+      "numbers": "Numbers",
+      "logic": "Logic",
+      "words": "Words",
+      "chess": "Chess",
+      "shapes": "Shapes",
+      "nature": "Science & nature",
+      "teaser": "Brain teaser"
+    },
+    "check": "Check",
+    "triesLeft": "{n, plural, one {# try left} other {# tries left}}",
+    "notYet": "Not quite. Here's a hint:",
+    "error": "Could not check the answer. Check the internet connection and try again.",
+    "solvedFirst": "Solved on the first try!",
+    "solvedSecond": "Solved with the hint!",
+    "failed": "Not this time. Here's the answer:",
+    "streak": "{n, plural, =0 {No puzzle streak yet} one {# day in a row} other {# days in a row}}",
+    "nextIn": "Next puzzle in {h} h {m} min",
+    "share": "Share my result",
+    "copied": "Copied!",
+    "shareTitle": "Daily puzzle",
+    "trySenior": "Try the grades 7–12 puzzle",
+    "tryJunior": "Try the grades 1–6 puzzle",
+    "signupCta": "Create an account",
+    "signupWhy": "to keep your puzzle streak.",
+    "cardTitle": "Puzzle of the day",
+    "cardText": "A new puzzle every day. Can you solve it on the first try?",
+    "cardOpen": "Play",
+    "cardDone": "Solved",
+    "cardFailed": "Done",
+    "cardTry": "Your turn"
+  },
+  "why": {
+    "title": "Why learn this?",
+    "answered": "You wrote your answer",
+    "prompt": "In your own words: how could this help you, or someone you know?",
+    "placeholder": "For example: when I…",
+    "save": "Save",
+    "edit": "Edit your answer",
+    "yours": "Your answer",
+    "saved": "Saved. Nice thinking!",
+    "removed": "Removed.",
+    "error": "Couldn't save. Check your connection and try again.",
+    "signIn": "Sign in",
+    "signInWhy": "to write your own answer."
+  },
+  "games": {
+    "back": "All games",
+    "setup": "Choose your game",
+    "grade": "Grade",
+    "topic": "Topic",
+    "mode": "Mode",
+    "sprint": {
+      "name": "Sprint",
+      "about": "1 minute, as many as you can"
+    },
+    "calm": {
+      "name": "Calm",
+      "about": "20 questions, no clock"
+    },
+    "start": "Start",
+    "secondsLeft": "{s} s",
+    "questionOf": "{n} of {of}",
+    "combo": "{n} in a row",
+    "score": "Score: {n}",
+    "right": "Right!",
+    "answerWas": "The answer is",
+    "next": "Next",
+    "check": "Check",
+    "pad": "Number pad",
+    "backspace": "Delete",
+    "minus": "Change sign",
+    "roundOver": "Round over",
+    "sprintResult": "{n} right out of {total} in one minute",
+    "calmResult": "{pct}% right",
+    "firstBest": "Your first personal best!",
+    "newBest": "New personal best! Before: {prev}",
+    "best": "Your best: {n}",
+    "bestCombo": "Longest run: {n} in a row",
+    "saveFailed": "Couldn't save this round. Check your connection.",
+    "again": "Play again",
+    "change": "Change game",
+    "missed": "Worth another look",
+    "calc": {
+      "name": "Quick maths",
+      "intro": "Sums made for your grade, a fresh one every time. Race the clock or take it calm.",
+      "solveFor": "Find x.",
+      "topics": {
+        "mix": "Grade mix",
+        "add": "Add and subtract",
+        "times": "Times tables",
+        "divide": "Division",
+        "multiply": "Bigger multiplication",
+        "order": "Order of operations",
+        "fractions": "Fractions",
+        "decimals": "Decimals",
+        "negatives": "Negative numbers",
+        "percent": "Percentages",
+        "powers": "Powers and roots",
+        "equations": "Equations"
+      },
+      "about": {
+        "mix": "A mix of every topic for your grade.",
+        "add": "Grade 1 within 20, grade 2 within 100, grade 3 within 1,000, grade 4 within 10,000.",
+        "times": "Tables up to 10 × 10. Grade 2 starts with the 2, 3, 4, 5 and 10 times tables.",
+        "divide": "Division with no remainder, from the tables up to three-digit numbers.",
+        "multiply": "Two-digit numbers times one digit, times 10, 100 and 1,000, then two digits by two digits.",
+        "order": "Multiplication and division before addition and subtraction, and brackets first of all.",
+        "fractions": "Same denominators in grade 4, then different ones, then multiplying and dividing. Type 3/4 with the / key; any equal fraction or decimal counts.",
+        "decimals": "Add, subtract, multiply and divide decimals, and multiply and divide by 10 and 100.",
+        "negatives": "Adding, subtracting, multiplying and dividing with negative numbers. The ± key changes the sign.",
+        "percent": "A percentage of a number, increasing and decreasing by a percentage, and what percentage one number is of another.",
+        "powers": "Squares, cubes, powers of 2 and 10, square roots and the rules for powers.",
+        "equations": "Find x in linear equations. The ± key makes your answer negative."
+      },
+      "words": {
+        "percentOf": "{p}% of {n}",
+        "percentUp": "{n} increased by {p}%",
+        "percentDown": "{n} decreased by {p}%",
+        "whatPercent": "{n} is what percentage of {m}?"
+      }
+    },
+    "words": {
+      "name": "English words",
+      "intro": "See the picture, pick the English word and hear how it sounds.",
+      "level": "Level",
+      "levels": {
+        "1": {
+          "name": "Starter",
+          "about": "Grades 2–4: 66 everyday words"
+        },
+        "2": {
+          "name": "Explorer",
+          "about": "Grades 4–6: all 132 words"
+        }
+      },
+      "prompt": "Which word matches the picture?",
+      "picture": "Picture to name",
+      "listen": "Listen"
+    }
+  },
+  "cards": {
+    "title": "Card album",
+    "intro": "Win a card each time a unit reaches Proficient. When you master the unit, its card turns shiny.",
+    "count": "{n} of {total} cards",
+    "progress": "{n}/{total}",
+    "toFind": "{n} more to find",
+    "locked": "Not found yet",
+    "newCards": "{n, plural, one {A new card!} other {# new cards!}}",
+    "tapToTurn": "Tap to turn over",
+    "turnOver": "Turn the card over",
+    "shiny": "Shiny",
+    "rarity": {
+      "common": "Common",
+      "rare": "Rare",
+      "epic": "Epic"
+    },
+    "signup": "Sign up",
+    "signupWhy": "to start collecting: every unit you learn well wins a card.",
+    "won": "{n, plural, one {You won a card!} other {You won # cards!}}",
+    "wonHint": "Open your album to turn it over.",
+    "collections": {
+      "numbers": {
+        "name": "Numbers and logic",
+        "about": "From maths, algebra, geometry, informatics and chess."
+      },
+      "science": {
+        "name": "Elements and discoveries",
+        "about": "From physics, chemistry and science."
+      },
+      "nature": {
+        "name": "Animals and wonders",
+        "about": "From biology and geography."
+      },
+      "history": {
+        "name": "Places and people of history",
+        "about": "From history, church history and social studies."
+      },
+      "arts": {
+        "name": "Words, art and music",
+        "about": "From languages, drawing, music and technology."
+      }
+    }
+  },
+  "map": {
+    "title": "Your journey",
+    "progress": "{n} of {total} units learned well",
+    "stop": "Unit {n}: {title}",
+    "here": "next stop"
+  },
+  "recap": {
+    "title": "Weekly recap",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "weeks": "Which week",
+    "intro": "Here's what you did, {name}. Only you see this.",
+    "answers": "Questions",
+    "right": "{pct}% right",
+    "learningDays": "Learning days",
+    "goal": "your weekly goal",
+    "points": "Points",
+    "lessons": "Lessons finished",
+    "dayByDay": "Day by day",
+    "bestDay": "Best day: {day}, {n} questions",
+    "dayLabel": "{day}: {n} questions",
+    "countsAsDay": "{n} or more questions make a learning day",
+    "highlights": "Highlights",
+    "moreThanBefore": "{pct}% more questions than the week before. Great push!",
+    "lessThanBefore": "{pct}% fewer questions than the week before. A fresh week is a fresh start.",
+    "unitPassed": "Passed the unit check:",
+    "cardsWon": "{n, plural, one {Won a card} other {Won # cards}}",
+    "puzzles": "{n, plural, one {Solved the daily puzzle once} other {Solved # daily puzzles}}",
+    "games": "{n, plural, one {Played one game round} other {Played # game rounds}}",
+    "goalMet": "Weekly goal reached!",
+    "subjects": "Subjects",
+    "noSubjects": "Answer some lesson questions to see your subjects here.",
+    "emptyThis": "Your week is just getting started",
+    "emptyLast": "Nothing to show for last week",
+    "emptyHint": "A few questions a day is all it takes. Try Daily Review or a game.",
+    "startReview": "Start Daily Review",
+    "play": "Play a game",
+    "teaser": "Your week in review",
+    "teaserText": "{n} questions, {days} learning days. See the whole week."
+  },
+  "live": {
+    "title": "Live class quiz",
+    "hostTitle": "Run a live class quiz",
+    "joinIntro": "Your teacher shows a PIN on the board. Type it in with a nickname and play along.",
+    "hostIntro": "Pick a unit, show this screen on the board, and pupils join from their phones with the PIN. No accounts needed for them, and nothing about them is kept.",
+    "teacher": "Teaching a class?",
+    "hostLink": "Run a live quiz",
+    "pin": "Game PIN",
+    "nickname": "Nickname",
+    "nicknameHint": "Up to 20 characters. Be kind: your teacher can remove names.",
+    "join": "Join",
+    "errors": {
+      "nogame": "No game with that PIN. Check the number on the board.",
+      "over": "That game has finished.",
+      "full": "That game is full.",
+      "name": "Type a nickname.",
+      "network": "Couldn't connect. Try again.",
+      "invalid": "Something went wrong. Try again.",
+      "few": "This unit doesn't have enough multiple-choice questions yet. Pick another one.",
+      "busy": "Too many games are running right now. Try again in a few minutes."
+    },
+    "kicked": "You were removed from the game.",
+    "gameGone": "This game has ended.",
+    "joinAnother": "Join another game",
+    "connecting": "Connecting…",
+    "points": "{n} points",
+    "youreIn": "You're in, {name}!",
+    "waitStart": "Watch the board: \"{title}\" starts soon.",
+    "playersIn": "{n, plural, one {# player} other {# players}}",
+    "questionOf": "Question {n} of {total}",
+    "secs": "{s} s",
+    "answerSent": "Answer sent!",
+    "waitOthers": "Waiting for the others…",
+    "noAnswer": "Time's up!",
+    "correct": "Right! +{n}",
+    "wrong": "Not this time",
+    "rightWas": "The answer:",
+    "place": "You're in place {rank} of {n}",
+    "podiumYou": "{rank, select, 1 {First place!} 2 {Second place!} other {Third place!}}",
+    "finalPlace": "Place {rank} of {n}",
+    "setup": "Choose the quiz",
+    "subject": "Subject",
+    "grade": "Grade",
+    "unit": "Unit",
+    "questions": "Questions",
+    "timePerQuestion": "Time per question",
+    "create": "Open the game",
+    "goTo": "Go to",
+    "gamePin": "Game PIN",
+    "start": "Start",
+    "waitingPlayers": "Waiting for players to join…",
+    "remove": "Remove {name}",
+    "cancel": "Cancel this game",
+    "answeredOf": "{n} of {total} answered",
+    "showAnswer": "Show the answer now",
+    "rightAnswer": "Right answer",
+    "leaders": "Leaders",
+    "next": "Next question",
+    "finish": "Show the winners",
+    "endNow": "End the game now",
+    "podium": "Winners",
+    "newGame": "New game"
+  },
+  "play": {
+    "title": "Play",
+    "intro": "Short games that still teach: a daily puzzle, quick maths, English words, a quiz with your class, and the cards you win by learning.",
+    "calcText": "Sums made up fresh every time for grades 1 to 9. Race the clock or take it calmly.",
+    "liveText": "Your teacher puts a quiz on the board and everyone answers from their phone.",
+    "cardsText": "Every unit you get good at wins a card. Master it and the card turns shiny.",
+    "recapText": "What you did this week, day by day, next to last week.",
+    "noRanking": "No rankings here: your best is compared only with your own best."
   }
 }

@@ -15,7 +15,7 @@ export function ReviewNavLink() {
   const review = useLiveUser()?.review;
   if (!review || review.cards === 0) return null;
   return (
-    <Link href="/review" className="inline-flex h-11 items-center gap-1.5 rounded-xl px-4 text-sm font-bold hover:bg-muted">
+    <Link href="/review" className="inline-flex h-11 items-center gap-1.5 rounded-xl px-3 text-sm font-bold hover:bg-muted lg:px-4">
       {t("nav.review")}
       {review.ready > 0 && (
         <span className="grid min-w-6 place-items-center rounded-full bg-primary px-1.5 text-xs font-black leading-6 text-primary-foreground tabular-nums" aria-label={t("review.ready", { n: review.ready })}>

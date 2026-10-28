@@ -21,6 +21,8 @@ import { WORKED } from "../src/content/worked";
 import { workedProblems } from "../src/content/worked/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 import { EXAM_SCOPE } from "../src/content/exam-scope";
+import { PUZZLES } from "../src/content/puzzles";
+import { RELEVANCE } from "../src/content/relevance";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -187,6 +189,35 @@ const skillMap = buildSkillMap(courses);
 errors.push(...checkSkillMap(skillMap));
 console.log(`${skillMap.length} skills, ${skillMap.reduce((a, s) => a + s.prereqs.length, 0)} prerequisite links (${Object.keys(prerequisites).length} skills mapped by hand).`);
 const kindList = Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(", ");
+// Daily puzzles: complete in every language, unique ids, boards that parse (tests/puzzle.test.ts also checks the mates).
+const puzzleIds = new Set<string>();
+for (const p of Object.values(PUZZLES).flat()) {
+  if (puzzleIds.has(p.id)) errors.push(`puzzle ${p.id}: duplicate id`);
+  puzzleIds.add(p.id);
+  for (const e of questionProblems(p.q, LANGS)) errors.push(`puzzle ${p.id}: ${e}`);
+  for (const lang of LANGS) if (!p.hint[lang]?.trim()) errors.push(`puzzle ${p.id}: hint missing ${lang}`);
+  if (p.visual) for (const e of checkSimBlocks(p.visual)) errors.push(`puzzle ${p.id}: ${e}`);
+}
+console.log(`${puzzleIds.size} daily puzzles.`);
+
+// "Why learn this?": exactly one line per unit in every course, complete in every language.
+let relevanceLines = 0;
+for (const c of courses) {
+  const lines = RELEVANCE[c.subject]?.[c.grade];
+  const id = courseId(c.subject, c.grade);
+  if (!lines) { errors.push(`relevance ${id}: no lines`); continue; }
+  if (lines.length !== c.units.length) errors.push(`relevance ${id}: ${lines.length} lines for ${c.units.length} units`);
+  lines.forEach((line, i) => {
+    relevanceLines++;
+    for (const lang of LANGS) if (!line[lang]?.trim()) errors.push(`relevance ${id} unit ${i + 1}: missing ${lang}`);
+    if (line.hy && !/[։՞]$/.test(line.hy.trim())) errors.push(`relevance ${id} unit ${i + 1}: Armenian line should end with ։`);
+  });
+}
+for (const [subject, byGrade] of Object.entries(RELEVANCE)) {
+  for (const grade of Object.keys(byGrade)) if (!courses.some((c) => c.subject === subject && c.grade === Number(grade))) errors.push(`relevance ${subject}-${grade}: no such course`);
+}
+console.log(`${relevanceLines} "why learn this" lines.`);
+
 console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));

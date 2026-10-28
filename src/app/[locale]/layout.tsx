@@ -78,7 +78,7 @@ export default async function LocaleLayout({
             </main>
             <SiteFooter />
             {/* Space for the fixed bottom tab bar on phones. */}
-            <div className="pb-safe h-16 sm:hidden" aria-hidden="true" />
+            <div className="pb-safe h-16 md:hidden" aria-hidden="true" />
             <MobileNav />
           </LiveUserProvider>
         </NextIntlClientProvider>
