@@ -63,16 +63,16 @@ test("nothing is ready right after a quiz; tomorrow the mistakes are, mixed acro
   const first = queue.find((i) => i.itemId === "quiz:physics-7-speed#0")!;
   assert.equal(first.href, "/physics/7/speed");
   assert.equal(first.subjectId, "physics");
-  assert.equal(first.question.answer, 0);
-  assert.equal(first.question.explanation?.en, "because");
+  assert.deepEqual(first.key, { kind: "choice", answer: 0 });
+  assert.equal(first.explanation?.en, "because");
 });
 
 test("a review answer is checked on the server and moves the card", async () => {
   const later = new Date(Date.now() + DAY);
-  const right = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#1", choice: 1, now: later });
-  assert.deepEqual(right && { correct: right.correct, answer: right.answer }, { correct: true, answer: 1 });
+  const right = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#1", response: 1, now: later });
+  assert.equal(right?.correct, true);
   assert.ok((right?.nextInDays ?? 0) >= 1);
-  const wrong = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#3", choice: 2, now: later });
+  const wrong = await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#3", response: 2, now: later });
   assert.equal(wrong?.correct, false);
   assert.equal(wrong?.nextInDays, 1);
   const queue = await m.review.getReviewQueue("u1", { now: later });
@@ -83,19 +83,19 @@ test("a review answer is checked on the server and moves the card", async () => 
 });
 
 test("unknown questions, wrong option numbers and other pupils' questions are refused", async () => {
-  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#9", choice: 0 }), null);
-  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#0", choice: 7 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#9", response: 0 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:math-3-tables#0", response: 7 }), null);
   const db = await m.client.getDb();
   await db.insert(m.client.schema.users).values({ id: "u2", username: "aram", displayName: "Aram", passwordHash: "x" }).run();
-  assert.equal(await m.review.answerItem({ userId: "u2", itemId: "quiz:math-3-tables#0", choice: 0 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u2", itemId: "quiz:math-3-tables#0", response: 0 }), null);
 });
 
 test("the mistake notebook lists wrong answers with the option chosen last", async () => {
   const notebook = await m.review.getMistakes("u1");
   const byId = new Map(notebook.map((n) => [n.itemId, n]));
   assert.deepEqual([...byId.keys()].sort(), ["quiz:math-3-tables#3", "quiz:physics-7-speed#0"]);
-  assert.equal(byId.get("quiz:math-3-tables#3")!.lastChoice, 2);
-  assert.equal(byId.get("quiz:physics-7-speed#0")!.lastChoice, 2);
+  assert.equal(byId.get("quiz:math-3-tables#3")!.lastResponse, 2);
+  assert.equal(byId.get("quiz:physics-7-speed#0")!.lastResponse, 2);
   const practice = await m.review.getReviewQueue("u1", { mode: "mistakes" });
   assert.equal(practice.length, 2);
 });

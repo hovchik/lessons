@@ -4,6 +4,7 @@ import type { AnswerSource, StoredCard } from "./db/schema";
 import { updateRatings } from "./ability";
 import { newId } from "./user-auth";
 import { parseItemId, scheduleAnswer } from "@/lib/memory";
+import type { QuizResponse } from "@/lib/questions";
 
 /**
  * The learner model: every answered question is logged in `answer_events`,
@@ -19,6 +20,8 @@ export type AnswerInput = {
   courseId?: string | null;
   correct: boolean;
   choice?: number | null;
+  /** The answer to a question that is not multiple choice. */
+  response?: QuizResponse | null;
   confidence?: number | null;
   ms?: number | null;
   hintUsed?: boolean;
@@ -58,6 +61,7 @@ export async function recordAnswers(userId: string, answers: AnswerInput[], now 
       courseId: a.courseId ?? null,
       correct: a.correct,
       choice: a.choice ?? null,
+      response: a.response ?? null,
       confidence: a.confidence ?? null,
       ms: a.ms ?? null,
       hintUsed: a.hintUsed ?? false,

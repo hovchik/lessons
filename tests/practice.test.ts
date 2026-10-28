@@ -141,13 +141,13 @@ test("practice picks questions for the pupil and hides the answer until it is gi
   assert.ok(start.readiness > 0 && start.readiness < 100);
   assert.equal(await m.practice.nextPracticeQuestion("u1", "nope.u1"), null);
 
-  assert.equal(await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: "quiz:d#0", choice: 0 }), null, "a question from another unit");
-  assert.equal(await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: start.question.itemId, choice: 9 }), null, "an option that does not exist");
+  assert.equal(await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: "quiz:d#0", response: 0 }), null, "a question from another unit");
+  assert.equal(await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: start.question.itemId, response: 9 }), null, "an option that does not exist");
 
-  const r = await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: start.question.itemId, choice: rightChoice(start.question.itemId) });
+  const r = await m.practice.answerPractice({ userId: "u1", skillId: "math-3.u1", itemId: start.question.itemId, response: rightChoice(start.question.itemId) });
   assert.ok(r);
   assert.equal(r.correct, true);
-  assert.equal(r.answer, rightChoice(start.question.itemId));
+  assert.deepEqual(r.key, { kind: "choice", answer: rightChoice(start.question.itemId) });
   assert.ok(r.next && r.next.itemId !== start.question.itemId);
   assert.equal(r.level, null, "the round goes on");
   assert.match(r.lessonHref, /^\/math\/3\/[abc]$/);
@@ -164,7 +164,7 @@ test("after two misses the easiest question comes next", async () => {
   const abilityBefore = (await m.ability.getSkillRatings("u3", ["math-3.u1"])).get("math-3.u1")!.ability;
   let q = (await m.practice.nextPracticeQuestion("u3", "math-3.u1"))!.question!;
   for (let k = 0; k < 2; k++) {
-    const r = (await m.practice.answerPractice({ userId: "u3", skillId: "math-3.u1", itemId: q.itemId, choice: (rightChoice(q.itemId) + 1) % 4, seen, results }))!;
+    const r = (await m.practice.answerPractice({ userId: "u3", skillId: "math-3.u1", itemId: q.itemId, response: (rightChoice(q.itemId) + 1) % 4, seen, results }))!;
     seen.push(q.itemId);
     results.push(r.correct);
     q = r.next!;
@@ -187,7 +187,7 @@ test("a round ends after ten questions with the level and readiness", async () =
   let q = start.question;
   let last = null as Awaited<ReturnType<typeof m.practice.answerPractice>>;
   while (q) {
-    last = await m.practice.answerPractice({ userId: "u2", skillId: "math-3.u1", itemId: q.itemId, choice: rightChoice(q.itemId), seen, results });
+    last = await m.practice.answerPractice({ userId: "u2", skillId: "math-3.u1", itemId: q.itemId, response: rightChoice(q.itemId), seen, results });
     assert.ok(last);
     assert.ok(!seen.includes(q.itemId), "no question twice in a round");
     seen.push(q.itemId);
@@ -203,7 +203,7 @@ test("a round ends after ten questions with the level and readiness", async () =
   let s = (await m.practice.nextPracticeQuestion("u2", "math-3.u2"))!.question;
   let end = null as Awaited<ReturnType<typeof m.practice.answerPractice>>;
   while (s) {
-    end = await m.practice.answerPractice({ userId: "u2", skillId: "math-3.u2", itemId: s.itemId, choice: 0, seen: small });
+    end = await m.practice.answerPractice({ userId: "u2", skillId: "math-3.u2", itemId: s.itemId, response: 0, seen: small });
     small.push(s.itemId);
     s = end!.next;
   }

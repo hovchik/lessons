@@ -1,11 +1,13 @@
 "use client";
 
-import { ArrowRight, BookOpen, CheckCircle2, NotebookPen, PartyPopper, RotateCcw, XCircle } from "lucide-react";
+import { ArrowRight, BookOpen, NotebookPen, PartyPopper, RotateCcw } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { answerText, defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
 
@@ -22,7 +24,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
   const [items] = useState(initial);
   const locale = useLocale();
   const [i, setI] = useState(0);
-  const [chosen, setChosen] = useState<number | undefined>();
+  const [chosen, setChosen] = useState<QuizResponse | undefined>();
   const [results, setResults] = useState<Result[]>([]);
   const [busy, setBusy] = useState(false);
   const shownAt = useRef(Date.now());
@@ -30,21 +32,24 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
 
   const item = items[Math.min(i, items.length - 1)];
   const result = results[i];
+  const f = (x: Parameters<typeof pick>[0]) => pick(x, locale);
+  const shown = localShown(item.shown, f);
+  const key = localKey(item.key, f);
 
   useEffect(() => {
     shownAt.current = Date.now();
   }, [i]);
 
   const check = async (confidence: Confidence) => {
-    if (chosen === undefined || busy) return;
+    const response = defaultResponse(shown, chosen);
+    if (!isComplete(shown, response) || busy) return;
     setBusy(true);
-    const local = chosen === item.question.answer;
-    let r: Result = { correct: local, nextInDays: null, saved: false };
+    let r: Result = { correct: isRight(key, response), nextInDays: null, saved: false };
     try {
       const res = await fetch("/api/review/answer", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ itemId: item.itemId, choice: chosen, confidence, ms: Math.min(Date.now() - shownAt.current, 3_600_000) }),
+        body: JSON.stringify({ itemId: item.itemId, response, confidence, ms: Math.min(Date.now() - shownAt.current, 3_600_000) }),
       });
       if (res.ok) {
         const data = (await res.json()) as { correct: boolean; nextInDays: number };
@@ -53,6 +58,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
     } catch {
       // Offline: show the answer anyway; the card is not moved.
     }
+    setChosen(response);
     setResults((rs) => [...rs, r]);
     setBusy(false);
   };
@@ -97,9 +103,9 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
             <ul className="clay divide-y divide-border/70 overflow-hidden">
               {missed.map((m) => (
                 <li key={m.itemId} className="space-y-1 px-4 py-3 sm:px-5">
-                  <p className="whitespace-pre-line font-bold">{pick(m.question.prompt, locale)}</p>
+                  <p className="whitespace-pre-line font-bold">{pick(m.shown.prompt, locale)}</p>
                   <p className="text-sm text-success">
-                    <span className="font-bold">{t("rightAnswer")}:</span> {pick(m.question.options[m.question.answer], locale)}
+                    <span className="font-bold">{t("rightAnswer")}:</span> {answerText(localShown(m.shown, f), localKey(m.key, f), locale)}
                   </p>
                   {m.href && (
                     <Link href={m.href} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
@@ -131,39 +137,11 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
           {item.subjectName && <span>{pick(item.subjectName, locale)}{item.grade ? ` · ${tg("title", { grade: item.grade })}` : ""}</span>}
           <span className="normal-case tracking-normal text-muted-foreground">· {pick(item.refTitle, locale)}</span>
         </p>
-        <p id={`rq-${i}`} className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{pick(item.question.prompt, locale)}</p>
-        <div role="radiogroup" aria-labelledby={`rq-${i}`} className="grid gap-2.5 md:grid-cols-2">
-          {item.question.options.map((opt, oi) => {
-            const selected = chosen === oi;
-            const showCorrect = !!result && oi === item.question.answer;
-            const showWrong = !!result && selected && oi !== item.question.answer;
-            return (
-              <button
-                key={oi}
-                type="button"
-                role="radio"
-                aria-checked={selected}
-                disabled={!!result || busy}
-                onClick={() => setChosen(oi)}
-                className={cn(
-                  "clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold disabled:opacity-100",
-                  selected && !result && "ring-3 ring-primary",
-                  showCorrect && "bg-emerald-50 ring-3 ring-success",
-                  showWrong && "bg-red-50 ring-3 ring-destructive",
-                )}
-              >
-                <span className="flex items-start gap-2 leading-snug">
-                  {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
-                  {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
-                  {pick(opt, locale)}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+        <p id={`rq-${i}`} className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{shown.prompt}</p>
+        <AnswerArea shown={shown} value={chosen} onChange={setChosen} disabled={busy} reveal={result ? key : null} labelledBy={`rq-${i}`} />
 
         {!result ? (
-          <ConfidenceCheck size="lg" disabled={chosen === undefined || busy} onCheck={check} />
+          <ConfidenceCheck size="lg" disabled={!isComplete(shown, defaultResponse(shown, chosen)) || busy} onCheck={check} />
         ) : (
           <div className="space-y-3">
             <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -171,7 +149,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
               {result.nextInDays !== null && <p className="text-sm font-bold text-muted-foreground">{t("backIn", { n: result.nextInDays })}</p>}
               {!result.saved && <p className="text-sm font-bold text-accent">{t("notSaved")}</p>}
             </div>
-            {item.question.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(item.question.explanation, locale)}</p>}
+            {item.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(item.explanation, locale)}</p>}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button size="lg" className="w-full sm:w-auto" onClick={next}>
                 {isLast ? t("finish") : t("next")}

@@ -1,19 +1,21 @@
 "use client";
 
-import { ArrowRight, BookOpen, CheckCircle2, ClipboardCheck, Gauge, RotateCcw, XCircle } from "lucide-react";
+import { ArrowRight, BookOpen, ClipboardCheck, Gauge, RotateCcw } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { MasteryBadge } from "@/components/site/mastery-badge";
 import type { Stretch } from "@/lib/elo";
 import type { MasteryLevel } from "@/lib/mastery";
+import { answerText, defaultResponse, isComplete, localKey, localShown, type Key, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
 import type { PracticeQuestion } from "@/server/practice";
 
-type Feedback = { correct: boolean; answer: number; explanation: I18nText | null; lessonHref: string; next: PracticeQuestion | null; readiness: number; level: MasteryLevel | null };
+type Feedback = { correct: boolean; key: Key<I18nText>; explanation: I18nText | null; lessonHref: string; next: PracticeQuestion | null; readiness: number; level: MasteryLevel | null };
 
 const STRETCH: Record<Stretch, string> = {
   easy: "bg-emerald-50 text-success",
@@ -49,9 +51,9 @@ export function PracticeSession({
   // Fixed at the start: the page refreshes at the end of the round, and the summary compares with where it began.
   const [startReadiness] = useState(readiness);
   const [q, setQ] = useState(first);
-  const [chosen, setChosen] = useState<number | undefined>();
+  const [chosen, setChosen] = useState<QuizResponse | undefined>();
   const [feedback, setFeedback] = useState<Feedback | null>(null);
-  const [round, setRound] = useState<{ q: PracticeQuestion; choice: number; correct: boolean; answer: number }[]>([]);
+  const [round, setRound] = useState<{ q: PracticeQuestion; response: QuizResponse; correct: boolean; key: Key<I18nText> }[]>([]);
   const [done, setDone] = useState<{ readiness: number; level: MasteryLevel } | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(false);
@@ -63,8 +65,12 @@ export function PracticeSession({
     shownAt.current = Date.now();
   }, [q]);
 
+  const f = (x: I18nText) => pick(x, locale);
+  const shown = localShown(q.shown, f);
+
   const check = async (confidence: Confidence) => {
-    if (chosen === undefined || busy || feedback) return;
+    const response = defaultResponse(shown, chosen);
+    if (!isComplete(shown, response) || response === undefined || busy || feedback) return;
     pending.current = confidence;
     setBusy(true);
     setError(false);
@@ -75,7 +81,7 @@ export function PracticeSession({
         body: JSON.stringify({
           skillId,
           itemId: q.itemId,
-          choice: chosen,
+          response,
           confidence,
           ms: Math.min(Date.now() - shownAt.current, 3_600_000),
           seen: round.map((r) => r.q.itemId),
@@ -84,8 +90,9 @@ export function PracticeSession({
       });
       if (!res.ok) throw new Error(String(res.status));
       const data = (await res.json()) as Feedback;
+      setChosen(response);
       setFeedback(data);
-      setRound((rs) => [...rs, { q, choice: chosen, correct: data.correct, answer: data.answer }]);
+      setRound((rs) => [...rs, { q, response, correct: data.correct, key: data.key }]);
     } catch {
       // The answer is checked on the server, so without it there is nothing to show yet.
       setError(true);
@@ -143,9 +150,9 @@ export function PracticeSession({
             <ul className="clay divide-y divide-border/70 overflow-hidden">
               {missed.map((m) => (
                 <li key={m.q.itemId} className="space-y-1 px-4 py-3 sm:px-5">
-                  <p className="whitespace-pre-line font-bold">{pick(m.q.prompt, locale)}</p>
+                  <p className="whitespace-pre-line font-bold">{pick(m.q.shown.prompt, locale)}</p>
                   <p className="text-sm text-success">
-                    <span className="font-bold">{tm("rightAnswer")}:</span> {pick(m.q.options[m.answer], locale)}
+                    <span className="font-bold">{tm("rightAnswer")}:</span> {answerText(localShown(m.q.shown, f), localKey(m.key, f), locale)}
                   </p>
                 </li>
               ))}
@@ -171,40 +178,12 @@ export function PracticeSession({
           <span>{pick(q.lessonTitle, locale)}</span>
           <span className={cn("rounded-full px-2 py-0.5 normal-case tracking-normal", STRETCH[q.stretch])}>{t(`stretch.${q.stretch}`)}</span>
         </p>
-        <p id="pq" className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{pick(q.prompt, locale)}</p>
-        <div role="radiogroup" aria-labelledby="pq" className="grid gap-2.5 md:grid-cols-2">
-          {q.options.map((opt, oi) => {
-            const selected = chosen === oi;
-            const showCorrect = !!feedback && oi === feedback.answer;
-            const showWrong = !!feedback && selected && oi !== feedback.answer;
-            return (
-              <button
-                key={oi}
-                type="button"
-                role="radio"
-                aria-checked={selected}
-                disabled={!!feedback || busy}
-                onClick={() => setChosen(oi)}
-                className={cn(
-                  "clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold disabled:opacity-100",
-                  selected && !feedback && "ring-3 ring-primary",
-                  showCorrect && "bg-emerald-50 ring-3 ring-success",
-                  showWrong && "bg-red-50 ring-3 ring-destructive",
-                )}
-              >
-                <span className="flex items-start gap-2 leading-snug">
-                  {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
-                  {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
-                  {pick(opt, locale)}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+        <p id="pq" className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{shown.prompt}</p>
+        <AnswerArea shown={shown} value={chosen} onChange={setChosen} disabled={busy} reveal={feedback ? localKey(feedback.key, f) : null} labelledBy="pq" />
 
         {!feedback ? (
           <>
-            <ConfidenceCheck size="lg" label={tm("howSure")} disabled={chosen === undefined || busy} onCheck={check} />
+            <ConfidenceCheck size="lg" label={tm("howSure")} disabled={!isComplete(shown, defaultResponse(shown, chosen)) || busy} onCheck={check} />
             {error && (
               <div role="alert" className="flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
                 <p className="font-bold text-destructive">{t("notSaved")}</p>

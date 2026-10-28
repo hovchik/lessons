@@ -104,6 +104,7 @@
     "rightGuess": "Correct, even as a guess. It will come back soon so it sticks.",
     "rightSecond": "Right on the second try.",
     "wrongSecond": "Not this time. The right answer is marked green.",
+    "wrongSecondShown": "Not this time. The right answer is shown above.",
     "secondTries": "+{n} on the second try"
   },
   "tips": {
@@ -349,5 +350,16 @@
     "takeCheck": "Take the unit check",
     "missedTitle": "Look at these again",
     "afterCheck": "Practise this unit"
+  },
+  "questions": {
+    "rightAnswer": "Right answer",
+    "yourAnswer": "Your answer",
+    "typeNumber": "Type a number",
+    "gap": "Gap {n}",
+    "orderHint": "Use the arrows to put them in order.",
+    "moveUp": "Move “{item}” up",
+    "moveDown": "Move “{item}” down",
+    "matchFor": "Match for “{item}”",
+    "choose": "Choose…"
   }
 }

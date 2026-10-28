@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { QuizResponseSchema } from "@/server/api-schemas";
 import { recordQuizResult } from "@/server/progress";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
-/** The client sends only the chosen option index per question; the score is computed from the stored quiz. */
+/** The client sends only its answer per question (an option index, typed text, an order…); the score is computed from the stored quiz. */
 const Body = z.object({
   lessonId: z.string().min(1).max(200),
-  answers: z.array(z.number().int().min(0).max(50)).min(1).max(500),
+  answers: z.array(QuizResponseSchema).min(1).max(500),
   confidence: z.array(z.union([z.literal(0), z.literal(2)]).nullable()).max(500).optional(),
-  retries: z.array(z.number().int().min(0).max(50).nullable()).max(500).optional(),
+  retries: z.array(QuizResponseSchema.nullable()).max(500).optional(),
 });
 
 export async function POST(req: Request) {

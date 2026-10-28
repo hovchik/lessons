@@ -155,17 +155,20 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
 .subject-zinc    { --s: #52525b; --s-soft: #f4f4f5; --s-text: #27272a; }
 
 /* ---- Clay surfaces ---- */
-.clay {
-  background: var(--card);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-clay);
-  border: 1px solid rgb(255 255 255 / 0.7);
-}
-.clay-sm {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-clay-sm);
-  border: 1px solid rgb(255 255 255 / 0.7);
+/* In the components layer, so state utilities (bg-emerald-50, ring-primary…) on a clay card win over its base look. */
+@layer components {
+  .clay {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-clay);
+    border: 1px solid rgb(255 255 255 / 0.7);
+  }
+  .clay-sm {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-clay-sm);
+    border: 1px solid rgb(255 255 255 / 0.7);
+  }
 }
 .clay-press {
   transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms ease;

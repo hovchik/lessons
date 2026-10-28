@@ -6,6 +6,7 @@ import { recordAttempt } from "./progress";
 import { checkSignature, signValue } from "./user-auth";
 import { levelRank, masteryLevel, UNIT_CHECK_PASS, UNIT_CHECK_SIZE, type MasteryLevel, type SkillEvidence } from "@/lib/mastery";
 import { parseItemId, quizItemId } from "@/lib/memory";
+import { displayForm, recordFor, validResponse, type QuizResponse, type Shown } from "@/lib/questions";
 
 /**
  * Mastery per skill and the unit check. A skill is one unit of a course; its
@@ -118,7 +119,7 @@ function shuffle<T>(xs: T[], seed: number): T[] {
   return out;
 }
 
-export type UnitCheckQuestion = { itemId: string; lessonTitle: I18nText; prompt: I18nText; options: I18nText[] };
+export type UnitCheckQuestion = { itemId: string; lessonTitle: I18nText; shown: Shown<I18nText> };
 
 /** How long a pupil has to hand in a check after it was put together. */
 const CHECK_TTL_MS = 6 * 60 * 60 * 1000;
@@ -171,11 +172,11 @@ export async function buildUnitCheck(userId: string, skillId: string, now = new 
   const picked: SkillQuestion[] = [];
   for (let round = 0; picked.length < size && queues.some((q) => q.length > round); round++)
     for (const q of queues) if (picked.length < size && q[round]) picked.push(q[round]);
-  const questions = shuffle(picked, day + 7).map((q) => ({ itemId: q.itemId, lessonTitle: q.lessonTitle, prompt: q.q.prompt, options: q.q.options }));
+  const questions = shuffle(picked, day + 7).map((q) => ({ itemId: q.itemId, lessonTitle: q.lessonTitle, shown: displayForm(q.q, q.itemId).shown }));
   return { questions, token: checkToken(userId, skillId, questions.map((q) => q.itemId), now) };
 }
 
-export type UnitCheckAnswer = { itemId: string; choice: number; confidence?: number | null };
+export type UnitCheckAnswer = { itemId: string; response: QuizResponse; confidence?: number | null };
 
 /**
  * Scores a handed-in unit check on the server (it must answer exactly the
@@ -191,21 +192,23 @@ export async function recordUnitCheck(userId: string, skillId: string, answers: 
   const seen = new Set<string>();
   for (const a of answers) {
     const q = byId.get(a.itemId);
-    if (!q || seen.has(a.itemId) || a.choice >= q.q.options.length) return null;
+    if (!q || seen.has(a.itemId) || !validResponse(displayForm(q.q, q.itemId).shown, a.response)) return null;
     seen.add(a.itemId);
   }
   const { skill } = data;
   const [before] = await getMastery(userId, [skill.courseId]).then((ms) => ms.filter((m) => m.skillId === skillId));
   const results = answers.map((a) => {
     const q = byId.get(a.itemId)!;
-    return { itemId: a.itemId, choice: a.choice, correct: a.choice === q.q.answer, answer: q.q.answer, explanation: q.q.explanation ?? null, prompt: q.q.prompt, options: q.q.options, lessonId: q.lessonId, lessonTitle: q.lessonTitle, lessonSlug: q.lessonSlug };
+    const { shown, key } = displayForm(q.q, q.itemId);
+    const rec = recordFor(shown, key, a.response);
+    return { itemId: a.itemId, response: a.response, correct: rec.correct, choice: rec.choice, options: rec.options, shown, key, explanation: q.q.explanation ?? null, lessonId: q.lessonId, lessonTitle: q.lessonTitle, lessonSlug: q.lessonSlug };
   });
   await recordAnswers(
     userId,
-    results.map((r, i) => ({ itemId: r.itemId, source: "unit" as const, refId: parseItemId(r.itemId)!.refId, courseId: skill.courseId, correct: r.correct, choice: r.choice, confidence: answers[i].confidence ?? null, options: r.options.length })),
+    results.map((r, i) => ({ itemId: r.itemId, source: "unit" as const, refId: parseItemId(r.itemId)!.refId, courseId: skill.courseId, correct: r.correct, choice: r.choice, response: r.choice === null ? r.response : null, options: r.options, confidence: answers[i].confidence ?? null })),
   );
   const score = results.filter((r) => r.correct).length;
-  await recordAttempt({ userId, kind: "unit", refId: skillId, courseId: skill.courseId, score, total: results.length, answers: answers.map((a) => [a.itemId, a.choice]) });
+  await recordAttempt({ userId, kind: "unit", refId: skillId, courseId: skill.courseId, score, total: results.length, answers: answers.map((a) => [a.itemId, a.response]) });
 
   const after = (await getMastery(userId, [skill.courseId])).find((m) => m.skillId === skillId)!;
   const passed = score / results.length >= UNIT_CHECK_PASS;

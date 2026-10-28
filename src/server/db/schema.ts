@@ -2,18 +2,39 @@ import { sqliteTable, text, integer, real, index, primaryKey } from "drizzle-orm
 import { sql } from "drizzle-orm";
 import { packedJson } from "./packed";
 import { TIP_CATEGORIES, type TipCategory } from "../../lib/tip-categories";
+import type { QuizResponse } from "../../lib/questions";
 
 export { TIP_CATEGORIES, type TipCategory };
 
 /** A string translated into the three UI languages. */
 export type I18nText = { en: string; hy: string; ru: string };
 
-export type QuizQuestion = {
+/** A multiple-choice question: the original and still the most common kind. */
+export type ChoiceQuestion = {
+  kind?: "choice";
   prompt: I18nText;
   options: I18nText[];
   answer: number; // index into options
   explanation?: I18nText;
 };
+
+/** Type the number. `tolerance` allows rounding (0.05 accepts 3.14 for 3.1416); `unit` is shown after the box. */
+export type NumberQuestion = { kind: "number"; prompt: I18nText; answer: number; tolerance?: number; unit?: I18nText; explanation?: I18nText };
+
+/**
+ * Fill the gaps: `text` marks each gap with ___, and `gaps` holds the accepted
+ * answers for each in every language, alternatives split by | ("is|'s").
+ * Answers are compared ignoring case, extra spaces and end punctuation.
+ */
+export type GapQuestion = { kind: "gap"; prompt: I18nText; text: I18nText; gaps: I18nText[]; explanation?: I18nText };
+
+/** Put the steps in order: `items` are written in the right order and shown mixed. */
+export type OrderQuestion = { kind: "order"; prompt: I18nText; items: I18nText[]; explanation?: I18nText };
+
+/** Match each left item with its right one: `pairs` are written matched, and the right column is shown mixed. */
+export type MatchQuestion = { kind: "match"; prompt: I18nText; pairs: [I18nText, I18nText][]; explanation?: I18nText };
+
+export type QuizQuestion = ChoiceQuestion | NumberQuestion | GapQuestion | OrderQuestion | MatchQuestion;
 
 export const subjects = sqliteTable("subjects", {
   id: text("id").primaryKey(), // slug, e.g. "math"
@@ -216,7 +237,7 @@ export const tips = sqliteTable(
 export type Tip = typeof tips.$inferSelect;
 
 /** One exam question: a multiple-choice item worth `points` (default 1), optionally tagged with a topic. */
-export type ExamQuestion = QuizQuestion & {
+export type ExamQuestion = ChoiceQuestion & {
   points?: number;
   topic?: I18nText;
 };
@@ -337,6 +358,8 @@ export const answerEvents = sqliteTable(
     correct: integer("correct", { mode: "boolean" }).notNull(),
     /** Chosen option index, when the question is multiple choice. */
     choice: integer("choice"),
+    /** The answer to any other kind of question: typed text, gap texts, an order or pairs (src/lib/questions.ts). */
+    response: text("response", { mode: "json" }).$type<QuizResponse>(),
     /** Pupil's confidence before seeing the answer: 0 guessing, 1 unsure, 2 sure. */
     confidence: integer("confidence"),
     /** Time from showing the question to answering, in milliseconds. */

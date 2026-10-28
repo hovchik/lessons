@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { QuizResponseSchema } from "@/server/api-schemas";
 import { answerPractice } from "@/server/practice";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
 /**
- * One answer in adaptive practice: the client sends the question and the chosen
- * option with the round so far; the answer is checked here and the next
+ * One answer in adaptive practice: the client sends the question and its
+ * answer with the round so far; the answer is checked here and the next
  * question picked for this pupil.
  */
 const Body = z.object({
   skillId: z.string().min(1).max(200),
   itemId: z.string().min(1).max(300),
-  choice: z.number().int().min(0).max(50),
+  response: QuizResponseSchema,
   /** 0 guessing, 2 sure. */
   confidence: z.union([z.literal(0), z.literal(2)]).nullable().optional(),
   ms: z.number().int().min(0).max(3_600_000).nullable().optional(),

@@ -3,6 +3,7 @@ import { getDb, schema } from "./db/client";
 import { newId } from "./user-auth";
 import { recordAnswers } from "./learner";
 import { examItemId, quizItemId } from "@/lib/memory";
+import { answerRecord, displayForm, validResponse, type QuizResponse } from "@/lib/questions";
 import { scoreExam } from "@/lib/exam-score";
 
 /**
@@ -35,18 +36,19 @@ export async function recordAttempt(input: {
 
 /**
  * Record a finished lesson quiz: the score is computed on the server from the
- * stored questions and the chosen option indexes, logged as an attempt, and the
+ * stored questions and the pupil's answers, logged as an attempt, and the
  * lesson is marked completed. Returns null when the lesson or its quiz does not
- * exist, or the number of answers does not match the quiz.
+ * exist, or the answers do not fit the quiz.
  */
 export async function recordQuizResult(input: {
   userId: string;
   lessonId: string;
-  answers: number[];
+  /** Per question, the option index or, for other kinds, the answer as in src/lib/questions.ts. */
+  answers: QuizResponse[];
   /** Per question, how sure the pupil was before checking: 0 guessing, 2 sure. */
   confidence?: (number | null)[];
-  /** Per question, the option picked on the second try after a wrong first one (null when none). */
-  retries?: (number | null)[];
+  /** Per question, the second try after a wrong first one (null when none). */
+  retries?: (QuizResponse | null)[];
 }) {
   const db = await getDb();
   const lesson = await db
@@ -57,24 +59,20 @@ export async function recordQuizResult(input: {
   if (!lesson || lesson.status !== "published" || lesson.quiz.length === 0 || input.answers.length !== lesson.quiz.length) return null;
   if (input.confidence && input.confidence.length !== lesson.quiz.length) return null;
   if (input.retries && input.retries.length !== lesson.quiz.length) return null;
+  const forms = lesson.quiz.map((q, i) => displayForm(q, quizItemId(lesson.id, i)).shown);
+  if (input.answers.some((a, i) => !validResponse(forms[i], a))) return null;
   const total = lesson.quiz.length;
+  const firstTries = lesson.quiz.map((q, i) => answerRecord(q, quizItemId(lesson.id, i), input.answers[i]));
   // The score counts first tries; a second try after a hint is logged but does not count.
-  const score = lesson.quiz.filter((q, i) => input.answers[i] === q.answer).length;
+  const score = firstTries.filter((a) => a.correct).length;
   await recordAttempt({ userId: input.userId, kind: "quiz", refId: lesson.id, courseId: lesson.courseId, score, total, answers: input.answers });
   const base = { source: "quiz" as const, refId: lesson.id, courseId: lesson.courseId };
-  const firsts = lesson.quiz.map((q, i) => ({
-    ...base,
-    itemId: quizItemId(lesson.id, i),
-    correct: input.answers[i] === q.answer,
-    choice: input.answers[i],
-    confidence: input.confidence?.[i] ?? null,
-    options: q.options.length,
-  }));
+  const firsts = lesson.quiz.map((_, i) => ({ ...base, itemId: quizItemId(lesson.id, i), ...firstTries[i], confidence: input.confidence?.[i] ?? null }));
   const seconds = lesson.quiz.flatMap((q, i) => {
     const r = input.retries?.[i];
-    // Only a wrong first answer gets a second try, and it must be a different option.
-    if (r == null || r >= q.options.length || input.answers[i] === q.answer || r === input.answers[i]) return [];
-    return [{ ...base, itemId: quizItemId(lesson.id, i), correct: r === q.answer, choice: r, hintUsed: true, schedule: false }];
+    // Only a wrong first answer gets a second try, and it must be a different answer.
+    if (r == null || !validResponse(forms[i], r) || firstTries[i].correct || JSON.stringify(r) === JSON.stringify(input.answers[i])) return [];
+    return [{ ...base, itemId: quizItemId(lesson.id, i), ...answerRecord(q, quizItemId(lesson.id, i), r), hintUsed: true, schedule: false }];
   });
   await recordAnswers(input.userId, [...firsts, ...seconds]);
   const now = new Date().toISOString();

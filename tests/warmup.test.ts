@@ -113,7 +113,7 @@ test("for a pupil, questions due for review come before new ones", async () => {
 });
 
 test("a warm-up answer creates the card where the question lives and logs the warm-up", async () => {
-  const r = await m.review.answerItem({ userId: "u1", itemId: "quiz:m2#1", choice: 1, source: "warmup", confidence: 2 });
+  const r = await m.review.answerItem({ userId: "u1", itemId: "quiz:m2#1", response: 1, source: "warmup", confidence: 2 });
   assert.equal(r?.correct, true);
   assert.ok((r?.nextInDays ?? 0) >= 1);
   const c = await card("quiz:m2#1");
@@ -122,9 +122,9 @@ test("a warm-up answer creates the card where the question lives and logs the wa
   assert.equal(e.source, "warmup");
   assert.equal(e.confidence, 2);
   // Daily Review still needs a card the pupil already has; drafts and other kinds are refused.
-  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:m1#0", choice: 0 }), null);
-  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:m3#0", choice: 0, source: "warmup" }), null);
-  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "check:p1#0", choice: 0, source: "warmup" }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:m1#0", response: 0 }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "quiz:m3#0", response: 0, source: "warmup" }), null);
+  assert.equal(await m.review.answerItem({ userId: "u1", itemId: "check:p1#0", response: 0, source: "warmup" }), null);
 });
 
 test("quiz confidence and a second try are saved; only the first try counts and moves the card", async () => {
@@ -143,7 +143,7 @@ test("quiz confidence and a second try are saved; only the first try counts and 
   // The notebook shows the first (scheduled) answer, not the hinted retry, and flags a sure mistake.
   const notebook = await m.review.getMistakes("u1");
   const n1 = notebook.find((i) => i.itemId === "quiz:m4#1");
-  assert.equal(n1?.lastChoice, 0);
+  assert.equal(n1?.lastResponse, 0);
   assert.equal(n1?.wasSure, true);
   assert.equal(notebook.find((i) => i.itemId === "quiz:m4#2")?.wasSure, false);
 });
