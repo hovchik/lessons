@@ -9,7 +9,10 @@ import { cn, pick } from "@/lib/utils";
 import { ExamCard } from "@/components/site/exam-card";
 import { MasteryBadge } from "@/components/site/mastery-badge";
 import { TipsSection } from "@/components/site/tips-section";
+import { WhyThis } from "@/components/fun/why-this";
+import { relevanceFor } from "@/content/relevance";
 import { getMastery } from "@/server/mastery";
+import { getReflections } from "@/server/reflection";
 import { getCourseProgress } from "@/server/progress";
 import { getCourse, getCourses, getCourseTips, getExams } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
@@ -37,6 +40,7 @@ export default async function CoursePage({ params }: { params: Params }) {
   const exams = await getExams({ subjectId: subject, grade });
   const tips = await getCourseTips(course.id);
   const mastery = new Map((user ? await getMastery(user.id, [course.id]) : []).map((m) => [m.unitId, m]));
+  const reflections = user ? await getReflections(user.id, units.map((u) => u.id)) : new Map<string, string>();
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
   const hours = course.hoursPerWeek;
 
@@ -110,11 +114,14 @@ export default async function CoursePage({ params }: { params: Params }) {
                 <span className="grid size-10 shrink-0 sm:size-11 place-items-center rounded-[14px] text-lg font-black text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
                   {ui + 1}
                 </span>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{t("course.unit", { n: ui + 1 })}</p>
                   <h3 className="text-lg font-extrabold text-balance sm:text-xl">{pick(u.title, l)}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{pick(u.summary, l)}</p>
                   {mastery.get(u.id) && <MasteryBadge level={mastery.get(u.id)!.level} className="mt-2" />}
+                  {relevanceFor(subject, grade, u.position) && (
+                    <WhyThis unitId={u.id} line={pick(relevanceFor(subject, grade, u.position)!, l)} initial={reflections.get(u.id) ?? null} signedIn={!!user} />
+                  )}
                 </div>
               </div>
               <ol className="divide-y divide-border/70 border-t border-border/70">

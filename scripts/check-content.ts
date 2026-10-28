@@ -22,6 +22,7 @@ import { workedProblems } from "../src/content/worked/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 import { EXAM_SCOPE } from "../src/content/exam-scope";
 import { PUZZLES } from "../src/content/puzzles";
+import { RELEVANCE } from "../src/content/relevance";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -198,6 +199,24 @@ for (const p of Object.values(PUZZLES).flat()) {
   if (p.visual) for (const e of checkSimBlocks(p.visual)) errors.push(`puzzle ${p.id}: ${e}`);
 }
 console.log(`${puzzleIds.size} daily puzzles.`);
+
+// "Why learn this?": exactly one line per unit in every course, complete in every language.
+let relevanceLines = 0;
+for (const c of courses) {
+  const lines = RELEVANCE[c.subject]?.[c.grade];
+  const id = courseId(c.subject, c.grade);
+  if (!lines) { errors.push(`relevance ${id}: no lines`); continue; }
+  if (lines.length !== c.units.length) errors.push(`relevance ${id}: ${lines.length} lines for ${c.units.length} units`);
+  lines.forEach((line, i) => {
+    relevanceLines++;
+    for (const lang of LANGS) if (!line[lang]?.trim()) errors.push(`relevance ${id} unit ${i + 1}: missing ${lang}`);
+    if (line.hy && !/[։՞]$/.test(line.hy.trim())) errors.push(`relevance ${id} unit ${i + 1}: Armenian line should end with ։`);
+  });
+}
+for (const [subject, byGrade] of Object.entries(RELEVANCE)) {
+  for (const grade of Object.keys(byGrade)) if (!courses.some((c) => c.subject === subject && c.grade === Number(grade))) errors.push(`relevance ${subject}-${grade}: no such course`);
+}
+console.log(`${relevanceLines} "why learn this" lines.`);
 
 console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets.`);
 if (errors.length) {

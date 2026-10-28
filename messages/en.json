@@ -500,5 +500,19 @@
     "cardDone": "Solved",
     "cardFailed": "Done",
     "cardTry": "Your turn"
+  },
+  "why": {
+    "title": "Why learn this?",
+    "answered": "You wrote your answer",
+    "prompt": "In your own words: how could this help you, or someone you know?",
+    "placeholder": "For example: when I…",
+    "save": "Save",
+    "edit": "Edit your answer",
+    "yours": "Your answer",
+    "saved": "Saved. Nice thinking!",
+    "removed": "Removed.",
+    "error": "Couldn't save. Check your connection and try again.",
+    "signIn": "Sign in",
+    "signInWhy": "to write your own answer."
   }
 }

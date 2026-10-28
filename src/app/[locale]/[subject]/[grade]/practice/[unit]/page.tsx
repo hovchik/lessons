@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Gauge } from "lucide-react";
+import { Gauge, Lightbulb } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link, redirect } from "@/i18n/navigation";
 import { MasteryBadge } from "@/components/site/mastery-badge";
 import { PracticeSession } from "@/components/site/practice-session";
 import { cn, pick } from "@/lib/utils";
+import { relevanceFor } from "@/content/relevance";
 import { getMastery } from "@/server/mastery";
 import { nextPracticeQuestion } from "@/server/practice";
 import { getCourse } from "@/server/queries";
@@ -32,11 +33,13 @@ export default async function PracticePage({ params }: { params: Params }) {
   if (!user) redirect({ href: `/login?next=${encodeURIComponent(`/${subject}/${grade}/practice/${position}`)}`, locale });
   const u = user!;
   const [t, tm, tg, l] = await Promise.all([getTranslations("practice"), getTranslations("mastery"), getTranslations("grade"), getLocale()]);
+  const tw = await getTranslations("why");
   const skill = (await getMastery(u.id, [data.course.id])).find((s) => s.position === position);
   if (!skill) notFound();
   const unit = data.units.find((x) => x.id === skill.unitId);
   const start = await nextPracticeQuestion(u.id, skill.skillId);
   const courseHref = `/${subject}/${grade}`;
+  const why = relevanceFor(subject, grade, position);
 
   return (
     <div className={cn("mx-auto max-w-3xl space-y-6", `subject-${data.subject.color}`)}>
@@ -62,6 +65,15 @@ export default async function PracticePage({ params }: { params: Params }) {
             </p>
           </div>
         </div>
+        {why && (
+          <p className="mt-4 flex items-start gap-2 rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">
+            <Lightbulb className="mt-0.5 size-4 shrink-0" style={{ color: "var(--s-text)" }} aria-hidden="true" />
+            <span>
+              <span className="font-extrabold">{tw("title")} </span>
+              {pick(why, l)}
+            </span>
+          </p>
+        )}
       </header>
       {start?.question ? (
         <PracticeSession
