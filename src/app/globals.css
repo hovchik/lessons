@@ -577,7 +577,9 @@ button.art-card:active { transform: scale(0.97); }
 .art-fade { animation: art-fade 900ms ease both; }
 .art-step-bar { display: grid; gap: 0.5rem; }
 .art-step-num { font-size: 0.78rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; color: var(--art); }
-.art-step-cap { font-weight: 700; min-height: 3em; animation: drop-in 320ms var(--ease-out) backwards; }
+.art-step-cap { font-weight: 700; min-height: 3em; }
+/* The live region stays put (screen readers announce its new text); only the inner text is keyed to replay the fade. */
+.art-step-cap-text { display: block; animation: drop-in 320ms var(--ease-out) backwards; }
 .art-dots { display: flex; gap: 0.35rem; }
 .art-dots span { width: 0.6rem; height: 0.6rem; border-radius: 999px; background: color-mix(in srgb, var(--art) 18%, #e2e8f0); transition: width 320ms var(--ease-out), background-color 260ms ease; }
 .art-dots span.is-on { background: color-mix(in srgb, var(--art) 55%, #fff); }
@@ -856,14 +858,15 @@ button.art-card:active { transform: scale(0.97); }
 /* Draggable points: a halo that breathes to say "move me", grows under the finger. */
 .sim-handle { cursor: grab; }
 .sim-handle:active { cursor: grabbing; }
-.sim-handle > circle { transform-box: fill-box; transform-origin: center; transition: transform 200ms var(--ease-spring), opacity 200ms ease; }
-.sim-handle > circle:first-child { animation: handle-breathe 2.6s ease-in-out infinite; }
+/* Only the Handle component's own halo and knob (kit.tsx); other .sim-handle groups (charges, magnets) draw real objects. */
+.sim-halo, .sim-knob { transform-box: fill-box; transform-origin: center; transition: transform 200ms var(--ease-spring), opacity 200ms ease; }
+.sim-halo { animation: handle-breathe 2.6s ease-in-out infinite; }
 @keyframes handle-breathe { 50% { transform: scale(1.25); opacity: 0.08; } }
 @media (hover: hover) and (pointer: fine) {
-  .sim-handle:hover > circle:first-child { animation: none; transform: scale(1.3); opacity: 0.22; }
+  .sim-handle:hover > .sim-halo { animation: none; transform: scale(1.3); opacity: 0.22; }
 }
-.sim-handle:active > circle:first-child { animation: none; transform: scale(1.45); opacity: 0.25; }
-.sim-handle:active > circle:nth-child(2) { transform: scale(1.15); }
+.sim-handle:active > .sim-halo { animation: none; transform: scale(1.45); opacity: 0.25; }
+.sim-handle:active > .sim-knob { transform: scale(1.15); }
 .sim-steps { display: grid; gap: 0.8rem; }
 @media (min-width: 640px) { .sim-steps { grid-template-columns: 1.35fr 1fr; align-items: center; } }
 /* Step dots: done steps fill, the current one stretches into a pill. */

@@ -242,8 +242,8 @@ export function useDrag<K extends string | number>(pick: (p: { x: number; y: num
 export function Handle({ x, y, color = "#4f46e5", r = 7, label }: { x: number; y: number; color?: string; r?: number; label?: string }) {
   return (
     <g className="sim-handle">
-      <circle cx={x} cy={y} r={r + 9} fill={color} opacity="0.14" />
-      <circle cx={x} cy={y} r={r} fill={color} stroke="#fff" strokeWidth="2.5" />
+      <circle className="sim-halo" cx={x} cy={y} r={r + 9} fill={color} opacity="0.14" />
+      <circle className="sim-knob" cx={x} cy={y} r={r} fill={color} stroke="#fff" strokeWidth="2.5" />
       {label ? <text x={x + r + 4} y={y - r - 2} className="sim-tag" fill="#1e1b4b">{label}</text> : null}
     </g>
   );
@@ -351,7 +351,7 @@ export function StepPlayer({
       <div className="sim-steps-stage">{children}</div>
       <div className="art-step-bar">
         <span className="art-step-num">{L(UI.step, lang)} {i + 1}/{n}</span>
-        <p key={i} className="art-step-cap" aria-live="polite">{L(caps[i], lang)}</p>
+        <p className="art-step-cap" aria-live="polite"><span key={i} className="art-step-cap-text">{L(caps[i], lang)}</span></p>
         <div className="art-dots sim-dots">
           {caps.map((_, k) => (
             <button key={k} type="button" aria-label={`${L(UI.step, lang)} ${k + 1}`} className={k === i ? "is-on is-now" : k < i ? "is-on" : undefined} onClick={() => setI(k)} />

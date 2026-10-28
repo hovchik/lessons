@@ -44,7 +44,7 @@ export default function Steps({ spec, lang }: WidgetProps) {
         </div>
         <div className="art-step-bar">
           <span className="art-step-num">{UI.step[lang]} {i + 1}/{n}</span>
-          <p key={i} className="art-step-cap" aria-live="polite">{tr(guide.steps[i].cap, lang)}</p>
+          <p className="art-step-cap" aria-live="polite"><span key={i} className="art-step-cap-text">{tr(guide.steps[i].cap, lang)}</span></p>
           <div className="art-dots" aria-hidden="true">
             {guide.steps.map((_, k) => <span key={k} className={k === i ? "is-on is-now" : k < i ? "is-on" : undefined} />)}
           </div>
