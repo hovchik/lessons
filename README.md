@@ -44,6 +44,11 @@ npm run dev                    # http://localhost:3000/en  (or /hy, /ru)
 
 Admin panel: <http://localhost:3000/admin> (password from `ADMIN_PASSWORD`).
 
+## Deploying to a server
+
+`docker compose up -d --build` runs the app behind Caddy (automatic HTTPS) with the database in a
+Docker volume. Step-by-step setup, backups, updates and sizing: [deploy/README.md](deploy/README.md).
+
 ## Student accounts and progress
 
 Pupils create their own account at `/en/signup` (username + password, optional grade; no email). Signed-in

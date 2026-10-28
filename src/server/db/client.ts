@@ -28,6 +28,9 @@ export const db: Db = globalForDb.__lessonsDb ?? (globalForDb.__lessonsDb = open
 export function getDb(): Promise<Db> {
   if (!globalForDb.__lessonsDbReady) {
     globalForDb.__lessonsDbReady = (async () => {
+      // Wait for another process's write instead of failing with SQLITE_BUSY (the driver's default
+      // is 0 ms). Needed when several server workers share the file (server.mjs, WEB_CONCURRENCY).
+      await db.run("PRAGMA busy_timeout = 5000");
       await db.run("PRAGMA journal_mode = WAL");
       await db.run("PRAGMA foreign_keys = ON");
       await migrate(db, { migrationsFolder: path.join(process.cwd(), "drizzle") });
