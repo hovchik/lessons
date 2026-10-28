@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { LIVE_SHAPES } from "@/lib/live-quiz";
 import { cn } from "@/lib/utils";
 
@@ -29,24 +29,29 @@ export function Shape({ i, className }: { i: number; className?: string }) {
  * Returns the latest state, and `gone` once the server no longer knows the game.
  */
 export function useLivePoll<T>(url: string | null, every = 1000) {
-  const [data, setData] = useState<T | null>(null);
-  const [gone, setGone] = useState(false);
+  const [state, setState] = useState<{ url: string | null; data: T | null; gone: boolean }>({ url, data: null, gone: false });
   const [tick, setTick] = useState(0);
-  const busy = useRef(false);
   useEffect(() => {
     if (!url) return;
     let stop = false;
+    let busy = false;
     const load = async () => {
-      if (busy.current) return;
-      busy.current = true;
+      if (busy) return;
+      busy = true;
       try {
         const res = await fetch(url, { cache: "no-store" });
-        if (res.status === 404) setGone(true);
-        else if (res.ok && !stop) setData((await res.json()) as T);
+        // A reply for a poll that was stopped (another game, or unmounted) is dropped.
+        if (stop) return;
+        if (res.status === 404) setState({ url, data: null, gone: true });
+        else if (res.ok) {
+          const data = (await res.json()) as T;
+          if (!stop) setState({ url, data, gone: false });
+        }
       } catch {
         // A dropped poll; the next one catches up.
+      } finally {
+        busy = false;
       }
-      busy.current = false;
     };
     load();
     const id = setInterval(load, every);
@@ -55,7 +60,9 @@ export function useLivePoll<T>(url: string | null, every = 1000) {
       clearInterval(id);
     };
   }, [url, every, tick]);
-  return { data, gone, refresh: () => setTick((n) => n + 1) };
+  // State left over from another URL (the previous game) doesn't count.
+  const mine = state.url === url;
+  return { data: mine ? state.data : null, gone: mine && state.gone, refresh: () => setTick((n) => n + 1) };
 }
 
 /** Seconds left, counted down locally between polls from the server's msLeft. */

@@ -77,7 +77,7 @@ export function LivePlayer({ initialPin }: { initialPin: string }) {
     if (!seat || !view || view.phase !== "question" || view.question?.answered !== null || sent?.index === view.index) return;
     setSent({ index: view.index, choice });
     try {
-      await fetch("/api/live/answer", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ pin: seat.pin, token: seat.token, choice }) });
+      await fetch("/api/live/answer", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ pin: seat.pin, token: seat.token, index: view.index, choice }) });
     } catch {
       setSent(null);
     }

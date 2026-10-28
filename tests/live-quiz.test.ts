@@ -59,10 +59,11 @@ test("a whole game: lobby, questions, reveals and podium, with the key hidden un
   assert.equal(JSON.stringify(pv).includes('"answer"'), false, "no key while the question is open");
 
   now += 5000;
-  assert.equal(answer(pin, ani.token, 1, now).ok, true);
-  assert.equal(answer(pin, ani.token, 2, now).error, "closed", "one answer per question");
+  assert.equal(answer(pin, ani.token, 1, 1, now).error, "closed", "an answer for another question is refused");
+  assert.equal(answer(pin, ani.token, 0, 1, now).ok, true);
+  assert.equal(answer(pin, ani.token, 0, 2, now).error, "closed", "one answer per question");
   assert.equal(hostView(pin, hostToken, now)!.phase, "question", "still waiting for ani 2");
-  answer(pin, ani2.token, 0, now);
+  answer(pin, ani2.token, 0, 0, now);
   const hv = hostView(pin, hostToken, now)!;
   assert.equal(hv.phase, "reveal", "closes once everyone answered");
   assert.deepEqual(hv.reveal!.counts, [1, 1, 0, 0]);
@@ -71,9 +72,10 @@ test("a whole game: lobby, questions, reveals and podium, with the key hidden un
   assert.equal(pv.me.rank, 1);
 
   hostAct(pin, hostToken, "next", undefined, now);
+  assert.equal(answer(pin, ani2.token, 0, 0, now).error, "closed", "a late answer to question 1 doesn't land on question 2");
   now += 21000; // nobody answers in time
   assert.equal(hostView(pin, hostToken, now)!.phase, "reveal", "time up closes the question");
-  assert.equal(answer(pin, ani.token, 0, now).error, "closed");
+  assert.equal(answer(pin, ani.token, 1, 0, now).error, "closed");
   hostAct(pin, hostToken, "next", undefined, now);
   hostAct(pin, hostToken, "kick", (ani2 as unknown as { playerId: string }).playerId, now);
   assert.deepEqual(playerView(pin, ani2.token, now), { kicked: true });
