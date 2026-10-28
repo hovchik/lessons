@@ -46,7 +46,7 @@ export const getStreakCached = cache(async (userId: string) => streakOf(learning
  * day (more in Daily Review, where it was recalled after a gap), and the first
  * pass of each unit check adds a bonus. The placement test gives none.
  */
-async function pointsByDay(userId: string) {
+export async function pointsByDay(userId: string) {
   const db = await getDb();
   const ae = schema.answerEvents;
   const perItem = db

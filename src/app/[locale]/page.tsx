@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { GradePicker } from "@/components/site/grade-picker";
 import { MotivationCard } from "@/components/site/motivation-card";
 import { PuzzleCard } from "@/components/fun/puzzle-card";
+import { RecapTeaser } from "@/components/fun/recap-teaser";
 import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import { cn, pick } from "@/lib/utils";
 import { getStats, getSubjectGradeRanges, getSubjects } from "@/server/queries";
 import { getMotivation } from "@/server/motivation";
 import { getPuzzleCard } from "@/server/puzzle";
+import { getRecap } from "@/server/recap";
 import { getReviewSummaryCached } from "@/server/review";
 import { getCurrentUser } from "@/server/user-auth";
 
@@ -24,6 +26,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const [subjects, rangeRows, stats, user] = await Promise.all([getSubjects(), getSubjectGradeRanges(), getStats(), getCurrentUser()]);
   const [review, motivation] = user ? await Promise.all([getReviewSummaryCached(user.id), getMotivation(user.id)]) : [null, null];
   const puzzle = await getPuzzleCard(user?.id ?? null);
+  // Early in the week the recap looks back at last week; later it shows this week so far.
+  const early = [1, 2].includes(new Date().getUTCDay());
+  const recap = user && motivation?.hasActivity ? await getRecap(user.id, early ? "last" : "this") : null;
   const ranges = new Map(rangeRows.map((r) => [r.subjectId, r]));
 
   return (
@@ -31,6 +36,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {review && review.ready > 0 && <ReviewCard summary={review} />}
       {motivation?.hasActivity && <MotivationCard m={motivation} />}
       {user && <PuzzleCard card={puzzle} />}
+      {recap && recap.answers > 0 && <RecapTeaser recap={recap} />}
       <section className="clay relative overflow-hidden px-5 py-8 sm:px-12 sm:py-16">
         <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-secondary/30 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-24 -left-16 size-72 rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />
