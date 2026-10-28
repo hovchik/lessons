@@ -4,7 +4,7 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ExamRunner } from "@/components/site/exam-runner";
-import { Markdown } from "@/components/site/markdown";
+import { StaticMarkdown } from "@/components/site/static-markdown";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { examScope } from "@/content/exam-scope";
@@ -76,7 +76,7 @@ export default async function ExamPage({ params }: { params: Params }) {
 
       <section aria-labelledby="format-title" className="clay p-4 sm:p-8">
         <h2 id="format-title" className="sr-only">{t("exam.aboutFormat")}</h2>
-        <Markdown>{pick(exam.format, l)}</Markdown>
+        <StaticMarkdown lang={l}>{pick(exam.format, l)}</StaticMarkdown>
       </section>
 
       {plannable && (

@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Clock, Hammer, Languages, ListChecks } from "luc
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { Markdown } from "@/components/site/markdown";
+import { StaticMarkdown } from "@/components/site/static-markdown";
 import { LessonChecks } from "@/components/site/lesson-checks";
 import { LessonProgressCard } from "@/components/site/lesson-progress";
 import { Quiz } from "@/components/site/quiz";
@@ -93,7 +93,7 @@ export default async function LessonPage({ params }: { params: Params }) {
       {ready ? (
         <div id="lesson-body" className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
           <LessonChecks lessonId={user ? lesson.id : null}>
-            <Markdown lang={l}>{body}</Markdown>
+            <StaticMarkdown lang={l}>{body}</StaticMarkdown>
           </LessonChecks>
         </div>
       ) : (
