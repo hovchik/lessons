@@ -13,7 +13,7 @@ export async function ExamCard({ item, compact = false }: { item: ExamListItem; 
   return (
     <Link href={`/exams/${exam.id}`} className={cn("clay clay-press flex h-full flex-col gap-3 p-4 sm:p-5", subject && `subject-${subject.color}`)}>
       <div className="flex items-start justify-between gap-3">
-        <span className="grid size-11 shrink-0 place-items-center rounded-[14px] text-white shadow-clay-sm" style={{ background: subject ? "var(--s)" : "var(--primary)" }}>
+        <span className="fx-chip grid size-11 shrink-0 place-items-center rounded-[14px] text-white shadow-clay-sm" style={{ background: subject ? "var(--s)" : "var(--primary)" }}>
           {subject ? <SubjectIcon name={subject.icon} className="size-5" /> : <Icon className="size-5" aria-hidden="true" />}
         </span>
         <span className="rounded-full px-2.5 py-1 text-xs font-extrabold" style={{ background: subject ? "var(--s-soft)" : "var(--muted)", color: subject ? "var(--s-text)" : "var(--primary)" }}>
@@ -27,7 +27,7 @@ export async function ExamCard({ item, compact = false }: { item: ExamListItem; 
       <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-muted-foreground">
         <span className="rounded-full bg-muted px-2.5 py-1">{t("questionsCount", { n: exam.questionCount })}</span>
         <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1"><Clock className="size-3.5" aria-hidden="true" />{t("duration", { min: exam.durationMin })}</span>
-        <ArrowRight className="ml-auto size-4 text-primary" aria-hidden="true" />
+        <ArrowRight className="fx-arrow ml-auto size-4 text-primary" aria-hidden="true" />
       </div>
     </Link>
   );

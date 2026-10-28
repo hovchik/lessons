@@ -53,7 +53,7 @@ export default async function AdminDashboard() {
                   <span className="text-sm font-bold text-muted-foreground">{ready} / {total}</span>
                 </div>
                 <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={p} aria-valuemin={0} aria-valuemax={100} aria-label={`${s.name.en} ${p}%`}>
-                  <div className="h-full rounded-full" style={{ width: `${p}%`, background: "var(--s)" }} />
+                  <div className="bar-fill h-full rounded-full" style={{ width: `${p}%`, background: "var(--s)" }} />
                 </div>
               </li>
             );

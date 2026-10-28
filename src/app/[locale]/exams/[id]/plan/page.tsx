@@ -204,7 +204,7 @@ export default async function ExamPlanPage({ params }: { params: Params }) {
                 </span>
                 <span className="inline-flex items-center gap-1">
                   <span className="rounded-full bg-muted px-2.5 py-0.5 text-sm tabular-nums">{view.groups[band].length}</span>
-                  {view.groups[band].length > 0 && <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden="true" />}
+                  {view.groups[band].length > 0 && <ChevronDown className="size-4 transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />}
                 </span>
               </summary>
               <ul className="mt-2 space-y-2 text-sm">

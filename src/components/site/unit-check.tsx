@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import type { MasteryLevel } from "@/lib/mastery";
@@ -91,8 +92,9 @@ export function UnitCheck({
   if (result) {
     return (
       <div ref={topRef} className="space-y-6 scroll-mt-20">
-        <section className="clay p-6 text-center sm:p-10" role="status" aria-live="polite">
-          <span className={cn("mx-auto grid size-16 place-items-center rounded-[20px] shadow-clay-sm", result.passed ? "bg-emerald-50 text-success" : "bg-amber-50 text-amber-800")}>
+        <section className="fx-rise relative clay p-6 text-center sm:p-10" role="status" aria-live="polite">
+          {result.passed && <Confetti />}
+          <span style={{ animationDelay: "120ms" }} className={cn("fx-pop mx-auto grid size-16 place-items-center rounded-[20px] shadow-clay-sm", result.passed ? "bg-emerald-50 text-success" : "bg-amber-50 text-amber-800")}>
             {result.passed ? <ClipboardCheck className="size-8" aria-hidden="true" /> : <TriangleAlert className="size-8" aria-hidden="true" />}
           </span>
           <h2 className="mt-5 text-2xl font-black sm:text-3xl">{t("resultTitle", { score: result.score, total: result.total })}</h2>
@@ -190,16 +192,16 @@ export function UnitCheck({
       <div className="flex items-center gap-3">
         <p className="shrink-0 text-sm font-extrabold tabular-nums">{t("progressLabel", { n: Math.min(i + 1, questions.length), total: questions.length })}</p>
         <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={answers.length} aria-label={t("progressLabel", { n: i + 1, total: questions.length })}>
-          <div className="h-full rounded-full transition-[width] duration-300" style={{ width: `${(answers.length / questions.length) * 100}%`, background: "var(--s)" }} />
+          <div className="bar-fill h-full rounded-full" style={{ width: `${(answers.length / questions.length) * 100}%`, background: "var(--s)" }} />
         </div>
       </div>
-      <section className="clay space-y-4 p-4 sm:p-7" aria-labelledby={`uq-${i}`}>
+      <section key={i} className="fx-next clay space-y-4 p-4 sm:p-7" aria-labelledby={`uq-${i}`}>
         <p className="text-xs font-extrabold uppercase tracking-wide" style={{ color: "var(--s-text)" }}>{pick(q.lessonTitle, locale)}</p>
         <p id={`uq-${i}`} className="whitespace-pre-line text-lg font-bold leading-snug sm:text-xl">{shown!.prompt}</p>
         <AnswerArea key={q.itemId} shown={shown!} value={chosen} onChange={setChosen} disabled={busy} labelledBy={`uq-${i}`} />
         <ConfidenceCheck size="lg" label={t("howSure")} disabled={!isComplete(shown!, defaultResponse(shown!, chosen)) || busy || answers.length >= questions.length} onCheck={answer} />
         {error && (
-          <div role="alert" className="flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+          <div role="alert" className="fx-in flex flex-col gap-3 rounded-[var(--radius)] bg-red-50 p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
             <p className="font-bold text-destructive">{t("notSaved")}</p>
             <Button size="sm" variant="secondary" disabled={busy} onClick={() => submit(answers)}>
               {t("tryAgain")}

@@ -153,7 +153,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
                               <span className="text-sm font-bold tabular-nums text-muted-foreground">{t("progress.courseLine", { done: c.completed, total: c.totalLessons })}</span>
                             </div>
                             <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={done} aria-valuemin={0} aria-valuemax={100} aria-label={`${pick(c.courseTitle, l)} ${done}%`}>
-                              <div className="h-full rounded-full transition-[width]" style={{ width: `${done}%`, background: "var(--s)" }} />
+                              <div className="bar-fill h-full rounded-full" style={{ width: `${done}%`, background: "var(--s)" }} />
                             </div>
                             <div className="mt-1.5 flex items-center justify-between text-xs font-semibold text-muted-foreground">
                               <span>{best === null ? t("progress.noQuiz") : t("progress.best", { pct: best })}</span>

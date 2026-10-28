@@ -83,7 +83,7 @@ export function Warmup({ items, signedIn }: { items: ReviewItem[]; signedIn: boo
               {!result ? (
                 <ConfidenceCheck disabled={!isComplete(shown, defaultResponse(shown, picked[i])) || busy !== null} onCheck={(c) => check(i, c)} />
               ) : (
-                <div className="space-y-2">
+                <div className="fx-in space-y-2">
                   <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1">
                     <p className={cn("font-extrabold", result.correct ? "text-success" : "text-destructive")}>{result.correct ? tr("correct") : tr("incorrect")}</p>
                     {result.nextInDays !== null && <p className="text-sm font-bold text-muted-foreground">{tr("backIn", { n: result.nextInDays })}</p>}
@@ -101,7 +101,7 @@ export function Warmup({ items, signedIn }: { items: ReviewItem[]; signedIn: boo
           );
         })}
       </ol>
-      {allDone && <p role="status" className="text-sm font-bold text-success">{t("done")}</p>}
+      {allDone && <p role="status" className="fx-in text-sm font-bold text-success">{t("done")}</p>}
     </section>
   );
 }
