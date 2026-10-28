@@ -1,9 +1,10 @@
+import { sql } from "drizzle-orm";
 import { NextResponse } from "next/server";
+import { getDb } from "./db/client";
 
 /**
- * Small in-memory rate limits against password guessing and PIN guessing.
- * Counted per server process: with several workers (WEB_CONCURRENCY) each
- * keeps its own counts, which only makes the limits a few times looser.
+ * Rate limits against password guessing and PIN guessing, kept in SQLite so
+ * every server worker (WEB_CONCURRENCY) shares one count.
  *
  * A whole class often comes from one address (the school's router), so the
  * per-address limits count failures only and leave room for 30 pupils.
@@ -27,51 +28,51 @@ export const LIMITS = {
   liveCreateUser: { max: 30, windowMs: 60 * MIN },
 } satisfies Record<string, Limit>;
 
-type Bucket = { count: number; resetAt: number };
-const MAX_KEYS = 50_000;
-const buckets = ((globalThis as { __rateBuckets?: Map<string, Bucket> }).__rateBuckets ??= new Map<string, Bucket>());
+// Short-lived counters, not app data, so the table makes itself instead of
+// going through a drizzle migration.
+let ready: Promise<Awaited<ReturnType<typeof getDb>>> | null = null;
+function table() {
+  ready ??= getDb().then(async (db) => {
+    await db.run(sql`create table if not exists rate_limits (key text primary key, count integer not null, reset_at integer not null)`);
+    return db;
+  });
+  return ready;
+}
 
-function sweep(now: number) {
-  for (const [k, b] of buckets) if (b.resetAt <= now) buckets.delete(k);
-  // Still full (a flood of distinct keys): drop the oldest.
-  for (const k of buckets.keys()) {
-    if (buckets.size <= MAX_KEYS * 0.9) break;
-    buckets.delete(k);
+let sweptAt = 0;
+
+/**
+ * Counts one try against `key` and says how long it must wait: 0 when the try
+ * is allowed, else the milliseconds left in the window (and the try is not
+ * counted). One statement, so parallel requests can't all slip under the limit.
+ */
+export async function take(key: string, limit: Limit, now = Date.now()): Promise<number> {
+  const db = await table();
+  if (now - sweptAt > MIN) {
+    sweptAt = now;
+    await db.run(sql`delete from rate_limits where reset_at <= ${now}`);
   }
+  const [row] = await db.all<{ count: number; reset_at: number }>(sql`
+    insert into rate_limits (key, count, reset_at) values (${key}, 1, ${now + limit.windowMs})
+    on conflict(key) do update set
+      count = case when reset_at <= ${now} then 1 else count + 1 end,
+      reset_at = case when reset_at <= ${now} then excluded.reset_at else reset_at end
+    returning count, reset_at`);
+  if (row.count <= limit.max) return 0;
+  await refund(key);
+  return row.reset_at - now;
 }
 
-/** Milliseconds until `key` may try again, or 0 when it is under its limit. */
-export function blockedFor(key: string, limit: Limit, now = Date.now()): number {
-  const b = buckets.get(key);
-  if (!b || b.resetAt <= now) return 0;
-  return b.count >= limit.max ? b.resetAt - now : 0;
-}
-
-/** Counts one try against `key`. */
-export function hit(key: string, limit: Limit, now = Date.now()) {
-  const b = buckets.get(key);
-  if (b && b.resetAt > now) {
-    b.count++;
-    return;
-  }
-  if (buckets.size >= MAX_KEYS) sweep(now);
-  buckets.set(key, { count: 1, resetAt: now + limit.windowMs });
-}
-
-/** Takes back one try counted against `key` (it was reserved before a check that then passed). */
-export function refund(key: string) {
-  const b = buckets.get(key);
-  if (b && b.count > 0) b.count--;
-}
-
-/** Forgets the tries counted against `key`. */
-export function clear(key: string) {
-  buckets.delete(key);
+/** Takes back one try counted against `key` (it was counted before a check that then passed). */
+export async function refund(key: string) {
+  const db = await table();
+  await db.run(sql`update rate_limits set count = count - 1 where key = ${key} and count > 0`);
 }
 
 /** For tests. */
-export function resetRateLimits() {
-  buckets.clear();
+export async function resetRateLimits() {
+  const db = await table();
+  await db.run(sql`delete from rate_limits`);
 }
 
 /**

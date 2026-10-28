@@ -1,7 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 
 process.env.ADMIN_SESSION_SECRET ??= "test-secret";
+process.env.DATABASE_PATH = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "lessons-security-")), "test.db");
 
 const t = (s: string) => ({ en: s, hy: s, ru: s });
 const questions = [
@@ -11,28 +15,26 @@ const questions = [
 ];
 
 test("rate limits block after the budget and open again when the window passes", async () => {
-  const { blockedFor, hit, resetRateLimits } = await import("../src/server/rate-limit");
-  resetRateLimits();
+  const { take, resetRateLimits } = await import("../src/server/rate-limit");
+  await resetRateLimits();
   const limit = { max: 3, windowMs: 1000 };
-  const now = 5_000;
-  for (let i = 0; i < 3; i++) {
-    assert.equal(blockedFor("k", limit, now), 0);
-    hit("k", limit, now);
-  }
-  assert.equal(blockedFor("k", limit, now + 10), 990);
-  assert.equal(blockedFor("other", limit, now), 0, "keys are separate");
-  assert.equal(blockedFor("k", limit, now + 1000), 0);
+  const now = Date.now();
+  for (let i = 0; i < 3; i++) assert.equal(await take("k", limit, now), 0);
+  assert.equal(await take("k", limit, now + 10), 990);
+  assert.equal(await take("k", limit, now + 20), 980, "a refused try doesn't push the count up");
+  assert.equal(await take("other", limit, now), 0, "keys are separate");
+  assert.equal(await take("k", limit, now + 1000), 0);
 });
 
-test("a refunded try no longer counts", async () => {
-  const { blockedFor, hit, refund, resetRateLimits } = await import("../src/server/rate-limit");
-  resetRateLimits();
-  const limit = { max: 2, windowMs: 1000 };
-  hit("r", limit, 0);
-  hit("r", limit, 0);
-  assert.ok(blockedFor("r", limit, 1) > 0);
-  refund("r");
-  assert.equal(blockedFor("r", limit, 1), 0);
+test("parallel tries can't get past the limit, and a refunded try no longer counts", async () => {
+  const { take, refund, resetRateLimits } = await import("../src/server/rate-limit");
+  await resetRateLimits();
+  const limit = { max: 5, windowMs: 60_000 };
+  const waits = await Promise.all(Array.from({ length: 20 }, () => take("p", limit)));
+  assert.equal(waits.filter((w) => w === 0).length, 5);
+  await refund("p");
+  assert.equal(await take("p", limit), 0);
+  assert.ok((await take("p", limit)) > 0);
 });
 
 test("the client address is the last forwarded hop, which our own server wrote", async () => {

@@ -2,7 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getDb, schema } from "@/server/db/client";
-import { blockedFor, clientIp, hit, LIMITS, tooMany } from "@/server/rate-limit";
+import { clientIp, LIMITS, take, tooMany } from "@/server/rate-limit";
 import {
   accountsConfigured,
   createUserToken,
@@ -35,10 +35,8 @@ export async function POST(req: Request) {
   if (!USERNAME_RE.test(username)) return NextResponse.json({ error: "bad_username" }, { status: 400 });
   if (password.length < MIN_PASSWORD) return NextResponse.json({ error: "password_short" }, { status: 400 });
   // Both new accounts and "taken" answers count, so the form can't be used to list usernames.
-  const ipKey = `signup-ip:${clientIp(req)}`;
-  const wait = blockedFor(ipKey, LIMITS.signupIp);
+  const wait = await take(`signup-ip:${clientIp(req)}`, LIMITS.signupIp);
   if (wait) return tooMany(wait);
-  hit(ipKey, LIMITS.signupIp);
   if (await findUserByUsername(username)) return NextResponse.json({ error: "taken" }, { status: 409 });
 
   const db = await getDb();
