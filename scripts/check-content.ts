@@ -20,6 +20,7 @@ import { questionProblems } from "../src/content/questions/validate";
 import { WORKED } from "../src/content/worked";
 import { workedProblems } from "../src/content/worked/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
+import { EXAM_SCOPE } from "../src/content/exam-scope";
 
 const LANGS = ["en", "hy", "ru"] as const;
 const errors: string[] = [];
@@ -167,6 +168,12 @@ for (const e of exams) {
       seen.add(o.en);
     }
   }
+}
+// Exam scope: every state exam has its courses, and every course exists.
+for (const e of exams.filter((x) => x.kind === "state")) if (!EXAM_SCOPE[e.id]?.length) errors.push(`exam ${e.id}: no courses in src/content/exam-scope.ts`);
+for (const [id, ids] of Object.entries(EXAM_SCOPE)) {
+  if (!examIds.has(id)) errors.push(`exam scope ${id}: no such exam`);
+  for (const c of ids) if (!courses.some((x) => courseId(x.subject, x.grade) === c)) errors.push(`exam scope ${id}: no course ${c}`);
 }
 const trialsFor = new Set(exams.filter((e) => e.kind === "trial").map((e) => `${e.subject}-${e.grade}`));
 const missingTrials = courses.map((c) => courseId(c.subject, c.grade)).filter((id) => !trialsFor.has(id));
