@@ -111,8 +111,21 @@ export const lessons = sqliteTable(
   (t) => [
     index("lessons_unit").on(t.unitId),
     index("lessons_course_slug").on(t.courseId, t.slug),
+    // Lesson counts by status (course cards, home page) read only this index. Without it SQLite
+    // walks each row past the compressed content to reach `status`: 6 ms instead of under 1 ms.
+    index("lessons_course_status").on(t.courseId, t.status),
   ],
 );
+
+/**
+ * Small server-wide values. `content_version` goes up whenever lessons, tips or exams change
+ * (admin edits, generation, seeding), so every server worker drops its cached content
+ * (src/server/content-cache.ts).
+ */
+export const appMeta = sqliteTable("app_meta", {
+  key: text("key").primaryKey(),
+  value: integer("value").notNull().default(0),
+});
 
 export type Subject = typeof subjects.$inferSelect;
 export type Course = typeof courses.$inferSelect;
@@ -569,6 +582,22 @@ export const userCards = sqliteTable(
     seenAt: text("seen_at"),
   },
   (t) => [primaryKey({ columns: [t.userId, t.cardId] }), uniqueIndex("user_cards_user_skill").on(t.userId, t.skillId)],
+);
+
+/**
+ * A running live class quiz (src/server/live-quiz.ts). The whole game is one JSON value, written
+ * with a version check so several server workers can share it. Nicknames only, no accounts;
+ * rows are deleted three hours after the game was last used.
+ */
+export const liveGames = sqliteTable(
+  "live_games",
+  {
+    pin: text("pin").primaryKey(),
+    state: text("state").notNull(),
+    version: integer("version").notNull().default(0),
+    touchedAt: integer("touched_at").notNull(),
+  },
+  (t) => [index("live_games_touched").on(t.touchedAt)],
 );
 
 export type PuzzleResult = typeof puzzleResults.$inferSelect;

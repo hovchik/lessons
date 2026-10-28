@@ -4,6 +4,7 @@ import { z } from "zod";
 import { questionProblems } from "@/content/questions/validate";
 import { QuizQuestionSchema } from "@/server/api-schemas";
 import { isAdmin } from "@/server/auth";
+import { contentChanged } from "@/server/content-cache";
 import { getDb, schema } from "@/server/db/client";
 
 const i18n = z.object({ en: z.string(), hy: z.string(), ru: z.string() });
@@ -32,6 +33,7 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
     .set({ ...parsed.data, source: "admin", updatedAt: new Date().toISOString() })
     .where(eq(schema.lessons.id, id))
     .run();
+  await contentChanged();
   const lesson = await db.select().from(schema.lessons).where(eq(schema.lessons.id, id)).get();
   return NextResponse.json({ lesson });
 }
