@@ -5,7 +5,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
-import { SiteMobileNav } from "@/components/site/site-mobile-nav";
+import { LiveUserProvider } from "@/components/site/live-user";
+import { MobileNav } from "@/components/site/mobile-nav";
+import { getLiveUser } from "@/server/live";
+import { getCurrentUser } from "@/server/user-auth";
 import "../globals.css";
 
 export const dynamic = "force-dynamic";
@@ -44,7 +47,8 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "app" });
+  const [t, user] = await Promise.all([getTranslations({ locale, namespace: "app" }), getCurrentUser()]);
+  const live = user ? await getLiveUser(user.id) : null;
 
   return (
     <html lang={locale}>
@@ -65,14 +69,16 @@ export default async function LocaleLayout({
           {t("skipToContent")}
         </a>
         <NextIntlClientProvider>
-          <SiteHeader />
-          <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 sm:py-10">
-            {children}
-          </main>
-          <SiteFooter />
-          {/* Space for the fixed bottom tab bar on phones. */}
-          <div className="pb-safe h-16 sm:hidden" aria-hidden="true" />
-          <SiteMobileNav />
+          <LiveUserProvider initial={live}>
+            <SiteHeader />
+            <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 sm:py-10">
+              {children}
+            </main>
+            <SiteFooter />
+            {/* Space for the fixed bottom tab bar on phones. */}
+            <div className="pb-safe h-16 sm:hidden" aria-hidden="true" />
+            <MobileNav />
+          </LiveUserProvider>
         </NextIntlClientProvider>
       </body>
     </html>

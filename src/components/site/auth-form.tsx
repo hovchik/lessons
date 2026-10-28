@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
+import { notifyChanged } from "@/lib/live";
 import { Button } from "@/components/ui/button";
 import { GRADES } from "@/lib/utils";
 
@@ -50,7 +51,7 @@ export function AuthForm({ mode, configured }: { mode: "login" | "signup"; confi
         // Only follow same-site relative paths.
         const target = next && next.startsWith("/") && !next.startsWith("//") ? next : "/progress";
         router.push(target);
-        router.refresh();
+        notifyChanged();
         return;
       }
       const data = (await res.json().catch(() => ({}))) as { error?: string };

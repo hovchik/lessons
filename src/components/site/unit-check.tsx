@@ -3,11 +3,12 @@
 import { ArrowRight, BookOpen, CheckCircle2, ClipboardCheck, Gauge, RotateCcw, TriangleAlert, XCircle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import type { MasteryLevel } from "@/lib/mastery";
+import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { answerText, defaultResponse, isComplete, localKey, localShown, responseText, type Key, type QuizResponse, type Shown } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
@@ -49,7 +50,6 @@ export function UnitCheck({
   const tg = useTranslations("grade");
   const tp = useTranslations("practice");
   const locale = useLocale();
-  const router = useRouter();
   const [i, setI] = useState(0);
   const [chosen, setChosen] = useState<QuizResponse | undefined>();
   const [answers, setAnswers] = useState<{ itemId: string; response: QuizResponse; confidence: Confidence }[]>([]);
@@ -57,6 +57,8 @@ export function UnitCheck({
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
   const topRef = useRef<HTMLDivElement>(null);
+  // A refresh mid-check would bring a new set of questions; it waits for the result.
+  useHoldRefresh((answers.length > 0 || chosen !== undefined) && !result);
   const q = questions[i];
   const f = (x: I18nText) => pick(x, locale);
   const shown = q ? localShown(q.shown, f) : null;
@@ -68,7 +70,7 @@ export function UnitCheck({
       const res = await fetch("/api/progress/unit", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ skillId, token, answers: all }) });
       if (!res.ok) throw new Error(String(res.status));
       setResult((await res.json()) as Result);
-      router.refresh();
+      notifyChanged();
     } catch {
       setError(true);
     }

@@ -3,13 +3,14 @@
 import { ArrowRight, BookOpen, ClipboardCheck, Gauge, RotateCcw } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { MasteryBadge } from "@/components/site/mastery-badge";
 import type { Stretch } from "@/lib/elo";
 import type { MasteryLevel } from "@/lib/mastery";
+import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { answerText, defaultResponse, isComplete, localKey, localShown, type Key, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
@@ -47,7 +48,6 @@ export function PracticeSession({
   const t = useTranslations("practice");
   const tm = useTranslations("mastery");
   const locale = useLocale();
-  const router = useRouter();
   // Fixed at the start: the page refreshes at the end of the round, and the summary compares with where it began.
   const [startReadiness] = useState(readiness);
   const [q, setQ] = useState(first);
@@ -60,6 +60,8 @@ export function PracticeSession({
   const pending = useRef<Confidence | null>(null);
   const shownAt = useRef(Date.now());
   const topRef = useRef<HTMLDivElement>(null);
+  // The page refreshes when the round ends (its header shows the new level), not between questions.
+  useHoldRefresh(round.length > 0 && !done);
 
   useEffect(() => {
     shownAt.current = Date.now();
@@ -93,6 +95,7 @@ export function PracticeSession({
       setChosen(response);
       setFeedback(data);
       setRound((rs) => [...rs, { q, response, correct: data.correct, key: data.key }]);
+      notifyChanged();
     } catch {
       // The answer is checked on the server, so without it there is nothing to show yet.
       setError(true);
@@ -107,9 +110,8 @@ export function PracticeSession({
       setChosen(undefined);
       setFeedback(null);
     } else {
+      // Letting go of the hold refreshes the page header's level and readiness; this session keeps its state.
       setDone({ readiness: feedback.readiness, level: feedback.level ?? "none" });
-      // The header's level and readiness catch up; this session keeps its state.
-      router.refresh();
     }
     topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };

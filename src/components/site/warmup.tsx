@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
@@ -25,6 +26,8 @@ export function Warmup({ items, signedIn }: { items: ReviewItem[]; signedIn: boo
   const [busy, setBusy] = useState<number | null>(null);
   const shownAt = useRef(Date.now());
   const allDone = items.every((_, i) => results[i]);
+  // Answered warm-up questions leave the queue, so a refresh would swap them out from under the pupil.
+  useHoldRefresh(Object.keys(results).length > 0);
   const f = (x: Parameters<typeof pick>[0]) => pick(x, locale);
   const local = items.map((item) => ({ shown: localShown(item.shown, f), key: localKey(item.key, f) }));
 
@@ -45,6 +48,7 @@ export function Warmup({ items, signedIn }: { items: ReviewItem[]; signedIn: boo
         if (res.ok) {
           const data = (await res.json()) as Result;
           r = { correct: data.correct, nextInDays: data.nextInDays };
+          notifyChanged();
         }
       } catch {
         // Offline: the answer is still shown, just not saved.

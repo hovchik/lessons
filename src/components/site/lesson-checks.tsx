@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import { notifyChanged } from "@/lib/live";
 import { createContext, useCallback, useContext, useRef, type ReactNode } from "react";
 
 /**
@@ -26,7 +27,9 @@ export function useRecordCheck(index: string | undefined) {
       if (!ctx || index === undefined || done.current) return;
       done.current = true;
       const body = { lessonId: ctx.lessonId, index: Number(index), choice, locale: ctx.locale, ms: shownAt.current ? Math.min(Date.now() - shownAt.current, 3_600_000) : null };
-      fetch("/api/progress/check", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }).catch(() => {});
+      fetch("/api/progress/check", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) })
+        .then((r) => r.ok && notifyChanged())
+        .catch(() => {});
     },
     [ctx, index],
   );

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { lessonChange, notifyChanged, type LessonProgressRow } from "@/lib/live";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
@@ -62,7 +63,12 @@ export function Quiz({ questions, save }: Props) {
       retries: questions.map((_, i) => second[i] ?? null),
     };
     fetch("/api/progress/quiz", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
-      .then((r) => r.ok && setSaved(true))
+      .then(async (r) => {
+        if (!r.ok) return;
+        setSaved(true);
+        const { progress } = (await r.json()) as { progress: LessonProgressRow | null };
+        notifyChanged(progress ? lessonChange(progress) : {});
+      })
       .catch(() => {});
   }, [save, allDone, total, first, confidence, second, questions]);
 
