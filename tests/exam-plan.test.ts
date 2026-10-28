@@ -177,6 +177,8 @@ test("a plan starts with the placement test and turns into days of tasks", async
   const todayPractice = v2.today!.tasks.find((t) => t.kind === "practice")!;
   assert.equal(todayPractice.skillId, "math-3.u1");
   assert.equal(todayPractice.done, false);
+  // No cards are due (the test makes none), so there is nothing to review and that task is done.
+  assert.equal(v2.today!.tasks.find((t) => t.kind === "review")!.done, true);
 
   // Five practice answers in the unit tick today's task.
   await m.learner.recordAnswers("u1", [0, 1, 2, 0, 1].map((i) => ({ itemId: `quiz:a#${i}`, source: "practice" as const, refId: "a", courseId: "math-3", correct: true })), now);

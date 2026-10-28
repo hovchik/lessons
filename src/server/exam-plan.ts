@@ -5,6 +5,7 @@ import { getItemRatings } from "./ability";
 import { recordAnswers } from "./learner";
 import { getMastery, skillQuestions, type SkillQuestion } from "./mastery";
 import { getExam } from "./queries";
+import { getReviewSummary } from "./review";
 import { newId } from "./user-auth";
 import { examScope } from "@/content/exam-scope";
 import { applyAnswer, bandOf, DIAG_MAX, nextSkill, startState, type Band, type DiagSkill, type DiagState } from "@/lib/diagnostic";
@@ -305,12 +306,16 @@ export async function getPlanView(userId: string, examId: string, now = new Date
   const known = row.state.known;
   const inPlan = data.skills.map((s) => ({ id: s.id, p: known[s.id] ?? 0.5 }));
   const built = buildPlan({ skills: inPlan, start: row.startDate, examDate: row.examDate, minutes: row.minutesPerDay as PlanMinutes });
-  const done = markDone(built, await activitySince(userId, examId, data.skills.map((s) => s.id), row.startDate));
+  const act = await activitySince(userId, examId, data.skills.map((s) => s.id), row.startDate);
+  // With nothing due, Daily Review has nothing to ask, so today's review task is already done.
+  if ((await getReviewSummary(userId, now)).ready === 0 && !act.reviews.includes(today)) act.reviews.push(today);
+  const done = markDone(built, act);
   const at = done.days.findIndex((d) => d.date >= today);
   const past = at < 0 ? done.days : done.days.slice(0, at);
   const todayDay: PlanDay | null = at >= 0 && done.days[at].date === today ? done.days[at] : null;
   const ahead = at < 0 ? [] : done.days.slice(todayDay ? at + 1 : at, (todayDay ? at + 1 : at) + 7);
-  const earlier = past.flatMap((d) => d.tasks);
+  // Review tasks are left out of the tally: whether anything was due on a past day is not known.
+  const earlier = past.flatMap((d) => d.tasks.filter((t) => t.kind !== "review"));
   const skillInfo = Object.fromEntries(
     data.skills.map((s) => [
       s.id,
