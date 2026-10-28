@@ -1,8 +1,9 @@
-import { sqliteTable, text, integer, real, index, primaryKey } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, real, index, primaryKey, uniqueIndex } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 import { packedJson } from "./packed";
 import { TIP_CATEGORIES, type TipCategory } from "../../lib/tip-categories";
 import type { QuizResponse } from "../../lib/questions";
+import type { DiagState } from "../../lib/diagnostic";
 
 export { TIP_CATEGORIES, type TipCategory };
 
@@ -335,9 +336,9 @@ export const lessonSkills = sqliteTable(
 
 /**
  * Where an answer was given. `warmup`: the questions from earlier lessons at the top of a lesson; `unit`: a unit check;
- * `practice`: adaptive practice of one skill.
+ * `practice`: adaptive practice of one skill; `diagnostic`: the placement test before an exam plan.
  */
-export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "unit" | "check" | "practice";
+export type AnswerSource = "quiz" | "exam" | "review" | "warmup" | "unit" | "check" | "practice" | "diagnostic";
 
 /**
  * One row per question a pupil answers, anywhere in the app. `itemId` names the
@@ -447,6 +448,36 @@ export const skillRatings = sqliteTable(
       .default(sql`(current_timestamp)`),
   },
   (t) => [primaryKey({ columns: [t.userId, t.skillId] })],
+);
+
+/**
+ * A pupil's plan to one exam: the placement test while `status` is
+ * "diagnostic" (its answers so far in `state`), then a day-by-day plan rebuilt
+ * from `state` and the exam date (src/server/exam-plan.ts).
+ */
+export const examPlans = sqliteTable(
+  "exam_plans",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    // No foreign key: the seed rebuilds `exams`, and that must not wipe the plans.
+    examId: text("exam_id").notNull(),
+    examDate: text("exam_date").notNull(), // YYYY-MM-DD
+    minutesPerDay: integer("minutes_per_day").notNull(),
+    /** The first day of the plan: the day the test ended, or the day it was updated. */
+    startDate: text("start_date").notNull(),
+    status: text("status").$type<"diagnostic" | "ready">().notNull(),
+    state: text("state", { mode: "json" }).$type<DiagState>().notNull(),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [uniqueIndex("exam_plans_user_exam").on(t.userId, t.examId)],
 );
 
 export type Skill = typeof skills.$inferSelect;

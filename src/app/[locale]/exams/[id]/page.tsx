@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Award, ClipboardCheck, Clock, ListOrdered, Target } from "lucide-react";
+import { ArrowRight, Award, CalendarCheck, ClipboardCheck, Clock, ListOrdered, Target } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ExamRunner } from "@/components/site/exam-runner";
 import { Markdown } from "@/components/site/markdown";
 import { SubjectIcon } from "@/components/ui/subject-icon";
+import { buttonClasses } from "@/components/ui/button";
+import { examScope } from "@/content/exam-scope";
+import { daysBetween, isoDay } from "@/lib/exam-plan";
 import { examTotal } from "@/lib/exam-score";
 import { cn, pick } from "@/lib/utils";
+import { getPlanRow } from "@/server/exam-plan";
 import { getExam, getExams } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
 
@@ -29,6 +33,8 @@ export default async function ExamPage({ params }: { params: Params }) {
   const { exam, subject } = data;
   const total = examTotal(exam.questions);
   const Icon = exam.kind === "state" ? Award : ClipboardCheck;
+  const plannable = examScope(exam).length > 0;
+  const plan = plannable && user ? await getPlanRow(user.id, exam.id) : null;
   const related = (await getExams({ grade: exam.grade })).filter((e) => e.exam.id !== exam.id && (e.exam.subjectId === exam.subjectId || e.exam.kind === exam.kind)).slice(0, 6);
 
   return (
@@ -72,6 +78,24 @@ export default async function ExamPage({ params }: { params: Params }) {
         <h2 id="format-title" className="sr-only">{t("exam.aboutFormat")}</h2>
         <Markdown>{pick(exam.format, l)}</Markdown>
       </section>
+
+      {plannable && (
+        <section aria-labelledby="plan-card" className="clay flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
+          <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary" aria-hidden="true">
+            <CalendarCheck className="size-6" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h2 id="plan-card" className="font-extrabold">
+              {plan?.status === "ready" ? t("plan.cardYours", { days: Math.max(0, daysBetween(isoDay(new Date()), plan.examDate)) }) : t("plan.cardTitle")}
+            </h2>
+            {!plan && <p className="mt-0.5 text-sm text-muted-foreground">{t("plan.cardBody")}</p>}
+          </div>
+          <Link href={`/exams/${exam.id}/plan`} className={buttonClasses({ variant: plan ? "primary" : "secondary", className: "shrink-0" })}>
+            {plan ? (plan.status === "ready" ? t("plan.cardContinue") : t("plan.cardTest")) : t("plan.cardOpen")}
+            <ArrowRight className="size-5" aria-hidden="true" />
+          </Link>
+        </section>
+      )}
 
       <ExamRunner questions={exam.questions} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} />
 

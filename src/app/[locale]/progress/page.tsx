@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, BookOpenCheck, History, Sparkles, Trophy } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarCheck, History, Sparkles, Trophy } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { LogoutLink } from "@/components/site/logout-link";
@@ -8,6 +8,7 @@ import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
+import { listPlans } from "@/server/exam-plan";
 import { getUserMastery } from "@/server/mastery";
 import { getRecentAttempts, getUserCourseSummaries, getUserTotals } from "@/server/progress";
 import { getReviewSummaryCached } from "@/server/review";
@@ -27,7 +28,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
   const user = await getCurrentUser();
   if (!user) redirect({ href: "/login?next=/progress", locale });
   const u = user!;
-  const [t, l, totals, courses, recent, review, mastery] = await Promise.all([
+  const [t, l, totals, courses, recent, review, mastery, plans] = await Promise.all([
     getTranslations(),
     getLocale(),
     getUserTotals(u.id),
@@ -35,6 +36,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
     getRecentAttempts(u.id, 8),
     getReviewSummaryCached(u.id),
     getUserMastery(u.id),
+    listPlans(u.id),
   ]);
   await touchLastSeen(u.id);
 
@@ -79,6 +81,30 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
       </header>
 
       <ReviewCard summary={review} />
+
+      {plans.length > 0 && (
+        <section aria-labelledby="plans" className="space-y-4">
+          <h2 id="plans" className="flex items-center gap-2 text-xl font-extrabold sm:text-2xl">
+            <CalendarCheck className="size-6 text-primary" aria-hidden="true" />
+            {t("plan.progressTitle")}
+          </h2>
+          <ul className="clay divide-y divide-border/70 overflow-hidden">
+            {plans.map((p) => (
+              <li key={p.examId}>
+                <Link href={`/exams/${p.examId}/plan`} className="flex min-h-14 items-center gap-3 px-4 py-3 active:bg-muted sm:hover:bg-muted">
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate font-bold">{pick(p.title, l)}</span>
+                    <span className="block text-xs font-semibold text-muted-foreground">
+                      {p.status === "diagnostic" ? t("plan.cardTest") : p.daysLeft > 0 ? t("plan.daysLeft", { n: p.daysLeft }) : t("plan.examOver")}
+                    </span>
+                  </span>
+                  <ArrowRight className="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {courses.length === 0 ? (
         <section className="clay p-6 text-center sm:p-10">
