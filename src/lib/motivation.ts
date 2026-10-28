@@ -31,45 +31,18 @@ export type Streak = {
 };
 
 /**
- * The current streak: learning days counted back from today (or from
- * yesterday while today is still open), where the first missed day of each
- * Monday-to-Sunday week is covered by that week's freeze and a second one
- * ends the run.
+ * Walks the days from the first learning day to `to` in order. Each missed
+ * day inside a run spends that week's freeze (the first miss of the week, in
+ * time order); a miss in a week whose freeze is spent ends the run. Misses
+ * while no run is going spend nothing.
  */
-export function streakOf(active: Iterable<string>, today: string): Streak {
-  const days = new Set(active);
-  const todayDone = days.has(today);
+function walk(days: Set<string>, to: string) {
   const first = [...days].sort()[0];
-  const usedWeeks = new Set<string>();
-  const frozen: string[] = [];
-  let count = 0;
-  let earliest: string | null = null;
-  // Before the first learning day there is nothing to keep, so the walk stops there.
-  for (let d = todayDone ? today : addDays(today, -1); first && d >= first; d = addDays(d, -1)) {
-    if (days.has(d)) {
-      count++;
-      earliest = d;
-      continue;
-    }
-    const w = weekStart(d);
-    if (usedWeeks.has(w)) break;
-    usedWeeks.add(w);
-    frozen.push(d);
-  }
-  // A freeze before the run's first learning day saved nothing, so it is not spent.
-  const kept = earliest ? frozen.filter((f) => f > earliest!).reverse() : [];
-  return { days: count, todayDone, frozen: kept, freezeLeft: !kept.some((f) => weekStart(f) === weekStart(today)) };
-}
-
-/** The longest streak ever, by the same rules, for the streak badges. */
-export function bestStreak(active: Iterable<string>): number {
-  const sorted = [...new Set(active)].sort();
-  if (!sorted.length) return 0;
-  const days = new Set(sorted);
-  let best = 0;
   let run = 0;
+  let best = 0;
   let used = new Set<string>();
-  for (let d = sorted[0]; d <= sorted[sorted.length - 1]; d = addDays(d, 1)) {
+  let frozen: string[] = [];
+  for (let d = first; first && d <= to; d = addDays(d, 1)) {
     if (days.has(d)) {
       run++;
       best = Math.max(best, run);
@@ -78,12 +51,32 @@ export function bestStreak(active: Iterable<string>): number {
     const w = weekStart(d);
     if (run > 0 && !used.has(w)) {
       used.add(w);
+      frozen.push(d);
       continue;
     }
     run = 0;
     used = new Set();
+    frozen = [];
   }
-  return best;
+  return { run, best, frozen };
+}
+
+/**
+ * The current streak: the run of learning days up to today (or up to
+ * yesterday while today is still open), by the freeze rules of `walk`.
+ */
+export function streakOf(active: Iterable<string>, today: string): Streak {
+  const days = new Set(active);
+  const todayDone = days.has(today);
+  const { run, frozen } = walk(days, todayDone ? today : addDays(today, -1));
+  return { days: run, todayDone, frozen: run ? frozen : [], freezeLeft: !frozen.some((f) => weekStart(f) === weekStart(today)) || !run };
+}
+
+/** The longest streak ever, by the same rules, for the streak badges. */
+export function bestStreak(active: Iterable<string>): number {
+  const days = new Set(active);
+  const last = [...days].sort().at(-1);
+  return last ? walk(days, last).best : 0;
 }
 
 /** The week's learning days, Monday first, and how many of them count toward the goal. */

@@ -30,12 +30,19 @@ test("the weekly freeze covers one missed day a week", () => {
   assert.deepEqual(streakOf(["2026-11-02", "2026-11-04", "2026-11-05"], "2026-11-05"), { days: 3, todayDone: true, frozen: ["2026-11-03"], freezeLeft: false });
   // Two missed days in one week end the run; the freeze is not spent on days before it.
   assert.deepEqual(streakOf(["2026-11-02", "2026-11-05"], "2026-11-05"), { days: 1, todayDone: true, frozen: [], freezeLeft: true });
-  // Sunday is in the week before Monday: a miss on Friday and on Sunday share a week.
-  assert.equal(streakOf(["2026-10-29", "2026-10-31", "2026-11-02"], "2026-11-02").days, 2);
+  // Sunday is in the week before Monday: Friday's miss spent that week's freeze, so Sunday's ends the run.
+  assert.equal(streakOf(["2026-10-29", "2026-10-31", "2026-11-02"], "2026-11-02").days, 1);
   // One miss in each of two weeks is fine.
   const s = streakOf(["2026-10-30", "2026-10-31", "2026-11-02", "2026-11-04"], "2026-11-04");
   assert.equal(s.days, 4);
   assert.deepEqual(s.frozen, ["2026-11-01", "2026-11-03"]);
+});
+
+test("the freeze goes to the first miss of the week, in time order", () => {
+  // Tuesday spends the freeze, so missing Thursday ends the run; Fri–Sun is the current one.
+  const days = ["2026-11-02", "2026-11-04", "2026-11-06", "2026-11-07", "2026-11-08"];
+  assert.deepEqual(streakOf(days, "2026-11-08"), { days: 3, todayDone: true, frozen: [], freezeLeft: true });
+  assert.equal(bestStreak(days), 3);
 });
 
 test("the best streak uses the same rules", () => {
