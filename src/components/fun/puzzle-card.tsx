@@ -13,7 +13,7 @@ export async function PuzzleCard({ card, className }: { card: Awaited<ReturnType
   return (
     <section aria-labelledby="puzzle-card-title" className={cn("clay relative overflow-hidden p-5 sm:p-7", className)}>
       <div className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-violet-200/50 blur-3xl" aria-hidden="true" />
-      <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-start gap-4">
           <span className="fx-pop grid size-12 shrink-0 place-items-center rounded-[16px] bg-violet-600 text-white shadow-clay-sm sm:size-14">
             <Puzzle className="size-7" aria-hidden="true" />
@@ -31,7 +31,7 @@ export async function PuzzleCard({ card, className }: { card: Awaited<ReturnType
             )}
           </div>
         </div>
-        <ul className="grid gap-2 sm:min-w-72">
+        <ul className="grid gap-2 lg:min-w-72">
           {card.levels.map(({ level, theme, state }) => {
             const Icon = PUZZLE_THEMES[theme].icon;
             const s = state ? puzzleStatus(state) : null;

@@ -17,7 +17,8 @@
     "signup": "Sign up",
     "logout": "Log out",
     "account": "Account",
-    "review": "Review"
+    "review": "Review",
+    "play": "Play"
   },
   "home": {
     "heroTitle": "Learn every subject, from grade 1 to 12",
@@ -755,5 +756,14 @@
     "endNow": "End the game now",
     "podium": "Winners",
     "newGame": "New game"
+  },
+  "play": {
+    "title": "Play",
+    "intro": "Short games that still teach: a daily puzzle, quick maths, English words, a quiz with your class, and the cards you win by learning.",
+    "calcText": "Sums made up fresh every time for grades 1 to 9. Race the clock or take it calmly.",
+    "liveText": "Your teacher puts a quiz on the board and everyone answers from their phone.",
+    "cardsText": "Every unit you get good at wins a card. Master it and the card turns shiny.",
+    "recapText": "What you did this week, day by day, next to last week.",
+    "noRanking": "No rankings here: your best is compared only with your own best."
   }
 }

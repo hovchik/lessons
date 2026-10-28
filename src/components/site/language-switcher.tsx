@@ -41,7 +41,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         className="clay-sm clay-press inline-flex h-11 max-w-[40vw] items-center gap-2 px-3 text-sm font-bold sm:max-w-none"
       >
         <Globe className="size-4 text-primary" aria-hidden="true" />
-        <span className="truncate">{localeNames[locale as keyof typeof localeNames]}</span>
+        <span className="truncate md:max-lg:hidden">{localeNames[locale as keyof typeof localeNames]}</span>
       </button>
       {open && (
         <ul

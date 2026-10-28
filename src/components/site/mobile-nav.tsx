@@ -1,13 +1,13 @@
 "use client";
 
-import { Award, BookOpen, GraduationCap, Home, Trophy } from "lucide-react";
+import { Award, BookOpen, Gamepad2, GraduationCap, Home, Trophy } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { useLiveUser } from "./live-user";
 
 /**
- * Bottom tab bar shown on phones only (hidden from `sm` up, where the header
+ * Bottom tab bar shown on phones only (hidden from `md` up, where the header
  * nav takes over). Thumb-reachable, 56px tall plus the device safe area.
  */
 export function MobileNav() {
@@ -21,6 +21,12 @@ export function MobileNav() {
     { href: "/subjects", label: t("subjects"), icon: BookOpen, active: pathname.startsWith("/subjects") },
     { href: "/exams", label: t("exams"), icon: Award, active: pathname.startsWith("/exams") },
     {
+      href: "/play",
+      label: t("play"),
+      icon: Gamepad2,
+      active: ["/play", "/puzzle", "/live", "/cards", "/recap"].some((p) => pathname.startsWith(p)),
+    },
+    {
       href: "/progress",
       label: t("progress"),
       icon: Trophy,
@@ -32,9 +38,9 @@ export function MobileNav() {
   return (
     <nav
       aria-label={t("menu")}
-      className="pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border/60 bg-card/95 backdrop-blur-md sm:hidden"
+      className="pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border/60 bg-card/95 backdrop-blur-md md:hidden"
     >
-      <ul className="grid grid-cols-5">
+      <ul className="grid grid-cols-6">
         {items.map(({ href, label, icon: Icon, active, ...rest }) => {
           const badge = "badge" in rest ? rest.badge : 0;
           return (
@@ -43,7 +49,7 @@ export function MobileNav() {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-2 py-1.5 text-[11px] font-bold leading-tight transition-[color,transform] duration-200 active:scale-95",
+                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[11px] font-bold leading-tight transition-[color,transform] duration-200 active:scale-95",
                 active ? "text-primary" : "text-muted-foreground",
               )}
             >
