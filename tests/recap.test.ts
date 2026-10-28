@@ -38,7 +38,7 @@ before(async () => {
   const db = await m.client.getDb();
   const s = m.client.schema;
   await db.insert(s.users).values({ id: "u1", username: "ani", displayName: "Ani", passwordHash: "x", weeklyGoal: 3 }).run();
-  const ev = (id: string, at: string, correct: boolean) => ({ id, userId: "u1", itemId: `quiz:${id}`, source: "lesson" as const, refId: "l1", correct, createdAt: at });
+  const ev = (id: string, at: string, correct: boolean) => ({ id, userId: "u1", itemId: `quiz:${id}`, source: "quiz" as const, refId: "l1", correct, createdAt: at });
   const rows = [
     ...Array.from({ length: 6 }, (_, i) => ev(`m${i}`, "2026-10-26T09:00:00Z", i < 5)),
     ...Array.from({ length: 2 }, (_, i) => ev(`t${i}`, "2026-10-27T09:00:00Z", true)),
