@@ -33,7 +33,7 @@ export async function TipsSection({ tips }: { tips: Tip[] }) {
                   <span className="block text-xs font-bold uppercase tracking-wide" style={{ color: "var(--s-text)" }}>{t(`category.${tip.category}`)}</span>
                   <span className="block font-extrabold leading-snug text-balance">{pick(tip.title, l)}</span>
                 </span>
-                <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
+                <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
               </summary>
               <div className="border-t border-border/70 px-4 py-4 sm:px-5">
                 <Markdown className="prose-lesson prose-tip">{pick(tip.body, l)}</Markdown>

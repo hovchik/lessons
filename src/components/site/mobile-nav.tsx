@@ -41,14 +41,21 @@ export function MobileNav({ reviewReady = 0 }: { reviewReady?: number }) {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-2 py-1.5 text-[11px] font-bold leading-tight",
+                "flex min-h-14 flex-col items-center justify-center gap-0.5 px-2 py-1.5 text-[11px] font-bold leading-tight transition-[color,transform] duration-200 active:scale-95",
                 active ? "text-primary" : "text-muted-foreground",
               )}
             >
-              <span className={cn("relative grid h-7 w-12 place-items-center rounded-full transition-colors", active && "bg-primary/10")}>
-                <Icon className="size-5" aria-hidden="true" />
+              {/* The pill behind the active tab grows in from the icon; the icon gives a small hop. */}
+              <span
+                className={cn(
+                  "relative grid h-7 w-12 place-items-center rounded-full",
+                  "before:absolute before:inset-0 before:rounded-full before:bg-primary/10 before:transition-[transform,opacity] before:duration-300 before:ease-[var(--ease-spring)]",
+                  active ? "before:scale-100 before:opacity-100" : "before:scale-50 before:opacity-0",
+                )}
+              >
+                <Icon className={cn("relative size-5", active && "fx-tab")} aria-hidden="true" />
                 {badge > 0 && (
-                  <span className="absolute -right-0.5 -top-1 grid min-w-5 place-items-center rounded-full bg-primary px-1 text-[10px] font-black leading-5 text-primary-foreground tabular-nums">
+                  <span className="fx-pop absolute -right-0.5 -top-1 grid min-w-5 place-items-center rounded-full bg-primary px-1 text-[10px] font-black leading-5 text-primary-foreground tabular-nums">
                     {badge > 99 ? "99+" : badge}
                   </span>
                 )}

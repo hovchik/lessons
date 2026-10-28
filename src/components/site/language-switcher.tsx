@@ -47,7 +47,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         <ul
           role="listbox"
           aria-label={t("language")}
-          className="clay absolute right-0 z-50 mt-2 min-w-48 overflow-hidden p-1.5"
+          className="fx-menu clay absolute right-0 z-50 mt-2 min-w-48 overflow-hidden p-1.5"
         >
           {routing.locales.map((l) => (
             <li key={l} role="option" aria-selected={l === locale}>
@@ -59,7 +59,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                   router.replace(pathname, { locale: l });
                 }}
                 className={cn(
-                  "flex h-12 w-full items-center justify-between rounded-[12px] px-3.5 text-base font-semibold hover:bg-muted",
+                  "flex h-12 w-full items-center justify-between rounded-[12px] px-3.5 text-base font-semibold transition-colors hover:bg-muted",
                   l === locale && "text-primary",
                 )}
               >

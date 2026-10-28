@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button, buttonClasses } from "@/components/ui/button";
+import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { answerText, defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
@@ -75,8 +76,9 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
     const ratio = items.length ? score / items.length : 0;
     return (
       <div ref={topRef} className="space-y-6 scroll-mt-20">
-        <section className="clay p-6 text-center sm:p-10" role="status" aria-live="polite">
-          <span className="mx-auto grid size-16 place-items-center rounded-[20px] bg-accent text-accent-foreground shadow-clay-sm">
+        <section className="fx-rise relative clay p-6 text-center sm:p-10" role="status" aria-live="polite">
+          {ratio >= 0.8 && <Confetti />}
+          <span className="fx-pop mx-auto grid size-16 place-items-center rounded-[20px] bg-accent text-accent-foreground shadow-clay-sm" style={{ animationDelay: "120ms" }}>
             <PartyPopper className="size-8" aria-hidden="true" />
           </span>
           <h2 className="mt-5 text-2xl font-black sm:text-3xl">{t("summaryTitle", { score, total: items.length })}</h2>
@@ -128,11 +130,11 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
       <div className="flex items-center gap-3">
         <p className="shrink-0 text-sm font-extrabold tabular-nums">{t("progressLabel", { n: i + 1, total: items.length })}</p>
         <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={items.length} aria-valuenow={results.length} aria-label={t("progressLabel", { n: i + 1, total: items.length })}>
-          <div className="h-full rounded-full bg-primary transition-[width] duration-300" style={{ width: `${(results.length / items.length) * 100}%` }} />
+          <div className="bar-fill h-full rounded-full bg-primary" style={{ width: `${(results.length / items.length) * 100}%` }} />
         </div>
       </div>
 
-      <section className={cn("clay space-y-4 p-4 sm:p-7", item.subjectColor && `subject-${item.subjectColor}`)} aria-labelledby={`rq-${i}`}>
+      <section key={i} className={cn("fx-next clay space-y-4 p-4 sm:p-7", item.subjectColor && `subject-${item.subjectColor}`)} aria-labelledby={`rq-${i}`}>
         <p className="flex flex-wrap items-center gap-2 text-xs font-extrabold uppercase tracking-wide" style={{ color: item.subjectColor ? "var(--s-text)" : undefined }}>
           {item.subjectName && <span>{pick(item.subjectName, locale)}{item.grade ? ` · ${tg("title", { grade: item.grade })}` : ""}</span>}
           <span className="normal-case tracking-normal text-muted-foreground">· {pick(item.refTitle, locale)}</span>
@@ -143,7 +145,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
         {!result ? (
           <ConfidenceCheck size="lg" disabled={!isComplete(shown, defaultResponse(shown, chosen)) || busy} onCheck={check} />
         ) : (
-          <div className="space-y-3">
+          <div className="fx-in space-y-3">
             <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1">
               <p className={cn("text-lg font-extrabold", result.correct ? "text-success" : "text-destructive")}>{result.correct ? t("correct") : t("incorrect")}</p>
               {result.nextInDays !== null && <p className="text-sm font-bold text-muted-foreground">{t("backIn", { n: result.nextInDays })}</p>}

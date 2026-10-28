@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
 import { SiteMobileNav } from "@/components/site/site-mobile-nav";
+import { NavProgress } from "@/components/site/nav-progress";
 import "../globals.css";
 
 export const dynamic = "force-dynamic";
@@ -47,7 +48,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "app" });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -58,6 +59,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="flex min-h-dvh flex-col">
+        <NavProgress />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"

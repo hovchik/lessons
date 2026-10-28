@@ -27,7 +27,7 @@ export async function CourseCard({
       className={cn("clay clay-press group flex flex-col gap-4 p-5", `subject-${subject.color}`)}
     >
       <div className="flex items-start justify-between gap-3">
-        <span className="grid size-12 shrink-0 place-items-center rounded-[16px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
+        <span className="fx-chip grid size-12 shrink-0 place-items-center rounded-[16px] text-white shadow-clay-sm" style={{ background: "var(--s)" }}>
           <SubjectIcon name={subject.icon} className="size-6" />
         </span>
         {showGrade && (
@@ -45,13 +45,13 @@ export async function CourseCard({
           <BookOpen className="size-4" aria-hidden="true" />
           {t("course.lessonsCount", { count: lessonCount })}
         </span>
-        <span className="inline-flex items-center gap-1 text-primary transition-transform group-hover:translate-x-0.5">
+        <span className="fx-arrow inline-flex items-center gap-1 text-primary">
           {t("course.start")}
           <ArrowRight className="size-4" aria-hidden="true" />
         </span>
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label={t("course.progress", { done: readyCount, total: lessonCount })}>
-        <div className="h-full rounded-full transition-[width]" style={{ width: `${pct}%`, background: "var(--s)" }} />
+        <div className="bar-fill h-full rounded-full" style={{ width: `${pct}%`, background: "var(--s)" }} />
       </div>
     </Link>
   );

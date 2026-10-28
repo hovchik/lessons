@@ -4,6 +4,7 @@ import { CheckCircle2, CircleHelp, RotateCcw, Save, XCircle } from "lucide-react
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
@@ -114,14 +115,14 @@ export function Quiz({ questions, save }: Props) {
                         className={cn(
                           "clay-sm clay-press min-h-12 px-4 py-3 text-left font-semibold disabled:opacity-100",
                           selected && !done && !ruledOut && "ring-3 ring-primary",
-                          showCorrect && "bg-emerald-50 ring-3 ring-success",
-                          showWrong && "bg-red-50 ring-3 ring-destructive",
+                          showCorrect && "bg-emerald-50 ring-3 ring-success fx-right",
+                          showWrong && "bg-red-50 ring-3 ring-destructive fx-wrong",
                           oi === cross && !done && "text-muted-foreground line-through opacity-60",
                         )}
                       >
                         <span className="flex items-start gap-2 leading-snug">
-                          {showCorrect && <CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden="true" />}
-                          {showWrong && <XCircle className="size-5 shrink-0 text-destructive" aria-hidden="true" />}
+                          {showCorrect && <CheckCircle2 className="fx-tick size-5 shrink-0 text-success" aria-hidden="true" />}
+                          {showWrong && <XCircle className="fx-tick size-5 shrink-0 text-destructive" aria-hidden="true" />}
                           {opt}
                         </span>
                       </button>
@@ -141,7 +142,7 @@ export function Quiz({ questions, save }: Props) {
                 />
               ) : retrying ? (
                 <div className="space-y-3">
-                  <div role="status" className="rounded-[var(--radius)] bg-red-50 p-3 text-sm">
+                  <div role="status" className="fx-in rounded-[var(--radius)] bg-red-50 p-3 text-sm">
                     <p className="font-extrabold text-destructive">{confidence[i] === 2 ? t("wrongSure") : t("wrongGuess")}</p>
                     <p className="mt-1 font-semibold">{cross !== null ? t("hintCrossed") : t("hintOnce")}</p>
                   </div>
@@ -155,7 +156,7 @@ export function Quiz({ questions, save }: Props) {
                   </Button>
                 </div>
               ) : (
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="fx-in flex flex-wrap items-center gap-3">
                   <p role="status" className={cn("font-bold", firstRight || right(i, second[i]) ? "text-success" : "text-destructive")}>
                     {firstRight ? (confidence[i] === 0 ? t("rightGuess") : t("correct")) : second[i] !== undefined && right(i, second[i]) ? t("rightSecond") : qq.shown.kind === "choice" ? t("wrongSecond") : t("wrongSecondShown")}
                   </p>
@@ -167,19 +168,20 @@ export function Quiz({ questions, save }: Props) {
                 </div>
               )}
               {done && showWhy[i] && qq.explanation && (
-                <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
+                <p className="fx-in rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
             </li>
           );
         })}
       </ol>
       {allDone && total > 0 && (
-        <div className="mt-6 flex flex-col gap-3 rounded-[var(--radius)] bg-muted p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="fx-rise relative mt-6 flex flex-col gap-3 rounded-[var(--radius)] bg-muted p-4 sm:flex-row sm:items-center sm:justify-between">
+          {score / total >= 0.8 && <Confetti />}
           <div>
             <p className="text-lg font-extrabold">{t("score", { score, total })}</p>
             {secondTries > 0 && <p className="mt-1 text-sm font-bold text-muted-foreground">{t("secondTries", { n: secondTries })}</p>}
             {saved && (
-              <p role="status" className="mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-success">
+              <p role="status" className="fx-in mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-success">
                 <Save className="size-4" aria-hidden="true" />
                 {t("saved")}
               </p>

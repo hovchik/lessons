@@ -170,36 +170,233 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
     border: 1px solid rgb(255 255 255 / 0.7);
   }
 }
-.clay-press {
-  transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms ease;
+/* ---- Motion tokens ---- */
+:root {
+  /* Fast start, soft landing: entrances, hovers, bars. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* A small overshoot for things that "pop" (icons, badges, ticks). */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-@media (hover: hover) and (pointer: fine) {
-  .clay-press:hover {
-    transform: translateY(-2px);
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    --ease-spring: linear(0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017 19.4%, 1.067, 1.099 24.3%, 1.104 26.9%, 1.098 29.6%, 1.077 32.6%, 1.022 39%, 1.004 42.8%, 0.991 47.5%, 0.985 54%, 0.999 75.8%, 1);
   }
 }
-.clay-press:active {
-  transform: translateY(1px) scale(0.99);
+
+/* ---- Press and hover ---- */
+.clay-press {
+  transition:
+    transform 260ms var(--ease-out),
+    box-shadow 260ms var(--ease-out),
+    background-color 200ms ease,
+    color 200ms ease,
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+/* Disabled controls (answered quiz options, busy buttons) stay put instead of lifting under the pointer. */
+@media (hover: hover) and (pointer: fine) {
+  .clay-press:not(:disabled, [aria-disabled="true"]):hover {
+    transform: translateY(-3px);
+  }
+}
+.clay-press:not(:disabled, [aria-disabled="true"]):active {
+  transform: translateY(1px) scale(0.98);
   box-shadow: var(--shadow-clay-pressed);
+  transition-duration: 90ms;
 }
 
-/* ---- Stagger entrance ---- */
+/* Inside a card: the subject icon tilts and the arrow nudges forward while the card is hovered. */
+.fx-chip { transition: transform 420ms var(--ease-spring); }
+.fx-arrow { transition: transform 260ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .clay-press:hover .fx-chip { transform: rotate(-6deg) scale(1.08); }
+  .clay-press:hover .fx-arrow { transform: translateX(4px); }
+}
+
+/* ---- Entrances ---- */
 @keyframes rise-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
 }
+/* "backwards" (not "both"): once the entrance is over the element keeps no transform of its own,
+   so it does not become a stacking context and its own hover/press transforms work. */
 .stagger > * {
-  animation: rise-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: rise-in 520ms var(--ease-out) backwards;
 }
-.stagger > *:nth-child(1) { animation-delay: 0ms; }
-.stagger > *:nth-child(2) { animation-delay: 40ms; }
-.stagger > *:nth-child(3) { animation-delay: 80ms; }
-.stagger > *:nth-child(4) { animation-delay: 120ms; }
-.stagger > *:nth-child(5) { animation-delay: 160ms; }
-.stagger > *:nth-child(6) { animation-delay: 200ms; }
-.stagger > *:nth-child(7) { animation-delay: 240ms; }
-.stagger > *:nth-child(8) { animation-delay: 280ms; }
-.stagger > *:nth-child(n + 9) { animation-delay: 320ms; }
+.stagger > *:nth-child(2) { animation-delay: 45ms; }
+.stagger > *:nth-child(3) { animation-delay: 90ms; }
+.stagger > *:nth-child(4) { animation-delay: 135ms; }
+.stagger > *:nth-child(5) { animation-delay: 180ms; }
+.stagger > *:nth-child(6) { animation-delay: 225ms; }
+.stagger > *:nth-child(7) { animation-delay: 270ms; }
+.stagger > *:nth-child(8) { animation-delay: 315ms; }
+.stagger > *:nth-child(n + 9) { animation-delay: 360ms; }
+
+/* Each page fades up as it arrives (template.tsx remounts it on every navigation). */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(10px); }
+}
+.page-enter { animation: page-in 420ms var(--ease-out) backwards; }
+
+/* A question card sliding in when a session moves on to the next one. */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(24px); }
+}
+.fx-next { animation: slide-in 380ms var(--ease-out) backwards; }
+
+/* Feedback lines, explanations and hints appearing under an answer. */
+@keyframes drop-in {
+  from { opacity: 0; transform: translateY(-6px); }
+}
+.fx-in { animation: drop-in 320ms var(--ease-out) backwards; }
+
+/* A result card or medal landing with a little bounce. */
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.6); }
+}
+.fx-pop { animation: pop-in 520ms var(--ease-spring) backwards; }
+.fx-rise { animation: rise-in 520ms var(--ease-out) backwards; }
+
+/* ---- Answer feedback ---- */
+@keyframes answer-right {
+  40% { transform: scale(1.03); }
+}
+@keyframes answer-halo {
+  from { box-shadow: 0 0 0 0 rgb(21 128 61 / 0.45); }
+  to { box-shadow: 0 0 0 14px rgb(21 128 61 / 0); }
+}
+@keyframes answer-wrong {
+  15% { transform: translateX(-6px); }
+  35% { transform: translateX(5px); }
+  55% { transform: translateX(-3px); }
+  75% { transform: translateX(2px); }
+}
+@keyframes tick-in {
+  from { opacity: 0; transform: scale(0.2) rotate(-40deg); }
+}
+.fx-right { position: relative; animation: answer-right 460ms var(--ease-out); }
+/* The halo is a separate layer, so it never fights the ring (a box-shadow) that marks the answer. */
+.fx-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: answer-halo 700ms var(--ease-out) forwards;
+}
+.fx-wrong { animation: answer-wrong 420ms ease-in-out; }
+.fx-tick { animation: tick-in 420ms var(--ease-spring) backwards; }
+
+/* ---- Progress bars ---- */
+/* Grow from empty on first paint, then glide to each new value. */
+@keyframes bar-grow {
+  from { width: 0; }
+}
+.bar-fill {
+  transition: width 600ms var(--ease-out);
+  animation: bar-grow 900ms var(--ease-out) 150ms backwards;
+}
+
+/* ---- Streaks and badges ---- */
+@keyframes flame {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.06, 0.96) rotate(-3deg); }
+  50% { transform: scale(0.97, 1.05) rotate(2deg); }
+  75% { transform: scale(1.04, 0.98) rotate(-1deg); }
+}
+.fx-flame { transform-origin: 50% 85%; animation: flame 2.6s ease-in-out infinite; }
+@keyframes breathe {
+  50% { transform: scale(1.08); }
+}
+.fx-breathe { animation: breathe 2.4s ease-in-out infinite; }
+/* A light sweep across an earned badge, once when it appears and again on hover. */
+.fx-shine { position: relative; overflow: hidden; isolation: isolate; }
+.fx-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, var(--shine, rgb(255 255 255 / 0.55)) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: shine 1.1s var(--ease-out) 400ms backwards;
+}
+/* On a white card the sweep takes the subject colour, or it would not show. */
+.clay-sm.fx-shine { --shine: color-mix(in srgb, var(--s) 18%, transparent); }
+.fx-shine:hover::after { animation: shine 900ms var(--ease-out); }
+@keyframes shine {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+/* ---- Confetti (confetti.tsx) ---- */
+/* Not clipped: the pieces fly out past the card edges (body clips sideways overflow). */
+.confetti { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+.confetti i {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  width: 8px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--c);
+  opacity: 0;
+  animation: confetti 1.8s cubic-bezier(0.15, 0.6, 0.35, 1) var(--d) forwards;
+}
+.confetti i:nth-child(3n) { border-radius: 999px; width: 9px; height: 9px; }
+@keyframes confetti {
+  0% { opacity: 1; transform: translate(-50%, 0) rotate(0) scale(0.3); }
+  20% { opacity: 1; transform: translate(calc(-50% + var(--x) * 0.55), calc(var(--y) * 0.75)) rotate(calc(var(--r) * 0.3)) scale(1); }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--x)), calc(var(--y) + 140px)) rotate(var(--r)) scale(0.9); }
+}
+
+/* ---- Phone tab bar ---- */
+@keyframes tab-hop {
+  40% { transform: translateY(-3px) scale(1.12); }
+}
+.fx-tab { animation: tab-hop 460ms var(--ease-spring); }
+
+/* ---- Menus and disclosures ---- */
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+}
+.fx-menu { transform-origin: top right; animation: menu-in 200ms var(--ease-out) backwards; }
+/* <details> opens and closes smoothly where the browser can animate to height: auto. */
+@supports (interpolate-size: allow-keywords) {
+  details { interpolate-size: allow-keywords; }
+  details::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 320ms var(--ease-out), content-visibility 320ms allow-discrete;
+  }
+  details[open]::details-content { height: auto; }
+}
+details[open] > :not(summary) { animation: drop-in 320ms var(--ease-out) backwards; }
+
+/* ---- Page loading bar (nav-progress.tsx) ---- */
+.nav-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  height: 3px;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  box-shadow: 0 0 10px rgb(79 70 229 / 0.5);
+  transform-origin: left;
+  transform: scaleX(0);
+  opacity: 0;
+}
+/* Shown only if the page takes more than a moment, then creeps towards the end until it arrives. */
+.nav-progress[data-state="loading"] {
+  opacity: 1;
+  transform: scaleX(0.9);
+  transition: transform 8s cubic-bezier(0.1, 0.8, 0.2, 1) 120ms, opacity 150ms ease 120ms;
+}
+.nav-progress[data-state="done"] {
+  opacity: 0;
+  transform: scaleX(1);
+  transition: transform 200ms var(--ease-out), opacity 300ms ease 200ms;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -208,6 +405,7 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .confetti, .fx-shine::after, .fx-right::after { display: none; }
 }
 
 /* ---- Lesson prose ---- */
