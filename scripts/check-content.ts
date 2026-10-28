@@ -17,6 +17,8 @@ import { checkSimBlocks } from "../src/components/sim/validate";
 import { VISUALS } from "../src/content/visuals";
 import { QUESTIONS } from "../src/content/questions";
 import { questionProblems } from "../src/content/questions/validate";
+import { WORKED } from "../src/content/worked";
+import { workedProblems } from "../src/content/worked/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 
 const LANGS = ["en", "hy", "ru"] as const;
@@ -103,6 +105,23 @@ for (const [subject, byGrade] of Object.entries(QUESTIONS)) {
   }
 }
 
+// Worked examples: every lesson must exist and be written, and every set must read the same in all three languages.
+let workedSets = 0;
+for (const [subject, byGrade] of Object.entries(WORKED)) {
+  for (const [grade, bySlug] of Object.entries(byGrade)) {
+    const c = courses.find((x) => x.subject === subject && x.grade === Number(grade));
+    if (!c) { errors.push(`worked ${subject}-${grade}: no such course`); continue; }
+    const lessons = c.units.flatMap((u) => u.lessons);
+    for (const [slug, sets] of Object.entries(bySlug)) {
+      if (!lessons.some((l) => l.slug === slug && l.content)) errors.push(`worked ${subject}-${grade}: no written lesson "${slug}"`);
+      sets.forEach((set, i) => {
+        workedSets++;
+        for (const p of workedProblems(set)) errors.push(`worked ${subject}-${grade}/${slug} set ${i + 1}: ${p}`);
+      });
+    }
+  }
+}
+
 // Exams: unique ids, every text in three languages, answers in range, one trial per written course.
 const examIds = new Set<string>();
 let examQuestions = 0;
@@ -161,7 +180,7 @@ const skillMap = buildSkillMap(courses);
 errors.push(...checkSkillMap(skillMap));
 console.log(`${skillMap.length} skills, ${skillMap.reduce((a, s) => a + s.prereqs.length, 0)} prerequisite links (${Object.keys(prerequisites).length} skills mapped by hand).`);
 const kindList = Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(", ");
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons.`);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

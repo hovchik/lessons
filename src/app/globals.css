@@ -548,6 +548,37 @@ button.art-card:active { transform: scale(0.97); }
 .sim-option.is-wrong .sim-letter { background: #f43f5e; color: #fff; }
 .sim-option:disabled { opacity: 1; }
 
+/* worked examples with fading (sim steps); ink is the frame colour darkened enough for white or small text */
+.art-frame { --steps-ink: color-mix(in srgb, var(--art, var(--primary)) 78%, #000); }
+.art-frame .steps-dots { display: flex; gap: 0.35rem; }
+.art-frame .steps-dot { display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 999px; font-weight: 900; font-size: 0.8rem; background: var(--muted); color: var(--muted-foreground); }
+.art-frame .steps-dot.is-done { background: #10b981; color: #fff; }
+.art-frame .steps-dot.is-now { background: var(--steps-ink); color: #fff; }
+.art-frame .steps-phase { margin-top: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--muted-foreground); }
+.art-frame .steps-problem { margin-top: 0.5rem; padding: 0.55rem 0.8rem; border-radius: 14px; background: #fff; border: 2px solid color-mix(in srgb, var(--art) 35%, transparent); font-weight: 900; font-size: 1.1rem; }
+.art-frame .steps-list { margin-top: 0.6rem; padding-left: 0; list-style: none; display: grid; gap: 0.45rem; }
+.art-frame .steps-row { margin-top: 0; display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.5rem 0.7rem; border-radius: 14px; background: #fff; border: 2px solid var(--border); }
+.art-frame .steps-row.is-active { border-color: var(--steps-ink); }
+.art-frame .steps-row.is-solved { border-color: #10b981; background: #ecfdf5; }
+.art-frame .steps-row.is-later { background: transparent; border-style: dashed; color: var(--muted-foreground); }
+.art-frame .steps-num { display: grid; place-items: center; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 999px; background: var(--muted); font-weight: 900; font-size: 0.8rem; }
+.art-frame .steps-row.is-solved .steps-num { background: transparent; }
+.art-frame .steps-text { display: grid; gap: 0.25rem; min-width: 0; flex: 1; }
+.art-frame .steps-action { font-size: 0.9rem; color: var(--muted-foreground); font-weight: 700; }
+.art-frame .steps-line { font-weight: 800; font-size: 1.05rem; line-height: 2.4rem; }
+.art-frame .steps-filled { color: var(--steps-ink); font-weight: 900; }
+.art-frame .steps-input { width: 5.5rem; min-height: 2.5rem; margin: 0 0.2rem; padding: 0 0.5rem; border-radius: 12px; border: 2px solid var(--border); background: var(--background); font-weight: 800; text-align: center; vertical-align: middle; outline: none; }
+.art-frame .steps-input:focus { border-color: var(--steps-ink); }
+.art-frame .steps-input.is-wrong { border-color: #f43f5e; background: #fff1f2; }
+.art-frame .steps-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.2rem; }
+.art-frame .steps-btn { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2.75rem; padding: 0 0.9rem; border-radius: 12px; font-weight: 800; font-size: 0.9rem; background: #fff; border: 2px solid var(--border); color: var(--foreground); }
+.art-frame .steps-btn.is-main { background: var(--steps-ink); border-color: transparent; color: #fff; }
+.art-frame .steps-btn:disabled { opacity: 0.5; }
+.art-frame .steps-wrong { font-size: 0.9rem; font-weight: 700; color: #e11d48; }
+.art-frame .steps-later { font-weight: 700; font-size: 0.9rem; }
+.art-frame .steps-next { margin-top: 0.7rem; display: grid; justify-items: start; gap: 0.5rem; }
+.art-frame .steps-think { font-size: 0.9rem; font-weight: 700; }
+
 /* diagrams with hotspots */
 .sim-hot { cursor: pointer; }
 .sim-hot circle.sim-hot-dot { fill: var(--art, #4f46e5); stroke: #fff; stroke-width: 2.5; }
