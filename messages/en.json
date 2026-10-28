@@ -459,5 +459,46 @@
     "earned": "earned",
     "notYet": "not yet",
     "noBadges": "Pass a unit check to master your first unit and earn a badge."
+  },
+  "puzzle": {
+    "title": "Daily puzzle",
+    "heading": "Puzzle #{n}",
+    "intro": "One new puzzle every day, the same for everyone. You have two tries.",
+    "levels": "Level",
+    "level": {
+      "junior": "Grades 1–6",
+      "senior": "Grades 7–12"
+    },
+    "theme": {
+      "numbers": "Numbers",
+      "logic": "Logic",
+      "words": "Words",
+      "chess": "Chess",
+      "shapes": "Shapes",
+      "nature": "Science & nature",
+      "teaser": "Brain teaser"
+    },
+    "check": "Check",
+    "triesLeft": "{n, plural, one {# try left} other {# tries left}}",
+    "notYet": "Not quite. Here's a hint:",
+    "error": "Could not check the answer. Check the internet connection and try again.",
+    "solvedFirst": "Solved on the first try!",
+    "solvedSecond": "Solved with the hint!",
+    "failed": "Not this time. Here's the answer:",
+    "streak": "{n, plural, =0 {No puzzle streak yet} one {# day in a row} other {# days in a row}}",
+    "nextIn": "Next puzzle in {h} h {m} min",
+    "share": "Share my result",
+    "copied": "Copied!",
+    "shareTitle": "Daily puzzle",
+    "trySenior": "Try the grades 7–12 puzzle",
+    "tryJunior": "Try the grades 1–6 puzzle",
+    "signupCta": "Create an account",
+    "signupWhy": "to keep your puzzle streak.",
+    "cardTitle": "Puzzle of the day",
+    "cardText": "A new puzzle every day. Can you solve it on the first try?",
+    "cardOpen": "Play",
+    "cardDone": "Solved",
+    "cardFailed": "Done",
+    "cardTry": "Your turn"
   }
 }

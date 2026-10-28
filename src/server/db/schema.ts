@@ -485,3 +485,92 @@ export const examPlans = sqliteTable(
 export type Skill = typeof skills.$inferSelect;
 export type AnswerEvent = typeof answerEvents.$inferSelect;
 export type ReviewCard = typeof reviewCards.$inferSelect;
+
+/* ------------------------------------------------------------------------- */
+/* Fun: daily puzzle, speed games, unit reflections and collectible cards    */
+/* ------------------------------------------------------------------------- */
+
+/** Daily puzzle level: grades 1–6 or 7–12. Both are open to everyone. */
+export type PuzzleLevel = "junior" | "senior";
+
+/** A pupil's go at one day's puzzle (src/lib/puzzle.ts). Days are UTC, like the streak. */
+export const puzzleResults = sqliteTable(
+  "puzzle_results",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    day: text("day").notNull(), // YYYY-MM-DD
+    level: text("level").$type<PuzzleLevel>().notNull(),
+    puzzleId: text("puzzle_id").notNull(),
+    /** Answers sent so far (at most PUZZLE_TRIES). */
+    tries: integer("tries").notNull().default(0),
+    solved: integer("solved", { mode: "boolean" }).notNull().default(false),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day, t.level] })],
+);
+
+/** One finished round of a speed game (src/lib/games.ts); the best is worked out from these. */
+export const gameScores = sqliteTable(
+  "game_scores",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    gameId: text("game_id").notNull(),
+    /** sprint: one minute on the clock; calm: 20 questions, no clock. */
+    mode: text("mode").$type<"sprint" | "calm">().notNull(),
+    /** Right answers. */
+    score: integer("score").notNull(),
+    /** Questions answered. */
+    total: integer("total").notNull(),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("game_scores_user_game").on(t.userId, t.gameId, t.mode)],
+);
+
+/** What a pupil wrote about why a unit matters to them ("Why learn this?" on the course page). */
+export const unitReflections = sqliteTable(
+  "unit_reflections",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    // No foreign key: the seed rebuilds `units`, and that must not wipe what pupils wrote.
+    unitId: text("unit_id").notNull(),
+    text: text("text").notNull(),
+    updatedAt: text("updated_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.unitId] })],
+);
+
+/** A collectible card a pupil won by mastering a unit (src/content/cards). */
+export const userCards = sqliteTable(
+  "user_cards",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    cardId: text("card_id").notNull(),
+    /** The mastered unit's skill that won it. No foreign key, like skill_ratings. */
+    skillId: text("skill_id").notNull(),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+    /** When the pupil first saw it turned over; null shows it as new. */
+    seenAt: text("seen_at"),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.cardId] }), uniqueIndex("user_cards_user_skill").on(t.userId, t.skillId)],
+);
+
+export type PuzzleResult = typeof puzzleResults.$inferSelect;
+export type GameScore = typeof gameScores.$inferSelect;
+export type UserCard = typeof userCards.$inferSelect;

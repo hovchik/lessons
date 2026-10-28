@@ -64,6 +64,13 @@
       "when": 1793199336703,
       "tag": "0008_weekly_goal",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1793211898365,
+      "tag": "0009_fun",
+      "breakpoints": true
     }
   ]
 }
