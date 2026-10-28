@@ -514,5 +514,100 @@
     "error": "Couldn't save. Check your connection and try again.",
     "signIn": "Sign in",
     "signInWhy": "to write your own answer."
+  },
+  "games": {
+    "back": "All games",
+    "setup": "Choose your game",
+    "grade": "Grade",
+    "topic": "Topic",
+    "mode": "Mode",
+    "sprint": {
+      "name": "Sprint",
+      "about": "1 minute, as many as you can"
+    },
+    "calm": {
+      "name": "Calm",
+      "about": "20 questions, no clock"
+    },
+    "start": "Start",
+    "secondsLeft": "{s} s",
+    "questionOf": "{n} of {of}",
+    "combo": "{n} in a row",
+    "score": "Score: {n}",
+    "right": "Right!",
+    "answerWas": "The answer is",
+    "next": "Next",
+    "check": "Check",
+    "pad": "Number pad",
+    "backspace": "Delete",
+    "minus": "Change sign",
+    "roundOver": "Round over",
+    "sprintResult": "{n} right out of {total} in one minute",
+    "calmResult": "{pct}% right",
+    "firstBest": "Your first personal best!",
+    "newBest": "New personal best! Before: {prev}",
+    "best": "Your best: {n}",
+    "bestCombo": "Longest run: {n} in a row",
+    "saveFailed": "Couldn't save this round. Check your connection.",
+    "again": "Play again",
+    "change": "Change game",
+    "missed": "Worth another look",
+    "calc": {
+      "name": "Quick maths",
+      "intro": "Sums made for your grade, a fresh one every time. Race the clock or take it calm.",
+      "solveFor": "Find x.",
+      "topics": {
+        "mix": "Grade mix",
+        "add": "Add and subtract",
+        "times": "Times tables",
+        "divide": "Division",
+        "multiply": "Bigger multiplication",
+        "order": "Order of operations",
+        "fractions": "Fractions",
+        "decimals": "Decimals",
+        "negatives": "Negative numbers",
+        "percent": "Percentages",
+        "powers": "Powers and roots",
+        "equations": "Equations"
+      },
+      "about": {
+        "mix": "A mix of every topic for your grade.",
+        "add": "Grade 1 within 20, grade 2 within 100, grade 3 within 1,000, grade 4 within 10,000.",
+        "times": "Tables up to 10 × 10. Grade 2 starts with the 2, 3, 4, 5 and 10 times tables.",
+        "divide": "Division with no remainder, from the tables up to three-digit numbers.",
+        "multiply": "Two-digit numbers times one digit, times 10, 100 and 1,000, then two digits by two digits.",
+        "order": "Multiplication and division before addition and subtraction, and brackets first of all.",
+        "fractions": "Same denominators in grade 4, then different ones, then multiplying and dividing. Type 3/4 with the / key; any equal fraction or decimal counts.",
+        "decimals": "Add, subtract, multiply and divide decimals, and multiply and divide by 10 and 100.",
+        "negatives": "Adding, subtracting, multiplying and dividing with negative numbers. The ± key changes the sign.",
+        "percent": "A percentage of a number, increasing and decreasing by a percentage, and what percentage one number is of another.",
+        "powers": "Squares, cubes, powers of 2 and 10, square roots and the rules for powers.",
+        "equations": "Find x in linear equations. The ± key makes your answer negative."
+      },
+      "words": {
+        "percentOf": "{p}% of {n}",
+        "percentUp": "{n} increased by {p}%",
+        "percentDown": "{n} decreased by {p}%",
+        "whatPercent": "{n} is what percentage of {m}?"
+      }
+    },
+    "words": {
+      "name": "English words",
+      "intro": "See the picture, pick the English word and hear how it sounds.",
+      "level": "Level",
+      "levels": {
+        "1": {
+          "name": "Starter",
+          "about": "Grades 2–4: 66 everyday words"
+        },
+        "2": {
+          "name": "Explorer",
+          "about": "Grades 4–6: all 132 words"
+        }
+      },
+      "prompt": "Which word matches the picture?",
+      "picture": "Picture to name",
+      "listen": "Listen"
+    }
   }
 }
