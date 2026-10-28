@@ -1,15 +1,16 @@
 "use client";
 
-import { LogOut, Trophy, UserRound } from "lucide-react";
+import { Flame, LogOut, Trophy, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-type Props = { user: { displayName: string } | null; className?: string };
+type Props = { user: { displayName: string } | null; streak?: { days: number; todayDone: boolean } | null; className?: string };
 
-/** Header widget: "Log in" for guests, name → progress page plus log-out for pupils. */
-export function UserMenu({ user, className }: Props) {
+/** Header widget: "Log in" for guests, name → progress page plus log-out for pupils, with the streak once there is one. */
+export function UserMenu({ user, streak, className }: Props) {
   const t = useTranslations("nav");
+  const tm = useTranslations("motivation");
   const router = useRouter();
   if (!user) {
     return (
@@ -22,7 +23,15 @@ export function UserMenu({ user, className }: Props) {
   return (
     <div className={cn("flex items-center gap-1", className)}>
       <Link href="/progress" className="clay-sm clay-press inline-flex h-11 max-w-[32vw] items-center gap-2 px-3 text-sm font-bold sm:max-w-48" title={t("progress")}>
-        <Trophy className="size-4 shrink-0 text-accent" aria-hidden="true" />
+        {streak && streak.days > 0 ? (
+          <span className={cn("inline-flex shrink-0 items-center gap-0.5 font-black tabular-nums", streak.todayDone ? "text-orange-600" : "text-muted-foreground")} title={tm("streak", { n: streak.days })}>
+            <Flame className="size-4" aria-hidden="true" />
+            <span aria-hidden="true">{streak.days}</span>
+            <span className="sr-only">{tm("streak", { n: streak.days })}</span>
+          </span>
+        ) : (
+          <Trophy className="size-4 shrink-0 text-accent" aria-hidden="true" />
+        )}
         <span className="truncate">{user.displayName}</span>
       </Link>
       <button

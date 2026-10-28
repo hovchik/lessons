@@ -424,5 +424,40 @@
     "removeConfirm": "Remove this plan? Your answers stay in your history.",
     "actionError": "Could not save. Check the internet connection.",
     "progressTitle": "Exam plans"
+  },
+  "motivation": {
+    "title": "This week",
+    "streak": "{n, plural, one {# day streak} other {# day streak}}",
+    "todayDone": "Today counts. Well done!",
+    "todayLeft": "Today: {done} of {needed} questions",
+    "freezeLeft": "Freeze ready: one missed day this week keeps your streak.",
+    "freezeUsed": "This week's freeze kept your streak on {day}.",
+    "best": "Best: {n, plural, one {# day} other {# days}}",
+    "goal": "Weekly goal",
+    "goalLine": "{done} of {goal} learning days",
+    "goalDone": "Goal reached!",
+    "goalPick": "Days a week",
+    "goalError": "Could not save. Check the internet connection.",
+    "dayDone": "learning day",
+    "dayFrozen": "kept by the freeze",
+    "dayOpen": "no learning yet",
+    "points": "Points",
+    "pointsWeek": "{n} this week",
+    "pointsTotal": "{n} in total",
+    "how": "A day counts when you answer {n} questions. Points come from right answers (each question once a day), twice as many in Daily Review, and 20 for each unit check you pass the first time. Time spent gives no points.",
+    "badges": "Badges",
+    "badgesIntro": "Master units to earn subject badges: bronze for 1, silver for 5, gold for 15. Keep a streak for the streak badges.",
+    "tier": {
+      "0": "No badge yet",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    },
+    "masteredN": "{n, plural, one {# unit mastered} other {# units mastered}}",
+    "nextTier": "{n, plural, one {# more unit} other {# more units}} for the next badge",
+    "streakBadge": "{n}-day streak",
+    "earned": "earned",
+    "notYet": "not yet",
+    "noBadges": "Pass a unit check to master your first unit and earn a badge."
   }
 }

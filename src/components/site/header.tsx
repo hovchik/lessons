@@ -1,6 +1,7 @@
 import { GraduationCap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { getStreakCached } from "@/server/motivation";
 import { getReviewSummaryCached } from "@/server/review";
 import { getCurrentUser } from "@/server/user-auth";
 import { LanguageSwitcher } from "./language-switcher";
@@ -8,7 +9,7 @@ import { UserMenu } from "./user-menu";
 
 export async function SiteHeader() {
   const [t, user] = await Promise.all([getTranslations(), getCurrentUser()]);
-  const review = user ? await getReviewSummaryCached(user.id) : null;
+  const [review, streak] = user ? await Promise.all([getReviewSummaryCached(user.id), getStreakCached(user.id)]) : [null, null];
   return (
     <header className="pt-safe sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-3 sm:h-16 sm:gap-3 sm:px-6">
@@ -40,7 +41,7 @@ export async function SiteHeader() {
           )}
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <UserMenu user={user} />
+          <UserMenu user={user} streak={streak ? { days: streak.days, todayDone: streak.todayDone } : null} />
           <LanguageSwitcher />
         </div>
       </div>
