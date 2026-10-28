@@ -1,20 +1,21 @@
 import { randomBytes } from "node:crypto";
-import { asc, eq } from "drizzle-orm";
+import { and, asc, count as countRows, eq, lt } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { I18nText } from "./db/schema";
 import { skillQuestions } from "./mastery";
 import { LIVE_MAX_PLAYERS, cleanName, leaderboard, livePoints, makePin, questionOver, uniqueName, type LivePhase } from "@/lib/live-quiz";
 
 /**
- * Live class quizzes, kept in this server's memory: a game lasts one lesson,
- * and nothing about the players (nicknames, no accounts) is stored. That
- * needs the app to run as one process, as it does today; several instances
- * would each have their own games. Idle games are dropped after three hours.
+ * Live class quizzes. A game lasts one lesson, and nothing about the players
+ * (nicknames, no accounts) is kept after it: idle games are deleted after three
+ * hours. Each game is one row of live_games, so every server worker
+ * (server.mjs, WEB_CONCURRENCY) sees the same game; a change is written only if
+ * nobody else changed the game since it was read, and is retried otherwise.
  */
 
 export type LiveQuestion = { prompt: I18nText; options: I18nText[]; answer: number };
 type Answer = { choice: number; ms: number; points: number };
-type Player = { id: string; token: string; name: string; score: number; joinedAt: number; answers: Map<number, Answer> };
+type Player = { id: string; token: string; name: string; score: number; joinedAt: number; answers: Record<number, Answer> };
 type Game = {
   pin: string;
   hostToken: string;
@@ -26,19 +27,50 @@ type Game = {
   index: number;
   startedAt: number;
   endsAt: number;
-  players: Map<string, Player>;
-  touchedAt: number;
+  /** In joining order. */
+  players: Player[];
 };
+
+// Results in the same shape as before, so callers can test `.error` or `.ok` on any of them.
+type Fail<E extends string> = { error: E; ok?: undefined; playerId?: undefined; token?: undefined; name?: undefined };
+type Done = { ok: true; error?: undefined };
 
 const IDLE_MS = 3 * 60 * 60 * 1000;
 const MAX_GAMES = 300;
-// Kept on globalThis so a dev-server reload doesn't lose running games.
-const store = ((globalThis as { __liveGames?: Map<string, Game> }).__liveGames ??= new Map<string, Game>());
+/** Views keep a game alive, but write that down at most this often. */
+const TOUCH_MS = 60 * 1000;
 
 const token = () => randomBytes(18).toString("base64url");
-const sweep = (now: number) => {
-  for (const [pin, g] of store) if (now - g.touchedAt > IDLE_MS) store.delete(pin);
-};
+const lg = schema.liveGames;
+
+async function sweep(now: number) {
+  const db = await getDb();
+  await db.delete(lg).where(lt(lg.touchedAt, now - IDLE_MS)).run();
+}
+
+async function load(pin: string) {
+  const db = await getDb();
+  const row = await db.select().from(lg).where(eq(lg.pin, pin)).get();
+  return row ? { game: JSON.parse(row.state) as Game, version: row.version, touchedAt: row.touchedAt } : null;
+}
+
+/**
+ * Reads the game, lets `change` alter it, and saves it if it did (`change` returns true), unless
+ * another request saved the game in between: then it starts again with the newer game.
+ */
+async function update<R>(pin: string, now: number, change: (g: Game) => { result: R; changed: boolean }): Promise<R | null> {
+  const db = await getDb();
+  for (let attempt = 0; ; attempt++) {
+    const found = await load(pin);
+    if (!found) return null;
+    const { result, changed } = change(found.game);
+    const touch = now - found.touchedAt > TOUCH_MS;
+    if (!changed && !touch) return result;
+    const set = changed ? { state: JSON.stringify(found.game), version: found.version + 1, touchedAt: now } : { touchedAt: now };
+    const saved = await db.update(lg).set(set).where(and(eq(lg.pin, pin), eq(lg.version, found.version))).run();
+    if (saved.rowsAffected > 0 || attempt >= 20) return result;
+  }
+}
 
 /** Choice questions with 2–4 options from a unit, shuffled, each with its options shuffled too. */
 export async function liveQuestionsFor(skillId: string, count: number, random: () => number = Math.random): Promise<{ title: I18nText; questions: LiveQuestion[] } | null> {
@@ -66,8 +98,10 @@ export async function liveQuestionsFor(skillId: string, count: number, random: (
 }
 
 export async function createGame(hostUserId: string, skillId: string, count: number, seconds: number, now = Date.now()) {
-  sweep(now);
-  if (store.size >= MAX_GAMES) return { error: "busy" as const };
+  await sweep(now);
+  const db = await getDb();
+  const games = (await db.select({ n: countRows() }).from(lg).get())?.n ?? 0;
+  if (games >= MAX_GAMES) return { error: "busy" as const };
   const made = await liveQuestionsFor(skillId, count);
   if (!made) return { error: "unknown" as const };
   if (made.questions.length < 3) return { error: "few" as const };
@@ -75,91 +109,99 @@ export async function createGame(hostUserId: string, skillId: string, count: num
 }
 
 /** Opens a game in the lobby with questions already chosen. */
-export function openGame(hostUserId: string, title: I18nText, questions: LiveQuestion[], seconds: number, now = Date.now()) {
-  let pin = makePin();
-  while (store.has(pin)) pin = makePin();
-  const game: Game = { pin, hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: new Map(), touchedAt: now };
-  store.set(pin, game);
-  return { pin, hostToken: game.hostToken };
+export async function openGame(hostUserId: string, title: I18nText, questions: LiveQuestion[], seconds: number, now = Date.now()) {
+  const db = await getDb();
+  const game: Game = { pin: "", hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: [] };
+  for (;;) {
+    game.pin = makePin();
+    const made = await db.insert(lg).values({ pin: game.pin, state: JSON.stringify(game), touchedAt: now }).onConflictDoNothing().run();
+    if (made.rowsAffected > 0) return { pin: game.pin, hostToken: game.hostToken };
+  }
 }
 
-export function joinGame(pin: string, rawName: string, now = Date.now()) {
-  const g = store.get(pin);
-  if (!g) return { error: "nogame" as const };
-  if (g.phase === "podium") return { error: "over" as const };
-  if (g.players.size >= LIVE_MAX_PLAYERS) return { error: "full" as const };
+export async function joinGame(pin: string, rawName: string, now = Date.now()) {
   const clean = cleanName(rawName);
-  if (!clean) return { error: "name" as const };
-  const name = uniqueName(clean, [...g.players.values()].map((p) => p.name));
-  const p: Player = { id: token().slice(0, 10), token: token(), name, score: 0, joinedAt: now, answers: new Map() };
-  g.players.set(p.id, p);
-  g.touchedAt = now;
-  return { playerId: p.id, token: p.token, name };
+  const r = await update<Fail<"over" | "full" | "name"> | { playerId: string; token: string; name: string; error?: undefined }>(pin, now, (g) => {
+    if (g.phase === "podium") return { result: { error: "over" as const }, changed: false };
+    if (g.players.length >= LIVE_MAX_PLAYERS) return { result: { error: "full" as const }, changed: false };
+    if (!clean) return { result: { error: "name" as const }, changed: false };
+    const name = uniqueName(clean, g.players.map((p) => p.name));
+    const p: Player = { id: token().slice(0, 10), token: token(), name, score: 0, joinedAt: now, answers: {} };
+    g.players.push(p);
+    return { result: { playerId: p.id, token: p.token, name }, changed: true };
+  });
+  return r ?? ({ error: "nogame" } as Fail<"nogame">);
 }
 
-/** Closes the open question when its time is up or everyone has answered. */
+/** Closes the open question when its time is up or everyone has answered. True when it did. */
 function settle(g: Game, now: number) {
-  if (g.phase !== "question") return;
-  const answered = [...g.players.values()].filter((p) => p.answers.has(g.index)).length;
-  if (questionOver(now, g.endsAt, answered, g.players.size)) g.phase = "reveal";
+  if (g.phase !== "question") return false;
+  const answered = g.players.filter((p) => p.answers[g.index]).length;
+  if (!questionOver(now, g.endsAt, answered, g.players.length)) return false;
+  g.phase = "reveal";
+  return true;
 }
 
-const playerBy = (g: Game, tok: string) => [...g.players.values()].find((p) => p.token === tok);
+const playerBy = (g: Game, tok: string) => g.players.find((p) => p.token === tok);
 
-export function answer(pin: string, tok: string, choice: number, now = Date.now()) {
-  const g = store.get(pin);
-  if (!g) return { error: "nogame" as const };
-  settle(g, now);
-  const p = playerBy(g, tok);
-  if (!p) return { error: "noplayer" as const };
-  const q = g.questions[g.index];
-  if (g.phase !== "question" || !q || p.answers.has(g.index)) return { error: "closed" as const };
-  if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { error: "invalid" as const };
-  const ms = now - g.startedAt;
-  const points = livePoints(choice === q.answer, ms, g.seconds * 1000);
-  p.answers.set(g.index, { choice, ms, points });
-  p.score += points;
-  g.touchedAt = now;
-  settle(g, now);
-  return { ok: true as const };
+export async function answer(pin: string, tok: string, choice: number, now = Date.now()) {
+  const r = await update<Fail<"noplayer" | "closed" | "invalid"> | Done>(pin, now, (g) => {
+    const settled = settle(g, now);
+    const p = playerBy(g, tok);
+    if (!p) return { result: { error: "noplayer" as const }, changed: settled };
+    const q = g.questions[g.index];
+    if (g.phase !== "question" || !q || p.answers[g.index]) return { result: { error: "closed" as const }, changed: settled };
+    if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { result: { error: "invalid" as const }, changed: settled };
+    const ms = now - g.startedAt;
+    const points = livePoints(choice === q.answer, ms, g.seconds * 1000);
+    p.answers[g.index] = { choice, ms, points };
+    p.score += points;
+    settle(g, now);
+    return { result: { ok: true as const }, changed: true };
+  });
+  return r ?? ({ error: "nogame" } as Fail<"nogame">);
 }
 
 export type HostAction = "start" | "reveal" | "next" | "end" | "kick";
 
-export function hostAct(pin: string, hostToken: string, action: HostAction, playerId?: string, now = Date.now()) {
-  const g = store.get(pin);
-  if (!g || g.hostToken !== hostToken) return { error: "nogame" as const };
-  settle(g, now);
-  const open = (i: number) => {
-    g.phase = "question";
-    g.index = i;
-    g.startedAt = now;
-    g.endsAt = now + g.seconds * 1000;
-  };
-  if (action === "start" && g.phase === "lobby") {
-    if (g.players.size === 0) return { error: "empty" as const };
-    open(0);
-  } else if (action === "reveal" && g.phase === "question") g.phase = "reveal";
-  else if (action === "next" && g.phase === "reveal") {
-    if (g.index + 1 < g.questions.length) open(g.index + 1);
-    else g.phase = "podium";
-  } else if (action === "end") g.phase = "podium";
-  else if (action === "kick" && playerId) g.players.delete(playerId);
-  g.touchedAt = now;
-  return { ok: true as const };
+export async function hostAct(pin: string, hostToken: string, action: HostAction, playerId?: string, now = Date.now()) {
+  const r = await update<Fail<"nogame" | "empty"> | Done>(pin, now, (g) => {
+    if (g.hostToken !== hostToken) return { result: { error: "nogame" as const }, changed: false };
+    settle(g, now);
+    const open = (i: number) => {
+      g.phase = "question";
+      g.index = i;
+      g.startedAt = now;
+      g.endsAt = now + g.seconds * 1000;
+    };
+    if (action === "start" && g.phase === "lobby") {
+      if (g.players.length === 0) return { result: { error: "empty" as const }, changed: false };
+      open(0);
+    } else if (action === "reveal" && g.phase === "question") g.phase = "reveal";
+    else if (action === "next" && g.phase === "reveal") {
+      if (g.index + 1 < g.questions.length) open(g.index + 1);
+      else g.phase = "podium";
+    } else if (action === "end") g.phase = "podium";
+    else if (action === "kick" && playerId) g.players = g.players.filter((p) => p.id !== playerId);
+    return { result: { ok: true as const }, changed: true };
+  });
+  return r ?? ({ error: "nogame" } as Fail<"nogame">);
 }
 
-const standings = (g: Game) => leaderboard([...g.players.values()].map((p) => ({ id: p.id, name: p.name, score: p.score, joinedAt: p.joinedAt })));
+/** The game as it is now: closes a question whose time ran out, and keeps the game alive. */
+async function current(pin: string, now: number) {
+  return update(pin, now, (g) => ({ result: g, changed: settle(g, now) }));
+}
+
+const standings = (g: Game) => leaderboard(g.players.map((p) => ({ id: p.id, name: p.name, score: p.score, joinedAt: p.joinedAt })));
 
 /** What the teacher's screen shows. */
-export function hostView(pin: string, hostToken: string, now = Date.now()) {
-  const g = store.get(pin);
+export async function hostView(pin: string, hostToken: string, now = Date.now()) {
+  const g = await current(pin, now);
   if (!g || g.hostToken !== hostToken) return null;
-  settle(g, now);
-  g.touchedAt = now;
   const q = g.questions[g.index];
   const board = standings(g);
-  const answers = [...g.players.values()].map((p) => p.answers.get(g.index)).filter((a): a is Answer => !!a);
+  const answers = g.players.map((p) => p.answers[g.index]).filter((a): a is Answer => !!a);
   return {
     pin: g.pin,
     title: g.title,
@@ -177,17 +219,16 @@ export function hostView(pin: string, hostToken: string, now = Date.now()) {
         : null,
   };
 }
-export type HostView = NonNullable<ReturnType<typeof hostView>>;
+export type HostView = NonNullable<Awaited<ReturnType<typeof hostView>>>;
 
 /** What a pupil's phone shows; the right answer only once the question is closed. */
-export function playerView(pin: string, tok: string, now = Date.now()) {
-  const g = store.get(pin);
+export async function playerView(pin: string, tok: string, now = Date.now()) {
+  const g = await current(pin, now);
   if (!g) return null;
-  settle(g, now);
   const p = playerBy(g, tok);
   if (!p) return { kicked: true as const };
   const q = g.questions[g.index];
-  const mine = p.answers.get(g.index);
+  const mine = p.answers[g.index];
   const board = standings(g);
   const me = board.find((x) => x.id === p.id)!;
   return {
@@ -203,7 +244,7 @@ export function playerView(pin: string, tok: string, now = Date.now()) {
     podium: g.phase === "podium" ? board.slice(0, 3).map((x) => ({ name: x.name, score: x.score, rank: x.rank })) : null,
   };
 }
-export type PlayerView = Extract<NonNullable<ReturnType<typeof playerView>>, { kicked: false }>;
+export type PlayerView = Extract<NonNullable<Awaited<ReturnType<typeof playerView>>>, { kicked: false }>;
 
 /** Units a teacher can run a quiz on: subject → grade → units, in the given language. */
 export async function liveCatalogue(pickText: (t: I18nText) => string) {
@@ -227,6 +268,7 @@ export async function liveCatalogue(pickText: (t: I18nText) => string) {
 }
 
 /** For tests: forget every game. */
-export function resetLiveGames() {
-  store.clear();
+export async function resetLiveGames() {
+  const db = await getDb();
+  await db.delete(lg).run();
 }

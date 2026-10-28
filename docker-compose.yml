@@ -7,8 +7,8 @@ services:
     restart: unless-stopped
     env_file: .env.production
     environment:
-      # Workers (one per core). Keep 1 while the live class quiz keeps its games in memory.
-      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
+      # Workers, one per core; 3 suits the 4-core server in deploy/README.md (Caddy gets the fourth).
+      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-3}
     volumes:
       - lessons-data:/data
 
