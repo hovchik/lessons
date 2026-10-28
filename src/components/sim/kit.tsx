@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { ChevronLeft, ChevronRight, Pause, Play, RotateCcw, Snail } from "lucide-react";
 import type { ArtLang, Tr } from "@/lib/art/spec";
 import { cn } from "@/lib/utils";
+import { fill } from "@/components/art/frame";
 import { L, UI } from "./labels";
 
 /* ---------- numbers ---------- */
@@ -108,7 +109,7 @@ export function Slider({
         <span>{label}</span>
         <b>{display ?? `${fmt(value, digits, lang)}${unit ? ` ${unit}` : ""}`}</b>
       </span>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={(e) => onChange(Number(e.target.value))} className="art-range" />
+      <input type="range" min={min} max={max} step={step} value={value} onChange={(e) => onChange(Number(e.target.value))} className="art-range" style={fill(value, min, max)} />
     </label>
   );
 }
@@ -350,10 +351,10 @@ export function StepPlayer({
       <div className="sim-steps-stage">{children}</div>
       <div className="art-step-bar">
         <span className="art-step-num">{L(UI.step, lang)} {i + 1}/{n}</span>
-        <p className="art-step-cap" aria-live="polite">{L(caps[i], lang)}</p>
+        <p key={i} className="art-step-cap" aria-live="polite">{L(caps[i], lang)}</p>
         <div className="art-dots sim-dots">
           {caps.map((_, k) => (
-            <button key={k} type="button" aria-label={`${L(UI.step, lang)} ${k + 1}`} className={k <= i ? "is-on" : undefined} onClick={() => setI(k)} />
+            <button key={k} type="button" aria-label={`${L(UI.step, lang)} ${k + 1}`} className={k === i ? "is-on is-now" : k < i ? "is-on" : undefined} onClick={() => setI(k)} />
           ))}
         </div>
         <div className="art-row">

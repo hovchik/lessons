@@ -2,7 +2,7 @@
 
 import { ArrowDown, ArrowUp, CheckCircle2, XCircle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { Fragment } from "react";
+import { Fragment, useLayoutEffect, useRef } from "react";
 import { answerText, isRight, partsRight, type Key, type QuizResponse, type Shown } from "@/lib/questions";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +41,7 @@ export function AnswerArea({
   const ok = reveal ? isRight(reveal, value) : null;
   const parts = reveal ? partsRight(reveal, value) : [];
   const box = cn("clay-sm px-4 font-semibold", compact ? "min-h-11 py-2.5 text-sm" : "min-h-12 py-3");
-  const input = "min-h-11 rounded-xl border-2 border-border bg-background px-3 font-semibold outline-none focus:border-primary disabled:opacity-100";
+  const input = "min-h-11 rounded-xl border-2 border-border bg-background px-3 font-semibold outline-none transition-[border-color,box-shadow,background-color] duration-200 focus:border-primary focus:bg-card focus:ring-4 focus:ring-primary/15 disabled:opacity-100";
 
   const answerLine = reveal && !ok && shown.kind !== "choice" && (
     <p className="fx-in text-sm text-success">
@@ -147,32 +147,19 @@ export function AnswerArea({
 
   if (shown.kind === "order") {
     const order = Array.isArray(value) && value.length === shown.items.length ? (value as number[]) : shown.items.map((_, i) => i);
-    const move = (from: number, to: number) => {
-      const next = [...order];
-      [next[from], next[to]] = [next[to], next[from]];
-      onChange(next);
-    };
     return (
       <div className="space-y-2">
         {!reveal && <p className="text-sm text-muted-foreground">{t("orderHint")}</p>}
-        <ol aria-labelledby={labelledBy} className="space-y-2">
-          {order.map((d, pos) => (
-            <li key={d} className={cn(box, "flex items-center gap-3", reveal && (parts[pos] ? right : wrong))}>
-              <span className="w-5 shrink-0 text-sm font-extrabold tabular-nums text-muted-foreground">{pos + 1}</span>
-              <span className="min-w-0 flex-1 leading-snug">{shown.items[d]}</span>
-              {!locked && (
-                <span className="flex shrink-0 gap-1">
-                  <button type="button" aria-label={t("moveUp", { item: shown.items[d] })} disabled={pos === 0} onClick={() => move(pos, pos - 1)} className="grid size-11 place-items-center rounded-xl text-primary hover:bg-muted disabled:opacity-30">
-                    <ArrowUp className="size-5" aria-hidden="true" />
-                  </button>
-                  <button type="button" aria-label={t("moveDown", { item: shown.items[d] })} disabled={pos === order.length - 1} onClick={() => move(pos, pos + 1)} className="grid size-11 place-items-center rounded-xl text-primary hover:bg-muted disabled:opacity-30">
-                    <ArrowDown className="size-5" aria-hidden="true" />
-                  </button>
-                </span>
-              )}
-            </li>
-          ))}
-        </ol>
+        <OrderList
+          items={shown.items}
+          order={order}
+          onChange={onChange}
+          locked={locked}
+          labelledBy={labelledBy}
+          rowClass={(pos) => cn(box, "flex items-center gap-3", reveal && (parts[pos] ? right : wrong))}
+          upLabel={(item) => t("moveUp", { item })}
+          downLabel={(item) => t("moveDown", { item })}
+        />
         {answerLine}
       </div>
     );
@@ -190,7 +177,7 @@ export function AnswerArea({
               disabled={locked}
               value={picks[i]}
               onChange={(e) => onChange(picks.map((p, k) => (k === i ? Number(e.target.value) : p)))}
-              className={cn(input, "w-full sm:w-64")}
+              className={cn(input, "answer-select w-full sm:w-64", picks[i] >= 0 && !reveal && "border-primary/50 bg-card")}
             >
               <option value={-1}>{t("choose")}</option>
               {shown.right.map((r, ri) => (
@@ -204,5 +191,79 @@ export function AnswerArea({
       </ul>
       {answerLine}
     </div>
+  );
+}
+
+/**
+ * Items to put in order. When two swap places they glide there (FLIP: measure, move, then
+ * animate from the old spot), and the one the pupil moved gets a little lift.
+ */
+function OrderList({ items, order, onChange, locked, labelledBy, rowClass, upLabel, downLabel }: {
+  items: string[];
+  order: number[];
+  onChange: (r: QuizResponse) => void;
+  locked: boolean;
+  labelledBy: string;
+  rowClass: (pos: number) => string;
+  upLabel: (item: string) => string;
+  downLabel: (item: string) => string;
+}) {
+  const rows = useRef(new Map<number, HTMLLIElement>());
+  const tops = useRef(new Map<number, number>());
+  const moved = useRef<number | null>(null);
+  const sig = order.join(",");
+  useLayoutEffect(() => {
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    rows.current.forEach((el, d) => {
+      // offsetTop is relative to the list, so scrolling between renders does not count as a move.
+      const was = tops.current.get(d);
+      const now = el.offsetTop;
+      tops.current.set(d, now);
+      if (still || was == null || Math.abs(was - now) < 1) return;
+      const lift = d === moved.current;
+      el.animate(
+        [
+          { transform: `translateY(${was - now}px)`, zIndex: lift ? 1 : 0 },
+          { transform: `translateY(${(was - now) / 2}px) scale(${lift ? 1.03 : 1})`, zIndex: lift ? 1 : 0, offset: 0.5 },
+          { transform: "none", zIndex: lift ? 1 : 0 },
+        ],
+        { duration: 360, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      );
+    });
+    moved.current = null;
+  }, [sig]);
+  const move = (from: number, to: number) => {
+    const next = [...order];
+    [next[from], next[to]] = [next[to], next[from]];
+    moved.current = order[from];
+    onChange(next);
+  };
+  const arrow = "grid size-11 place-items-center rounded-xl text-primary transition-[background-color,transform,opacity] duration-200 hover:bg-muted active:scale-90 disabled:opacity-30";
+  return (
+    <ol aria-labelledby={labelledBy} className="relative space-y-2">
+      {order.map((d, pos) => (
+        <li
+          key={d}
+          ref={(el) => {
+            if (el) rows.current.set(d, el);
+            else rows.current.delete(d);
+          }}
+          className={cn(rowClass(pos), "relative")}
+        >
+          <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-primary/10 text-sm font-extrabold tabular-nums text-primary">{pos + 1}</span>
+          <span className="min-w-0 flex-1 leading-snug">{items[d]}</span>
+          {!locked && (
+            <span className="flex shrink-0 gap-1">
+              <button type="button" aria-label={upLabel(items[d])} disabled={pos === 0} onClick={() => move(pos, pos - 1)} className={arrow}>
+                <ArrowUp className="size-5" aria-hidden="true" />
+              </button>
+              <button type="button" aria-label={downLabel(items[d])} disabled={pos === order.length - 1} onClick={() => move(pos, pos + 1)} className={arrow}>
+                <ArrowDown className="size-5" aria-hidden="true" />
+              </button>
+            </span>
+          )}
+        </li>
+      ))}
+    </ol>
   );
 }
