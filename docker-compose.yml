@@ -1,0 +1,34 @@
+# Production: the app plus Caddy, which gets the HTTPS certificate and compresses pages.
+# Setup and day-to-day commands: deploy/README.md
+services:
+  app:
+    build: .
+    init: true # passes docker stop on to the app at once
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      # Workers (one per core). Keep 1 while the live class quiz keeps its games in memory.
+      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
+    volumes:
+      - lessons-data:/data
+
+  caddy:
+    image: caddy:2.8
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+
+volumes:
+  lessons-data:
+  caddy-data:
+  caddy-config:
