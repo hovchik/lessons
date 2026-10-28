@@ -16,6 +16,7 @@ import { REACTIONS } from "./widgets/balance";
 import { CHART_SETS } from "./widgets/chart";
 import { planColumn } from "./widgets/column";
 import { parseCheck } from "./widgets/check";
+import { stepsProblems } from "@/lib/steps";
 import { SALTS } from "./widgets/flame";
 import { GEO_PRESETS } from "./widgets/geo";
 import { EXCHANGE, SOLUTES } from "./widgets/ions";
@@ -94,7 +95,7 @@ const MODES: Record<string, string[]> = {
   piano: ["keys", "staff", "durations", "rhythm", "meter", "interval", "chord", "sound", "melody", "prog"],
 };
 
-export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle"];
+export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "steps", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle"];
 
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
@@ -193,6 +194,9 @@ export function checkSimSpec(source: string): string[] {
       if (spec.opts.root && parseNote(`${spec.opts.root}4`) == null) errors.push(`${where}: unknown root "${spec.opts.root}"`);
       if (spec.opts.tune && !TUNES[spec.opts.tune]) errors.push(`${where}: unknown tune "${spec.opts.tune}"`);
       if (spec.opts.prog && !PROGS[spec.opts.prog]) errors.push(`${where}: unknown chord loop "${spec.opts.prog}"`);
+      break;
+    case "steps":
+      for (const e of stepsProblems(spec.body)) errors.push(`${where}: ${e}`);
       break;
     case "check": {
       const { question, options } = parseCheck(spec.body);

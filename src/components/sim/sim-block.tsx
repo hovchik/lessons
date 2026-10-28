@@ -25,6 +25,7 @@ const WIDGETS: Record<string, ComponentType<SimProps>> = {
   atom: lazy(() => import("./widgets/atom")),
   mechanism: lazy(() => import("./widgets/mechanism")),
   check: lazy(() => import("./widgets/check")),
+  steps: lazy(() => import("./widgets/steps")),
   diagram: lazy(() => import("./widgets/diagram")),
   molecule: lazy(() => import("./widgets/molecule")),
   energy: lazy(() => import("./widgets/energy")),
