@@ -86,16 +86,16 @@ export function LiveUserProvider({ initial, children }: { initial: LiveUser | nu
     if (pending.current) refresh();
   }, [pathname, refresh]);
 
+  // Guests listen too: logging in from another tab marks this one stale, and it catches up when shown.
   useEffect(() => {
-    if (!signedIn) return;
     let hiddenAt = 0;
     const onVisibility = () => {
       if (document.visibilityState === "hidden") hiddenAt = Date.now();
-      else if (stale.current || (hiddenAt && Date.now() - hiddenAt > AWAY_MS)) sync();
+      else if (stale.current || (signedIn && hiddenAt && Date.now() - hiddenAt > AWAY_MS)) sync();
     };
     const onPageShow = (e: PageTransitionEvent) => e.persisted && sync();
     // Back/forward shows the page as it was cached; read it again once Next has restored it.
-    const onPopState = () => setTimeout(sync, 0);
+    const onPopState = () => signedIn && setTimeout(sync, 0);
     document.addEventListener("visibilitychange", onVisibility);
     window.addEventListener("pageshow", onPageShow);
     window.addEventListener("popstate", onPopState);
