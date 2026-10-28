@@ -4,11 +4,13 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { LogoutLink } from "@/components/site/logout-link";
 import { levelSwatch } from "@/components/site/mastery-badge";
+import { BadgesSection, MotivationCard } from "@/components/site/motivation-card";
 import { ReviewCard } from "@/components/site/review-card";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
 import { listPlans } from "@/server/exam-plan";
+import { getMotivation } from "@/server/motivation";
 import { getUserMastery } from "@/server/mastery";
 import { getRecentAttempts, getUserCourseSummaries, getUserTotals } from "@/server/progress";
 import { getReviewSummaryCached } from "@/server/review";
@@ -28,7 +30,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
   const user = await getCurrentUser();
   if (!user) redirect({ href: "/login?next=/progress", locale });
   const u = user!;
-  const [t, l, totals, courses, recent, review, mastery, plans] = await Promise.all([
+  const [t, l, totals, courses, recent, review, mastery, plans, motivation] = await Promise.all([
     getTranslations(),
     getLocale(),
     getUserTotals(u.id),
@@ -37,6 +39,7 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
     getReviewSummaryCached(u.id),
     getUserMastery(u.id),
     listPlans(u.id),
+    getMotivation(u.id),
   ]);
   await touchLastSeen(u.id);
 
@@ -79,6 +82,8 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
           ))}
         </dl>
       </header>
+
+      {motivation.hasActivity && <MotivationCard m={motivation} />}
 
       <ReviewCard summary={review} />
 
@@ -177,6 +182,8 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
           </ul>
         </section>
       )}
+
+      {motivation.hasActivity && <BadgesSection m={motivation} />}
 
       {recent.length > 0 && (
         <section aria-labelledby="recent" className="space-y-4">

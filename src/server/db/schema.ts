@@ -143,6 +143,8 @@ export const users = sqliteTable(
       .notNull()
       .default(sql`(current_timestamp)`),
     lastSeenAt: text("last_seen_at"),
+    /** Learning days a week the pupil aims for: 3, 5 or 7 (src/lib/motivation.ts). */
+    weeklyGoal: integer("weekly_goal").notNull().default(5),
   },
   (t) => [index("users_created").on(t.createdAt)],
 );
