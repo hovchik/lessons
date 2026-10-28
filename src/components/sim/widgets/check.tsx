@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RotateCcw } from "lucide-react";
+import { Check as Tick, RotateCcw, X } from "lucide-react";
 import { ArtFrame, ArtText } from "@/components/art/frame";
 import { useRecordCheck } from "@/components/site/lesson-checks";
 import { cn } from "@/lib/utils";
@@ -56,8 +56,10 @@ export default function Check({ spec, lang }: SimProps) {
         {options.map((o, k) => {
           const state = picked.includes(k) ? (k === right ? "is-right" : "is-wrong") : done && k === right ? "is-right" : "";
           return (
-            <button key={k} type="button" className={cn("sim-option", state)} disabled={done || picked.includes(k)} onClick={() => choose(k)}>
-              <span className="sim-letter">{letters[k]}</span>
+            <button key={k} type="button" className={cn("sim-option", state, picked.includes(k) && (k === right ? "fx-right" : "fx-wrong"))} disabled={done || picked.includes(k)} onClick={() => choose(k)}>
+              <span className="sim-letter">
+                {state === "is-right" ? <Tick className="fx-tick size-4" strokeWidth={3} aria-hidden="true" /> : state === "is-wrong" ? <X className="fx-tick size-4" strokeWidth={3} aria-hidden="true" /> : letters[k]}
+              </span>
               <ArtText className="sim-option-text">{o}</ArtText>
             </button>
           );

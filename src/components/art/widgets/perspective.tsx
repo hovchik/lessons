@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { list } from "@/lib/art/spec";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame, Chip } from "../frame";
+import { ArtFrame, Chip, fill } from "../frame";
 import { UI } from "../labels";
 
 type P = [number, number];
@@ -33,7 +33,7 @@ export default function Perspective({ spec, lang }: WidgetProps) {
         </svg>
         <label className="art-range-label">
           <span>{UI.horizon[lang]}</span>
-          <input type="range" min={20} max={180} value={hy} onChange={(e) => setHy(Number(e.target.value))} className="art-range" />
+          <input type="range" min={20} max={180} value={hy} onChange={(e) => setHy(Number(e.target.value))} className="art-range" style={fill(hy, 20, 180)} />
         </label>
         {modes.length > 1 ? (
           <div className="art-chips">

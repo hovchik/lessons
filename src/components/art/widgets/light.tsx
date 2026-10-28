@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import type { Tr } from "@/lib/art/spec";
 import { tr } from "@/lib/art/spec";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame, Chip } from "../frame";
+import { ArtFrame, Chip, fill } from "../frame";
 import { UI } from "../labels";
 
 const t = (en: string, hy: string, ru: string): Tr => ({ en, hy, ru });
@@ -87,7 +87,7 @@ export default function Light({ spec, lang }: WidgetProps) {
         </svg>
         <label className="art-range-label">
           <span>{UI.lamp[lang]}</span>
-          <input type="range" min={25} max={155} value={deg} onChange={(e) => setDeg(Number(e.target.value))} className="art-range" style={{ direction: "rtl" }} />
+          <input type="range" min={25} max={155} value={deg} onChange={(e) => setDeg(Number(e.target.value))} className="art-range" style={{ direction: "rtl", ...fill(deg, 25, 155, true) }} />
         </label>
         <div className="art-chips"><Chip active={labels} onClick={() => setLabels(!labels)}>{UI.labels[lang]}</Chip></div>
       </div>

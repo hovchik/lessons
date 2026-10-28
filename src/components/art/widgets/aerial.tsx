@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { hexToRgb, rgbToHex } from "@/lib/art/colors";
 import type { WidgetProps } from "../art-block";
-import { ArtFrame } from "../frame";
+import { ArtFrame, fill } from "../frame";
 import { UI } from "../labels";
 
 const SKY = "#cfe3f5";
@@ -33,7 +33,7 @@ export default function Aerial({ spec, lang }: WidgetProps) {
         </svg>
         <label className="art-range-label">
           <span>{UI.air[lang]}</span>
-          <input type="range" min={0} max={100} value={haze} onChange={(e) => setHaze(Number(e.target.value))} className="art-range" />
+          <input type="range" min={0} max={100} value={haze} onChange={(e) => setHaze(Number(e.target.value))} className="art-range" style={fill(haze, 0, 100)} />
         </label>
       </div>
     </ArtFrame>
