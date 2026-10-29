@@ -11,4 +11,12 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "wash-your-hands": { emoji: "🧼", safety: null },
   "call-for-help": { emoji: "📞", safety: "care" },
   "grow-a-bean": { emoji: "🌱", safety: null },
+  // grade 2
+  "tie-shoelaces": { emoji: "👟", safety: null },
+  "cross-the-road": { emoji: "🚦", safety: "adult" },
+  "butter-in-a-jar": { emoji: "🧈", safety: "care" },
+  // grade 3
+  "find-north": { emoji: "🧭", safety: "care" },
+  "cuts-and-nosebleeds": { emoji: "🩹", safety: "ask" },
+  "pine-cone-feeder": { emoji: "🐦", safety: "ask" },
 };
