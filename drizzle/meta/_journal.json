@@ -71,6 +71,13 @@
       "when": 1793211898365,
       "tag": "0009_fun",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1793250881306,
+      "tag": "0010_speed",
+      "breakpoints": true
     }
   ]
 }

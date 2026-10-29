@@ -1,6 +1,6 @@
 import { ChevronDown, Lightbulb } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
-import { Markdown } from "@/components/site/markdown";
+import { StaticMarkdown } from "@/components/site/static-markdown";
 import type { Tip } from "@/server/db/schema";
 import { pick } from "@/lib/utils";
 
@@ -36,7 +36,7 @@ export async function TipsSection({ tips }: { tips: Tip[] }) {
                 <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
               </summary>
               <div className="border-t border-border/70 px-4 py-4 sm:px-5">
-                <Markdown className="prose-lesson prose-tip">{pick(tip.body, l)}</Markdown>
+                <StaticMarkdown className="prose-lesson prose-tip" lang={l}>{pick(tip.body, l)}</StaticMarkdown>
               </div>
             </details>
           </li>

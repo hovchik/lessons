@@ -18,6 +18,8 @@
     "@libsql/client": "^0.15.15",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.4",
+    "hast-util-to-html": "^9.0.5",
+    "html-url-attributes": "^3.0.1",
     "katex": "^0.16.47",
     "lucide-react": "^1.61.0",
     "next": "15.5.28",
@@ -28,8 +30,12 @@
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "tailwind-merge": "^3.7.0",
     "ts-fsrs": "5.4.2",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {

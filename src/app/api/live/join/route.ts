@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const key = `live-join:${clientIp(req)}`;
   const wait = await take(key, LIMITS.liveJoinIp);
   if (wait) return tooMany(wait);
-  const r = joinGame(parsed.data.pin, parsed.data.name);
+  const r = await joinGame(parsed.data.pin, parsed.data.name);
   if (!("error" in r && r.error === "nogame")) await refund(key);
   if ("error" in r) return NextResponse.json(r, { status: r.error === "nogame" ? 404 : 400 });
   return NextResponse.json(r);

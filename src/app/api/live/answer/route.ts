@@ -7,7 +7,7 @@ const Body = z.object({ pin: z.string().regex(/^\d{6}$/), token: z.string().min(
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
-  const r = answer(parsed.data.pin, parsed.data.token, parsed.data.choice);
+  const r = await answer(parsed.data.pin, parsed.data.token, parsed.data.choice);
   if ("error" in r) return NextResponse.json(r, { status: r.error === "nogame" || r.error === "noplayer" ? 404 : 409 });
   return NextResponse.json(r);
 }

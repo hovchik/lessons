@@ -1,7 +1,17 @@
-import { test } from "node:test";
+import { before, test } from "node:test";
 import assert from "node:assert/strict";
-import { cleanName, leaderboard, livePoints, makePin, questionOver, uniqueName } from "../src/lib/live-quiz";
-import { answer, hostAct, hostView, joinGame, openGame, playerView, resetLiveGames, type LiveQuestion } from "../src/server/live-quiz";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { LIVE_MAX_PLAYERS, cleanName, leaderboard, livePoints, makePin, questionOver, uniqueName } from "../src/lib/live-quiz";
+import type { LiveQuestion } from "../src/server/live-quiz";
+
+const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-live-"));
+process.env.DATABASE_PATH = path.join(dir, "test.db");
+let live: typeof import("../src/server/live-quiz");
+before(async () => {
+  live = await import("../src/server/live-quiz");
+});
 
 test("points reward right answers, and speed only on top of being right", () => {
   assert.equal(livePoints(false, 0, 20000), 0);
@@ -40,47 +50,63 @@ const questions: LiveQuestion[] = [
   { prompt: t("10 − 7"), options: [t("2"), t("3"), t("4")], answer: 1 },
 ];
 
-test("a whole game: lobby, questions, reveals and podium, with the key hidden until each reveal", () => {
-  resetLiveGames();
+test("a whole game: lobby, questions, reveals and podium, with the key hidden until each reveal", async () => {
+  const { answer, hostAct, hostView, joinGame, openGame, playerView, resetLiveGames } = live;
+  await resetLiveGames();
   let now = 1_000_000;
-  const { pin, hostToken } = openGame("teacher", t("Sums"), questions, 20, now);
-  assert.equal(hostAct(pin, hostToken, "start", undefined, now).error, "empty", "no one to play with yet");
-  const ani = joinGame(pin, "Ani", now) as { token: string; playerId: string };
-  const ani2 = joinGame(pin, "ani", now + 1) as { token: string; name: string };
+  const { pin, hostToken } = (await openGame("teacher", t("Sums"), questions, 20, now));
+  assert.equal((await hostAct(pin, hostToken, "start", undefined, now)).error, "empty", "no one to play with yet");
+  const ani = (await joinGame(pin, "Ani", now)) as { token: string; playerId: string };
+  const ani2 = (await joinGame(pin, "ani", now + 1)) as { token: string; name: string };
   assert.equal(ani2.name, "ani 2");
-  assert.equal(joinGame("000000", "X").error, "nogame");
-  assert.equal(joinGame(pin, "   ").error, "name");
-  assert.equal(hostAct(pin, "wrong-token", "start").error, "nogame", "only the host moves the game");
+  assert.equal((await joinGame("000000", "X")).error, "nogame");
+  assert.equal((await joinGame(pin, "   ")).error, "name");
+  assert.equal((await hostAct(pin, "wrong-token", "start")).error, "nogame", "only the host moves the game");
 
-  assert.equal(hostAct(pin, hostToken, "start", undefined, now).ok, true);
-  let pv = playerView(pin, ani.token, now)!;
+  assert.equal((await hostAct(pin, hostToken, "start", undefined, now)).ok, true);
+  let pv = (await playerView(pin, ani.token, now))!;
   assert.ok(!pv.kicked);
   assert.equal(pv.phase, "question");
   assert.equal(JSON.stringify(pv).includes('"answer"'), false, "no key while the question is open");
 
   now += 5000;
-  assert.equal(answer(pin, ani.token, 1, now).ok, true);
-  assert.equal(answer(pin, ani.token, 2, now).error, "closed", "one answer per question");
-  assert.equal(hostView(pin, hostToken, now)!.phase, "question", "still waiting for ani 2");
-  answer(pin, ani2.token, 0, now);
-  const hv = hostView(pin, hostToken, now)!;
+  assert.equal((await answer(pin, ani.token, 1, now)).ok, true);
+  assert.equal((await answer(pin, ani.token, 2, now)).error, "closed", "one answer per question");
+  assert.equal((await hostView(pin, hostToken, now))!.phase, "question", "still waiting for ani 2");
+  await answer(pin, ani2.token, 0, now);
+  const hv = (await hostView(pin, hostToken, now))!;
   assert.equal(hv.phase, "reveal", "closes once everyone answered");
   assert.deepEqual(hv.reveal!.counts, [1, 1, 0, 0]);
-  pv = playerView(pin, ani.token, now)! as typeof pv;
+  pv = (await playerView(pin, ani.token, now))! as typeof pv;
   assert.equal(pv.reveal!.points, 875);
   assert.equal(pv.me.rank, 1);
 
-  hostAct(pin, hostToken, "next", undefined, now);
+  await hostAct(pin, hostToken, "next", undefined, now);
   now += 21000; // nobody answers in time
-  assert.equal(hostView(pin, hostToken, now)!.phase, "reveal", "time up closes the question");
-  assert.equal(answer(pin, ani.token, 0, now).error, "closed");
-  hostAct(pin, hostToken, "next", undefined, now);
-  hostAct(pin, hostToken, "kick", (ani2 as unknown as { playerId: string }).playerId, now);
-  assert.deepEqual(playerView(pin, ani2.token, now), { kicked: true });
-  hostAct(pin, hostToken, "reveal", undefined, now);
-  hostAct(pin, hostToken, "next", undefined, now);
-  const end = playerView(pin, ani.token, now)! as typeof pv;
+  assert.equal((await hostView(pin, hostToken, now))!.phase, "reveal", "time up closes the question");
+  assert.equal((await answer(pin, ani.token, 0, now)).error, "closed");
+  await hostAct(pin, hostToken, "next", undefined, now);
+  await hostAct(pin, hostToken, "kick", (ani2 as unknown as { playerId: string }).playerId, now);
+  assert.deepEqual(await playerView(pin, ani2.token, now), { kicked: true });
+  await hostAct(pin, hostToken, "reveal", undefined, now);
+  await hostAct(pin, hostToken, "next", undefined, now);
+  const end = (await playerView(pin, ani.token, now))! as typeof pv;
   assert.equal(end.phase, "podium");
   assert.deepEqual(end.podium!.map((p) => p.name), ["Ani"]);
-  assert.equal(joinGame(pin, "Late").error, "over");
+  assert.equal((await joinGame(pin, "Late")).error, "over");
+});
+
+test("answers sent at the same moment are all counted, in a full game (games are shared by every server worker)", async () => {
+  const { answer, hostAct, hostView, joinGame, openGame } = live;
+  const now = 2_000_000;
+  const { pin, hostToken } = await openGame("teacher", t("Sums"), questions, 20, now);
+  const players = await Promise.all(Array.from({ length: LIVE_MAX_PLAYERS }, (_, i) => joinGame(pin, `P${i}`, now)));
+  assert.equal(new Set(players.map((p) => p.name)).size, LIVE_MAX_PLAYERS);
+  await hostAct(pin, hostToken, "start", undefined, now);
+  const results = await Promise.all(players.map((p, i) => answer(pin, p.token!, i % 2, now + 1000)));
+  assert.ok(results.every((r) => r.ok));
+  const hv = (await hostView(pin, hostToken, now + 1000))!;
+  assert.equal(hv.phase, "reveal");
+  assert.equal(hv.players.length, LIVE_MAX_PLAYERS);
+  assert.deepEqual(hv.reveal!.counts, [LIVE_MAX_PLAYERS / 2, LIVE_MAX_PLAYERS / 2, 0, 0]);
 });

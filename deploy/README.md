@@ -81,8 +81,6 @@ starts.
 
 ## Using more cores
 
-`WEB_CONCURRENCY` sets how many app workers run (one per core helps; measured: 1 worker ≈ 45
-requests/s, 2 ≈ 86, 3 ≈ 127). Keep it at **1** while the live class quiz keeps its games in server
-memory: with several workers, pupils in one game would land on different workers. When the game
-state moves into the database, set `WEB_CONCURRENCY=3` in `.env` on a 4-core server and run
-`docker compose up -d`.
+`WEB_CONCURRENCY` sets how many app workers run, one per core (default 3, for a 4-core server; set
+it in `.env` and run `docker compose up -d` to change it). All workers share the database, live
+class quizzes included, so a pupil can land on any of them.

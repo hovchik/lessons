@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isAdmin } from "@/server/auth";
+import { contentChanged } from "@/server/content-cache";
 import { getDb, schema } from "@/server/db/client";
 
 const i18n = z.object({ en: z.string(), hy: z.string(), ru: z.string() });
@@ -43,6 +44,7 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
     .set({ ...parsed.data, source: "admin", updatedAt: new Date().toISOString() })
     .where(eq(schema.exams.id, id))
     .run();
+  await contentChanged();
   const exam = await db.select().from(schema.exams).where(eq(schema.exams.id, id)).get();
   return NextResponse.json({ exam });
 }

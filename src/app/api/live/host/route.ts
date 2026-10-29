@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
   const { pin, hostToken, action, playerId } = parsed.data;
-  const r = hostAct(pin, hostToken, action, playerId);
+  const r = await hostAct(pin, hostToken, action, playerId);
   if ("error" in r) return NextResponse.json(r, { status: r.error === "nogame" ? 404 : 409 });
   return NextResponse.json(r);
 }

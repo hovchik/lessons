@@ -4,7 +4,7 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { PUZZLE_THEMES } from "@/components/fun/puzzle-theme";
 import { PuzzlePlay } from "@/components/fun/puzzle-play";
-import { Markdown } from "@/components/site/markdown";
+import { StaticMarkdown } from "@/components/site/static-markdown";
 import { levelForGrade, PUZZLE_LEVELS, type PuzzleLevel } from "@/lib/puzzle";
 import { cn } from "@/lib/utils";
 import { getPuzzlePage } from "@/server/puzzle";
@@ -61,7 +61,7 @@ export default async function PuzzlePage({ params, searchParams }: { params: Pro
         </nav>
       </header>
 
-      {data.view.visual && <Markdown lang={l}>{data.view.visual}</Markdown>}
+      {data.view.visual && <StaticMarkdown lang={l}>{data.view.visual}</StaticMarkdown>}
 
       <PuzzlePlay
         key={`${data.view.day}:${level}`}

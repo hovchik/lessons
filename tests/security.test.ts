@@ -77,22 +77,23 @@ test("admin sessions end when ADMIN_PASSWORD changes, and the example password n
 
 test("a made-up live-quiz token learns nothing; a removed player is told so", async () => {
   const live = await import("../src/server/live-quiz");
-  live.resetLiveGames();
+  await live.resetLiveGames();
   const now = 1_000_000;
-  const { pin, hostToken } = live.openGame("teacher", t("Sums"), questions, 20, now);
-  const ani = live.joinGame(pin, "Ani", now) as { token: string; playerId: string };
-  assert.equal(live.playerView(pin, "made-up-token-123", now), null);
-  assert.equal(live.answer(pin, "made-up-token-123", 0, now).error, "nogame");
-  assert.equal(live.hostView(pin, "wrong-host-token", now), null);
-  live.hostAct(pin, hostToken, "kick", ani.playerId, now);
-  assert.deepEqual(live.playerView(pin, ani.token, now), { kicked: true });
+  const { pin, hostToken } = await live.openGame("teacher", t("Sums"), questions, 20, now);
+  const ani = (await live.joinGame(pin, "Ani", now)) as { token: string; playerId: string };
+  assert.equal(await live.playerView(pin, "made-up-token-123", now), null);
+  assert.equal((await live.answer(pin, "made-up-token-123", 0, now)).error, "nogame");
+  assert.equal(await live.hostView(pin, "wrong-host-token", now), null);
+  await live.hostAct(pin, hostToken, "kick", ani.playerId, now);
+  assert.deepEqual(await live.playerView(pin, ani.token, now), { kicked: true });
 });
 
 test("one teacher keeps at most three open games", async () => {
   const live = await import("../src/server/live-quiz");
-  live.resetLiveGames();
-  const pins = [1, 2, 3, 4].map((i) => live.openGame("teacher", t("Sums"), questions, 20, 1_000 + i).pin);
-  const other = live.openGame("someone-else", t("Sums"), questions, 20, 1_000).pin;
-  assert.equal(live.joinGame(pins[0], "Ani", 2_000).error, "nogame", "the oldest was closed");
-  for (const pin of [...pins.slice(1), other]) assert.ok(!("error" in live.joinGame(pin, "Ani", 2_000)));
+  await live.resetLiveGames();
+  const pins: string[] = [];
+  for (const i of [1, 2, 3, 4]) pins.push((await live.openGame("teacher", t("Sums"), questions, 20, 1_000 + i)).pin);
+  const other = (await live.openGame("someone-else", t("Sums"), questions, 20, 1_000)).pin;
+  assert.equal((await live.joinGame(pins[0], "Ani", 2_000)).error, "nogame", "the oldest was closed");
+  for (const pin of [...pins.slice(1), other]) assert.ok(!("error" in (await live.joinGame(pin, "Ani", 2_000))));
 });
