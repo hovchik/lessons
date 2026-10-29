@@ -18,6 +18,7 @@ import {
   Monitor,
   ScrollText,
   Sprout,
+  Telescope,
   Users,
   Wrench,
   type LucideProps,
@@ -43,6 +44,7 @@ const ICONS: Record<string, React.ComponentType<LucideProps>> = {
   Monitor,
   ScrollText,
   Sprout,
+  Telescope,
   Users,
   Wrench,
 };

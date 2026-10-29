@@ -320,4 +320,96 @@ const tracks: Diagram = {
   ],
 };
 
-export const DIAGRAMS: Record<string, Diagram> = { sun, solarsystem, galaxy, galaxytypes, thermos, eye, microscope, telescope, standardmodel, interactions, hr, smartphone, tracks };
+const celestialsphere: Diagram = {
+  title: t("The celestial sphere", "Երկնային ոլորտը", "Небесная сфера"),
+  dark: true,
+  draw: (lang) => (
+    <g>
+      <circle cx="150" cy="110" r="90" fill="#1e293b" stroke="#64748b" />
+      <ellipse cx="150" cy="110" rx="90" ry="20" fill="#14532d" opacity="0.55" stroke="#4ade80" />
+      <ellipse cx="150" cy="110" rx="90" ry="22" fill="none" stroke="#38bdf8" strokeWidth="2" transform="rotate(-50 150 110)" />
+      <ellipse cx="150" cy="110" rx="90" ry="22" fill="none" stroke="#facc15" strokeWidth="2" strokeDasharray="5 3" transform="rotate(-27 150 110)" />
+      <line x1="81" y1="52" x2="219" y2="168" stroke="#e2e8f0" strokeWidth="1.5" />
+      <line x1="150" y1="20" x2="150" y2="110" stroke="#94a3b8" strokeDasharray="3 3" />
+      <circle cx="81" cy="52" r="4" fill="#fff" />
+      <circle cx="150" cy="20" r="3" fill="#f472b6" />
+      <circle cx="150" cy="110" r="4" fill="#fb923c" />
+      <path d="M150 110 L110 110 A40 40 0 0 1 119 84 Z" fill="#fff" opacity="0.18" />
+      <Tag x={60} y={118} color="#4ade80">{L(t("N", "Հս", "С"), lang)}</Tag>
+      <Tag x={242} y={118} color="#4ade80">{L(t("S", "Հվ", "Ю"), lang)}</Tag>
+    </g>
+  ),
+  parts: [
+    { x: 150, y: 110, name: t("Observer", "Դիտորդ", "Наблюдатель"), text: t("We see the sky as a huge sphere around us, with all stars at the same distance. It is a model: really the stars are at very different distances.", "Երկինքը տեսնում ենք որպես մեր շուրջը գտնվող հսկա գունդ, որի վրա բոլոր աստղերը նույն հեռավորության վրա են։ Սա մոդել է․ իրականում աստղերը շատ տարբեր հեռավորությունների վրա են։", "Мы видим небо как огромную сферу вокруг нас, на которой все звёзды на одном расстоянии. Это модель: на самом деле звёзды на очень разных расстояниях.") },
+    { x: 150, y: 20, name: t("Zenith", "Զենիթ", "Зенит"), text: t("The point straight overhead. The altitude of a star is its angle above the horizon, from 0° to 90° at the zenith.", "Ուղիղ գլխավերևում գտնվող կետը։ Աստղի բարձրությունը նրա անկյունն է հորիզոնից վեր՝ 0°-ից մինչև 90° զենիթում։", "Точка прямо над головой. Высота звезды — её угол над горизонтом, от 0° до 90° в зените.") },
+    { x: 81, y: 52, name: t("Celestial pole", "Աշխարհի բևեռ", "Полюс мира"), text: t("The sky turns around this point, near the Pole Star. Its altitude equals your latitude: about 40° in Yerevan.", "Երկինքը պտտվում է այս կետի շուրջ, Բևեռային աստղի մոտ։ Նրա բարձրությունը հավասար է քո աշխարհագրական լայնությանը՝ Երևանում մոտ 40°։", "Небо вращается вокруг этой точки рядом с Полярной звездой. Её высота равна твоей широте: около 40° в Ереване.") },
+    { x: 238, y: 100, name: t("Horizon", "Հորիզոն", "Горизонт"), text: t("The circle where the sky meets the ground. Half of the sphere is always below it.", "Շրջանագիծը, որտեղ երկինքը հանդիպում է գետնին։ Ոլորտի կեսը միշտ նրանից ցածր է։", "Круг, где небо встречается с землёй. Половина сферы всегда под ним.") },
+    { x: 206, y: 46, name: t("Celestial equator", "Երկնային հասարակած", "Небесный экватор"), text: t("The Earth's equator projected on the sky. Its angle to the horizon is 90° minus the latitude.", "Երկրի հասարակածի պրոյեկցիան երկնքում։ Նրա անկյունը հորիզոնի հետ 90° է՝ հանած լայնությունը։", "Земной экватор, спроецированный на небо. Его угол с горизонтом равен 90° минус широта.") },
+    { x: 84, y: 150, name: t("Ecliptic", "Խավարածիր", "Эклиптика"), text: t("The yearly path of the Sun among the stars, tilted 23.4° to the celestial equator. The zodiac constellations lie along it.", "Արեգակի տարեկան ճանապարհը աստղերի միջով՝ երկնային հասարակածի նկատմամբ 23,4° թեքությամբ։ Նրա երկայնքով են կենդանակերպի համաստեղությունները։", "Годичный путь Солнца среди звёзд, наклонённый на 23,4° к небесному экватору. Вдоль него лежат зодиакальные созвездия.") },
+  ],
+};
+
+const parallax: Diagram = {
+  title: t("Annual parallax", "Տարեկան պարալաքս", "Годичный параллакс"),
+  dark: true,
+  draw: (lang) => (
+    <g>
+      {scatter(26, 10, 6, 280, 18, 11).map((q, k) => <circle key={k} cx={q.x} cy={q.y} r="1.2" fill="#e2e8f0" />)}
+      <ellipse cx="150" cy="176" rx="76" ry="20" fill="none" stroke="#64748b" strokeDasharray="4 3" />
+      <circle cx="150" cy="176" r="9" fill="#facc15" />
+      <circle cx="74" cy="176" r="5" fill="#3b82f6" />
+      <circle cx="226" cy="176" r="5" fill="#3b82f6" />
+      <line x1="74" y1="176" x2="150" y2="70" stroke="#93c5fd" />
+      <line x1="226" y1="176" x2="150" y2="70" stroke="#93c5fd" />
+      <line x1="150" y1="176" x2="150" y2="70" stroke="#fde68a" strokeDasharray="3 3" />
+      <line x1="150" y1="176" x2="226" y2="176" stroke="#fde68a" strokeWidth="2" />
+      <circle cx="150" cy="70" r="5" fill="#fb923c" />
+      <path d="M150 88 A18 18 0 0 1 160 84" fill="none" stroke="#fff" strokeWidth="1.5" />
+      <Tag x={157} y={100} color="#fff">π</Tag>
+      <Tag x={176} y={198} color="#fde68a">{L(t("1 AU", "1 ա․մ․", "1 а. е."), lang)}</Tag>
+    </g>
+  ),
+  parts: [
+    { x: 150, y: 70, name: t("Near star", "Մոտ աստղ", "Близкая звезда"), text: t("Seen from opposite sides of the Earth's orbit, it seems to shift against the far stars. The shift is tiny: less than 1″ even for the nearest star.", "Երկրի ուղեծրի հակադիր կողմերից դիտելիս այն կարծես տեղաշարժվում է հեռավոր աստղերի նկատմամբ։ Տեղաշարժը չնչին է․ նույնիսկ ամենամոտ աստղի համար 1″-ից պակաս։", "С противоположных сторон земной орбиты она кажется смещённой относительно далёких звёзд. Смещение крошечное: меньше 1″ даже у ближайшей звезды.") },
+    { x: 157, y: 100, name: t("Parallax angle π", "Պարալաքսի անկյուն π", "Угол параллакса π"), text: t("The angle at which the radius of the Earth's orbit is seen from the star. Distance in parsecs: d = 1/π″.", "Անկյունը, որի տակ աստղից երևում է Երկրի ուղեծրի շառավիղը։ Հեռավորությունը պարսեկներով՝ d = 1/π″։", "Угол, под которым со звезды виден радиус земной орбиты. Расстояние в парсеках: d = 1/π″.") },
+    { x: 74, y: 176, name: t("Earth in one season", "Երկիրը տարվա մի եղանակին", "Земля в одно время года"), text: t("Six months later the Earth is on the other side of the Sun, 2 AU away: the longest base we have on Earth.", "Վեց ամիս անց Երկիրը Արեգակի մյուս կողմում է՝ 2 ա․մ․ հեռու․ սա մեր ունեցած ամենաերկար հիմքն է։", "Через полгода Земля по другую сторону Солнца, в 2 а. е.: самый длинный базис, который у нас есть.") },
+    { x: 206, y: 164, name: t("Base: 1 AU", "Հիմք՝ 1 ա․մ․", "Базис: 1 а. е."), text: t("The radius of the Earth's orbit, 150 million km. One parsec is the distance from which it is seen at 1″: 206 265 AU or 3.26 light-years.", "Երկրի ուղեծրի շառավիղը՝ 150 միլիոն կմ։ Մեկ պարսեկն այն հեռավորությունն է, որից այն երևում է 1″ անկյան տակ՝ 206 265 ա․մ․ կամ 3,26 լուսային տարի։", "Радиус земной орбиты, 150 млн км. Один парсек — расстояние, с которого он виден под углом 1″: 206 265 а. е., или 3,26 светового года.") },
+    { x: 150, y: 14, name: t("Distant stars", "Հեռավոր աստղեր", "Далёкие звёзды"), text: t("So far away that they hardly shift at all: the background against which the parallax is measured.", "Այնքան հեռու են, որ համարյա չեն տեղաշարժվում․ ֆոն, որի նկատմամբ չափվում է պարալաքսը։", "Так далеко, что почти не смещаются: фон, на котором измеряют параллакс.") },
+  ],
+};
+
+const stellarlife: Diagram = {
+  title: t("The lives of stars", "Աստղերի կյանքը", "Жизнь звёзд"),
+  dark: true,
+  draw: () => (
+    <g>
+      {scatter(30, 8, 86, 40, 48, 4).map((q, k) => <circle key={k} cx={q.x} cy={q.y} r={2 + (k % 3)} fill="#a78bfa" opacity="0.45" />)}
+      <path d="M50 100 L76 62 M50 120 L76 160" stroke="#64748b" strokeWidth="2" />
+      {[[100, 62], [160, 62], [222, 62], [100, 160], [160, 160], [222, 160]].map(([x, y], k) => <path key={k} d={`M${x + 16} ${y} h14`} stroke="#64748b" strokeWidth="2" />)}
+      <circle cx="90" cy="62" r="9" fill="#facc15" />
+      <circle cx="148" cy="62" r="17" fill="#f97316" />
+      <circle cx="214" cy="62" r="13" fill="none" stroke="#2dd4bf" strokeWidth="4" opacity="0.8" />
+      <circle cx="214" cy="62" r="2.5" fill="#fff" />
+      <circle cx="272" cy="62" r="3.5" fill="#f8fafc" />
+      <circle cx="90" cy="160" r="12" fill="#60a5fa" />
+      <circle cx="148" cy="160" r="22" fill="#dc2626" />
+      {Array.from({ length: 12 }, (_, k) => { const a = (k / 12) * Math.PI * 2; return <line key={k} x1={214 + 6 * Math.cos(a)} y1={160 + 6 * Math.sin(a)} x2={214 + 18 * Math.cos(a)} y2={160 + 18 * Math.sin(a)} stroke="#fde047" strokeWidth="2.5" />; })}
+      <circle cx="214" cy="160" r="5" fill="#fff" />
+      <circle cx="268" cy="152" r="3" fill="#c4b5fd" />
+      <circle cx="284" cy="172" r="7" fill="#000" stroke="#f59e0b" strokeWidth="2" />
+    </g>
+  ),
+  parts: [
+    { x: 28, y: 110, name: t("Gas cloud", "Գազային ամպ", "Газовое облако"), text: t("A cold cloud of gas and dust collapses under its own gravity; stars are born in groups.", "Գազի և փոշու սառը ամպը սեղմվում է սեփական ձգողությամբ․ աստղերը ծնվում են խմբերով։", "Холодное облако газа и пыли сжимается под действием собственного тяготения; звёзды рождаются группами.") },
+    { x: 90, y: 62, name: t("Star like the Sun", "Արեգակի նման աստղ", "Звезда вроде Солнца"), text: t("Burns hydrogen into helium for about 10 billion years.", "Մոտ 10 միլիարդ տարի ջրածինը վերածում է հելիումի։", "Около 10 миллиардов лет превращает водород в гелий.") },
+    { x: 148, y: 62, name: t("Red giant", "Կարմիր հսկա", "Красный гигант"), text: t("When the core's hydrogen runs out, the star swells 100–200 times.", "Երբ միջուկի ջրածինը սպառվում է, աստղն ուռչում է 100–200 անգամ։", "Когда водород в ядре кончается, звезда раздувается в 100–200 раз.") },
+    { x: 214, y: 62, name: t("Planetary nebula", "Մոլորակաձև միգամածություն", "Планетарная туманность"), text: t("The outer layers drift away as a glowing shell.", "Արտաքին շերտերը հեռանում են որպես լուսավոր թաղանթ։", "Внешние слои уходят светящейся оболочкой.") },
+    { x: 272, y: 62, name: t("White dwarf", "Սպիտակ թզուկ", "Белый карлик"), text: t("The bare core, the size of the Earth, slowly cooling.", "Մերկ միջուկը՝ Երկրի չափ, դանդաղ սառչում է։", "Обнажённое ядро размером с Землю, медленно остывает.") },
+    { x: 90, y: 160, name: t("Massive star", "Զանգվածեղ աստղ", "Массивная звезда"), text: t("More than about 8 solar masses: hot, blue, very bright, and lives only millions of years.", "Մոտ 8 արեգակնային զանգվածից ավելի․ տաք է, կապույտ, շատ պայծառ և ապրում է ընդամենը միլիոնավոր տարիներ։", "Больше примерно 8 масс Солнца: горячая, голубая, очень яркая и живёт лишь миллионы лет.") },
+    { x: 148, y: 160, name: t("Red supergiant", "Կարմիր գերհսկա", "Красный сверхгигант"), text: t("Burns heavier and heavier elements until its core is iron.", "Այրում է ավելի ու ավելի ծանր տարրեր, մինչև միջուկը դառնում է երկաթ։", "Сжигает всё более тяжёлые элементы, пока ядро не станет железным.") },
+    { x: 214, y: 160, name: t("Supernova", "Գերնոր", "Сверхновая"), text: t("The iron core collapses in a fraction of a second and the star explodes, scattering new elements into space.", "Երկաթե միջուկը վայրկյանի մի մասում փլուզվում է, և աստղը պայթում է՝ նոր տարրեր ցրելով տիեզերք։", "Железное ядро коллапсирует за доли секунды, и звезда взрывается, рассеивая новые элементы в космосе.") },
+    { x: 278, y: 162, name: t("Neutron star or black hole", "Նեյտրոնային աստղ կամ սև խոռոչ", "Нейтронная звезда или чёрная дыра"), text: t("A ball about 20 km across, or, if the core is heavier than about 3 solar masses, a black hole.", "Մոտ 20 կմ տրամագծով գունդ, կամ, եթե միջուկը մոտ 3 արեգակնային զանգվածից ծանր է, սև խոռոչ։", "Шар поперечником около 20 км или, если ядро тяжелее примерно 3 масс Солнца, чёрная дыра.") },
+  ],
+};
+
+export const DIAGRAMS: Record<string, Diagram> = { sun, solarsystem, galaxy, galaxytypes, thermos, eye, microscope, telescope, standardmodel, interactions, hr, smartphone, tracks, celestialsphere, parallax, stellarlife };

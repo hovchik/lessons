@@ -153,6 +153,7 @@ h1, h2, h3, h4, p, li, dt, dd, td, th {
 .subject-pink    { --s: #db2777; --s-soft: #fce7f3; --s-text: #9d174d; }
 .subject-purple  { --s: #9333ea; --s-soft: #f3e8ff; --s-text: #6b21a8; }
 .subject-zinc    { --s: #52525b; --s-soft: #f4f4f5; --s-text: #27272a; }
+.subject-night   { --s: #1e3a8a; --s-soft: #e0e7ff; --s-text: #172554; }
 .subject-sienna  { --s: #b4532a; --s-soft: #fbeadf; --s-text: #7c2d12; }
 
 /* ---- Clay surfaces ---- */

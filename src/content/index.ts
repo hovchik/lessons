@@ -20,6 +20,7 @@ import { churchHistory } from "./subjects/church-history";
 import { music } from "./subjects/music";
 import { technology } from "./subjects/technology";
 import { chess } from "./subjects/chess";
+import { astronomy } from "./subjects/astronomy";
 import { howto } from "./subjects/howto";
 import { withVisuals } from "./visuals";
 import { withQuestions } from "./questions";
@@ -48,6 +49,7 @@ export const courses: CourseSeed[] = withQuestions(withWorked(withVisuals([
   ...music,
   ...technology,
   ...chess,
+  ...astronomy,
   ...howto,
 ])));
 
