@@ -59,7 +59,7 @@ export function UserActions({ user }: { user: U }) {
         className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end"
         onSubmit={(e) => {
           e.preventDefault();
-          if (password.length < 4) return setMsg("Password must be at least 4 characters.");
+          if (password.length < 6) return setMsg("Password must be at least 6 characters.");
           patch({ password }, "Password changed.").then(() => setPassword(""));
         }}
       >

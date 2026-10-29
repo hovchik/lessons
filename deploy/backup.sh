@@ -5,12 +5,12 @@
 set -e
 mkdir -p backups
 name="lessons-$(date +%Y-%m-%d).db"
-docker compose exec -T app node -e '
+docker compose exec -T -u node app node -e '
   const { createClient } = require("@libsql/client");
   const c = createClient({ url: "file:" + process.env.DATABASE_PATH });
   c.execute({ sql: "VACUUM INTO ?", args: ["/data/backup.db"] }).then(() => console.log("ok"));
 '
 docker compose cp app:/data/backup.db "backups/$name"
-docker compose exec -T app rm -f /data/backup.db
+docker compose exec -T -u node app rm -f /data/backup.db
 find backups -name 'lessons-*.db' -mtime +14 -delete
 echo "Saved backups/$name"

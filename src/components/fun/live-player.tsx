@@ -112,7 +112,7 @@ export function LivePlayer({ initialPin }: { initialPin: string }) {
           />
           <p className="mt-1 text-xs text-muted-foreground">{t("nicknameHint")}</p>
         </div>
-        {error && <p role="alert" className="text-sm font-bold text-destructive">{t(`errors.${["nogame", "over", "full", "name", "network"].includes(error) ? error : "invalid"}`)}</p>}
+        {error && <p role="alert" className="text-sm font-bold text-destructive">{t(`errors.${["nogame", "over", "full", "name", "network", "too_many"].includes(error) ? error : "invalid"}`)}</p>}
         <Button size="lg" type="submit" className="w-full" disabled={busy || pin.length !== 6 || !name.trim()}>
           <LogIn className="size-5" aria-hidden="true" />
           {t("join")}

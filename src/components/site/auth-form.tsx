@@ -9,9 +9,9 @@ import { notifyChanged } from "@/lib/live";
 import { Button } from "@/components/ui/button";
 import { GRADES } from "@/lib/utils";
 
-const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "password_short", "name_required", "disabled", "not_configured", "generic"] as const;
+const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "password_short", "name_required", "disabled", "not_configured", "too_many", "generic"] as const;
 const USERNAME_RE = /^[a-z0-9_.-]{3,24}$/;
-const MIN_PASSWORD = 4;
+const MIN_PASSWORD = 6;
 type ErrorKey = (typeof ERROR_KEYS)[number];
 
 const inputClass = "mt-1 h-12 w-full rounded-[12px] border border-border bg-card px-3 text-base focus-visible:outline-primary";
@@ -48,8 +48,8 @@ export function AuthForm({ mode, configured }: { mode: "login" | "signup"; confi
         : { username, password };
       const res = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
       if (res.ok) {
-        // Only follow same-site relative paths.
-        const target = next && next.startsWith("/") && !next.startsWith("//") ? next : "/progress";
+        // Only follow same-site relative paths (browsers read "/\evil.com" like "//evil.com").
+        const target = next && next.startsWith("/") && !next.startsWith("//") && !next.includes("\\") ? next : "/progress";
         router.push(target);
         notifyChanged();
         return;

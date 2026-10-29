@@ -39,7 +39,7 @@ export function LoginForm({ configured }: { configured: boolean }) {
       </div>
       {!configured && (
         <p className="rounded-[var(--radius)] bg-amber-50 p-3 text-sm text-amber-900">
-          Set <code>ADMIN_PASSWORD</code> and <code>ADMIN_SESSION_SECRET</code> in <code>.env.local</code> to enable the admin panel.
+          Set <code>ADMIN_PASSWORD</code> (not the example one) and <code>ADMIN_SESSION_SECRET</code> in <code>.env.local</code> to enable the admin panel.
         </p>
       )}
       <div>
