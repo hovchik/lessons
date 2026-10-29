@@ -821,6 +821,235 @@ const pinecone: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { handwash, callhelp, beanjar, shoelaces, crossroad, butterjar, shadowstick, nosebleed, pinecone };
-// Keep unused helpers referenced until later grades use them.
-void [Adult, Tree, RED];
+/* ---------------- grade 4: building and putting out a campfire ---------------- */
+
+const Stones = () => (
+  <g>{Array.from({ length: 10 }, (_, k) => {
+    const a = (k / 10) * Math.PI * 2;
+    return <ellipse key={k} cx={160 + Math.cos(a) * 62} cy={150 + Math.sin(a) * 22} rx={13} ry={8} fill="#a8a29e" stroke="#57534e" />;
+  })}</g>
+);
+const Tinder = ({ o = 1 }: { o?: number }) => (
+  <g opacity={o}>
+    <ellipse cx={160} cy={146} rx={17} ry={10} fill="#fcd34d" stroke="#a16207" strokeWidth="1.5" />
+    {Array.from({ length: 9 }, (_, k) => <path key={k} d={`M${149 + k * 2.6},153 q${(k % 3) * 4 - 4},-10 ${(k % 2 ? 6 : -6)},-17`} stroke="#a16207" strokeWidth="2" fill="none" />)}
+  </g>
+);
+const Teepee = ({ n, big }: { n: number; big?: number }) => (
+  <g>
+    {Array.from({ length: n }, (_, k) => {
+      const dx = (k - (n - 1) / 2) * 9;
+      return <line key={k} x1={160 + dx * 2.2} y1={154} x2={160 + dx * 0.15} y2={100} stroke={k % 2 ? "#a16207" : "#854d0e"} strokeWidth="3" strokeLinecap="round" />;
+    })}
+    {big ? [-1, 1].map((s) => <line key={s} x1={160 + s * 50} y1={156} x2={160 + s * 6} y2={lerp(156, 92, big)} stroke="#78350f" strokeWidth="8" strokeLinecap="round" />) : null}
+  </g>
+);
+const Bucket = ({ x, y }: { x: number; y: number }) => (
+  <g>
+    <path d={`M${x - 16},${y - 26} h32 l-4,26 h-24 Z`} fill="#60a5fa" stroke="#1d4ed8" strokeWidth="2" />
+    <path d={`M${x - 16},${y - 26} q16,-16 32,0`} fill="none" stroke="#1d4ed8" strokeWidth="2" />
+    <ellipse cx={x} cy={y - 26} rx={16} ry={4} fill="#bae6fd" />
+  </g>
+);
+
+const campfire: Mech = {
+  title: t("A campfire, from start to finish", "Խարույկ՝ սկզբից մինչև վերջ", "Костёр от начала до конца"),
+  hint: t("Only where fires are allowed, only with an adult, and always with water ready.", "Միայն այնտեղ, որտեղ թույլատրված է, միայն մեծահասակի հետ և միշտ ջուրը պատրաստ։", "Только там, где разрешено, только со взрослым и всегда с водой наготове."),
+  caps: [
+    t("Choose a fire pit or bare ground, far from trees, tents and dry grass. Clear a circle and ring it with dry stones.", "Ընտրի՛ր խարույկի տեղ կամ մերկ հող՝ ծառերից, վրաններից և չոր խոտից հեռու։ Մաքրի՛ր շրջանը և շրջապատի՛ր չոր քարերով։", "Выбери кострище или голую землю, подальше от деревьев, палаток и сухой травы. Расчисти круг и обложи его сухими камнями."),
+    t("Put a bucket of water and a spade next to the fire before you start.", "Սկսելուց առաջ խարույկի կողքին դի՛ր մի դույլ ջուր և բահ։", "До начала поставь рядом ведро воды и положи лопату."),
+    t("Put a loose ball of tinder in the middle: dry grass, birch bark, wood shavings.", "Մեջտեղում դի՛ր փխրուն կրակավառելիքի կծիկ՝ չոր խոտ, կեչու կեղև, տաշեղ։", "Положи в середину рыхлый комок растопки: сухую траву, бересту, стружку."),
+    t("Lean pencil-thick twigs (kindling) over it like a little tent. Leave gaps for air!", "Վրան հենի՛ր մատիտի հաստությամբ ճյուղիկներ փոքրիկ վրանի պես։ Օդի համար արանքներ թող։", "Поставь над ним шалашиком прутики толщиной с карандаш. Оставь щели для воздуха!"),
+    t("The adult lights the tinder low down, on the side the wind comes from. Blow gently at the bottom.", "Մեծահասակը վառում է կրակավառելիքը ներքևից՝ այն կողմից, որտեղից քամին է փչում։ Ներքևից թեթև փչի՛ր։", "Взрослый поджигает растопку снизу, с той стороны, откуда дует ветер. Тихонько подуй снизу."),
+    t("When the twigs burn well, add thicker sticks and then logs, one by one.", "Երբ ճյուղիկները լավ վառվեն, մեկ առ մեկ ավելացրո՛ւ ավելի հաստ փայտեր, հետո՝ կոճղեր։", "Когда прутики хорошо разгорятся, по одной добавляй палки потолще, а потом поленья."),
+    t("To put it out: pour water on the fire and stir the ashes with a stick. Pour again.", "Հանգցնելու համար՝ ջուր լցրու կրակի վրա և փայտով խառնի՛ր մոխիրը։ Նորից լցրու։", "Чтобы потушить: залей костёр водой и перемешай золу палкой. Залей ещё раз."),
+    t("Hold the back of your hand above the ashes. If you feel any heat, add more water. Cold means out.", "Ձեռքիդ մեջքը պահի՛ր մոխրի վերևում։ Եթե տաքություն ես զգում, էլի ջուր լցրու։ Սառն է՝ ուրեմն հանգած է։", "Подержи тыльную сторону ладони над золой. Если чувствуешь тепло, лей ещё воду. Холодно — значит потушен."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const ground = <rect width={320} height={220} fill="#d9f99d" />;
+    const pit = <g><ellipse cx={160} cy={150} rx={62} ry={22} fill="#a8a29e" opacity={i === 0 ? k : 1} /><Stones /></g>;
+    if (i === 0) return (
+      <g>{ground}<Tree x={40} y={110} s={1.1} /><Tree x={290} y={95} /><ellipse cx={160} cy={150} rx={62 * k} ry={22 * k} fill="#a8a29e" /><g opacity={k}><Stones /></g><Tx x={160} y={30} s={t("3 m from anything that can burn", "3 մ այն ամենից, ինչ կարող է այրվել", "3 м от всего, что может гореть")} lang={lang} /></g>
+    );
+    if (i === 1) return (
+      <g>{ground}{pit}<Bucket x={260} y={lerp(120, 170, k)} /><rect x={36} y={110} width={6} height={60} fill={WOOD} transform="rotate(-20 40 140)" /><path d="M48,168 l14,0 l-3,16 l-12,0 Z" fill="#64748b" transform="rotate(-20 40 140)" /><Adult x={280} y={110} /></g>
+    );
+    if (i === 2) return (
+      <g>{ground}{pit}<Bucket x={260} y={170} /><Tinder o={k} /><Pill x={160} y={60} s={t("tinder", "կրակավառելիք", "растопка")} lang={lang} w={90} /></g>
+    );
+    if (i === 3) return (
+      <g>{ground}{pit}<Bucket x={260} y={170} /><Tinder /><Teepee n={Math.max(1, Math.round(7 * k))} /><Pill x={160} y={60} s={t("kindling", "մանրափայտ", "хворост")} lang={lang} w={90} /></g>
+    );
+    if (i === 4) return (
+      <g>{ground}{pit}<Bucket x={260} y={170} /><Tinder /><Teepee n={7} /><Flame x={160} y={152} s={lerp(4, 26, k)} p={p} /><Adult x={84} y={190} arms={[30, 70]} /><Arrow d="M20,60 h60" c="#0ea5e9" /><Tx x={50} y={50} s={t("wind", "քամի", "ветер")} lang={lang} fill="#0369a1" /></g>
+    );
+    if (i === 5) return (
+      <g>{ground}{pit}<Bucket x={260} y={170} /><Teepee n={7} big={k} /><Flame x={160} y={154} s={40} p={p} /><Flame x={148} y={154} s={26} p={p + 0.3} /><Flame x={172} y={154} s={28} p={p + 0.6} /></g>
+    );
+    if (i === 6) return (
+      <g>{ground}{pit}
+        <ellipse cx={160} cy={150} rx={46} ry={14} fill="#44403c" />
+        <g opacity={1 - k}><Flame x={160} y={152} s={30} p={p} /></g>
+        {[0, 1, 2].map((j) => <path key={j} d={`M${150 + j * 10},${130 - p * 30} q6,-10 0,-20 q-6,-10 0,-20`} stroke="#cbd5e1" strokeWidth="3" fill="none" opacity={0.6} />)}
+        <g transform={`rotate(${lerp(0, 60, k)} 230 90)`}><Bucket x={230} y={100} /></g>
+        {k > 0.3 ? <path d="M214,80 q-20,20 -40,60" stroke="#38bdf8" strokeWidth="6" fill="none" strokeLinecap="round" /> : null}
+      </g>
+    );
+    return (
+      <g>{ground}{pit}
+        <ellipse cx={160} cy={150} rx={46} ry={14} fill="#57534e" />
+        <Hand x={160} y={lerp(70, 110, k)} rot={180} back s={1.1} />
+        {[0, 1, 2].map((j) => <path key={j} d={`M${140 + j * 20},140 v-${8 + j * 2}`} stroke="#60a5fa" strokeWidth="2" strokeDasharray="2 3" />)}
+        <Pill x={260} y={60} s={t("cold = out", "սառն է = հանգած", "холодно = потушен")} lang={lang} w={110} fill="#dcfce7" stroke={GREEN} color="#15803d" />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 4: the reef knot ---------------- */
+
+const reefknot: Mech = {
+  title: t("The reef knot: right over left, left over right", "Ծովային հանգույց՝ աջը ձախի վրայով, ձախն աջի վրայով", "Прямой узел: правый на левый, левый на правый"),
+  hint: t("Practise with two ropes of different colours, or a red and a blue shoelace.", "Վարժվի՛ր տարբեր գույնի երկու պարանով կամ կարմիր և կապույտ կոշիկի կապերով։", "Тренируйся на двух верёвках разного цвета или на красном и синем шнурке."),
+  caps: [
+    t("Hold the red end in your right hand and the blue end in your left.", "Կարմիր ծայրը բռնի՛ր աջ ձեռքում, կապույտը՝ ձախում։", "Возьми красный конец в правую руку, а синий — в левую."),
+    t("Right over left: lay red over blue, then tuck it under and up.", "Աջը ձախի վրայով․ կարմիրը դի՛ր կապույտի վրա, հետո անցկացրո՛ւ տակով և վեր։", "Правый на левый: положи красный поверх синего, потом проведи под ним и вверх."),
+    t("Pull a little. This first twist is a half knot. Now red is on the left.", "Մի քիչ քաշի՛ր։ Այս առաջին ոլորքը կիսահանգույց է։ Հիմա կարմիրը ձախ կողմում է։", "Немного затяни. Этот первый перехлёст — полуузел. Теперь красный слева."),
+    t("Left over right: lay red (now on the left) over blue, tuck it under and through.", "Ձախն աջի վրայով․ կարմիրը (հիմա ձախում է) դի՛ր կապույտի վրա, անցկացրո՛ւ տակով և միջով։", "Левый на правый: положи красный (теперь он слева) поверх синего, проведи под ним и сквозь петлю."),
+    t("Pull both sides tight. The knot is flat and neat.", "Ամուր քաշի՛ր երկու կողմերը։ Հանգույցը հարթ է և կոկիկ։", "Затяни обе стороны. Узел плоский и аккуратный."),
+    t("Check: each colour comes out on the same side as it went in, both ends lying side by side. If not, it's a granny knot: retie it.", "Ստուգի՛ր․ ամեն գույն դուրս է գալիս նույն կողմից, որտեղից մտել է, և ծայրերը կողք կողքի են։ Եթե ոչ, դա սխալ հանգույց է․ նորից կապի՛ր։", "Проверь: каждый цвет выходит с той же стороны, где вошёл, и концы лежат рядом. Если нет — это бабий узел: перевяжи."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const R = "#e11d48", B = "#2563eb";
+    const rope = (d: string, c: string, w = 9) => (
+      <g>
+        <path d={d} stroke="#0f172a" strokeWidth={w + 2.5} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.25" />
+        <path d={d} stroke={c} strokeWidth={w} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+    );
+    if (i === 0) return (
+      <g>
+        {rope("M20,120 C80,120 110,120 130,110", B)}
+        {rope("M300,120 C240,120 210,120 190,110", R)}
+        <Hand x={140} y={120} rot={-80} s={0.9} flip /><Hand x={180} y={120} rot={80} s={0.9} />
+        <Tx x={70} y={160} s={t("left hand", "ձախ ձեռք", "левая рука")} lang={lang} fill={B} />
+        <Tx x={250} y={160} s={t("right hand", "աջ ձեռք", "правая рука")} lang={lang} fill={R} />
+      </g>
+    );
+    if (i === 1 || i === 2) {
+      const pull = i === 2 ? k : 0;
+      return (
+        <g>
+          {rope(`M20,${120 + pull * 10} C80,120 120,${120 - 10 * (1 - pull)} 150,112 C170,104 175,128 160,134 C150,138 ${150 - pull * 20},${150 + pull * 10} ${200 + pull * 60},${170 + pull * 10}`, B)}
+          {rope(`M300,${120 + pull * 10} C240,120 200,${110 - 10 * (1 - pull)} 170,108 C150,${lerp(100, 104, i === 1 ? k : 1)} 140,${lerp(116, 122, i === 1 ? k : 1)} 158,126 C170,134 ${150 - pull * 30},${80 - pull * 10} ${120 - pull * 60},${60 - pull * 10}`, R)}
+          {i === 1 ? <Arrow d="M200,70 C170,60 150,90 152,118" c={R} /> : <Tx x={160} y={200} s={t("half knot", "կիսահանգույց", "полуузел")} lang={lang} size={11} />}
+        </g>
+      );
+    }
+    // Steps 4-6: two interlocked U loops. Blue opens to the left, red opens to the right.
+    const tight = i === 3 ? 0 : i === 4 ? k : 1;
+    const bt = lerp(90, 112, tight), bb = lerp(170, 150, tight);
+    const rt = lerp(108, 121, tight), rb = lerp(152, 141, tight);
+    const bc = lerp(205, 180, tight);
+    const rc = i === 3 ? lerp(275, 115, k) : lerp(115, 140, tight);
+    const blue = `M20,${bt} L${bc - 22},${bt} C${bc + 14},${bt} ${bc + 14},${bb} ${bc - 22},${bb} L20,${bb}`;
+    const red = `M300,${rt} L${rc + 18},${rt} C${rc - 12},${rt} ${rc - 12},${rb} ${rc + 18},${rb} L300,${rb}`;
+    return (
+      <g>
+        <defs>
+          <clipPath id="reef-low"><rect x={0} y={(rt + rb) / 2} width={320} height={120} /></clipPath>
+        </defs>
+        {rope(blue, B)}
+        {rope(red, R)}
+        <g clipPath="url(#reef-low)">{rope(`M${bc - 22},${bt} C${bc + 14},${bt} ${bc + 14},${bb} ${bc - 22},${bb}`, B)}</g>
+        {i === 3 ? <Arrow d="M285,70 C230,50 170,60 140,100" c={R} /> : null}
+        {i === 4 ? <g><Arrow d="M100,60 h-60" c="#7c3aed" /><Arrow d="M220,60 h60" c="#7c3aed" /></g> : null}
+        {i === 5 ? (
+          <g>
+            <Mark x={160} y={50} ok r={13} />
+            <Tx x={60} y={195} s={t("both blue ends|on one side", "կապույտ ծայրերը|մի կողմում", "оба синих конца|с одной стороны")} lang={lang} size={8.5} fill={B} />
+            <Tx x={260} y={195} s={t("both red ends|on one side", "կարմիր ծայրերը|մի կողմում", "оба красных конца|с одной стороны")} lang={lang} size={8.5} fill={R} />
+          </g>
+        ) : null}
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 4: a needle compass ---------------- */
+
+const Needle = ({ x, y, a, magnet }: { x: number; y: number; a: number; magnet?: boolean }) => (
+  <g transform={`translate(${x},${y}) rotate(${a})`}>
+    <line x1={-46} y1={0} x2={46} y2={0} stroke="#94a3b8" strokeWidth="3" strokeLinecap="round" />
+    {magnet ? <path d="M30,0 L46,0" stroke={RED} strokeWidth="3.5" strokeLinecap="round" /> : null}
+    <ellipse cx={-42} cy={0} rx={4} ry={1.6} fill="none" stroke="#64748b" strokeWidth="1.2" />
+  </g>
+);
+
+const needlecompass: Mech = {
+  title: t("A compass from a needle", "Կողմնացույց ասեղից", "Компас из иголки"),
+  hint: t("A sewing needle, a fridge magnet or any small magnet, a slice of cork or a leaf, a bowl of water.", "Կարի ասեղ, սառնարանի մագնիս կամ ցանկացած փոքր մագնիս, խցանի շերտ կամ տերև, ջրով աման։", "Швейная иголка, магнит с холодильника или любой маленький магнит, кружок пробки или листик, миска с водой."),
+  caps: [
+    t("Stroke the needle with one end of the magnet, always in the same direction, 30–50 times. Lift the magnet away between strokes.", "Ասեղը շոյի՛ր մագնիսի մի ծայրով՝ միշտ նույն ուղղությամբ, 30–50 անգամ։ Շոյելուց հետո ամեն անգամ մագնիսը վեր բարձրացրու։", "Проведи по иголке одним концом магнита, всегда в одну сторону, 30–50 раз. Между движениями поднимай магнит."),
+    t("Now the needle is a tiny magnet itself.", "Հիմա ասեղն ինքն է փոքրիկ մագնիս։", "Теперь иголка сама стала маленьким магнитом."),
+    t("Lay the needle on a slice of cork or a flat leaf.", "Ասեղը դի՛ր խցանի շերտի կամ հարթ տերևի վրա։", "Положи иголку на кружок пробки или плоский листик."),
+    t("Float it in the middle of a bowl of still water, away from metal and phones.", "Լողացրո՛ւ այն ջրով ամանի մեջտեղում՝ մետաղից և հեռախոսներից հեռու։", "Пусти его плавать в середине миски со спокойной водой, подальше от металла и телефонов."),
+    t("Wait. The needle slowly turns until it points north and south.", "Սպասի՛ր։ Ասեղը դանդաղ պտտվում է, մինչև ցույց տա հյուսիսն ու հարավը։", "Подожди. Иголка медленно поворачивается, пока не покажет на север и юг."),
+    t("Which end is north? Check with the Sun: at midday it is in the south.", "Ո՞ր ծայրն է հյուսիսը։ Ստուգի՛ր Արևով․ կեսօրին այն հարավում է։", "Какой конец смотрит на север? Проверь по Солнцу: в полдень оно на юге."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 0) {
+      const mx = lerp(110, 210, p);
+      return (
+        <g>
+          <Needle x={160} y={130} a={0} />
+          <g transform={`translate(${mx},${108 - Math.sin(p * Math.PI) * 6})`}>
+            <rect x={-18} y={-26} width={36} height={22} rx={4} fill={RED} />
+            <rect x={-18} y={-4} width={36} height={8} fill="#cbd5e1" />
+            <text x={0} y={-10} textAnchor="middle" fontSize="11" fontWeight="900" fill="#fff">N</text>
+          </g>
+          <Arrow d="M110,170 h100" c="#7c3aed" />
+          <text x={160} y={200} textAnchor="middle" fontSize="13" fontWeight="900" fill="#475569">× 30–50</text>
+        </g>
+      );
+    }
+    if (i === 1) return (
+      <g>
+        <Needle x={160} y={110} a={0} magnet />
+        {[-1, 1].map((s) => [0, 1, 2].map((r) => <path key={`${s}${r}`} d={`M${160 + s * 46},110 C${160 + s * (60 + r * 14)},${80 - r * 10} ${160 - s * (60 + r * 14)},${80 - r * 10} ${160 - s * 46},110`} stroke="#a78bfa" strokeWidth="1.5" fill="none" strokeDasharray="4 4" opacity={0.4 + 0.6 * k} />))}
+        <Tx x={160} y={180} s={t("a tiny magnet", "փոքրիկ մագնիս", "маленький магнит")} lang={lang} size={11} />
+      </g>
+    );
+    const bowl = <g><ellipse cx={160} cy={130} rx={110} ry={60} fill="#e2e8f0" stroke="#64748b" strokeWidth="3" /><ellipse cx={160} cy={130} rx={98} ry={50} fill="#bae6fd" /></g>;
+    if (i === 2) return (
+      <g>
+        <ellipse cx={160} cy={130} rx={30} ry={12} fill="#d6a76c" stroke="#92400e" />
+        <Needle x={160} y={lerp(80, 126, k)} a={0} magnet />
+      </g>
+    );
+    const ang = i === 3 ? 50 : i === 4 ? lerp(50, -90, k) : -90;
+    return (
+      <g>
+        {bowl}
+        <g transform={`translate(0,${i === 3 ? (1 - k) * -40 : 0})`}>
+          <ellipse cx={160} cy={128} rx={30} ry={12} fill="#d6a76c" stroke="#92400e" />
+          <Needle x={160} y={126} a={ang} magnet />
+        </g>
+        {i >= 4 ? (
+          <g>
+            <Tx x={160} y={30} s={t("N", "Հս", "С")} lang={lang} size={14} fill={RED} w={900} />
+            <Tx x={160} y={212} s={t("S", "Հվ", "Ю")} lang={lang} size={14} fill="#334155" w={900} />
+          </g>
+        ) : null}
+        {i === 5 ? <g><Sun x={290} y={200} r={10} p={p} /><Tx x={268} y={170} s={t("Sun at|midday", "Արևը|կեսօրին", "Солнце|в полдень")} lang={lang} size={8} /></g> : null}
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = {
+  handwash, callhelp, beanjar, shoelaces, crossroad, butterjar, shadowstick, nosebleed, pinecone, campfire, reefknot, needlecompass,
+};

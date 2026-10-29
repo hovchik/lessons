@@ -19,4 +19,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "find-north": { emoji: "🧭", safety: "care" },
   "cuts-and-nosebleeds": { emoji: "🩹", safety: "ask" },
   "pine-cone-feeder": { emoji: "🐦", safety: "ask" },
+  // grade 4
+  "campfire": { emoji: "🔥", safety: "adult" },
+  "useful-knots": { emoji: "🪢", safety: "care" },
+  "needle-compass": { emoji: "🧲", safety: "ask" },
 };
