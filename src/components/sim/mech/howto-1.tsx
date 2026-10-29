@@ -555,7 +555,7 @@ const butterjar: Mech = {
       <g>
         <BigJar><path d="M121,96 q10,-10 20,0 q10,-12 20,0 q10,-10 20,0 q10,-8 18,0 V184 H121 Z" fill="#fff" stroke="#e2e8f0" /></BigJar>
         <Tx x={160} y={30} s={t("whipped cream", "հարած սերուցք", "взбитые сливки")} lang={lang} size={11} />
-        <text x={250} y={130} fontSize="22" fontWeight="900" fill="#94a3b8">5'</text>
+        <text x={250} y={130} fontSize="22" fontWeight="900" fill="#94a3b8">5′</text>
       </g>
     );
     if (i === 3) return (
@@ -704,7 +704,7 @@ const nosebleed: Mech = {
           {chair}<Face x={130} y={70} lean={25} pinch />
           <circle cx={255} cy={80} r={34} fill="#fff" stroke="#94a3b8" strokeWidth="4" />
           <path d={`M255,46 A34,34 0 ${a > Math.PI ? 1 : 0} 1 ${255 + Math.sin(a) * 34},${80 - Math.cos(a) * 34} L255,80 Z`} fill="#bbf7d0" />
-          <text x={255} y={86} textAnchor="middle" fontSize="16" fontWeight="900" fill={INK}>{Math.round(k * 10)}'</text>
+          <text x={255} y={86} textAnchor="middle" fontSize="16" fontWeight="900" fill={INK}>{Math.round(k * 10)}′</text>
         </g>
       );
     }

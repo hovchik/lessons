@@ -445,7 +445,7 @@ const speech: Mech = {
       </g>
     );
     if (i === 3) {
-      const ph = Math.floor(p * 3);
+      const ph = Math.min(2, Math.floor(p * 3));
       const r = ph === 0 ? lerp(18, 34, (p * 3) % 1) : ph === 1 ? 34 : lerp(34, 18, (p * 3) % 1);
       return (
         <g>{stage}
@@ -456,7 +456,7 @@ const speech: Mech = {
       );
     }
     if (i === 4) {
-      const look = Math.floor(p * 3);
+      const look = Math.min(2, Math.floor(p * 3));
       return (
         <g>{stage}
           <Kid x={160} y={120} s={1.3} arms={[20, 60]} />
