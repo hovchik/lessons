@@ -1,7 +1,7 @@
 import type { I18nText } from "../types";
 import type { RelevanceMap } from "./types";
 import { algebraRelevance, geometryRelevance, mathRelevance } from "./math";
-import { drawingRelevance, physicsRelevance } from "./science";
+import { astronomyRelevance, drawingRelevance, physicsRelevance } from "./science";
 import { armenianRelevance, englishRelevance, russianRelevance } from "./languages";
 import { biologyRelevance, chemistryRelevance, geographyRelevance, informaticsRelevance, scienceRelevance } from "./natural";
 import {
@@ -36,6 +36,7 @@ export const RELEVANCE: Record<string, RelevanceMap> = {
   music: musicRelevance,
   technology: technologyRelevance,
   chess: chessRelevance,
+  astronomy: astronomyRelevance,
 };
 
 /** The "why learn this" line for a unit (position is 1-based), if there is one. */

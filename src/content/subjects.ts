@@ -241,4 +241,16 @@ export const subjects: SubjectSeed[] = [
     icon: "Crown",
     sortOrder: 20,
   },
+  {
+    id: "astronomy",
+    name: t("Astronomy", "Աստղագիտություն", "Астрономия"),
+    description: t(
+      "The sky and its motions, the Solar system, the Sun and stars, galaxies and the Universe for grades 11–12, following the Russian astronomy course and the astronomy chapters of Armenian physics.",
+      "Երկինքը և նրա շարժումները, Արեգակնային համակարգը, Արեգակն ու աստղերը, գալակտիկաները և Տիեզերքը 11–12-րդ դասարանների համար՝ ռուսական աստղագիտության դասընթացով և հայկական ֆիզիկայի աստղագիտական գլուխներով։",
+      "Небо и его движения, Солнечная система, Солнце и звёзды, галактики и Вселенная для 11–12 классов по российскому курсу астрономии и астрономическим главам армянской физики.",
+    ),
+    color: "night",
+    icon: "Telescope",
+    sortOrder: 21,
+  },
 ];

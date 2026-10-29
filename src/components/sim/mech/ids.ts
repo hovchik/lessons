@@ -29,7 +29,7 @@ export function mechGroup(id: string): MechGroup | null {
 
 /** Which file holds each labelled diagram. */
 export const DIAGRAM_GROUPS = {
-  phys: ["sun", "solarsystem", "galaxy", "galaxytypes", "thermos", "eye", "microscope", "telescope", "standardmodel", "interactions", "hr", "smartphone", "tracks"],
+  phys: ["sun", "solarsystem", "galaxy", "galaxytypes", "thermos", "eye", "microscope", "telescope", "standardmodel", "interactions", "hr", "smartphone", "tracks", "celestialsphere", "parallax", "stellarlife"],
   chem: ["lab", "burner", "oilcolumn", "hazards"],
   bio: [
     "plantcell", "animalcell", "bacterium", "virus", "amoeba", "root", "stem", "leaf", "flower", "seed", "mushroom", "insect", "fish",
