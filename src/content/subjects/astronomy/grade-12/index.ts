@@ -1,6 +1,8 @@
 import { t, type CourseSeed } from "../../../types";
 import { unit1 } from "./unit-1";
 import { unit2 } from "./unit-2";
+import { unit3 } from "./unit-3";
+import { unit4 } from "./unit-4";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -29,5 +31,5 @@ export const astronomyGrade12: CourseSeed = {
     ],
   ),
   hoursPerWeek: { armenia: null, russia: 1 },
-  units: [unit1, unit2],
+  units: [unit1, unit2, unit3, unit4],
 };
