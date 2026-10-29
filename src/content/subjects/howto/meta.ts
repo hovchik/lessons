@@ -27,4 +27,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "river-water": { emoji: "💧", safety: "adult" },
   "map-and-compass": { emoji: "🗺️", safety: "care" },
   "if-you-get-lost": { emoji: "🌲", safety: "care" },
+  // grade 6
+  "earthquake-safety": { emoji: "🏠", safety: "care" },
+  "burn-first-aid": { emoji: "🚿", safety: "ask" },
+  "lean-to-shelter": { emoji: "⛺", safety: "ask" },
 };
