@@ -51,4 +51,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "stay-safe-online": { emoji: "🎣", safety: null },
   "cv-and-interview": { emoji: "💼", safety: null },
   "dress-for-the-cold": { emoji: "🧣", safety: "care" },
+  // grade 12
+  "compound-interest": { emoji: "📈", safety: null },
+  "change-a-tyre": { emoji: "🚗", safety: "adult" },
+  "stop-bleeding": { emoji: "🩸", safety: "care" },
 };

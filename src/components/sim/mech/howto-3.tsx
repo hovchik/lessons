@@ -586,7 +586,7 @@ const Mail = ({ lang, from, hi }: { lang: "en" | "hy" | "ru"; from?: number; hi?
 
 const phishing: Mech = {
   title: t("Is this message real?", "Այս հաղորդագրությունն իրակա՞ն է", "Это сообщение настоящее?"),
-  hint: t("A real bank will never ask for your PIN, password or a code from an SMS. Never.", "Իսկական բանկը երբեք չի խնդրի PIN, գաղտնաբառ կամ SMS-ով եկած կոդ։ Երբեք։", "Настоящий банк никогда не попросит PIN, пароль или код из СМС. Никогда."),
+  hint: t("A real bank will never ask for your PIN, password or a code from an SMS. Never.", "Իսկական բանկն երբեք չի խնդրի PIN, գաղտնաբառ կամ SMS-ով եկած կոդ։ Երբեք։", "Настоящий банк никогда не попросит PIN, пароль или код из СМС. Никогда."),
   caps: [
     t("A message arrives. It looks like it's from a bank, an online shop or your school.", "Հաղորդագրություն է գալիս։ Թվում է, թե բանկից է, առցանց խանութից կամ դպրոցից։", "Приходит сообщение. Похоже, что от банка, интернет-магазина или школы."),
     t("Check the sender. Look letter by letter: \"bank-arm.co\" is not the bank's real address.", "Ստուգի՛ր ուղարկողին։ Նայի՛ր տառ առ տառ․ «bank-arm.co»-ն բանկի իրական հասցեն չէ։", "Проверь отправителя. Смотри буква за буквой: «bank-arm.co» — не настоящий адрес банка."),
@@ -720,13 +720,13 @@ const interview: Mech = {
 
 const layers: Mech = {
   title: t("Stay warm: layers and hypothermia", "Մնալ տաք․ շերտեր և գերսառեցում", "Как не замёрзнуть: слои и переохлаждение"),
-  hint: t("Several thin layers trap more warm air than one thick coat, and you can take one off before you sweat.", "Մի քանի բարակ շերտը ավելի շատ տաք օդ է պահում, քան մեկ հաստ վերարկուն, և կարող ես մեկը հանել, նախքան քրտնելը։", "Несколько тонких слоёв удерживают больше тёплого воздуха, чем одна толстая куртка, и один можно снять, пока не вспотел."),
+  hint: t("Several thin layers trap more warm air than one thick coat, and you can take one off before you sweat.", "Մի քանի բարակ շերտն ավելի շատ տաք օդ է պահում, քան մեկ հաստ վերարկուն, և կարող ես մեկը հանել, նախքան քրտնելը։", "Несколько тонких слоёв удерживают больше тёплого воздуха, чем одна толстая куртка, и один можно снять, пока не вспотел."),
   caps: [
     t("Base layer, next to the skin: wool or synthetic, which move sweat away. Not cotton: wet cotton stays cold.", "Հիմնական շերտ՝ մաշկին մոտ․ բուրդ կամ սինթետիկա, որոնք քրտինքը հեռացնում են։ Ոչ բամբակ․ թաց բամբակը մնում է սառը։", "Базовый слой, к телу: шерсть или синтетика, которые отводят пот. Не хлопок: мокрый хлопок остаётся холодным."),
     t("Middle layer: a fleece or wool jumper that traps warm air.", "Միջին շերտ՝ ֆլիս կամ բրդյա սվիտեր, որը պահում է տաք օդը։", "Средний слой: флиска или шерстяной свитер, удерживающие тёплый воздух."),
     t("Outer layer: a jacket that stops wind and rain. Add a hat, gloves and warm socks: you lose a lot of heat from your head and hands.", "Արտաքին շերտ՝ քամուց և անձրևից պաշտպանող բաճկոն։ Ավելացրո՛ւ գլխարկ, ձեռնոցներ և տաք գուլպաներ․ գլխից և ձեռքերից շատ ջերմություն ես կորցնում։", "Внешний слой: куртка от ветра и дождя. Добавь шапку, перчатки и тёплые носки: через голову и руки уходит много тепла."),
     t("Watch for hypothermia: shivering, then the \"umbles\": stumbling, mumbling, fumbling and grumbling.", "Հետևի՛ր գերսառեցման նշաններին․ դող, հետո՝ սայթաքում, անհասկանալի խոսք, անճարակ ձեռքեր և դյուրագրգռություն։", "Следи за признаками переохлаждения: дрожь, потом спотыкание, невнятная речь, неловкие руки и раздражительность."),
-    t("Help: get them out of the wind, swap wet clothes for dry, wrap them up, put something under them, and give a warm sweet drink if they are fully awake.", "Օգնի՛ր․ հեռացրու քամուց, թաց հագուստը փոխի՛ր չորով, փաթաթի՛ր, տակը ինչ-որ բան դիր և տաք քաղցր ըմպելիք տուր, եթե լիովին արթուն է։", "Помоги: укрой от ветра, смени мокрую одежду на сухую, укутай, подложи что-нибудь снизу и дай тёплое сладкое питьё, если человек в полном сознании."),
+    t("Help: get them out of the wind, swap wet clothes for dry, wrap them up, put something under them, and give a warm sweet drink if they are fully awake.", "Օգնի՛ր․ հեռացրու քամուց, թաց հագուստը փոխի՛ր չորով, փաթաթի՛ր, տակն ինչ-որ բան դիր և տաք քաղցր ըմպելիք տուր, եթե լիովին արթուն է։", "Помоги: укрой от ветра, смени мокрую одежду на сухую, укутай, подложи что-нибудь снизу и дай тёплое сладкое питьё, если человек в полном сознании."),
     t("Call 112 if they are confused, very sleepy or stop shivering while still cold. Handle them gently.", "Զանգի՛ր 112, եթե շփոթված է, շատ քնկոտ կամ դադարում է դողալ, բայց դեռ սառն է։ Զգույշ վարվի՛ր նրա հետ։", "Звони 112, если человек растерян, очень сонный или перестал дрожать, оставаясь холодным. Обращайся с ним бережно."),
   ],
   draw: (i, p, lang) => {
@@ -784,6 +784,307 @@ const layers: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { puncture, factcheck, bread, purify, speech, budget, phishing, interview, layers };
+/* ---------------- grade 12: compound interest ---------------- */
+
+const fmt = (n: number) => Math.round(n).toLocaleString("en").replace(/,/g, " ");
+
+const Bar = ({ x, base, h, top = 0, c = "#16a34a", label, val, lang }: { x: number; base: number; h: number; top?: number; c?: string; label?: ReturnType<typeof t>; val?: string; lang: "en" | "hy" | "ru" }) => (
+  <g>
+    <rect x={x - 18} y={base - h} width={36} height={h} rx={4} fill={c} />
+    {top > 0 ? <rect x={x - 18} y={base - h} width={36} height={top} rx={4} fill="#fbbf24" /> : null}
+    {val ? <text x={x} y={base - h - 6} textAnchor="middle" fontSize="9" fontWeight="800" fill={INK}>{val}</text> : null}
+    {label ? <Tx x={x} y={base + 14} s={label} lang={lang} size={8.5} /> : null}
+  </g>
+);
+
+const compound: Mech = {
+  title: t("How money grows on its own", "Ինչպես է գումարն ինքն իրեն աճում", "Как деньги растут сами"),
+  hint: t("Compound interest means you earn interest on your interest. Time does most of the work, so starting early matters more than starting big.", "Բարդ տոկոսը նշանակում է, որ տոկոս ես ստանում նաև տոկոսիցդ։ Աշխատանքի մեծ մասը ժամանակն է անում, ուստի շուտ սկսելն ավելի կարևոր է, քան մեծ գումարով սկսելը։", "Сложный процент — это когда проценты начисляются и на проценты. Основную работу делает время, поэтому начать рано важнее, чем начать с большой суммы."),
+  caps: [
+    t("You put 100,000 dram in a savings account that pays 10% a year.", "100 000 դրամ ես դնում խնայողական հաշվին, որը տարեկան 10% է վճարում։", "Ты кладёшь 100 000 драмов на сберегательный счёт под 10% годовых."),
+    t("After one year the bank adds 10% of 100,000: that's 10,000 dram of interest. Now you have 110,000.", "Մեկ տարի անց բանկն ավելացնում է 100 000-ի 10%-ը՝ 10 000 դրամ տոկոս։ Հիմա ունես 110 000։", "Через год банк добавляет 10% от 100 000 — это 10 000 драмов процентов. Теперь у тебя 110 000."),
+    t("In year two you earn 10% of 110,000: 11,000. The extra 1,000 is interest on your interest. That's compounding.", "Երկրորդ տարում ստանում ես 110 000-ի 10%-ը՝ 11 000։ Լրացուցիչ 1000-ը տոկոսի տոկոսն է։ Սա է բարդ տոկոսը։", "Во второй год ты получаешь 10% от 110 000 — 11 000. Дополнительная 1000 — это проценты на проценты. Это и есть сложный процент."),
+    t("Over 20 years the gap becomes huge: about 300,000 with simple interest, but about 673,000 with compound interest.", "20 տարում տարբերությունը հսկայական է դառնում․ պարզ տոկոսով մոտ 300 000, իսկ բարդ տոկոսով՝ մոտ 673 000։", "За 20 лет разница становится огромной: около 300 000 при простых процентах и около 673 000 при сложных."),
+    t("A quick trick, the rule of 72: divide 72 by the rate to find how many years it takes to double. 72 ÷ 10 ≈ 7 years.", "Արագ հնարք՝ 72-ի կանոնը․ 72-ը բաժանի՛ր տոկոսադրույքի վրա, և կիմանաս, թե քանի տարում գումարը կկրկնապատկվի։ 72 ÷ 10 ≈ 7 տարի։", "Быстрый приём — правило 72: раздели 72 на ставку и узнаешь, за сколько лет сумма удвоится. 72 ÷ 10 ≈ 7 лет."),
+    t("It works against you too. A 100,000 credit card debt at 24% a year grows to about 191,000 in 3 years if you don't pay.", "Այն աշխատում է նաև քո դեմ։ Տարեկան 24%-ով 100 000 դրամ վարկային քարտի պարտքը 3 տարում մոտ 191 000 է դառնում, եթե չվճարես։", "Это работает и против тебя. Долг 100 000 по кредитной карте под 24% годовых через 3 года без выплат вырастает примерно до 191 000."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <rect width={320} height={220} fill="#f0fdf4" />;
+    const yr = (n: number) => t(n ? `year ${n}` : "start", n ? `${n}-${n === 1 ? "ին" : "րդ"} տարի` : "սկիզբ", n ? `${n}-й год` : "старт");
+    if (i === 0) return (
+      <g>{bg}
+        <g transform="translate(70,40)">
+          <path d="M0,40 L60,10 L120,40 Z" fill="#94a3b8" />
+          <rect x={6} y={40} width={108} height={8} fill="#64748b" />
+          {[18, 46, 74, 102].map((x) => <rect key={x} x={x - 5} y={50} width={10} height={60} fill="#cbd5e1" />)}
+          <rect x={0} y={110} width={120} height={10} fill="#64748b" />
+          <text x={60} y={34} textAnchor="middle" fontSize="13" fontWeight="900" fill="#fff">֏</text>
+        </g>
+        {Array.from({ length: 5 }, (_, j) => <Coin key={j} x={250} y={lerp(40, 170 - j * 8, Math.min(1, k * 1.6 - j * 0.12))} r={14} />)}
+        <Pill x={130} y={190} s={t("100 000 ֏ · 10% a year", "100 000 ֏ · տարեկան 10%", "100 000 ֏ · 10% в год")} lang={lang} w={170} fill="#dcfce7" stroke={GREEN} color="#166534" />
+      </g>
+    );
+    if (i === 1 || i === 2) {
+      const vals = [100000, 110000, 121000];
+      const sc = 0.0011;
+      const n = i + 1;
+      return (
+        <g>{bg}
+          <line x1={30} y1={180} x2={290} y2={180} stroke="#94a3b8" />
+          {vals.slice(0, n).map((v, j) => {
+            const grow = j === n - 1 ? k : 1;
+            const h = (j ? vals[j - 1] : v) * sc + (j ? (v - vals[j - 1]) * sc * grow : 0);
+            return <Bar key={j} x={80 + j * 80} base={180} h={h} top={j ? (v - vals[j - 1]) * sc * grow : 0} label={yr(j)} val={grow > 0.95 ? fmt(v) : undefined} lang={lang} />;
+          })}
+          <Pill x={i === 1 ? 240 : 160} y={30} s={i === 1 ? t("+10 000 interest", "+10 000 տոկոս", "+10 000 проценты") : t("+11 000: interest on interest!", "+11 000․ տոկոսի տոկոս", "+11 000: проценты на проценты!")} lang={lang} w={i === 1 ? 120 : 190} fill="#fef3c7" stroke="#d97706" color="#92400e" />
+        </g>
+      );
+    }
+    if (i === 3) {
+      const X = (y: number) => 40 + y * 12.5;
+      const Y = (v: number) => 180 - v * 0.00022;
+      const end = Math.max(1, Math.round(k * 20));
+      const simple = Array.from({ length: end + 1 }, (_, y) => `${X(y)},${Y(100000 + 10000 * y)}`).join(" ");
+      const comp = Array.from({ length: end + 1 }, (_, y) => `${X(y)},${Y(100000 * 1.1 ** y)}`).join(" ");
+      return (
+        <g>{bg}
+          <line x1={40} y1={180} x2={295} y2={180} stroke="#94a3b8" /><line x1={40} y1={180} x2={40} y2={20} stroke="#94a3b8" />
+          <polyline points={simple} fill="none" stroke="#94a3b8" strokeWidth="3" />
+          <polyline points={comp} fill="none" stroke={GREEN} strokeWidth="3.5" />
+          {k > 0.95 ? (
+            <g>
+              <Pill x={255} y={Y(300000) + 16} s={t("simple: 300 000", "պարզ՝ 300 000", "простой: 300 000")} lang={lang} w={110} />
+              <Pill x={225} y={Y(672750) - 4} s={t("compound: 672 750", "բարդ՝ 672 750", "сложный: 672 750")} lang={lang} w={120} fill="#dcfce7" stroke={GREEN} color="#166534" />
+            </g>
+          ) : null}
+          <Tx x={X(10)} y={200} s={t("years 0 → 20", "տարիներ 0 → 20", "годы 0 → 20")} lang={lang} size={8.5} />
+        </g>
+      );
+    }
+    if (i === 4) return (
+      <g>{bg}
+        <text x={160} y={70} textAnchor="middle" fontSize="30" fontWeight="900" fill="#166534">72 ÷ 10 ≈ 7</text>
+        <Tx x={160} y={96} s={t("years to double", "տարի՝ կրկնապատկվելու համար", "лет до удвоения")} lang={lang} size={11} />
+        <g>{[0, 1, 2].map((j) => <Coin key={j} x={70} y={170 - j * 10} r={16} />)}<Tx x={70} y={200} s={t("100 000", "100 000", "100 000")} lang={lang} size={9} /></g>
+        <Arrow d="M110,160 L200,160" c={GREEN} />
+        <g opacity={k}>{[0, 1, 2, 3, 4, 5].map((j) => <Coin key={j} x={j < 3 ? 236 : 270} y={170 - (j % 3) * 10} r={16} />)}<Tx x={253} y={200} s={t("200 000", "200 000", "200 000")} lang={lang} size={9} /></g>
+      </g>
+    );
+    const debt = [100000, 124000, 153760, 190662];
+    return (
+      <g><rect width={320} height={220} fill="#fef2f2" />
+        <line x1={30} y1={180} x2={290} y2={180} stroke="#94a3b8" />
+        {debt.map((v, j) => {
+          const grow = Math.max(0, Math.min(1, k * 4 - j));
+          return <g key={j} opacity={grow > 0 ? 1 : 0.15}><Bar x={70 + j * 62} base={180} h={v * 0.00072 * (0.3 + 0.7 * grow)} c={RED} label={yr(j)} val={grow > 0.95 ? fmt(v) : undefined} lang={lang} /></g>;
+        })}
+        <Pill x={110} y={30} s={t("debt at 24% a year", "պարտք՝ տարեկան 24%", "долг под 24% годовых")} lang={lang} w={150} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 12: changing a car tyre ---------------- */
+
+const CarSide = ({ lift = 0, flat = true }: { lift?: number; flat?: boolean }) => (
+  <g>
+    <g transform={`translate(0,${-lift})`}>
+      <path d="M30,140 L40,112 Q50,104 70,102 L100,80 Q110,72 130,72 L200,72 Q216,72 228,84 L250,102 L284,108 Q296,112 296,126 L296,140 Z" fill="#2563eb" />
+      <path d="M108,84 L130,78 L168,78 L168,100 L96,100 Z" fill="#bfdbfe" /><path d="M176,78 L204,78 Q214,80 222,90 L232,100 L176,100 Z" fill="#bfdbfe" />
+      <rect x={280} y={116} width={14} height={8} rx={2} fill="#fbbf24" />
+      <circle cx={240} cy={152} r={22} fill="#1f2937" /><circle cx={240} cy={152} r={10} fill="#9ca3af" />
+    </g>
+    <g transform={`translate(0,${flat ? 0 : -lift})`}>
+      <ellipse cx={86} cy={flat ? 156 : 152} rx={23} ry={flat ? 18 : 22} fill="#1f2937" /><circle cx={86} cy={152} r={10} fill="#9ca3af" />
+    </g>
+  </g>
+);
+
+const Hub = ({ x, y, nuts = 5, done = 0, order: ord = false }: { x: number; y: number; nuts?: number; done?: number; order?: boolean }) => {
+  const pts = Array.from({ length: nuts }, (_, j) => {
+    const a = -Math.PI / 2 + (j * 2 * Math.PI) / nuts;
+    return [x + Math.cos(a) * 24, y + Math.sin(a) * 24];
+  });
+  const star = [0, 2, 4, 1, 3];
+  return (
+    <g>
+      <circle cx={x} cy={y} r={72} fill="#1f2937" />
+      <circle cx={x} cy={y} r={46} fill="#cbd5e1" stroke="#94a3b8" strokeWidth="3" />
+      <circle cx={x} cy={y} r={10} fill="#64748b" />
+      {pts.map(([px, py], j) => <polygon key={j} points={Array.from({ length: 6 }, (_, m) => `${px + 7 * Math.cos((m * Math.PI) / 3)},${py + 7 * Math.sin((m * Math.PI) / 3)}`).join(" ")} fill="#475569" />)}
+      {ord ? (
+        <g>
+          <polyline points={star.slice(0, Math.max(1, Math.ceil(done * 5))).map((j) => pts[j].join(",")).join(" ")} fill="none" stroke="#f97316" strokeWidth="2" strokeDasharray="4 3" />
+          {star.map((j, n) => (n < Math.ceil(done * 5) ? <g key={j}><circle cx={pts[j][0]} cy={pts[j][1]} r={8} fill="#f97316" /><text x={pts[j][0]} y={pts[j][1] + 3.5} textAnchor="middle" fontSize="10" fontWeight="900" fill="#fff">{n + 1}</text></g> : null))}
+        </g>
+      ) : null}
+    </g>
+  );
+};
+
+const Wrench = ({ x, y, a }: { x: number; y: number; a: number }) => (
+  <g transform={`rotate(${a} ${x} ${y})`}>
+    <rect x={x - 4} y={y - 4} width={90} height={8} rx={4} fill="#6b7280" />
+    <circle cx={x} cy={y} r={9} fill="none" stroke="#6b7280" strokeWidth="5" />
+  </g>
+);
+
+const tyre: Mech = {
+  title: t("Changing a flat tyre", "Ինչպես փոխել պայթած անվադողը", "Как заменить спущенное колесо"),
+  hint: t("Everything you need is usually under the boot floor: the spare wheel, a jack and a wheel wrench. The car's manual shows where to put the jack.", "Անհրաժեշտ ամեն ինչ սովորաբար բեռնախցիկի հատակի տակ է՝ պահեստային անիվը, դոմկրատը և անիվի բանալին։ Մեքենայի ձեռնարկը ցույց է տալիս, թե որտեղ դնել դոմկրատը։", "Всё нужное обычно лежит под полом багажника: запасное колесо, домкрат и баллонный ключ. В руководстве к машине показано, куда ставить домкрат."),
+  caps: [
+    t("Pull over somewhere flat and safe, far from traffic. Hazard lights on, handbrake on, reflective vest on, warning triangle behind the car, passengers out and away from the road.", "Կանգնի՛ր հարթ և անվտանգ տեղում՝ երթևեկությունից հեռու։ Միացրո՛ւ վթարային լույսերը, ձգի՛ր ձեռքի արգելակը, հագի՛ր լուսանդրադարձ բաճկոնակը, վթարային եռանկյունին դիր մեքենայի ետևում, ուղևորներին դուրս բեր և հեռացրու ճանապարհից։", "Остановись на ровном и безопасном месте подальше от потока. Включи аварийку, поставь на ручник, надень светоотражающий жилет, выставь знак аварийной остановки, высади пассажиров подальше от дороги."),
+    t("While the wheel is still on the ground, loosen each nut about half a turn, turning the wrench to the left.", "Քանի դեռ անիվը գետնին է, յուրաքանչյուր պտուտակ թուլացրու մոտ կես պտույտ՝ բանալին պտտելով ձախ։", "Пока колесо стоит на земле, ослабь каждую гайку примерно на пол-оборота, поворачивая ключ влево."),
+    t("Place the jack under the jacking point shown in the manual and lift until the flat tyre is just off the ground. Never put any part of your body under a car on a jack.", "Դոմկրատը դիր ձեռնարկում նշված կետի տակ և բարձրացրու, մինչև պայթած անվադողը մի փոքր կտրվի գետնից։ Երբեք մարմնիդ որևէ մասը մի՛ մտցրու դոմկրատի վրա բարձրացված մեքենայի տակ։", "Поставь домкрат под точку, указанную в руководстве, и поднимай, пока спущенное колесо чуть не оторвётся от земли. Никогда не засовывай никакую часть тела под машину на домкрате."),
+    t("Take the nuts off, keep them together, pull the wheel off and fit the spare onto the bolts.", "Հանի՛ր պտուտակները, պահի՛ր դրանք միասին, հանի՛ր անիվը և պահեստայինը տեղադրի՛ր հեղույսների վրա։", "Открути гайки, сложи их вместе, сними колесо и надень запаску на шпильки."),
+    t("Screw the nuts on by hand, then tighten them a little in a star pattern so the wheel sits straight. Lower the car.", "Պտուտակները ձեռքով պտտի՛ր, հետո մի քիչ ձգի՛ր աստղաձև հերթականությամբ, որ անիվն ուղիղ նստի։ Իջեցրո՛ւ մեքենան։", "Наживи гайки рукой, потом слегка затяни их крест-накрест («звёздочкой»), чтобы колесо село ровно. Опусти машину."),
+    t("With the wheel on the ground, tighten every nut firmly in the same star pattern. Check the spare's pressure and drive gently to a tyre shop.", "Երբ անիվը գետնին է, յուրաքանչյուր պտուտակ ամուր ձգի՛ր նույն աստղաձև հերթականությամբ։ Ստուգի՛ր պահեստայինի ճնշումը և զգույշ քշի՛ր մինչև վուլկանացման արհեստանոց։", "Когда колесо на земле, крепко затяни все гайки в том же порядке «звёздочкой». Проверь давление в запаске и аккуратно доедь до шиномонтажа."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const road = <g><rect width={320} height={220} fill="#e0f2fe" /><rect y={174} width={320} height={46} fill="#9ca3af" /><rect y={174} width={320} height={4} fill="#6b7280" /></g>;
+    if (i === 0) {
+      const on = Math.floor(p * 6) % 2 === 0;
+      return (
+        <g>{road}
+          <g transform="translate(-10,0) scale(0.95)"><CarSide /></g>
+          <rect x={258} y={108} width={12} height={8} rx={2} fill={on ? "#f97316" : "#fed7aa"} />
+          <g transform={`translate(${lerp(20, 8, k)},0)`}><path d="M0,176 L12,152 L24,176 Z" fill="none" stroke={RED} strokeWidth="3.5" /></g>
+          <Pill x={170} y={30} s={t("hazards · handbrake · vest · triangle", "վթարային լույսեր · արգելակ · բաճկոնակ · եռանկյունի", "аварийка · ручник · жилет · знак")} lang={lang} w={260} size={8} />
+        </g>
+      );
+    }
+    if (i === 1) return (
+      <g><rect width={320} height={220} fill="#f1f5f9" /><rect y={190} width={320} height={30} fill="#9ca3af" />
+        <Hub x={140} y={115} />
+        <Wrench x={140} y={91} a={lerp(-20, -70, k)} />
+        <Arrow d="M200,40 Q170,20 140,30" c={RED} />
+        <Pill x={250} y={170} s={t("½ turn to the left", "½ պտույտ ձախ", "½ оборота влево")} lang={lang} w={120} />
+      </g>
+    );
+    if (i === 2) return (
+      <g>{road}
+        <CarSide lift={k * 12} flat={false} />
+        <g transform="translate(120,174)">
+          <rect x={-16} y={-6} width={32} height={6} fill="#374151" />
+          <path d={`M-12,-6 L0,${-6 - 18 - k * 12} L12,-6`} fill="none" stroke="#dc2626" strokeWidth="3" />
+          <rect x={-8} y={-30 - k * 12} width={16} height={5} fill="#374151" />
+        </g>
+        <Pill x={80} y={30} s={t("jacking point", "դոմկրատի կետ", "точка под домкрат")} lang={lang} w={110} />
+        <Arrow d="M90,42 L118,120" c="#7c3aed" />
+        <Pill x={235} y={30} s={t("never under the car", "երբեք՝ մեքենայի տակ", "никогда не лезь под машину")} lang={lang} w={160} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+    if (i === 3) return (
+      <g><rect width={320} height={220} fill="#f1f5f9" />
+        <g opacity={1 - k}><g transform={`translate(${k * 160},0)`}><Hub x={110} y={115} /></g></g>
+        <circle cx={110} cy={115} r={12} fill="#64748b" />
+        {Array.from({ length: 5 }, (_, j) => { const a = -Math.PI / 2 + (j * 2 * Math.PI) / 5; return <rect key={j} x={110 + Math.cos(a) * 24 - 2.5} y={115 + Math.sin(a) * 24 - 2.5} width={5} height={5} fill="#9ca3af" />; })}
+        <g transform={`translate(${lerp(-150, 0, k)},0)`} opacity={k}><Hub x={110} y={115} /></g>
+        <g transform="translate(250,170)">{[0, 1, 2, 3, 4].map((j) => <polygon key={j} points={Array.from({ length: 6 }, (_, m) => `${(j - 2) * 14 + 6 * Math.cos((m * Math.PI) / 3)},${6 * Math.sin((m * Math.PI) / 3)}`).join(" ")} fill="#475569" />)}</g>
+        <Pill x={250} y={40} s={t("spare on", "պահեստայինը", "запаска")} lang={lang} w={90} fill="#dcfce7" stroke={GREEN} color="#166534" />
+      </g>
+    );
+    if (i === 4) return (
+      <g><rect width={320} height={220} fill="#f1f5f9" />
+        <Hub x={130} y={115} order done={k} />
+        <Pill x={260} y={40} s={t("star pattern", "աստղաձև", "звёздочкой")} lang={lang} w={100} fill="#ffedd5" stroke="#f97316" color="#c2410c" />
+      </g>
+    );
+    return (
+      <g>{road}
+        <CarSide flat={false} />
+        <g transform="translate(270,60)"><circle r={22} fill="#fff" stroke="#475569" strokeWidth="3" /><line x1={0} y1={0} x2={lerp(-14, 12, k)} y2={-10} stroke={RED} strokeWidth="3" /><circle r={3} fill="#475569" /></g>
+        <Pill x={130} y={30} s={t("tighten · check pressure · tyre shop", "ձգել · ստուգել ճնշումը · արհեստանոց", "затянуть · давление · шиномонтаж")} lang={lang} w={220} size={8} />
+        <Mark x={86} y={120} ok r={9} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 12: stopping heavy bleeding ---------------- */
+
+const ArmZoom = ({ wound = true }: { wound?: boolean }) => (
+  <g>
+    <path d="M-10,95 L250,85 Q300,85 310,110 Q300,138 250,138 L-10,150 Z" fill={SKIN} stroke={SKIN_D} strokeWidth="2" />
+    {wound ? <ellipse cx={150} cy={114} rx={18} ry={6} fill="#b91c1c" /> : null}
+  </g>
+);
+
+const Lay = ({ x, y }: { x: number; y: number }) => (
+  <g>
+    <circle cx={x} cy={y - 10} r={13} fill={SKIN} />
+    <rect x={x + 14} y={y - 22} width={110} height={26} rx={10} fill="#64748b" />
+    <rect x={x + 120} y={y - 18} width={70} height={11} rx={5} fill="#1e3a8a" /><rect x={x + 120} y={y - 6} width={70} height={11} rx={5} fill="#1e3a8a" />
+  </g>
+);
+
+const bleeding: Mech = {
+  title: t("Stopping heavy bleeding", "Ինչպես կանգնեցնել ուժեղ արյունահոսությունը", "Как остановить сильное кровотечение"),
+  hint: t("Firm, direct pressure stops most bleeding. Press hard and don't let go to check.", "Ուղղակի ամուր ճնշումը կանգնեցնում է արյունահոսությունների մեծ մասը։ Սեղմի՛ր ուժեղ և մի՛ բաց թող՝ ստուգելու համար։", "Сильное прямое давление останавливает большинство кровотечений. Дави крепко и не отпускай, чтобы проверить."),
+  caps: [
+    t("Check that it's safe for you. Put on gloves if there are any, and call 112, or get someone to call. Put the phone on speaker.", "Ստուգի՛ր, որ քեզ համար անվտանգ է։ Ձեռնոցներ հագի՛ր, եթե կան, և զանգի՛ր 112 կամ խնդրի՛ր, որ մեկը զանգի։ Հեռախոսը միացրու բարձրախոսով։", "Убедись, что тебе ничего не угрожает. Надень перчатки, если есть, и позвони 112 или попроси кого-нибудь позвонить. Включи громкую связь."),
+    t("Press a clean cloth or pad firmly right on the wound with both hands. Push hard: harder than feels polite.", "Մաքուր կտոր կամ բարձիկ երկու ձեռքով ամուր սեղմի՛ր հենց վերքին։ Սեղմի՛ր ուժեղ, ավելի ուժեղ, քան թվում է։", "Обеими руками крепко прижми чистую ткань или салфетку прямо к ране. Дави сильно — сильнее, чем кажется удобным."),
+    t("Blood soaking through? Don't lift the first pad: put another one on top and keep pressing.", "Արյունը ներծծվու՞մ է։ Առաջին բարձիկը մի՛ վերցրու․ վրան ևս մեկը դիր և շարունակի՛ր սեղմել։", "Кровь просачивается? Не снимай первую салфетку: положи сверху ещё одну и продолжай давить."),
+    t("Wrap a bandage tightly over the pad to keep up the pressure, but not so tight that the fingers go blue.", "Բարձիկի վրայից վիրակապն ամուր փաթաթի՛ր՝ ճնշումը պահելու համար, բայց ոչ այնքան, որ մատները կապտեն։", "Туго забинтуй поверх салфетки, чтобы сохранить давление, но не так туго, чтобы пальцы посинели."),
+    t("Help them lie down and keep them warm. Pale, cold, sweaty skin and fast breathing are signs of shock: tell the dispatcher.", "Օգնի՛ր պառկել և տաք պահի՛ր։ Գունատ, սառը, քրտնած մաշկը և արագ շնչառությունը շոկի նշաններ են․ ասա՛ դիսպետչերին։", "Помоги лечь и укрой. Бледная, холодная, влажная кожа и частое дыхание — признаки шока: скажи диспетчеру."),
+    t("Only if bleeding from an arm or leg can't be stopped: a tourniquet high on the limb, tightened until the bleeding stops, if you're trained or the dispatcher tells you. Write down the time.", "Միայն եթե ձեռքի կամ ոտքի արյունահոսությունը հնարավոր չէ կանգնեցնել՝ լարան վերջույթի վերին մասում, ձգված, մինչև արյունահոսությունը դադարի, եթե սովորել ես կամ դիսպետչերն է ասում։ Գրի՛ր ժամը։", "Только если кровотечение из руки или ноги не остановить: жгут высоко на конечности, затянутый до остановки кровотечения, если ты обучен или так говорит диспетчер. Запиши время."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <rect width={320} height={220} fill="#fff7ed" />;
+    const press = (n: number) => <g><Hand x={150} y={lerp(40, 78, k) - n} rot={180} s={1} /><Hand x={150} y={lerp(30, 66, k) - n} rot={180} s={1} back /></g>;
+    if (i === 0) return (
+      <g>{bg}<ArmZoom />
+        {[0, 1, 2].map((j) => <Drop key={j} x={140 + j * 10} y={130 + ((p * 60 + j * 20) % 60)} s={4} fill="#b91c1c" />)}
+        <g transform="translate(46,40)"><Hand x={0} y={6} s={0.9} fill="#7dd3fc" /><Tx x={0} y={44} s={t("gloves", "ձեռնոցներ", "перчатки")} lang={lang} size={8.5} /></g>
+        <g transform="translate(260,40)"><rect x={-20} y={-30} width={40} height={66} rx={7} fill="#0f172a" /><rect x={-16} y={-24} width={32} height={50} rx={3} fill="#fee2e2" /><text x={0} y={6} textAnchor="middle" fontSize="12" fontWeight="900" fill={RED}>112</text></g>
+      </g>
+    );
+    if (i === 1) return (
+      <g>{bg}<ArmZoom />
+        <rect x={124} y={lerp(70, 100, k)} width={52} height={24} rx={4} fill="#fff" stroke="#cbd5e1" />
+        {press(0)}
+        <Pill x={250} y={190} s={t("press hard", "սեղմի՛ր ուժեղ", "дави сильно")} lang={lang} w={100} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+    if (i === 2) return (
+      <g>{bg}<ArmZoom />
+        <rect x={124} y={100} width={52} height={24} rx={4} fill="#fff" stroke="#cbd5e1" />
+        <ellipse cx={150} cy={110} rx={16} ry={6} fill="#dc2626" opacity={0.7} />
+        <rect x={120} y={lerp(50, 92, k)} width={60} height={14} rx={4} fill="#f8fafc" stroke="#94a3b8" />
+        <Mark x={210} y={60} ok={false} r={10} />
+        <Tx x={250} y={50} s={t("don't lift|the first pad", "առաջինը|մի՛ վերցրու", "первую|не снимай")} lang={lang} size={8.5} />
+      </g>
+    );
+    if (i === 3) return (
+      <g>{bg}<ArmZoom wound={false} />
+        <rect x={124} y={96} width={52} height={28} rx={4} fill="#fff" stroke="#cbd5e1" />
+        {Array.from({ length: 5 }, (_, j) => (j < k * 5 ? <rect key={j} x={104 + j * 18} y={84} width={14} height={62} rx={3} fill="#e2e8f0" stroke="#94a3b8" transform={`rotate(-12 ${110 + j * 18} 115)`} /> : null))}
+        <Pill x={220} y={190} s={t("firm, fingers stay pink", "ամուր, մատները վարդագույն", "туго, пальцы розовые")} lang={lang} w={170} />
+      </g>
+    );
+    if (i === 4) return (
+      <g>{bg}
+        <rect y={170} width={320} height={50} fill="#e7e5e4" />
+        <Lay x={60} y={170} />
+        <rect x={70} y={lerp(120, 146, k)} width={190} height={24} rx={8} fill="#2563eb" opacity={0.9} />
+        <Pill x={160} y={40} s={t("pale · cold · fast breathing = shock", "գունատ · սառը · արագ շնչառություն = շոկ", "бледный · холодный · частое дыхание = шок")} lang={lang} w={250} size={8} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+    return (
+      <g>{bg}<ArmZoom />
+        <rect x={lerp(240, 60, k)} y={86} width={22} height={62} rx={4} fill="#1f2937" />
+        <rect x={lerp(244, 64, k)} y={72} width={14} height={14} rx={3} fill="#f97316" />
+        <g transform="translate(260,40)"><circle r={20} fill="#fff" stroke="#475569" strokeWidth="2" /><line x1={0} y1={0} x2={0} y2={-13} stroke="#475569" strokeWidth="2" /><line x1={0} y1={0} x2={9} y2={5} stroke="#475569" strokeWidth="2" /></g>
+        <Tx x={260} y={78} s={t("write the time", "գրի՛ր ժամը", "запиши время")} lang={lang} size={8.5} />
+        <Pill x={150} y={190} s={t("only if trained or told by 112", "միայն եթե սովորել ես կամ 112-ն է ասում", "только если обучен или велит 112")} lang={lang} w={240} size={8} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { puncture, factcheck, bread, purify, speech, budget, phishing, interview, layers, compound, tyre, bleeding };
 
 void [Adult, Drop, Flame, Ground, Kid, SKIN, SKIN_D, Sun, Tree, WATER, WOOD];

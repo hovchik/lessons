@@ -10,8 +10,9 @@ import { howtoGrade8 } from "./grade-8";
 import { howtoGrade9 } from "./grade-9";
 import { howtoGrade10 } from "./grade-10";
 import { howtoGrade11 } from "./grade-11";
+import { howtoGrade12 } from "./grade-12";
 
 export { HOWTO_META, type HowtoMeta, type Safety } from "./meta";
 
 /** How-to lessons: three practical skills per grade, 1 to 12. */
-export const howto: CourseSeed[] = [howtoGrade1, howtoGrade2, howtoGrade3, howtoGrade4, howtoGrade5, howtoGrade6, howtoGrade7, howtoGrade8, howtoGrade9, howtoGrade10, howtoGrade11];
+export const howto: CourseSeed[] = [howtoGrade1, howtoGrade2, howtoGrade3, howtoGrade4, howtoGrade5, howtoGrade6, howtoGrade7, howtoGrade8, howtoGrade9, howtoGrade10, howtoGrade11, howtoGrade12];
