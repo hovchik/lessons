@@ -14,7 +14,7 @@ export type Card = { id: string; collection: CollectionId; emoji: string; rarity
 export const COLLECTIONS: { id: CollectionId; subjects: string[]; color: string; emoji: string }[] = [
   { id: "numbers", subjects: ["math", "algebra", "geometry", "informatics", "chess"], color: "subject-indigo", emoji: "🧮" },
   { id: "science", subjects: ["physics", "chemistry", "science"], color: "subject-cyan", emoji: "⚛️" },
-  { id: "nature", subjects: ["biology", "geography"], color: "subject-emerald", emoji: "🌿" },
+  { id: "nature", subjects: ["biology", "geography", "howto"], color: "subject-emerald", emoji: "🌿" },
   { id: "history", subjects: ["armenian-history", "world-history", "church-history", "social-studies"], color: "subject-amber", emoji: "🏛️" },
   { id: "arts", subjects: ["armenian", "russian", "english", "drawing", "music", "technology"], color: "subject-rose", emoji: "🎨" },
 ];

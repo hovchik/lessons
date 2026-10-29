@@ -241,4 +241,16 @@ export const subjects: SubjectSeed[] = [
     icon: "Crown",
     sortOrder: 20,
   },
+  {
+    id: "howto",
+    name: t("How-to", "Ինչպես անել", "Как это сделать"),
+    description: t(
+      "Real-life skills for every age: make a campfire with an adult, clean river water to drink, find north, give first aid, fix a bike, manage money. Step-by-step pictures, safety rules and quizzes.",
+      "Կյանքում պետքական հմտություններ ամեն տարիքի համար՝ մեծահասակի հետ խարույկ վառել, գետի ջուրը խմելու համար մաքրել, հյուսիսը գտնել, առաջին օգնություն ցույց տալ, հեծանիվ նորոգել, գումար կառավարել։ Քայլ առ քայլ նկարներ, անվտանգության կանոններ և թեստեր։",
+      "Полезные умения для любого возраста: развести костёр вместе со взрослым, очистить речную воду для питья, найти север, оказать первую помощь, починить велосипед, распоряжаться деньгами. Пошаговые картинки, правила безопасности и тесты.",
+    ),
+    color: "sienna",
+    icon: "Compass",
+    sortOrder: 21,
+  },
 ];

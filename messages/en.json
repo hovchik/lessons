@@ -767,5 +767,27 @@
     "cardsText": "Every unit you get good at wins a card. Master it and the card turns shiny.",
     "recapText": "What you did this week, day by day, next to last week.",
     "noRanking": "No rankings here: your best is compared only with your own best."
+  },
+  "howto": {
+    "title": "How-to",
+    "intro": "Real skills for real life, from washing your hands to changing a car tyre. Each how-to has step-by-step pictures, a safety card and a quiz. Where it says so, do it only with an adult.",
+    "bands": {
+      "little": "Little explorers",
+      "young": "Young adventurers",
+      "teen": "Teen skills",
+      "ready": "Ready for life"
+    },
+    "ages": "Grades {from}–{to} · ages {a}–{b}",
+    "grade": "Grade {grade}",
+    "minutes": "{n} min",
+    "safety": {
+      "adult": "With an adult",
+      "ask": "Ask an adult first",
+      "care": "Safety rules"
+    },
+    "homeTitle": "How-to: skills for real life",
+    "homeText": "Make a campfire with an adult, clean river water, find north, give first aid. Pick one and try it this weekend.",
+    "all": "All how-tos",
+    "count": "{n} how-tos"
   }
 }

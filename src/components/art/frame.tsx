@@ -2,11 +2,11 @@
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { CircleHelp, Eye, FlaskConical, Footprints, Lightbulb, Palette, PencilLine, Sparkles } from "lucide-react";
+import { CircleHelp, Eye, FlaskConical, Footprints, Lightbulb, Palette, PencilLine, ShieldAlert, Shapes, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export type FrameKind = "look" | "experiment" | "steps" | "draw" | "tasks" | "hints" | "palette" | "check";
+export type FrameKind = "look" | "experiment" | "steps" | "draw" | "tasks" | "hints" | "palette" | "check" | "safety" | "sort";
 
 const KIND: Record<FrameKind, { icon: typeof Eye; tone: string }> = {
   look: { icon: Eye, tone: "art-tone-sky" },
@@ -17,6 +17,8 @@ const KIND: Record<FrameKind, { icon: typeof Eye; tone: string }> = {
   hints: { icon: Lightbulb, tone: "art-tone-amber" },
   palette: { icon: Palette, tone: "art-tone-rose" },
   check: { icon: CircleHelp, tone: "art-tone-emerald" },
+  safety: { icon: ShieldAlert, tone: "art-tone-red" },
+  sort: { icon: Shapes, tone: "art-tone-sky" },
 };
 
 /** The card every visual block sits in: a coloured label, an optional prompt, then the visual. */

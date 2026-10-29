@@ -20,6 +20,7 @@ import { churchHistory } from "./subjects/church-history";
 import { music } from "./subjects/music";
 import { technology } from "./subjects/technology";
 import { chess } from "./subjects/chess";
+import { howto } from "./subjects/howto";
 import { withVisuals } from "./visuals";
 import { withQuestions } from "./questions";
 import { withWorked } from "./worked";
@@ -47,6 +48,7 @@ export const courses: CourseSeed[] = withQuestions(withWorked(withVisuals([
   ...music,
   ...technology,
   ...chess,
+  ...howto,
 ])));
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Calculator, CalendarDays, Gamepad2, Languages, Layers, LogIn, Presentation, Radio, type LucideIcon } from "lucide-react";
+import { ArrowRight, Calculator, CalendarDays, Compass, Gamepad2, Languages, Layers, LogIn, Presentation, Radio, type LucideIcon } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { PuzzleCard } from "@/components/fun/puzzle-card";
@@ -72,13 +72,14 @@ function Tile({
 export default async function PlayPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [user, t, tg, tc, tl, tr] = await Promise.all([
+  const [user, t, tg, tc, tl, tr, th] = await Promise.all([
     getCurrentUser(),
     getTranslations("play"),
     getTranslations("games"),
     getTranslations("cards"),
     getTranslations("live"),
     getTranslations("recap"),
+    getTranslations("howto"),
   ]);
   if (user) await syncCards(user.id);
   const [puzzle, bests, album] = await Promise.all([
@@ -141,6 +142,7 @@ export default async function PlayPage({ params }: { params: Promise<{ locale: s
           text={t("cardsText")}
           stat={user ? tc("count", { n: album.length, total: CARDS.length }) : null}
         />
+        <Tile href="/howto" icon={Compass} color="subject-sienna" title={th("title")} text={th("homeText")} />
         {user && <Tile href="/recap" icon={CalendarDays} color="subject-emerald" title={tr("title")} text={t("recapText")} />}
       </ul>
 

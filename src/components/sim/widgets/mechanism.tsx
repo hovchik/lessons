@@ -16,6 +16,9 @@ const LOAD: Record<MechGroup, () => Promise<{ MECHS: Record<string, Mech> }>> = 
   sci: () => import("../mech/sci"),
   inf: () => import("../mech/inf"),
   geo: () => import("../mech/geo"),
+  howto1: () => import("../mech/howto-1"),
+  howto2: () => import("../mech/howto-2"),
+  howto3: () => import("../mech/howto-3"),
   tech: () => import("../mech/tech"),
 };
 
