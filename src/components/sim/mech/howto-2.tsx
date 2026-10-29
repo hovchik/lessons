@@ -611,6 +611,224 @@ const leanto: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { riverwater, orientmap, lost, earthquake, burn, leanto };
+/* ---------------- grade 7: fire with a ferro rod ---------------- */
+
+const Nest = ({ x, y, glow = 0 }: { x: number; y: number; glow?: number }) => (
+  <g>
+    <ellipse cx={x} cy={y} rx={38} ry={14} fill="#d4a373" stroke="#a16207" strokeWidth="1.5" />
+    {Array.from({ length: 14 }, (_, k) => <path key={k} d={`M${x - 32 + k * 4.6},${y + 4} q${(k % 3) * 3 - 3},-10 ${k % 2 ? 7 : -7},-14`} stroke="#a16207" strokeWidth="1.6" fill="none" />)}
+    <ellipse cx={x} cy={y - 4} rx={14} ry={6} fill="#f5f5f4" />
+    {glow ? <ellipse cx={x} cy={y - 4} rx={10 * glow} ry={5 * glow} fill="#f97316" opacity={0.8} /> : null}
+  </g>
+);
+
+const Rod = ({ x, y, a = -60, pull = 0 }: { x: number; y: number; a?: number; pull?: number }) => (
+  <g transform={`translate(${x},${y}) rotate(${a}) translate(${pull},0)`}>
+    <rect x={0} y={-5} width={80} height={10} rx={4} fill="#4b5563" />
+    <rect x={70} y={-8} width={34} height={16} rx={6} fill="#16a34a" />
+  </g>
+);
+
+const firesteel: Mech = {
+  title: t("Lighting tinder with a ferro rod", "Ինչպես վառել կրակավառելիքը ֆեռո ձողով", "Как разжечь растопку огнивом"),
+  hint: t("A ferro rod works wet, in wind and at any height, and lasts for thousands of strikes.", "Ֆեռո ձողն աշխատում է թաց վիճակում, քամուն և ցանկացած բարձրության վրա և դիմանում է հազարավոր հարվածների։", "Огниво работает мокрым, на ветру и на любой высоте и выдерживает тысячи ударов."),
+  caps: [
+    t("Make a nest of very fine, dry tinder: dry grass, birch bark shavings, a pinch of cotton wool in the middle.", "Շատ բարակ, չոր կրակավառելիքից բույն սարքի՛ր․ չոր խոտ, կեչու կեղևի տաշեղ, մեջտեղում մի պտղունց բամբակ։", "Сделай гнездо из очень тонкой сухой растопки: сухая трава, стружка бересты, щепотка ваты в середине."),
+    t("Rest the tip of the rod in the tinder. Hold the striker on the rod with its sharp edge at a steep angle.", "Ձողի ծայրը դի՛ր կրակավառելիքի մեջ։ Հարվածիչը սուր եզրով պահի՛ր ձողի վրա՝ մեծ անկյան տակ։", "Упри конец стержня в растопку. Прижми кресало острым краем к стержню под крутым углом."),
+    t("Hold the striker still and pull the rod back, firmly and fast. That way you don't knock the nest apart.", "Հարվածիչն անշարժ պահի՛ր և ձողն ուժգին ու արագ ետ քաշի՛ր։ Այդպես բույնը չես քանդի։", "Держи кресало неподвижно и резко, с нажимом, тяни стержень назад. Так ты не разобьёшь гнездо."),
+    t("Hot sparks shower into the tinder. Repeat until a spark catches and you see smoke.", "Տաք կայծերը թափվում են կրակավառելիքի մեջ։ Կրկնի՛ր, մինչև կայծը բռնկվի, և ծուխ տեսնես։", "Горячие искры сыплются в растопку. Повторяй, пока искра не займётся и не пойдёт дым."),
+    t("Lift the nest and blow very gently from below. The glow grows into a flame.", "Բարձրացրու բույնը և ներքևից շատ թեթև փչի՛ր։ Շիկացումը վերածվում է բոցի։", "Подними гнездо и очень мягко подуй снизу. Тление разгорается в пламя."),
+    t("Put the burning nest into your fire pit and add kindling at once, just like in the campfire lesson.", "Վառվող բույնը դի՛ր խարույկի տեղում և անմիջապես մանրափայտ ավելացրու, ինչպես խարույկի դասում։", "Положи горящее гнездо в кострище и сразу добавь хворост, как в уроке про костёр."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <g><rect width={320} height={220} fill="#fefce8" /><Ground y={180} fill="#d6d3d1" /></g>;
+    if (i === 0) return (
+      <g>{bg}<g opacity={k}><Nest x={160} y={170} /></g>
+        <Pill x={70} y={60} s={t("dry grass", "չոր խոտ", "сухая трава")} lang={lang} w={80} />
+        <Pill x={250} y={60} s={t("cotton wool", "բամբակ", "вата")} lang={lang} w={80} />
+        <Arrow d="M80,72 C100,110 120,140 135,160" c="#a16207" /><Arrow d="M240,72 C220,110 190,140 168,162" c="#64748b" />
+      </g>
+    );
+    const pull = i === 2 ? -lerp(0, 40, (p * 2) % 1) : 0;
+    const sparks = i === 2 || i === 3;
+    return (
+      <g>{bg}
+        {i <= 4 ? <Nest x={160} y={i === 4 ? lerp(170, 140, k) : 170} glow={i === 3 ? k : i === 4 ? 1 : 0} /> : null}
+        {i >= 1 && i <= 3 ? (
+          <g>
+            <Rod x={168} y={162} a={-60} pull={pull} />
+            <g transform="translate(200,108) rotate(-15)"><rect x={-4} y={-30} width={8} height={36} rx={2} fill="#9ca3af" stroke="#4b5563" /><rect x={-6} y={-46} width={12} height={18} rx={3} fill="#1f2937" /></g>
+            {i === 1 ? <Pill x={260} y={60} s={t("striker", "հարվածիչ", "кресало")} lang={lang} w={70} /> : null}
+            {i === 1 ? <Pill x={260} y={150} s={t("ferro rod", "ֆեռո ձող", "огниво")} lang={lang} w={70} /> : null}
+          </g>
+        ) : null}
+        {i === 2 ? <Arrow d="M240,60 C260,70 270,80 278,96" c="#7c3aed" /> : null}
+        {sparks ? Array.from({ length: 12 }, (_, j) => {
+          const f = (p * 3 + j * 0.13) % 1;
+          return <circle key={j} cx={196 - f * (30 + (j % 4) * 8)} cy={112 + f * 56} r={2.2 - f} fill={j % 2 ? "#fde047" : "#fb923c"} />;
+        }) : null}
+        {i === 3 ? [0, 1, 2].map((j) => <path key={j} d={`M${150 + j * 10},${150 - p * 30} q6,-10 0,-20 q-6,-10 0,-20`} stroke="#a8a29e" strokeWidth="2.5" fill="none" opacity={k * 0.8} />) : null}
+        {i === 4 ? (
+          <g>
+            <Flame x={160} y={136} s={lerp(6, 34, k)} p={p} />
+            <Hand x={120} y={160} rot={60} s={0.9} /><Hand x={200} y={160} rot={-60} s={0.9} flip />
+            {[0, 1, 2].map((j) => <path key={j} d={`M${150 + j * 10},186 q-2,-10 0,-20`} stroke="#93c5fd" strokeWidth="2" fill="none" strokeDasharray="3 3" />)}
+          </g>
+        ) : null}
+        {i === 5 ? (
+          <g>
+            <ellipse cx={160} cy={172} rx={62} ry={18} fill="#a8a29e" />
+            {Array.from({ length: 7 }, (_, j) => <line key={j} x1={130 + j * 10} y1={174} x2={160 + (j - 3) * 2} y2={lerp(174, 120, k)} stroke="#92400e" strokeWidth="3" strokeLinecap="round" />)}
+            <Flame x={160} y={170} s={40} p={p} />
+          </g>
+        ) : null}
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 7: using a pocket knife ---------------- */
+
+const Knife = ({ x, y, a = 0, open = 1, s = 1 }: { x: number; y: number; a?: number; open?: number; s?: number }) => (
+  <g transform={`translate(${x},${y}) rotate(${a}) scale(${s})`}>
+    <g transform={`rotate(${lerp(-170, 0, open)} 0 0)`}>
+      <path d="M0,-5 L58,-5 Q66,-4 70,0 L58,4 L0,4 Z" fill="#e5e7eb" stroke="#6b7280" strokeWidth="1.2" />
+      <line x1={4} y1={-5} x2={58} y2={-5} stroke="#9ca3af" strokeWidth="1" />
+    </g>
+    <rect x={-56} y={-7} width={60} height={14} rx={6} fill={RED} />
+    <path d="M-36,-1 h12 M-30,-7 v12" stroke="#fff" strokeWidth="2" transform="translate(0,1)" />
+    <circle cx={0} cy={0} r={2.5} fill="#9ca3af" />
+  </g>
+);
+
+const knife: Mech = {
+  title: t("Pocket knife rules", "Գրպանի դանակի կանոններ", "Правила обращения с перочинным ножом"),
+  hint: t("A sharp knife is safer than a blunt one: it cuts where you want with less force, so it slips less.", "Սուր դանակն ավելի անվտանգ է, քան բութը․ այն կտրում է այնտեղ, որտեղ ուզում ես, քիչ ուժով, ուստի ավելի քիչ է սահում։", "Острый нож безопаснее тупого: он режет куда нужно и с меньшим усилием, поэтому реже соскальзывает."),
+  caps: [
+    t("Before you open the knife, check your \"blood circle\": stretch out your arm and turn round. Nobody may be inside it.", "Դանակը բացելուց առաջ ստուգի՛ր քո «անվտանգության շրջանը»․ ձեռքդ մեկնի՛ր և պտտվի՛ր։ Ոչ ոք չպետք է լինի այդ շրջանի ներսում։", "Перед тем как открыть нож, проверь свой «круг безопасности»: вытяни руку и повернись. Внутри не должно быть никого."),
+    t("Open the blade with your fingers on the back of it, away from the sharp edge, until it clicks.", "Բացի՛ր շեղբը՝ մատներդ պահելով նրա մեջքին, սուր եզրից հեռու, մինչև չխկա։", "Открывай лезвие, держа пальцы на его обухе, подальше от острого края, пока не щёлкнет."),
+    t("Always cut away from your body, your hand and your legs. Never towards yourself.", "Միշտ կտրի՛ր դեպի դուրս՝ մարմնիցդ, ձեռքիցդ և ոտքերիցդ հեռու։ Երբեք դեպի քեզ։", "Всегда режь от себя: от тела, от руки и от ног. Никогда к себе."),
+    t("Keep the work steady on a log or a table, not on your lap. Take small, slow cuts.", "Աշխատանքն ամուր պահի՛ր կոճղի կամ սեղանի վրա, ոչ թե ծնկներիդ։ Կտրի՛ր փոքր և դանդաղ շարժումներով։", "Держи заготовку на чурбаке или столе, а не на коленях. Режь маленькими, медленными движениями."),
+    t("Close it with your palm flat on the handle side, fingers out of the blade's path.", "Փակի՛ր այն ափով՝ բռնակի կողմից, մատները շեղբի ճանապարհից հեռու։", "Закрывай ладонью со стороны рукоятки, пальцы — вне пути лезвия."),
+    t("Never walk with an open knife. To hand it over, close it first, or offer the handle and say \"Thank you\" when it is taken.", "Երբեք մի՛ քայլիր բաց դանակով։ Ուրիշին տալիս նախ փակի՛ր այն կամ մեկնի՛ր բռնակով, և երբ վերցնում են, ասա՛ «Շնորհակալություն»։", "Никогда не ходи с открытым ножом. Чтобы передать, сначала закрой его или протяни рукояткой вперёд и скажи «Спасибо», когда его взяли."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 0) {
+      const a = p * Math.PI * 2;
+      return (
+        <g>
+          <rect width={320} height={220} fill="#f0fdf4" />
+          <circle cx={160} cy={130} r={70} fill="#fee2e2" stroke={RED} strokeWidth="2" strokeDasharray="6 5" />
+          <Kid x={160} y={160} arms={[20, 20]} s={1.2} />
+          <line x1={160} y1={124} x2={160 + Math.cos(a) * 66} y2={124 + Math.sin(a) * 30} stroke={SKIN_D} strokeWidth="5" strokeLinecap="round" />
+          <Kid x={270} y={196} arms={[20, 20]} shirt="#f59e0b" />
+          <Mark x={160} y={40} ok r={12} />
+          <Tx x={160} y={22} s={t("nobody inside the circle", "շրջանի ներսում ոչ ոք", "в круге никого")} lang={lang} size={10} />
+        </g>
+      );
+    }
+    if (i === 1) return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <Knife x={140} y={120} open={k} s={1.6} />
+        <Hand x={lerp(110, 150, k)} y={lerp(80, 104, k)} rot={160} s={0.9} />
+        {k > 0.95 ? <Tx x={250} y={80} s={t("click!", "չըխկ", "щёлк!")} lang={lang} size={14} fill={GREEN} w={900} /> : null}
+        <Pill x={250} y={170} s={t("fingers on the back", "մատները մեջքին", "пальцы на обухе")} lang={lang} w={120} />
+      </g>
+    );
+    if (i === 2 || i === 3) {
+      const cut = (p * 2) % 1;
+      return (
+        <g>
+          <rect width={320} height={220} fill="#fefce8" />
+          {i === 3 ? <g><rect x={60} y={150} width={200} height={50} rx={6} fill="#a16207" /><ellipse cx={160} cy={150} rx={100} ry={10} fill="#d6b77a" /></g> : null}
+          <g transform={`translate(0,${i === 3 ? 0 : 20})`}>
+            <rect x={60} y={120} width={140} height={14} rx={6} fill="#d6b77a" stroke="#a16207" transform="rotate(-8 130 127)" />
+            <Knife x={150 + cut * 50} y={118 - cut * 7} a={-8} />
+            <Arrow d="M200,90 h60" c={GREEN} />
+            <Tx x={230} y={80} s={t("away from you", "քեզնից հեռու", "от себя")} lang={lang} fill={GREEN} />
+          </g>
+          {i === 2 ? <g><Mark x={60} y={60} ok={false} r={12} /><Arrow d="M110,60 h-30" c={RED} /><Tx x={80} y={44} s={t("towards you", "դեպի քեզ", "к себе")} lang={lang} fill={RED} /></g> : <Tx x={160} y={212} s={t("steady on a log", "ամուր կոճղի վրա", "на чурбаке")} lang={lang} size={9} fill="#fff" />}
+          {[0, 1, 2].map((j) => <path key={j} d={`M${120 + j * 14},${150 + j * 3} q4,6 10,4`} stroke="#d6b77a" strokeWidth="2" fill="none" opacity={i === 3 ? 0 : 1} />)}
+        </g>
+      );
+    }
+    if (i === 4) return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <Knife x={140} y={120} open={1 - k} s={1.6} />
+        <rect x={lerp(160, 70, k)} y={90} width={70} height={30} rx={14} fill={SKIN} stroke={SKIN_D} />
+        <Tx x={160} y={190} s={t("palm, not fingertips", "ափով, ոչ մատների ծայրերով", "ладонью, не кончиками пальцев")} lang={lang} size={10} />
+      </g>
+    );
+    return (
+      <g>
+        <rect width={320} height={220} fill="#f0fdf4" />
+        <Kid x={90} y={200} s={1.5} arms={[20, 90]} />
+        <Kid x={240} y={200} s={1.5} arms={[90, 20]} shirt="#f59e0b" />
+        <Knife x={lerp(130, 150, k)} y={128} a={180} s={1} open={0} />
+        <Tx x={160} y={70} s={t("closed, handle first", "փակ, բռնակով", "закрытым, рукояткой")} lang={lang} size={11} />
+        <Tx x={160} y={90} s={t("\"Thank you!\"", "«Շնորհակալություն»", "«Спасибо!»")} lang={lang} size={10} fill={GREEN} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 7: a pizza-box solar oven ---------------- */
+
+const solaroven: Mech = {
+  title: t("A solar oven from a pizza box", "Արևային վառարան պիցցայի տուփից", "Солнечная печь из коробки от пиццы"),
+  hint: t("Works best on a clear, sunny day between 11:00 and 15:00.", "Լավագույնս աշխատում է պարզ, արևոտ օրը՝ ժամը 11:00-ից 15:00-ն։", "Лучше всего работает в ясный солнечный день с 11:00 до 15:00."),
+  caps: [
+    t("Draw a square on the lid, 3 cm from the edges. With an adult, cut three sides and fold the flap up.", "Կափարիչի վրա նկարի՛ր քառակուսի՝ եզրերից 3 սմ հեռու։ Մեծահասակի հետ կտրի՛ր երեք կողմը և ծալի՛ր փեղկը վեր։", "Начерти на крышке квадрат в 3 см от краёв. Со взрослым прорежь три стороны и отогни створку вверх."),
+    t("Cover the inside of the flap with smooth kitchen foil, shiny side out. It is a mirror for sunlight.", "Փեղկի ներսը ծածկի՛ր հարթ խոհանոցային փայլաթիթեղով՝ փայլուն կողմը դուրս։ Դա արևի լույսի հայելի է։", "Обклей внутреннюю сторону створки гладкой фольгой блестящей стороной наружу. Это зеркало для солнечного света."),
+    t("Tape cling film tightly over the hole in the lid. It lets light in and keeps warm air from escaping.", "Կափարիչի անցքի վրա ամուր կպցրու սննդային թաղանթ։ Այն ներս է թողնում լույսը և դուրս չի թողնում տաք օդը։", "Плотно заклей отверстие в крышке пищевой плёнкой. Она пропускает свет и не выпускает тёплый воздух."),
+    t("Line the bottom with black paper. Dark colours soak up light and turn it into heat.", "Հատակը պատի՛ր սև թղթով։ Մուգ գույները կլանում են լույսը և վերածում ջերմության։", "Выстели дно чёрной бумагой. Тёмные цвета поглощают свет и превращают его в тепло."),
+    t("Face the box to the Sun and prop the flap with a stick so the foil throws light through the window.", "Տուփը շրջի՛ր դեպի Արևը և փեղկը փայտիկով հենի՛ր այնպես, որ փայլաթիթեղը լույսն ուղարկի պատուհանի միջով։", "Поверни коробку к Солнцу и подопри створку палочкой так, чтобы фольга направляла свет в окошко."),
+    t("Wait 30–60 minutes. Inside it gets hot enough to melt chocolate and cheese. Use an oven glove!", "Սպասի՛ր 30–60 րոպե։ Ներսում այնքան տաք է դառնում, որ շոկոլադն ու պանիրը հալվում են։ Օգտագործի՛ր խոհանոցային ձեռնոց։", "Подожди 30–60 минут. Внутри становится так жарко, что плавятся шоколад и сыр. Бери прихватку!"),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const flapA = i === 0 ? lerp(0, 70, k) : i < 4 ? 70 : lerp(70, 50, i === 4 ? k : 1);
+    return (
+      <g>
+        <rect width={320} height={220} fill={i >= 4 ? "#fef9c3" : "#f8fafc"} />
+        {i >= 4 ? <Sun x={40} y={40} r={18} p={p} /> : null}
+        <path d="M60,150 L220,150 L260,120 L100,120 Z" fill="#d6b77a" stroke="#a16207" strokeWidth="2" />
+        <path d="M60,150 L220,150 L220,170 L60,170 Z" fill="#c8a165" stroke="#a16207" strokeWidth="2" />
+        <path d="M220,150 L260,120 L260,140 L220,170 Z" fill="#b8904f" stroke="#a16207" strokeWidth="2" />
+        <path d="M84,146 L204,146 L234,124 L114,124 Z" fill={i >= 3 ? "#1f2937" : "#e7d3a8"} opacity={i >= 3 ? lerp(0.3, 1, i === 3 ? k : 1) : 1} />
+        {i >= 2 ? <path d="M84,146 L204,146 L234,124 L114,124 Z" fill="rgba(186,230,253,0.35)" stroke="#7dd3fc" strokeWidth={i === 2 ? 1 + k * 2 : 1.5} opacity={i === 2 ? k : 1} /> : null}
+        {(() => {
+          const h = 70 * Math.sin((flapA * Math.PI) / 180);
+          const lean = 70 * Math.cos((flapA * Math.PI) / 180) * 0.5;
+          return <path d={`M114,124 L234,124 L${234 + lean},${124 - h} L${114 + lean},${124 - h} Z`} fill={i >= 1 ? "#e2e8f0" : "#d6b77a"} stroke={i >= 1 ? "#94a3b8" : "#a16207"} strokeWidth="2" />;
+        })()}
+        {i >= 1 ? <path d={`M126,${120} L${126 + 20},${70}`} stroke="#fff" strokeWidth="3" opacity={0.7} /> : null}
+        {i === 4 || i === 5 ? (
+          <g>
+            <line x1={200} y1={124} x2={225} y2={78} stroke={WOOD} strokeWidth="3" />
+            {[0, 1, 2].map((j) => <Arrow key={j} d={`M${60 + j * 18},${60 + j * 4} L${150 + j * 22},${78 - j * 2} L${150 + j * 16},${134}`} c="#f59e0b" />)}
+          </g>
+        ) : null}
+        {i === 5 ? (
+          <g>
+            <rect x={140} y={128} width={30} height={12} rx={2} fill="#78350f" />
+            <rect x={140} y={126} width={30} height={4} rx={2} fill="#92400e" opacity={1 - k * 0.6} />
+            <Pill x={270} y={190} s={t("60–90 °C", "60–90 °C", "60–90 °C")} lang={lang} w={70} size={10} fill="#fee2e2" stroke={RED} color={RED} />
+          </g>
+        ) : null}
+        {i === 0 ? <Tx x={160} y={200} s={t("3 cm border", "3 սմ եզր", "отступ 3 см")} lang={lang} size={10} /> : null}
+        {i === 1 ? <Pill x={250} y={40} s={t("foil = mirror", "փայլաթիթեղ = հայելի", "фольга = зеркало")} lang={lang} w={110} /> : null}
+        {i === 2 ? <Pill x={250} y={196} s={t("cling film window", "թաղանթե պատուհան", "окно из плёнки")} lang={lang} w={110} /> : null}
+        {i === 3 ? <Pill x={250} y={196} s={t("black absorbs", "սևը կլանում է", "чёрное поглощает")} lang={lang} w={110} /> : null}
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { riverwater, orientmap, lost, earthquake, burn, leanto, firesteel, knife, solaroven };
 
 void [Bubbles, GREEN, Hand, SKIN, SOIL, WOOD];

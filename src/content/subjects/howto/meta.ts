@@ -31,4 +31,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "earthquake-safety": { emoji: "🏠", safety: "care" },
   "burn-first-aid": { emoji: "🚿", safety: "ask" },
   "lean-to-shelter": { emoji: "⛺", safety: "ask" },
+  // grade 7
+  "fire-without-matches": { emoji: "✨", safety: "adult" },
+  "pocket-knife": { emoji: "🔪", safety: "adult" },
+  "solar-oven": { emoji: "☀️", safety: "ask" },
 };
