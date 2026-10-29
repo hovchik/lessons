@@ -569,6 +569,221 @@ const budget: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { puncture, factcheck, bread, purify, speech, budget };
+/* ---------------- grade 11: spotting phishing ---------------- */
+
+const Mail = ({ lang, from, hi }: { lang: "en" | "hy" | "ru"; from?: number; hi?: number }) => (
+  <g>
+    <rect x={20} y={20} width={280} height={170} rx={10} fill="#fff" stroke="#cbd5e1" strokeWidth="2" />
+    <rect x={20} y={20} width={280} height={34} rx={10} fill="#f1f5f9" />
+    <text x={34} y={42} fontSize="10" fontWeight="700" fill="#334155">support@<tspan fill={from ? RED : "#334155"} fontWeight={from ? 900 : 700}>bank-arm.co</tspan></text>
+    <Tx x={34} y={76} s={t("URGENT: your account will be", "ՇՏԱՊ․ ձեր հաշիվը կարգելափակվի", "СРОЧНО: ваш счёт будет")} lang={lang} size={10} anchor="start" w={900} fill={hi === 1 ? RED : INK} />
+    <Tx x={34} y={90} s={t("blocked in 1 hour!", "1 ժամից", "заблокирован через 1 час!")} lang={lang} size={10} anchor="start" w={900} fill={hi === 1 ? RED : INK} />
+    <Tx x={34} y={112} s={t("Confirm your card number and PIN:", "Հաստատեք քարտի համարը և PIN-ը․", "Подтвердите номер карты и PIN:")} lang={lang} size={9} anchor="start" fill={hi === 1 ? RED : INK} />
+    <rect x={34} y={124} width={130} height={26} rx={13} fill="#2563eb" />
+    <Tx x={99} y={141} s={t("Confirm now", "Հաստատել", "Подтвердить")} lang={lang} size={10} fill="#fff" w={900} />
+  </g>
+);
+
+const phishing: Mech = {
+  title: t("Is this message real?", "Այս հաղորդագրությունն իրակա՞ն է", "Это сообщение настоящее?"),
+  hint: t("A real bank will never ask for your PIN, password or a code from an SMS. Never.", "Իսկական բանկը երբեք չի խնդրի PIN, գաղտնաբառ կամ SMS-ով եկած կոդ։ Երբեք։", "Настоящий банк никогда не попросит PIN, пароль или код из СМС. Никогда."),
+  caps: [
+    t("A message arrives. It looks like it's from a bank, an online shop or your school.", "Հաղորդագրություն է գալիս։ Թվում է, թե բանկից է, առցանց խանութից կամ դպրոցից։", "Приходит сообщение. Похоже, что от банка, интернет-магазина или школы."),
+    t("Check the sender. Look letter by letter: \"bank-arm.co\" is not the bank's real address.", "Ստուգի՛ր ուղարկողին։ Նայի՛ր տառ առ տառ․ «bank-arm.co»-ն բանկի իրական հասցեն չէ։", "Проверь отправителя. Смотри буква за буквой: «bank-arm.co» — не настоящий адрес банка."),
+    t("Look for pressure: \"urgent\", \"blocked\", \"you've won\", or a request for your PIN or password. These are classic tricks.", "Փնտրի՛ր ճնշում․ «շտապ», «արգելափակված», «դուք շահել եք» կամ PIN-ի, գաղտնաբառի պահանջ։ Սրանք դասական հնարքներ են։", "Ищи давление: «срочно», «заблокирован», «вы выиграли» или просьбу назвать PIN или пароль. Это классические уловки."),
+    t("Hold your finger on the link (or hover the mouse) without clicking. The real address it leads to is different!", "Մատդ պահի՛ր հղման վրա (կամ մկնիկը տար վրան)՝ առանց սեղմելու։ Իրական հասցեն, ուր տանում է, այլ է։", "Подержи палец на ссылке (или наведи мышь), не нажимая. Настоящий адрес, куда она ведёт, другой!"),
+    t("Don't click and don't reply. Open the official app or type the website yourself, or call the number on your card.", "Մի՛ սեղմիր և մի՛ պատասխանիր։ Բացի՛ր պաշտոնական հավելվածը կամ ինքդ գրի՛ր կայքի հասցեն, կամ զանգի՛ր քարտիդ վրա նշված համարով։", "Не нажимай и не отвечай. Открой официальное приложение или сам набери адрес сайта, либо позвони по номеру на карте."),
+    t("Report it and delete it. Turn on two-step login, so a stolen password alone isn't enough.", "Հաղորդի՛ր և ջնջի՛ր։ Միացրո՛ւ երկքայլ մուտքը, որպեսզի միայն գողացված գաղտնաբառը բավարար չլինի։", "Пожалуйся и удали. Включи двухэтапный вход, чтобы одного украденного пароля было мало."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <rect width={320} height={220} fill="#eff6ff" />;
+    if (i === 0) return <g>{bg}<g transform={`translate(0,${lerp(40, 0, k)})`} opacity={k}><Mail lang={lang} /></g></g>;
+    if (i === 1) return <g>{bg}<Mail lang={lang} from={1} /><ellipse cx={120} cy={38} rx={46 * k + 1} ry={14} fill="none" stroke={RED} strokeWidth="2.5" /><Mark x={200} y={38} ok={false} r={10} /></g>;
+    if (i === 2) return <g>{bg}<Mail lang={lang} hi={1} /><Tx x={250} y={100} s={t("pressure!", "ճնշում", "давление!")} lang={lang} size={12} fill={RED} w={900} /></g>;
+    if (i === 3) return (
+      <g>{bg}<Mail lang={lang} />
+        <Hand x={100} y={lerp(200, 150, k)} rot={180} s={0.8} />
+        {k > 0.8 ? <g><rect x={120} y={156} width={176} height={24} rx={6} fill="#0f172a" /><text x={128} y={172} fontSize="9.5" fill="#fff">https://bnk-login.<tspan fill="#f87171" fontWeight="900">top</tspan>/verify</text></g> : null}
+      </g>
+    );
+    if (i === 4) return (
+      <g>{bg}
+        <g opacity={0.35}><Mail lang={lang} /></g>
+        <Mark x={99} y={137} ok={false} r={16} />
+        <g transform="translate(240,110)"><rect x={-34} y={-60} width={68} height={120} rx={12} fill="#0f172a" /><rect x={-28} y={-48} width={56} height={92} rx={4} fill="#dcfce7" /><Tx x={0} y={0} s={t("official|app", "պաշտոնական|հավելված", "официальное|приложение")} lang={lang} size={7} fill="#15803d" /></g>
+      </g>
+    );
+    return (
+      <g>{bg}
+        <g transform={`translate(80,110) rotate(${lerp(0, -10, k)})`} opacity={1 - k * 0.7}><rect x={-50} y={-40} width={100} height={80} rx={8} fill="#fff" stroke="#cbd5e1" /><path d="M-50,-40 L0,0 L50,-40" stroke="#cbd5e1" fill="none" /></g>
+        <g transform="translate(80,170)"><rect x={-14} y={-16} width={28} height={30} rx={3} fill="#94a3b8" /><rect x={-18} y={-20} width={36} height={6} rx={2} fill="#64748b" /></g>
+        <g transform="translate(230,110)">
+          <rect x={-40} y={-70} width={80} height={140} rx={12} fill="#0f172a" /><rect x={-34} y={-58} width={68} height={112} rx={4} fill="#fff" />
+          <Tx x={0} y={-30} s={t("Login code", "Մուտքի կոդ", "Код входа")} lang={lang} size={9} />
+          <text x={0} y={0} textAnchor="middle" fontSize="18" fontWeight="900" fill="#2563eb">482 913</text>
+          <Tx x={0} y={30} s={t("2-step login", "երկքայլ մուտք", "двухэтапный вход")} lang={lang} size={8} fill={GREEN} />
+        </g>
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 11: CV and job interview ---------------- */
+
+const interview: Mech = {
+  title: t("From CV to handshake", "Ինքնակենսագրականից մինչև ձեռքսեղմում", "От резюме до рукопожатия"),
+  hint: t("First jobs, internships, volunteering and summer camps all use the same steps.", "Առաջին աշխատանքը, պրակտիկան, կամավորությունը և ամառային ճամբարներն օգտագործում են նույն քայլերը։", "Первая работа, стажировка, волонтёрство и летние лагеря — везде одни и те же шаги."),
+  caps: [
+    t("Research the place: what do they do, who are their customers, what is the job really about?", "Ուսումնասիրի՛ր տեղը․ ինչո՞վ են զբաղվում, ովքե՞ր են նրանց հաճախորդները, ինչի՞ մասին է իրականում աշխատանքը։", "Изучи место: чем они занимаются, кто их клиенты, в чём на самом деле суть работы?"),
+    t("Write a one-page CV: contacts, education, projects and experience (clubs and volunteering count!), skills and languages.", "Գրի՛ր մեկ էջանոց ինքնակենսագրական․ կոնտակտներ, կրթություն, նախագծեր և փորձ (խմբակներն ու կամավորությունը նույնպես հաշվվում են), հմտություններ և լեզուներ։", "Составь резюме на одну страницу: контакты, образование, проекты и опыт (кружки и волонтёрство тоже считаются!), навыки и языки."),
+    t("Prepare three short stories with STAR: Situation, Task, Action, Result.", "Պատրաստի՛ր երեք կարճ պատմություն STAR եղանակով․ իրավիճակ, խնդիր, գործողություն, արդյունք։", "Подготовь три короткие истории по схеме STAR: ситуация, задача, действие, результат."),
+    t("On the day: arrive 10 minutes early, dressed neatly, phone on silent. Smile and give a firm handshake.", "Այդ օրը․ եկի՛ր 10 րոպե շուտ, կոկիկ հագնված, հեռախոսն անձայն։ Ժպտա՛ և ամուր սեղմի՛ր ձեռքը։", "В тот день: приди на 10 минут раньше, опрятно одетым, телефон на беззвучном. Улыбнись и крепко пожми руку."),
+    t("Answer with your STAR stories, and at the end ask one or two questions of your own about the job.", "Պատասխանի՛ր STAR պատմություններով, իսկ վերջում աշխատանքի մասին տուր մեկ-երկու սեփական հարց։", "Отвечай историями по STAR, а в конце задай один-два своих вопроса о работе."),
+    t("Within a day, send a short thank-you message. Whatever the result, each interview makes the next one easier.", "Մեկ օրվա ընթացքում ուղարկի՛ր կարճ շնորհակալական հաղորդագրություն։ Ինչ էլ լինի արդյունքը, ամեն հարցազրույց հաջորդը հեշտացնում է։", "В течение дня отправь короткое письмо с благодарностью. Каким бы ни был результат, каждое собеседование облегчает следующее."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <rect width={320} height={220} fill="#f8fafc" />;
+    if (i === 0) return (
+      <g>{bg}
+        <rect x={40} y={40} width={150} height={110} rx={8} fill="#fff" stroke="#cbd5e1" />
+        <rect x={52} y={54} width={60} height={8} rx={3} fill="#94a3b8" /><rect x={52} y={70} width={120} height={6} rx={3} fill="#e2e8f0" /><rect x={52} y={82} width={110} height={6} rx={3} fill="#e2e8f0" />
+        <g transform={`translate(${lerp(160, 120, k)},${lerp(140, 100, k)})`}><circle r={20} fill="none" stroke="#2563eb" strokeWidth="5" /><line x1={14} y1={14} x2={32} y2={32} stroke="#2563eb" strokeWidth="6" strokeLinecap="round" /></g>
+        <Tx x={250} y={80} s={t("what do they do?|who are their clients?", "ինչո՞վ են զբաղվում|ովքե՞ր են հաճախորդները", "чем занимаются?|кто клиенты?")} lang={lang} size={9} />
+      </g>
+    );
+    if (i === 1) {
+      const rows = [t("Contacts", "Կոնտակտներ", "Контакты"), t("Education", "Կրթություն", "Образование"), t("Projects & experience", "Նախագծեր և փորձ", "Проекты и опыт"), t("Skills & languages", "Հմտություններ և լեզուներ", "Навыки и языки")];
+      return (
+        <g>{bg}
+          <rect x={90} y={14} width={140} height={196} rx={6} fill="#fff" stroke="#94a3b8" strokeWidth="1.5" />
+          <circle cx={116} cy={42} r={14} fill="#cbd5e1" />
+          {rows.map((r, j) => (
+            <g key={j} opacity={Math.min(1, k * 4 - j + 0.5)}>
+              <Tx x={104} y={78 + j * 34} s={r} lang={lang} size={8.5} anchor="start" fill="#2563eb" />
+              <rect x={104} y={84 + j * 34} width={110} height={4} rx={2} fill="#e2e8f0" /><rect x={104} y={92 + j * 34} width={90} height={4} rx={2} fill="#e2e8f0" />
+            </g>
+          ))}
+          <Pill x={280} y={110} s={t("1 page", "1 էջ", "1 страница")} lang={lang} w={60} />
+        </g>
+      );
+    }
+    if (i === 2) {
+      const star = [{ l: "S", s: t("Situation", "Իրավիճակ", "Ситуация") }, { l: "T", s: t("Task", "Խնդիր", "Задача") }, { l: "A", s: t("Action", "Գործողություն", "Действие") }, { l: "R", s: t("Result", "Արդյունք", "Результат") }];
+      return (
+        <g>{bg}
+          {star.map((S, j) => (
+            <g key={j} opacity={Math.min(1, k * 4 - j + 0.5)}>
+              <circle cx={50 + j * 74} cy={100} r={26} fill="#fbbf24" />
+              <text x={50 + j * 74} y={108} textAnchor="middle" fontSize="22" fontWeight="900" fill="#78350f">{S.l}</text>
+              <Tx x={50 + j * 74} y={146} s={S.s} lang={lang} size={9} />
+            </g>
+          ))}
+          <path d="M20,40 l10,-20 l10,20 l22,2 l-16,14 l6,22 l-22,-12 l-22,12 l6,-22 l-16,-14 Z" fill="#fde68a" transform="translate(120,0) scale(0.8)" />
+        </g>
+      );
+    }
+    if (i === 3) return (
+      <g>{bg}
+        <rect x={0} y={170} width={320} height={50} fill="#e2e8f0" />
+        <Adult x={230} y={174} shirt="#334155" arms={[70, 20]} />
+        <Kid x={lerp(20, 168, k)} y={174} s={1.25} shirt="#0ea5e9" arms={[20, 70]} />
+        <g transform="translate(270,40)"><circle r={20} fill="#fff" stroke="#475569" strokeWidth="2" /><line x1={0} y1={0} x2={0} y2={-14} stroke="#475569" strokeWidth="2" /><line x1={0} y1={0} x2={10} y2={4} stroke="#475569" strokeWidth="2" /></g>
+        <Tx x={270} y={78} s={t("10 min early", "10 րոպե շուտ", "на 10 мин раньше")} lang={lang} size={8.5} />
+      </g>
+    );
+    if (i === 4) return (
+      <g>{bg}
+        <rect x={100} y={130} width={120} height={10} rx={3} fill={WOOD} />
+        <Kid x={60} y={186} s={1.3} shirt="#0ea5e9" arms={[30, 60]} />
+        <Adult x={260} y={186} shirt="#334155" arms={[60, 30]} />
+        <g opacity={p < 0.5 ? 1 : 0.2}><rect x={20} y={20} width={130} height={40} rx={10} fill="#fff" stroke="#fbbf24" strokeWidth="2" /><Tx x={85} y={44} s={t("S · T · A · R", "S · T · A · R", "S · T · A · R")} lang={lang} size={12} w={900} fill="#b45309" /></g>
+        <g opacity={p >= 0.5 ? 1 : 0.2}><rect x={170} y={20} width={130} height={40} rx={10} fill="#fff" stroke="#2563eb" strokeWidth="2" /><Tx x={235} y={44} s={t("My question:…", "Իմ հարցը․…", "Мой вопрос:…")} lang={lang} size={10} fill="#2563eb" /></g>
+      </g>
+    );
+    return (
+      <g>{bg}
+        <g transform="translate(160,110)">
+          <rect x={-80} y={-50} width={160} height={100} rx={10} fill="#fff" stroke="#cbd5e1" strokeWidth="2" />
+          <path d="M-80,-50 L0,10 L80,-50" stroke="#cbd5e1" strokeWidth="2" fill="none" />
+          <Tx x={0} y={36} s={t("Thank you for your time!", "Շնորհակալություն ժամանակի համար", "Спасибо за уделённое время!")} lang={lang} size={9} fill="#2563eb" />
+        </g>
+        <Arrow d={`M${lerp(100, 260, k)},190 h0.1`} c="#2563eb" />
+        <Mark x={270} y={50} ok r={14} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 11: dressing for the cold ---------------- */
+
+const layers: Mech = {
+  title: t("Stay warm: layers and hypothermia", "Մնալ տաք․ շերտեր և գերսառեցում", "Как не замёрзнуть: слои и переохлаждение"),
+  hint: t("Several thin layers trap more warm air than one thick coat, and you can take one off before you sweat.", "Մի քանի բարակ շերտը ավելի շատ տաք օդ է պահում, քան մեկ հաստ վերարկուն, և կարող ես մեկը հանել, նախքան քրտնելը։", "Несколько тонких слоёв удерживают больше тёплого воздуха, чем одна толстая куртка, и один можно снять, пока не вспотел."),
+  caps: [
+    t("Base layer, next to the skin: wool or synthetic, which move sweat away. Not cotton: wet cotton stays cold.", "Հիմնական շերտ՝ մաշկին մոտ․ բուրդ կամ սինթետիկա, որոնք քրտինքը հեռացնում են։ Ոչ բամբակ․ թաց բամբակը մնում է սառը։", "Базовый слой, к телу: шерсть или синтетика, которые отводят пот. Не хлопок: мокрый хлопок остаётся холодным."),
+    t("Middle layer: a fleece or wool jumper that traps warm air.", "Միջին շերտ՝ ֆլիս կամ բրդյա սվիտեր, որը պահում է տաք օդը։", "Средний слой: флиска или шерстяной свитер, удерживающие тёплый воздух."),
+    t("Outer layer: a jacket that stops wind and rain. Add a hat, gloves and warm socks: you lose a lot of heat from your head and hands.", "Արտաքին շերտ՝ քամուց և անձրևից պաշտպանող բաճկոն։ Ավելացրո՛ւ գլխարկ, ձեռնոցներ և տաք գուլպաներ․ գլխից և ձեռքերից շատ ջերմություն ես կորցնում։", "Внешний слой: куртка от ветра и дождя. Добавь шапку, перчатки и тёплые носки: через голову и руки уходит много тепла."),
+    t("Watch for hypothermia: shivering, then the \"umbles\": stumbling, mumbling, fumbling and grumbling.", "Հետևի՛ր գերսառեցման նշաններին․ դող, հետո՝ սայթաքում, անհասկանալի խոսք, անճարակ ձեռքեր և դյուրագրգռություն։", "Следи за признаками переохлаждения: дрожь, потом спотыкание, невнятная речь, неловкие руки и раздражительность."),
+    t("Help: get them out of the wind, swap wet clothes for dry, wrap them up, put something under them, and give a warm sweet drink if they are fully awake.", "Օգնի՛ր․ հեռացրու քամուց, թաց հագուստը փոխի՛ր չորով, փաթաթի՛ր, տակը ինչ-որ բան դիր և տաք քաղցր ըմպելիք տուր, եթե լիովին արթուն է։", "Помоги: укрой от ветра, смени мокрую одежду на сухую, укутай, подложи что-нибудь снизу и дай тёплое сладкое питьё, если человек в полном сознании."),
+    t("Call 112 if they are confused, very sleepy or stop shivering while still cold. Handle them gently.", "Զանգի՛ր 112, եթե շփոթված է, շատ քնկոտ կամ դադարում է դողալ, բայց դեռ սառն է։ Զգույշ վարվի՛ր նրա հետ։", "Звони 112, если человек растерян, очень сонный или перестал дрожать, оставаясь холодным. Обращайся с ним бережно."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const snow = Array.from({ length: 16 }, (_, j) => <circle key={j} cx={(j * 41 + p * 20) % 320} cy={(j * 29 + p * 120) % 220} r={2} fill="#fff" opacity={0.8} />);
+    const bg = <g><rect width={320} height={220} fill="#e0f2fe" />{snow}<rect y={190} width={320} height={30} fill="#f8fafc" /></g>;
+    const L = [
+      { c: "#94a3b8", s: t("base: wool", "հիմնական․|բուրդ", "база:|шерсть") },
+      { c: "#f97316", s: t("middle: fleece", "միջին․|ֆլիս", "средний:|флис") },
+      { c: "#2563eb", s: t("outer: windproof", "արտաքին․|քամակայուն", "внешний:|ветрозащита") },
+    ];
+    if (i <= 2) return (
+      <g>{bg}
+        {L.slice(0, i + 1).map((l, j) => {
+          const grow = j === i ? k : 1;
+          return <rect key={j} x={130 - j * 6 * grow} y={70 - j * 4 * grow} width={60 + j * 12 * grow} height={80 + j * 6 * grow} rx={14} fill={l.c} opacity={j === i ? 0.5 + 0.5 * k : 1} />;
+        }).reverse()}
+        <circle cx={160} cy={52} r={16} fill={SKIN} />
+        {i === 2 ? <g opacity={k}><path d="M144,48 a16,16 0 0 1 32,0 Z" fill="#dc2626" /><circle cx={160} cy={30} r={5} fill="#fff" /><rect x={108} y={140} width={16} height={18} rx={6} fill="#dc2626" /><rect x={196} y={140} width={16} height={18} rx={6} fill="#dc2626" /></g> : null}
+        <rect x={140} y={150} width={16} height={40} fill="#1e3a8a" /><rect x={164} y={150} width={16} height={40} fill="#1e3a8a" />
+        {L.slice(0, i + 1).map((l, j) => <g key={j}><rect x={226} y={60 + j * 30} width={12} height={12} rx={3} fill={l.c} /><Tx x={242} y={70 + j * 30} s={l.s} lang={lang} size={8.5} anchor="start" /></g>)}
+        {i === 0 ? <g><Pill x={60} y={60} s={t("cotton", "բամբակ", "хлопок")} lang={lang} w={60} /><Mark x={92} y={50} ok={false} r={8} /></g> : null}
+      </g>
+    );
+    if (i === 3) {
+      const sh = wob(p, 10) * 3;
+      return (
+        <g>{bg}
+          <g transform={`translate(${sh},0)`}><Kid x={120} y={190} s={1.6} shirt="#64748b" arms={[10, 10]} /></g>
+          {[t("stumbles", "սայթաքում է", "спотыкается"), t("mumbles", "խոսքը խառն է", "бормочет"), t("fumbles", "ձեռքերը չեն լսում", "руки не слушаются"), t("grumbles", "դյուրագրգիռ է", "ворчит")].map((s, j) => (
+            <g key={j} opacity={Math.min(1, k * 4 - j + 0.5)}><Pill x={250} y={50 + j * 32} s={s} lang={lang} w={110} fill="#e0f2fe" stroke="#0284c7" color="#0369a1" /></g>
+          ))}
+          <Tx x={120} y={30} s={t("35 °C or below", "35 °C և ցածր", "35 °C и ниже")} lang={lang} size={11} fill={RED} w={900} />
+        </g>
+      );
+    }
+    if (i === 4) return (
+      <g>
+        <rect width={320} height={220} fill="#fef3c7" />
+        <path d="M40,190 L160,90 L280,190 Z" fill="#f97316" opacity={0.85} />
+        <rect x={100} y={176} width={130} height={10} rx={4} fill="#a16207" />
+        <rect x={110} y={160} width={lerp(0, 110, k)} height={16} rx={8} fill="#2563eb" />
+        <circle cx={226} cy={166} r={9} fill={SKIN} />
+        <g transform="translate(70,150)"><rect x={-10} y={-18} width={20} height={24} rx={4} fill="#fff" stroke="#94a3b8" />{[0, 1].map((j) => <path key={j} d={`M${-4 + j * 8},-22 q4,-6 0,-12`} stroke="#94a3b8" strokeWidth="1.5" fill="none" />)}</g>
+        <Tx x={160} y={30} s={t("dry · wrapped · off the ground", "չոր · փաթաթված · գետնից բարձր", "сухо · укутан · не на земле")} lang={lang} size={10} />
+      </g>
+    );
+    return (
+      <g>{bg}
+        <Kid x={110} y={190} s={1.6} shirt="#64748b" arms={[10, 10]} face={false} />
+        <Tx x={110} y={60} s={t("Zzz…", "Zzz…", "Zzz…")} lang={lang} size={14} fill="#64748b" w={900} />
+        <g transform="translate(240,100)"><rect x={-30} y={-50} width={60} height={100} rx={10} fill="#0f172a" /><rect x={-24} y={-40} width={48} height={70} rx={4} fill="#fee2e2" /><text x={0} y={2} textAnchor="middle" fontSize="16" fontWeight="900" fill={RED}>112</text></g>
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { puncture, factcheck, bread, purify, speech, budget, phishing, interview, layers };
 
 void [Adult, Drop, Flame, Ground, Kid, SKIN, SKIN_D, Sun, Tree, WATER, WOOD];

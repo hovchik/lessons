@@ -47,4 +47,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "water-purification": { emoji: "🚰", safety: null },
   "give-a-speech": { emoji: "🎤", safety: null },
   "make-a-budget": { emoji: "💰", safety: null },
+  // grade 11
+  "stay-safe-online": { emoji: "🎣", safety: null },
+  "cv-and-interview": { emoji: "💼", safety: null },
+  "dress-for-the-cold": { emoji: "🧣", safety: "care" },
 };
