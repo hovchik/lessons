@@ -366,14 +366,14 @@ const parallax: Diagram = {
       <circle cx="150" cy="70" r="5" fill="#fb923c" />
       <path d="M150 88 A18 18 0 0 1 160 84" fill="none" stroke="#fff" strokeWidth="1.5" />
       <Tag x={157} y={100} color="#fff">π</Tag>
-      <Tag x={188} y={196} color="#fde68a">{L(t("1 AU", "1 ա․մ․", "1 а. е."), lang)}</Tag>
+      <Tag x={176} y={198} color="#fde68a">{L(t("1 AU", "1 ա․մ․", "1 а. е."), lang)}</Tag>
     </g>
   ),
   parts: [
     { x: 150, y: 70, name: t("Near star", "Մոտ աստղ", "Близкая звезда"), text: t("Seen from opposite sides of the Earth's orbit, it seems to shift against the far stars. The shift is tiny: less than 1″ even for the nearest star.", "Երկրի ուղեծրի հակադիր կողմերից դիտելիս այն կարծես տեղաշարժվում է հեռավոր աստղերի նկատմամբ։ Տեղաշարժը չնչին է․ նույնիսկ ամենամոտ աստղի համար 1″-ից պակաս։", "С противоположных сторон земной орбиты она кажется смещённой относительно далёких звёзд. Смещение крошечное: меньше 1″ даже у ближайшей звезды.") },
     { x: 157, y: 100, name: t("Parallax angle π", "Պարալաքսի անկյուն π", "Угол параллакса π"), text: t("The angle at which the radius of the Earth's orbit is seen from the star. Distance in parsecs: d = 1/π″.", "Անկյունը, որի տակ աստղից երևում է Երկրի ուղեծրի շառավիղը։ Հեռավորությունը պարսեկներով՝ d = 1/π″։", "Угол, под которым со звезды виден радиус земной орбиты. Расстояние в парсеках: d = 1/π″.") },
     { x: 74, y: 176, name: t("Earth in one season", "Երկիրը տարվա մի եղանակին", "Земля в одно время года"), text: t("Six months later the Earth is on the other side of the Sun, 2 AU away: the longest base we have on Earth.", "Վեց ամիս անց Երկիրը Արեգակի մյուս կողմում է՝ 2 ա․մ․ հեռու․ սա մեր ունեցած ամենաերկար հիմքն է։", "Через полгода Земля по другую сторону Солнца, в 2 а. е.: самый длинный базис, который у нас есть.") },
-    { x: 188, y: 186, name: t("Base: 1 AU", "Հիմք՝ 1 ա․մ․", "Базис: 1 а. е."), text: t("The radius of the Earth's orbit, 150 million km. One parsec is the distance from which it is seen at 1″: 206 265 AU or 3.26 light-years.", "Երկրի ուղեծրի շառավիղը՝ 150 միլիոն կմ։ Մեկ պարսեկն այն հեռավորությունն է, որից այն երևում է 1″ անկյան տակ՝ 206 265 ա․մ․ կամ 3,26 լուսային տարի։", "Радиус земной орбиты, 150 млн км. Один парсек — расстояние, с которого он виден под углом 1″: 206 265 а. е., или 3,26 светового года.") },
+    { x: 206, y: 164, name: t("Base: 1 AU", "Հիմք՝ 1 ա․մ․", "Базис: 1 а. е."), text: t("The radius of the Earth's orbit, 150 million km. One parsec is the distance from which it is seen at 1″: 206 265 AU or 3.26 light-years.", "Երկրի ուղեծրի շառավիղը՝ 150 միլիոն կմ։ Մեկ պարսեկն այն հեռավորությունն է, որից այն երևում է 1″ անկյան տակ՝ 206 265 ա․մ․ կամ 3,26 լուսային տարի։", "Радиус земной орбиты, 150 млн км. Один парсек — расстояние, с которого он виден под углом 1″: 206 265 а. е., или 3,26 светового года.") },
     { x: 150, y: 14, name: t("Distant stars", "Հեռավոր աստղեր", "Далёкие звёзды"), text: t("So far away that they hardly shift at all: the background against which the parallax is measured.", "Այնքան հեռու են, որ համարյա չեն տեղաշարժվում․ ֆոն, որի նկատմամբ չափվում է պարալաքսը։", "Так далеко, что почти не смещаются: фон, на котором измеряют параллакс.") },
   ],
 };

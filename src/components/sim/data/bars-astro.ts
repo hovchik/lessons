@@ -2,8 +2,8 @@ import { t } from "../labels";
 import type { BarSet } from "./bars";
 
 const LY = t("light-years", "լուսային տարի", "св. лет");
-const RSUN = t("solar radii", "Արեգակի շառավիղ", "радиусов Солнца");
-const MSUN = t("solar masses", "արեգակնային զանգված", "масс Солнца");
+const RSUN = t("R☉", "R☉", "R☉");
+const MSUN = t("M☉", "M☉", "M☉");
 const PCT = t("%", "%", "%");
 
 /* Astronomy (grades 11–12) data sets: nearest stars, sizes of stars, black holes, the make-up of the Universe. */
