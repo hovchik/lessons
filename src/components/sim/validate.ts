@@ -191,6 +191,12 @@ export function checkSimSpec(source: string): string[] {
     case "piano":
       need([...list(spec.opts.notes), ...[spec.opts.from, spec.opts.to].filter((v): v is string => !!v)], (n) => parseNote(n) != null, "note");
       need(list(spec.opts.pattern), (v) => /^[whqe]r?$/.test(v), "rhythm token");
+      if ([...list(spec.opts.notes), spec.opts.from, spec.opts.to].some((n) => { const m = n ? parseNote(n) : null; return m != null && (m < 60 || m > 83); })) errors.push(`${where}: notes must be on the keyboard, C4 to B5`);
+      if (spec.opts.mode === "rhythm" && spec.opts.pattern) {
+        const beats = list(spec.opts.pattern).reduce((s, v) => s + ({ w: 4, h: 2, q: 1, e: 0.5 }[v[0]] ?? 0), 0);
+        const per = Number(spec.opts.meter ?? 4) || 4;
+        if (beats % per) errors.push(`${where}: the rhythm lasts ${beats} beats, not whole bars of ${per}`);
+      }
       if (spec.opts.root && parseNote(`${spec.opts.root}4`) == null) errors.push(`${where}: unknown root "${spec.opts.root}"`);
       if (spec.opts.tune && !TUNES[spec.opts.tune]) errors.push(`${where}: unknown tune "${spec.opts.tune}"`);
       if (spec.opts.prog && !PROGS[spec.opts.prog]) errors.push(`${where}: unknown chord loop "${spec.opts.prog}"`);

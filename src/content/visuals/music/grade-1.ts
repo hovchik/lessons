@@ -61,7 +61,7 @@ export const grade1: VisualMap[number] = {
     }),
   ],
   "long-and-short": [
-    "piano mode=rhythm pattern=e,e,h,e,e,h meter=4 tempo=80",
+    "piano mode=rhythm pattern=e,e,h,e,e,h meter=3 tempo=80",
     closer(
       `**A note that lasts for years.** In a church in the German town of **Halberstadt**, an organ is playing a piece by the composer John Cage called "As Slow As Possible". It began in 2001 and is planned to end in the year **2640**! The notes are so long that one chord can sound for several years. When the time comes for a note to change, people travel from far away to hear that moment. It is the longest, slowest concert in the world.
 

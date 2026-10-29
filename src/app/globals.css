@@ -848,7 +848,10 @@ button.art-card:active { transform: scale(0.97); }
 }
 .sim-controls { display: grid; gap: 0.15rem; }
 .sim-slider { display: grid; gap: 0; margin-top: 0.35rem; font-size: 0.85rem; font-weight: 800; color: #334155; }
-.sim-slider-top { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.sim-slider-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.15rem 0.5rem; }
+/* A long value moves to its own line instead of squeezing the label ("Tem / po"). */
+.sim-slider-top > span { flex-shrink: 0; }
+.sim-slider-top > b { margin-left: auto; }
 /* The value sits in a little pill that follows the block colour. */
 .sim-slider-top b {
   padding: 0.05rem 0.55rem; border-radius: 999px;
