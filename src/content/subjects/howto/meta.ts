@@ -39,4 +39,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "cpr": { emoji: "🫀", safety: "care" },
   "choking-first-aid": { emoji: "🆘", safety: "care" },
   "thunderstorm-safety": { emoji: "⛈️", safety: "care" },
+  // grade 9
+  "fix-a-puncture": { emoji: "🚲", safety: "ask" },
+  "spot-fake-news": { emoji: "🔍", safety: null },
+  "bake-bread": { emoji: "🍞", safety: "ask" },
 };
