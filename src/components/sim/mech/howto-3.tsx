@@ -284,6 +284,291 @@ const bread: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { puncture, factcheck, bread };
+/* ---------------- grade 10: how water is cleaned ---------------- */
+
+const Tank = ({ x, y, w = 80, h = 90, water = "#bae6fd", label, lang }: { x: number; y: number; w?: number; h?: number; water?: string; label?: ReturnType<typeof t>; lang: "en" | "hy" | "ru" }) => (
+  <g>
+    <rect x={x} y={y} width={w} height={h} rx={6} fill={water} stroke="#475569" strokeWidth="2.5" />
+    {label ? <Tx x={x + w / 2} y={y + h + 16} s={label} lang={lang} size={8.5} /> : null}
+  </g>
+);
+
+const purify: Mech = {
+  title: t("From river to tap: the water plant", "Գետից ծորակ․ ջրամաքրման կայան", "От реки до крана: водоочистная станция"),
+  hint: t("Every barrier removes something different. Together they make water safe, even if one of them misses a little.", "Ամեն արգելք հեռացնում է այլ բան։ Միասին նրանք ջուրն անվտանգ են դարձնում, նույնիսկ եթե դրանցից մեկը մի քիչ բաց է թողնում։", "Каждый барьер убирает своё. Вместе они делают воду безопасной, даже если один что-то пропустит."),
+  caps: [
+    t("Size matters: sand grains are about 1 mm, protozoa about 0.01 mm, bacteria 0.001 mm, and viruses are 30 times smaller still.", "Չափը կարևոր է․ ավազահատիկը մոտ 1 մմ է, նախակենդանիները՝ մոտ 0,01 մմ, բակտերիաները՝ 0,001 մմ, իսկ վիրուսները դրանից էլ 30 անգամ փոքր են։", "Размер важен: песчинка около 1 мм, простейшие около 0,01 мм, бактерии 0,001 мм, а вирусы ещё в 30 раз меньше."),
+    t("Coagulation: a chemical such as alum is stirred in. Tiny dirt particles stick together into bigger clumps called flocs.", "Մակարդում․ ջրին խառնում են քիմիական նյութ, օրինակ՝ շիբ։ Կեղտի մանր մասնիկները կպչում են իրար և դառնում ավելի մեծ փաթիլներ։", "Коагуляция: в воду добавляют реагент, например квасцы. Мелкие частицы грязи слипаются в крупные хлопья."),
+    t("Settling: the water moves slowly through a big tank, and the heavy flocs sink to the bottom.", "Նստեցում․ ջուրը դանդաղ անցնում է մեծ ավազանով, և ծանր փաթիլները նստում են հատակին։", "Отстаивание: вода медленно идёт через большой бак, и тяжёлые хлопья оседают на дно."),
+    t("Filtering: the water trickles down through layers of sand and gravel, which catch the smaller bits and many germs.", "Զտում․ ջուրը կաթիլ-կաթիլ իջնում է ավազի և մանրախճի շերտերով, որոնք բռնում են մանր մասնիկներն ու շատ մանրէներ։", "Фильтрация: вода просачивается через слои песка и гравия, которые задерживают мелкие частицы и многих микробов."),
+    t("Disinfection: a small dose of chlorine (or UV light) kills the germs that got through, including viruses.", "Վարակազերծում․ քլորի փոքր չափաբաժինը (կամ ՈՒՄ լույսը) սպանում է անցած մանրէներին, այդ թվում՝ վիրուսներին։", "Обеззараживание: небольшая доза хлора (или УФ-свет) убивает прорвавшихся микробов, включая вирусы."),
+    t("A little chlorine stays in the pipes all the way to your tap, so the water stays safe on its journey.", "Քլորի մի փոքր մասը մնում է խողովակներում մինչև քո ծորակը, որպեսզի ջուրն անվտանգ մնա ամբողջ ճանապարհին։", "Немного хлора остаётся в трубах до самого крана, чтобы вода оставалась безопасной всю дорогу."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    if (i === 0) {
+      const items = [
+        { r: 40, c: "#d6b77a", s: t("sand grain|1 mm", "ավազահատիկ|1 մմ", "песчинка|1 мм") },
+        { r: 20, c: "#86efac", s: t("protozoa|0.01 mm", "նախակենդանի|0,01 մմ", "простейшее|0,01 мм") },
+        { r: 9, c: "#fca5a5", s: t("bacteria|0.001 mm", "բակտերիա|0,001 մմ", "бактерия|0,001 мм") },
+        { r: 3, c: "#c4b5fd", s: t("virus|0.00003 mm", "վիրուս|0,00003 մմ", "вирус|0,00003 мм") },
+      ];
+      return (
+        <g>
+          <rect width={320} height={220} fill="#f8fafc" />
+          {items.map((it, j) => (
+            <g key={j} opacity={Math.min(1, k * 4 - j + 1)}>
+              <circle cx={50 + j * 74} cy={100} r={it.r} fill={it.c} stroke="#475569" />
+              <Tx x={50 + j * 74} y={168} s={it.s} lang={lang} size={8.5} />
+            </g>
+          ))}
+          <Tx x={160} y={30} s={t("not to scale: real sizes differ much more!", "իրական չափերն էլ ավելի տարբեր են", "не в масштабе: на самом деле разница ещё больше!")} lang={lang} size={9} fill="#64748b" />
+        </g>
+      );
+    }
+    const dots = (n: number, x0: number, y0: number, w: number, h: number, clump: number, sink: number) =>
+      Array.from({ length: n }, (_, j) => {
+        const gx = x0 + ((j * 37) % w), gy = y0 + ((j * 53) % h);
+        const cx = lerp(gx, x0 + w / 2 + ((j % 4) - 1.5) * 14, clump), cy = lerp(gy, y0 + h - 6, sink);
+        return <circle key={j} cx={cx} cy={cy} r={lerp(1.6, 3.2, clump)} fill="#92400e" opacity={0.75} />;
+      });
+    if (i === 1) return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <Tank x={90} y={50} w={140} h={120} water="#d6c7a1" lang={lang} />
+        {dots(36, 96, 58, 128, 104, k, 0)}
+        <path d={`M160,40 v${60} M${160 + Math.cos(p * 12) * 30},100 L${160 - Math.cos(p * 12) * 30},100`} stroke="#475569" strokeWidth="4" />
+        <Pill x={60} y={36} s={t("+ alum", "+ շիբ", "+ квасцы")} lang={lang} w={60} />
+        <Tx x={160} y={196} s={t("small specks → big flocs", "մանր մասնիկներ → մեծ փաթիլներ", "мелкие частицы → крупные хлопья")} lang={lang} size={9.5} />
+      </g>
+    );
+    if (i === 2) return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <Tank x={40} y={60} w={240} h={100} water={`rgb(${214 - k * 28},${199 + k * 20},${161 + k * 80})`} lang={lang} />
+        {dots(36, 46, 66, 228, 84, 1, k)}
+        <Arrow d="M20,80 h30" c="#0369a1" /><Arrow d="M270,80 h40" c="#0369a1" />
+        <Tx x={160} y={190} s={t("flocs sink, clearer water flows on", "փաթիլները նստում են, պարզ ջուրը շարունակում է", "хлопья оседают, вода светлеет")} lang={lang} size={9.5} />
+      </g>
+    );
+    if (i === 3) {
+      const layers = [{ c: "#fde68a", s: t("fine sand", "մանր ավազ", "мелкий песок") }, { c: "#d6b77a", s: t("coarse sand", "խոշոր ավազ", "крупный песок") }, { c: "#a8a29e", s: t("gravel", "մանրախիճ", "гравий") }];
+      return (
+        <g>
+          <rect width={320} height={220} fill="#f8fafc" />
+          <rect x={90} y={30} width={140} height={30} fill="#bae6fd" stroke="#475569" />
+          {layers.map((L, j) => (
+            <g key={j}>
+              <rect x={90} y={60 + j * 38} width={140} height={38} fill={L.c} stroke="#475569" />
+              {Array.from({ length: 18 }, (_, n) => <circle key={n} cx={96 + ((n * 29) % 128)} cy={66 + j * 38 + ((n * 13) % 28)} r={1 + j} fill="#78716c" opacity={0.5} />)}
+              <Tx x={240} y={83 + j * 38} s={L.s} lang={lang} size={9} anchor="start" />
+            </g>
+          ))}
+          {[0, 1, 2].map((j) => <Drop key={j} x={130 + j * 30} y={180 + ((p * 60 + j * 14) % 30)} s={4} />)}
+        </g>
+      );
+    }
+    if (i === 4) return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <Tank x={60} y={60} w={200} h={110} water="#e0f2fe" lang={lang} />
+        {Array.from({ length: 10 }, (_, j) => {
+          const dead = k > j / 10;
+          return <g key={j} transform={`translate(${80 + (j % 5) * 38},${84 + Math.floor(j / 5) * 44})`}>
+            <ellipse rx={8} ry={4} fill={dead ? "#cbd5e1" : "#f87171"} />
+            {dead ? <path d="M-4,-4 l8,8 M4,-4 l-8,8" stroke="#475569" strokeWidth="1.5" /> : null}
+          </g>;
+        })}
+        <g transform="translate(160,30)"><rect x={-20} y={-14} width={40} height={24} rx={4} fill="#22c55e" /><Tx x={0} y={2} s={t("Cl₂", "Cl₂", "Cl₂")} lang={lang} size={11} fill="#fff" w={900} /></g>
+        {[0, 1, 2].map((j) => <circle key={j} cx={150 + j * 10} cy={50 + ((p * 60 + j * 10) % 20)} r={2} fill="#22c55e" />)}
+      </g>
+    );
+    return (
+      <g>
+        <rect width={320} height={220} fill="#f8fafc" />
+        <path d="M20,60 h120 v80 h140" stroke="#64748b" strokeWidth="14" fill="none" />
+        {Array.from({ length: 8 }, (_, j) => <circle key={j} cx={lerp(20, 280, ((p + j / 8) % 1))} cy={((p + j / 8) % 1) < 0.46 ? 60 : 140} r={2} fill="#22c55e" />)}
+        <rect x={276} y={110} width={30} height={14} rx={4} fill="#94a3b8" /><rect x={290} y={124} width={8} height={20} fill="#94a3b8" />
+        {[0, 1].map((j) => <Drop key={j} x={294} y={156 + ((p * 50 + j * 15) % 30)} s={5} />)}
+        <Mark x={250} y={60} ok r={13} />
+        <Tx x={80} y={40} s={t("a little chlorine all the way", "քիչ քլոր ողջ ճանապարհին", "немного хлора на всём пути")} lang={lang} size={9} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 10: giving a speech ---------------- */
+
+const speech: Mech = {
+  title: t("From idea to applause", "Գաղափարից մինչև ծափահարություններ", "От идеи до аплодисментов"),
+  hint: t("Nervousness is normal: even famous speakers feel it. It is energy you can use.", "Հուզվելը նորմալ է․ նույնիսկ հայտնի հռետորներն են այն զգում։ Դա էներգիա է, որը կարող ես օգտագործել։", "Волнение — это нормально: его чувствуют даже известные ораторы. Это энергия, которую можно использовать."),
+  caps: [
+    t("Write your main message in one sentence. If you can't, the audience won't get it either.", "Գրի՛ր հիմնական միտքդ մեկ նախադասությամբ։ Եթե չես կարողանում, լսարանն էլ չի հասկանա։", "Запиши главную мысль одним предложением. Если не получается, слушатели её тоже не поймут."),
+    t("Build it in three parts: a hook that grabs attention, three points, and an ending that returns to the hook.", "Կառուցի՛ր երեք մասից․ ուշադրություն գրավող սկիզբ, երեք կետ և ավարտ, որը վերադառնում է սկզբին։", "Построй из трёх частей: цепляющее начало, три пункта и концовка, которая возвращается к началу."),
+    t("Practise out loud at least three times, with a timer. Use short notes with key words, not a full text.", "Առնվազն երեք անգամ բարձրաձայն վարժվի՛ր՝ ժամաչափով։ Օգտագործի՛ր կարճ նշումներ բանալի բառերով, ոչ թե ամբողջական տեքստ։", "Прорепетируй вслух хотя бы три раза с таймером. Пользуйся короткими заметками с ключевыми словами, а не полным текстом."),
+    t("Before you start: breathe in for 4, hold for 4, out for 4. Stand tall, feet apart, and smile.", "Սկսելուց առաջ․ ներշնչի՛ր 4 վայրկյան, պահի՛ր 4, արտաշնչի՛ր 4։ Կանգնի՛ր ուղիղ, ոտքերը մի քիչ բաց, և ժպտա՛։", "Перед началом: вдох на 4, задержка на 4, выдох на 4. Встань прямо, ноги чуть врозь, улыбнись."),
+    t("While you speak, look at a few friendly faces in different parts of the room. Slow down and pause after key points.", "Խոսելիս նայի՛ր սենյակի տարբեր մասերում նստած մի քանի բարյացակամ դեմքի։ Դանդաղի՛ր և կարևոր մտքերից հետո դադար տուր։", "Во время речи смотри на несколько доброжелательных лиц в разных частях зала. Говори медленнее и делай паузы после главного."),
+    t("End clearly with \"Thank you\", then wait for the applause. Answer questions calmly; it's fine to say \"I'll find out\".", "Ավարտի՛ր հստակ՝ «Շնորհակալություն», և սպասի՛ր ծափահարություններին։ Հանգիստ պատասխանի՛ր հարցերին․ կարելի է ասել՝ «Կճշտեմ»։", "Чётко закончи словами «Спасибо» и подожди аплодисментов. Спокойно отвечай на вопросы; можно сказать «Я уточню»."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const stage = <g><rect width={320} height={220} fill="#fdf4ff" /><rect y={176} width={320} height={44} fill="#e9d5ff" /></g>;
+    if (i === 0) return (
+      <g>{stage}
+        <rect x={60} y={50} width={200} height={110} rx={8} fill="#fff" stroke="#c084fc" strokeWidth="2" />
+        {[0, 1, 2, 3].map((j) => <line key={j} x1={74} y1={80 + j * 20} x2={246} y2={80 + j * 20} stroke="#e9d5ff" />)}
+        <path d={`M76,96 h${lerp(0, 160, k)}`} stroke="#7c3aed" strokeWidth="4" strokeLinecap="round" />
+        <Tx x={160} y={40} s={t("one sentence", "մեկ նախադասություն", "одно предложение")} lang={lang} size={11} fill="#7c3aed" w={900} />
+      </g>
+    );
+    if (i === 1) {
+      const parts = [{ s: t("hook", "սկիզբ", "крючок"), c: "#f472b6" }, { s: t("1", "1", "1"), c: "#a78bfa" }, { s: t("2", "2", "2"), c: "#a78bfa" }, { s: t("3", "3", "3"), c: "#a78bfa" }, { s: t("ending", "ավարտ", "концовка"), c: "#f472b6" }];
+      return (
+        <g>{stage}
+          {parts.map((P, j) => (
+            <g key={j} opacity={Math.min(1, k * 5 - j + 0.5)}>
+              <rect x={20 + j * 58} y={86} width={50} height={40} rx={10} fill={P.c} />
+              <Tx x={45 + j * 58} y={110} s={P.s} lang={lang} size={10} fill="#fff" w={900} />
+            </g>
+          ))}
+          <Arrow d="M270,140 C220,190 100,190 50,140" c="#db2777" />
+        </g>
+      );
+    }
+    if (i === 2) return (
+      <g>{stage}
+        <Kid x={120} y={180} s={1.6} arms={[20, 120]} />
+        <rect x={140} y={92} width={34} height={24} rx={3} fill="#fff" stroke="#a78bfa" />
+        <circle cx={250} cy={80} r={30} fill="#fff" stroke="#7c3aed" strokeWidth="3" />
+        <path d={`M250,80 L250,54 A26,26 0 ${p > 0.5 ? 1 : 0} 1 ${250 + Math.sin(p * Math.PI * 2) * 26},${80 - Math.cos(p * Math.PI * 2) * 26} Z`} fill="#ddd6fe" />
+        <Tx x={250} y={130} s={t("× 3 out loud", "× 3 բարձրաձայն", "× 3 вслух")} lang={lang} size={11} w={900} />
+      </g>
+    );
+    if (i === 3) {
+      const ph = Math.floor(p * 3);
+      const r = ph === 0 ? lerp(18, 34, (p * 3) % 1) : ph === 1 ? 34 : lerp(34, 18, (p * 3) % 1);
+      return (
+        <g>{stage}
+          <Kid x={100} y={180} s={1.7} arms={[25, 25]} />
+          <circle cx={230} cy={90} r={r} fill="#c4b5fd" opacity={0.6} />
+          <Tx x={230} y={96} s={[t("in 4", "ներս 4", "вдох 4"), t("hold 4", "պահի՛ր 4", "держи 4"), t("out 4", "դուրս 4", "выдох 4")][ph]} lang={lang} size={12} w={900} />
+        </g>
+      );
+    }
+    if (i === 4) {
+      const look = Math.floor(p * 3);
+      return (
+        <g>{stage}
+          <Kid x={160} y={120} s={1.3} arms={[20, 60]} />
+          {[50, 160, 270].map((x, j) => (
+            <g key={x}>
+              <circle cx={x} cy={196} r={14} fill={SKIN} stroke={j === look ? "#7c3aed" : "none"} strokeWidth="3" />
+              <path d={`M${x - 5},${200} q5,4 10,0`} stroke={INK} strokeWidth="1.5" fill="none" />
+            </g>
+          ))}
+          <path d={`M160,70 L${[50, 160, 270][look]},180`} stroke="#7c3aed" strokeWidth="1.5" strokeDasharray="4 4" />
+          <Pill x={260} y={40} s={t("pause…", "դադար…", "пауза…")} lang={lang} w={70} />
+        </g>
+      );
+    }
+    return (
+      <g>{stage}
+        <Kid x={160} y={130} s={1.3} arms={[40, 40]} />
+        {Array.from({ length: 7 }, (_, j) => (
+          <g key={j}>
+            <circle cx={30 + j * 44} cy={200} r={13} fill={SKIN} />
+            <path d={`M${22 + j * 44},${180 - Math.abs(Math.sin(p * 12 + j)) * 6} l8,-6 M${38 + j * 44},${180 - Math.abs(Math.sin(p * 12 + j)) * 6} l-8,-6`} stroke={SKIN_D} strokeWidth="4" strokeLinecap="round" />
+          </g>
+        ))}
+        <Tx x={160} y={40} s={t("Thank you!", "Շնորհակալություն", "Спасибо!")} lang={lang} size={16} fill="#7c3aed" w={900} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 10: a monthly budget ---------------- */
+
+const Coin = ({ x, y, r = 10 }: { x: number; y: number; r?: number }) => (
+  <g><circle cx={x} cy={y} r={r} fill="#fbbf24" stroke="#b45309" strokeWidth="1.5" /><text x={x} y={y + r * 0.35} textAnchor="middle" fontSize={r} fontWeight="900" fill="#92400e">֏</text></g>
+);
+
+const budget: Mech = {
+  title: t("Planning your money", "Ինչպես պլանավորել գումարդ", "Как планировать деньги"),
+  hint: t("A budget is not about saying no to everything; it's about deciding in advance what matters most to you.", "Բյուջեն ամեն ինչին «ոչ» ասելը չէ․ դա նախապես որոշելն է, թե ինչն է քեզ համար ամենակարևորը։", "Бюджет — это не «нет» всему подряд, а заранее решить, что для тебя важнее всего."),
+  caps: [
+    t("Write down all the money you get in a month: pocket money, gifts, a summer job. Here it's 20,000 dram.", "Գրի՛ր այն ամբողջ գումարը, որ ստանում ես ամսական․ գրպանի փող, նվերներ, ամառային աշխատանք։ Այստեղ դա 20 000 դրամ է։", "Запиши все деньги, которые получаешь за месяц: карманные, подарки, летнюю подработку. Здесь это 20 000 драмов."),
+    t("Split it with the 50/30/20 rule: 50% for needs, 30% for wants, 20% for savings.", "Բաժանի՛ր 50/30/20 կանոնով․ 50%-ը՝ անհրաժեշտ բաների, 30%-ը՝ ցանկությունների, 20%-ը՝ խնայողության համար։", "Раздели по правилу 50/30/20: 50% на нужное, 30% на желания, 20% на сбережения."),
+    t("Pay yourself first: move the 20% into savings on the day you get the money, before you spend anything.", "Նախ վճարի՛ր ինքդ քեզ․ 20%-ը խնայողության մեջ դիր գումարը ստանալու օրը, նախքան որևէ բան ծախսելը։", "Сначала заплати себе: отложи 20% в день получения денег, прежде чем что-то тратить."),
+    t("Track every spend for a week: snacks, transport, games. Small amounts add up surprisingly fast.", "Մեկ շաբաթ գրանցի՛ր ամեն ծախս՝ նախուտեստ, տրանսպորտ, խաղեր։ Փոքր գումարները զարմանալիորեն արագ են կուտակվում։", "Неделю записывай каждую трату: перекусы, проезд, игры. Мелочи складываются удивительно быстро."),
+    t("Set a goal: headphones for 32,000 dram. Saving 4,000 a month, you'll have them in 8 months.", "Նպատակ դրի՛ր․ 32 000 դրամանոց ականջակալներ։ Ամսական 4000 խնայելով՝ դրանք կունենաս 8 ամսում։", "Поставь цель: наушники за 32 000 драмов. Откладывая 4000 в месяц, купишь их через 8 месяцев."),
+    t("At the end of the month, compare plan and reality, and adjust. Every month you get better at it.", "Ամսվա վերջում համեմատի՛ր պլանն ու իրականությունը և ճշգրտի՛ր։ Ամեն ամիս ավելի լավ կստացվի։", "В конце месяца сравни план с реальностью и поправь. С каждым месяцем получается лучше."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <rect width={320} height={220} fill="#f0fdf4" />;
+    const pie = (on: number) => {
+      const segs = [{ f: 0.5, c: "#60a5fa", s: t("needs 50%", "անհրաժեշտ 50%", "нужное 50%") }, { f: 0.3, c: "#f472b6", s: t("wants 30%", "ցանկություններ 30%", "желания 30%") }, { f: 0.2, c: "#22c55e", s: t("savings 20%", "խնայողություն 20%", "сбережения 20%") }];
+      let a0 = -Math.PI / 2;
+      return segs.map((sg, j) => {
+        const a1 = a0 + sg.f * 2 * Math.PI * on;
+        const large = sg.f * on > 0.5 ? 1 : 0;
+        const d = `M110,110 L${110 + Math.cos(a0) * 70},${110 + Math.sin(a0) * 70} A70,70 0 ${large} 1 ${110 + Math.cos(a1) * 70},${110 + Math.sin(a1) * 70} Z`;
+        a0 = a1;
+        return <g key={j}><path d={d} fill={sg.c} /><rect x={210} y={70 + j * 30} width={14} height={14} rx={3} fill={sg.c} /><Tx x={230} y={81 + j * 30} s={sg.s} lang={lang} size={9} anchor="start" /></g>;
+      });
+    };
+    if (i === 0) return (
+      <g>{bg}
+        {Array.from({ length: 8 }, (_, j) => <Coin key={j} x={40 + (j % 4) * 28} y={lerp(-20, 80 + Math.floor(j / 4) * 26, Math.min(1, k * 2 - j * 0.1))} r={12} />)}
+        <text x={232} y={110} textAnchor="middle" fontSize="26" fontWeight="900" fill="#15803d">20 000 ֏</text>
+        <Tx x={232} y={134} s={t("a month", "ամսական", "в месяц")} lang={lang} size={10} />
+      </g>
+    );
+    if (i === 1) return <g>{bg}{pie(k)}</g>;
+    if (i === 2) return (
+      <g>{bg}
+        <rect x={40} y={60} width={110} height={100} rx={10} fill="#fff" stroke="#94a3b8" />
+        <Tx x={95} y={50} s={t("wallet", "դրամապանակ", "кошелёк")} lang={lang} size={9} />
+        <g transform="translate(230,110)"><ellipse rx={44} ry={36} fill="#f9a8d4" /><circle cx={34} cy={-6} r={10} fill="#f9a8d4" /><rect x={-8} y={-38} width={16} height={4} fill="#831843" /><Tx x={0} y={50} s={t("savings first", "նախ՝ խնայողություն", "сначала копилка")} lang={lang} size={9} /></g>
+        <Coin x={lerp(95, 230, k)} y={lerp(110, 70, k)} r={14} />
+        <text x={lerp(95, 230, k)} y={lerp(140, 100, k)} textAnchor="middle" fontSize="11" fontWeight="900" fill="#15803d">4000</text>
+      </g>
+    );
+    if (i === 3) {
+      const rows = [t("snack 500", "նախուտեստ 500", "перекус 500"), t("bus 200", "ավտոբուս 200", "автобус 200"), t("snack 500", "նախուտեստ 500", "перекус 500"), t("game 1500", "խաղ 1500", "игра 1500"), t("snack 500", "նախուտեստ 500", "перекус 500")];
+      const shown = Math.min(rows.length, Math.floor(k * rows.length) + 1);
+      return (
+        <g>{bg}
+          <rect x={40} y={30} width={150} height={170} rx={6} fill="#fff" stroke="#cbd5e1" />
+          {rows.slice(0, shown).map((r, j) => <Tx key={j} x={56} y={60 + j * 24} s={r} lang={lang} size={10} anchor="start" />)}
+          <text x={250} y={110} textAnchor="middle" fontSize="22" fontWeight="900" fill={RED}>{[500, 700, 1200, 2700, 3200][shown - 1]} ֏</text>
+          <Tx x={250} y={132} s={t("in 5 days", "5 օրում", "за 5 дней")} lang={lang} size={9} />
+        </g>
+      );
+    }
+    if (i === 4) {
+      const m = Math.min(8, Math.floor(k * 8) + 1);
+      return (
+        <g>{bg}
+          <rect x={40} y={150} width={240} height={20} rx={10} fill="#dcfce7" stroke="#86efac" />
+          <rect x={40} y={150} width={240 * (m / 8)} height={20} rx={10} fill="#22c55e" />
+          <g transform="translate(160,80)"><path d="M-30,10 a30,30 0 0 1 60,0" stroke="#1f2937" strokeWidth="6" fill="none" /><rect x={-38} y={6} width={14} height={24} rx={5} fill="#1f2937" /><rect x={24} y={6} width={14} height={24} rx={5} fill="#1f2937" /></g>
+          <Tx x={160} y={196} s={t(`month ${m} of 8`, `${m === 1 ? "1-ին" : `${m}-րդ`} ամիս՝ 8-ից`, `месяц ${m} из 8`)} lang={lang} size={11} />
+          {m === 8 ? <Mark x={260} y={70} ok r={14} /> : null}
+        </g>
+      );
+    }
+    return (
+      <g>{bg}
+        <g opacity={0.35}>{pie(1)}</g>
+        <path d="M60,190 h200" stroke="#94a3b8" />
+        <Arrow d={`M${lerp(80, 240, k)},200 h0.1`} c="#7c3aed" />
+        <Tx x={160} y={30} s={t("plan → check → adjust", "պլան → ստուգում → ճշգրտում", "план → проверка → поправка")} lang={lang} size={12} fill="#7c3aed" w={900} />
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { puncture, factcheck, bread, purify, speech, budget };
 
 void [Adult, Drop, Flame, Ground, Kid, SKIN, SKIN_D, Sun, Tree, WATER, WOOD];

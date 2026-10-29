@@ -43,4 +43,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "fix-a-puncture": { emoji: "🚲", safety: "ask" },
   "spot-fake-news": { emoji: "🔍", safety: null },
   "bake-bread": { emoji: "🍞", safety: "ask" },
+  // grade 10
+  "water-purification": { emoji: "🚰", safety: null },
+  "give-a-speech": { emoji: "🎤", safety: null },
+  "make-a-budget": { emoji: "💰", safety: null },
 };
