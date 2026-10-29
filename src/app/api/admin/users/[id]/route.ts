@@ -22,9 +22,10 @@ export async function PATCH(req: Request, ctx: { params: Promise<{ id: string }>
   const existing = await db.select({ id: schema.users.id }).from(schema.users).where(eq(schema.users.id, id)).get();
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
   const { password, ...rest } = parsed.data;
+  // A new password also signs the pupil out on every device (see createUserToken).
   await db
     .update(schema.users)
-    .set({ ...rest, ...(password ? { passwordHash: hashPassword(password) } : {}) })
+    .set({ ...rest, ...(password ? { passwordHash: await hashPassword(password) } : {}) })
     .where(eq(schema.users.id, id))
     .run();
   const user = (await db.select().from(schema.users).where(eq(schema.users.id, id)).get())!;

@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "1b981e42-fc01-45b6-9da1-2dd8c64fec27",
+  "id": "3b9165f0-cde2-4e7e-ac38-fa272e700022",
   "prevId": "9c9ec815-41f6-476a-bc5c-8482aa916b67",
   "tables": {
     "answer_events": {
@@ -1156,6 +1156,13 @@
           "notNull": true,
           "autoincrement": false
         },
+        "host_user_id": {
+          "name": "host_user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
         "state": {
           "name": "state",
           "type": "text",
@@ -1184,6 +1191,13 @@
           "name": "live_games_touched",
           "columns": [
             "touched_at"
+          ],
+          "isUnique": false
+        },
+        "live_games_host": {
+          "name": "live_games_host",
+          "columns": [
+            "host_user_id"
           ],
           "isUnique": false
         }

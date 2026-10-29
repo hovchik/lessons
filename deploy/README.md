@@ -25,12 +25,16 @@ git clone https://github.com/hovchik/lessons.git /opt/lessons
 cd /opt/lessons
 echo "DOMAIN=lessons.example.am" > .env
 cat > .env.production <<EOF
-ADMIN_PASSWORD=choose-a-long-password
+ADMIN_PASSWORD=$(openssl rand -base64 15)
 ADMIN_SESSION_SECRET=$(openssl rand -base64 32)
 ANTHROPIC_API_KEY=
 EOF
 chmod 600 .env.production
+grep ADMIN_PASSWORD .env.production   # your admin password: keep it in a password manager
 ```
+
+The admin login allows 10 wrong passwords per 15 minutes from one address. After changing
+`ADMIN_PASSWORD`, run `docker compose up -d`; every admin session is then signed out.
 
 If the repository is private, `git clone` asks for a login: use your GitHub username and a
 [personal access token](https://github.com/settings/tokens) with read access to this repository.

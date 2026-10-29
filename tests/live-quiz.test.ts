@@ -87,7 +87,7 @@ test("a whole game: lobby, questions, reveals and podium, with the key hidden un
   assert.equal((await answer(pin, ani.token, 0, now)).error, "closed");
   await hostAct(pin, hostToken, "next", undefined, now);
   await hostAct(pin, hostToken, "kick", (ani2 as unknown as { playerId: string }).playerId, now);
-  assert.deepEqual((await playerView(pin, ani2.token, now)), { kicked: true });
+  assert.deepEqual(await playerView(pin, ani2.token, now), { kicked: true });
   await hostAct(pin, hostToken, "reveal", undefined, now);
   await hostAct(pin, hostToken, "next", undefined, now);
   const end = (await playerView(pin, ani.token, now))! as typeof pv;

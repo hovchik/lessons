@@ -1,5 +1,5 @@
-import { randomBytes } from "node:crypto";
-import { and, asc, count as countRows, eq, lt } from "drizzle-orm";
+import { randomBytes, randomInt, timingSafeEqual } from "node:crypto";
+import { and, asc, count as countRows, desc, eq, inArray, lt } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import type { I18nText } from "./db/schema";
 import { skillQuestions } from "./mastery";
@@ -29,6 +29,8 @@ type Game = {
   endsAt: number;
   /** In joining order. */
   players: Player[];
+  /** Tokens of removed players, so their phones can say so (any other token gets "no game"). */
+  kicked: string[];
 };
 
 // Results in the same shape as before, so callers can test `.error` or `.ok` on any of them.
@@ -37,10 +39,14 @@ type Done = { ok: true; error?: undefined };
 
 const IDLE_MS = 3 * 60 * 60 * 1000;
 const MAX_GAMES = 300;
+/** Open games per teacher; a new one closes their oldest, so one account can't fill the server. */
+const MAX_GAMES_PER_HOST = 3;
 /** Views keep a game alive, but write that down at most this often. */
 const TOUCH_MS = 60 * 1000;
 
 const token = () => randomBytes(18).toString("base64url");
+/** PINs from the crypto generator, so they can't be predicted from earlier ones. */
+const cryptoRandom = () => randomInt(0, 2 ** 31) / 2 ** 31;
 const lg = schema.liveGames;
 
 async function sweep(now: number) {
@@ -115,10 +121,13 @@ export async function createGame(hostUserId: string, skillId: string, count: num
 /** Opens a game in the lobby with questions already chosen. */
 export async function openGame(hostUserId: string, title: I18nText, questions: LiveQuestion[], seconds: number, now = Date.now()) {
   const db = await getDb();
-  const game: Game = { pin: "", hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: [] };
+  const mine = await db.select({ pin: lg.pin }).from(lg).where(eq(lg.hostUserId, hostUserId)).orderBy(desc(lg.touchedAt)).all();
+  const old = mine.slice(MAX_GAMES_PER_HOST - 1).map((g) => g.pin);
+  if (old.length) await db.delete(lg).where(inArray(lg.pin, old)).run();
+  const game: Game = { pin: "", hostToken: token(), hostUserId, title, questions, seconds, phase: "lobby", index: -1, startedAt: 0, endsAt: 0, players: [], kicked: [] };
   for (;;) {
-    game.pin = makePin();
-    const made = await db.insert(lg).values({ pin: game.pin, state: JSON.stringify(game), touchedAt: now }).onConflictDoNothing().run();
+    game.pin = makePin(cryptoRandom);
+    const made = await db.insert(lg).values({ pin: game.pin, hostUserId, state: JSON.stringify(game), touchedAt: now }).onConflictDoNothing().run();
     if (made.rowsAffected > 0) return { pin: game.pin, hostToken: game.hostToken };
   }
 }
@@ -146,13 +155,17 @@ function settle(g: Game, now: number) {
   return true;
 }
 
+const sameToken = (a: string, b: string) => {
+  const x = Buffer.from(a), y = Buffer.from(b);
+  return x.length === y.length && timingSafeEqual(x, y);
+};
 const playerBy = (g: Game, tok: string) => g.players.find((p) => p.token === tok);
 
 export async function answer(pin: string, tok: string, choice: number, now = Date.now()) {
-  const r = await update<Fail<"noplayer" | "closed" | "invalid"> | Done>(pin, now, (g) => {
+  const r = await update<Fail<"nogame" | "noplayer" | "closed" | "invalid"> | Done>(pin, now, (g) => {
     const settled = settle(g, now);
     const p = playerBy(g, tok);
-    if (!p) return { result: { error: "noplayer" as const }, changed: settled };
+    if (!p) return { result: { error: g.kicked.includes(tok) ? ("noplayer" as const) : ("nogame" as const) }, changed: settled };
     const q = g.questions[g.index];
     if (g.phase !== "question" || !q || p.answers[g.index]) return { result: { error: "closed" as const }, changed: settled };
     if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { result: { error: "invalid" as const }, changed: settled };
@@ -170,7 +183,7 @@ export type HostAction = "start" | "reveal" | "next" | "end" | "kick";
 
 export async function hostAct(pin: string, hostToken: string, action: HostAction, playerId?: string, now = Date.now()) {
   const r = await update<Fail<"nogame" | "empty"> | Done>(pin, now, (g) => {
-    if (g.hostToken !== hostToken) return { result: { error: "nogame" as const }, changed: false };
+    if (!sameToken(g.hostToken, hostToken)) return { result: { error: "nogame" as const }, changed: false };
     settle(g, now);
     const open = (i: number) => {
       g.phase = "question";
@@ -186,7 +199,11 @@ export async function hostAct(pin: string, hostToken: string, action: HostAction
       if (g.index + 1 < g.questions.length) open(g.index + 1);
       else g.phase = "podium";
     } else if (action === "end") g.phase = "podium";
-    else if (action === "kick" && playerId) g.players = g.players.filter((p) => p.id !== playerId);
+    else if (action === "kick" && playerId) {
+      const p = g.players.find((x) => x.id === playerId);
+      if (p) g.kicked.push(p.token);
+      g.players = g.players.filter((x) => x.id !== playerId);
+    }
     return { result: { ok: true as const }, changed: true };
   });
   return r ?? ({ error: "nogame" } as Fail<"nogame">);
@@ -202,7 +219,7 @@ const standings = (g: Game) => leaderboard(g.players.map((p) => ({ id: p.id, nam
 /** What the teacher's screen shows. */
 export async function hostView(pin: string, hostToken: string, now = Date.now()) {
   const g = await current(pin, now);
-  if (!g || g.hostToken !== hostToken) return null;
+  if (!g || !sameToken(g.hostToken, hostToken)) return null;
   const q = g.questions[g.index];
   const board = standings(g);
   const answers = g.players.map((p) => p.answers[g.index]).filter((a): a is Answer => !!a);
@@ -230,7 +247,8 @@ export async function playerView(pin: string, tok: string, now = Date.now()) {
   const g = await current(pin, now);
   if (!g) return null;
   const p = playerBy(g, tok);
-  if (!p) return { kicked: true as const };
+  // A made-up token learns nothing, not even that the PIN is in use.
+  if (!p) return g.kicked.includes(tok) ? { kicked: true as const } : null;
   const q = g.questions[g.index];
   const mine = p.answers[g.index];
   const board = standings(g);

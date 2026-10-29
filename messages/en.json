@@ -200,7 +200,7 @@
     "username": "Username",
     "usernameHint": "3–24 Latin letters, numbers, dots, dashes or underscores",
     "password": "Password",
-    "passwordHint": "At least 4 characters",
+    "passwordHint": "At least 6 characters",
     "displayName": "Your name",
     "grade": "Your grade",
     "gradeOptional": "Not set",
@@ -216,7 +216,8 @@
       "disabled": "This account is disabled. Ask your teacher or parent.",
       "not_configured": "Accounts are not set up on this server yet.",
       "generic": "Something went wrong. Try again.",
-      "password_short": "The password is too short: use at least 4 characters.",
+      "too_many": "Too many tries. Wait a few minutes and try again.",
+      "password_short": "The password is too short: use at least 6 characters.",
       "name_required": "Please enter your name."
     }
   },
@@ -713,7 +714,8 @@
       "network": "Couldn't connect. Try again.",
       "invalid": "Something went wrong. Try again.",
       "few": "This unit doesn't have enough multiple-choice questions yet. Pick another one.",
-      "busy": "Too many games are running right now. Try again in a few minutes."
+      "busy": "Too many games are running right now. Try again in a few minutes.",
+      "too_many": "Too many tries. Wait a few minutes and try again."
     },
     "kicked": "You were removed from the game.",
     "gameGone": "This game has ended.",

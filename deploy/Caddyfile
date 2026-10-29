@@ -1,4 +1,16 @@
 {$DOMAIN} {
 	encode zstd gzip
+
+	# Nothing the app takes is bigger than this (an admin saving a whole lesson or exam).
+	request_body {
+		max_size 5MB
+	}
+
+	header {
+		# Browsers only ever use HTTPS for this site after the first visit.
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+
 	reverse_proxy app:3000
 }

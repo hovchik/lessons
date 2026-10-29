@@ -593,11 +593,12 @@ export const liveGames = sqliteTable(
   "live_games",
   {
     pin: text("pin").primaryKey(),
+    hostUserId: text("host_user_id").notNull(),
     state: text("state").notNull(),
     version: integer("version").notNull().default(0),
     touchedAt: integer("touched_at").notNull(),
   },
-  (t) => [index("live_games_touched").on(t.touchedAt)],
+  (t) => [index("live_games_touched").on(t.touchedAt), index("live_games_host").on(t.hostUserId)],
 );
 
 export type PuzzleResult = typeof puzzleResults.$inferSelect;

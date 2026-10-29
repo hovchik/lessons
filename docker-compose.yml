@@ -9,6 +9,11 @@ services:
     environment:
       # Workers, one per core; 3 suits the 4-core server in deploy/README.md (Caddy gets the fourth).
       WEB_CONCURRENCY: ${WEB_CONCURRENCY:-3}
+      # Caddy sets X-Forwarded-For; the login limits count visitors by it.
+      TRUST_PROXY: "1"
+    # The app is reached only through Caddy (no ports: section), and can't gain new privileges.
+    security_opt:
+      - no-new-privileges:true
     volumes:
       - lessons-data:/data
 
