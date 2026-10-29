@@ -133,33 +133,74 @@ const isBlack = (m: number) => [1, 3, 6, 8, 10].includes(m % 12);
 /* ---------- sound ---------- */
 
 let ctx: AudioContext | null = null;
+let out: AudioNode | null = null;
+let wave: PeriodicWave | null = null;
+/** Phones only let audio start inside a tap that has ended (touchend, click), not on pointerdown. */
+function unlockOnNextGesture() {
+  const kick = () => {
+    if (ctx && ctx.state !== "running") void ctx.resume().catch(() => undefined);
+    if (!ctx || ctx.state === "running") ["pointerup", "touchend", "click", "keydown"].forEach((e) => document.removeEventListener(e, kick, true));
+  };
+  ["pointerup", "touchend", "click", "keydown"].forEach((e) => document.addEventListener(e, kick, true));
+}
 function audio(): AudioContext | null {
   if (typeof window === "undefined") return null;
   if (!ctx) {
     const AC = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (!AC) return null;
+    // iPhones mute Web Audio when the ring/silent switch is off; "playback" makes it sound like a video would.
+    const session = (navigator as unknown as { audioSession?: { type: string } }).audioSession;
+    if (session) try { session.type = "playback"; } catch { /* not allowed here */ }
     ctx = new AC();
+    // A gentle limiter, so chords and melody with accompaniment never crackle.
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -10;
+    comp.knee.value = 8;
+    comp.ratio.value = 6;
+    comp.connect(ctx.destination);
+    out = comp;
+    // A brighter, piano-like tone: the overtones keep low notes audible on small phone speakers.
+    const h = [0, 1, 0.55, 0.32, 0.22, 0.12, 0.08, 0.05, 0.03];
+    wave = ctx.createPeriodicWave(new Float32Array(h.length), new Float32Array(h));
+    unlockOnNextGesture();
   }
-  if (ctx.state === "suspended") void ctx.resume();
+  if (ctx.state !== "running") void ctx.resume().catch(() => undefined);
   return ctx;
+}
+/** Runs go() once the audio clock is running, so nothing is scheduled on a frozen clock. */
+function whenRunning(c: AudioContext, go: () => void) {
+  if (c.state === "running") go();
+  else c.resume().then(go, () => undefined);
 }
 const freq = (m: number) => 440 * Math.pow(2, (m - 69) / 12);
 
-/** One plucked-piano-like note: a triangle wave with a quick attack and a decaying tail. */
-function tone(c: AudioContext, nodes: OscillatorNode[], f: number, at: number, dur: number, vol: number) {
+/**
+ * One note: a piano-like strike that fades away, or (held) an even tone that lasts its full
+ * length, for the "how long is the sound" experiments.
+ */
+function tone(c: AudioContext, nodes: OscillatorNode[], f: number, at: number, dur: number, vol: number, held = false) {
   const t0 = c.currentTime + at;
   const o = c.createOscillator();
   const g = c.createGain();
-  o.type = "triangle";
+  if (wave) o.setPeriodicWave(wave);
+  else o.type = "triangle";
   o.frequency.value = f;
+  const end = t0 + Math.max(0.06, dur);
   g.gain.setValueAtTime(0.0001, t0);
-  g.gain.linearRampToValueAtTime(vol, t0 + 0.015);
-  g.gain.exponentialRampToValueAtTime(vol * 0.35, t0 + Math.max(0.05, dur * 0.6));
-  g.gain.linearRampToValueAtTime(0.0001, t0 + dur);
-  o.connect(g).connect(c.destination);
+  g.gain.linearRampToValueAtTime(vol, t0 + 0.012);
+  if (held) g.gain.setTargetAtTime(vol * 0.75, t0 + 0.012, 0.15);
+  // higher strings die away faster, like on a real piano
+  else g.gain.setTargetAtTime(vol * 0.05, t0 + 0.012, Math.min(1.2, 0.25 + 60 / f));
+  g.gain.setTargetAtTime(0.0001, end - 0.04, 0.02);
+  o.connect(g).connect(out ?? c.destination);
   o.start(t0);
-  o.stop(t0 + dur + 0.05);
+  o.stop(end + 0.15);
   nodes.push(o);
+  o.onended = () => {
+    g.disconnect();
+    const k = nodes.indexOf(o);
+    if (k >= 0) nodes.splice(k, 1);
+  };
 }
 /** A metronome or clap: a very short burst, higher for the strong beat. */
 function click(c: AudioContext, nodes: OscillatorNode[], at: number, strong: boolean) {
@@ -168,56 +209,82 @@ function click(c: AudioContext, nodes: OscillatorNode[], at: number, strong: boo
   const g = c.createGain();
   o.type = "square";
   o.frequency.value = strong ? 1568 : 1046;
-  g.gain.setValueAtTime(strong ? 0.18 : 0.1, t0);
+  g.gain.setValueAtTime(strong ? 0.22 : 0.13, t0);
   g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.06);
-  o.connect(g).connect(c.destination);
+  o.connect(g).connect(out ?? c.destination);
   o.start(t0);
   o.stop(t0 + 0.08);
   nodes.push(o);
+  o.onended = () => {
+    g.disconnect();
+    const k = nodes.indexOf(o);
+    if (k >= 0) nodes.splice(k, 1);
+  };
 }
+const silence = (nodes: OscillatorNode[]) => {
+  nodes.splice(0).forEach((n) => { try { n.stop(); } catch { /* already stopped */ } });
+};
 
-type Ev = { at: number; dur: number; notes?: number[]; click?: boolean; strong?: boolean; vol?: number; f?: number };
+type Ev = { at: number; dur: number; notes?: number[]; click?: boolean; strong?: boolean; vol?: number; f?: number; held?: boolean };
 
-/** Schedules a list of sounds and reports which one is sounding, for highlighting. */
+/**
+ * Schedules a list of sounds and reports which one is sounding, for highlighting. tap() sounds
+ * one key on its own: it does not stop the tune or move the highlight.
+ */
 function usePlayer() {
-  const bag = useRef<{ timers: number[]; nodes: OscillatorNode[] }>({ timers: [], nodes: [] });
+  const bag = useRef<{ timers: number[]; nodes: OscillatorNode[]; taps: OscillatorNode[]; run: number }>({ timers: [], nodes: [], taps: [], run: 0 });
   const [active, setActive] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
   const halt = () => {
     const b = bag.current;
+    b.run++;
     b.timers.forEach((id) => window.clearTimeout(id));
-    b.nodes.forEach((n) => { try { n.stop(); } catch { /* already stopped */ } });
     b.timers.length = 0;
-    b.nodes.length = 0;
+    silence(b.nodes);
   };
   useEffect(() => {
     const b = bag.current;
     return () => {
+      b.run++;
       b.timers.forEach((id) => window.clearTimeout(id));
-      b.nodes.forEach((n) => { try { n.stop(); } catch { /* already stopped */ } });
+      silence(b.nodes);
+      silence(b.taps);
     };
   }, []);
   const stop = () => { halt(); setActive(null); setPlaying(false); };
   const play = (evs: Ev[]) => {
     halt();
+    setActive(null);
     const c = audio();
-    if (!c || !evs.length) return;
+    if (!c || !evs.length) { setPlaying(false); return; }
     setPlaying(true);
-    evs.forEach((e, i) => {
-      if (e.click) click(c, bag.current.nodes, e.at, !!e.strong);
-      for (const m of e.notes ?? []) tone(c, bag.current.nodes, freq(m), e.at, e.dur, (e.vol ?? 0.28) / Math.max(1, (e.notes ?? []).length * 0.7));
-      if (e.f) tone(c, bag.current.nodes, e.f, e.at, e.dur, e.vol ?? 0.28);
-      bag.current.timers.push(window.setTimeout(() => setActive(i), e.at * 1000));
+    const b = bag.current;
+    const run = b.run;
+    whenRunning(c, () => {
+      if (run !== b.run) return;
+      evs.forEach((e, i) => {
+        const n = (e.notes ?? []).length;
+        if (e.click) click(c, b.nodes, e.at, !!e.strong);
+        for (const m of e.notes ?? []) tone(c, b.nodes, freq(m), e.at, e.dur, (e.vol ?? 0.3) / Math.max(1, n * 0.7), e.held);
+        if (e.f) tone(c, b.nodes, e.f, e.at, e.dur, e.vol ?? 0.3, e.held);
+        b.timers.push(window.setTimeout(() => setActive(i), e.at * 1000));
+      });
+      const end = Math.max(...evs.map((e) => e.at + e.dur));
+      b.timers.push(window.setTimeout(() => { setActive(null); setPlaying(false); }, end * 1000 + 60));
     });
-    const end = Math.max(...evs.map((e) => e.at + e.dur));
-    bag.current.timers.push(window.setTimeout(() => { setActive(null); setPlaying(false); }, end * 1000 + 60));
   };
-  return { active, playing, play, stop };
+  const tap = (m: number, dur = 0.9) => {
+    const c = audio();
+    if (!c) return;
+    const b = bag.current;
+    whenRunning(c, () => tone(c, b.taps, freq(m), 0, dur, 0.32));
+  };
+  return { active, playing, play, stop, tap };
 }
 
-function PlayButton({ playing, lang, onPlay, onStop, label }: { playing: boolean; lang: ArtLang; onPlay: () => void; onStop: () => void; label?: string }) {
+function PlayButton({ playing, lang, onPlay, onStop, label, plain }: { playing: boolean; lang: ArtLang; onPlay: () => void; onStop: () => void; label?: string; plain?: boolean }) {
   return (
-    <button type="button" className="art-btn is-primary" onClick={playing ? onStop : onPlay}>
+    <button type="button" className={plain ? "art-btn" : "art-btn is-primary"} onClick={playing ? onStop : onPlay}>
       {playing ? <Square className="size-4" aria-hidden="true" /> : <Play className="size-4" aria-hidden="true" />}
       {playing ? L(W.stop, lang) : label ?? L(W.play, lang)}
     </button>
@@ -324,18 +391,19 @@ const Q = {
   minor: t("minor", "փոքր", "малая"),
   tritone: t("tritone", "տրիտոն", "тритон"),
 };
-/** [steps, semitones] → quality; anything else is named only by its semitones. */
-const QUALITY: Record<string, keyof typeof Q> = {
-  "1,0": "perfect", "2,1": "minor", "2,2": "major", "3,3": "minor", "3,4": "major", "4,5": "perfect", "4,6": "tritone",
-  "5,6": "tritone", "5,7": "perfect", "6,8": "minor", "6,9": "major", "7,10": "minor", "7,11": "major", "8,12": "perfect",
-};
-function intervalName(lo: number, hi: number, lang: ArtLang) {
-  const steps = diatonic(hi) - diatonic(lo) + 1;
+/**
+ * Semitones → [steps, quality], the way school books name intervals between any two keys
+ * (C–E♭ is a minor third, F–B♭ a perfect fourth), whatever the spelling of the black keys.
+ */
+const BY_SEMIS: Array<[number, keyof typeof Q]> = [
+  [1, "perfect"], [2, "minor"], [2, "major"], [3, "minor"], [3, "major"], [4, "perfect"], [4, "tritone"],
+  [5, "perfect"], [6, "minor"], [6, "major"], [7, "minor"], [7, "major"], [8, "perfect"],
+];
+export function intervalName(lo: number, hi: number, lang: ArtLang) {
   const semis = hi - lo;
-  if (semis > 12) return { steps, semis, name: L(W.wide, lang), calm: null as boolean | null };
-  const q = QUALITY[`${steps},${semis}`];
+  if (semis > 12) return { steps: diatonic(hi) - diatonic(lo) + 1, semis, name: L(W.wide, lang), calm: null as boolean | null };
+  const [steps, q] = BY_SEMIS[semis];
   const base = STEP_NAMES[lang][steps - 1] ?? "";
-  if (!q) return { steps, semis, name: base, calm: null };
   if (q === "tritone") return { steps, semis, name: L(Q.tritone, lang), calm: false };
   const qn = L(Q[q], lang);
   const name = lang === "en" ? (q === "perfect" && (steps === 1 || steps === 8) ? base : `${qn} ${base}`) : `${qn} ${base}`;
@@ -363,11 +431,12 @@ function KeysMode({ spec, lang }: SimProps) {
   const marks: Record<number, string> = {};
   seq.forEach((m, i) => (marks[m] = scaleOpt && (i === 0 || i === seq.length - 1) ? ROOT_C : SCALE_C));
   const order = scaleOpt ? [...seq, ...seq.slice(0, -1).reverse()] : seq;
-  if (p.active != null && order[p.active] != null) marks[order[p.active]] = "#f59e0b";
-  else if (last != null) marks[last] = "#f59e0b";
+  const sounding = p.active != null ? order[p.active] ?? null : null;
+  const cur = sounding ?? last;
+  if (cur != null) marks[cur] = "#f59e0b";
   const press = (m: number) => {
     setLast(m);
-    p.play([{ at: 0, dur: 0.8, notes: [m] }]);
+    p.tap(m);
   };
   const playSeq = () => p.play(order.map((m, i) => ({ at: i * 0.42, dur: 0.5, notes: [m] })));
   const steps = scale.slice(1).map((m, i) => (m - scale[i] === 1 ? "½" : "1"));
@@ -397,7 +466,7 @@ function KeysMode({ spec, lang }: SimProps) {
         {scaleOpt && fixedRoot ? <Choice value={q} options={[["major", L(W.major, lang)], ["minor", L(W.minor, lang)]]} onChange={(v) => { p.stop(); setQ(v); }} /> : null}
       </div>
       <Readouts items={[
-        [L(W.note, lang), last != null ? full(last, lang) : "—", "#f59e0b"],
+        [L(W.note, lang), cur != null ? full(cur, lang) : "—", "#f59e0b"],
         ...(scaleOpt ? [[L(W.pattern, lang), steps.join(" "), SCALE_C] as [string, string, string]] : []),
       ]} />
     </ArtFrame>
@@ -416,7 +485,7 @@ function StaffMode({ spec, lang }: SimProps) {
   const cur = p.active != null ? notes[p.active] : sel;
   const marks: Record<number, string> = {};
   if (cur != null) marks[cur] = "#f59e0b";
-  const press = (m: number) => { setSel(m); p.play([{ at: 0, dur: 0.8, notes: [m] }]); };
+  const press = (m: number) => { if (p.playing) p.stop(); setSel(m); p.tap(m); };
   return (
     <ArtFrame kind="experiment" title={L(W.staff, lang)} body={spec.body || L(W.staffHint, lang)}>
       <Stage w={320} h={196} label={L(W.staff, lang)}>
@@ -484,7 +553,7 @@ function DurationsMode({ spec, lang }: SimProps) {
   const playRow = (k: number) => {
     const [d, n] = rows[k];
     setRow(k);
-    p.play(Array.from({ length: n }, (_, i) => ({ at: i * BEATS[d] * beat, dur: BEATS[d] * beat * 0.92, notes: [67] })));
+    p.play(Array.from({ length: n }, (_, i) => ({ at: i * BEATS[d] * beat, dur: BEATS[d] * beat * 0.92, notes: [67], held: true })));
   };
   const X0 = 82, WID = 230;
   return (
@@ -524,15 +593,25 @@ function RhythmMode({ spec, lang }: SimProps) {
   const per = Number(spec.opts.meter ?? 4) || 4;
   const [bpm, setBpm] = useState(Number(spec.opts.tempo ?? 90) || 90);
   const total = items.reduce((s, v) => s + BEATS[v[0] as Dur], 0);
-  const X0 = 16, WID = 290;
   let acc = 0;
   const starts = items.map((v) => { const s = acc; acc += BEATS[v[0] as Dur]; return s; });
+  // Each bar gets its own box with a little room on both sides, so bar lines never touch a note.
+  const nBars = Math.max(1, Math.ceil(total / per - 1e-9));
+  const X0 = 10, BW = 300 / nBars, PAD = 6;
+  const bars = Array.from({ length: nBars }, (_, k) => {
+    const idx = items.map((_, i) => i).filter((i) => Math.min(nBars - 1, Math.floor(starts[i] / per + 1e-9)) === k);
+    return { k, idx, x0: X0 + k * BW + PAD, width: BW - PAD * 2 - 8 };
+  });
+  const xOf = (i: number) => {
+    const bar = bars.find((b) => b.idx.includes(i)) ?? bars[0];
+    return bar.x0 + ((starts[i] - bar.k * per) / per) * bar.width + 8;
+  };
   const play = () => {
     const b = 60 / bpm;
     const evs: Ev[] = [];
     // one bar of count-in clicks, then the rhythm
     for (let i = 0; i < per; i++) evs.push({ at: i * b, dur: 0.06, click: true, strong: i === 0 });
-    items.forEach((v, i) => evs.push(v.endsWith("r") ? { at: (per + starts[i]) * b, dur: BEATS[v[0] as Dur] * b * 0.9 } : { at: (per + starts[i]) * b, dur: Math.min(BEATS[v[0] as Dur] * b * 0.9, 1.6), notes: [67] }));
+    items.forEach((v, i) => evs.push(v.endsWith("r") ? { at: (per + starts[i]) * b, dur: BEATS[v[0] as Dur] * b * 0.9 } : { at: (per + starts[i]) * b, dur: Math.min(BEATS[v[0] as Dur] * b * 0.9, 1.6), notes: [67], held: true }));
     p.play(evs);
   };
   const act = p.active != null && p.active >= per ? p.active - per : null;
@@ -540,12 +619,14 @@ function RhythmMode({ spec, lang }: SimProps) {
     <ArtFrame kind="experiment" title={L(W.rhythm, lang)} body={spec.body || L(W.rhythmHint, lang)}>
       <Stage w={320} h={92} label={L(W.rhythm, lang)}>
         <line x1="8" x2="312" y1="52" y2="52" stroke="#94a3b8" />
-        {Array.from({ length: Math.floor(total / per) + 1 }, (_, k) => k * per).filter((b) => b <= total).map((b) => (
-          <line key={b} x1={X0 + (b / total) * WID + 2} x2={X0 + (b / total) * WID + 2} y1="30" y2="62" stroke="#334155" strokeWidth={b === 0 || b === total ? 2 : 1.2} />
+        {Array.from({ length: nBars + 1 }, (_, k) => (
+          <line key={k} x1={X0 + k * BW} x2={X0 + k * BW} y1="30" y2="62" stroke="#334155" strokeWidth={k === nBars ? 2.4 : 1.2} />
         ))}
-        <Bar items={items} x0={X0} width={WID} y={52} total={total} active={act} />
+        {bars.map((bar) => (
+          <Bar key={bar.k} items={bar.idx.map((i) => items[i])} x0={bar.x0} width={bar.width} y={52} total={per} active={act != null && bar.idx.includes(act) ? bar.idx.indexOf(act) : null} />
+        ))}
         {items.map((v, i) => (
-          <text key={i} x={X0 + (starts[i] / total) * WID + 10} y="80" textAnchor="middle" fontSize="8" fontWeight="900" fill={act === i ? "#f59e0b" : "#475569"}>{v.endsWith("r") ? "·" : SYL[lang][v[0] as Dur]}</text>
+          <text key={i} x={xOf(i)} y="80" textAnchor="middle" fontSize="8" fontWeight="900" fill={act === i ? "#f59e0b" : "#475569"}>{v.endsWith("r") ? "·" : SYL[lang][v[0] as Dur]}</text>
         ))}
         {p.active != null && p.active < per ? <text x="310" y="14" textAnchor="end" fontSize="10" fontWeight="900" fill="#be123c">{p.active + 1}</text> : null}
       </Stage>
@@ -568,16 +649,27 @@ function MeterMode({ spec, lang }: SimProps) {
     const c = audio();
     if (!c) return;
     const nodes: OscillatorNode[] = [];
+    const timers = new Set<number>();
     let k = 0;
-    const tick = () => {
-      // in 6/8 the strong beats are 1 and (more gently) 4
-      click(c, nodes, 0, k % n === 0 || (n === 6 && k % n === 3));
-      setBeat(k % n);
-      k++;
+    let next = -1;
+    let id = 0;
+    // Clicks are booked a moment ahead on the audio clock, so the beat stays even when the page is busy.
+    const pump = () => {
+      if (c.state !== "running") return;
+      if (next < 0) next = c.currentTime + 0.05;
+      while (next < c.currentTime + 0.2) {
+        // in 6/8 the strong beats are 1 and (more gently) 4
+        const b = k % n;
+        click(c, nodes, next - c.currentTime, b === 0 || (n === 6 && b === 3));
+        const tid = window.setTimeout(() => { timers.delete(tid); setBeat(b); }, Math.max(0, (next - c.currentTime) * 1000));
+        timers.add(tid);
+        next += 60 / bpm;
+        k++;
+      }
     };
-    const first = window.setTimeout(tick, 0);
-    const id = window.setInterval(tick, (60 / bpm) * 1000);
-    return () => { window.clearTimeout(first); window.clearInterval(id); nodes.forEach((o) => { try { o.stop(); } catch { /* already stopped */ } }); };
+    let dead = false;
+    whenRunning(c, () => { if (!dead) { pump(); id = window.setInterval(pump, 50); } });
+    return () => { dead = true; window.clearInterval(id); timers.forEach((t) => window.clearTimeout(t)); silence(nodes); };
   }, [on, bpm, n]);
   const r = (i: number) => (i === 0 ? 20 : n === 6 && i === 3 ? 15 : 11);
   const gap = 300 / n;
@@ -610,6 +702,7 @@ function IntervalMode({ spec, lang }: SimProps) {
   const [lo, setLo] = useState(parseNote(spec.opts.from ?? "C4") ?? 60);
   const [hi, setHi] = useState(parseNote(spec.opts.to ?? "G4") ?? 67);
   const [which, setWhich] = useState<"lower" | "upper">("upper");
+  const [how, setHow] = useState<"m" | "h">("m");
   const keys = layout(6, 22);
   const a = Math.min(lo, hi), b = Math.max(lo, hi);
   const info = intervalName(a, b, lang);
@@ -619,7 +712,7 @@ function IntervalMode({ spec, lang }: SimProps) {
     if (which === "lower") na = m; else nb = m;
     if (na > nb) [na, nb] = [nb, na];
     setLo(na); setHi(nb);
-    p.play([{ at: 0, dur: 0.7, notes: [m] }]);
+    p.tap(m);
   };
   const x1 = keyCenter(keys, a), x2 = keyCenter(keys, b);
   return (
@@ -633,8 +726,8 @@ function IntervalMode({ spec, lang }: SimProps) {
         <Choice value={which} options={[["lower", L(W.lower, lang)], ["upper", L(W.upper, lang)]]} onChange={setWhich} />
       </div>
       <div className="art-row">
-        <PlayButton playing={p.playing} lang={lang} label={L(W.melodic, lang)} onPlay={() => p.play([{ at: 0, dur: 0.6, notes: [a] }, { at: 0.65, dur: 0.8, notes: [b] }])} onStop={p.stop} />
-        <button type="button" className="art-btn" onClick={() => p.play([{ at: 0, dur: 1.4, notes: [a, b] }])}>{L(W.harmonic, lang)}</button>
+        <PlayButton playing={p.playing && how === "m"} lang={lang} label={L(W.melodic, lang)} onPlay={() => { setHow("m"); p.play([{ at: 0, dur: 0.6, notes: [a] }, { at: 0.65, dur: 0.9, notes: [b] }]); }} onStop={p.stop} />
+        <PlayButton plain playing={p.playing && how === "h"} lang={lang} label={L(W.harmonic, lang)} onPlay={() => { setHow("h"); p.play([{ at: 0, dur: 1.4, notes: [a, b] }]); }} onStop={p.stop} />
       </div>
       <Readouts items={[
         [L(W.interval_, lang), info.name, "#334155"],
@@ -667,7 +760,7 @@ function ChordMode({ spec, lang }: SimProps) {
             <text x={(xs[k] + xs[k + 1]) / 2} y="16" textAnchor="middle" fontSize="8.5" fontWeight="900" fill={k === 0 ? "#059669" : "#475569"}>{notes[k + 1] - notes[k]}</text>
           </g>
         ))}
-        <g transform="translate(0 34)"><Keyboard keys={keys} y={0} h={88} lang={lang} marks={marks} onKey={(m) => p.play([{ at: 0, dur: 0.7, notes: [m] }])} /></g>
+        <g transform="translate(0 34)"><Keyboard keys={keys} y={0} h={88} lang={lang} marks={marks} onKey={(m) => p.tap(m)} /></g>
       </Stage>
       <div className="art-row">
         <PlayButton playing={p.playing} lang={lang} onPlay={play} onStop={p.stop} />
@@ -825,7 +918,7 @@ function ProgMode({ spec, lang }: SimProps) {
             </g>
           );
         })}
-        <g transform={`translate(0 ${rows * 46 + 2})`}><Keyboard keys={keys} y={0} h={86} lang={lang} marks={marks} onKey={(m) => p.play([{ at: 0, dur: 0.7, notes: [m] }])} /></g>
+        <g transform={`translate(0 ${rows * 46 + 2})`}><Keyboard keys={keys} y={0} h={86} lang={lang} marks={marks} onKey={(m) => p.tap(m)} /></g>
       </Stage>
       <div className="art-row">
         <PlayButton playing={p.playing} lang={lang} onPlay={() => p.play(evs)} onStop={p.stop} />
@@ -857,7 +950,7 @@ function SoundMode({ spec, lang }: SimProps) {
     const env = Math.min(1, i / 12, (240 - i) / 30);
     return `${x.toFixed(1)},${(46 - Math.sin((i / 240) * cycles * 2 * Math.PI) * amp * env).toFixed(1)}`;
   });
-  const play = () => p.play([{ at: 0, dur: len, f: freq(m), vol: [0.06, 0.18, 0.4][vol - 1] }]);
+  const play = () => p.play([{ at: 0, dur: len, f: freq(m), vol: [0.07, 0.2, 0.45][vol - 1], held: true }]);
   const pName = pitch >= 4 ? W.high : pitch <= 2 ? W.low : W.mid;
   const show = (k: string) => !focus || focus === k;
   return (
