@@ -95,3 +95,12 @@ export const drawingRelevance: RelevanceMap = {
     r("A real design project, from idea to finished piece, is the way designers work in every studio.", "Իրական դիզայն նախագիծը՝ գաղափարից մինչև պատրաստի աշխատանք, այն եղանակն է, որով դիզայներներն աշխատում են ցանկացած ստուդիայում։", "Настоящий дизайн-проект — от идеи до готовой работы — так работают дизайнеры в любой студии."),
   ],
 };
+
+export const astronomyRelevance: RelevanceMap = {
+  11: [
+    r("Telescopes use the same optics as the camera in your phone, and a sense of cosmic scale keeps news about asteroids and space missions in proportion.", "Աստղադիտակներն օգտագործում են նույն օպտիկան, ինչ քո հեռախոսի տեսախցիկը, իսկ տիեզերական մասշտաբների զգացողությունը օգնում է ճիշտ գնահատել աստերոիդների և տիեզերական առաքելությունների մասին լուրերը։", "В телескопах та же оптика, что и в камере твоего телефона, а чувство космических масштабов помогает трезво оценивать новости об астероидах и космических миссиях."),
+    r("Knowing the sky lets you find north without a phone, plan a photo of the Moon and understand why days grow longer and shorter.", "Երկինքն իմանալով՝ կարող ես առանց հեռախոսի գտնել հյուսիսը, ծրագրել Լուսնի լուսանկարը և հասկանալ, թե ինչու են օրերը երկարում ու կարճանում։", "Зная небо, можно найти север без телефона, спланировать снимок Луны и понять, почему дни становятся длиннее и короче."),
+    r("The same laws of motion steer every satellite that gives you GPS, weather forecasts and satellite TV.", "Շարժման նույն օրենքներն են ղեկավարում յուրաքանչյուր արբանյակ, որը քեզ տալիս է GPS, եղանակի կանխատեսում և արբանյակային հեռուստատեսություն։", "Те же законы движения управляют каждым спутником, который даёт тебе GPS, прогноз погоды и спутниковое телевидение."),
+    r("Other planets show how fragile the Earth's climate is, and the search for life on icy moons is one of the great adventures of your lifetime.", "Մյուս մոլորակները ցույց են տալիս, թե որքան փխրուն է Երկրի կլիման, իսկ սառցե արբանյակների վրա կյանքի որոնումը քո կյանքի մեծ արկածներից մեկն է։", "Другие планеты показывают, как хрупок климат Земли, а поиск жизни на ледяных спутниках — одно из великих приключений твоего времени."),
+  ],
+};
