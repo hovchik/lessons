@@ -23,4 +23,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "campfire": { emoji: "🔥", safety: "adult" },
   "useful-knots": { emoji: "🪢", safety: "care" },
   "needle-compass": { emoji: "🧲", safety: "ask" },
+  // grade 5
+  "river-water": { emoji: "💧", safety: "adult" },
+  "map-and-compass": { emoji: "🗺️", safety: "care" },
+  "if-you-get-lost": { emoji: "🌲", safety: "care" },
 };
