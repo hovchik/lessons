@@ -829,6 +829,281 @@ const solaroven: Mech = {
   },
 };
 
-export const MECHS: Record<string, Mech> = { riverwater, orientmap, lost, earthquake, burn, leanto, firesteel, knife, solaroven };
+/* ---------------- grade 8: CPR ---------------- */
+
+/** A person lying on their back, head to the right; `chest` pushes the chest down a little. */
+const Lying = ({ x, y, chest = 0, tilt = 0 }: { x: number; y: number; chest?: number; tilt?: number }) => (
+  <g>
+    <rect x={x - 120} y={y - 14} width={70} height={12} rx={6} fill="#1e3a8a" />
+    <path d={`M${x - 56},${y - 2} L${x - 56},${y - 26 + chest * 4} Q${x - 10},${y - 30 + chest * 5} ${x + 20},${y - 24} L${x + 20},${y - 2} Z`} fill="#0ea5e9" />
+    <g transform={`rotate(${-tilt} ${x + 30} ${y - 12})`}>
+      <circle cx={x + 38} cy={y - 14} r={12} fill={SKIN} />
+      <path d={`M${x + 44},${y - 24} q8,4 6,12`} stroke="#78350f" strokeWidth="5" fill="none" strokeLinecap="round" />
+      <circle cx={x + 42} cy={y - 18} r={1.2} fill={INK} />
+    </g>
+  </g>
+);
+
+/** A rescuer kneeling, seen from the side, facing right; `arms` angle 0 = straight down. */
+const Kneel = ({ x, y, lean = 0, push = 0 }: { x: number; y: number; lean?: number; push?: number }) => (
+  <g transform={`translate(0,${push * 5})`}>
+    <path d={`M${x - 30},${y} L${x - 4},${y} L${x - 4},${y - 22}`} stroke="#334155" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <g transform={`rotate(${lean} ${x - 4} ${y - 22})`}>
+      <rect x={x - 14} y={y - 66} width={22} height={46} rx={8} fill="#16a34a" />
+      <circle cx={x} cy={y - 78} r={11} fill={SKIN} />
+      <path d={`M${x - 11},${y - 80} a11,11 0 0 1 22,0 q-11,-5 -22,0 Z`} fill="#44403c" />
+    </g>
+  </g>
+);
+
+const cpr: Mech = {
+  title: t("Hands-only CPR", "Սրտի մերսում ձեռքերով", "Сердечно-лёгочная реанимация руками"),
+  hint: t("Practise only on a training dummy or a firm cushion, never on a person who is breathing.", "Վարժվի՛ր միայն ուսումնական մանեկենի կամ ամուր բարձի վրա, երբեք շնչող մարդու վրա։", "Тренируйся только на манекене или плотной подушке, никогда на дышащем человеке."),
+  caps: [
+    t("Someone collapses. Check it's safe for you, then tap their shoulders and shout: \"Are you all right?\"", "Ինչ-որ մեկն ընկնում է։ Ստուգի՛ր, որ քեզ համար անվտանգ է, հետո թփթփացրու ուսերին և բարձր հարցրու․ «Լա՞վ եք»։", "Человек падает. Убедись, что тебе ничего не угрожает, потом похлопай его по плечам и громко спроси: «Вы меня слышите?»"),
+    t("No answer? Tilt the head back, lift the chin, and look, listen and feel for normal breathing for up to 10 seconds.", "Պատասխան չկա՞։ Գլուխն ետ թեքի՛ր, կզակը բարձրացրու և մինչև 10 վայրկյան նայի՛ր, լսի՛ր և զգա՛, թե արդյոք նորմալ է շնչում։", "Нет ответа? Запрокинь голову, приподними подбородок и до 10 секунд смотри, слушай и чувствуй, дышит ли человек нормально."),
+    t("Not breathing normally? Call 112 on speaker and send someone to bring a defibrillator (AED).", "Նորմալ չի՞ շնչում։ Զանգի՛ր 112՝ բարձրախոսով, և մեկին ուղարկի՛ր դեֆիբրիլյատոր բերելու։", "Не дышит нормально? Позвони 112 по громкой связи и отправь кого-нибудь за дефибриллятором (АНД)."),
+    t("Kneel beside them. Put the heel of one hand in the centre of the chest, the other hand on top, arms straight.", "Ծնկի՛ իջիր կողքին։ Մի ձեռքի ափի հիմքը դի՛ր կրծքավանդակի կենտրոնում, մյուս ձեռքը՝ վրան, ձեռքերն ուղիղ։", "Встань на колени рядом. Положи основание ладони на центр грудной клетки, другую руку сверху, руки прямые."),
+    t("Push hard and fast: 5–6 cm deep, 100–120 times a minute. Let the chest come back up each time. Don't stop.", "Սեղմի՛ր ուժեղ և արագ․ 5–6 սմ խորությամբ, րոպեում 100–120 անգամ։ Ամեն անգամ թող կրծքավանդակը վերադառնա։ Մի՛ դադարիր։", "Нажимай сильно и быстро: на 5–6 см, 100–120 раз в минуту. Каждый раз давай груди подняться. Не останавливайся."),
+    t("When the AED arrives, switch it on and do exactly what its voice says. Keep pushing until help takes over.", "Երբ դեֆիբրիլյատորը գա, միացրո՛ւ այն և արա՛ ճիշտ այն, ինչ ասում է նրա ձայնը։ Շարունակի՛ր սեղմել, մինչև օգնությունը փոխարինի քեզ։", "Когда принесут АНД, включи его и делай точно то, что говорит его голос. Продолжай нажимать, пока тебя не сменят."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const floor = <g><rect width={320} height={220} fill="#f8fafc" /><rect y={176} width={320} height={44} fill="#e2e8f0" /></g>;
+    if (i === 0) return (
+      <g>{floor}
+        <Kneel x={150} y={178} lean={20} />
+        <Lying x={170} y={178} />
+        <Tx x={210} y={60} s={t("Are you all right?", "Լա՞վ եք", "Вы меня слышите?")} lang={lang} size={12} w={900} />
+        {[0, 1].map((j) => <path key={j} d={`M${186 + j * 10},${142 - wob(p, 4) * 3} l6,-6`} stroke={RED} strokeWidth="2" />)}
+      </g>
+    );
+    if (i === 1) return (
+      <g>{floor}
+        <Kneel x={190} y={178} lean={35} />
+        <Lying x={170} y={178} tilt={k * 25} />
+        <circle cx={260} cy={70} r={24} fill="#fff" stroke="#475569" strokeWidth="2.5" />
+        <path d={`M260,70 L260,50 A20,20 0 ${p > 0.5 ? 1 : 0} 1 ${260 + Math.sin(p * Math.PI * 2) * 20},${70 - Math.cos(p * Math.PI * 2) * 20} Z`} fill="#fde68a" />
+        <Tx x={260} y={110} s={t("≤ 10 s", "≤ 10 վ", "≤ 10 с")} lang={lang} size={11} />
+        <Tx x={90} y={60} s={t("look · listen · feel", "նայի՛ր · լսի՛ր · զգա՛", "смотри · слушай · чувствуй")} lang={lang} size={10} />
+      </g>
+    );
+    if (i === 2) return (
+      <g>{floor}
+        <Lying x={170} y={178} tilt={25} />
+        <g transform="translate(60,40)">
+          <rect x={0} y={0} width={56} height={96} rx={10} fill="#0f172a" />
+          <rect x={5} y={10} width={46} height={70} rx={4} fill="#dcfce7" />
+          <text x={28} y={40} textAnchor="middle" fontSize="16" fontWeight="900" fill={RED}>112</text>
+          {[0, 1, 2].map((j) => <path key={j} d={`M${60 + j * 7},${30 - j * 4} q8,14 0,28`} stroke="#16a34a" strokeWidth="2" fill="none" opacity={(Math.sin(p * 8 - j) + 1) / 2} />)}
+        </g>
+        <g transform={`translate(${lerp(320, 240, k)},60)`}>
+          <rect x={0} y={0} width={56} height={46} rx={8} fill="#16a34a" />
+          <path d="M28,10 l-8,14 h8 l-4,14 l12,-18 h-8 l4,-10 Z" fill="#fff" />
+          <Tx x={28} y={60} s={t("AED", "ԴԵՖ", "АНД")} lang={lang} size={10} fill="#15803d" />
+        </g>
+      </g>
+    );
+    if (i === 3) return (
+      <g>{floor}
+        <Kneel x={124} y={178} lean={0} />
+        <Lying x={170} y={178} tilt={25} />
+        <path d="M124,110 L140,148" stroke={SKIN_D} strokeWidth="7" strokeLinecap="round" />
+        <ellipse cx={142} cy={150} rx={10} ry={5} fill={SKIN} stroke={SKIN_D} />
+        <circle cx={142} cy={152} r={18 + wob(p, 2) * 2} fill="none" stroke={RED} strokeWidth="2" strokeDasharray="4 3" />
+        <Tx x={230} y={70} s={t("centre of the chest|arms straight", "կրծքի կենտրոն|ձեռքերն ուղիղ", "центр груди|руки прямые")} lang={lang} size={10} />
+      </g>
+    );
+    if (i === 4) {
+      const beat = (p * 8) % 1;
+      const push = beat < 0.5 ? Math.sin(beat * 2 * Math.PI) : 0;
+      const n = Math.min(30, Math.floor(p * 31) + 1);
+      return (
+        <g>{floor}
+          <Kneel x={124} y={178} push={push} />
+          <Lying x={170} y={178} tilt={25} chest={push} />
+          <path d={`M124,${110 + push * 5} L140,${148 + push * 5}`} stroke={SKIN_D} strokeWidth="7" strokeLinecap="round" />
+          <ellipse cx={142} cy={150 + push * 5} rx={10} ry={5} fill={SKIN} stroke={SKIN_D} />
+          <text x={250} y={70} textAnchor="middle" fontSize="30" fontWeight="900" fill={RED}>{n}</text>
+          <Tx x={250} y={96} s={t("5–6 cm · 100–120/min", "5–6 սմ · 100–120/րոպե", "5–6 см · 100–120/мин")} lang={lang} size={9} />
+        </g>
+      );
+    }
+    return (
+      <g>{floor}
+        <Lying x={170} y={178} tilt={25} />
+        <rect x={60} y={150} width={50} height={26} rx={6} fill="#16a34a" />
+        <path d="M85,154 l-6,9 h6 l-3,9 l9,-12 h-6 l3,-6 Z" fill="#fff" />
+        <path d="M110,160 C130,150 140,150 150,154 M110,166 C140,170 170,168 186,158" stroke="#0f172a" strokeWidth="2" fill="none" />
+        <rect x={140} y={150} width={14} height={10} rx={2} fill="#fef08a" stroke="#0f172a" /><rect x={180} y={152} width={14} height={10} rx={2} fill="#fef08a" stroke="#0f172a" />
+        <g opacity={0.5 + (Math.sin(p * 10) + 1) / 4}>
+          <Pill x={170} y={60} s={t("\"Don't touch the patient…\"", "«Մի՛ դիպչեք հիվանդին…»", "«Не прикасайтесь к пациенту…»")} lang={lang} w={190} size={10} fill="#dcfce7" stroke={GREEN} color="#15803d" />
+        </g>
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 8: choking ---------------- */
+
+/** A standing person seen from the side, facing right. */
+const Side = ({ x, y, shirt = "#6366f1", bend = 0, arm = 30, s = 1 }: { x: number; y: number; shirt?: string; bend?: number; arm?: number; s?: number }) => (
+  <g transform={`translate(${x},${y}) scale(${s})`}>
+    <line x1={-3} y1={-50} x2={-6} y2={0} stroke="#1e3a8a" strokeWidth="9" strokeLinecap="round" />
+    <line x1={4} y1={-50} x2={6} y2={0} stroke="#1e3a8a" strokeWidth="9" strokeLinecap="round" />
+    <g transform={`rotate(${bend} 0 -50)`}>
+      <rect x={-12} y={-100} width={24} height={52} rx={10} fill={shirt} />
+      <line x1={0} y1={-90} x2={Math.sin((arm * Math.PI) / 180) * 30} y2={-90 + Math.cos((arm * Math.PI) / 180) * 30} stroke={SKIN_D} strokeWidth="6" strokeLinecap="round" />
+      <circle cx={2} cy={-112} r={13} fill={SKIN} />
+      <path d="M-11,-114 a13,13 0 0 1 24,-4 q-12,-2 -24,4 Z" fill="#78350f" />
+      <circle cx={9} cy={-114} r={1.4} fill={INK} />
+    </g>
+  </g>
+);
+
+const choking: Mech = {
+  title: t("Helping someone who is choking", "Ինչպես օգնել շնչահեղձ եղող մարդուն", "Как помочь подавившемуся человеку"),
+  hint: t("Practise only the hand positions with a friend. Never really hit or squeeze someone who is not choking.", "Ընկերոջ հետ վարժվի՛ր միայն ձեռքերի դիրքերը։ Երբեք իսկապես մի՛ հարվածիր և մի՛ սեղմիր չշնչահեղձվողին։", "С другом тренируй только положение рук. Никогда по-настоящему не бей и не сжимай того, кто не подавился."),
+  caps: [
+    t("Someone suddenly can't speak or breathe and grabs their throat. This is the sign for choking.", "Ինչ-որ մեկը հանկարծ չի կարողանում խոսել կամ շնչել և բռնում է կոկորդը։ Սա շնչահեղձ լինելու նշանն է։", "Человек вдруг не может говорить или дышать и хватается за горло. Это знак удушья."),
+    t("Ask: \"Are you choking?\" If they can cough, tell them to keep coughing hard. Coughing is the best way out.", "Հարցրու․ «Շնչահեղձ ե՞ք լինում»։ Եթե կարող է հազալ, ասա՛, որ ուժեղ հազա։ Հազը լավագույն ելքն է։", "Спроси: «Вы подавились?» Если человек может кашлять, скажи ему сильно кашлять. Кашель — лучший выход."),
+    t("If they can't cough: lean them forward and give up to 5 sharp blows between the shoulder blades with the heel of your hand.", "Եթե չի կարողանում հազալ, թեքի՛ր նրան առաջ և ափի հիմքով թիակների միջև տուր մինչև 5 ուժեղ հարված։", "Если не может кашлять: наклони его вперёд и нанеси до 5 резких ударов основанием ладони между лопатками."),
+    t("Still stuck? Stand behind them, put your fist just above the belly button, and hold it with your other hand.", "Դեռ խցանված է՞։ Կանգնի՛ր նրա ետևում, բռունցքդ դի՛ր պորտից քիչ վերև և մյուս ձեռքով բռնի՛ր այն։", "Всё ещё застряло? Встань сзади, положи кулак чуть выше пупка и обхвати его другой рукой."),
+    t("Pull sharply inwards and upwards, up to 5 times. Each thrust pushes air up to pop the object out.", "Կտրուկ քաշի՛ր դեպի ներս և վեր՝ մինչև 5 անգամ։ Ամեն հրում օդը վեր է մղում, որ առարկան դուրս թռչի։", "Резко тяни внутрь и вверх, до 5 раз. Каждый толчок выталкивает воздух вверх, чтобы предмет вылетел."),
+    t("Keep switching 5 back blows and 5 thrusts, and call 112. If they collapse, start CPR.", "Շարունակի՛ր հերթափոխել 5 հարված մեջքին և 5 հրում, և զանգի՛ր 112։ Եթե ուշագնաց լինի, սկսի՛ր սրտի մերսումը։", "Чередуй 5 ударов по спине и 5 толчков и звони 112. Если человек потеряет сознание, начинай СЛР."),
+  ],
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const bg = <g><rect width={320} height={220} fill="#fff7ed" /><rect y={196} width={320} height={24} fill="#e7e5e4" /></g>;
+    if (i === 0) return (
+      <g>{bg}
+        <Side x={160} y={196} shirt="#f59e0b" arm={150} />
+        <Tx x={240} y={60} s={t("can't speak|can't breathe", "չի կարողանում խոսել|չի կարողանում շնչել", "не может говорить|не может дышать")} lang={lang} size={10} fill={RED} />
+        {[0, 1].map((j) => <path key={j} d={`M${178 + j * 6},${78 - wob(p, 5) * 2} l4,-6`} stroke={RED} strokeWidth="2" />)}
+      </g>
+    );
+    if (i === 1) return (
+      <g>{bg}
+        <Side x={200} y={196} shirt="#f59e0b" arm={150} />
+        <Side x={110} y={196} arm={60} />
+        <Tx x={110} y={56} s={t("Are you choking?", "Շնչահեղձ ե՞ք լինում", "Вы подавились?")} lang={lang} size={11} w={900} />
+        <Tx x={240} y={40} s={t("cough! cough!", "հա՛զ, հա՛զ", "кхе! кхе!")} lang={lang} size={11} fill="#0369a1" />
+      </g>
+    );
+    if (i === 2) {
+      const hit = (p * 5) % 1;
+      return (
+        <g>{bg}
+          <Side x={190} y={196} shirt="#f59e0b" bend={45} arm={10} />
+          <Side x={120} y={196} arm={lerp(130, 70, hit < 0.3 ? hit / 0.3 : 1)} />
+          <circle cx={168} cy={118} r={10 + hit * 6} fill="none" stroke={RED} strokeWidth="2" opacity={1 - hit} />
+          <text x={160} y={40} textAnchor="middle" fontSize="20" fontWeight="900" fill={RED}>× 5</text>
+        </g>
+      );
+    }
+    if (i === 3 || i === 4) {
+      const thrust = i === 4 ? Math.max(0, Math.sin(((p * 5) % 1) * Math.PI)) : 0;
+      return (
+        <g>{bg}
+          <Side x={180} y={196} shirt="#f59e0b" bend={15} arm={20} />
+          <Side x={150} y={196} arm={lerp(20, 80, i === 3 ? k : 1)} />
+          <circle cx={182 + thrust * -4} cy={134 - thrust * 6} r={8} fill={SKIN} stroke={SKIN_D} opacity={i === 3 ? k : 1} />
+          {i === 4 ? <Arrow d="M220,150 C200,140 196,120 196,100" c={RED} /> : <Tx x={250} y={130} s={t("fist above|the belly button", "բռունցք|պորտից վերև", "кулак выше|пупка")} lang={lang} size={9} />}
+          {i === 4 ? <text x={260} y={60} textAnchor="middle" fontSize="20" fontWeight="900" fill={RED}>× 5</text> : null}
+          {i === 4 && thrust > 0.8 ? <circle cx={204} cy={60 - thrust * 10} r={5} fill="#a16207" /> : null}
+        </g>
+      );
+    }
+    return (
+      <g>{bg}
+        <g transform="translate(160,110)">
+          <circle r={56} fill="#fff" stroke="#cbd5e1" strokeWidth="2" />
+          <Arrow d="M-40,-30 A50,50 0 0 1 40,-30" c="#7c3aed" /><Arrow d="M40,30 A50,50 0 0 1 -40,30" c="#7c3aed" />
+          <Tx x={-30} y={4} s={t("5 back|blows", "5 հարված|մեջքին", "5 ударов|по спине")} lang={lang} size={9} />
+          <Tx x={30} y={4} s={t("5|thrusts", "5|հրում", "5|толчков")} lang={lang} size={9} />
+        </g>
+        <Pill x={160} y={196} s={t("call 112", "զանգի՛ր 112", "звони 112")} lang={lang} w={100} size={11} fill="#fee2e2" stroke={RED} color={RED} />
+      </g>
+    );
+  },
+};
+
+/* ---------------- grade 8: thunder and lightning ---------------- */
+
+const thunder: Mech = {
+  title: t("How far is the storm?", "Որքա՞ն հեռու է ամպրոպը", "Далеко ли гроза?"),
+  hint: t("Sound travels about 1 km in 3 seconds; light arrives almost instantly.", "Ձայնը 3 վայրկյանում անցնում է մոտ 1 կմ, իսկ լույսը հասնում է գրեթե ակնթարթորեն։", "Звук проходит около 1 км за 3 секунды, а свет приходит почти мгновенно."),
+  caps: [
+    t("You see a flash of lightning. Start counting the seconds: one, two, three...", "Տեսնում ես կայծակի փայլատակում։ Սկսի՛ր հաշվել վայրկյանները՝ մեկ, երկու, երեք…", "Ты видишь вспышку молнии. Начинай считать секунды: раз, два, три…"),
+    t("Stop when you hear the thunder. Here it took 9 seconds.", "Կանգ առ, երբ լսես որոտը։ Այստեղ անցավ 9 վայրկյան։", "Остановись, когда услышишь гром. Здесь прошло 9 секунд."),
+    t("Divide by 3: 9 ÷ 3 = 3. The lightning struck about 3 km away.", "Բաժանի՛ր 3-ի․ 9 ÷ 3 = 3։ Կայծակը խփել է մոտ 3 կմ հեռու։", "Раздели на 3: 9 ÷ 3 = 3. Молния ударила примерно в 3 км."),
+    t("If you can hear thunder at all, you are close enough to be struck. Go inside a building or a car with a metal roof.", "Եթե ընդհանրապես որոտ ես լսում, բավական մոտ ես, որ կայծակը քեզ խփի։ Մտի՛ր շենք կամ մետաղե տանիքով մեքենա։", "Если ты вообще слышишь гром, ты достаточно близко, чтобы в тебя ударила молния. Зайди в здание или в машину с металлической крышей."),
+    t("Never shelter under a lone tree, on a hilltop, in an open field or in water. Lightning hits the tallest point.", "Երբեք մի՛ թաքնվիր միայնակ ծառի տակ, բլրի գագաթին, բաց դաշտում կամ ջրում։ Կայծակը խփում է ամենաբարձր կետին։", "Никогда не прячься под одиноким деревом, на вершине холма, в открытом поле или в воде. Молния бьёт в самую высокую точку."),
+    t("Wait 30 minutes after the last thunder before you go back outside.", "Վերջին որոտից հետո սպասի՛ր 30 րոպե, նոր դուրս արի։", "После последнего раската грома подожди 30 минут, прежде чем выходить."),
+  ],
+  dark: true,
+  draw: (i, p, lang) => {
+    const k = K(p);
+    const flash = i <= 1 && p < 0.08;
+    const sky = (
+      <g>
+        <rect width={320} height={220} fill={flash ? "#475569" : "#1e293b"} />
+        {[40, 110, 190, 260].map((x, j) => <ellipse key={x} cx={x} cy={36 + (j % 2) * 8} rx={50} ry={22} fill="#334155" />)}
+        <rect y={180} width={320} height={40} fill="#14532d" />
+      </g>
+    );
+    const bolt = (op: number) => <path d="M60,50 l-14,40 h14 l-18,50 l40,-60 h-16 l14,-30 Z" fill="#fde047" opacity={op} />;
+    if (i === 0 || i === 1) {
+      const n = i === 0 ? Math.min(9, Math.floor(p * 9) + 1) : 9;
+      return (
+        <g>{sky}{bolt(i === 0 ? Math.max(0, 1 - p * 3) : 0.15)}
+          <Kid x={230} y={182} arms={[20, 20]} />
+          <text x={230} y={100} textAnchor="middle" fontSize="34" fontWeight="900" fill="#fff">{n}</text>
+          {i === 1 ? <g>{[0, 1, 2].map((j) => <path key={j} d={`M${150 - j * 12},${130 - j * 10} q-12,${20 + j * 10} 0,${40 + j * 20}`} stroke="#e2e8f0" strokeWidth="3" fill="none" opacity={0.4 + (Math.sin(p * 20 + j) + 1) * 0.3} />)}<Tx x={150} y={200} s={t("BOOM!", "ԳՌՌ…", "БАХ!")} lang={lang} size={14} fill="#fde047" w={900} /></g> : null}
+        </g>
+      );
+    }
+    if (i === 2) return (
+      <g>{sky}{bolt(0.4)}
+        <line x1={60} y1={160} x2={230} y2={160} stroke="#fde047" strokeWidth="2" strokeDasharray="6 4" />
+        {[0, 1, 2, 3].map((j) => <line key={j} x1={60 + j * 56.7} y1={152} x2={60 + j * 56.7} y2={168} stroke="#fde047" strokeWidth="2" />)}
+        <Kid x={240} y={182} arms={[20, 20]} />
+        <text x={160} y={110} textAnchor="middle" fontSize="22" fontWeight="900" fill="#fff">9 ÷ 3 = 3</text>
+        <Tx x={145} y={148} s={t("3 km", "3 կմ", "3 км")} lang={lang} size={13} fill="#fde047" w={900} />
+      </g>
+    );
+    if (i === 3) return (
+      <g>{sky}
+        <rect x={180} y={110} width={100} height={72} fill="#fef3c7" /><path d="M170,112 l60,-40 l60,40 Z" fill="#b91c1c" />
+        <rect x={220} y={140} width={22} height={42} fill="#92400e" />
+        <Kid x={lerp(60, 230, k)} y={182} arms={[30, 30]} />
+        <Arrow d="M80,150 h120" c="#fde047" />
+        <Mark x={230} y={60} ok r={13} />
+      </g>
+    );
+    if (i === 4) return (
+      <g>{sky}
+        <Tree x={70} y={182} s={2.2} fill="#166534" />
+        <path d="M70,0 l-10,30 h10 l-14,40" stroke="#fde047" strokeWidth="4" fill="none" opacity={p < 0.15 ? 1 : 0.2} />
+        <Mark x={70} y={70} ok={false} r={13} />
+        <path d="M140,182 Q200,110 260,182 Z" fill="#166534" />
+        <Kid x={200} y={136} arms={[20, 20]} s={0.7} />
+        <Mark x={200} y={90} ok={false} r={13} />
+        <rect x={270} y={160} width={50} height={22} fill="#38bdf8" /><Mark x={295} y={140} ok={false} r={11} />
+      </g>
+    );
+    return (
+      <g>
+        <rect width={320} height={220} fill={i === 5 ? "#334155" : "#1e293b"} />
+        <rect y={180} width={320} height={40} fill="#14532d" />
+        <circle cx={160} cy={100} r={44} fill="#fff" />
+        <path d={`M160,100 L160,60 A40,40 0 ${k > 0.5 ? 1 : 0} 1 ${160 + Math.sin(k * Math.PI * 2) * 40},${100 - Math.cos(k * Math.PI * 2) * 40} Z`} fill="#93c5fd" />
+        <text x={160} y={168} textAnchor="middle" fontSize="16" fontWeight="900" fill="#fff">30 min</text>
+      </g>
+    );
+  },
+};
+
+export const MECHS: Record<string, Mech> = { riverwater, orientmap, lost, earthquake, burn, leanto, firesteel, knife, solaroven, cpr, choking, thunder };
 
 void [Bubbles, GREEN, Hand, SKIN, SOIL, WOOD];

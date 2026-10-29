@@ -35,4 +35,8 @@ export const HOWTO_META: Record<string, HowtoMeta> = {
   "fire-without-matches": { emoji: "✨", safety: "adult" },
   "pocket-knife": { emoji: "🔪", safety: "adult" },
   "solar-oven": { emoji: "☀️", safety: "ask" },
+  // grade 8
+  "cpr": { emoji: "🫀", safety: "care" },
+  "choking-first-aid": { emoji: "🆘", safety: "care" },
+  "thunderstorm-safety": { emoji: "⛈️", safety: "care" },
 };
