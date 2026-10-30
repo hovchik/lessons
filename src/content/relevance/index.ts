@@ -13,6 +13,7 @@ import {
   technologyRelevance,
   worldHistoryRelevance,
 } from "./humanities";
+import { howtoRelevance } from "./howto";
 
 /** subject id → grade → one line per unit. */
 export const RELEVANCE: Record<string, RelevanceMap> = {
@@ -37,6 +38,7 @@ export const RELEVANCE: Record<string, RelevanceMap> = {
   technology: technologyRelevance,
   chess: chessRelevance,
   astronomy: astronomyRelevance,
+  howto: howtoRelevance,
 };
 
 /** The "why learn this" line for a unit (position is 1-based), if there is one. */

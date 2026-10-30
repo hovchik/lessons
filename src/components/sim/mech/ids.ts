@@ -17,6 +17,9 @@ export const MECH_GROUPS = {
   sci: ["moonphases"],
   inf: ["website", "packets", "fetchcycle", "https", "stackqueue"],
   tech: ["cup", "hedgehog", "tshirt", "card", "papermaking", "symmetry", "fox", "running", "button", "popup", "mosaic", "wheel", "backstitch", "bean", "coilpot", "pompom", "board", "lockstitch", "wallplug", "lavash", "printer3d", "linefollower"],
+  howto1: ["handwash", "callhelp", "beanjar", "shoelaces", "crossroad", "butterjar", "shadowstick", "nosebleed", "pinecone", "campfire", "reefknot", "needlecompass"],
+  howto2: ["riverwater", "orientmap", "lost", "earthquake", "burn", "leanto", "firesteel", "knife", "solaroven", "cpr", "choking", "thunder"],
+  howto3: ["puncture", "factcheck", "bread", "purify", "speech", "budget", "phishing", "interview", "layers", "compound", "tyre", "bleeding"],
   geo: ["midpoint", "bisectAngle", "perpendicular", "copyAngle", "sss", "parallelLine", "angleSum", "threePerp", "cubeSection"],
 } as const;
 
