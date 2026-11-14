@@ -519,4 +519,33 @@ export const HIST2_TIMELINES: Record<string, TimeSet> = {
       E(1898, t("The Curies discover polonium and radium", "Կյուրիները հայտնաբերում են պոլոնիումը և ռադիումը", "Кюри открывают полоний и радий")),
     ],
   },
+  wchinaindia: {
+    title: t("China and India since 1947", "Չինաստանը և Հնդկաստանը 1947 թվականից", "Китай и Индия с 1947 года"),
+    events: [
+      E(1947, t("India becomes independent", "Հնդկաստանը դառնում է անկախ", "Индия становится независимой")),
+      E(1949, t("The People's Republic of China", "Չինաստանի Ժողովրդական Հանրապետություն", "Китайская Народная Республика")),
+      E(1958, t("The Great Leap Forward and famine", "«Մեծ թռիչք» և սով", "«Большой скачок» и голод"), undefined, { to: 1962 }),
+      E(1966, t("The Cultural Revolution", "Մշակութային հեղափոխություն", "Культурная революция"), undefined, { to: 1976 }),
+      E(1978, t("Deng Xiaoping's reforms begin", "Սկսվում են Դեն Սյաոպինի բարեփոխումները", "Начало реформ Дэн Сяопина")),
+      E(1980, t("Shenzhen special economic zone", "Շենչժենի ազատ տնտեսական գոտի", "Особая экономическая зона Шэньчжэнь")),
+      E(1991, t("India's market reforms", "Հնդկաստանի շուկայական բարեփոխումները", "Рыночные реформы в Индии")),
+      E(2001, t("China joins the WTO", "Չինաստանն անդամակցում է ԱՀԿ-ին", "Китай вступает в ВТО")),
+      E(2010, t("China becomes the world's second economy", "Չինաստանը դառնում է աշխարհի երկրորդ տնտեսությունը", "Китай становится второй экономикой мира")),
+      E(2023, t("India becomes the most populous country", "Հնդկաստանը դառնում է ամենաբազմամարդ երկիրը", "Индия становится самой населённой страной")),
+    ],
+  },
+  wdigital: {
+    title: t("The digital revolution", "Թվային հեղափոխությունը", "Цифровая революция"),
+    events: [
+      E(1946, t("ENIAC", "ENIAC", "ENIAC")),
+      E(1947, t("The transistor", "Տրանզիստոր", "Транзистор")),
+      E(1964, t("The Nairi computer in Yerevan", "«Նաիրի» համակարգիչը Երևանում", "Компьютер «Наири» в Ереване"), undefined, { c: true }),
+      E(1965, t("Moore's law", "Մուրի օրենքը", "Закон Мура")),
+      E(1969, t("ARPANET", "ARPANET", "ARPANET")),
+      E(1981, t("The IBM PC", "IBM PC", "IBM PC")),
+      E(1991, t("The World Wide Web goes public", "Համաշխարհային ցանցը հասանելի է դառնում բոլորին", "Всемирная паутина становится общедоступной")),
+      E(2001, t("Wikipedia", "Վիքիպեդիա", "Википедия")),
+      E(2007, t("The smartphone era begins", "Սկսվում է սմարթֆոնների դարաշրջանը", "Начало эпохи смартфонов")),
+    ],
+  },
 };
