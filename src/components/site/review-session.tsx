@@ -13,6 +13,7 @@ import { answerText, defaultResponse, isComplete, isRight, localKey, localShown,
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
 import { LookBack } from "@/components/site/look-back";
+import { TutorHelp } from "@/components/site/tutor-help";
 
 type Result = { correct: boolean; nextInDays: number | null; saved: boolean };
 
@@ -20,7 +21,7 @@ type Result = { correct: boolean; nextInDays: number | null; saved: boolean };
  * One Daily Review session: a question at a time, the answer checked on the
  * server (which reschedules the card), then a short summary at the end.
  */
-export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; more: boolean }) {
+export function ReviewSession({ items: initial, more, tutor = false }: { items: ReviewItem[]; more: boolean; tutor?: boolean }) {
   const t = useTranslations("review");
   const tg = useTranslations("grade");
   // The queue is fixed for the session, even if the page re-renders.
@@ -158,6 +159,7 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
             </div>
             {item.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(item.explanation, locale)}</p>}
             {!result.correct && item.look && <LookBack look={item.look} href={item.href} lessonTitle={pick(item.refTitle, locale)} />}
+            {!result.correct && tutor && !item.explanation && /^(quiz|exam):/.test(item.itemId) && <TutorHelp key={item.itemId} itemId={item.itemId} mode="why" response={chosen} />}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button size="lg" className="w-full sm:w-auto" onClick={next}>
                 {isLast ? t("finish") : t("next")}

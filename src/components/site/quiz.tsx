@@ -8,6 +8,7 @@ import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
 import { LookBack } from "@/components/site/look-back";
+import { TutorHelp } from "@/components/site/tutor-help";
 import { lessonChange, notifyChanged, type LessonProgressRow } from "@/lib/live";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
@@ -17,6 +18,8 @@ type Props = {
   questions: LocalQuestion[];
   /** When set (signed-in pupil), a finished quiz is saved to /api/progress/quiz. */
   save?: { lessonId: string } | null;
+  /** The hint tutor is on for this pupil (signed in, and the server has a Claude key). */
+  tutor?: boolean;
 };
 
 /** With four or more options, a wrong first try also crosses out one other wrong option as the hint. */
@@ -34,7 +37,7 @@ const same = (a: QuizResponse | undefined, b: QuizResponse | undefined) => JSON.
  * first try gets one more go (with a hint for multiple choice) before the
  * answer is shown. The score counts first tries.
  */
-export function Quiz({ questions, save }: Props) {
+export function Quiz({ questions, save, tutor = false }: Props) {
   const t = useTranslations("lesson");
   const tl = useTranslations("look");
   // The answer being given, the first checked answer with its confidence, and the second try.
@@ -165,6 +168,7 @@ export function Quiz({ questions, save }: Props) {
                         {tl("peek")}
                       </button>
                     ))}
+                  {tutor && <TutorHelp itemId={qq.itemId} mode="hint" response={first[i]} />}
                   <Button
                     size="sm"
                     className="w-full sm:w-auto"
@@ -190,6 +194,7 @@ export function Quiz({ questions, save }: Props) {
                 <p className="fx-in rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
               {done && !firstRight && qq.look && <LookBack look={qq.look} />}
+              {done && !firstRight && tutor && !qq.explanation && <TutorHelp itemId={qq.itemId} mode="why" response={second[i] ?? first[i]} />}
             </li>
           );
         })}

@@ -796,5 +796,14 @@
     "showInLesson": "Show it in the lesson",
     "openLesson": "Read it in the lesson",
     "peek": "Look it up in the lesson first"
+  },
+  "tutor": {
+    "hint": "Ask the tutor for a hint",
+    "moreHint": "One more hint",
+    "why": "Why was my answer wrong?",
+    "thinking": "Thinking…",
+    "from": "Tutor",
+    "busy": "The tutor has had a lot of questions. Try again a little later.",
+    "failed": "The tutor couldn't answer just now. Rereading the lesson passage can help."
   }
 }

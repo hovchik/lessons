@@ -16,6 +16,7 @@ import { checkArtBlocks } from "../src/lib/art/validate";
 import { checkSimBlocks } from "../src/components/sim/validate";
 import { VISUALS } from "../src/content/visuals";
 import { QUESTIONS } from "../src/content/questions";
+import { EXPLANATIONS, explanationKey, questionPrint } from "../src/content/explanations";
 import { questionProblems } from "../src/content/questions/validate";
 import { WORKED } from "../src/content/worked";
 import { workedProblems } from "../src/content/worked/validate";
@@ -190,6 +191,20 @@ for (const e of drawn)
     const l = c?.units.flatMap((u) => u.lessons).find((x) => `${courseId(c.subject, c.grade)}-${x.slug}` === q.ref!.lessonId);
     if (!l || !l.quiz?.[q.ref!.index]) errors.push(`${e.id}: question points to a missing lesson question ${q.ref!.lessonId}#${q.ref!.index}`);
   }
+
+// Generated explanations (scripts/explain.ts): each must still belong to its question.
+{
+  const all = courses.flatMap((c) => c.units.flatMap((u) => u.lessons.flatMap((l) => (l.quiz ?? []).map((q, i) => ({ c, l, q, i })))));
+  const withWhy = all.filter((x) => x.q.explanation).length;
+  console.log(`${withWhy} of ${all.length} quiz questions have an explanation.`);
+  for (const [subject, map] of Object.entries(EXPLANATIONS))
+    for (const [key, e] of Object.entries(map)) {
+      const hit = all.find((x) => x.c.subject === subject && explanationKey(x.c.grade, x.l.slug, x.i) === key);
+      if (!hit) errors.push(`explanation ${subject} ${key}: no such question`);
+      else if (questionPrint(hit.q) !== e.q) console.log(`  stale explanation ${subject} ${key}: the question changed, so it is not shown (run npm run explain again)`);
+      for (const lang of ["en", "hy", "ru"] as const) if (!e[lang]?.trim()) errors.push(`explanation ${subject} ${key}: missing ${lang}`);
+    }
+}
 
 const tipCheck = checkTips();
 errors.push(...tipCheck.errors);

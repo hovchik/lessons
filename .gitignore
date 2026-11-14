@@ -46,3 +46,4 @@ next-env.d.ts
 
 # server backups (deploy/backup.sh)
 /backups
+.explain-batch.json

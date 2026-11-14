@@ -16,6 +16,7 @@ import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
 import { getLesson } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
+import { tutorEnabled } from "@/server/tutor";
 import { getWarmup } from "@/server/warmup";
 import { lessonLooks, withLooks } from "@/server/look";
 import { LookTarget } from "@/components/site/look-back";
@@ -120,7 +121,7 @@ export default async function LessonPage({ params }: { params: Params }) {
 
       {ready && <RecallPrompt bodyId="lesson-body" objectives={objectives} hasQuiz={lesson.quiz.length > 0} />}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l, lesson.id, looks?.[l as "en" | "hy" | "ru"] ?? [])} save={user ? { lessonId: lesson.id } : null} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l, lesson.id, looks?.[l as "en" | "hy" | "ru"] ?? [])} save={user ? { lessonId: lesson.id } : null} tutor={!!user && tutorEnabled()} />}
 
       {ready && (
         <LessonProgressCard
