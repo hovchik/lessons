@@ -235,4 +235,6 @@ export const grade10: VisualMap[number] = {
       ru: ["В соматической клетке дрозофилы 2n = 8. Сколько хромосом в ней в анафазе митоза?", ["4", "8", "16", "32"], "В анафазе каждая хроматида становится отдельной хромосомой: 4n = 16."],
     }),
   ],
+  "cell-theory-microscopy": ["bars set=sizes", "diagram animalcell"],
+  "dna-replication": ["mechanism dna", "mechanism mitosis"],
 };
