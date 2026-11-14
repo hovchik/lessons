@@ -114,6 +114,25 @@ Generated lessons are stored with `source = "claude"` and published automaticall
 generated from the admin panel stay in draft until you review and publish them. The model defaults to
 `claude-opus-5-5` and can be changed with `CLAUDE_MODEL`.
 
+## Hint tutor and quiz explanations
+
+With `ANTHROPIC_API_KEY` set, signed-in pupils can ask for a hint on the second try of a quiz question
+(a nudge, then a bigger step; a hint never names the answer) and, for questions without a written
+explanation, ask why their answer was wrong. Hints are stored in the database, so each wrong answer to a
+question is sent to Claude once. `TUTOR=off` switches it off, `TUTOR_MODEL` picks the model and
+`TUTOR_DAILY_LIMIT` (default 3000) caps the calls per day; each pupil can make 40 an hour.
+
+Most quiz questions have no written explanation. This script writes them in three languages with Claude,
+through the Batches API at half price, into `src/content/explanations/<subject>.json`:
+
+```bash
+npm run explain -- --dry-run                     # how many are missing, and a rough cost
+npm run explain -- --subject physics --grade 7   # one course
+npm run explain                                  # all of them (resumable: run it again after stopping)
+```
+
+Read the new files over, then `npm run content:check && npm run db:seed`.
+
 ## Project layout
 
 ```
