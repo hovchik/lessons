@@ -273,7 +273,7 @@ export const HIST2_TIMELINES: Record<string, TimeSet> = {
       E(1988, t("7 December, 11:41: the earthquake", "Դեկտեմբերի 7, 11:41. երկրաշարժ", "7 декабря, 11:41: землетрясение"), t("About 25 thousand dead and 500 thousand homeless.", "Մոտ 25 հազար զոհ և 500 հազար անօթևան։", "Около 25 тысяч погибших и 500 тысяч оставшихся без крова.")),
       E(1989, t("Metsamor is shut down; the Karabakh Committee is freed (May)", "Փակվում է Մեծամորը. ազատ են արձակվում «Ղարաբաղ» կոմիտեի անդամները (մայիս)", "Закрыта Мецаморская АЭС; освобождён комитет «Карабах» (май)")),
       E(1995, t("A Metsamor unit is restarted", "Վերագործարկվում է Մեծամորի էներգաբլոկը", "Перезапущен энергоблок Мецамора")),
-      E(1990, t("Rebuilding begins; many families live in temporary huts for decades", "Սկսվում է վերակառուցումը. շատ ընտանիքներ տասնամյակներ ապրում են ժամանակավոր տնակներում", "Начинается восстановление; многие семьи десятилетиями живут во временных домиках"), t("Especially in Gyumri.", "Հատկապես Գյումրիում։", "Особенно в Гюмри.")),
+      E(1990, t("Rebuilding begins; many families live in temporary huts for decades", "Սկսվում է վերակառուցումը. շատ ընտանիքներ տասնամյակներ ապրում են ժամանակավոր տնակներում", "Начинается восстановление; многие семьи десятилетиями живут во временных домиках"), t("Especially in Gyumri.", "Հատկապես Գյումրիում։", "Особенно в Гюмри."), { c: true }),
     ],
   },
   econ91: {
@@ -340,7 +340,7 @@ export const HIST2_TIMELINES: Record<string, TimeSet> = {
       E(882, t("Oleg unites Novgorod and Kiev", "Օլեգը միավորում է Նովգորոդն ու Կիևը", "Олег объединяет Новгород и Киев")),
       E(988, t("The baptism of Rus under Vladimir", "Ռուսիայի քրիստոնեացումը Վլադիմիրի օրոք", "Крещение Руси при Владимире")),
       E(1019, t("Yaroslav the Wise", "Յարոսլավ Իմաստուն", "Ярослав Мудрый"), undefined, { to: 1054 }),
-      E(1240, t("Batu destroys Kiev", "Բաթուն ավերում է Կիևը", "Батый разоряет Киев"), undefined, { to: 1480, c: true }),
+      E(1240, t("Batu destroys Kiev; tribute to the Golden Horde", "Բաթուն ավերում է Կիևը. հարկ Ոսկե Հորդային", "Батый разоряет Киев; дань Золотой Орде"), undefined, { to: 1480 }),
       E(1380, t("Battle of Kulikovo", "Կուլիկովոյի ճակատամարտը", "Куликовская битва")),
       E(1480, t("Stand on the Ugra: the end of dependence", "Կանգնում Ուգրայի վրա. կախվածության վերջը", "Стояние на Угре: конец зависимости")),
     ],
