@@ -44,6 +44,11 @@ npm run dev                    # http://localhost:3000/en  (or /hy, /ru)
 
 Admin panel: <http://localhost:3000/admin> (password from `ADMIN_PASSWORD`).
 
+## Deploying to a server
+
+`docker compose up -d --build` runs the app behind Caddy (automatic HTTPS) with the database in a
+Docker volume. Step-by-step setup, backups, updates and sizing: [deploy/README.md](deploy/README.md).
+
 ## Student accounts and progress
 
 Pupils create their own account at `/en/signup` (username + password, optional grade; no email). Signed-in
@@ -108,6 +113,36 @@ npm run generate -- --limit 25               # first 25 empty lessons overall
 Generated lessons are stored with `source = "claude"` and published automatically by the script; lessons
 generated from the admin panel stay in draft until you review and publish them. The model defaults to
 `claude-opus-5-5` and can be changed with `CLAUDE_MODEL`.
+
+## Hint tutor and quiz explanations
+
+With `ANTHROPIC_API_KEY` set, signed-in pupils can ask for a hint on the second try of a quiz question
+(a nudge, then a bigger step; a hint never names the answer) and, for questions without a written
+explanation, ask why their answer was wrong. Hints are stored in the database, so each wrong answer to a
+question is sent to Claude once. `TUTOR=off` switches it off, `TUTOR_MODEL` picks the model and
+`TUTOR_DAILY_LIMIT` (default 3000) caps the calls per day; each pupil can make 40 an hour.
+
+Most quiz questions have no written explanation. This script writes them in three languages with Claude,
+through the Batches API at half price, into `src/content/explanations/<subject>.json`:
+
+```bash
+npm run explain -- --dry-run                     # how many are missing, and a rough cost
+npm run explain -- --subject physics --grade 7   # one course
+npm run explain                                  # all of them (resumable: run it again after stopping)
+```
+
+Read the new files over, then `npm run content:check && npm run db:seed`.
+
+## Classes, parents and offline use
+
+- **Classes** (`/classes`): any account can open a class and give pupils its 6-letter code. The class page
+  shows each pupil's last 7 days and the questions several of them got wrong, with a report per pupil.
+  Pupils can leave; the teacher can remove a pupil or delete the class.
+- **Parent link**: on the same page a pupil can make a read-only link to their progress for a parent.
+  Making a new one or turning it off stops the old one.
+- **Offline**: a service worker (`public/sw.js`, production builds only) keeps every lesson that was opened,
+  and "Save for offline" on a course page stores all its lessons. Quiz results finished offline are kept in
+  the browser and sent when the connection is back. After changing `sw.js`, raise its `VERSION`.
 
 ## Project layout
 

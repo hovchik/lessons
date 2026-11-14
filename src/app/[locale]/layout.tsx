@@ -1,3 +1,4 @@
+import { OfflineSupport } from "@/components/site/offline-support";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -80,6 +81,7 @@ export default async function LocaleLayout({
             {/* Space for the fixed bottom tab bar on phones. */}
             <div className="pb-safe h-16 md:hidden" aria-hidden="true" />
             <MobileNav />
+            <OfflineSupport />
           </LiveUserProvider>
         </NextIntlClientProvider>
       </body>

@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isAdmin } from "@/server/auth";
+import { contentChanged } from "@/server/content-cache";
 import { getDb, schema } from "@/server/db/client";
 
 const i18n = z.object({ en: z.string(), hy: z.string(), ru: z.string() });
@@ -18,6 +19,7 @@ const Body = z.object({
         explanation: i18n.optional(),
         points: z.number().int().min(1).max(20).optional(),
         topic: i18n.optional(),
+        ref: z.object({ lessonId: z.string().max(200), slug: z.string().max(200), index: z.number().int().min(0) }).optional(),
       }),
     )
     .min(1)
@@ -43,6 +45,7 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
     .set({ ...parsed.data, source: "admin", updatedAt: new Date().toISOString() })
     .where(eq(schema.exams.id, id))
     .run();
+  await contentChanged();
   const exam = await db.select().from(schema.exams).where(eq(schema.exams.id, id)).get();
   return NextResponse.json({ exam });
 }

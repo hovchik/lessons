@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { quizPick } from "./shown";
 
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-warmup-"));
 process.env.DATABASE_PATH = path.join(dir, "test.db");
@@ -112,8 +113,10 @@ test("for a pupil, questions due for review come before new ones", async () => {
   assert.equal(items[1].itemId.split("#")[0], "quiz:m2");
 });
 
+const pick4 = (id: string, written: (number | null)[]) => written.map((a, i) => (a === null ? null : quizPick(id, i, a, 4)));
+
 test("a warm-up answer creates the card where the question lives and logs the warm-up", async () => {
-  const r = await m.review.answerItem({ userId: "u1", itemId: "quiz:m2#1", response: 1, source: "warmup", confidence: 2 });
+  const r = await m.review.answerItem({ userId: "u1", itemId: "quiz:m2#1", response: quizPick("m2", 1, 1, 4), source: "warmup", confidence: 2 });
   assert.equal(r?.correct, true);
   assert.ok((r?.nextInDays ?? 0) >= 1);
   const c = await card("quiz:m2#1");
@@ -129,10 +132,10 @@ test("a warm-up answer creates the card where the question lives and logs the wa
 
 test("quiz confidence and a second try are saved; only the first try counts and moves the card", async () => {
   // q0 right and sure, q1 wrong then right on the retry, q2 wrong twice, q3 a right guess.
-  const progress = await m.progress.recordQuizResult({ userId: "u1", lessonId: "m4", answers: [0, 0, 0, 3], confidence: [2, 2, 0, 0], retries: [null, 1, 1, null] });
+  const progress = await m.progress.recordQuizResult({ userId: "u1", lessonId: "m4", answers: pick4("m4", [0, 0, 0, 3]) as number[], confidence: [2, 2, 0, 0], retries: pick4("m4", [null, 1, 1, null]) });
   assert.equal(progress?.lastScore, 2);
   const q1 = await events("quiz:m4#1");
-  assert.deepEqual(q1.map((e) => [e.correct, e.choice, e.confidence, e.hintUsed]), [[false, 0, 2, false], [true, 1, null, true]]);
+  assert.deepEqual(q1.map((e) => [e.correct, e.choice, e.confidence, e.hintUsed]), [[false, quizPick("m4", 1, 0, 4), 2, false], [true, quizPick("m4", 1, 1, 4), null, true]]);
   const c1 = await card("quiz:m4#1");
   assert.equal(c1?.lastCorrect, false, "the retry does not move the card");
   assert.ok(new Date(c1!.due).getTime() <= Date.now() + DAY + 1000);
@@ -143,13 +146,13 @@ test("quiz confidence and a second try are saved; only the first try counts and 
   // The notebook shows the first (scheduled) answer, not the hinted retry, and flags a sure mistake.
   const notebook = await m.review.getMistakes("u1");
   const n1 = notebook.find((i) => i.itemId === "quiz:m4#1");
-  assert.equal(n1?.lastResponse, 0);
+  assert.equal(n1?.lastResponse, quizPick("m4", 1, 0, 4));
   assert.equal(n1?.wasSure, true);
   assert.equal(notebook.find((i) => i.itemId === "quiz:m4#2")?.wasSure, false);
 });
 
 test("bad second tries are ignored and mismatched lists refused", async () => {
-  await m.progress.recordQuizResult({ userId: "u2", lessonId: "m4", answers: [0, 0, 0, 0], retries: [1, 0, 9, null] });
+  await m.progress.recordQuizResult({ userId: "u2", lessonId: "m4", answers: pick4("m4", [0, 0, 0, 0]) as number[], retries: [quizPick("m4", 0, 1, 4), quizPick("m4", 1, 0, 4), 9, null] });
   assert.equal((await events("quiz:m4#0")).filter((e) => e.userId === "u2").length, 1, "no retry after a right answer");
   assert.equal((await events("quiz:m4#1")).filter((e) => e.userId === "u2").length, 1, "a retry must pick another option");
   assert.equal((await events("quiz:m4#2")).filter((e) => e.userId === "u2").length, 1, "a retry must be a real option");

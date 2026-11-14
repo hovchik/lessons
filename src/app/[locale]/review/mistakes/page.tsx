@@ -6,6 +6,8 @@ import { buttonClasses } from "@/components/ui/button";
 import { answerText, isRight, localKey, localShown, responseText } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import { getMistakes } from "@/server/review";
+import { withLooks } from "@/server/look";
+import { LookBack } from "@/components/site/look-back";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
 export const dynamic = "force-dynamic";
@@ -23,7 +25,8 @@ export default async function MistakesPage({ params }: { params: Promise<{ local
   const user = await getCurrentUser();
   if (!user) redirect({ href: `/login?next=${encodeURIComponent("/review/mistakes")}`, locale });
   const u = user!;
-  const [t, tg, l, items] = await Promise.all([getTranslations("review"), getTranslations("grade"), getLocale(), getMistakes(u.id)]);
+  const [t, tg, l, mistakes] = await Promise.all([getTranslations("review"), getTranslations("grade"), getLocale(), getMistakes(u.id)]);
+  const items = await withLooks(mistakes, l);
   await touchLastSeen(u.id);
 
   // Group by course, in the order the notebook lists them (latest mistake first).
@@ -103,7 +106,8 @@ export default async function MistakesPage({ params }: { params: Promise<{ local
                         </span>
                       </p>
                       {m.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(m.explanation, l)}</p>}
-                      {m.href && (
+                      {m.look && <LookBack look={m.look} href={m.href} />}
+                      {m.href && !m.look && (
                         <Link href={m.href} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
                           <BookOpen className="size-4" aria-hidden="true" />
                           {m.source === "exam" ? t("openExam") : t("readLesson")}

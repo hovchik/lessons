@@ -8,6 +8,7 @@
  */
 import fs from "node:fs";
 import { and, eq, notInArray, sql } from "drizzle-orm";
+import { contentChanged } from "../src/server/content-cache";
 import { DB_PATH, getDb, schema } from "../src/server/db/client";
 import { courses, subjects, courseId } from "../src/content";
 import { exams } from "../src/content/exams";
@@ -194,6 +195,9 @@ async function run() {
   console.log(
     `Seeded ${subjects.length} subjects, ${courses.length} courses, ${unitsCount} units, ${lessonsCount} lessons (${withContent} with full content, ${lessonsCount - withContent} outlines).`,
   );
+
+  // A running server drops the content it keeps in memory (src/server/content-cache.ts).
+  await contentChanged();
 
   // Rewritten rows leave free pages behind and the write-ahead log grows; compact the file.
   await db.run(sql`PRAGMA wal_checkpoint(TRUNCATE)`);

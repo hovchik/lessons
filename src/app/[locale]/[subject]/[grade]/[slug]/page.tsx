@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Clock, Hammer, Languages, ListChecks } from "luc
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { Markdown } from "@/components/site/markdown";
+import { StaticMarkdown } from "@/components/site/static-markdown";
 import { LessonChecks } from "@/components/site/lesson-checks";
 import { LessonProgressCard } from "@/components/site/lesson-progress";
 import { Quiz } from "@/components/site/quiz";
@@ -16,7 +16,10 @@ import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
 import { getLesson } from "@/server/queries";
 import { getCurrentUser } from "@/server/user-auth";
+import { tutorEnabled } from "@/server/tutor";
 import { getWarmup } from "@/server/warmup";
+import { lessonLooks, withLooks } from "@/server/look";
+import { LookTarget } from "@/components/site/look-back";
 
 type Params = Promise<{ locale: string; subject: string; grade: string; slug: string }>;
 
@@ -36,7 +39,12 @@ export default async function LessonPage({ params }: { params: Params }) {
   const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { lesson, course, subject: subj, unit, unitIndex, prev, next } = data;
   const ready = lesson.status === "published" && hasContent(lesson.content);
-  const [progress, warmup] = await Promise.all([user ? getLessonProgress(user.id, lesson.id) : undefined, ready ? getWarmup(lesson.id, user?.id ?? null) : []]);
+  const [progress, warmupItems, looks] = await Promise.all([
+    user ? getLessonProgress(user.id, lesson.id) : undefined,
+    ready ? getWarmup(lesson.id, user?.id ?? null) : [],
+    ready && lesson.quiz.length ? lessonLooks(lesson.id) : null,
+  ]);
+  const warmup = await withLooks(warmupItems, l);
   // Quick checks are numbered so a pupil's first pick can be saved (src/lib/checks.ts).
   const body = numberChecks(pick(lesson.content, l));
   const own = lesson.objectives?.[l as "en" | "hy" | "ru"];
@@ -93,7 +101,7 @@ export default async function LessonPage({ params }: { params: Params }) {
       {ready ? (
         <div id="lesson-body" className="clay p-4 sm:p-10" lang={fallbackToArmenian ? "hy" : undefined}>
           <LessonChecks lessonId={user ? lesson.id : null}>
-            <Markdown lang={l}>{body}</Markdown>
+            <StaticMarkdown lang={l}>{body}</StaticMarkdown>
           </LessonChecks>
         </div>
       ) : (
@@ -109,9 +117,11 @@ export default async function LessonPage({ params }: { params: Params }) {
         </div>
       )}
 
+      {ready && <LookTarget />}
+
       {ready && <RecallPrompt bodyId="lesson-body" objectives={objectives} hasQuiz={lesson.quiz.length > 0} />}
 
-      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l, lesson.id)} save={user ? { lessonId: lesson.id } : null} />}
+      {ready && lesson.quiz.length > 0 && <Quiz questions={localQuiz(lesson.quiz, l, lesson.id, looks?.[l as "en" | "hy" | "ru"] ?? [])} save={user ? { lessonId: lesson.id } : null} tutor={!!user && tutorEnabled()} />}
 
       {ready && (
         <LessonProgressCard

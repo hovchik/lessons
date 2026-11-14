@@ -16,8 +16,9 @@ import { answerText, defaultResponse, isComplete, localKey, localShown, type Key
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
 import type { PracticeQuestion } from "@/server/practice";
+import { LookBack, type LookData } from "@/components/site/look-back";
 
-type Feedback = { correct: boolean; key: Key<I18nText>; explanation: I18nText | null; lessonHref: string; next: PracticeQuestion | null; readiness: number; level: MasteryLevel | null };
+type Feedback = { correct: boolean; key: Key<I18nText>; explanation: I18nText | null; look?: Record<"en" | "hy" | "ru", LookData | null> | null; lessonHref: string; next: PracticeQuestion | null; readiness: number; level: MasteryLevel | null };
 
 const STRETCH: Record<Stretch, string> = {
   easy: "bg-emerald-50 text-success",
@@ -201,12 +202,13 @@ export function PracticeSession({
           <div className="fx-in space-y-3">
             <p role="status" className={cn("text-lg font-extrabold", feedback.correct ? "text-success" : "text-destructive")}>{feedback.correct ? t("correct") : t("incorrect")}</p>
             {feedback.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(feedback.explanation, locale)}</p>}
+            {!feedback.correct && feedback.look?.[locale as "en" | "hy" | "ru"] && <LookBack look={feedback.look[locale as "en" | "hy" | "ru"]!} href={feedback.lessonHref} lessonTitle={pick(q.lessonTitle, locale)} />}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button size="lg" className="w-full sm:w-auto" onClick={next}>
                 {feedback.next ? t("next") : t("finish")}
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Button>
-              {!feedback.correct && (
+              {!feedback.correct && !feedback.look?.[locale as "en" | "hy" | "ru"] && (
                 <Link href={feedback.lessonHref} className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted">
                   <BookOpen className="size-4" aria-hidden="true" />
                   {t("readLesson")}

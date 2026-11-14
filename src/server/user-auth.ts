@@ -1,4 +1,5 @@
-import { createHmac, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, randomBytes, scrypt, timingSafeEqual } from "node:crypto";
+import { promisify } from "node:util";
 import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { cache } from "react";
@@ -16,7 +17,8 @@ export const USER_COOKIE = "lessons_user";
 const TTL_SECONDS = 60 * 60 * 24 * 30;
 
 export const USERNAME_RE = /^[a-z0-9_.-]{3,24}$/;
-export const MIN_PASSWORD = 4;
+/** For new passwords; older, shorter ones keep working. */
+export const MIN_PASSWORD = 6;
 
 function secret() {
   const s = process.env.ADMIN_SESSION_SECRET;
@@ -30,18 +32,27 @@ export function accountsConfigured() {
 
 /* ---------------------------------------------------------------- passwords */
 
-export function hashPassword(password: string) {
+// Async so a login doesn't hold up every other request while it hashes (about 45 ms).
+const scryptAsync = promisify(scrypt) as (password: string, salt: string, keylen: number) => Promise<Buffer>;
+
+export async function hashPassword(password: string) {
   const salt = randomBytes(16).toString("base64url");
-  const hash = scryptSync(password.normalize("NFKC"), salt, 32).toString("base64url");
+  const hash = (await scryptAsync(password.normalize("NFKC"), salt, 32)).toString("base64url");
   return `scrypt$${salt}$${hash}`;
 }
 
-export function verifyPassword(password: string, stored: string) {
+export async function verifyPassword(password: string, stored: string) {
   const [algo, salt, hash] = stored.split("$");
   if (algo !== "scrypt" || !salt || !hash) return false;
   const expected = Buffer.from(hash, "base64url");
-  const actual = scryptSync(password.normalize("NFKC"), salt, expected.length);
+  const actual = await scryptAsync(password.normalize("NFKC"), salt, expected.length);
   return actual.length === expected.length && timingSafeEqual(actual, expected);
+}
+
+/** Checked against when the username doesn't exist, so a wrong username takes as long as a wrong password. */
+const DUMMY_HASH = `scrypt$${randomBytes(16).toString("base64url")}$${randomBytes(32).toString("base64url")}`;
+export async function burnPasswordCheck(password: string) {
+  await verifyPassword(password, DUMMY_HASH);
 }
 
 /* ------------------------------------------------------------------ tokens */
@@ -62,14 +73,27 @@ export function checkSignature(payload: string, sig: string) {
   return sig.length === expected.length && timingSafeEqual(Buffer.from(sig), Buffer.from(expected));
 }
 
-export function createUserToken(userId: string) {
+/**
+ * A short fingerprint of the password hash, carried in the cookie: a new
+ * password (the pupil's or an admin reset) changes it and so signs out every
+ * other device.
+ */
+function passwordVersion(passwordHash: string) {
+  return createHash("sha256").update(passwordHash).digest("base64url").slice(0, 10);
+}
+
+export function createUserToken(user: Pick<User, "id" | "passwordHash">) {
   const exp = Math.floor(Date.now() / 1000) + TTL_SECONDS;
-  const payload = `user.${userId}.${exp}`;
+  const payload = `user.${user.id}.${exp}.${passwordVersion(user.passwordHash)}`;
   return `${payload}.${sign(payload)}`;
 }
 
-/** Returns the user id when the token is well formed, correctly signed and not expired. */
-export function verifyUserToken(token: string | undefined): string | null {
+/**
+ * The user id (and password fingerprint) when the token is well formed,
+ * correctly signed and not expired. Tokens from before the fingerprint have
+ * no `version`; they run out on their own within 30 days.
+ */
+export function verifyUserToken(token: string | undefined): { id: string; version: string | null } | null {
   if (!token || !accountsConfigured()) return null;
   const i = token.lastIndexOf(".");
   if (i < 0) return null;
@@ -79,10 +103,10 @@ export function verifyUserToken(token: string | undefined): string | null {
   if (sig.length !== expected.length) return null;
   if (!timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
   const parts = payload.split(".");
-  if (parts.length !== 3 || parts[0] !== "user") return null;
+  if ((parts.length !== 3 && parts.length !== 4) || parts[0] !== "user") return null;
   const exp = Number(parts[2]);
   if (!Number.isFinite(exp) || exp <= Date.now() / 1000) return null;
-  return parts[1];
+  return { id: parts[1], version: parts[3] ?? null };
 }
 
 /** Secure only over HTTPS; see isHttps in ./auth for why. */
@@ -119,15 +143,16 @@ export async function findUserById(id: string) {
 
 /**
  * The signed-in student for the current request, or null. Cached per request
- * so layout, header and page share one lookup. Disabled accounts are treated
- * as signed out.
+ * so layout, header and page share one lookup. Disabled accounts, and cookies
+ * from before a password change, are treated as signed out.
  */
 export const getCurrentUser = cache(async (): Promise<PublicUser | null> => {
   const store = await cookies();
-  const id = verifyUserToken(store.get(USER_COOKIE)?.value);
-  if (!id) return null;
-  const user = await findUserById(id);
+  const token = verifyUserToken(store.get(USER_COOKIE)?.value);
+  if (!token) return null;
+  const user = await findUserById(token.id);
   if (!user || user.disabled) return null;
+  if (token.version !== null && token.version !== passwordVersion(user.passwordHash)) return null;
   return toPublicUser(user);
 });
 

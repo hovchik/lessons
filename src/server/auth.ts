@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
 export const SESSION_COOKIE = "lessons_admin";
@@ -10,8 +10,14 @@ function secret() {
   return s;
 }
 
+/**
+ * The admin cookie's key depends on the admin password too, so changing
+ * ADMIN_PASSWORD signs out every admin session, and a pupil cookie (same
+ * secret) can never pass for an admin one.
+ */
 function sign(payload: string) {
-  return createHmac("sha256", secret()).update(payload).digest("base64url");
+  const key = createHmac("sha256", secret()).update(`admin-session\0${process.env.ADMIN_PASSWORD ?? ""}`).digest();
+  return createHmac("sha256", key).update(payload).digest("base64url");
 }
 
 export function createSessionToken() {
@@ -33,12 +39,19 @@ export function verifySessionToken(token: string | undefined): boolean {
   return Number.isFinite(exp) && exp > Date.now() / 1000;
 }
 
+/** The example value from deploy/README.md: never accepted, so a copied setup can't be logged into with it. */
+const PLACEHOLDER_PASSWORDS = new Set(["choose-a-long-password"]);
+
+export function adminConfigured() {
+  const p = process.env.ADMIN_PASSWORD;
+  return !!p && !PLACEHOLDER_PASSWORDS.has(p) && !!process.env.ADMIN_SESSION_SECRET;
+}
+
 export function checkPassword(password: string) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return false;
-  const a = Buffer.from(password);
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
+  if (!adminConfigured()) return false;
+  // Compare digests so the time taken says nothing about the password's length.
+  const digest = (s: string) => createHash("sha256").update(s).digest();
+  return timingSafeEqual(digest(password), digest(process.env.ADMIN_PASSWORD!));
 }
 
 export async function isAdmin() {

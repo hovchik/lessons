@@ -6,6 +6,7 @@ import { recordAnswers } from "./learner";
 import { getMastery, skillQuestions, type SkillQuestion } from "./mastery";
 import { pickNext, predict, stretchOf, type Stretch } from "@/lib/elo";
 import { displayForm, guessCount, recordFor, validResponse, type QuizResponse, type Shown } from "@/lib/questions";
+import { lookAllLanguages } from "./look";
 
 /**
  * Adaptive practice of one skill: one question at a time, each picked so the
@@ -108,6 +109,7 @@ export async function answerPractice(input: {
     correct,
     key: form.key,
     explanation: q.q.explanation ?? null,
+    look: correct ? null : await lookAllLanguages(q.itemId),
     lessonHref: `/${data.skill.subjectId}/${data.skill.grade}/${q.lessonSlug}`,
     next: next?.question ?? null,
     readiness: next?.readiness ?? (await readiness(userId, skillId, all)).percent,

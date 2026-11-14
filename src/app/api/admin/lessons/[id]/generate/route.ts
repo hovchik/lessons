@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/server/auth";
+import { contentChanged } from "@/server/content-cache";
 import { getDb, schema } from "@/server/db/client";
 import { buildBrief } from "@/server/generation";
 import { generateLesson } from "@/server/claude";
@@ -20,6 +21,7 @@ export async function POST(_req: Request, ctx: { params: Promise<{ id: string }>
       .set({ ...generated, source: "claude", updatedAt: new Date().toISOString() })
       .where(eq(schema.lessons.id, id))
       .run();
+    await contentChanged();
     const lesson = await db.select().from(schema.lessons).where(eq(schema.lessons.id, id)).get();
     return NextResponse.json({ lesson });
   } catch (e) {

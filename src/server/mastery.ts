@@ -7,6 +7,7 @@ import { checkSignature, signValue } from "./user-auth";
 import { levelRank, masteryLevel, UNIT_CHECK_PASS, UNIT_CHECK_SIZE, type MasteryLevel, type SkillEvidence } from "@/lib/mastery";
 import { parseItemId, quizItemId } from "@/lib/memory";
 import { displayForm, recordFor, validResponse, type QuizResponse, type Shown } from "@/lib/questions";
+import { lookAllLanguages } from "./look";
 
 /**
  * Mastery per skill and the unit check. A skill is one unit of a course; its
@@ -207,13 +208,14 @@ export async function recordUnitCheck(userId: string, skillId: string, answers: 
     userId,
     results.map((r, i) => ({ itemId: r.itemId, source: "unit" as const, refId: parseItemId(r.itemId)!.refId, courseId: skill.courseId, correct: r.correct, choice: r.choice, response: r.choice === null ? r.response : null, options: r.options, confidence: answers[i].confidence ?? null })),
   );
+  const looks = await Promise.all(results.map((r) => (r.correct ? null : lookAllLanguages(r.itemId))));
   const score = results.filter((r) => r.correct).length;
   await recordAttempt({ userId, kind: "unit", refId: skillId, courseId: skill.courseId, score, total: results.length, answers: answers.map((a) => [a.itemId, a.response]) });
 
   const after = (await getMastery(userId, [skill.courseId])).find((m) => m.skillId === skillId)!;
   const passed = score / results.length >= UNIT_CHECK_PASS;
   const weakLessons = [...new Map(results.filter((r) => !r.correct).map((r) => [r.lessonId, { id: r.lessonId, title: r.lessonTitle, href: `/${skill.subjectId}/${skill.grade}/${r.lessonSlug}` }])).values()];
-  return { score, total: results.length, passed, before: before?.level ?? "none", after: after.level, results, weakLessons, weakPrereqs: passed ? [] : await weakPrerequisites(userId, skillId) };
+  return { score, total: results.length, passed, before: before?.level ?? "none", after: after.level, results: results.map((r, i) => ({ ...r, look: looks[i], href: `/${skill.subjectId}/${skill.grade}/${r.lessonSlug}` })), weakLessons, weakPrereqs: passed ? [] : await weakPrerequisites(userId, skillId) };
 }
 
 /** Prerequisite skills of `skillId` the pupil is not yet Proficient in, with where to practise them. */

@@ -10,6 +10,7 @@
  * Requires ANTHROPIC_API_KEY. Lessons with source = "admin" are never overwritten.
  */
 import { and, asc, eq } from "drizzle-orm";
+import { contentChanged } from "../src/server/content-cache";
 import { getDb, schema } from "../src/server/db/client";
 import { buildBrief } from "../src/server/generation";
 import { generateLesson, GENERATION_MODEL } from "../src/server/claude";
@@ -61,6 +62,8 @@ async function main() {
         .set({ ...g, status: "published", source: "claude", updatedAt: new Date().toISOString() })
         .where(eq(schema.lessons.id, lesson.id))
         .run();
+      // A running server shows the new lesson at once (src/server/content-cache.ts).
+      await contentChanged();
       ok++;
       console.log("ok");
     } catch (e) {

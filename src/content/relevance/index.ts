@@ -1,7 +1,7 @@
 import type { I18nText } from "../types";
 import type { RelevanceMap } from "./types";
 import { algebraRelevance, geometryRelevance, mathRelevance } from "./math";
-import { drawingRelevance, physicsRelevance } from "./science";
+import { astronomyRelevance, drawingRelevance, physicsRelevance } from "./science";
 import { armenianRelevance, englishRelevance, russianRelevance } from "./languages";
 import { biologyRelevance, chemistryRelevance, geographyRelevance, informaticsRelevance, scienceRelevance } from "./natural";
 import {
@@ -13,6 +13,7 @@ import {
   technologyRelevance,
   worldHistoryRelevance,
 } from "./humanities";
+import { howtoRelevance } from "./howto";
 
 /** subject id → grade → one line per unit. */
 export const RELEVANCE: Record<string, RelevanceMap> = {
@@ -36,6 +37,8 @@ export const RELEVANCE: Record<string, RelevanceMap> = {
   music: musicRelevance,
   technology: technologyRelevance,
   chess: chessRelevance,
+  astronomy: astronomyRelevance,
+  howto: howtoRelevance,
 };
 
 /** The "why learn this" line for a unit (position is 1-based), if there is one. */

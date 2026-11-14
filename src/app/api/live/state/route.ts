@@ -10,7 +10,7 @@ export async function GET(req: Request) {
   const host = url.searchParams.get("host");
   const tok = url.searchParams.get("token");
   if (!/^\d{6}$/.test(pin) || (!host && !tok)) return NextResponse.json({ error: "invalid" }, { status: 400 });
-  const view = host ? hostView(pin, host) : playerView(pin, tok!);
+  const view = host ? await hostView(pin, host) : await playerView(pin, tok!);
   if (!view) return NextResponse.json({ error: "nogame" }, { status: 404 });
   return NextResponse.json(view, { headers: { "cache-control": "no-store" } });
 }

@@ -4,6 +4,7 @@ import type { ArtLang, Tr } from "@/lib/art/spec";
 import { L, t } from "../labels";
 import { ease } from "./draw";
 import type { Mech } from "./types";
+import { hyOrdinal } from "@/lib/utils";
 
 /* Step-by-step technology: folding, modelling, sewing and making, grades 1–7. */
 
@@ -647,7 +648,7 @@ const button: Mech = {
               <ellipse cx="6" cy="0" rx="3.5" ry="1" fill="#fff" />
             </g>
           </g> : null}
-          {i === 3 ? <Tx x={160} y={186} s={t(`stitch ${1 + Math.floor(k * 4)} of 5`, `${1 + Math.floor(k * 4)}-րդ կարը 5-ից`, `стежок ${1 + Math.floor(k * 4)} из 5`)} lang={lang} size={10} fill="#334155" /> : null}
+          {i === 3 ? <Tx x={160} y={186} s={t(`stitch ${1 + Math.floor(k * 4)} of 5`, `${hyOrdinal(1 + Math.floor(k * 4))} կարը 5-ից`, `стежок ${1 + Math.floor(k * 4)} из 5`)} lang={lang} size={10} fill="#334155" /> : null}
         </g>
       );
     }

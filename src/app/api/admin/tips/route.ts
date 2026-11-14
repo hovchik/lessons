@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isAdmin } from "@/server/auth";
+import { contentChanged } from "@/server/content-cache";
 import { getDb, schema } from "@/server/db/client";
 import { TIP_CATEGORIES } from "@/server/db/schema";
 
@@ -40,6 +41,7 @@ export async function POST(req: Request) {
       updatedAt: new Date().toISOString(),
     })
     .run();
+  await contentChanged();
   const tip = await db.select().from(schema.tips).where(eq(schema.tips.id, id)).get();
   return NextResponse.json({ tip }, { status: 201 });
 }

@@ -9,6 +9,7 @@ import { Confetti } from "@/components/ui/confetti";
 import { cn, pick } from "@/lib/utils";
 import { notifyChanged } from "@/lib/live";
 import { examTotal, marksFor, scoreExam } from "@/lib/exam-score";
+import { LookBack, type LookData } from "@/components/site/look-back";
 
 type Phase = "intro" | "running" | "done";
 
@@ -25,8 +26,11 @@ export function ExamRunner({
   scale,
   passPercent,
   save,
+  lookBacks,
 }: {
   questions: ExamQuestion[];
+  /** Per question, the lesson passage behind it (trials drawn from lesson quizzes). */
+  lookBacks?: ({ look: LookData; href: string } | null)[] | null;
   durationMin: number;
   scale: ExamScale;
   passPercent: number;
@@ -194,6 +198,7 @@ export function ExamRunner({
                         </p>
                       )}
                       {qq.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 leading-relaxed">{pick(qq.explanation, locale)}</p>}
+                      {!correct && lookBacks?.[i] && <LookBack look={lookBacks[i]!.look} href={lookBacks[i]!.href} />}
                     </div>
                   )}
                 </li>

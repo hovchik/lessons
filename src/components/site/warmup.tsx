@@ -10,6 +10,7 @@ import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
+import { LookBack } from "@/components/site/look-back";
 
 type Result = { correct: boolean; nextInDays: number | null };
 
@@ -93,7 +94,8 @@ export function Warmup({ items, signedIn }: { items: ReviewItem[]; signedIn: boo
                     {result.nextInDays !== null && <p className="text-sm font-bold text-muted-foreground">{tr("backIn", { n: result.nextInDays })}</p>}
                   </div>
                   {!result.correct && item.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(item.explanation, locale)}</p>}
-                  {!result.correct && item.href && (
+                  {!result.correct && item.look && <LookBack look={item.look} href={item.href} lessonTitle={pick(item.refTitle, locale)} />}
+                  {!result.correct && item.href && !item.look && (
                     <Link href={item.href} className="inline-flex min-h-11 items-center gap-1.5 rounded-xl text-sm font-bold text-primary">
                       <BookOpen className="size-4" aria-hidden="true" />
                       {tr("readLesson")}

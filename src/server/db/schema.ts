@@ -111,8 +111,21 @@ export const lessons = sqliteTable(
   (t) => [
     index("lessons_unit").on(t.unitId),
     index("lessons_course_slug").on(t.courseId, t.slug),
+    // Lesson counts by status (course cards, home page) read only this index. Without it SQLite
+    // walks each row past the compressed content to reach `status`: 6 ms instead of under 1 ms.
+    index("lessons_course_status").on(t.courseId, t.status),
   ],
 );
+
+/**
+ * Small server-wide values. `content_version` goes up whenever lessons, tips or exams change
+ * (admin edits, generation, seeding), so every server worker drops its cached content
+ * (src/server/content-cache.ts).
+ */
+export const appMeta = sqliteTable("app_meta", {
+  key: text("key").primaryKey(),
+  value: integer("value").notNull().default(0),
+});
 
 export type Subject = typeof subjects.$inferSelect;
 export type Course = typeof courses.$inferSelect;
@@ -243,6 +256,8 @@ export type Tip = typeof tips.$inferSelect;
 export type ExamQuestion = ChoiceQuestion & {
   points?: number;
   topic?: I18nText;
+  /** For a trial drawn from lesson quizzes: the lesson question it is, so a miss can point back to the lesson. */
+  ref?: { lessonId: string; slug: string; index: number };
 };
 
 export type ExamKind = "state" | "trial";
@@ -571,6 +586,73 @@ export const userCards = sqliteTable(
   (t) => [primaryKey({ columns: [t.userId, t.cardId] }), uniqueIndex("user_cards_user_skill").on(t.userId, t.skillId)],
 );
 
+/**
+ * A running live class quiz (src/server/live-quiz.ts). The whole game is one JSON value, written
+ * with a version check so several server workers can share it. Nicknames only, no accounts;
+ * rows are deleted three hours after the game was last used.
+ */
+export const liveGames = sqliteTable(
+  "live_games",
+  {
+    pin: text("pin").primaryKey(),
+    hostUserId: text("host_user_id").notNull(),
+    state: text("state").notNull(),
+    version: integer("version").notNull().default(0),
+    touchedAt: integer("touched_at").notNull(),
+  },
+  (t) => [index("live_games_touched").on(t.touchedAt), index("live_games_host").on(t.hostUserId)],
+);
+
 export type PuzzleResult = typeof puzzleResults.$inferSelect;
 export type GameScore = typeof gameScores.$inferSelect;
 export type UserCard = typeof userCards.$inferSelect;
+
+/**
+ * A class a teacher (any account) keeps: pupils join with its code and their progress
+ * becomes visible to the owner (src/server/classes.ts).
+ */
+export const classes = sqliteTable(
+  "classes",
+  {
+    id: text("id").primaryKey(),
+    ownerId: text("owner_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    name: text("name").notNull(),
+    /** What pupils type to join, unique, 6 letters and digits that can't be mixed up. */
+    code: text("code").notNull().unique(),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("classes_owner").on(t.ownerId)],
+);
+
+export const classMembers = sqliteTable(
+  "class_members",
+  {
+    classId: text("class_id")
+      .notNull()
+      .references(() => classes.id, { onDelete: "cascade" }),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    joinedAt: text("joined_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [primaryKey({ columns: [t.classId, t.userId] }), index("class_members_user").on(t.userId)],
+);
+
+/** A read-only link a pupil gives a parent: anyone with the token sees the pupil's progress. One per pupil. */
+export const parentLinks = sqliteTable("parent_links", {
+  userId: text("user_id")
+    .primaryKey()
+    .references(() => users.id, { onDelete: "cascade" }),
+  token: text("token").notNull().unique(),
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(current_timestamp)`),
+});
+
+export type ClassRow = typeof classes.$inferSelect;

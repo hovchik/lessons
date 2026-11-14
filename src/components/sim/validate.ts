@@ -25,6 +25,8 @@ import { MOLECULES } from "./widgets/molecule";
 import { parseNote, PROGS, TUNES } from "./widgets/piano";
 import { SETS as PH_SETS } from "./widgets/ph";
 import { NAMES as SOLIDS } from "./widgets/solid";
+import { SAFETY_LEVELS } from "./widgets/safety";
+import { sortProblems } from "./widgets/sort";
 import { TENSE_NAMES } from "./widgets/tense";
 
 /** Modes each widget understands; the first one is what it shows without mode=. */
@@ -95,7 +97,7 @@ const MODES: Record<string, string[]> = {
   piano: ["keys", "staff", "durations", "rhythm", "meter", "interval", "chord", "sound", "melody", "prog"],
 };
 
-export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "steps", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle"];
+export const SIM_WIDGETS = [...Object.keys(MODES), "mechanism", "check", "steps", "diagram", "molecule", "balance", "lattice", "flame", "geo", "solid", "column", "scale", "tense", "punnett", "pyramid", "bars", "climate", "timeline", "cipher", "trace", "password", "turtle", "safety", "sort"];
 
 const MECHS = new Set(Object.values(MECH_GROUPS).flat() as string[]);
 const DIAGRAMS = new Set(Object.values(DIAGRAM_GROUPS).flat() as string[]);
@@ -172,6 +174,11 @@ export function checkSimSpec(source: string): string[] {
       if (spec.opts.pick && !parseFen(spec.opts.fen ?? "8/8/8/8/8/8/8/8")?.[sq(spec.opts.pick)]) errors.push(`${where}: no piece on ${spec.opts.pick}`);
       break;
     }
+    case "safety":
+      if (!(SAFETY_LEVELS as readonly string[]).includes(spec.opts.level ?? "")) errors.push(`${where}: level must be ${SAFETY_LEVELS.join(", ")}`);
+      if (!spec.body.trim()) errors.push(`${where}: no rules`);
+      break;
+    case "sort": errors.push(...sortProblems(spec.body).map((e) => `${where}: ${e}`)); break;
     case "timeline": if (!TIMELINES[spec.opts.set ?? ""]) errors.push(`${where}: unknown timeline "${spec.opts.set}"`); break;
     case "climate": for (const c of list(spec.opts.city ?? "yerevan")) if (!CITIES[c]) errors.push(`${where}: unknown city "${c}"`); break;
     case "pyramid": if (spec.args.length < 2 || spec.args.length > 5) errors.push(`${where}: needs 2 to 5 levels`); break;
@@ -191,6 +198,12 @@ export function checkSimSpec(source: string): string[] {
     case "piano":
       need([...list(spec.opts.notes), ...[spec.opts.from, spec.opts.to].filter((v): v is string => !!v)], (n) => parseNote(n) != null, "note");
       need(list(spec.opts.pattern), (v) => /^[whqe]r?$/.test(v), "rhythm token");
+      if ([...list(spec.opts.notes), spec.opts.from, spec.opts.to].some((n) => { const m = n ? parseNote(n) : null; return m != null && (m < 60 || m > 83); })) errors.push(`${where}: notes must be on the keyboard, C4 to B5`);
+      if (spec.opts.mode === "rhythm" && spec.opts.pattern) {
+        const beats = list(spec.opts.pattern).reduce((s, v) => s + ({ w: 4, h: 2, q: 1, e: 0.5 }[v[0]] ?? 0), 0);
+        const per = Number(spec.opts.meter ?? 4) || 4;
+        if (beats % per) errors.push(`${where}: the rhythm lasts ${beats} beats, not whole bars of ${per}`);
+      }
       if (spec.opts.root && parseNote(`${spec.opts.root}4`) == null) errors.push(`${where}: unknown root "${spec.opts.root}"`);
       if (spec.opts.tune && !TUNES[spec.opts.tune]) errors.push(`${where}: unknown tune "${spec.opts.tune}"`);
       if (spec.opts.prog && !PROGS[spec.opts.prog]) errors.push(`${where}: unknown chord loop "${spec.opts.prog}"`);

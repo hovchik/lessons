@@ -71,6 +71,27 @@
       "when": 1793211898365,
       "tag": "0009_fun",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1793250881306,
+      "tag": "0010_speed",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1794659407557,
+      "tag": "0011_choice_shuffle",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1794661033610,
+      "tag": "0012_classes",
+      "breakpoints": true
     }
   ]
 }

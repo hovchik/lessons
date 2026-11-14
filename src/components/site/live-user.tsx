@@ -58,6 +58,12 @@ export function LiveUserProvider({ initial, children }: { initial: LiveUser | nu
     // hold is checked when it runs: the answer that triggered it may be what
     // starts a session's hold, in the render right after the save.
     timer.current = setTimeout(() => {
+      // Offline, a refresh fails and Next falls back to reloading the page, which would wipe an
+      // answer in progress; it waits for the connection instead (the "online" listener below).
+      if (!navigator.onLine) {
+        stale.current = true;
+        return;
+      }
       pending.current = isHeld();
       if (!pending.current) startTransition(() => router.refresh());
     }, 150);
@@ -96,11 +102,14 @@ export function LiveUserProvider({ initial, children }: { initial: LiveUser | nu
     const onPageShow = (e: PageTransitionEvent) => e.persisted && sync();
     // Back/forward shows the page as it was cached; read it again once Next has restored it.
     const onPopState = () => signedIn && setTimeout(sync, 0);
+    const onOnline = () => stale.current && sync();
     document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("online", onOnline);
     window.addEventListener("pageshow", onPageShow);
     window.addEventListener("popstate", onPopState);
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("online", onOnline);
       window.removeEventListener("pageshow", onPageShow);
       window.removeEventListener("popstate", onPopState);
     };

@@ -43,3 +43,7 @@ next-env.d.ts
 # local database
 /data/*
 !/data/.gitkeep
+
+# server backups (deploy/backup.sh)
+/backups
+.explain-batch.json

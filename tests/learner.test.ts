@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { examPick, quizPick } from "./shown";
 
 // A throw-away database; the client reads DATABASE_PATH when it is first imported.
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-test-"));
@@ -43,7 +44,7 @@ before(async () => {
 after(() => fs.rmSync(dir, { recursive: true, force: true }));
 
 test("a finished quiz logs one answer per question and schedules each one", async () => {
-  const res = await m.progress.recordQuizResult({ userId: "u1", lessonId: "math-1-counting", answers: [0, 0, 2] });
+  const res = await m.progress.recordQuizResult({ userId: "u1", lessonId: "math-1-counting", answers: [0, 0, 2].map((a, i) => quizPick("math-1-counting", i, a, 3)) });
   assert.equal(res?.bestScore, 2);
   const stats = await m.learner.getMemoryStats("u1");
   assert.equal(stats.answers, 3);
@@ -57,7 +58,7 @@ test("a finished quiz logs one answer per question and schedules each one", asyn
 });
 
 test("retaking the quiz updates the same cards instead of adding new ones", async () => {
-  await m.progress.recordQuizResult({ userId: "u1", lessonId: "math-1-counting", answers: [0, 1, 2] });
+  await m.progress.recordQuizResult({ userId: "u1", lessonId: "math-1-counting", answers: [0, 1, 2].map((a, i) => quizPick("math-1-counting", i, a, 3)) });
   const stats = await m.learner.getMemoryStats("u1");
   assert.equal(stats.answers, 6);
   assert.equal(stats.cards, 3);
@@ -67,7 +68,7 @@ test("retaking the quiz updates the same cards instead of adding new ones", asyn
 });
 
 test("an exam is scored on the server; blank answers are not put in memory", async () => {
-  const result = await m.progress.recordExamResult({ userId: "u1", examId: "trial-math-1", answers: [0, 1, null, 0] });
+  const result = await m.progress.recordExamResult({ userId: "u1", examId: "trial-math-1", answers: [0, 1, null, 0].map((a, i) => examPick("trial-math-1", i, a, 3)) });
   assert.equal(result?.score, 2);
   assert.equal(result?.total, 4);
   const stats = await m.learner.getMemoryStats("u1");

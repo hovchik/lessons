@@ -14,6 +14,7 @@ import { answerText, defaultResponse, isComplete, localKey, localShown, response
 import { cn, pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
 import type { UnitCheckQuestion } from "@/server/mastery";
+import { LookBack, type LookData } from "@/components/site/look-back";
 
 type Result = {
   score: number;
@@ -21,7 +22,7 @@ type Result = {
   passed: boolean;
   before: MasteryLevel;
   after: MasteryLevel;
-  results: { itemId: string; response: QuizResponse; correct: boolean; shown: Shown<I18nText>; key: Key<I18nText>; explanation: I18nText | null; lessonTitle: I18nText }[];
+  results: { itemId: string; response: QuizResponse; correct: boolean; shown: Shown<I18nText>; key: Key<I18nText>; explanation: I18nText | null; lessonTitle: I18nText; look?: Record<"en" | "hy" | "ru", LookData | null> | null; href?: string }[];
   weakLessons: { id: string; title: I18nText; href: string }[];
   weakPrereqs: { skillId: string; title: I18nText; level: MasteryLevel; grade: number; href: string }[];
   /** Collectible cards this check dealt (ids). */
@@ -192,6 +193,7 @@ export function UnitCheck({
                         <span className="font-bold">{t("rightAnswer")}:</span> {answerText(rs, localKey(r.key, f), locale)}
                       </p>
                       {r.explanation && <p className="text-muted-foreground">{pick(r.explanation, locale)}</p>}
+                      {r.look?.[locale as "en" | "hy" | "ru"] && <LookBack look={r.look[locale as "en" | "hy" | "ru"]!} href={r.href} lessonTitle={pick(r.lessonTitle, locale)} />}
                     </div>
                   )}
                 </li>

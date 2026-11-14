@@ -4,6 +4,7 @@ import { Flame, LogOut, Trophy, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { notifyChanged } from "@/lib/live";
+import { leaveOffline } from "@/components/site/offline-support";
 import { cn } from "@/lib/utils";
 import { useLiveUser } from "./live-user";
 
@@ -59,6 +60,7 @@ export function UserMenu({ user, className }: Props) {
         aria-label={t("logout")}
         title={t("logout")}
         onClick={async () => {
+          await leaveOffline();
           await fetch("/api/auth/logout", { method: "POST" });
           router.push("/");
           notifyChanged();
