@@ -102,4 +102,50 @@ export const HIST2_TIMELINES: Record<string, TimeSet> = {
       E(1386, t("Timur's invasions", "Լենկթեմուրի արշավանքները", "Нашествия Тимура"), undefined, { to: 1403 }),
     ],
   },
+  /* ---------------- grade 8 ---------------- */
+  meet1547: {
+    title: t("The first liberation plans", "Ազատագրական առաջին ծրագրերը", "Первые освободительные планы"),
+    events: [
+      E(1529, t("The Ottoman army besieges Vienna", "Օսմանյան բանակը պաշարում է Վիեննան", "Османская армия осаждает Вену")),
+      E(1547, t("Secret meeting at Etchmiadzin", "Էջմիածնի գաղտնի ժողովը", "Тайное собрание в Эчмиадзине"), t("Called by Catholicos Stepanos Salmastetsi.", "Հրավիրեց կաթողիկոս Ստեփանոս Սալմաստեցին։", "Созвал католикос Степанос Салмастеци.")),
+      E(1562, t("Secret meeting in Sebastia", "Սեբաստիայի գաղտնի ժողովը", "Тайное собрание в Себастии"), t("Called by Catholicos Mikael Sebastatsi.", "Հրավիրեց կաթողիկոս Միքայել Սեբաստացին։", "Созвал католикос Микаэл Себастаци.")),
+      E(1565, t("Abgar Tokhatetsi prints in Venice", "Աբգար Թոխաթեցին տպագրում է Վենետիկում", "Абгар Тохатеци печатает в Венеции")),
+      E(1567, t("First Armenian press in Constantinople", "Առաջին հայկական տպարանը Կոստանդնուպոլսում", "Первая армянская типография в Константинополе")),
+      E(1677, t("New meeting at Etchmiadzin", "Էջմիածնի նոր ժողովը", "Новое собрание в Эчмиадзине"), t("Called by Catholicos Hakob Jughayetsi; Israel Ori was in his delegation.", "Հրավիրեց կաթողիկոս Հակոբ Ջուղայեցին. Իսրայել Օրին նրա պատվիրակության անդամ էր։", "Созвал католикос Акоп Джугаеци; в его делегации был Исраэл Ори.")),
+    ],
+  },
+  melikdoms: {
+    title: t("The melikdoms of Artsakh", "Արցախի մելիքությունները", "Меликства Арцаха"),
+    events: [
+      E(1722, t("Revolt in Syunik; Davit Bek", "Ապստամբություն Սյունիքում. Դավիթ Բեկ", "Восстание в Сюнике; Давид Бек")),
+      E(1752, t("Panah Khan builds the fortress of Shushi", "Փանահ խանը կառուցում է Շուշիի ամրոցը", "Панах-хан строит крепость Шуши"), t("With the help of Melik Shahnazar of Varanda; built in the 1750s.", "Վարանդայի մելիք Շահնազարի օգնությամբ, կառուցվել է 1750-ականներին։", "С помощью мелика Варанды Шахназара; построена в 1750-х годах."), { c: true }),
+      E(1783, t("Argutyan's plan for an Armenian state", "Արղությանի ծրագիրը հայկական պետության մասին", "План Аргутинского об армянском государстве"), undefined, { c: true }),
+      E(1787, t("Melik families move to Georgia", "Մելիքական ընտանիքները գաղթում են Վրաստան", "Меликские семьи переселяются в Грузию"), undefined, { c: true }),
+      E(1805, t("The Karabakh khanate comes under Russia", "Ղարաբաղի խանությունն անցնում է Ռուսաստանի գերիշխանության տակ", "Карабахское ханство переходит под власть России")),
+      E(1822, t("The Karabakh khanate is abolished", "Ղարաբաղի խանությունը վերացվում է", "Карабахское ханство упразднено")),
+    ],
+  },
+  russarm: {
+    title: t("Armenians in Russia", "Հայերը Ռուսաստանում", "Армяне в России"),
+    events: [
+      E(1660, t("The Diamond Throne is presented to the tsar", "Ադամանդե գահը նվիրվում է ցարին", "Алмазный трон преподнесён царю")),
+      E(1667, t("New Julfa merchants' agreement with Russia", "Նոր Ջուղայի վաճառականների պայմանագիրը Ռուսաստանի հետ", "Договор новоджульфинских купцов с Россией"), t("Silk through Astrakhan and up the Volga.", "Մետաքսը՝ Աստրախանով և Վոլգայով։", "Шёлк через Астрахань и вверх по Волге.")),
+      E(1724, t("Peter I's charter to the Armenians", "Պետրոս I-ի հրովարտակը հայերին", "Грамота Петра I армянам")),
+      E(1773, t("Hovsep Argutyan heads the diocese", "Հովսեփ Արղությանը գլխավորում է թեմը", "Иосиф Аргутинский возглавляет епархию")),
+      E(1779, t("New Nakhichevan is founded", "Հիմնվում է Նոր Նախիջևանը", "Основан Нор-Нахичеван")),
+      E(1781, t("First Armenian press in Russia", "Առաջին հայկական տպարանը Ռուսաստանում", "Первая армянская типография в России")),
+      E(1815, t("The Lazarev Institute in Moscow", "Լազարյան ճեմարանը Մոսկվայում", "Лазаревский институт в Москве")),
+    ],
+  },
+  polis: {
+    title: t("Armenians of Constantinople", "Կոստանդնուպոլսի հայերը", "Армяне Константинополя"),
+    events: [
+      E(1461, t("The Armenian Patriarchate of Constantinople", "Կոստանդնուպոլսի հայոց պատրիարքությունը", "Армянский патриархат Константинополя")),
+      E(1567, t("Abgar Tokhatetsi's press", "Աբգար Թոխաթեցու տպարանը", "Типография Абгара Тохатеци")),
+      E(1623, t("Avedis Zildjian's cymbals", "Ավետիս Զիլջյանի ծնծղաները", "Тарелки Аветиса Зилджяна"), t("The family business still works today.", "Ընտանեկան ձեռնարկությունը գործում է մինչև այսօր։", "Семейное дело работает до сих пор.")),
+      E(1700, t("Mkhitar Sebastatsi begins his work", "Մխիթար Սեբաստացին սկսում է իր գործը", "Мхитар Себастаци начинает свою деятельность")),
+      E(1715, t("Patriarch Hovhannes Kolot", "Հովհաննես Կոլոտ պատրիարքը", "Патриарх Ованнес Колот"), undefined, { to: 1741 }),
+      E(1863, t("The Armenian National Constitution", "Ազգային սահմանադրությունը", "Национальная конституция")),
+    ],
+  },
 };
