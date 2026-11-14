@@ -122,4 +122,8 @@ export const grade4: VisualMap[number] = {
       ru: ["Ты видишь молнию, а гром слышишь через 6 секунд. Как далеко гроза?", ["Примерно 2 км", "Примерно 6 км", "Примерно 18 км"], "Звук проходит около 1 км за 3 секунды, значит 6 : 3 = 2 км."],
     }),
   ],
+  "day-night-seasons": ["mechanism seasons"],
+  "plant-life": ["diagram plant", "diagram flower", "mechanism germinate"],
+  "senses-and-nerves": ["diagram eye", "diagram ear", "mechanism reflex"],
+  "microbes-and-hygiene": ["diagram bacterium", "mechanism handwash"],
 };
