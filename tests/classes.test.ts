@@ -32,7 +32,7 @@ after(() => fs.rmSync(dir, { recursive: true, force: true }));
 
 test("a class is joined by its code, typed any old way, and only once", async () => {
   const res = await m.classes.createClass("teacher", "  3A   Monday ");
-  assert.ok("class" in res);
+  if (!("class" in res)) throw new Error("class not created");
   const c = res.class;
   assert.equal(c.name, "3A Monday");
   assert.match(c.code, /^[A-HJKMNP-Z2-9]{6}$/);
