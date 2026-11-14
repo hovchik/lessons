@@ -1,8 +1,10 @@
 import type { CourseSeed } from "../../types";
-import { withEn, withRu } from "../../ru-overlay";
+import { plusLessons, withEn, withRu } from "../../ru-overlay";
 import { worldHistoryGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
 import { en as en6 } from "./grade-6.en";
+import { ruExtra6 } from "./grade-6.extra.ru";
+import { enExtra6 } from "./grade-6.extra.en";
 import { worldHistoryGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
 import { en as en7 } from "./grade-7.en";
@@ -22,4 +24,4 @@ import { worldHistoryGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 import { en as en12 } from "./grade-12.en";
 
-export const worldHistory: CourseSeed[] = [withEn(withRu(worldHistoryGrade6, ru6), en6), withEn(withRu(worldHistoryGrade7, ru7), en7), withEn(withRu(worldHistoryGrade8, ru8), en8), withEn(withRu(worldHistoryGrade9, ru9), en9), withEn(withRu(worldHistoryGrade10, ru10), en10), withEn(withRu(worldHistoryGrade11, ru11), en11), withEn(withRu(worldHistoryGrade12, ru12), en12)];
+export const worldHistory: CourseSeed[] = [withEn(withRu(worldHistoryGrade6, plusLessons(ru6, ruExtra6)), plusLessons(en6, enExtra6)), withEn(withRu(worldHistoryGrade7, ru7), en7), withEn(withRu(worldHistoryGrade8, ru8), en8), withEn(withRu(worldHistoryGrade9, ru9), en9), withEn(withRu(worldHistoryGrade10, ru10), en10), withEn(withRu(worldHistoryGrade11, ru11), en11), withEn(withRu(worldHistoryGrade12, ru12), en12)];
