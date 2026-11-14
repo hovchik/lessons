@@ -5,6 +5,7 @@ import { Link, redirect } from "@/i18n/navigation";
 import { ReviewSession } from "@/components/site/review-session";
 import { buttonClasses } from "@/components/ui/button";
 import { getReviewQueue, getReviewSummary } from "@/server/review";
+import { withLooks } from "@/server/look";
 import { getCurrentUser, touchLastSeen } from "@/server/user-auth";
 
 export const dynamic = "force-dynamic";
@@ -23,7 +24,8 @@ export default async function ReviewPage({ params, searchParams }: { params: Pro
   const user = await getCurrentUser();
   if (!user) redirect({ href: `/login?next=${encodeURIComponent(mode === "mistakes" ? "/review?mode=mistakes" : "/review")}`, locale });
   const u = user!;
-  const [t, items, summary] = await Promise.all([getTranslations("review"), getReviewQueue(u.id, { mode }), getReviewSummary(u.id)]);
+  const [t, queue, summary] = await Promise.all([getTranslations("review"), getReviewQueue(u.id, { mode }), getReviewSummary(u.id)]);
+  const items = await withLooks(queue, locale);
   await touchLastSeen(u.id);
 
   return (

@@ -12,6 +12,7 @@ import { notifyChanged, useHoldRefresh } from "@/lib/live";
 import { answerText, defaultResponse, isComplete, isRight, localKey, localShown, type QuizResponse } from "@/lib/questions";
 import { cn, pick } from "@/lib/utils";
 import type { ReviewItem } from "@/server/review";
+import { LookBack } from "@/components/site/look-back";
 
 type Result = { correct: boolean; nextInDays: number | null; saved: boolean };
 
@@ -156,12 +157,13 @@ export function ReviewSession({ items: initial, more }: { items: ReviewItem[]; m
               {!result.saved && <p className="text-sm font-bold text-accent">{t("notSaved")}</p>}
             </div>
             {item.explanation && <p className="rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{pick(item.explanation, locale)}</p>}
+            {!result.correct && item.look && <LookBack look={item.look} href={item.href} lessonTitle={pick(item.refTitle, locale)} />}
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button size="lg" className="w-full sm:w-auto" onClick={next}>
                 {isLast ? t("finish") : t("next")}
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Button>
-              {!result.correct && item.href && (
+              {!result.correct && item.href && !item.look && (
                 <Link href={item.href} className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted">
                   <BookOpen className="size-4" aria-hidden="true" />
                   {item.source === "exam" ? t("openExam") : t("readLesson")}

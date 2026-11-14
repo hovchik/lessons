@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { LookBack } from "@/components/site/look-back";
 import { lessonChange, notifyChanged, type LessonProgressRow } from "@/lib/live";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
@@ -35,12 +36,15 @@ const same = (a: QuizResponse | undefined, b: QuizResponse | undefined) => JSON.
  */
 export function Quiz({ questions, save }: Props) {
   const t = useTranslations("lesson");
+  const tl = useTranslations("look");
   // The answer being given, the first checked answer with its confidence, and the second try.
   const [picked, setPicked] = useState<Record<number, QuizResponse>>({});
   const [first, setFirst] = useState<Record<number, QuizResponse>>({});
   const [confidence, setConfidence] = useState<Record<number, Confidence>>({});
   const [second, setSecond] = useState<Record<number, QuizResponse>>({});
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
+  // During the second try the pupil may open the lesson passage as a hint.
+  const [peek, setPeek] = useState<Record<number, boolean>>({});
   const [saved, setSaved] = useState(false);
   const savedRun = useRef(0);
 
@@ -79,6 +83,7 @@ export function Quiz({ questions, save }: Props) {
     setConfidence({});
     setSecond({});
     setShowWhy({});
+    setPeek({});
     setSaved(false);
     savedRun.current = 0;
   };
@@ -152,6 +157,14 @@ export function Quiz({ questions, save }: Props) {
                     <p className="font-extrabold text-destructive">{confidence[i] === 2 ? t("wrongSure") : t("wrongGuess")}</p>
                     <p className="mt-1 font-semibold">{cross !== null ? t("hintCrossed") : t("hintOnce")}</p>
                   </div>
+                  {qq.look &&
+                    (peek[i] ? (
+                      <LookBack look={qq.look} />
+                    ) : (
+                      <button type="button" className="inline-flex min-h-11 items-center gap-1.5 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted" onClick={() => setPeek((p) => ({ ...p, [i]: true }))}>
+                        {tl("peek")}
+                      </button>
+                    ))}
                   <Button
                     size="sm"
                     className="w-full sm:w-auto"
@@ -176,6 +189,7 @@ export function Quiz({ questions, save }: Props) {
               {done && showWhy[i] && qq.explanation && (
                 <p className="fx-in rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
+              {done && !firstRight && qq.look && <LookBack look={qq.look} />}
             </li>
           );
         })}

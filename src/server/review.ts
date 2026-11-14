@@ -38,6 +38,8 @@ export type ReviewItem = {
   shown: Shown<I18nText>;
   key: Key<I18nText>;
   explanation: I18nText | null;
+  /** The lesson passage that teaches it, in the page's language (added by withLooks). */
+  look?: { html: string; find: string[] } | null;
   lastCorrect: boolean;
   lapses: number;
 };
