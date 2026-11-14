@@ -26,6 +26,8 @@ export const LIMITS = {
   liveJoinIp: { max: 30, windowMs: 10 * MIN },
   /** Live quizzes opened by one account. */
   liveCreateUser: { max: 30, windowMs: 60 * MIN },
+  /** Class codes tried by one account. */
+  classJoinUser: { max: 30, windowMs: 15 * MIN },
   /** Hint-tutor calls to Claude by one pupil (cached hints don't count). */
   tutorUser: { max: 40, windowMs: 60 * MIN },
   /** Hint-tutor calls to Claude by everyone together, a day: a cap on the bill. */
