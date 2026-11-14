@@ -162,6 +162,11 @@ export const chemistryVisuals: VisualMap = {
     carbohydrates: ["molecule set=glucose", "balance set=photosynthesis"],
   },
   11: {
+    "enzymes-vitamins-hormones": ["mechanism catalyst", "molecule set=glycine,alanine"],
+    "complex-compounds": ["molecule set=nh3,nh4", "ions set=copper,iron"],
+    "dispersed-systems": ["particles mode=brownian", "particles mode=diffusion"],
+    thermochemistry: ["mechanism combustion", "balance set=methane,limestone"],
+    "redox-balancing": ["mechanism redox", "balance set=copper,zinc"],
     amines: ["molecule set=methylamine,aniline"],
     "amino-acids-proteins": ["molecule set=glycine,alanine,urea"],
     "nucleic-acids": ["mechanism dna"],
