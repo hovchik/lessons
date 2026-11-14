@@ -71,6 +71,11 @@ export const chemistryVisuals: VisualMap = {
     ],
   },
   8: {
+    "equation-calculations": ["balance set=water,zinc,limestone,methane", "mole mode=amount kind=solid"],
+    "crystal-hydrates": ["solution mode=fraction", "particles mode=states"],
+    "amphoteric-hydroxides": ["ions set=copper,iron", "ptable"],
+    "crystal-lattices": ["lattice set=nacl,diamond,graphite,metal,dryice"],
+    "element-families": ["ptable", "flame Li", "molecule set=cl2,hcl"],
     "amount-of-substance": ["mole mode=amount kind=solid", "mole"],
     "molar-volume-of-gases": [
       "mole mode=amount kind=gas",

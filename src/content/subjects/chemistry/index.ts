@@ -2,6 +2,8 @@ import type { CourseSeed } from "../../types";
 import { plusLessons, withEn, withRu } from "../../ru-overlay";
 import { ruExtra7 } from "./grade-7.extra.ru";
 import { enExtra7 } from "./grade-7.extra.en";
+import { ruExtra8 } from "./grade-8.extra.ru";
+import { enExtra8 } from "./grade-8.extra.en";
 import { chemistryGrade7 } from "./grade-7";
 import { ru as ru7 } from "./grade-7.ru";
 import { en as en7 } from "./grade-7.en";
@@ -21,4 +23,4 @@ import { chemistryGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 import { en as en12 } from "./grade-12.en";
 
-export const chemistry: CourseSeed[] = [withEn(withRu(chemistryGrade7, plusLessons(ru7, ruExtra7)), plusLessons(en7, enExtra7)), withEn(withRu(chemistryGrade8, ru8), en8), withEn(withRu(chemistryGrade9, ru9), en9), withEn(withRu(chemistryGrade10, ru10), en10), withEn(withRu(chemistryGrade11, ru11), en11), withEn(withRu(chemistryGrade12, ru12), en12)];
+export const chemistry: CourseSeed[] = [withEn(withRu(chemistryGrade7, plusLessons(ru7, ruExtra7)), plusLessons(en7, enExtra7)), withEn(withRu(chemistryGrade8, plusLessons(ru8, ruExtra8)), plusLessons(en8, enExtra8)), withEn(withRu(chemistryGrade9, ru9), en9), withEn(withRu(chemistryGrade10, ru10), en10), withEn(withRu(chemistryGrade11, ru11), en11), withEn(withRu(chemistryGrade12, ru12), en12)];
