@@ -234,4 +234,6 @@ export const grade7: VisualMap[number] = {
       ru: ["У растения одна семядоля, параллельное жилкование и части цветка по три. Что это?", ["Голосеменное", "Двудольное", "Однодольное", "Папоротник"], "Это признаки однодольных: пшеницы, кукурузы, лилий."],
     }),
   ],
+  "water-in-plants": ["diagram root", "diagram stem", "diagram leaf"],
+  "vegetative-propagation": ["diagram stem", "mechanism germinate"],
 };
