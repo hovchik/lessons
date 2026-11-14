@@ -174,4 +174,8 @@ export const grade6: VisualMap[number] = {
       ru: ["Из чего получают вордан кармир?", ["Из красного камня с Арагаца", "Из маленького насекомого, живущего на корнях трав Араратской равнины", "Из гранатового сока", "Из медной руды"], "Насекомых собирали, сушили и растирали в тёмно-красную краску для шерсти, ковров и рукописей."],
     }),
   ],
+  "hellenistic-armenia": ["timeline set=hellenism"],
+  "rome-and-parthia": ["timeline set=romeparthia"],
+  "trdat-iii-christianity": ["timeline set=trdat3"],
+  "arshak-ii-and-pap": ["timeline set=arshak2"],
 };
