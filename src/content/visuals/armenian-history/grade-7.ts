@@ -136,4 +136,8 @@ export const grade7: VisualMap[number] = {
       ru: ["Где находится крупнейшее сохранившееся поле хачкаров?", ["В Норадузе, на берегу Севана", "На площади Республики в Ереване", "На острове Ахтамар", "В Сисе"], "В Норадузе стоят около 900 хачкаров X–XVII веков."],
     }),
   ],
+  "byzantium-persia-6-7": ["timeline set=byzpers"],
+  "armenian-kingdoms-10-11": ["timeline set=kingdoms1011"],
+  "fall-of-ani-manzikert": ["timeline set=manzikert"],
+  "mongols-and-timur": ["timeline set=mongols7"],
 };
