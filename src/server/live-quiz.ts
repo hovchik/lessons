@@ -161,13 +161,14 @@ const sameToken = (a: string, b: string) => {
 };
 const playerBy = (g: Game, tok: string) => g.players.find((p) => p.token === tok);
 
-export async function answer(pin: string, tok: string, choice: number, now = Date.now()) {
+/** `index` is the question the player saw: an answer sent just before the host moved on must not land on the next one. */
+export async function answer(pin: string, tok: string, index: number, choice: number, now = Date.now()) {
   const r = await update<Fail<"nogame" | "noplayer" | "closed" | "invalid"> | Done>(pin, now, (g) => {
     const settled = settle(g, now);
     const p = playerBy(g, tok);
     if (!p) return { result: { error: g.kicked.includes(tok) ? ("noplayer" as const) : ("nogame" as const) }, changed: settled };
     const q = g.questions[g.index];
-    if (g.phase !== "question" || !q || p.answers[g.index]) return { result: { error: "closed" as const }, changed: settled };
+    if (g.phase !== "question" || !q || index !== g.index || p.answers[g.index]) return { result: { error: "closed" as const }, changed: settled };
     if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return { result: { error: "invalid" as const }, changed: settled };
     const ms = now - g.startedAt;
     const points = livePoints(choice === q.answer, ms, g.seconds * 1000);
