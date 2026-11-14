@@ -136,6 +136,11 @@ export const chemistryVisuals: VisualMap = {
     iron: ["mechanism blastfurnace", "ions set=iron", "balance set=rust,magnetite,blast"],
   },
   10: {
+    "isomerism-types": ["molecule set=c4h10,isobutane,c3h6,cyclohexane"],
+    cycloalkanes: ["molecule set=cyclohexane,benzene,c3h6"],
+    "halogen-derivatives": ["molecule set=ch3cl,ccl4,vinylchloride,o3", "mechanism polymer"],
+    "organic-formula-problems": ["molecule set=ch4,c2h6,c3h8,c4h10"],
+    "organic-genetic-links": ["molecule set=c2h6,c2h4,ethanol,acetaldehyde,aceticacid,ethylacetate", "mechanism ester"],
     "structure-theory": [
       "molecule set=c4h10,isobutane",
       ask(2, {
