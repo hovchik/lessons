@@ -19,6 +19,7 @@ const Body = z.object({
         explanation: i18n.optional(),
         points: z.number().int().min(1).max(20).optional(),
         topic: i18n.optional(),
+        ref: z.object({ lessonId: z.string().max(200), slug: z.string().max(200), index: z.number().int().min(0) }).optional(),
       }),
     )
     .min(1)

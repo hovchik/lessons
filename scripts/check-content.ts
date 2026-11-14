@@ -180,7 +180,16 @@ for (const [id, ids] of Object.entries(EXAM_SCOPE)) {
 const trialsFor = new Set(exams.filter((e) => e.kind === "trial").map((e) => `${e.subject}-${e.grade}`));
 const missingTrials = courses.map((c) => courseId(c.subject, c.grade)).filter((id) => !trialsFor.has(id));
 console.log(`\n${exams.length} exams (${exams.filter((e) => e.kind === "state").length} state, ${trialsFor.size} trials), ${examQuestions} exam questions.`);
-if (missingTrials.length) console.log(`Courses without a year-end trial: ${missingTrials.join(", ")}`);
+// Courses without a hand-written trial get one drawn from their lesson quizzes (src/content/exams/trials/auto.ts).
+for (const id of missingTrials) errors.push(`course ${id}: no year-end trial (too few self-contained quiz questions for one)`);
+const drawn = exams.filter((e) => e.questions.some((q) => q.ref));
+console.log(`${drawn.length} of the trials are drawn from lesson quizzes.`);
+for (const e of drawn)
+  for (const q of e.questions) {
+    const c = courses.find((x) => x.subject === e.subject && x.grade === e.grade);
+    const l = c?.units.flatMap((u) => u.lessons).find((x) => `${courseId(c.subject, c.grade)}-${x.slug}` === q.ref!.lessonId);
+    if (!l || !l.quiz?.[q.ref!.index]) errors.push(`${e.id}: question points to a missing lesson question ${q.ref!.lessonId}#${q.ref!.index}`);
+  }
 
 const tipCheck = checkTips();
 errors.push(...tipCheck.errors);

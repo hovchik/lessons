@@ -256,6 +256,8 @@ export type Tip = typeof tips.$inferSelect;
 export type ExamQuestion = ChoiceQuestion & {
   points?: number;
   topic?: I18nText;
+  /** For a trial drawn from lesson quizzes: the lesson question it is, so a miss can point back to the lesson. */
+  ref?: { lessonId: string; slug: string; index: number };
 };
 
 export type ExamKind = "state" | "trial";
