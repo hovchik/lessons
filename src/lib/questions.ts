@@ -57,6 +57,27 @@ export function displayOrder(seed: string, n: number): number[] {
   return perm;
 }
 
+/** A fixed shuffle of a choice question's options; any order, the written one included, is possible. */
+export function choiceOrder(seed: string, n: number): number[] {
+  let h = 2166136261;
+  const s = `choice:${seed}`;
+  for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619) >>> 0;
+  const perm = Array.from({ length: n }, (_, i) => i);
+  for (let i = n - 1; i > 0; i--) {
+    h = Math.imul(h ^ (h >>> 15), 2246822519) >>> 0;
+    h = Math.imul(h ^ (h >>> 13), 3266489917) >>> 0;
+    const j = h % (i + 1);
+    [perm[i], perm[j]] = [perm[j], perm[i]];
+  }
+  return perm;
+}
+
+/** A multiple-choice question with its options in the shown order (exams, which grade on the whole question). */
+export function shuffledChoice<Q extends { options: unknown[]; answer: number }>(q: Q, seed: string): Q {
+  const perm = choiceOrder(seed, q.options.length);
+  return { ...q, options: perm.map((p) => q.options[p]), answer: perm.indexOf(q.answer) };
+}
+
 const inverse = (perm: number[]) => perm.reduce<number[]>((inv, p, i) => ((inv[p] = i), inv), []);
 
 /** How a question is shown and checked. `seed` (its item id) fixes how order and match items are mixed. */
@@ -74,8 +95,12 @@ export function displayForm(q: QuizQuestion, seed: string): { shown: Shown<I18nT
       const perm = displayOrder(seed, q.pairs.length);
       return { shown: { kind: "match", prompt: q.prompt, left: q.pairs.map((p) => p[0]), right: perm.map((p) => q.pairs[p][1]) }, key: { kind: "match", answer: inverse(perm) } };
     }
-    default:
-      return { shown: { kind: "choice", prompt: q.prompt, options: q.options }, key: { kind: "choice", answer: q.answer } };
+    default: {
+      // Options are written with the right one often first (in some subjects always), so they are shown
+      // in a fixed mixed order per question. Unlike order/match, keeping the written order is allowed.
+      const perm = choiceOrder(seed, q.options.length);
+      return { shown: { kind: "choice", prompt: q.prompt, options: perm.map((p) => q.options[p]) }, key: { kind: "choice", answer: perm.indexOf(q.answer) } };
+    }
   }
 }
 

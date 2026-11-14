@@ -4,6 +4,8 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ExamRunner } from "@/components/site/exam-runner";
+import { shuffledChoice } from "@/lib/questions";
+import { examItemId } from "@/lib/memory";
 import { StaticMarkdown } from "@/components/site/static-markdown";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
@@ -97,7 +99,7 @@ export default async function ExamPage({ params }: { params: Params }) {
         </section>
       )}
 
-      <ExamRunner questions={exam.questions} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} />
+      <ExamRunner questions={exam.questions.map((q, i) => shuffledChoice(q, examItemId(exam.id, i)))} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} />
 
       {related.length > 0 && (
         <section aria-labelledby="related-title">

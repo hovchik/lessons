@@ -16,6 +16,7 @@ import {
   parseNumber,
   partsRight,
   responseText,
+  shuffledChoice,
   validResponse,
 } from "../src/lib/questions";
 import { gap, match, num, order, q } from "../src/content/types";
@@ -150,7 +151,8 @@ const form = (i: number) => displayForm(quiz[i], `quiz:mix#${i}`);
 const rightAnswers = () => {
   const o = form(3).key;
   const mm = form(4).key;
-  return [1, "2,5", ["is", "is"], o.kind === "order" ? o.answer : [], mm.kind === "match" ? mm.answer : []];
+  const c = form(0).key;
+  return [c.kind === "choice" ? c.answer : -1, "2,5", ["is", "is"], o.kind === "order" ? o.answer : [], mm.kind === "match" ? mm.answer : []];
 };
 
 before(async () => {
@@ -186,7 +188,7 @@ test("a quiz of every kind is scored on the server and each answer kept", async 
   const ev = await db.select().from(schema.answerEvents).all();
   const first = ev.filter((e) => !e.hintUsed).sort((a, b) => a.itemId.localeCompare(b.itemId));
   assert.deepEqual(first.map((e) => e.correct), [true, false, true, true, true]);
-  assert.deepEqual(first.map((e) => e.choice), [1, null, null, null, null]);
+  assert.deepEqual(first.map((e) => e.choice), [answers[0], null, null, null, null]);
   assert.deepEqual(first[1].response, "3");
   assert.deepEqual(first[2].response, ["is", "is"]);
   const retry = ev.find((e) => e.hintUsed)!;
@@ -228,3 +230,27 @@ test("a typed answer cannot be guessed, so it counts for more in the ratings", a
   // Both were answered right first time by the same pupil; the two-option one moved less.
   assert.ok(Math.abs(items.get("quiz:mix#0")!.difficulty) < Math.abs(items.get("quiz:mix#2")!.difficulty));
 });
+
+test("multiple-choice options are shown in a fixed mixed order, and the key follows the right option", () => {
+  const q = { prompt: tx("Capital of Armenia?"), options: [tx("Yerevan"), tx("Gyumri"), tx("Vanadzor"), tx("Dilijan")], answer: 0 };
+  const at = [0, 0, 0, 0];
+  for (let k = 0; k < 400; k++) {
+    const { shown, key } = displayForm(q, `quiz:capitals-${k}#0`);
+    assert.equal(shown.kind, "choice");
+    if (shown.kind !== "choice" || key.kind !== "choice") continue;
+    assert.deepEqual([...shown.options].map((o) => o.en).sort(), ["Dilijan", "Gyumri", "Vanadzor", "Yerevan"]);
+    assert.equal(shown.options[key.answer].en, "Yerevan");
+    at[key.answer]++;
+    assert.deepEqual(displayForm(q, `quiz:capitals-${k}#0`).key, key, "the same question always shows the same order");
+  }
+  // A written-first answer no longer always shows first.
+  assert.ok(at.every((n) => n > 60), `right answer spread over positions: ${at}`);
+  const exam = shuffledChoice(q, "exam:trial-x#0");
+  assert.equal(exam.options[exam.answer].en, "Yerevan");
+  assert.deepEqual(exam, { ...q, ...displayFormChoice(q, "exam:trial-x#0") });
+});
+
+function displayFormChoice(q: Parameters<typeof displayForm>[0], seed: string) {
+  const { shown, key } = displayForm(q, seed);
+  return shown.kind === "choice" && key.kind === "choice" ? { options: shown.options, answer: key.answer } : {};
+}

@@ -3,7 +3,7 @@ import { getDb, schema } from "./db/client";
 import { newId } from "./user-auth";
 import { recordAnswers } from "./learner";
 import { examItemId, quizItemId } from "@/lib/memory";
-import { answerRecord, displayForm, validResponse, type QuizResponse } from "@/lib/questions";
+import { answerRecord, displayForm, shuffledChoice, validResponse, type QuizResponse } from "@/lib/questions";
 import { scoreExam } from "@/lib/exam-score";
 
 /**
@@ -129,12 +129,15 @@ export async function recordExamResult(input: { userId: string; examId: string; 
     ? await db.select({ id: schema.courses.id }).from(schema.courses).where(and(eq(schema.courses.subjectId, exam.subjectId), eq(schema.courses.grade, exam.grade))).get()
     : undefined;
   const courseId = course?.id ?? null;
+  // The page shows each question's options in a mixed order, and the answers come in that order.
+  const questions = exam.questions.map((q, i) => shuffledChoice(q, examItemId(exam.id, i)));
+  if (input.answers.some((a, i) => a !== null && a >= questions[i].options.length)) return null;
   const chosen = Object.fromEntries(input.answers.map((a, i) => [i, a ?? undefined]));
-  const result = scoreExam(exam.questions, chosen, exam.passPercent);
+  const result = scoreExam(questions, chosen, exam.passPercent);
   await recordAttempt({ userId: input.userId, kind: "exam", refId: exam.id, courseId, score: result.score, total: result.total, answers: input.answers });
   await recordAnswers(
     input.userId,
-    exam.questions.flatMap((q, i) => {
+    questions.flatMap((q, i) => {
       const a = input.answers[i];
       if (a === null || a === undefined) return [];
       return [{ itemId: examItemId(exam.id, i), source: "exam" as const, refId: exam.id, courseId, correct: a === q.answer, choice: a }];
