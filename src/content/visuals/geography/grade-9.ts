@@ -152,4 +152,6 @@ export const grade9: VisualMap[number] = {
       ru: ["Примерно до какого времени люди жили в пещерных домах Старого Хндзореска?", ["До 1950-х годов", "До 1500-х годов", "До 1000 года", "Живут до сих пор"], "Село переселилось на плато в 1950-х; теперь к пещерам туристы идут по подвесному мосту."],
     }),
   ],
+  "regional-differences": ["bars set=armcities", "bars set=marzes"],
+  "environment-sustainability": ["mechanism greenhouse", "mechanism solar"],
 };
