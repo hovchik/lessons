@@ -175,4 +175,7 @@ export const grade7: VisualMap[number] = {
       ru: ["У какой страны с 2023 года самое большое население в мире?", ["У Индии", "У Китая", "У США", "У Индонезии"], "Индия обогнала Китай в 2023 году: её население ещё растёт, а население Китая начало сокращаться."],
     }),
   ],
+  "climate-belts": ["mechanism breeze", "climate city=manaus,cairo,yakutsk", "climate city=london,moscow"],
+  "europe-regions": ["climate city=london,moscow", "bars set=countriesarea"],
+  "asia-regions": ["climate city=mumbai", "bars set=countriespop", "bars set=lakesdeep"],
 };
