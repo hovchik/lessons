@@ -11,6 +11,7 @@ import type { CourseSeed, I18nText } from "../types";
 import { placeBlocks } from "../visuals";
 import { chemistryTheory } from "./chemistry";
 import { geometryTheory } from "./geometry";
+import { physicsTheory } from "./physics";
 
 /** grade → lesson slug → Markdown body of the section (use ### for its own sub-headings). */
 export type TheoryMap = Record<number, Record<string, I18nText>>;
@@ -18,6 +19,7 @@ export type TheoryMap = Record<number, Record<string, I18nText>>;
 export const THEORY: Record<string, TheoryMap> = {
   chemistry: chemistryTheory,
   geometry: geometryTheory,
+  physics: physicsTheory,
 };
 
 export const THEORY_HEADING: I18nText = { en: "Going deeper", hy: "Ավելի խորը", ru: "Углубляемся" };

@@ -81,7 +81,7 @@ Let $ABCD$ have base $AD = a$, and drop perpendiculars $BH$ and $CK$ to line $AD
 - Cutting off $\triangle ABH$ from it leaves the rectangle $HBCK$.
 
 The right triangles $ABH$ and $DCK$ are congruent (hypotenuses $AB = DC$, legs $BH = CK$). Equal pieces removed from the same figure leave equal areas, so
-$$S_{ABCD} = S_{HBCK} = a h. \;$$
+$$S_{ABCD} = S_{HBCK} = a h.$$
 
 ### The most useful consequence
 
