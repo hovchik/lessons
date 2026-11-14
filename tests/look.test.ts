@@ -64,3 +64,10 @@ test("math is not used to find a passage on the page, and a long paragraph is cu
   const [p] = lookBack(long, [{ prompt: "Which animals hunt in the deep ocean?", right: ["sharks"], wrong: ["camels"] }]);
   assert.ok(p && p.markdown.length < long.length && /sharks/i.test(p.markdown));
 });
+
+test("a quoted passage keeps the greater-than signs of its formulas", () => {
+  const md = "Derivatives tell us about graphs.\n\n> If $f'(x) > 0$ at every point of an interval, $f$ **increases** on it.\n> If $f'(x) < 0$, $f$ **decreases** on it.\n\nSecond derivatives tell us about bending.";
+  const [p] = lookBack(md, [{ prompt: "What happens to f on an interval where the derivative is positive?", right: ["f increases"], wrong: ["f decreases"] }]);
+  assert.ok(p && p.markdown.includes("$f'(x) > 0$"), p?.markdown);
+  assert.ok(!p.markdown.startsWith(">"));
+});

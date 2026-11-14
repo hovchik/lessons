@@ -104,9 +104,10 @@ export function lessonPassages(body: string): Passage[] {
   const flushPara = () => {
     flushItem();
     if (para.length && !skip) {
-      const text = para.join(" ").trim();
-      const quote = text.startsWith(">");
-      for (const w of sentenceWindows(quote ? text.replace(/(^|\s)>\s?/g, " ").trim() : text)) add(w);
+      // Quote markers come off each source line before joining, so a ">" inside the text (an inequality) stays.
+      const quote = para[0].trimStart().startsWith(">");
+      const text = (quote ? para.map((l) => l.replace(/^\s*>\s?/, "")) : para).join(" ").trim();
+      for (const w of sentenceWindows(text)) add(w);
     }
     para = [];
   };
