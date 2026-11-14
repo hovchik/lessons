@@ -19,6 +19,7 @@ import { QUESTIONS } from "../src/content/questions";
 import { EXPLANATIONS, explanationKey, questionPrint } from "../src/content/explanations";
 import { questionProblems } from "../src/content/questions/validate";
 import { WORKED } from "../src/content/worked";
+import { THEORY, theoryProblems } from "../src/content/theory";
 import { workedProblems } from "../src/content/worked/validate";
 import { buildSkillMap, checkSkillMap, prerequisites } from "../src/content/skills";
 import { EXAM_SCOPE } from "../src/content/exam-scope";
@@ -125,6 +126,10 @@ for (const [subject, byGrade] of Object.entries(WORKED)) {
     }
   }
 }
+
+// Going deeper: every section belongs to a written lesson and has all three languages.
+errors.push(...theoryProblems(courses));
+const theoryLessons = Object.values(THEORY).reduce((s, byGrade) => s + Object.values(byGrade).reduce((t, bySlug) => t + Object.keys(bySlug).length, 0), 0);
 
 // Exams: unique ids, every text in three languages, answers in range, one trial per written course.
 const examIds = new Set<string>();
@@ -242,7 +247,7 @@ for (const [subject, byGrade] of Object.entries(RELEVANCE)) {
 }
 console.log(`${relevanceLines} "why learn this" lines.`);
 
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets.`);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets, deeper theory in ${theoryLessons} lessons.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

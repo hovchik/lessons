@@ -23,13 +23,14 @@ import { chess } from "./subjects/chess";
 import { astronomy } from "./subjects/astronomy";
 import { howto } from "./subjects/howto";
 import { withVisuals } from "./visuals";
+import { withTheory } from "./theory";
 import { withQuestions } from "./questions";
 import { withWorked } from "./worked";
 import { withExplanations } from "./explanations";
 
 export { subjects };
 
-export const courses: CourseSeed[] = withExplanations(withQuestions(withWorked(withVisuals([
+export const courses: CourseSeed[] = withExplanations(withQuestions(withWorked(withTheory(withVisuals([
   ...math,
   ...algebra,
   ...geometry,
@@ -52,6 +53,6 @@ export const courses: CourseSeed[] = withExplanations(withQuestions(withWorked(w
   ...chess,
   ...astronomy,
   ...howto,
-]))));
+])))));
 
 export const courseId = (subject: string, grade: number) => `${subject}-${grade}`;

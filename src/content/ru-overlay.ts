@@ -55,3 +55,6 @@ const withLang = (lang: "ru" | "en") => (course: CourseSeed, ru: RuCourse): Cour
 export const withRu = withLang("ru");
 /** Adds an English translation to a course built with hyCourse. */
 export const withEn = withLang("en");
+
+/** A translation plus the lessons added to the course later (kept in their own files). */
+export const plusLessons = (c: RuCourse, ...extra: Record<string, RuLesson>[]): RuCourse => ({ ...c, lessons: Object.assign({}, c.lessons, ...extra) });
