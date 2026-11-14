@@ -28,5 +28,7 @@ import { en as en11 } from "./grade-11.en";
 import { chemistryGrade12 } from "./grade-12";
 import { ru as ru12 } from "./grade-12.ru";
 import { en as en12 } from "./grade-12.en";
+import { ruExtra12 } from "./grade-12.extra.ru";
+import { enExtra12 } from "./grade-12.extra.en";
 
-export const chemistry: CourseSeed[] = [withEn(withRu(chemistryGrade7, plusLessons(ru7, ruExtra7)), plusLessons(en7, enExtra7)), withEn(withRu(chemistryGrade8, plusLessons(ru8, ruExtra8)), plusLessons(en8, enExtra8)), withEn(withRu(chemistryGrade9, plusLessons(ru9, ruExtra9)), plusLessons(en9, enExtra9)), withEn(withRu(chemistryGrade10, plusLessons(ru10, ruExtra10)), plusLessons(en10, enExtra10)), withEn(withRu(chemistryGrade11, plusLessons(ru11, ruExtra11)), plusLessons(en11, enExtra11)), withEn(withRu(chemistryGrade12, ru12), en12)];
+export const chemistry: CourseSeed[] = [withEn(withRu(chemistryGrade7, plusLessons(ru7, ruExtra7)), plusLessons(en7, enExtra7)), withEn(withRu(chemistryGrade8, plusLessons(ru8, ruExtra8)), plusLessons(en8, enExtra8)), withEn(withRu(chemistryGrade9, plusLessons(ru9, ruExtra9)), plusLessons(en9, enExtra9)), withEn(withRu(chemistryGrade10, plusLessons(ru10, ruExtra10)), plusLessons(en10, enExtra10)), withEn(withRu(chemistryGrade11, plusLessons(ru11, ruExtra11)), plusLessons(en11, enExtra11)), withEn(withRu(chemistryGrade12, plusLessons(ru12, ruExtra12)), plusLessons(en12, enExtra12))];

@@ -187,6 +187,11 @@ export const chemistryVisuals: VisualMap = {
     electrolysis: ["mechanism electrolysis"],
   },
   12: {
+    "nuclear-chemistry": ["atom", "ptable"],
+    "energy-chemistry": ["activity mode=salt", "mechanism electrolysis"],
+    "new-materials": ["lattice set=graphite,diamond"],
+    "gas-problems": ["particles mode=gas", "mole"],
+    "ion-identification": ["ions set=barium,silver,copper,iron", "flame Na", "flame K"],
     "transition-metals": ["flame Cu", "ions set=copper,iron"],
     "chemistry-environment": ["mechanism acidrain", "mechanism greenhouse"],
     "chemistry-daily-life": ["ph set=home", "mechanism soap"],
