@@ -1,6 +1,7 @@
 import type { ExamKind, ExamQuestion, ExamScale, ExamSystem, I18nText } from "@/server/db/schema";
 import { subjects } from "../subjects";
 import { t } from "../types";
+import { hyOrdinal } from "@/lib/utils";
 
 export type { ExamQuestion };
 
@@ -49,7 +50,7 @@ const subjectName = (id: string): I18nText => {
 
 const GRADE_WORD = {
   en: (g: number) => `Grade ${g}`,
-  hy: (g: number) => `${g}-րդ դասարան`,
+  hy: (g: number) => `${hyOrdinal(g)} դասարան`,
   ru: (g: number) => `${g} класс`,
 };
 
@@ -61,7 +62,8 @@ export const trial = (
   subject: string,
   grade: number,
   questions: ExamQuestion[],
-  opts: { durationMin?: number; focus?: Tri } = {},
+  /** fromLessons: the questions come from the course's lesson quizzes (trials/auto.ts). */
+  opts: { durationMin?: number; focus?: Tri; fromLessons?: boolean } = {},
 ): ExamSeed => {
   const name = subjectName(subject);
   const n = questions.length;
@@ -85,9 +87,9 @@ export const trial = (
       `Пробная работа из ${n} заданий по всему курсу «${name.ru}» за ${GRADE_WORD.ru(grade)}${focus ? `: ${focus.ru}` : ""}. Выполните её в конце учебного года, чтобы увидеть, что ещё нужно повторить.`,
     ),
     format: t(
-      `## How the trial works\n\n- **${n} questions**, one correct answer each, **${total} points** in total.\n- Recommended time: **${durationMin} minutes**. The timer is a guide, not a hard stop.\n- Answer every question, then press **Finish** to see your score, the percent, and the equivalent mark on the Armenian 10-point and Russian 5-point scales.\n- Every question has an explanation. Read the ones you missed and return to the matching lesson.\n\n## Tips\n\n- Read each question twice before choosing.\n- If you are unsure, rule out the options that are clearly wrong first.\n- Work through the whole test without notes, as in a real end-of-year check.`,
-      `## Ինչպես է անցնում փորձնական թեստը\n\n- **${n} առաջադրանք**, յուրաքանչյուրը մեկ ճիշտ պատասխանով, ընդամենը **${total} միավոր**։\n- Խորհուրդ տրվող ժամանակը՝ **${durationMin} րոպե**։ Ժամաչափը ուղեցույց է, ոչ թե խիստ սահման։\n- Պատասխանեք բոլոր հարցերին, ապա սեղմեք **Ավարտել**՝ տեսնելու միավորները, տոկոսը և համարժեք գնահատականը հայկական 10 և ռուսական 5 միավորանոց սանդղակներով։\n- Յուրաքանչյուր հարց ունի բացատրություն։ Կարդացեք սխալների բացատրությունները և վերադարձեք համապատասխան դասին։\n\n## Խորհուրդներ\n\n- Ընտրելուց առաջ հարցը կարդացեք երկու անգամ։\n- Եթե վստահ չեք, նախ բացառեք ակնհայտ սխալ տարբերակները։\n- Թեստը կատարեք առանց գրառումների, ինչպես իսկական տարեվերջյան ստուգման ժամանակ։`,
-      `## Как устроена пробная работа\n\n- **${n} заданий**, в каждом один верный ответ, всего **${total} баллов**.\n- Рекомендуемое время: **${durationMin} минут**. Таймер подсказывает темп, но не останавливает работу.\n- Ответьте на все вопросы и нажмите **Завершить**, чтобы увидеть баллы, процент и отметку по армянской 10-балльной и российской 5-балльной шкалам.\n- У каждого задания есть пояснение. Прочитайте пояснения к ошибкам и вернитесь к нужному уроку.\n\n## Советы\n\n- Прочитайте вопрос дважды, прежде чем выбирать.\n- Если не уверены, сначала исключите явно неверные варианты.\n- Выполняйте работу без подсказок, как на настоящей итоговой проверке.`,
+      `## How the trial works\n\n- **${n} questions**, one correct answer each, **${total} points** in total.\n- Recommended time: **${durationMin} minutes**. The timer is a guide, not a hard stop.\n- Answer every question, then press **Finish** to see your score, the percent, and the equivalent mark on the Armenian 10-point and Russian 5-point scales.\n${opts.fromLessons ? "- The questions come from this year's lessons, from every unit. For a question you missed, the result shows the part of the lesson to read again." : "- Every question has an explanation. Read the ones you missed and return to the matching lesson."}\n\n## Tips\n\n- Read each question twice before choosing.\n- If you are unsure, rule out the options that are clearly wrong first.\n- Work through the whole test without notes, as in a real end-of-year check.`,
+      `## Ինչպես է անցնում փորձնական թեստը\n\n- **${n} առաջադրանք**, յուրաքանչյուրը մեկ ճիշտ պատասխանով, ընդամենը **${total} միավոր**։\n- Խորհուրդ տրվող ժամանակը՝ **${durationMin} րոպե**։ Ժամաչափը ուղեցույց է, ոչ թե խիստ սահման։\n- Պատասխանեք բոլոր հարցերին, ապա սեղմեք **Ավարտել**՝ տեսնելու միավորները, տոկոսը և համարժեք գնահատականը հայկական 10 և ռուսական 5 միավորանոց սանդղակներով։\n${opts.fromLessons ? "- Հարցերը այս տարվա դասերից են՝ բոլոր բաժիններից։ Սխալ պատասխանի դեպքում արդյունքը ցույց է տալիս դասի այն հատվածը, որը պետք է նորից կարդալ։" : "- Յուրաքանչյուր հարց ունի բացատրություն։ Կարդացեք սխալների բացատրությունները և վերադարձեք համապատասխան դասին։"}\n\n## Խորհուրդներ\n\n- Ընտրելուց առաջ հարցը կարդացեք երկու անգամ։\n- Եթե վստահ չեք, նախ բացառեք ակնհայտ սխալ տարբերակները։\n- Թեստը կատարեք առանց գրառումների, ինչպես իսկական տարեվերջյան ստուգման ժամանակ։`,
+      `## Как устроена пробная работа\n\n- **${n} заданий**, в каждом один верный ответ, всего **${total} баллов**.\n- Рекомендуемое время: **${durationMin} минут**. Таймер подсказывает темп, но не останавливает работу.\n- Ответьте на все вопросы и нажмите **Завершить**, чтобы увидеть баллы, процент и отметку по армянской 10-балльной и российской 5-балльной шкалам.\n${opts.fromLessons ? "- Задания взяты из уроков этого года, из всех разделов. К заданию с ошибкой результат покажет отрывок урока, который стоит перечитать." : "- У каждого задания есть пояснение. Прочитайте пояснения к ошибкам и вернитесь к нужному уроку."}\n\n## Советы\n\n- Прочитайте вопрос дважды, прежде чем выбирать.\n- Если не уверены, сначала исключите явно неверные варианты.\n- Выполняйте работу без подсказок, как на настоящей итоговой проверке.`,
     ),
     questions,
     durationMin,

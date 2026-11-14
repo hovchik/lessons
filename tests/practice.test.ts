@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { quizPick, shownAt } from "./shown";
 import { eloUpdate, pickNext, predict, priorAbility, priorDifficulty, stretchOf } from "../src/lib/elo";
 
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "lessons-practice-"));
@@ -20,7 +21,9 @@ const q = (answer: number) => ({ prompt: tx(`q${answer}`), options: [tx("a"), tx
 const quiz = [q(0), q(1), q(2), q(3)];
 const right = [0, 1, 2, 3];
 // In these quizzes the right option of question #i is i.
-const rightChoice = (itemId: string) => Number(itemId.split("#")[1]);
+/** In these quizzes question k is answered by written option k; pupils pick the shown position. */
+const rightChoice = (itemId: string) => shownAt(itemId, Number(itemId.split("#")[1]), 4);
+const pickFor = (lessonId: string, written: (number | null)[]) => written.map((a, i) => (a === null ? null : quizPick(lessonId, i, a, 4)));
 
 before(async () => {
   m = {
@@ -93,7 +96,7 @@ test("quiz answers move the pupil's ability and the questions' difficulty", asyn
   const before = await m.ability.getSkillRatings("u1", ["math-3.u1"]);
   assert.deepEqual(before.get("math-3.u1"), { ability: 0, answers: 0, stored: false });
   // Right first tries on two questions, wrong on two, with second tries that must not count.
-  await m.progress.recordQuizResult({ userId: "u1", lessonId: "a", answers: [0, 1, 0, 0], retries: [null, null, 2, 3] });
+  await m.progress.recordQuizResult({ userId: "u1", lessonId: "a", answers: pickFor("a", [0, 1, 0, 0]) as number[], retries: pickFor("a", [null, null, 2, 3]) });
   const db = await m.client.getDb();
   const { schema } = m.client;
   const skill = await db.select().from(schema.skillRatings).all();
@@ -105,7 +108,7 @@ test("quiz answers move the pupil's ability and the questions' difficulty", asyn
   assert.ok(items.get("quiz:a#0")!.difficulty < items.get("quiz:a#3")!.difficulty);
 
   // Two pupils at once both count.
-  await Promise.all([m.progress.recordQuizResult({ userId: "u2", lessonId: "a", answers: right }), m.progress.recordQuizResult({ userId: "u3", lessonId: "a", answers: right })]);
+  await Promise.all([m.progress.recordQuizResult({ userId: "u2", lessonId: "a", answers: pickFor("a", right) as number[] }), m.progress.recordQuizResult({ userId: "u3", lessonId: "a", answers: pickFor("a", right) as number[] })]);
   const a0 = await db.select().from(schema.itemRatings).all().then((rs) => rs.find((r) => r.itemId === "quiz:a#0")!);
   assert.equal(a0.answers, 3);
 });
@@ -164,7 +167,7 @@ test("after two misses the easiest question comes next", async () => {
   const abilityBefore = (await m.ability.getSkillRatings("u3", ["math-3.u1"])).get("math-3.u1")!.ability;
   let q = (await m.practice.nextPracticeQuestion("u3", "math-3.u1"))!.question!;
   for (let k = 0; k < 2; k++) {
-    const r = (await m.practice.answerPractice({ userId: "u3", skillId: "math-3.u1", itemId: q.itemId, response: (rightChoice(q.itemId) + 1) % 4, seen, results }))!;
+    const r = (await m.practice.answerPractice({ userId: "u3", skillId: "math-3.u1", itemId: q.itemId, response: shownAt(q.itemId, (Number(q.itemId.split("#")[1]) + 1) % 4, 4), seen, results }))!;
     seen.push(q.itemId);
     results.push(r.correct);
     q = r.next!;

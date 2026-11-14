@@ -38,6 +38,8 @@ export type ReviewItem = {
   shown: Shown<I18nText>;
   key: Key<I18nText>;
   explanation: I18nText | null;
+  /** The lesson passage that teaches it, in the page's language (added by withLooks). */
+  look?: { html: string; find: string[] } | null;
   lastCorrect: boolean;
   lapses: number;
 };
@@ -203,9 +205,14 @@ export async function getMistakes(userId: string, limit = 200) {
     : [];
   // SQLite returns the bare columns from the row that holds the max(), so these are from the latest answer.
   const latest = new Map(last.map((r) => [r.itemId, r]));
+  // Options were shown in the written order before choice_shuffle_since (migration 0011): an older
+  // choice can't be read as a shown position, so the notebook leaves "your answer" out for it.
+  const since = await db.select({ value: schema.appMeta.value }).from(schema.appMeta).where(eq(schema.appMeta.key, "choice_shuffle_since")).get();
+  const shuffledFrom = since ? new Date(since.value * 1000).toISOString().slice(0, 19).replace("T", " ") : null;
   return items.map((i) => {
     const l = latest.get(i.itemId);
-    return { ...i, lastResponse: (l?.response ?? l?.choice ?? null) as QuizResponse | null, wasSure: l?.confidence === 2 };
+    const oldChoice = l && l.response == null && l.choice != null && (!shuffledFrom || l.at < shuffledFrom);
+    return { ...i, lastResponse: oldChoice ? null : ((l?.response ?? l?.choice ?? null) as QuizResponse | null), wasSure: l?.confidence === 2 };
   });
 }
 

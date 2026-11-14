@@ -4,6 +4,9 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ExamRunner } from "@/components/site/exam-runner";
+import { shuffledChoice } from "@/lib/questions";
+import { looksFor } from "@/server/look";
+import { examItemId } from "@/lib/memory";
 import { StaticMarkdown } from "@/components/site/static-markdown";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
@@ -32,6 +35,10 @@ export default async function ExamPage({ params }: { params: Params }) {
   const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { exam, subject } = data;
   const total = examTotal(exam.questions);
+  // A trial drawn from lesson quizzes points each missed question back to its lesson passage.
+  const refs = exam.questions.map((q) => q.ref ?? null);
+  const looks = refs.some(Boolean) && exam.subjectId ? await looksFor(refs.map((r) => (r ? { lessonId: r.lessonId, index: r.index } : { lessonId: "", index: -1 })), l) : null;
+  const lookBacks = looks?.map((look, i) => (look && refs[i] ? { look, href: `/${exam.subjectId}/${exam.grade}/${refs[i]!.slug}` } : null)) ?? null;
   const Icon = exam.kind === "state" ? Award : ClipboardCheck;
   const plannable = examScope(exam).length > 0;
   const plan = plannable && user ? await getPlanRow(user.id, exam.id) : null;
@@ -97,7 +104,7 @@ export default async function ExamPage({ params }: { params: Params }) {
         </section>
       )}
 
-      <ExamRunner questions={exam.questions} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} />
+      <ExamRunner questions={exam.questions.map((q, i) => shuffledChoice(q, examItemId(exam.id, i)))} durationMin={exam.durationMin} scale={exam.scale} passPercent={exam.passPercent} save={user ? { examId: exam.id } : null} lookBacks={lookBacks} />
 
       {related.length > 0 && (
         <section aria-labelledby="related-title">

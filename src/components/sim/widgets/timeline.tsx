@@ -9,6 +9,7 @@ import { TIMELINES } from "../data/timelines";
 import { Note, Readouts, Stage } from "../kit";
 import { L, t } from "../labels";
 import { num } from "../math-kit";
+import { hyOrdinal } from "@/lib/utils";
 
 /**
  * A timeline of dated events: a to-scale strip with eras on top and a list of events below.
@@ -66,7 +67,7 @@ const deep = (y: number) => y < -3000;
 
 function centuryText(y: number, lang: ArtLang) {
   const c = Math.ceil(Math.abs(y) / (deep(y) ? 1000 : 100));
-  const name = lang === "ru" ? roman(c) : lang === "hy" ? `${c}-րդ` : ordinal(c);
+  const name = lang === "ru" ? roman(c) : lang === "hy" ? hyOrdinal(c) : ordinal(c);
   return L(deep(y) ? W.mbc : y < 0 ? W.cbc : W.cad, lang).replace("{c}", name);
 }
 

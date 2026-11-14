@@ -7,7 +7,10 @@ import { Button } from "@/components/ui/button";
 import { Confetti } from "@/components/ui/confetti";
 import { AnswerArea } from "@/components/site/answer-area";
 import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-check";
+import { LookBack } from "@/components/site/look-back";
+import { TutorHelp } from "@/components/site/tutor-help";
 import { lessonChange, notifyChanged, type LessonProgressRow } from "@/lib/live";
+import { postOrQueue } from "@/lib/outbox";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
@@ -16,6 +19,8 @@ type Props = {
   questions: LocalQuestion[];
   /** When set (signed-in pupil), a finished quiz is saved to /api/progress/quiz. */
   save?: { lessonId: string } | null;
+  /** The hint tutor is on for this pupil (signed in, and the server has a Claude key). */
+  tutor?: boolean;
 };
 
 /** With four or more options, a wrong first try also crosses out one other wrong option as the hint. */
@@ -33,15 +38,18 @@ const same = (a: QuizResponse | undefined, b: QuizResponse | undefined) => JSON.
  * first try gets one more go (with a hint for multiple choice) before the
  * answer is shown. The score counts first tries.
  */
-export function Quiz({ questions, save }: Props) {
+export function Quiz({ questions, save, tutor = false }: Props) {
   const t = useTranslations("lesson");
+  const tl = useTranslations("look");
   // The answer being given, the first checked answer with its confidence, and the second try.
   const [picked, setPicked] = useState<Record<number, QuizResponse>>({});
   const [first, setFirst] = useState<Record<number, QuizResponse>>({});
   const [confidence, setConfidence] = useState<Record<number, Confidence>>({});
   const [second, setSecond] = useState<Record<number, QuizResponse>>({});
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
-  const [saved, setSaved] = useState(false);
+  // During the second try the pupil may open the lesson passage as a hint.
+  const [peek, setPeek] = useState<Record<number, boolean>>({});
+  const [saved, setSaved] = useState<false | "now" | "later">(false);
   const savedRun = useRef(0);
 
   const total = questions.length;
@@ -63,10 +71,12 @@ export function Quiz({ questions, save }: Props) {
       confidence: questions.map((_, i) => confidence[i] ?? null),
       retries: questions.map((_, i) => second[i] ?? null),
     };
-    fetch("/api/progress/quiz", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
+    postOrQueue("/api/progress/quiz", payload)
       .then(async (r) => {
+        // Offline: kept in this browser and sent when the connection is back (src/lib/outbox.ts).
+        if (r === "queued") return setSaved("later");
         if (!r.ok) return;
-        setSaved(true);
+        setSaved("now");
         const { progress } = (await r.json()) as { progress: LessonProgressRow | null };
         notifyChanged(progress ? lessonChange(progress) : {});
       })
@@ -79,6 +89,7 @@ export function Quiz({ questions, save }: Props) {
     setConfidence({});
     setSecond({});
     setShowWhy({});
+    setPeek({});
     setSaved(false);
     savedRun.current = 0;
   };
@@ -152,6 +163,15 @@ export function Quiz({ questions, save }: Props) {
                     <p className="font-extrabold text-destructive">{confidence[i] === 2 ? t("wrongSure") : t("wrongGuess")}</p>
                     <p className="mt-1 font-semibold">{cross !== null ? t("hintCrossed") : t("hintOnce")}</p>
                   </div>
+                  {qq.look &&
+                    (peek[i] ? (
+                      <LookBack look={qq.look} />
+                    ) : (
+                      <button type="button" className="inline-flex min-h-11 items-center gap-1.5 rounded-xl px-3 text-sm font-bold text-primary hover:bg-muted" onClick={() => setPeek((p) => ({ ...p, [i]: true }))}>
+                        {tl("peek")}
+                      </button>
+                    ))}
+                  {tutor && <TutorHelp itemId={qq.itemId} mode="hint" response={first[i]} />}
                   <Button
                     size="sm"
                     className="w-full sm:w-auto"
@@ -176,6 +196,8 @@ export function Quiz({ questions, save }: Props) {
               {done && showWhy[i] && qq.explanation && (
                 <p className="fx-in rounded-[var(--radius)] bg-muted p-3 text-sm leading-relaxed">{qq.explanation}</p>
               )}
+              {done && !firstRight && qq.look && <LookBack look={qq.look} />}
+              {done && !firstRight && tutor && !qq.explanation && <TutorHelp itemId={qq.itemId} mode="why" response={second[i] ?? first[i]} />}
             </li>
           );
         })}
@@ -189,7 +211,7 @@ export function Quiz({ questions, save }: Props) {
             {saved && (
               <p role="status" className="fx-in mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-success">
                 <Save className="size-4" aria-hidden="true" />
-                {t("saved")}
+                {saved === "later" ? t("savedLater") : t("saved")}
               </p>
             )}
           </div>

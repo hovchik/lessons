@@ -1,3 +1,4 @@
+import { SaveOffline } from "@/components/site/save-offline";
 import type { Metadata } from "next";
 import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Gauge, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
@@ -83,6 +84,9 @@ export default async function CoursePage({ params }: { params: Params }) {
                 {t("course.start")}
               </Link>
             )}
+            <div className="mt-3">
+              <SaveOffline urls={units.flatMap((u) => u.lessons).filter((x) => x.status === "published").map((x) => `/${locale}/${subject}/${grade}/${x.slug}`)} />
+            </div>
           </div>
         </div>
       </header>
