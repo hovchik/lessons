@@ -32,8 +32,8 @@ after(() => fs.rmSync(dir, { recursive: true, force: true }));
 
 test("a class is joined by its code, typed any old way, and only once", async () => {
   const res = await m.classes.createClass("teacher", "  3A   Monday ");
-  if (!("class" in res)) throw new Error("class not created");
-  const c = res.class;
+  const c = "class" in res ? res.class : undefined;
+  if (!c) throw new Error("class not created");
   assert.equal(c.name, "3A Monday");
   assert.match(c.code, /^[A-HJKMNP-Z2-9]{6}$/);
   const typed = `${c.code.slice(0, 3).toLowerCase()} ${c.code.slice(3)}`;
@@ -47,7 +47,7 @@ test("a class is joined by its code, typed any old way, and only once", async ()
 });
 
 test("only the owner sees a pupil, and only while the pupil is in the class", async () => {
-  const [c] = await m.classes.ownClasses("teacher");
+  const c = (await m.classes.ownClasses("teacher"))[0]!;
   assert.equal(await m.classes.canSeePupil("teacher", c.id, "ani"), true);
   assert.equal(await m.classes.canSeePupil("other", c.id, "ani"), false, "someone else's class");
   assert.equal(await m.classes.canSeePupil("teacher", c.id, "other"), false, "not a member");
@@ -57,7 +57,7 @@ test("only the owner sees a pupil, and only while the pupil is in the class", as
 });
 
 test("the class report shows each pupil's week and the questions several got wrong", async () => {
-  const [c] = await m.classes.ownClasses("teacher");
+  const c = (await m.classes.ownClasses("teacher"))[0]!;
   const now = new Date();
   const answer = (i: number, correct: boolean) => ({ itemId: `quiz:math-3-times#${i}`, source: "quiz" as const, refId: "math-3-times", courseId: "math-3", correct });
   await m.learner.recordAnswers("ani", [answer(0, true), answer(1, false), answer(2, true), answer(0, true), answer(2, true), { ...answer(1, true), hintUsed: true, schedule: false }], now);
@@ -78,7 +78,7 @@ test("the class report shows each pupil's week and the questions several got wro
 });
 
 test("a pupil can leave, and deleting the class ends it for everyone", async () => {
-  const [c] = await m.classes.ownClasses("teacher");
+  const c = (await m.classes.ownClasses("teacher"))[0]!;
   assert.equal(await m.classes.removeMember("aram", c.id, "aram"), true);
   assert.equal(await m.classes.canSeePupil("teacher", c.id, "aram"), false);
   assert.equal(await m.classes.deleteClass("teacher", c.id), true);
