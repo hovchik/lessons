@@ -1,4 +1,5 @@
 import { t, type CourseSeed, type UnitSeed } from "../../types";
+import { hyOrdinal } from "@/lib/utils";
 
 const notes = (am: [string, string, string], ru: [string, string, string]) => ({
   armenia: t(...am),
@@ -15,7 +16,7 @@ export const course = (
 ): CourseSeed => ({
   subject: "english",
   grade,
-  title: t(`English · Grade ${grade}`, `Անգլերեն · ${grade}-րդ դասարան`, `Английский язык · ${grade} класс`),
+  title: t(`English · Grade ${grade}`, `Անգլերեն · ${hyOrdinal(grade)} դասարան`, `Английский язык · ${grade} класс`),
   description: t(...description),
   curriculumNotes: notes(am, ru),
   hoursPerWeek: hours,

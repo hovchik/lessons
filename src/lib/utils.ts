@@ -26,3 +26,6 @@ export const GRADE_STAGES: Record<"primary" | "middle" | "high", number[]> = {
   middle: [5, 6, 7, 8, 9],
   high: [10, 11, 12],
 };
+
+/** Armenian ordinal written with digits: 1-ին, then 2-րդ, 3-րդ, … */
+export const hyOrdinal = (n: number) => (n === 1 ? "1-ին" : `${n}-րդ`);

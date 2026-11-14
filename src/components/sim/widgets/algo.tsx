@@ -8,6 +8,7 @@ import type { SimProps } from "../sim-block";
 import { Readouts, Stage } from "../kit";
 import { L, t, UI } from "../labels";
 import { COLORS } from "../math-kit";
+import { hyOrdinal } from "@/lib/utils";
 
 /**
  * Searching and sorting, one step at a time, with a count of comparisons.
@@ -36,7 +37,7 @@ const W = {
   cmp: t("Compare {a} and {b}.", "Համեմատում ենք {a} և {b} թվերը։", "Сравниваем {a} и {b}."),
   swap: t("{a} > {b}: swap them.", "{a} > {b}․ փոխատեղում ենք։", "{a} > {b}: меняем местами."),
   keep: t("{a} ≤ {b}: leave them.", "{a} ≤ {b}․ թողնում ենք։", "{a} ≤ {b}: оставляем."),
-  passEnd: t("End of pass {n}: the largest remaining number has bubbled to the end.", "{n}-րդ անցման վերջ․ մնացածներից ամենամեծը «լողացել» է դեպի վերջ։", "Конец прохода {n}: самое большое из оставшихся «всплыло» в конец."),
+  passEnd: t("End of pass {n}: the largest remaining number has bubbled to the end.", "{nth} անցման վերջ․ մնացածներից ամենամեծը «լողացել» է դեպի վերջ։", "Конец прохода {n}: самое большое из оставшихся «всплыло» в конец."),
   done: t("Sorted!", "Տեսակավորված է։", "Отсортировано!"),
   split: t("Split {x} into two halves.", "Բաժանում ենք {x} ցուցակը երկու կեսի։", "Делим {x} на две половины."),
   merged: t("Merge {x} and {y} → {z}: take the smaller front element each time.", "Միաձուլում ենք {x} և {y} ցուցակները → {z}․ ամեն անգամ վերցնում ենք առջևի տարրերից փոքրը։", "Сливаем {x} и {y} → {z}: каждый раз берём меньший из первых элементов."),
@@ -68,7 +69,7 @@ function bubble(a0: number[]): Frame[] {
       if (sw) { [a[j], a[j + 1]] = [a[j + 1], a[j]]; s++; f.push({ a: [...a], hi: [j, j + 1], sorted: [...sorted], note: fill(W.swap, { a: a[j + 1], b: a[j] }), c, s }); }
     }
     sorted.push(n - 1 - p);
-    f.push({ a: [...a], hi: [], sorted: [...sorted], note: fill(W.passEnd, { n: p + 1 }), c, s });
+    f.push({ a: [...a], hi: [], sorted: [...sorted], note: fill(W.passEnd, { n: p + 1, nth: hyOrdinal(p + 1) }), c, s });
   }
   f.push({ a: [...a], hi: [], sorted: a.map((_, i) => i), note: W.done, c, s });
   return f;

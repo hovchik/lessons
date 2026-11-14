@@ -1,6 +1,7 @@
 import type { ExamKind, ExamQuestion, ExamScale, ExamSystem, I18nText } from "@/server/db/schema";
 import { subjects } from "../subjects";
 import { t } from "../types";
+import { hyOrdinal } from "@/lib/utils";
 
 export type { ExamQuestion };
 
@@ -49,7 +50,7 @@ const subjectName = (id: string): I18nText => {
 
 const GRADE_WORD = {
   en: (g: number) => `Grade ${g}`,
-  hy: (g: number) => `${g}-րդ դասարան`,
+  hy: (g: number) => `${hyOrdinal(g)} դասարան`,
   ru: (g: number) => `${g} класс`,
 };
 
