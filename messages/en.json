@@ -106,7 +106,8 @@
     "rightSecond": "Right on the second try.",
     "wrongSecond": "Not this time. The right answer is marked green.",
     "wrongSecondShown": "Not this time. The right answer is shown above.",
-    "secondTries": "+{n} on the second try"
+    "secondTries": "+{n} on the second try",
+    "savedLater": "Saved on this device. It will be sent when you're back online."
   },
   "tips": {
     "title": "Tips & tricks",
@@ -872,5 +873,17 @@
     "rightShare": "{pct}% right",
     "nothingYet": "No lessons or quizzes yet.",
     "mistakes": "Latest mistakes"
+  },
+  "offline": {
+    "title": "You're offline",
+    "text": "No connection right now. Lessons you opened before, or saved for offline, still work.",
+    "saved": "On this device",
+    "none": "Nothing saved yet. Open a course while online and press “Save for offline”.",
+    "save": "Save {n} lessons for offline",
+    "saving": "Saving {done} of {total}…",
+    "done": "Saved for offline: {n} lessons",
+    "partial": "Saved {n} lessons; {failed} could not be saved. Try again online.",
+    "remove": "Remove from this device",
+    "note": "Quiz results you finish offline are kept and sent when the connection is back."
   }
 }

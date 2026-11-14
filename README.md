@@ -133,6 +133,17 @@ npm run explain                                  # all of them (resumable: run i
 
 Read the new files over, then `npm run content:check && npm run db:seed`.
 
+## Classes, parents and offline use
+
+- **Classes** (`/classes`): any account can open a class and give pupils its 6-letter code. The class page
+  shows each pupil's last 7 days and the questions several of them got wrong, with a report per pupil.
+  Pupils can leave; the teacher can remove a pupil or delete the class.
+- **Parent link**: on the same page a pupil can make a read-only link to their progress for a parent.
+  Making a new one or turning it off stops the old one.
+- **Offline**: a service worker (`public/sw.js`, production builds only) keeps every lesson that was opened,
+  and "Save for offline" on a course page stores all its lessons. Quiz results finished offline are kept in
+  the browser and sent when the connection is back. After changing `sw.js`, raise its `VERSION`.
+
 ## Project layout
 
 ```

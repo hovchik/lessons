@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { lessonChange, notifyChanged, onChanged, type LessonProgressRow } from "@/lib/live";
+import { postOrQueue } from "@/lib/outbox";
 
 type Props = {
   lessonId: string;
@@ -28,6 +29,7 @@ export function LessonProgressCard({ lessonId, signedIn, completed: initialCompl
   const [completed, setCompleted] = useState(initialCompleted);
   const [best, setBest] = useState(initialBest);
   const [busy, setBusy] = useState(false);
+  const [queued, setQueued] = useState(false);
   // A refreshed page brings the saved values, which win.
   const [seen, setSeen] = useState({ initialCompleted, initialBest });
   if (seen.initialCompleted !== initialCompleted || JSON.stringify(seen.initialBest) !== JSON.stringify(initialBest)) {
@@ -67,6 +69,7 @@ export function LessonProgressCard({ lessonId, signedIn, completed: initialCompl
         <span>
           {completed ? t("done") : t("markDone")}
           {best && <span className="block text-xs font-semibold text-muted-foreground">{t("bestScore", { score: best.score, total: best.total })}</span>}
+          {queued && <span className="block text-xs font-semibold text-accent">{t("savedLater")}</span>}
         </span>
       </p>
       <Button
@@ -75,12 +78,13 @@ export function LessonProgressCard({ lessonId, signedIn, completed: initialCompl
         disabled={busy}
         onClick={async () => {
           setBusy(true);
-          const res = await fetch("/api/progress/complete", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({ lessonId, completed: !completed }),
-          });
-          if (res.ok) {
+          const res = await postOrQueue("/api/progress/complete", { lessonId, completed: !completed });
+          if (res === "queued") {
+            // Offline: shown as done now, saved when the connection is back.
+            setCompleted(!completed);
+            setQueued(true);
+          } else if (res.ok) {
+            setQueued(false);
             const { progress } = (await res.json()) as { progress: LessonProgressRow };
             notifyChanged(lessonChange(progress));
           }

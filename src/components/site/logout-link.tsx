@@ -4,6 +4,7 @@ import { LogOut } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { notifyChanged } from "@/lib/live";
+import { leaveOffline } from "@/components/site/offline-support";
 import { buttonClasses } from "@/components/ui/button";
 
 export function LogoutLink() {
@@ -14,6 +15,7 @@ export function LogoutLink() {
       type="button"
       className={buttonClasses({ variant: "secondary", size: "sm", className: "self-start" })}
       onClick={async () => {
+        await leaveOffline();
         await fetch("/api/auth/logout", { method: "POST" });
         router.push("/");
         notifyChanged();

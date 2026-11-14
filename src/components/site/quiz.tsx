@@ -10,6 +10,7 @@ import { ConfidenceCheck, type Confidence } from "@/components/site/confidence-c
 import { LookBack } from "@/components/site/look-back";
 import { TutorHelp } from "@/components/site/tutor-help";
 import { lessonChange, notifyChanged, type LessonProgressRow } from "@/lib/live";
+import { postOrQueue } from "@/lib/outbox";
 import { defaultResponse, isComplete, isRight, type QuizResponse } from "@/lib/questions";
 import type { LocalQuestion } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
@@ -48,7 +49,7 @@ export function Quiz({ questions, save, tutor = false }: Props) {
   const [showWhy, setShowWhy] = useState<Record<number, boolean>>({});
   // During the second try the pupil may open the lesson passage as a hint.
   const [peek, setPeek] = useState<Record<number, boolean>>({});
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState<false | "now" | "later">(false);
   const savedRun = useRef(0);
 
   const total = questions.length;
@@ -70,10 +71,12 @@ export function Quiz({ questions, save, tutor = false }: Props) {
       confidence: questions.map((_, i) => confidence[i] ?? null),
       retries: questions.map((_, i) => second[i] ?? null),
     };
-    fetch("/api/progress/quiz", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
+    postOrQueue("/api/progress/quiz", payload)
       .then(async (r) => {
+        // Offline: kept in this browser and sent when the connection is back (src/lib/outbox.ts).
+        if (r === "queued") return setSaved("later");
         if (!r.ok) return;
-        setSaved(true);
+        setSaved("now");
         const { progress } = (await r.json()) as { progress: LessonProgressRow | null };
         notifyChanged(progress ? lessonChange(progress) : {});
       })
@@ -208,7 +211,7 @@ export function Quiz({ questions, save, tutor = false }: Props) {
             {saved && (
               <p role="status" className="fx-in mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-success">
                 <Save className="size-4" aria-hidden="true" />
-                {t("saved")}
+                {saved === "later" ? t("savedLater") : t("saved")}
               </p>
             )}
           </div>
