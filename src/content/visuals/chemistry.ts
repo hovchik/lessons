@@ -110,6 +110,11 @@ export const chemistryVisuals: VisualMap = {
     "chemical-bond-oxidation-state": ["mechanism ionic", "mechanism covalent", "ptable mode=en"],
   },
   9: {
+    "galvanic-cells": ["activity mode=salt", "mechanism redox", "mechanism electrolysis"],
+    "ammonium-salts": ["molecule set=nh3,nh4", "ions set=ammonium"],
+    silicates: ["lattice set=diamond", "mechanism greenhouse"],
+    "metal-extraction": ["mechanism blastfurnace", "balance set=blast,thermite", "mechanism electrolysis"],
+    alloys: ["lattice set=metal", "mechanism metallic", "mechanism corrosion"],
     "electrolytic-dissociation": ["mechanism dissolve", "ions mode=dissolve"],
     "ionic-equations": [
       ask(1, {
