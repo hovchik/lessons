@@ -217,4 +217,6 @@ export const grade9: VisualMap[number] = {
       ru: ["Сколько сна нужно подростку 14–17 лет?", ["5–6 часов", "6–7 часов", "8–10 часов", "11–14 часов"], "8–10 часов; 11–14 часов нужно малышу."],
     }),
   ],
+  "immune-system": ["diagram bacterium", "mechanism handwash"],
+  "first-aid": ["diagram heart", "mechanism heartcycle"],
 };

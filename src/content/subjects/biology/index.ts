@@ -9,6 +9,8 @@ import { en as en8 } from "./grade-8.en";
 import { biologyGrade9 } from "./grade-9";
 import { ru as ru9 } from "./grade-9.ru";
 import { en as en9 } from "./grade-9.en";
+import { ruExtra9 } from "./grade-9.extra.ru";
+import { enExtra9 } from "./grade-9.extra.en";
 import { biologyGrade10 } from "./grade-10";
 import { ru as ru10 } from "./grade-10.ru";
 import { en as en10 } from "./grade-10.en";
@@ -23,4 +25,4 @@ import { en as en12 } from "./grade-12.en";
 import { ruExtra12 } from "./grade-12.extra.ru";
 import { enExtra12 } from "./grade-12.extra.en";
 
-export const biology: CourseSeed[] = [withEn(withRu(biologyGrade7, ru7), en7), withEn(withRu(biologyGrade8, ru8), en8), withEn(withRu(biologyGrade9, ru9), en9), withEn(withRu(biologyGrade10, ru10), en10), withEn(withRu(biologyGrade11, plusLessons(ru11, ruExtra11)), plusLessons(en11, enExtra11)), withEn(withRu(biologyGrade12, plusLessons(ru12, ruExtra12)), plusLessons(en12, enExtra12))];
+export const biology: CourseSeed[] = [withEn(withRu(biologyGrade7, ru7), en7), withEn(withRu(biologyGrade8, ru8), en8), withEn(withRu(biologyGrade9, plusLessons(ru9, ruExtra9)), plusLessons(en9, enExtra9)), withEn(withRu(biologyGrade10, ru10), en10), withEn(withRu(biologyGrade11, plusLessons(ru11, ruExtra11)), plusLessons(en11, enExtra11)), withEn(withRu(biologyGrade12, plusLessons(ru12, ruExtra12)), plusLessons(en12, enExtra12))];
