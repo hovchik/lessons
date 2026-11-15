@@ -63,6 +63,10 @@ Admins see every account under **Users** in the admin panel: progress per course
 actions to rename, change grade, reset the password, disable or delete an account. Student sessions are
 signed with the same `ADMIN_SESSION_SECRET`; passwords are stored as scrypt hashes.
 
+Pupils manage their own account under **Account and safety** (`/en/account`, linked from My progress): a new
+password, signing out every other device, and deleting the account with all its progress. Each asks for the
+current password. Passwords that are easy to guess (`123456`, `qwerty`, the username plus a year) are refused.
+
 Progress data lives in three tables: `users`, `lesson_progress` (one summary row per user and lesson) and
 `attempts` (an append-only log with `kind` = `quiz` today, so exams can record `kind` = `exam` later without
 a schema change; see `src/server/progress.ts`).
