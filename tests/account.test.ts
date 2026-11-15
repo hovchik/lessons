@@ -86,6 +86,15 @@ test("signing out everywhere keeps the password but ends the other cookies", asy
   assert.notEqual(m.auth.verifyUserToken(m.auth.createUserToken(after))!.version, other.version);
 });
 
+test("a cookie from before password fingerprints is refused, so nothing stays signed in for good", async () => {
+  const { createHmac } = await import("node:crypto");
+  const payload = `user.ani.${Math.floor(Date.now() / 1000) + 3600}`;
+  const legacy = `${payload}.${createHmac("sha256", process.env.ADMIN_SESSION_SECRET!).update(payload).digest("base64url")}`;
+  assert.equal(m.auth.verifyUserToken(legacy), null);
+  const user = (await m.auth.findUserById("ani"))!;
+  assert.equal(m.auth.verifyUserToken(m.auth.createUserToken(user))?.id, "ani", "today's cookies still work");
+});
+
 test("guessing the current password runs into the login limit", async () => {
   await m.limits.resetRateLimits();
   let last: Awaited<ReturnType<typeof m.account.checkCurrentPassword>> | null = null;
@@ -100,8 +109,9 @@ test("deleting an account removes its classes, memberships and parent link", asy
   const db = await m.client.getDb();
   const { schema } = m.client;
   const made = await m.classes.createClass("teacher", "5B");
-  if (!("class" in made)) throw new Error("class not created");
-  await m.classes.joinClass("ani", made.class.code);
+  const c = "class" in made ? made.class : undefined;
+  if (!c) throw new Error("class not created");
+  await m.classes.joinClass("ani", c.code);
   const token = await m.classes.newParentLink("ani");
   assert.ok(await m.classes.pupilForToken(token));
 

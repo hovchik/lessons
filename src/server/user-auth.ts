@@ -89,11 +89,12 @@ export function createUserToken(user: Pick<User, "id" | "passwordHash">) {
 }
 
 /**
- * The user id (and password fingerprint) when the token is well formed,
- * correctly signed and not expired. Tokens from before the fingerprint have
- * no `version`; they run out on their own within 30 days.
+ * The user id and password fingerprint when the token is well formed,
+ * correctly signed and not expired. Cookies from before the fingerprint (three
+ * parts) are refused: nothing could sign them out, so "sign out everywhere"
+ * and a new password would have left them working.
  */
-export function verifyUserToken(token: string | undefined): { id: string; version: string | null } | null {
+export function verifyUserToken(token: string | undefined): { id: string; version: string } | null {
   if (!token || !accountsConfigured()) return null;
   const i = token.lastIndexOf(".");
   if (i < 0) return null;
@@ -103,10 +104,10 @@ export function verifyUserToken(token: string | undefined): { id: string; versio
   if (sig.length !== expected.length) return null;
   if (!timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
   const parts = payload.split(".");
-  if ((parts.length !== 3 && parts.length !== 4) || parts[0] !== "user") return null;
+  if (parts.length !== 4 || parts[0] !== "user" || !parts[3]) return null;
   const exp = Number(parts[2]);
   if (!Number.isFinite(exp) || exp <= Date.now() / 1000) return null;
-  return { id: parts[1], version: parts[3] ?? null };
+  return { id: parts[1], version: parts[3] };
 }
 
 /** Secure only over HTTPS; see isHttps in ./auth for why. */
@@ -152,7 +153,7 @@ export const getCurrentUser = cache(async (): Promise<PublicUser | null> => {
   if (!token) return null;
   const user = await findUserById(token.id);
   if (!user || user.disabled) return null;
-  if (token.version !== null && token.version !== passwordVersion(user.passwordHash)) return null;
+  if (token.version !== passwordVersion(user.passwordHash)) return null;
   return toPublicUser(user);
 });
 
