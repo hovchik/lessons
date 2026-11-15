@@ -1,0 +1,1 @@
+ALTER TABLE `tips` ADD `lesson_slug` text;

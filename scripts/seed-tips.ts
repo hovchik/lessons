@@ -36,6 +36,7 @@ export async function seedTips() {
         courseId: cid,
         position: i + 1,
         slug: tp.slug,
+        lessonSlug: tp.lesson ?? null,
         category: tp.category,
         title: tp.title,
         body: tp.body,

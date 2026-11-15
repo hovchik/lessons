@@ -2,11 +2,12 @@
 import katex from "katex";
 import { courses, courseId } from "../src/content";
 import { tips } from "../src/content/tips";
+import { TIP_LESSONS } from "../src/content/tips/links";
 import { TIP_CATEGORIES } from "../src/server/db/schema";
 
 const LANGS = ["en", "hy", "ru"] as const;
 
-export function checkTips(): { errors: string[]; count: number; courses: number } {
+export function checkTips(): { errors: string[]; count: number; courses: number; lessons: number } {
   const errors: string[] = [];
   const known = new Set(courses.map((c) => courseId(c.subject, c.grade)));
   const seen = new Set<string>();
@@ -15,6 +16,12 @@ export function checkTips(): { errors: string[]; count: number; courses: number 
     const cid = courseId(tp.subject, tp.grade);
     const where = `tips ${cid}/${tp.slug}`;
     if (!known.has(cid)) errors.push(`${where}: no such course`);
+    if (tp.lesson) {
+      const course = courses.find((c) => courseId(c.subject, c.grade) === cid);
+      const lesson = course?.units.flatMap((u) => u.lessons).find((l) => l.slug === tp.lesson);
+      if (!lesson) errors.push(`${where}: no lesson "${tp.lesson}" in this course`);
+      else if (!lesson.content) errors.push(`${where}: lesson "${tp.lesson}" is not written`);
+    }
     perCourse.add(cid);
     const id = `${cid}-${tp.slug}`;
     if (seen.has(id)) errors.push(`${where}: duplicate slug`);
@@ -36,6 +43,10 @@ export function checkTips(): { errors: string[]; count: number; courses: number 
       }
     }
     if (/[ֿ֖一-鿿]/.test(tp.body.hy + tp.body.ru + tp.body.en)) errors.push(`${where}: stray non-Armenian/CJK character`);
+    if (/[\t\f\v\b]/.test(tp.body.hy + tp.body.ru + tp.body.en)) errors.push(`${where}: tab or control character in the body (a single backslash, like \\times, in a template literal?)`);
   }
-  return { errors, count: tips.length, courses: perCourse.size };
+  for (const key of Object.keys(TIP_LESSONS)) {
+    if (!tips.some((tp) => `${tp.subject}-${tp.grade}/${tp.slug}` === key)) errors.push(`tips/links.ts: no tip "${key}"`);
+  }
+  return { errors, count: tips.length, courses: perCourse.size, lessons: new Set(tips.filter((x) => x.lesson).map((x) => `${courseId(x.subject, x.grade)}/${x.lesson}`)).size };
 }

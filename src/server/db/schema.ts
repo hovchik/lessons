@@ -235,6 +235,8 @@ export const tips = sqliteTable(
       .references(() => courses.id, { onDelete: "cascade" }),
     position: integer("position").notNull(),
     slug: text("slug").notNull(),
+    /** Slug of the lesson in this course the trick belongs to; null = a tip for the whole course. */
+    lessonSlug: text("lesson_slug"),
     category: text("category").$type<TipCategory>().notNull().default("study"),
     title: text("title", { mode: "json" }).$type<I18nText>().notNull(),
     /** Markdown (GFM + KaTeX math) body per language. */

@@ -13,7 +13,17 @@ import { CATEGORY_LABELS } from "@/lib/tips";
 type Lang = "en" | "hy" | "ru";
 const LANGS: Array<[Lang, string]> = [["en", "English"], ["hy", "Հայերեն"], ["ru", "Русский"]];
 
-export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip; siteUrl: string; courseAdminUrl: string }) {
+export function TipEditor({
+  tip: initial,
+  lessons,
+  siteUrl,
+  courseAdminUrl,
+}: {
+  tip: Tip;
+  lessons: Array<{ slug: string; title: string }>;
+  siteUrl: string;
+  courseAdminUrl: string;
+}) {
   const router = useRouter();
   const [tip, setTip] = useState(initial);
   const [lang, setLang] = useState<Lang>("en");
@@ -31,7 +41,7 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
     const res = await fetch(`/api/admin/tips/${tip.id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ title: tip.title, body: tip.body, category: tip.category, position: tip.position, status: status ?? tip.status }),
+      body: JSON.stringify({ title: tip.title, body: tip.body, category: tip.category, position: tip.position, lessonSlug: tip.lessonSlug ?? null, status: status ?? tip.status }),
     });
     setBusy(false);
     const data = await res.json().catch(() => ({}));
@@ -135,6 +145,14 @@ export function TipEditor({ tip: initial, siteUrl, courseAdminUrl }: { tip: Tip;
             <select id="tip-category" value={tip.category} onChange={(e) => setField("category", e.target.value as TipCategory)} className="mt-1 h-11 w-full rounded-[12px] border border-border bg-card px-3 text-sm">
               {TIP_CATEGORIES.map((c) => <option key={c} value={c}>{CATEGORY_LABELS[c]}</option>)}
             </select>
+          </div>
+          <div className="clay-sm p-4">
+            <label htmlFor="tip-lesson" className="block text-sm font-bold">Lesson</label>
+            <select id="tip-lesson" value={tip.lessonSlug ?? ""} onChange={(e) => setField("lessonSlug", e.target.value || null)} className="mt-1 h-11 w-full rounded-[12px] border border-border bg-card px-3 text-sm">
+              <option value="">Whole course (course page only)</option>
+              {lessons.map((x) => <option key={x.slug} value={x.slug}>{x.title}</option>)}
+            </select>
+            <p className="mt-1 text-xs text-muted-foreground">A trick linked to a lesson is shown inside that lesson too.</p>
           </div>
           <div className="clay-sm p-4">
             <label htmlFor="tip-position" className="block text-sm font-bold">Order</label>

@@ -1,11 +1,24 @@
-import { ChevronDown, Lightbulb } from "lucide-react";
+import { ArrowRight, ChevronDown, Lightbulb } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 import { StaticMarkdown } from "@/components/site/static-markdown";
 import type { Tip } from "@/server/db/schema";
 import { pick } from "@/lib/utils";
 
-/** Collapsible "Tips & tricks" cards shown on a course page. Server component. */
-export async function TipsSection({ tips }: { tips: Tip[] }) {
+/**
+ * Collapsible "Tips & tricks" cards shown on a course page. Server component.
+ * Course-wide tips come first; tricks that belong to a lesson follow and link to it.
+ */
+export async function TipsSection({
+  tips: all,
+  lessonHref,
+  lessonTitles = {},
+}: {
+  tips: Tip[];
+  lessonHref?: (slug: string) => string;
+  lessonTitles?: Record<string, string>;
+}) {
+  const tips = [...all.filter((x) => !x.lessonSlug), ...all.filter((x) => x.lessonSlug)];
   if (tips.length === 0) return null;
   const t = await getTranslations("tips");
   const l = await getLocale();
@@ -37,6 +50,12 @@ export async function TipsSection({ tips }: { tips: Tip[] }) {
               </summary>
               <div className="border-t border-border/70 px-4 py-4 sm:px-5">
                 <StaticMarkdown className="prose-lesson prose-tip" lang={l}>{pick(tip.body, l)}</StaticMarkdown>
+                {tip.lessonSlug && lessonHref && lessonTitles[tip.lessonSlug] && (
+                  <Link href={`${lessonHref(tip.lessonSlug)}#lesson-tricks`} className="mt-3 inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary hover:underline">
+                    {t("inLesson", { title: lessonTitles[tip.lessonSlug] })}
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                )}
               </div>
             </details>
           </li>
