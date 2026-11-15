@@ -12,6 +12,7 @@ import { placeBlocks } from "../visuals";
 import { algebraTheory } from "./algebra";
 import { chemistryTheory } from "./chemistry";
 import { geometryTheory } from "./geometry";
+import { mathTheory } from "./math";
 import { physicsTheory } from "./physics";
 
 /** grade → lesson slug → Markdown body of the section (use ### for its own sub-headings). */
@@ -21,6 +22,7 @@ export const THEORY: Record<string, TheoryMap> = {
   algebra: algebraTheory,
   chemistry: chemistryTheory,
   geometry: geometryTheory,
+  math: mathTheory,
   physics: physicsTheory,
 };
 
