@@ -658,3 +658,60 @@ export const parentLinks = sqliteTable("parent_links", {
 });
 
 export type ClassRow = typeof classes.$inferSelect;
+
+/**
+ * One class in a pupil's own weekly timetable (src/server/schedule.ts). Times are
+ * wall-clock "HH:MM" in the pupil's own time zone: the browser works out when that is.
+ */
+export const scheduleEntries = sqliteTable(
+  "schedule_entries",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    /** 1 = Monday … 7 = Sunday. */
+    day: integer("day").notNull(),
+    start: text("start").notNull(),
+    end: text("end").notNull(),
+    /** One of the app's subjects, for its colour, icon and link; the title can name anything else. */
+    subjectId: text("subject_id"),
+    title: text("title").notNull().default(""),
+    place: text("place").notNull().default(""),
+    note: text("note").notNull().default(""),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("schedule_entries_user").on(t.userId, t.day, t.start)],
+);
+
+/**
+ * A reminder: before a class of the timetable ("class", at most one per class),
+ * on chosen weekdays ("weekly") or once on a date ("once").
+ */
+export const reminders = sqliteTable(
+  "reminders",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    kind: text("kind", { enum: ["class", "weekly", "once"] }).notNull(),
+    entryId: text("entry_id").references(() => scheduleEntries.id, { onDelete: "cascade" }),
+    minutesBefore: integer("minutes_before"),
+    title: text("title").notNull().default(""),
+    /** Weekdays as bits, Monday = 1, Tuesday = 2 … Sunday = 64. */
+    days: integer("days").notNull().default(0),
+    date: text("date"),
+    time: text("time"),
+    enabled: integer("enabled", { mode: "boolean" }).notNull().default(true),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(current_timestamp)`),
+  },
+  (t) => [index("reminders_user").on(t.userId), uniqueIndex("reminders_entry").on(t.entryId)],
+);
+
+export type ScheduleEntryRow = typeof scheduleEntries.$inferSelect;
+export type ReminderRow = typeof reminders.$inferSelect;

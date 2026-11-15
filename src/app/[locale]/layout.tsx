@@ -9,6 +9,7 @@ import { SiteFooter } from "@/components/site/footer";
 import { LiveUserProvider } from "@/components/site/live-user";
 import { MobileNav } from "@/components/site/mobile-nav";
 import { NavProgress } from "@/components/site/nav-progress";
+import { ReminderWatcher } from "@/components/site/reminder-watcher";
 import { getLiveUser } from "@/server/live";
 import { getCurrentUser } from "@/server/user-auth";
 import "../globals.css";
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
             <div className="pb-safe h-16 md:hidden" aria-hidden="true" />
             <MobileNav />
             <OfflineSupport />
+            <ReminderWatcher />
           </LiveUserProvider>
         </NextIntlClientProvider>
       </body>

@@ -142,7 +142,22 @@ Read the new files over, then `npm run content:check && npm run db:seed`.
   Making a new one or turning it off stops the old one.
 - **Offline**: a service worker (`public/sw.js`, production builds only) keeps every lesson that was opened,
   and "Save for offline" on a course page stores all its lessons. Quiz results finished offline are kept in
-  the browser and sent when the connection is back. After changing `sw.js`, raise its `VERSION`.
+  the browser and sent when the connection is back. After changing what `sw.js` caches, raise its `VERSION`
+  (that empties the saved pages, so leave it alone for changes that do not touch the caches).
+
+## Class schedule and reminders
+
+- **Schedule** (`/schedule`): every account keeps its own weekly timetable: classes with a day, start and end
+  time, one of the app's subjects or a free name, a room and a note. The home page shows today's classes.
+- **Reminders**: "remind me N minutes before" on a class, plus the pupil's own reminders (on chosen weekdays
+  or once on a date). Times are wall-clock times with no time zone; the browser decides when one is due
+  (`src/components/site/reminder-watcher.tsx`, in the site layout), shows a card on whatever page is open and,
+  if the pupil allowed notifications and the tab is in the background, a system notification. Browsers only
+  offer notifications on https or localhost, and nothing fires while the app is closed: for that the page
+  has "Add to calendar", a `.ics` file (`/api/schedule/calendar`) with the classes and their alarms.
+- **Privacy**: the tables `schedule_entries` and `reminders` are only read and written with the signed-in
+  user's id (`src/server/schedule.ts`); an account has at most 100 classes and 60 reminders, and deleting the
+  account deletes them.
 
 ## Project layout
 

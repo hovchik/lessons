@@ -7,6 +7,7 @@ import { MotivationCard } from "@/components/site/motivation-card";
 import { PuzzleCard } from "@/components/fun/puzzle-card";
 import { RecapTeaser } from "@/components/fun/recap-teaser";
 import { ReviewCard } from "@/components/site/review-card";
+import { ScheduleToday } from "@/components/site/schedule-today";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { buttonClasses } from "@/components/ui/button";
 import { cn, pick } from "@/lib/utils";
@@ -16,6 +17,7 @@ import { getMotivation } from "@/server/motivation";
 import { getPuzzleCard } from "@/server/puzzle";
 import { getRecap } from "@/server/recap";
 import { getReviewSummaryCached } from "@/server/review";
+import { listEntries } from "@/server/schedule";
 import { getCurrentUser } from "@/server/user-auth";
 
 export const dynamic = "force-dynamic";
@@ -29,7 +31,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   // Three how-tos a day, a different set each day, from different ages.
   const day = Math.floor(Date.now() / 86_400_000);
   const featured = howtos.length ? [0, 1, 2].map((k) => howtos[(day * 7 + k * Math.ceil(howtos.length / 3)) % howtos.length]).filter((c, i, a) => a.indexOf(c) === i) : [];
-  const [review, motivation] = user ? await Promise.all([getReviewSummaryCached(user.id), getMotivation(user.id)]) : [null, null];
+  const [review, motivation, classes] = user ? await Promise.all([getReviewSummaryCached(user.id), getMotivation(user.id), listEntries(user.id)]) : [null, null, null];
   const puzzle = await getPuzzleCard(user?.id ?? null);
   // Early in the week the recap looks back at last week; later it shows this week so far.
   const early = [1, 2].includes(new Date().getUTCDay());
@@ -39,6 +41,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div className="space-y-10 sm:space-y-14">
       {review && review.ready > 0 && <ReviewCard summary={review} />}
+      {classes && (
+        <ScheduleToday
+          entries={classes}
+          subjects={subjects.filter((s) => classes.some((c) => c.subjectId === s.id)).map((s) => ({ id: s.id, name: pick(s.name, l), color: s.color, icon: s.icon }))}
+        />
+      )}
       {motivation?.hasActivity && <MotivationCard m={motivation} />}
       {user && <PuzzleCard card={puzzle} />}
       {recap && recap.answers > 0 && <RecapTeaser recap={recap} />}

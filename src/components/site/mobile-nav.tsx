@@ -30,7 +30,7 @@ export function MobileNav() {
       href: "/progress",
       label: t("progress"),
       icon: Trophy,
-      active: pathname.startsWith("/progress") || pathname.startsWith("/review") || pathname.startsWith("/login") || pathname.startsWith("/signup"),
+      active: pathname.startsWith("/progress") || pathname.startsWith("/schedule") || pathname.startsWith("/review") || pathname.startsWith("/login") || pathname.startsWith("/signup"),
       badge: reviewReady,
     },
   ] as const;

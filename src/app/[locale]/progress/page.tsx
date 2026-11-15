@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, BookOpenCheck, CalendarCheck, History, Sparkles, Trophy, Users } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarCheck, CalendarDays, History, Sparkles, Trophy, Users } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/navigation";
 import { LogoutLink } from "@/components/site/logout-link";
@@ -86,6 +86,17 @@ export default async function ProgressPage({ params }: { params: Promise<{ local
       {motivation.hasActivity && <MotivationCard m={motivation} />}
 
       <ReviewCard summary={review} />
+
+      <Link href="/schedule" className="clay clay-press flex min-h-16 items-center gap-4 p-4 sm:p-5">
+        <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary" aria-hidden="true">
+          <CalendarDays className="size-6" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-extrabold">{t("schedule.title")}</span>
+          <span className="block text-sm text-muted-foreground">{t("schedule.progressCard")}</span>
+        </span>
+        <ArrowRight className="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+      </Link>
 
       <Link href="/classes" className="clay clay-press flex min-h-16 items-center gap-4 p-4 sm:p-5">
         <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary" aria-hidden="true">

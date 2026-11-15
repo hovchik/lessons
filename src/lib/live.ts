@@ -13,6 +13,8 @@ import { useEffect } from "react";
 export type LiveChange = {
   /** The lesson whose progress changed, with the saved row, so its card can update in place. */
   lesson?: { id: string; completed: boolean; bestScore: number | null; bestTotal: number | null };
+  /** The timetable or a reminder changed, so the reminder watcher reads them again. */
+  schedule?: boolean;
 };
 
 /** The fields of a saved lesson_progress row that a lesson page shows. */
