@@ -9,6 +9,7 @@
  */
 import type { CourseSeed, I18nText } from "../types";
 import { placeBlocks } from "../visuals";
+import { algebraTheory } from "./algebra";
 import { chemistryTheory } from "./chemistry";
 import { geometryTheory } from "./geometry";
 import { physicsTheory } from "./physics";
@@ -17,6 +18,7 @@ import { physicsTheory } from "./physics";
 export type TheoryMap = Record<number, Record<string, I18nText>>;
 
 export const THEORY: Record<string, TheoryMap> = {
+  algebra: algebraTheory,
   chemistry: chemistryTheory,
   geometry: geometryTheory,
   physics: physicsTheory,
