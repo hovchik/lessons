@@ -265,21 +265,21 @@ $$\\frac{1}{a} + \\frac{1}{b} = \\frac{a + b}{a \\cdot b}$$
 
 $$\\frac{1}{3} + \\frac{1}{4} = \\frac{7}{12} \\qquad \\frac{1}{2} + \\frac{1}{5} = \\frac{7}{10} \\qquad \\frac{1}{4} - \\frac{1}{6} = \\frac{6 - 4}{24} = \\frac{2}{24} = \\frac{1}{12}$$
 
-For subtraction the top is the difference, bigger denominator first. Reduce at the end if you can: here $\\frac{2}{24}$ became $\\frac{1}{12}$.`,
+For subtraction keep the order of the fractions and swap the denominators on top: $\\frac{1}{a} - \\frac{1}{b} = \\frac{b - a}{a \\cdot b}$. In the example above $a = 4$ and $b = 6$, so the top is $6 - 4$. Reduce at the end if you can: here $\\frac{2}{24}$ became $\\frac{1}{12}$.`,
     hy: `Համարիչում 1 ունեցող երկու կոտորակ գումարելու համար համարիչում գրիր հայտարարների **գումարը**, իսկ հայտարարում՝ նրանց **արտադրյալը**․
 
 $$\\frac{1}{a} + \\frac{1}{b} = \\frac{a + b}{a \\cdot b}$$
 
 $$\\frac{1}{3} + \\frac{1}{4} = \\frac{7}{12} \\qquad \\frac{1}{2} + \\frac{1}{5} = \\frac{7}{10} \\qquad \\frac{1}{4} - \\frac{1}{6} = \\frac{6 - 4}{24} = \\frac{2}{24} = \\frac{1}{12}$$
 
-Հանման դեպքում համարիչում տարբերությունն է՝ սկզբում մեծ հայտարարը։ Վերջում կրճատիր, եթե կարելի է․ այստեղ $\\frac{2}{24}$-ը դարձավ $\\frac{1}{12}$։`,
+Հանման դեպքում պահիր կոտորակների հերթականությունը, իսկ համարիչում հայտարարները տեղերով փոխիր․ $\\frac{1}{a} - \\frac{1}{b} = \\frac{b - a}{a \\cdot b}$։ Վերևի օրինակում $a = 4$, $b = 6$, ուստի համարիչում $6 - 4$ է։ Վերջում կրճատիր, եթե կարելի է․ այստեղ $\\frac{2}{24}$-ը դարձավ $\\frac{1}{12}$։`,
     ru: `Чтобы сложить две дроби с единицей в числителе, запиши в числитель **сумму** знаменателей, а в знаменатель их **произведение**:
 
 $$\\frac{1}{a} + \\frac{1}{b} = \\frac{a + b}{a \\cdot b}$$
 
 $$\\frac{1}{3} + \\frac{1}{4} = \\frac{7}{12} \\qquad \\frac{1}{2} + \\frac{1}{5} = \\frac{7}{10} \\qquad \\frac{1}{4} - \\frac{1}{6} = \\frac{6 - 4}{24} = \\frac{2}{24} = \\frac{1}{12}$$
 
-При вычитании в числителе разность, большой знаменатель первым. В конце сократи, если можно: здесь $\\frac{2}{24}$ превратилась в $\\frac{1}{12}$.`,
+При вычитании сохрани порядок дробей, а знаменатели в числителе поменяй местами: $\\frac{1}{a} - \\frac{1}{b} = \\frac{b - a}{a \\cdot b}$. В примере выше $a = 4$, $b = 6$, поэтому в числителе $6 - 4$. В конце сократи, если можно: здесь $\\frac{2}{24}$ превратилась в $\\frac{1}{12}$.`,
   }),
   g5("multiply-decimals", "times-half-quarter", "mentalMath", ["Times 0.5 is half, times 0.25 is a quarter", "0,5-ով բազմապատկելը կեսն է, 0,25-ով՝ քառորդը", "Умножить на 0,5 — взять половину, на 0,25 — четверть"], {
     en: `Some decimals are fractions in disguise. Multiplying by them is easier as dividing:

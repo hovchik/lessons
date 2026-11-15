@@ -205,9 +205,9 @@ From five carbons on, the name is just a **number**: *penta* as in pentagon, *he
 | Na₂CO₃ | NaOH (strong) + H₂CO₃ (weak) | **alkaline**, pH > 7 |
 | NH₄Cl | NH₃·H₂O (weak) + HCl (strong) | **acidic**, pH < 7 |
 | NaCl | NaOH (strong) + HCl (strong) | **neutral**, no hydrolysis |
-| (NH₄)₂CO₃ | weak + weak | close to neutral, hydrolysis goes far |
+| CH₃COONH₄ | NH₃·H₂O (weak) + CH₃COOH (weak) | close to neutral, both ions react |
 
-And the ion that reacts with water is always the one from the **weak** parent: CO₃²⁻ in soda, NH₄⁺ in ammonium chloride.`,
+And the ion that reacts with water is always the one from the **weak** parent: CO₃²⁻ in soda, NH₄⁺ in ammonium chloride. When both parents are weak, the slightly stronger one still decides: ammonium acetate is neutral only because ammonia and acetic acid are almost exactly as weak as each other, while (NH₄)₂CO₃ is alkaline, because carbonic acid is much weaker than ammonia.`,
     hy: `Ամեն աղ ունի երկու «ծնող»՝ հիմք և թթու։ Լուծույթը նման է **ավելի ուժեղին**․
 
 | աղ | ծնողներ | միջավայր |
@@ -215,9 +215,9 @@ And the ion that reacts with water is always the one from the **weak** parent: C
 | Na₂CO₃ | NaOH (ուժեղ) + H₂CO₃ (թույլ) | **հիմնային**, pH > 7 |
 | NH₄Cl | NH₃·H₂O (թույլ) + HCl (ուժեղ) | **թթվային**, pH < 7 |
 | NaCl | NaOH (ուժեղ) + HCl (ուժեղ) | **չեզոք**, հիդրոլիզ չկա |
-| (NH₄)₂CO₃ | թույլ + թույլ | մոտ չեզոք, հիդրոլիզը խորն է գնում |
+| CH₃COONH₄ | NH₃·H₂O (թույլ) + CH₃COOH (թույլ) | մոտ չեզոք, փոխազդում են երկու իոններն էլ |
 
-Իսկ ջրի հետ փոխազդում է միշտ **թույլ** ծնողից եկած իոնը․ սոդայում՝ CO₃²⁻, ամոնիումի քլորիդում՝ NH₄⁺։`,
+Իսկ ջրի հետ փոխազդում է միշտ **թույլ** ծնողից եկած իոնը․ սոդայում՝ CO₃²⁻, ամոնիումի քլորիդում՝ NH₄⁺։ Երբ երկու ծնողներն էլ թույլ են, որոշում է մի փոքր ավելի ուժեղը․ ամոնիումի ացետատը չեզոք է միայն այն պատճառով, որ ամոնիակն ու քացախաթթուն գրեթե նույնքան թույլ են, իսկ (NH₄)₂CO₃-ը հիմնային է, որովհետև ածխաթթուն ամոնիակից շատ ավելի թույլ է։`,
     ru: `У каждой соли два «родителя»: основание и кислота. Раствор похож на **более сильного**:
 
 | соль | родители | среда |
@@ -225,9 +225,9 @@ And the ion that reacts with water is always the one from the **weak** parent: C
 | Na₂CO₃ | NaOH (сильное) + H₂CO₃ (слабая) | **щелочная**, pH > 7 |
 | NH₄Cl | NH₃·H₂O (слабое) + HCl (сильная) | **кислая**, pH < 7 |
 | NaCl | NaOH (сильное) + HCl (сильная) | **нейтральная**, гидролиза нет |
-| (NH₄)₂CO₃ | слабое + слабая | близка к нейтральной, гидролиз глубокий |
+| CH₃COONH₄ | NH₃·H₂O (слабое) + CH₃COOH (слабая) | близка к нейтральной, реагируют оба иона |
 
-А с водой реагирует всегда ион от **слабого** родителя: CO₃²⁻ в соде, NH₄⁺ в хлориде аммония.`,
+А с водой реагирует всегда ион от **слабого** родителя: CO₃²⁻ в соде, NH₄⁺ в хлориде аммония. Если оба родителя слабые, решает чуть более сильный: ацетат аммония нейтрален только потому, что аммиак и уксусная кислота почти одинаково слабые, а (NH₄)₂CO₃ даёт щелочную среду, ведь угольная кислота намного слабее аммиака.`,
   }),
   c12("excess-and-limiting", "divide-by-coefficient", "problemSolving", ["Which is in excess? Divide moles by coefficients", "Ո՞րն է ավելցուկով․ մոլերը բաժանիր գործակիցների", "Что в избытке? Раздели моли на коэффициенты"], {
     en: `Comparing the moles directly is a trap: 2 mol of H₂ and 1.5 mol of O₂ look like "hydrogen is in excess". Instead divide each amount by its **coefficient** in the equation:
