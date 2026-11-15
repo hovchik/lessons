@@ -13,7 +13,7 @@ const LOCALES = ["en", "hy", "ru"];
 const MAX_PAGES = 400;
 const MAX_STATIC = 600;
 // Pages that are only about the signed-in account are not worth keeping offline.
-const PRIVATE = /^\/(en|hy|ru)\/(progress|review|classes|parent|login|signup|live|admin)(\/|$)/;
+const PRIVATE = /^\/(en|hy|ru)\/(progress|review|classes|parent|account|recap|login|signup|live|admin|exams\/[^/]+\/plan)(\/|$)/;
 
 /** The offline page in each language, with the files it needs. */
 async function keepOfflinePages() {

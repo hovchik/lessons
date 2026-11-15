@@ -29,6 +29,8 @@ export default function middleware(req: NextRequest) {
   if (pathname.startsWith("/api")) {
     if (req.method !== "GET" && req.method !== "HEAD") {
       if (crossSite(req)) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+      // A body without a length (chunked) could be any size, so the cap below would not hold.
+      if (!req.headers.get("content-length") && req.headers.get("transfer-encoding")) return NextResponse.json({ error: "Length required" }, { status: 411 });
       const size = Number(req.headers.get("content-length") ?? 0);
       if (size > (pathname.startsWith("/api/admin") ? MAX_ADMIN_BODY : MAX_BODY)) return NextResponse.json({ error: "Too large" }, { status: 413 });
     }

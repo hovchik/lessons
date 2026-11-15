@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { cleanText, weakPassword } from "@/lib/account";
 import { getDb, schema } from "@/server/db/client";
 import { clientIp, LIMITS, take, tooMany } from "@/server/rate-limit";
 import {
@@ -20,7 +21,7 @@ import {
 const Body = z.object({
   username: z.string().max(64),
   password: z.string().max(200),
-  displayName: z.string().trim().max(60),
+  displayName: z.string().max(200),
   grade: z.number().int().min(1).max(12).nullable().optional(),
   locale: z.enum(["en", "hy", "ru"]).optional(),
 });
@@ -29,11 +30,15 @@ export async function POST(req: Request) {
   if (!accountsConfigured()) return NextResponse.json({ error: "not_configured" }, { status: 503 });
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
-  const { password, displayName, grade, locale } = parsed.data;
+  const { password, grade, locale } = parsed.data;
   const username = normalizeUsername(parsed.data.username);
+  // Teachers and live-quiz hosts see this name, so it must be readable text.
+  const displayName = cleanText(parsed.data.displayName, 60);
   if (!displayName) return NextResponse.json({ error: "name_required" }, { status: 400 });
   if (!USERNAME_RE.test(username)) return NextResponse.json({ error: "bad_username" }, { status: 400 });
   if (password.length < MIN_PASSWORD) return NextResponse.json({ error: "password_short" }, { status: 400 });
+  const weak = weakPassword(password, username);
+  if (weak) return NextResponse.json({ error: weak }, { status: 400 });
   // Both new accounts and "taken" answers count, so the form can't be used to list usernames.
   const wait = await take(`signup-ip:${clientIp(req)}`, LIMITS.signupIp);
   if (wait) return tooMany(wait);

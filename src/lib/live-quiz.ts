@@ -5,6 +5,8 @@
  * whole game with a fake clock.
  */
 
+import { cleanText } from "./account";
+
 export type LivePhase = "lobby" | "question" | "reveal" | "podium";
 
 export const LIVE_SECONDS = [10, 20, 30] as const;
@@ -26,7 +28,7 @@ export function livePoints(correct: boolean, elapsedMs: number, limitMs: number)
 
 /** A tidy nickname: trimmed, spaces squeezed, at most NAME_MAX characters; empty if nothing is left. */
 export function cleanName(raw: string): string {
-  return [...raw.replace(/[\u0000-\u001f\u007f]/g, "").replace(/\s+/g, " ").trim()].slice(0, NAME_MAX).join("").trim();
+  return cleanText(raw, NAME_MAX);
 }
 
 /** A name not yet taken in the game: "Ani", then "Ani 2", "Ani 3"… */
