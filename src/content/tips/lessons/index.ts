@@ -6,5 +6,6 @@
 import type { TipSeed } from "../types";
 import { mathTricks1to3 } from "./math-1-3";
 import { mathTricks4to6 } from "./math-4-6";
+import { algebraGeometryTricks } from "./algebra-geometry";
 
-export const lessonTricks: TipSeed[] = [...mathTricks1to3, ...mathTricks4to6];
+export const lessonTricks: TipSeed[] = [...mathTricks1to3, ...mathTricks4to6, ...algebraGeometryTricks];
