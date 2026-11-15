@@ -223,7 +223,8 @@
       "generic": "Something went wrong. Try again.",
       "too_many": "Too many tries. Wait a few minutes and try again.",
       "password_short": "The password is too short: use at least 6 characters.",
-      "name_required": "Please enter your name."
+      "name_required": "Please enter your name.",
+      "password_common": "This password is too easy to guess. Try a short sentence or three words."
     }
   },
   "progress": {
@@ -984,5 +985,34 @@
     "daysLong": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday",
     "months": "January,February,March,April,May,June,July,August,September,October,November,December",
     "minutesShort": "{n} min"
+  },
+  "account": {
+    "title": "Account and safety",
+    "intro": "You are logged in as @{username}. Keep your password to yourself: anyone who knows it can see and change your progress.",
+    "progressCard": "Change your password, sign out other devices",
+    "passwordTitle": "Change password",
+    "passwordIntro": "Pick one that is hard to guess: not 123456, not your name or birthday. After the change, every other phone and computer is signed out.",
+    "current": "Current password",
+    "newPassword": "New password",
+    "newPasswordHint": "At least 6 characters. A short sentence or three words is easy to remember and hard to guess.",
+    "again": "New password again",
+    "passwordSubmit": "Change password",
+    "passwordDone": "Done. Your new password works now, and other devices are signed out.",
+    "signoutTitle": "Sign out on all other devices",
+    "signoutIntro": "Logged in on a school computer or a friend's phone and forgot to log out? This signs out everywhere except here. Your password stays the same.",
+    "signoutSubmit": "Sign out everywhere else",
+    "signoutDone": "Done. All other devices are signed out.",
+    "deleteTitle": "Delete account",
+    "deleteIntro": "Deletes your account and all your progress, scores and notes for good. Your teacher and parents will no longer see it. This cannot be undone.",
+    "deleteSubmit": "Delete my account",
+    "deleteSure": "Press again to delete for good",
+    "errors": {
+      "wrong_current": "The current password is wrong.",
+      "too_many": "Too many tries. Wait a few minutes and try again.",
+      "password_short": "The new password is too short: use at least 6 characters.",
+      "password_common": "This password is too easy to guess. Try a short sentence or three words.",
+      "mismatch": "The two new passwords are not the same.",
+      "generic": "Something went wrong. Try again."
+    }
   }
 }

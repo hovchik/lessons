@@ -3,6 +3,7 @@ import { and, asc, desc, eq, inArray, sql } from "drizzle-orm";
 import { getDb, schema } from "./db/client";
 import { resolveItems, type ReviewItem } from "./review";
 import { newId } from "./user-auth";
+import { cleanText } from "@/lib/account";
 import { isoDay } from "@/lib/exam-plan";
 import { DAY_ANSWERS, streakOf } from "@/lib/motivation";
 
@@ -27,7 +28,7 @@ const newCode = () => Array.from({ length: 6 }, () => ALPHABET[randomInt(ALPHABE
 
 export async function createClass(ownerId: string, name: string) {
   const db = await getDb();
-  const clean = name.trim().replace(/\s+/g, " ").slice(0, 60);
+  const clean = cleanText(name, 60);
   if (!clean) return { error: "name" as const };
   const owned = await db.select({ n: sql<number>`count(*)` }).from(schema.classes).where(eq(schema.classes.ownerId, ownerId)).get();
   if (Number(owned?.n ?? 0) >= MAX_CLASSES) return { error: "limit" as const };

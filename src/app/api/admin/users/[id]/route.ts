@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { cleanText, weakPassword } from "@/lib/account";
 import { isAdmin } from "@/server/auth";
 import { getDb, schema } from "@/server/db/client";
 import { hashPassword, MIN_PASSWORD, toPublicUser } from "@/server/user-auth";
@@ -19,13 +20,16 @@ export async function PATCH(req: Request, ctx: { params: Promise<{ id: string }>
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "Invalid body", issues: parsed.error.issues }, { status: 400 });
   const db = await getDb();
-  const existing = await db.select({ id: schema.users.id }).from(schema.users).where(eq(schema.users.id, id)).get();
+  const existing = await db.select({ id: schema.users.id, username: schema.users.username }).from(schema.users).where(eq(schema.users.id, id)).get();
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  const { password, ...rest } = parsed.data;
+  const { password, displayName, ...rest } = parsed.data;
+  const name = displayName === undefined ? undefined : cleanText(displayName, 60);
+  if (name === "") return NextResponse.json({ error: "The name has no readable letters" }, { status: 400 });
+  if (password && weakPassword(password, existing.username)) return NextResponse.json({ error: "That password is too easy to guess" }, { status: 400 });
   // A new password also signs the pupil out on every device (see createUserToken).
   await db
     .update(schema.users)
-    .set({ ...rest, ...(password ? { passwordHash: await hashPassword(password) } : {}) })
+    .set({ ...rest, ...(name ? { displayName: name } : {}), ...(password ? { passwordHash: await hashPassword(password) } : {}) })
     .where(eq(schema.users.id, id))
     .run();
   const user = (await db.select().from(schema.users).where(eq(schema.users.id, id)).get())!;

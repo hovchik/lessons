@@ -51,6 +51,11 @@ export async function settleOutbox() {
   write([]);
 }
 
+/** Forgets what is waiting without sending it: it belongs to an account that is no longer signed in here. */
+export function dropOutbox() {
+  write([]);
+}
+
 let flushing = false;
 /** Sends what is waiting, oldest first; stops at the first network failure. Returns how many went. */
 export async function flushOutbox(): Promise<number> {

@@ -9,7 +9,7 @@ import { notifyChanged } from "@/lib/live";
 import { Button } from "@/components/ui/button";
 import { GRADES } from "@/lib/utils";
 
-const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "password_short", "name_required", "disabled", "not_configured", "too_many", "generic"] as const;
+const ERROR_KEYS = ["wrong_credentials", "taken", "bad_username", "password_short", "password_common", "name_required", "disabled", "not_configured", "too_many", "generic"] as const;
 const USERNAME_RE = /^[a-z0-9_.-]{3,24}$/;
 const MIN_PASSWORD = 6;
 type ErrorKey = (typeof ERROR_KEYS)[number];
