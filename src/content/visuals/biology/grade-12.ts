@@ -174,4 +174,7 @@ export const grade12: VisualMap[number] = {
       ru: ["Какое международное соглашение защищает озоновый слой?", ["Киотский протокол", "Парижское соглашение", "Монреальский протокол", "Рамсарская конвенция"], "Монреальский протокол 1987 года запретил ХФУ, и озоновый слой восстанавливается."],
     }),
   ],
+  "population-genetics": ["mechanism drift", "mechanism selection"],
+  "phylogeny": ["diagram homology", "bars set=geotime"],
+  "biogeochemical-cycles": ["mechanism photosynth", "bars set=co2"],
 };

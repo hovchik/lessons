@@ -605,17 +605,17 @@ export const grade3: VisualMap[number] = {
   ],
   "tumanyan-gikor": [
     closer(
-      `**A village boy in the city.** Gikor's poor father takes him to Tiflis to work for a merchant, hoping to earn money. Gikor is mistreated, falls ill and dies. Tumanyan wrote it in 1892 to show how hard life was for poor children.
+      `**A village boy in the city.** Gikor's poor father takes him to Tiflis to work for a merchant, hoping to earn money. Gikor is mistreated, falls ill and dies. Tumanyan wrote it in 1907 to show how hard life was for poor children.
 
 **What kind of boy is Gikor?** Quiet, kind, homesick, hard-working. Find two sentences that show each quality: a writer shows character through actions, not only words.
 
 **Why it still matters.** The story makes readers feel pity and anger at injustice. Ask yourself: who is to blame for what happened? There is more than one answer.`,
-      `**Գյուղացի տղան քաղաքում։** Գիքորի աղքատ հայրը նրան տանում է Թիֆլիս՝ վաճառականի մոտ աշխատելու, հույս ունենալով փող վաստակել։ Գիքորի հետ վատ են վարվում, նա հիվանդանում և մահանում է։ Թումանյանն այն գրել է 1892 թվականին՝ ցույց տալու, թե որքան դժվար էր աղքատ երեխաների կյանքը։
+      `**Գյուղացի տղան քաղաքում։** Գիքորի աղքատ հայրը նրան տանում է Թիֆլիս՝ վաճառականի մոտ աշխատելու, հույս ունենալով փող վաստակել։ Գիքորի հետ վատ են վարվում, նա հիվանդանում և մահանում է։ Թումանյանն այն գրել է 1907 թվականին՝ ցույց տալու, թե որքան դժվար էր աղքատ երեխաների կյանքը։
 
 **Ինչպիսի՞ տղա է Գիքորը։** Լուռ, բարի, կարոտած, աշխատասեր։ Գտիր երկու նախադասություն, որոնք ցույց են տալիս յուրաքանչյուր հատկանիշը․ գրողը բնավորությունը ցույց է տալիս արարքներով, ոչ միայն բառերով։
 
 **Ինչու է այն մինչ օրս կարևոր։** Պատմվածքն ընթերցողի մեջ խղճահարություն և զայրույթ է առաջացնում անարդարության հանդեպ։ Հարցրու քեզ․ ո՞վ է մեղավոր կատարվածի համար։ Պատասխանը մեկը չէ։`,
-      `**Деревенский мальчик в городе.** Бедный отец везёт Гикора в Тифлис работать у купца, надеясь заработать. С Гикором плохо обращаются, он заболевает и умирает. Туманян написал рассказ в 1892 году, чтобы показать, как тяжело жилось бедным детям.
+      `**Деревенский мальчик в городе.** Бедный отец везёт Гикора в Тифлис работать у купца, надеясь заработать. С Гикором плохо обращаются, он заболевает и умирает. Туманян написал рассказ в 1907 году, чтобы показать, как тяжело жилось бедным детям.
 
 **Какой Гикор?** Тихий, добрый, тоскующий по дому, трудолюбивый. Найди по два предложения на каждое качество: писатель показывает характер через поступки, а не только словами.
 

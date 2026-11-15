@@ -1,5 +1,5 @@
 import type { CourseSeed } from "../../types";
-import { withEn, withRu } from "../../ru-overlay";
+import { plusLessons, withEn, withRu } from "../../ru-overlay";
 import { scienceGrade2 } from "./grade-2";
 import { ru as ru2 } from "./grade-2.ru";
 import { en as en2 } from "./grade-2.en";
@@ -9,11 +9,17 @@ import { en as en3 } from "./grade-3.en";
 import { scienceGrade4 } from "./grade-4";
 import { ru as ru4 } from "./grade-4.ru";
 import { en as en4 } from "./grade-4.en";
+import { ruExtra4 } from "./grade-4.extra.ru";
+import { enExtra4 } from "./grade-4.extra.en";
 import { scienceGrade5 } from "./grade-5";
 import { ru as ru5 } from "./grade-5.ru";
 import { en as en5 } from "./grade-5.en";
+import { ruExtra5 } from "./grade-5.extra.ru";
+import { enExtra5 } from "./grade-5.extra.en";
 import { scienceGrade6 } from "./grade-6";
 import { ru as ru6 } from "./grade-6.ru";
 import { en as en6 } from "./grade-6.en";
+import { ruExtra6 } from "./grade-6.extra.ru";
+import { enExtra6 } from "./grade-6.extra.en";
 
-export const science: CourseSeed[] = [withEn(withRu(scienceGrade2, ru2), en2), withEn(withRu(scienceGrade3, ru3), en3), withEn(withRu(scienceGrade4, ru4), en4), withEn(withRu(scienceGrade5, ru5), en5), withEn(withRu(scienceGrade6, ru6), en6)];
+export const science: CourseSeed[] = [withEn(withRu(scienceGrade2, ru2), en2), withEn(withRu(scienceGrade3, ru3), en3), withEn(withRu(scienceGrade4, plusLessons(ru4, ruExtra4)), plusLessons(en4, enExtra4)), withEn(withRu(scienceGrade5, plusLessons(ru5, ruExtra5)), plusLessons(en5, enExtra5)), withEn(withRu(scienceGrade6, plusLessons(ru6, ruExtra6)), plusLessons(en6, enExtra6))];

@@ -155,4 +155,7 @@ export const grade8: VisualMap[number] = {
       ru: ["Если подниматься с Араратской равнины к вершине Арагаца, какой пояс идёт сразу после полупустыни?", ["Степь", "Альпийские луга", "Скалы и снег", "Тундра"], "Полупустыня (800–1300 м) сменяется степью на чернозёмах (1300–2000 м), затем лугами и, наконец, скалами и снегом."],
     }),
   ],
+  "earthquakes-armenia": ["mechanism collision", "mechanism plates"],
+  "topographic-map": ["diagram contour", "geocalc mode=scale"],
+  "protected-areas": ["diagram altzones"],
 };

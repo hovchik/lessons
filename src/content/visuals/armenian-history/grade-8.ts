@@ -136,4 +136,8 @@ export const grade8: VisualMap[number] = {
       ru: ["Какую знаменитую школу основал Нерсес Аштаракеци в Тифлисе в 1824 году?", ["Нерсисяновскую школу", "Лазаревский институт", "Геворкянскую семинарию", "Татевский университет"], "Нерсисяновская школа стала одной из важнейших армянских школ XIX века."],
     }),
   ],
+  "etchmiadzin-meetings": ["timeline set=meet1547"],
+  "artsakh-melikdoms": ["timeline set=melikdoms"],
+  "constantinople-armenians": ["timeline set=polis"],
+  "armenians-in-russia-18c": ["timeline set=russarm"],
 };

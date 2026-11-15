@@ -1,5 +1,6 @@
 import { hyLesson } from "../../types";
 import { hyCourse, hyUnit } from "../../hy-course";
+import { extra9 } from "./grade-9.extra";
 
 export const geographyGrade9 = hyCourse({
   subject: "geography",
@@ -378,6 +379,7 @@ export const geographyGrade9 = hyCourse({
           ["Ո՞րն է ՀՀ արտահանման գլխավոր ապրանքներից։", ["Նավթ", "Պղնձի խտանյութ", "Բնական գազ", "Մեքենաներ"], 1],
           ["Ո՞ր տնտեսական միության անդամ է Հայաստանը 2015-ից։", ["Եվրամիության", "Եվրասիական տնտեսական միության", "ՕՊԵԿ-ի", "ԱՍԵԱՆ-ի"], 1],
         ]),
+      extra9["services-economy"],
     ]),
     hyUnit(["The regions of Armenia", "ՀՀ մարզերը", "Области Армении"], "Հյուսիսային, կենտրոնական և հարավային մարզերի բնությունը, բնակչությունը և տնտեսությունը։", [
       hyLesson("northern-regions", ["Northern regions", "Հյուսիսային մարզեր", "Северные области"],
@@ -494,6 +496,8 @@ export const geographyGrade9 = hyCourse({
           ["Որտե՞ղ է Նորատուսի խաչքարերի դաշտը։", ["Գեղարքունիքում", "Լոռիում", "Շիրակում", "Սյունիքում"], 0],
           ["Ո՞րն է Վայոց ձորի մարզկենտրոնը։", ["Ջերմուկ", "Եղեգնաձոր", "Արենի", "Վայք"], 1],
         ]),
+      extra9["regional-differences"],
+      extra9["environment-sustainability"],
     ]),
   ],
 });

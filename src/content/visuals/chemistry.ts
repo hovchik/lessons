@@ -44,8 +44,38 @@ export const chemistryVisuals: VisualMap = {
     ],
     "oxygen-and-combustion": ["mechanism combustion", "balance set=methane,rust,phosphorus,magnetite"],
     "hydrogen-and-water": ["balance set=water,zinc,sodium,copper", "molecule set=h2,h2o,h2o2"],
+    "particles-in-motion": ["particles mode=diffusion", "particles mode=states", "particles mode=gas", "particles mode=brownian"],
+    allotropy: ["lattice set=diamond,graphite", "molecule set=o2,o3"],
+    "constant-composition": [
+      "molecule set=h2o,co2,h2so4",
+      ask(2, {
+        en: ["In iron sulfide FeS, iron and sulfur combine in the mass ratio 7 : 4. How much sulfur reacts with 21 g of iron?", ["8 g", "12 g", "21 g"], "21 g is 3 × 7 g, so sulfur is 3 × 4 g = 12 g."],
+        hy: ["Երկաթի սուլֆիդում՝ FeS, երկաթը և ծծումբը միանում են 7 ։ 4 զանգվածային հարաբերությամբ։ Որքա՞ն ծծումբ կփոխազդի 21 գ երկաթի հետ։", ["8 գ", "12 գ", "21 գ"], "21 գ-ը 3 × 7 գ է, ուստի ծծումբը՝ 3 × 4 գ = 12 գ։"],
+        ru: ["В сульфиде железа FeS железо и сера соединяются в массовом отношении 7 : 4. Сколько серы прореагирует с 21 г железа?", ["8 г", "12 г", "21 г"], "21 г — это 3 × 7 г, значит, серы 3 × 4 г = 12 г."],
+      }),
+    ],
+    "air-composition": [
+      "molecule set=n2,o2,co2",
+      ask(1, {
+        en: ["After phosphorus burns in a closed jar over water, the water rises into about one fifth of the jar. Why one fifth?", ["About 21 % of air is oxygen, and it was used up", "Phosphorus takes up that space", "The water got warmer"], "The oxygen, about a fifth of the air, joins the phosphorus; the product dissolves in the water, and water fills the space the oxygen left."],
+        hy: ["Ջրի վրա շրջված փակ բանկայում ֆոսֆորն այրելուց հետո ջուրը բարձրանում է և լցնում բանկայի մոտ հինգերորդ մասը։ Ինչու՞ հինգերորդ մասը։", ["Օդի մոտ 21 %-ը թթվածին է, և այն ծախսվեց", "Ֆոսֆորը զբաղեցնում է այդ տեղը", "Ջուրը տաքացավ"], "Թթվածինը՝ օդի մոտ հինգերորդ մասը, միանում է ֆոսֆորին, արգասիքը լուծվում է ջրում, և ջուրը լցնում է թթվածնի թողած տեղը։"],
+        ru: ["После сжигания фосфора в закрытой банке над водой вода поднимается примерно на пятую часть банки. Почему на пятую?", ["Около 21 % воздуха — кислород, и он израсходовался", "Фосфор занимает это место", "Вода нагрелась"], "Кислород, около пятой части воздуха, соединяется с фосфором; продукт растворяется в воде, и вода занимает место, освободившееся от кислорода."],
+      }),
+    ],
+    "history-of-chemistry": [
+      ask(3, {
+        en: ["Which discovery came from noticing that metals get heavier when they burn?", ["The periodic law", "Atomic theory", "Burning is joining with oxygen"], "Lavoisier weighed carefully: the extra mass of burnt metal is oxygen taken from the air."],
+        hy: ["Ո՞ր հայտնագործությունն արվեց՝ նկատելով, որ մետաղներն այրվելիս ծանրանում են։", ["Պարբերական օրենքը", "Ատոմային տեսությունը", "Այրումը միացում է թթվածնի հետ"], "Լավուազիեն ուշադիր կշռեց․ այրված մետաղի ավելցուկային զանգվածը օդից վերցրած թթվածինն է։"],
+        ru: ["Какое открытие было сделано, когда заметили, что металлы при горении тяжелеют?", ["Периодический закон", "Атомная теория", "Горение — соединение с кислородом"], "Лавуазье тщательно взвешивал: лишняя масса сгоревшего металла — это кислород, взятый из воздуха."],
+      }),
+    ],
   },
   8: {
+    "equation-calculations": ["balance set=water,zinc,limestone,methane", "mole mode=amount kind=solid"],
+    "crystal-hydrates": ["solution mode=fraction", "particles mode=states"],
+    "amphoteric-hydroxides": ["ions set=copper,iron", "ptable"],
+    "crystal-lattices": ["lattice set=nacl,diamond,graphite,metal,dryice"],
+    "element-families": ["ptable", "flame Li", "molecule set=cl2,hcl"],
     "amount-of-substance": ["mole mode=amount kind=solid", "mole"],
     "molar-volume-of-gases": [
       "mole mode=amount kind=gas",
@@ -80,6 +110,11 @@ export const chemistryVisuals: VisualMap = {
     "chemical-bond-oxidation-state": ["mechanism ionic", "mechanism covalent", "ptable mode=en"],
   },
   9: {
+    "galvanic-cells": ["activity mode=salt", "mechanism redox", "mechanism electrolysis"],
+    "ammonium-salts": ["molecule set=nh3,nh4", "ions set=ammonium"],
+    silicates: ["lattice set=diamond", "mechanism greenhouse"],
+    "metal-extraction": ["mechanism blastfurnace", "balance set=blast,thermite", "mechanism electrolysis"],
+    alloys: ["lattice set=metal", "mechanism metallic", "mechanism corrosion"],
     "electrolytic-dissociation": ["mechanism dissolve", "ions mode=dissolve"],
     "ionic-equations": [
       ask(1, {
@@ -101,6 +136,11 @@ export const chemistryVisuals: VisualMap = {
     iron: ["mechanism blastfurnace", "ions set=iron", "balance set=rust,magnetite,blast"],
   },
   10: {
+    "isomerism-types": ["molecule set=c4h10,isobutane,c3h6,cyclohexane"],
+    cycloalkanes: ["molecule set=cyclohexane,benzene,c3h6"],
+    "halogen-derivatives": ["molecule set=ch3cl,ccl4,vinylchloride,o3", "mechanism polymer"],
+    "organic-formula-problems": ["molecule set=ch4,c2h6,c3h8,c4h10"],
+    "organic-genetic-links": ["molecule set=c2h6,c2h4,ethanol,acetaldehyde,aceticacid,ethylacetate", "mechanism ester"],
     "structure-theory": [
       "molecule set=c4h10,isobutane",
       ask(2, {
@@ -122,6 +162,11 @@ export const chemistryVisuals: VisualMap = {
     carbohydrates: ["molecule set=glucose", "balance set=photosynthesis"],
   },
   11: {
+    "enzymes-vitamins-hormones": ["mechanism catalyst", "molecule set=glycine,alanine"],
+    "complex-compounds": ["molecule set=nh3,nh4", "ions set=copper,iron"],
+    "dispersed-systems": ["particles mode=brownian", "particles mode=diffusion"],
+    thermochemistry: ["mechanism combustion", "balance set=methane,limestone"],
+    "redox-balancing": ["mechanism redox", "balance set=copper,zinc"],
     amines: ["molecule set=methylamine,aniline"],
     "amino-acids-proteins": ["molecule set=glycine,alanine,urea"],
     "nucleic-acids": ["mechanism dna"],
@@ -142,6 +187,11 @@ export const chemistryVisuals: VisualMap = {
     electrolysis: ["mechanism electrolysis"],
   },
   12: {
+    "nuclear-chemistry": ["atom", "ptable"],
+    "energy-chemistry": ["activity mode=salt", "mechanism electrolysis"],
+    "new-materials": ["lattice set=graphite,diamond"],
+    "gas-problems": ["particles mode=gas", "mole"],
+    "ion-identification": ["ions set=barium,silver,copper,iron", "flame Na", "flame K"],
     "transition-metals": ["flame Cu", "ions set=copper,iron"],
     "chemistry-environment": ["mechanism acidrain", "mechanism greenhouse"],
     "chemistry-daily-life": ["ph set=home", "mechanism soap"],

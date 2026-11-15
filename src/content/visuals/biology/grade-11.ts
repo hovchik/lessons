@@ -175,4 +175,7 @@ export const grade11: VisualMap[number] = {
       ru: ["Какой инструмент разрезает ДНК в нужном месте в генной инженерии?", ["Амилаза", "Фермент рестрикции (рестриктаза)", "Пепсин", "Каталаза"], "Рестриктазы разрезают ДНК в определённых последовательностях, поэтому ген можно вырезать и вставить в плазмиду."],
     }),
   ],
+  "gene-interaction": ["punnett Aa Aa", "punnett AaBb AaBb"],
+  "gene-regulation": ["mechanism protein"],
+  "dna-technologies": ["mechanism dna"],
 };

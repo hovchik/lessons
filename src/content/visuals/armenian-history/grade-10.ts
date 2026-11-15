@@ -136,4 +136,7 @@ export const grade10: VisualMap[number] = {
       ru: ["Почему Киракос Гандзакеци — ценный источник о монголах?", ["Он был их пленником и секретарём и видел их сам", "Он был монгольским ханом", "Он жил на 500 лет позже", "Он только переписывал греческие книги"], "Попав в плен в 1236 году, он описал монголов по собственному опыту и даже записал монгольские слова."],
     }),
   ],
+  "armenian-historiography": ["timeline set=historians10"],
+  "medieval-armenian-law": ["timeline set=goshlaw"],
+  "cilicia-and-europe": ["timeline set=ciliciawest"],
 };

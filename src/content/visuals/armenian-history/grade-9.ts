@@ -136,4 +136,9 @@ export const grade9: VisualMap[number] = {
       ru: ["Сколько стоил один драм, когда его ввели в 1993 году?", ["1 рубль", "10 рублей", "100 долларов", "200 рублей"], "Драм заменил рубль 22 ноября 1993 года по курсу 200 рублей за 1 драм."],
     }),
   ],
+  "eastern-armenians-1903-1906": ["timeline set=church1903"],
+  "may-battles-1918": ["timeline set=may1918"],
+  "war-of-1920": ["timeline set=war1920"],
+  "soviet-armenia-1953-1988": ["timeline set=thaw"],
+  "first-artsakh-war": ["timeline set=artsakh9194"],
 };

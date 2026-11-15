@@ -136,4 +136,8 @@ export const grade8: VisualMap[number] = {
       ru: ["Где сегодня находится главный ключ Бастилии?", ["В Лувре", "В Кремле", "На дне Сены", "В доме Джорджа Вашингтона в Маунт-Верноне"], "Лафайет отправил его Вашингтону, и он до сих пор висит в Маунт-Верноне."],
     }),
   ],
+  "ottoman-empire-peak": ["timeline set=wottoman"],
+  "thirty-years-war": ["timeline set=w30years"],
+  "asia-early-modern": ["timeline set=wasia"],
+  "russia-peter-catherine": ["timeline set=wpeter"],
 };

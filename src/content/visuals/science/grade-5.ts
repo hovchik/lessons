@@ -143,4 +143,8 @@ export const grade5: VisualMap[number] = {
       ru: ["Что делает тихоходка, когда её дом высыхает?", ["Улетает в новую лужу", "Глубоко зарывается в почву", "Теряет почти всю воду и становится сухим бочонком", "Превращается в растение"], "В таком сухом виде она выдерживает мороз, жар и годы без воды, а намокнув, оживает."],
     }),
   ],
+  "density-and-floating": ["fluids mode=solid"],
+  "light-and-colour": ["optics mode=shadow", "optics mode=reflection", "optics mode=prism"],
+  "animal-groups": ["diagram insect", "diagram fish", "diagram bird"],
+  "body-systems": ["diagram body", "diagram skeleton", "diagram digestive"],
 };

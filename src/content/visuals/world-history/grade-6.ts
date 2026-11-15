@@ -136,4 +136,7 @@ export const grade6: VisualMap[number] = {
       ru: ["Что умел Антикитерский механизм?", ["Откачивать воду из кораблей", "Печатать книги", "Предсказывать затмения и показывать положение Солнца и Луны", "Измерять глубину моря"], "Его бронзовые шестерни работали как ручной астрономический вычислитель, сделанный около II века до н. э."],
     }),
   ],
+  "phoenicia-and-israel": ["timeline set=wphoenicia"],
+  "persian-empire": ["timeline set=wpersia"],
+  "hellenistic-world": ["timeline set=whellen"],
 };

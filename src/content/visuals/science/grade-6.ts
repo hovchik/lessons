@@ -143,4 +143,7 @@ export const grade6: VisualMap[number] = {
       ru: ["Почему кролики так быстро размножились в Австралии?", ["Их кормили фермеры", "Они ели лис", "Не было хищников, которые сдерживали бы их, а зимы были мягкими", "Они жили только в городах"], "Без хищников их численность ничто не сдерживало, и 24 кролика превратились в сотни миллионов."],
     }),
   ],
+  "hydrosphere": ["mechanism watercycle"],
+  "magnetism-electromagnets": ["magnet mode=force", "magnet mode=earth", "mechanism needlecompass", "magnet mode=coil"],
+  "sound-and-waves": ["wave mode=sound", "mechanism echo", "mechanism thunder"],
 };
