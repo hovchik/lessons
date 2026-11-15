@@ -1,6 +1,6 @@
 import { SaveOffline } from "@/components/site/save-offline";
 import type { Metadata } from "next";
-import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Gauge, Lock, PlayCircle } from "lucide-react";
+import { Award, CheckCircle2, ClipboardCheck, Clock, Flag, Gauge, Lightbulb, Lock, PlayCircle } from "lucide-react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -41,6 +41,9 @@ export default async function CoursePage({ params }: { params: Params }) {
   const siblings = await getCourses({ subjectId: subject });
   const exams = await getExams({ subjectId: subject, grade });
   const tips = await getCourseTips(course.id);
+  const tricksPerLesson = new Map<string, number>();
+  for (const tp of tips) if (tp.lessonSlug) tricksPerLesson.set(tp.lessonSlug, (tricksPerLesson.get(tp.lessonSlug) ?? 0) + 1);
+  const lessonTitles = Object.fromEntries(units.flatMap((u) => u.lessons).map((x) => [x.slug, pick(x.title, l)]));
   const mastery = new Map((user ? await getMastery(user.id, [course.id]) : []).map((m) => [m.unitId, m]));
   const reflections = user ? await getReflections(user.id, units.map((u) => u.id)) : new Map<string, string>();
   const firstReady = units.flatMap((u) => u.lessons).find((x) => x.status === "published") ?? units[0]?.lessons[0];
@@ -145,6 +148,12 @@ export default async function CoursePage({ params }: { params: Params }) {
                       >
                         <span className="w-6 shrink-0 text-sm font-extrabold tabular-nums text-muted-foreground sm:w-8">{li + 1}</span>
                         <span className="min-w-0 flex-1 font-semibold leading-snug">{pick(lsn.title, l)}</span>
+                        {ready && tricksPerLesson.has(lsn.slug) && (
+                          <span title={t("tips.hasTricks", { count: tricksPerLesson.get(lsn.slug)! })} className="inline-flex shrink-0 items-center gap-0.5 text-xs font-bold text-amber-600">
+                            <Lightbulb className="size-4" aria-hidden="true" />
+                            <span className="sr-only">{t("tips.hasTricks", { count: tricksPerLesson.get(lsn.slug)! })}</span>
+                          </span>
+                        )}
                         {done ? (
                           <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-bold text-success">
                             <CheckCircle2 className="size-4" aria-hidden="true" />
@@ -194,7 +203,7 @@ export default async function CoursePage({ params }: { params: Params }) {
         </ol>
       </section>
 
-      <TipsSection tips={tips} />
+      <TipsSection tips={tips} lessonHref={(slug) => `/${subject}/${grade}/${slug}`} lessonTitles={lessonTitles} />
       {exams.length > 0 && (
         <section aria-labelledby="exams-title" className="space-y-4">
           <div className="flex flex-wrap items-end justify-between gap-3">

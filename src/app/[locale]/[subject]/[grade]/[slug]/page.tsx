@@ -14,7 +14,8 @@ import { numberChecks } from "@/lib/checks";
 import { localQuiz } from "@/lib/quiz";
 import { cn, hasContent, pick } from "@/lib/utils";
 import { getLessonProgress } from "@/server/progress";
-import { getLesson } from "@/server/queries";
+import { getCourseTips, getLesson } from "@/server/queries";
+import { LessonTricks } from "@/components/site/lesson-tricks";
 import { getCurrentUser } from "@/server/user-auth";
 import { tutorEnabled } from "@/server/tutor";
 import { getWarmup } from "@/server/warmup";
@@ -39,11 +40,13 @@ export default async function LessonPage({ params }: { params: Params }) {
   const [t, l, user] = await Promise.all([getTranslations(), getLocale(), getCurrentUser()]);
   const { lesson, course, subject: subj, unit, unitIndex, prev, next } = data;
   const ready = lesson.status === "published" && hasContent(lesson.content);
-  const [progress, warmupItems, looks] = await Promise.all([
+  const [progress, warmupItems, looks, courseTips] = await Promise.all([
     user ? getLessonProgress(user.id, lesson.id) : undefined,
     ready ? getWarmup(lesson.id, user?.id ?? null) : [],
     ready && lesson.quiz.length ? lessonLooks(lesson.id) : null,
+    ready ? getCourseTips(course.id) : [],
   ]);
+  const tricks = courseTips.filter((tp) => tp.lessonSlug === lesson.slug);
   const warmup = await withLooks(warmupItems, l);
   // Quick checks are numbered so a pupil's first pick can be saved (src/lib/checks.ts).
   const body = numberChecks(pick(lesson.content, l));
@@ -116,6 +119,8 @@ export default async function LessonPage({ params }: { params: Params }) {
           </Link>
         </div>
       )}
+
+      {ready && <LessonTricks tricks={tricks} />}
 
       {ready && <LookTarget />}
 

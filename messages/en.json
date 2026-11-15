@@ -120,7 +120,10 @@
       "language": "Language hack",
       "exam": "Exam strategy",
       "study": "Study habit"
-    }
+    },
+    "lessonTitle": "{count, plural, one {A trick for this lesson} other {Tricks for this lesson}}",
+    "inLesson": "Used in the lesson: {title}",
+    "hasTricks": "{count, plural, one {# trick} other {# tricks}} in this lesson"
   },
   "footer": {
     "madeFor": "Built for pupils, parents and teachers in Armenia and Russia.",

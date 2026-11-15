@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isAdmin } from "@/server/auth";
@@ -12,6 +12,7 @@ const Body = z.object({
   body: i18n.optional(),
   category: z.enum(TIP_CATEGORIES).optional(),
   position: z.number().int().min(1).optional(),
+  lessonSlug: z.string().regex(/^[a-z0-9-]+$/).nullable().optional(),
   status: z.enum(["draft", "published", "deleted"]).optional(),
 });
 
@@ -21,8 +22,16 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "Invalid body", issues: parsed.error.issues }, { status: 400 });
   const db = await getDb();
-  const existing = await db.select({ id: schema.tips.id }).from(schema.tips).where(eq(schema.tips.id, id)).get();
+  const existing = await db.select({ id: schema.tips.id, courseId: schema.tips.courseId }).from(schema.tips).where(eq(schema.tips.id, id)).get();
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (parsed.data.lessonSlug) {
+    const lesson = await db
+      .select({ id: schema.lessons.id })
+      .from(schema.lessons)
+      .where(and(eq(schema.lessons.courseId, existing.courseId), eq(schema.lessons.slug, parsed.data.lessonSlug)))
+      .get();
+    if (!lesson) return NextResponse.json({ error: "No such lesson in this course" }, { status: 400 });
+  }
   await db
     .update(schema.tips)
     .set({ ...parsed.data, source: "admin", updatedAt: new Date().toISOString() })

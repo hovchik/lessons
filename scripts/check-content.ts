@@ -247,7 +247,7 @@ for (const [subject, byGrade] of Object.entries(RELEVANCE)) {
 }
 console.log(`${relevanceLines} "why learn this" lines.`);
 
-console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses, visuals in ${visualLessons} lessons, ${workedSets} worked example sets, deeper theory in ${theoryLessons} lessons.`);
+console.log(`\n${courses.length} courses, ${total} lessons, ${written} fully written, ${questions} quiz questions (${kindList}), ${tipCheck.count} tips in ${tipCheck.courses} courses (tricks in ${tipCheck.lessons} lessons), visuals in ${visualLessons} lessons, ${workedSets} worked example sets, deeper theory in ${theoryLessons} lessons.`);
 if (errors.length) {
   console.error(`\n${errors.length} problem(s):\n` + errors.map((e) => `  • ${e}`).join("\n"));
   process.exit(1);

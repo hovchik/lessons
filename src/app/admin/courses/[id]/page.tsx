@@ -80,6 +80,7 @@ export default async function AdminCourse({ params }: { params: Promise<{ id: st
                     <Circle className="size-4 shrink-0 text-muted-foreground" aria-label="Draft" />
                   )}
                   <span className={`min-w-0 flex-1 text-sm font-semibold ${tp.status === "deleted" ? "text-muted-foreground line-through" : ""}`}>{tp.title.en || tp.slug}</span>
+                  {tp.lessonSlug && <span className="hidden max-w-48 truncate rounded-full bg-amber-50 px-2 py-0.5 text-xs font-bold text-amber-800 sm:inline">lesson: {tp.lessonSlug}</span>}
                   <span className="hidden text-xs text-muted-foreground md:inline">{CATEGORY_LABELS[tp.category]}</span>
                 </Link>
               </li>
