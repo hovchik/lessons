@@ -13,7 +13,7 @@ const LOCALES = ["en", "hy", "ru"];
 const MAX_PAGES = 400;
 const MAX_STATIC = 600;
 // Pages that are only about the signed-in account are not worth keeping offline.
-const PRIVATE = /^\/(en|hy|ru)\/(progress|review|classes|parent|account|recap|login|signup|live|admin|exams\/[^/]+\/plan)(\/|$)/;
+const PRIVATE = /^\/(en|hy|ru)\/(progress|review|classes|schedule|parent|account|recap|login|signup|live|admin|exams\/[^/]+\/plan)(\/|$)/;
 
 /** The offline page in each language, with the files it needs. */
 async function keepOfflinePages() {
@@ -174,5 +174,19 @@ self.addEventListener("message", (event) => {
       await cacheAssets([...assets]);
       reply({ type: "saved", failed });
     })(),
+  );
+});
+
+// A tap on a reminder notification (src/components/site/reminder-watcher.tsx) brings the app forward on the schedule.
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const data = event.notification.data || {};
+  const url = typeof data.url === "string" && data.url.startsWith("/") && !data.url.startsWith("//") ? data.url : "/";
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((list) => {
+      const open = list.find((c) => new URL(c.url).origin === self.location.origin);
+      if (open) return open.focus().then((c) => (c && "navigate" in c ? c.navigate(url) : undefined)).catch(() => undefined);
+      return self.clients.openWindow(url);
+    }),
   );
 });

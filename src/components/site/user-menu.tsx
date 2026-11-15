@@ -1,6 +1,6 @@
 "use client";
 
-import { Flame, LogOut, Trophy, UserRound } from "lucide-react";
+import { CalendarDays, Flame, LogOut, Trophy, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { notifyChanged } from "@/lib/live";
@@ -54,6 +54,9 @@ export function UserMenu({ user, className }: Props) {
           <Trophy className="size-4 shrink-0 text-accent" aria-hidden="true" />
         )}
         <span className="truncate">{user.displayName}</span>
+      </Link>
+      <Link href="/schedule" aria-label={t("schedule")} title={t("schedule")} className="hidden size-11 place-items-center rounded-xl text-muted-foreground hover:bg-muted sm:grid">
+        <CalendarDays className="size-4" aria-hidden="true" />
       </Link>
       <button
         type="button"
