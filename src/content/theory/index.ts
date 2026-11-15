@@ -10,6 +10,7 @@
 import type { CourseSeed, I18nText } from "../types";
 import { placeBlocks } from "../visuals";
 import { algebraTheory } from "./algebra";
+import { armenianTheory } from "./armenian";
 import { chemistryTheory } from "./chemistry";
 import { geometryTheory } from "./geometry";
 import { mathTheory } from "./math";
@@ -20,6 +21,7 @@ export type TheoryMap = Record<number, Record<string, I18nText>>;
 
 export const THEORY: Record<string, TheoryMap> = {
   algebra: algebraTheory,
+  armenian: armenianTheory,
   chemistry: chemistryTheory,
   geometry: geometryTheory,
   math: mathTheory,
