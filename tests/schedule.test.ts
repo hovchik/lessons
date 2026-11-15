@@ -48,7 +48,7 @@ test("nobody can read, change or delete another user's classes or reminders", as
   const e = mine.entries[0];
   const r = mine.reminders[0];
   assert.deepEqual(await m.schedule.getSchedule("aram"), { entries: [], reminders: [] });
-  assert.equal(await m.schedule.updateEntry("aram", e.id, input({ title: "Hacked" })), false);
+  assert.deepEqual(await m.schedule.updateEntry("aram", e.id, input({ title: "Hacked" })), { error: "notfound" });
   assert.equal(await m.schedule.deleteEntry("aram", e.id), false);
   assert.equal(await m.schedule.setReminderEnabled("aram", r.id, false), false);
   assert.equal(await m.schedule.deleteReminder("aram", r.id), false);
@@ -60,7 +60,7 @@ test("nobody can read, change or delete another user's classes or reminders", as
 test("editing a class moves it and sets, changes or removes its one reminder", async () => {
   const before = await m.schedule.getSchedule("ani");
   const e = before.entries.find((x) => x.title === "Choir")!;
-  assert.equal(await m.schedule.updateEntry("ani", e.id, input({ day: 2, start: "15:00", end: "16:00", subjectId: null, title: "Choir", remind: 30 })), true);
+  assert.deepEqual(await m.schedule.updateEntry("ani", e.id, input({ day: 2, start: "15:00", end: "16:00", subjectId: null, title: "Choir", remind: 30 })), { ok: true });
   let s = await m.schedule.getSchedule("ani");
   assert.deepEqual(s.reminders.filter((r) => r.entryId === e.id).map((r) => r.minutesBefore), [30]);
   await m.schedule.updateEntry("ani", e.id, input({ day: 2, start: "15:00", end: "16:00", subjectId: null, title: "Choir", remind: 5 }));
@@ -107,6 +107,17 @@ test("an account keeps at most 100 classes and 60 reminders", async () => {
   for (let i = 0; i < 6; i++) await m.schedule.createReminder("aram", { kind: "once", title: `r${i}`, date: "2026-12-01", time: "10:00" });
   assert.equal((await m.schedule.listReminders("aram")).length, 60);
   assert.deepEqual(await m.schedule.createReminder("aram", { kind: "once", title: "more", date: "2026-12-01", time: "10:00" }), { error: "limit" });
+  // At the limit a class that asks for a reminder is refused whole, not saved without it.
+  const before = await m.schedule.getSchedule("aram");
+  await m.schedule.deleteEntry("aram", before.entries.find((e) => !before.reminders.some((r) => r.entryId === e.id))!.id);
+  assert.deepEqual(await m.schedule.createEntries("aram", [1], input({ remind: 10 })), { error: "reminders" });
+  const plain = before.entries.find((e) => !before.reminders.some((r) => r.entryId === e.id) && e.id !== before.entries.find((x) => !before.reminders.some((r) => r.entryId === x.id))!.id)!;
+  assert.deepEqual(await m.schedule.updateEntry("aram", plain.id, input({ title: "Moved", remind: 10 })), { error: "reminders" });
+  const after = await m.schedule.getSchedule("aram");
+  assert.equal(after.entries.length, 99, "nothing was added");
+  assert.equal(after.entries.find((e) => e.id === plain.id)!.title, "", "and the class was not half-changed");
+  const withOne = after.entries.find((e) => after.reminders.some((r) => r.entryId === e.id))!;
+  assert.deepEqual(await m.schedule.updateEntry("aram", withOne.id, input({ remind: 30 })), { ok: true }, "a class that has a reminder can still change it");
 });
 
 // ---- The pure part: when reminders fire -----------------------------------

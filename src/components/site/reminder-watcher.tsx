@@ -8,7 +8,6 @@ import { onChanged } from "@/lib/live";
 import { alarmsBetween, GRACE_MS, type Alarm, type Entry, type Reminder } from "@/lib/schedule";
 import { pick } from "@/lib/utils";
 import type { I18nText } from "@/server/db/schema";
-import { useLiveUser } from "./live-user";
 
 /**
  * Shows the pupil's reminders when their time comes, on whatever page of the
@@ -66,13 +65,14 @@ type Toast = { key: string; title: string; body: string };
 /** What /api/schedule answers: the classes, the reminders and the names of the subjects the classes use. */
 type Schedule = { entries: Entry[]; reminders: Reminder[]; names: Record<string, I18nText> };
 
-export function ReminderWatcher() {
-  const signedIn = useLiveUser() !== null;
+/** `account` is the signed-in user's id (null for a guest), so a change of account starts the watcher afresh. */
+export function ReminderWatcher({ account }: { account: string | null }) {
   const t = useTranslations("schedule");
   const locale = useLocale();
   const data = useRef<Schedule | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const loadedAt = useRef(0);
+  const generation = useRef(0);
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const text = useCallback(
@@ -112,11 +112,15 @@ export function ReminderWatcher() {
   }, [locale, text]);
 
   const load = useCallback(async () => {
+    // Only the newest request of the account that is signed in now may answer: a slow earlier one
+    // must not undo a later change, and one sent before a log-out must not bring the reminders back.
+    const mine = ++generation.current;
     try {
       const res = await fetch("/api/schedule", { cache: "no-store" });
       if (!res.ok) return;
-      const prev = data.current;
       const next = (await res.json()) as Schedule;
+      if (mine !== generation.current) return;
+      const prev = data.current;
       if (prev) {
         // A reminder just added or moved to a time a few minutes ago is not news: it waits for its next turn.
         const now = new Date();
@@ -133,12 +137,12 @@ export function ReminderWatcher() {
   }, [check]);
 
   useEffect(() => {
-    if (!signedIn) {
-      data.current = null;
-      clearTimeout(timer.current);
-      setToasts([]);
-      return;
-    }
+    // Signed out, or another account signed in on this device: forget what was read and what is showing.
+    generation.current++;
+    data.current = null;
+    clearTimeout(timer.current);
+    setToasts([]);
+    if (!account) return;
     void load();
     const off = onChanged((change) => change.schedule && void load());
     // Back on the tab: show what came due, and after a while away read the reminders again (another device may have changed them).
@@ -153,7 +157,7 @@ export function ReminderWatcher() {
       document.removeEventListener("visibilitychange", onVisible);
       clearTimeout(timer.current);
     };
-  }, [signedIn, load, check]);
+  }, [account, load, check]);
 
   if (!toasts.length) return null;
   const drop = (key: string) => setToasts((list) => list.filter((x) => x.key !== key));

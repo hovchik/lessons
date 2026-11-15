@@ -136,7 +136,7 @@ function EntryForm({ draft, subjects, onDone }: { draft: EntryDraft; subjects: S
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const set = (patch: Partial<EntryDraft>) => setD((x) => ({ ...x, ...patch }));
-  const errors: Record<string, string> = { end: t("errorEnd"), title: t("errorTitle"), limit: t("errorLimit"), days: t("errorDays") };
+  const errors: Record<string, string> = { end: t("errorEnd"), title: t("errorTitle"), limit: t("errorLimit"), reminders: t("errorReminderLimit"), days: t("errorDays") };
   const subjectName = subjects.find((s) => s.id === d.subjectId)?.name;
 
   return (

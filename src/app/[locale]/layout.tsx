@@ -83,7 +83,7 @@ export default async function LocaleLayout({
             <div className="pb-safe h-16 md:hidden" aria-hidden="true" />
             <MobileNav />
             <OfflineSupport />
-            <ReminderWatcher />
+            <ReminderWatcher account={user?.id ?? null} />
           </LiveUserProvider>
         </NextIntlClientProvider>
       </body>

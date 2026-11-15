@@ -107,7 +107,6 @@ async function setClassReminder(userId: string, entryId: string, minutes: number
     await db.update(r).set({ minutesBefore: minutes, enabled: true }).where(and(eq(r.id, existing.id), eq(r.userId, userId))).run();
     return;
   }
-  if ((await count(r, userId)) >= MAX_REMINDERS) return;
   await db.insert(r).values({ id: newId(), userId, kind: "class", entryId, minutesBefore: minutes }).onConflictDoNothing().run();
 }
 
@@ -115,6 +114,8 @@ async function setClassReminder(userId: string, entryId: string, minutes: number
 export async function createEntries(userId: string, days: number[], input: EntryInputT) {
   const unique = [...new Set(days)].sort();
   if ((await count(schema.scheduleEntries, userId)) + unique.length > MAX_ENTRIES) return { error: "limit" as const };
+  // Checked before anything is saved, so a class never comes without the reminder that was asked for.
+  if (input.remind && (await count(schema.reminders, userId)) + unique.length > MAX_REMINDERS) return { error: "reminders" as const };
   const db = await getDb();
   const ids: string[] = [];
   for (const day of unique) {
@@ -126,13 +127,20 @@ export async function createEntries(userId: string, days: number[], input: Entry
   return { ids };
 }
 
+/** Changes one of the user's classes: "notfound" for an id that is not theirs, "reminders" when a new reminder would pass the limit. */
 export async function updateEntry(userId: string, id: string, input: EntryInputT) {
   const db = await getDb();
   const e = schema.scheduleEntries;
-  const res = await db.update(e).set({ day: input.day, ...fields(input) }).where(and(eq(e.id, id), eq(e.userId, userId))).run();
-  if (!res.rowsAffected) return false;
+  const r = schema.reminders;
+  const own = await db.select({ id: e.id }).from(e).where(and(eq(e.id, id), eq(e.userId, userId))).get();
+  if (!own) return { error: "notfound" as const };
+  if (input.remind) {
+    const has = await db.select({ id: r.id }).from(r).where(and(eq(r.userId, userId), eq(r.entryId, id))).get();
+    if (!has && (await count(r, userId)) >= MAX_REMINDERS) return { error: "reminders" as const };
+  }
+  await db.update(e).set({ day: input.day, ...fields(input) }).where(and(eq(e.id, id), eq(e.userId, userId))).run();
   await setClassReminder(userId, id, input.remind);
-  return true;
+  return { ok: true as const };
 }
 
 /** Removes the class and (by the foreign key) its reminder. */

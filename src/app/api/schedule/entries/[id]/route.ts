@@ -11,7 +11,9 @@ export async function PUT(req: Request, { params }: Ctx) {
   const parsed = EntryInput.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "invalid" }, { status: 400 });
   const { id } = await params;
-  if (!(await updateEntry(user.id, id, parsed.data))) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  const res = await updateEntry(user.id, id, parsed.data);
+  if (res.error === "notfound") return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (res.error) return NextResponse.json(res, { status: 400 });
   return NextResponse.json({ ok: true });
 }
 
