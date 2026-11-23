@@ -1,7 +1,7 @@
 #!/bin/sh
 # Puts a backup back:  cd /opt/lessons && ./deploy/restore.sh backups/lessons-2026-11-23.db
 # Without a file name it lists the backups. The current database is saved first as
-# backups/lessons-<date>-before-restore.db, so a restore can be undone the same way.
+# backups/lessons-<date>-<time>-before-restore.db, so a restore can be undone the same way.
 set -e
 cd "$(dirname "$0")/.."
 file="$1"

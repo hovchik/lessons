@@ -16,4 +16,4 @@ echo "Updating to: $(git log -1 --format='%h %cd %s' --date=short)"
 docker compose up -d --build
 ./deploy/wait-ready.sh
 docker image prune -f >/dev/null
-echo "Updated. If anything looks wrong: ./deploy/restore.sh backups/lessons-$(date +%Y-%m-%d)-before-update.db"
+echo "Updated. If anything looks wrong: ./deploy/restore.sh $(ls -1t backups/lessons-*-before-update.db | head -n1)"

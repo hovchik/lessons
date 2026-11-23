@@ -84,7 +84,7 @@ ssh root@SERVER-IP
 cd /opt/lessons && ./deploy/update.sh
 ```
 
-It saves `backups/lessons-<date>-before-update.db`, downloads the new code, rebuilds and restarts.
+It saves `backups/lessons-<date>-<time>-before-update.db`, downloads the new code, rebuilds and restarts.
 The site is offline for 30–60 seconds while the new version starts. Pupils, their progress and
 lessons edited in the admin panel are kept (the course content is re-seeded on every start).
 
@@ -117,7 +117,7 @@ cd /opt/lessons
 ./deploy/restore.sh backups/lessons-2026-11-23.db
 ```
 
-The current database is saved first as `lessons-<date>-before-restore.db`, so a restore can be undone.
+The current database is saved first as `lessons-<date>-<time>-before-restore.db`, so a restore can be undone.
 
 ## Everyday commands
 

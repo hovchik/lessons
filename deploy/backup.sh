@@ -1,13 +1,14 @@
 #!/bin/sh
 # Database backup. setup.sh runs it every night at 03:15 (see /etc/cron.d/lessons); by hand:
 #   cd /opt/lessons && ./deploy/backup.sh            -> backups/lessons-YYYY-MM-DD.db
-#   ./deploy/backup.sh before-update                 -> backups/lessons-YYYY-MM-DD-before-update.db
+#   ./deploy/backup.sh before-update                 -> backups/lessons-YYYY-MM-DD-HHMMSS-before-update.db
 # Writes a consistent copy (safe while pupils are using the app), checks it, and keeps 14 days.
 # Off-site copy: set BACKUP_REMOTE in .env to an rclone remote (deploy/README.md, "Backups").
 set -e
 cd "$(dirname "$0")/.."
 mkdir -p backups
-name="lessons-$(date +%Y-%m-%d)${1:+-$1}.db"
+# Labelled copies carry the time too, so they never replace another backup (e.g. the one being restored).
+if [ -n "$1" ]; then name="lessons-$(date +%Y-%m-%d-%H%M%S)-$1.db"; else name="lessons-$(date +%Y-%m-%d).db"; fi
 docker compose exec -T -u node app node -e '
   const { createClient } = require("@libsql/client");
   (async () => {
