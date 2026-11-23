@@ -1,86 +1,143 @@
-# Deploying the app
+# Putting the app online
 
-One server runs everything: the app (Next.js + the SQLite file) and Caddy, which gets a free
-HTTPS certificate and compresses pages. Tested sizes and costs are in the capacity report; in
-short, a 4-core / 8 GB VPS in Germany or Austria (about €10 a month) is plenty for a school.
+One server runs everything: the app (Next.js and the SQLite database file) and Caddy, which gets a
+free HTTPS certificate, renews it by itself and compresses pages. Four scripts in this folder do
+the server work:
 
-## 1. Get a server and a domain
+| Script | What it does |
+| --- | --- |
+| `setup.sh` | Once, on a new server: updates, Docker, firewall, the app, the admin password, nightly backups |
+| `update.sh` | Puts the newest version from GitHub online (backs up first) |
+| `backup.sh` | Saves a checked copy of the database (runs every night by itself) |
+| `restore.sh` | Puts a backup back |
 
-1. Order a VPS with Ubuntu 24.04 (for example netcup VPS 1000 G12 in Nuremberg or Vienna).
-2. Point your domain at it: an `A` record for `lessons.example.am` → the server's IPv4 address.
-   Wait until `ping lessons.example.am` shows that address.
+## 1. Buy a server
 
-## 2. Install Docker on the server
+A 4-core / 8 GB VPS in Germany, Austria or the Netherlands is plenty for a school (about 250
+pupils clicking at once per core; see the capacity report). From Armenia these are 55–75 ms away.
+
+Recommended: **netcup VPS 1000 G12.5** (4 cores, 8 GB, 128 GB, unlimited traffic, no setup fee).
+Late 2026 price: about €10.35 a month before VAT on a 24-month contract, €12.18 on 12 months,
+about €14 month to month; VAT is added for EU customers. Choose:
+
+- Operating system: **Ubuntu 24.04**
+- Location: "No preference Europe" (free) or Nuremberg/Vienna
+- Network: IPv4 + IPv6
+
+netcup emails the server's **IP address** and **root password**. The 2-core / 4 GB VPS 500 also
+works for a start (a few hundred pupils); building a new version is slower on it.
+
+## 2. Get a domain and point it at the server
+
+Buy a domain at any registrar (a `.am` domain at an Armenian registrar, or a `.com`/`.org`
+anywhere). In the registrar's DNS settings add:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` (or a sub-name such as `lessons`) | the server's IPv4 address |
+| AAAA (optional) | the same name | the server's IPv6 address |
+
+Check it on your computer: `ping lessons.example.am` should show the server's address. This can
+take from a few minutes to a few hours.
+
+## 3. Run the setup script
+
+From Windows open **PowerShell** (macOS: Terminal) and log in with the root password:
 
 ```sh
-ssh root@lessons.example.am
-curl -fsSL https://get.docker.com | sh
-ufw allow OpenSSH && ufw allow 80 && ufw allow 443 && ufw --force enable
+ssh root@SERVER-IP
 ```
 
-## 3. Get the code and the settings
+Then, on the server, with your own domain:
 
 ```sh
-git clone https://github.com/hovchik/lessons.git /opt/lessons
+curl -fsSL https://raw.githubusercontent.com/hovchik/lessons/main/deploy/setup.sh -o setup.sh
+bash setup.sh lessons.example.am
+```
+
+It takes about 10 minutes. At the end it prints the site address and the **admin password**:
+save it in a password manager. The admin panel is at `https://your-domain/admin`.
+
+If the domain did not point at the server yet, the script says so and the site still starts;
+Caddy gets the HTTPS certificate by itself as soon as the DNS record works.
+
+What the script sets up:
+
+- security updates that install every night, fail2ban against SSH password guessing, a firewall
+  that only lets in SSH, HTTP and HTTPS, 2 GB of swap, small Docker logs;
+- the app in `/opt/lessons`, with the web address and worker count in `.env` and the secrets in `.env.production`
+  (`ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET`, `ANTHROPIC_API_KEY`). Running `setup.sh` again keeps them;
+- `/etc/cron.d/lessons`: a backup every night at 03:15 Armenian time, and a weekly clean-up of old
+  Docker images.
+
+`ADMIN_SESSION_SECRET` signs every login cookie: keep it the same, or everybody is logged out.
+After changing `ADMIN_PASSWORD` run `docker compose up -d`; admin sessions are then signed out. The
+admin login allows 10 wrong passwords per 15 minutes from one address.
+
+The AI tutor stays off until `ANTHROPIC_API_KEY` is filled in (it is paid per use; at most
+`TUTOR_DAILY_LIMIT` questions a day, 3000 by default). Edit `.env.production` and run `docker compose up -d`.
+
+## 4. Updating to a new version
+
+```sh
+ssh root@SERVER-IP
+cd /opt/lessons && ./deploy/update.sh
+```
+
+It saves `backups/lessons-<date>-<time>-before-update.db`, downloads the new code, rebuilds and restarts.
+The site is offline for 30–60 seconds while the new version starts. Pupils, their progress and
+lessons edited in the admin panel are kept (the course content is re-seeded on every start).
+
+To update by itself every night when GitHub has a new version, add this line to
+`/etc/cron.d/lessons` (only do this if `main` is always ready to go live):
+
+```
+30 4 * * * root cd /opt/lessons && ./deploy/update.sh --if-changed >>/var/log/lessons-update.log 2>&1
+```
+
+## 5. Backups
+
+Every night `backup.sh` writes `/opt/lessons/backups/lessons-<date>.db` (about 25 MB), checks that
+it opens, and keeps 14 days. Log: `/var/log/lessons-backup.log`. A backup on the same server does
+not survive losing the server, so keep copies elsewhere too, with one or more of these:
+
+- **Download to your computer** (PowerShell, any time; asks for the root password):
+  `scp "root@SERVER-IP:/opt/lessons/backups/*.db" .`
+- **Server snapshots** in the netcup control panel (SCP → your server → Snapshots) before big changes.
+- **Automatic off-site copy** with [rclone](https://rclone.org) to cloud storage (Google Drive,
+  Backblaze B2, any S3 storage): `apt install rclone`, `rclone config` to add a remote (for
+  example `gdrive`), then add `BACKUP_REMOTE=gdrive:lessons-backups` to `/opt/lessons/.env`. Each
+  nightly backup is then copied there too, and copies older than 30 days are deleted there.
+
+To put a backup back:
+
+```sh
 cd /opt/lessons
-echo "DOMAIN=lessons.example.am" > .env
-cat > .env.production <<EOF
-ADMIN_PASSWORD=$(openssl rand -base64 15)
-ADMIN_SESSION_SECRET=$(openssl rand -base64 32)
-ANTHROPIC_API_KEY=
-EOF
-chmod 600 .env.production
-grep ADMIN_PASSWORD .env.production   # your admin password: keep it in a password manager
+./deploy/restore.sh                                    # lists the backups
+./deploy/restore.sh backups/lessons-2026-11-23.db
 ```
 
-The admin login allows 10 wrong passwords per 15 minutes from one address. After changing
-`ADMIN_PASSWORD`, run `docker compose up -d`; every admin session is then signed out.
+The current database is saved first as `lessons-<date>-<time>-before-restore.db`, so a restore can be undone.
 
-If the repository is private, `git clone` asks for a login: use your GitHub username and a
-[personal access token](https://github.com/settings/tokens) with read access to this repository.
+## Everyday commands
 
-`ADMIN_SESSION_SECRET` signs every login cookie. Keep it the same between deploys, or everybody
-is logged out.
+Run these in `/opt/lessons`:
 
-## 4. Start it
+| Task | Command |
+| --- | --- |
+| Is it running? | `docker compose ps` |
+| App log | `docker compose logs --tail 100 app` |
+| Restart | `docker compose restart app` |
+| Stop / start | `docker compose stop` / `docker compose up -d` |
+| Disk space | `df -h /` and `docker system df` |
 
-```sh
-docker compose up -d --build
-docker compose logs -f app     # wait for "Ready on http://0.0.0.0:3000"
-```
-
-The first start builds the image (3–5 minutes) and seeds the database (about 25 seconds).
-Open `https://lessons.example.am`; the admin panel is at `/admin`.
-
-## 5. Back up every night
-
-```sh
-crontab -e
-# add:
-15 3 * * * cd /opt/lessons && ./deploy/backup.sh >> /var/log/lessons-backup.log 2>&1
-```
-
-Backups land in `/opt/lessons/backups` (14 days kept). Copy them off the server too, for example
-with the provider's snapshot feature or `rclone` to cloud storage: a backup on the same disk does
-not survive losing the server.
-
-To restore: `docker compose stop app`, `docker compose cp backups/lessons-YYYY-MM-DD.db app:/data/lessons.db`,
-`docker compose start app`.
-
-## Updating to a new version
-
-```sh
-cd /opt/lessons
-git pull
-docker compose up -d --build
-```
-
-The app restarts with the new code and re-seeds the course content. Re-seeding keeps pupils, their
-progress and lessons edited in the admin panel. The site is down for about half a minute while it
-starts.
+If the site shows an error after an update, read the app log first. To go back to the old
+version: `update.sh` printed "Now running: <code>" before it updated; run
+`git reset --hard <code> && docker compose up -d --build`, then `./deploy/restore.sh` with the
+`before-update` backup.
 
 ## Using more cores
 
-`WEB_CONCURRENCY` sets how many app workers run, one per core (default 3, for a 4-core server; set
-it in `.env` and run `docker compose up -d` to change it). All workers share the database, live
-class quizzes included, so a pupil can land on any of them.
+`WEB_CONCURRENCY` in `.env` sets how many app workers run. `setup.sh` sets it to one less than
+the number of cores (3 on a 4-core server, 1 on 2 cores). After a change run `docker compose up -d`. All workers share the
+database, live class quizzes included, so a pupil can land on any of them.
